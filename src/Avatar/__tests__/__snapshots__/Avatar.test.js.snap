@@ -1,0 +1,837 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> should render with a custom user image 1`] = `
+.c1 {
+  border-radius: 50%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  background: hsl(28,80%,52%);
+  color: white;
+}
+
+<Styled(Avatar)
+  name="James Bond"
+  src="http://urlofmyimage.com"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Avatar
+    className="c0"
+    colors="hsl(28, 80%, 52%)"
+    name="James Bond"
+    size={3.1}
+    src="http://urlofmyimage.com"
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "3.2rem",
+            "bigInt": 3.2,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.2rem",
+            "mediumInt": 1.2,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 700,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "#1c88bf",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkRed": "#ea6151",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(6, 79%, 65%)",
+            "darkBack": "#ea6151",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1978d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightRed": "#f1978d",
+          "marble": "hsl(206, 23%, 69%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(6, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+      }
+    }
+  >
+    <div
+      aria-label="James Bond"
+      className="c0"
+    >
+      <styled.img
+        alt="James Bond"
+        height={31}
+        src="http://urlofmyimage.com"
+        width={31}
+      >
+        <img
+          alt="James Bond"
+          className="c1"
+          height={31}
+          src="http://urlofmyimage.com"
+          width={31}
+        />
+      </styled.img>
+    </div>
+  </Avatar>
+</Styled(Avatar)>
+`;
+
+exports[`<Avatar /> should render withouth a custom size 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 50%;
+  background: hsl(28,80%,52%);
+  color: white;
+}
+
+<Styled(Avatar)
+  name="James Bond"
+  size={4.1}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Avatar
+    className="c0"
+    colors="hsl(28, 80%, 52%)"
+    name="James Bond"
+    size={4.1}
+    src={null}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "3.2rem",
+            "bigInt": 3.2,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.2rem",
+            "mediumInt": 1.2,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 700,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "#1c88bf",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkRed": "#ea6151",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(6, 79%, 65%)",
+            "darkBack": "#ea6151",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1978d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightRed": "#f1978d",
+          "marble": "hsl(206, 23%, 69%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(6, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+      }
+    }
+  >
+    <div
+      aria-label="James Bond"
+      className="c0"
+    >
+      <span>
+        JB
+      </span>
+    </div>
+  </Avatar>
+</Styled(Avatar)>
+`;
+
+exports[`<Avatar /> should render withouth a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  background: hsl(28,80%,52%);
+  color: white;
+}
+
+<Styled(Avatar)
+  name="James Bond"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Avatar
+    className="c0"
+    colors="hsl(28, 80%, 52%)"
+    name="James Bond"
+    size={3.1}
+    src={null}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "3.2rem",
+            "bigInt": 3.2,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.2rem",
+            "mediumInt": 1.2,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 700,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "#1c88bf",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkRed": "#ea6151",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(6, 79%, 65%)",
+            "darkBack": "#ea6151",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1978d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightRed": "#f1978d",
+          "marble": "hsl(206, 23%, 69%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(6, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+      }
+    }
+  >
+    <div
+      aria-label="James Bond"
+      className="c0"
+    >
+      <span>
+        JB
+      </span>
+    </div>
+  </Avatar>
+</Styled(Avatar)>
+`;

@@ -1,0 +1,25 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "modules": false }],
+    "@babel/react",
+  ],
+  "plugins": ["@babel/plugin-proposal-class-properties"],
+  "env": {
+    "es": {
+      "ignore": [
+        "src/**/*.stories.js",
+        "src/**/*.test.js",
+      ],
+    },
+    "commonjs": {
+      "ignore": [
+        "src/**/*.stories.js",
+        "src/**/*.test.js",
+      ],
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    },
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}

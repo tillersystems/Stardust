@@ -1,0 +1,6 @@
+coverage/
+node_modules/
+es/
+lib/
+package.json
+yarn.lock

@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "@tillersystems/eslint-config/react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "rules": {
+    "no-console": [ "error", { "allow": ["warn", "error", "info"] }],
+    "no-underscore-dangle": [ "error", { "allow": ["__DEVELOPMENT__"] }],
+    "jsx-a11y/anchor-is-valid": [ "error", {"components": [ "Link" ], "specialLink": [ "to", "hrefLeft", "hrefRight" ], "aspects": [ "noHref", "invalidHref", "preferButton" ]}],
+    "import/no-cycle": 0,
+    "import/no-unresolved": 2,
+    "import/order": 0,
+    "import/prefer-default-export": 0,
+    "react/prefer-stateless-function": 0,
+    "react/no-did-update-set-state": 0,
+    "react/no-access-state-in-setstate": 0,
+    "react/no-array-index-key": 0
+  }
+}

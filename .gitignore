@@ -1,0 +1,10 @@
+# Dependency directory
+.idea
+.DS_Store
+*.log*
+
+yarn-error.log
+package-lock.json
+node_modules
+es
+lib
