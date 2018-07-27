@@ -1,0 +1,45 @@
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
+import Theme from '../Theme';
+import { Container } from './elements';
+import { Data } from './data';
+
+const { palette } = Theme;
+const getColor = color => {
+  if (palette.hasOwnProperty(color)) return palette[color];
+  return color;
+};
+
+const Icon = ({ name, color, height, width, spin }) => (
+  <Container {...{ spin }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 512 512">
+      <path fill={getColor(color)} fillRule="evenodd" d={Data[name]} />
+    </svg>
+  </Container>
+);
+
+/**
+ * PropTypes Validation.
+ */
+const { string, bool } = PropTypes;
+Icon.propTypes = {
+  name: string.isRequired,
+  color: string,
+  height: string,
+  width: string,
+  spin: bool,
+};
+
+/**
+ * Default props.
+ */
+Icon.defaultProps = {
+  color: 'white',
+  height: '20',
+  width: '20',
+  spin: false,
+};
+
+export default styled(Icon)``;
