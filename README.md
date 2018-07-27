@@ -1,21 +1,21 @@
 <img height="200" src="./logo.png">
 
-# TILLER RIGGING
+# STARDUST
 
 **This Repo contains all sources used to build a TILLER design system library.**
 
 ### Install
 
-  You can install Tiller-Rigging using either of the methods below.
+  You can install Stardust using either of the methods below.
 
   For YARN users:
   ```
-    $ yarn add @tillersystems/rigging
+    $ yarn add @tillersystems/stardust
   ```
 
   For NPM users:
   ```
-    $ npm install @tillersystems/rigging
+    $ npm install @tillersystems/stardust
   ```
 
 ### Explore
