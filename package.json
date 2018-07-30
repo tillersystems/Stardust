@@ -47,7 +47,8 @@
   },
   "dependencies": {
     "initials": "^3.0.0",
-    "polished": "^1.9.3"
+    "polished": "^1.9.3",
+    "styled-components-breakpoint": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.54",
@@ -103,7 +104,8 @@
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      ".*.test\\.js$"
+      ".*.test\\.js$",
+      ".*.stories\\.js$"
     ],
     "moduleFileExtensions": [
       "js"
