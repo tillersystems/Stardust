@@ -1,0 +1,5446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> should render form block without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={false}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={false}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                hasLabel={true}
+                inlineLabel={false}
+                isRow={false}
+                key=".1"
+                label=""
+                labelContent="my label 2"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form label inline without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                hasLabel={true}
+                inlineLabel={true}
+                isRow={false}
+                key=".1"
+                label=""
+                labelContent="my label 2"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          />
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form row label inline without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+  margin-top: 0;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={true}
+        >
+          <styled.div
+            className=""
+            row={true}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={true}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={true}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={true}
+                key=".1"
+                label="my label 2"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={true}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 2
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form row without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+  margin-top: 0;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={false}
+          labelsWidth="10rem"
+          row={true}
+        >
+          <styled.div
+            className=""
+            row={true}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={true}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={true}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={false}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                hasLabel={true}
+                inlineLabel={false}
+                isRow={true}
+                key=".1"
+                label=""
+                labelContent="my label 2"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={true}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={false}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          />
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form with highlighted label when has focus 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form with highlighted label when has focus 2`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+  color: hsl(200,74%,46%);
+  font-weight: 700;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+  border-color: hsl(200,74%,46%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={true}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={true}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form with highlighted label when has focus 3`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form with labelWidth value 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".1"
+                label="my label 2"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 2
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form with size value 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c8:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={true}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".0"
+                label="my label 1"
+                labelWidth="10rem"
+                size="3"
+              >
+                <styled.div
+                  isRow={false}
+                  size="3"
+                >
+                  <div
+                    className="c2"
+                    size="3"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 1
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                inlineLabel={true}
+                isRow={false}
+                key=".1"
+                label="my label 2"
+                labelWidth="10rem"
+                size="2"
+              >
+                <styled.div
+                  isRow={false}
+                  size="2"
+                >
+                  <div
+                    className="c8"
+                    size="2"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={true}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={true}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label 2
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render form without label without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c6 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c6:focus,
+.c6:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={false}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={false}
+                key=".0"
+                label=""
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.div>
+                          <div
+                            className="c4"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c5"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c6"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={false}
+                key=".1"
+                label=""
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.div>
+                          <div
+                            className="c4"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c5"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c6"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
+
+exports[`<Form /> should render withouth a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0.7rem;
+}
+
+.c2:first-child {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.2rem;
+  color: hsl(206,16%,60%);
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.2rem + 0.2rem);
+  line-height: calc(1.2rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: #dbdfe6;
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(218,18%,91%);
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c8:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c8:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c7:focus,
+.c7:active {
+  outline: none;
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 700,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Form
+    className=""
+    name="form"
+    onSubmit={[Function]}
+  >
+    <styled.form
+      className=""
+      name="form"
+      onSubmit={[Function]}
+    >
+      <form
+        className="c0"
+        name="form"
+        onSubmit={[Function]}
+      >
+        <Group
+          className=""
+          inlineLabels={false}
+          labelsWidth="10rem"
+          row={false}
+        >
+          <styled.div
+            className=""
+            row={false}
+          >
+            <div
+              className="c1"
+            >
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={false}
+                key=".0"
+                label="my label"
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.label
+                          hasFocus={false}
+                          labelInline={false}
+                          width="10rem"
+                        >
+                          <label
+                            className="c4"
+                            width="10rem"
+                          >
+                            my label
+                          </label>
+                        </styled.label>
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Input
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
+                                  disabled={false}
+                                  error={false}
+                                  fluid={false}
+                                  id=""
+                                  info={false}
+                                  key=".0"
+                                  label={null}
+                                  labelPosition="left"
+                                  loading={false}
+                                  onBlur={[Function]}
+                                  onChange={null}
+                                  onFocus={[Function]}
+                                  placeHolder=""
+                                  placeholder="tape inside me"
+                                  search={false}
+                                  success={false}
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                  warning={false}
+                                  width="25rem"
+                                >
+                                  <styled.div
+                                    disabled={false}
+                                    error={false}
+                                    hasFocus={false}
+                                    info={false}
+                                    success={false}
+                                    warning={false}
+                                    width="25rem"
+                                  >
+                                    <div
+                                      className="c6"
+                                      disabled={false}
+                                      width="25rem"
+                                    >
+                                      <styled.input
+                                        disabled={false}
+                                        id=""
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        placeholder=""
+                                        tabIndex="0"
+                                        type="text"
+                                        value=""
+                                      >
+                                        <input
+                                          className="c7"
+                                          disabled={false}
+                                          id=""
+                                          onBlur={[Function]}
+                                          onChange={[Function]}
+                                          onFocus={[Function]}
+                                          placeholder=""
+                                          tabIndex="0"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </styled.input>
+                                    </div>
+                                  </styled.div>
+                                </Input>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+              <Form.Field
+                className=""
+                inlineLabel={false}
+                isRow={false}
+                key=".1"
+                label=""
+                labelWidth="10rem"
+                size="1"
+              >
+                <styled.div
+                  isRow={false}
+                  size="1"
+                >
+                  <div
+                    className="c2"
+                    size="1"
+                  >
+                    <styled.div
+                      className=""
+                      inlineLabel={false}
+                    >
+                      <div
+                        className="c3"
+                      >
+                        <styled.div>
+                          <div
+                            className="c5"
+                          >
+                            <styled.div>
+                              <div
+                                className=""
+                              >
+                                <Button
+                                  key=".0"
+                                  primary={true}
+                                  type="submit"
+                                >
+                                  <Button
+                                    big={false}
+                                    className=""
+                                    disabled={false}
+                                    failure={false}
+                                    fluid={false}
+                                    inverted={false}
+                                    isGoogle={false}
+                                    light={false}
+                                    onClick={[Function]}
+                                    primary={true}
+                                    rounded={false}
+                                    secondary={false}
+                                    small={false}
+                                    success={false}
+                                    tiny={false}
+                                    type="submit"
+                                  >
+                                    <styled.button
+                                      big={false}
+                                      className=""
+                                      disabled={false}
+                                      failure={false}
+                                      fluid={false}
+                                      inverted={false}
+                                      isGoogle={false}
+                                      light={false}
+                                      onClick={[Function]}
+                                      primary={true}
+                                      rounded={false}
+                                      secondary={false}
+                                      small={false}
+                                      success={false}
+                                      tiny={false}
+                                      type="submit"
+                                    >
+                                      <button
+                                        className="c8"
+                                        disabled={false}
+                                        onClick={[Function]}
+                                        type="submit"
+                                      >
+                                        Hello
+                                      </button>
+                                    </styled.button>
+                                  </Button>
+                                </Button>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Form.Field>
+            </div>
+          </styled.div>
+        </Group>
+      </form>
+    </styled.form>
+  </Form>
+</ThemeProvider>
+`;
