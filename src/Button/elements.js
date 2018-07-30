@@ -108,6 +108,19 @@ export const Container = styled.button`
           `};
       `}
 
+    /* Medium Button */
+    ${({ medium }) =>
+      medium &&
+      css`
+        padding: 1.2rem 1.5rem;
+
+        ${({ theme, rounded }) =>
+          rounded &&
+          css`
+            border-radius: ${getRoundedRadius(0.4, theme)}rem;
+          `};
+      `}
+
     /* Big Button */
     ${({ big }) =>
       big &&

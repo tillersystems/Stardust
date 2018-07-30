@@ -137,6 +137,15 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
+  it('should render as medium', () => {
+    const render = mount(
+      <Button primary medium theme={Theme}>
+        Primary small button
+      </Button>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
   it('should render as tiny', () => {
     const render = mount(
       <Button primary tiny theme={Theme}>
@@ -194,6 +203,15 @@ describe('<Button />', () => {
   it('should render as rounded and big', () => {
     const render = mount(
       <Button primary big rounded theme={Theme}>
+        Big rounded button
+      </Button>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render as rounded and medium', () => {
+    const render = mount(
+      <Button primary medium rounded theme={Theme}>
         Big rounded button
       </Button>,
     );

@@ -15,6 +15,7 @@ storiesOf('Button', module)
 
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
+    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
     const tinyValue = boolean('Tiny', false, 'Layout');
 
@@ -38,6 +39,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -51,6 +53,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -64,6 +67,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -77,6 +81,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -90,6 +95,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -106,6 +112,7 @@ storiesOf('Button', module)
 
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
+    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
     const tinyValue = boolean('Tiny', false, 'Layout');
 
@@ -129,6 +136,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -142,6 +150,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -155,6 +164,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -168,6 +178,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -181,6 +192,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
@@ -197,6 +209,7 @@ storiesOf('Button', module)
 
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
+    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
     const tinyValue = boolean('Tiny', false, 'Layout');
 
@@ -220,6 +233,7 @@ storiesOf('Button', module)
           rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
+          medium={mediumValue}
           small={smallValue}
           tiny={tinyValue}
           disabled={disabledValue}
