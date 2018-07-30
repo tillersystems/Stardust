@@ -1,3 +1,13 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/tillersystems/Stardust/compare/v0.2.0...v0.2.1) (2018-07-30)
+
+
+### Features
+
+* **Button:** add medium size ([5f793f7](https://github.com/tillersystems/Stardust/commit/5f793f7))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2018-07-30)
 
