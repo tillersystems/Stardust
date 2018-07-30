@@ -3,18 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import initials from 'initials';
 
-/**
- * Avatar
- *
- * This component is in charge of displaying
- * an avatar of a user
- *
- * @return {jsx}
- */
-
 import Theme from '../Theme';
 import { Image } from './elements';
 
+// Define some colors
 const defaultColors = [
   Theme.palette.emerald,
   Theme.palette.river,
@@ -24,6 +16,13 @@ const defaultColors = [
   Theme.palette.turquoise,
 ];
 
+/**
+ * Sum Chars
+ *
+ * Do the sums of the carcatere of a string
+ *
+ * @return {jsx}
+ */
 function sumChars(str) {
   let sum = 0;
   for (let i = 0; i < str.length; i++) {
@@ -32,6 +31,15 @@ function sumChars(str) {
 
   return sum;
 }
+
+/**
+ * Avatar
+ *
+ * This component is in charge of displaying
+ * an avatar of a user
+ *
+ * @return {jsx}
+ */
 
 class Avatar extends PureComponent {
   /**
