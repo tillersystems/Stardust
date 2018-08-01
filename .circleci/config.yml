@@ -133,7 +133,7 @@ workflows:
           requires:
             - setup
       - unit-test:
-          requires:s
+          requires:
             - setup
       - build:
           requires:
