@@ -6388,7 +6388,7 @@ exports[`<Button /> should render ghost button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -6520,7 +6520,7 @@ exports[`<Button /> should render ghost button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -6654,7 +6654,7 @@ exports[`<Button /> should render ghost button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
