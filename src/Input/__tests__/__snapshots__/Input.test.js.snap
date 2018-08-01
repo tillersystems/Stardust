@@ -86,7 +86,7 @@ exports[`<Input /> should render disabled without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -336,7 +336,7 @@ exports[`<Input /> should render error without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -638,7 +638,7 @@ exports[`<Input /> should render info without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -940,7 +940,7 @@ exports[`<Input /> should render input without problem when given a label 1`] = 
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -1241,7 +1241,7 @@ exports[`<Input /> should render input without problem when given a label and la
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -1543,7 +1543,7 @@ exports[`<Input /> should render loading without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -1844,7 +1844,7 @@ exports[`<Input /> should render search without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2147,7 +2147,7 @@ exports[`<Input /> should render search without problem when focused 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2449,7 +2449,7 @@ exports[`<Input /> should render success without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2751,7 +2751,7 @@ exports[`<Input /> should render warning without problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3026,7 +3026,7 @@ exports[`<Input /> should render withouth a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3249,7 +3249,7 @@ exports[`<Input /> should render withouth a problem when fluid 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3473,7 +3473,7 @@ exports[`<Input /> should render withouth a problem when focused and unfocuse 1`
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3696,7 +3696,7 @@ exports[`<Input /> should render withouth a problem when focused and unfocuse 2`
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3919,7 +3919,7 @@ exports[`<Input /> should render withouth a problem when given a type 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -4142,7 +4142,7 @@ exports[`<Input /> should render withouth a problem when given a width 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -4366,7 +4366,7 @@ exports[`<Input /> should render withouth a problem when text changed 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },

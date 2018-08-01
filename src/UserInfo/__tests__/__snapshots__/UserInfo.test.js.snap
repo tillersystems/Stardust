@@ -150,7 +150,7 @@ exports[`<UserInfo /> should render a user picture 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -471,7 +471,7 @@ exports[`<UserInfo /> should render withouth a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },

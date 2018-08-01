@@ -95,7 +95,7 @@ exports[`<Input /> should render with a negative variation value 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -188,7 +188,7 @@ exports[`<Input /> should render with a negative variation value 1`] = `
             className="c1"
           >
             -100
-             %
+             % 
             <Styled(Icon)
               color="hsl(6, 79%, 65%)"
               name="caret-down"
@@ -340,7 +340,7 @@ exports[`<Input /> should render withouth a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -434,7 +434,7 @@ exports[`<Input /> should render withouth a problem 1`] = `
           >
             +
             100
-             %
+             % 
             <Styled(Icon)
               color="hsl(89, 53%, 52%)"
               name="caret-up"
