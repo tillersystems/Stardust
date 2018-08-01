@@ -16,7 +16,7 @@ import { Button } from 'components';
 
 - `children` - anything that can be rendered: numbers, strings, elements or an array (or fragment).
 - `onClick` - handler of click on the button.
-- `ghost` - whether the button is a ghost button or not.
+- `ghost` - whether the button is a ghost button or not (a ghost button is a button that is not styled).
 - `primary` - whether the button is a primary button or not.
 - `secondary` - whether the button is a secondary button or not.
 - `light` - whether the button is a light button or not.
