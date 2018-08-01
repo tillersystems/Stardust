@@ -33,6 +33,7 @@ storiesOf('Button', module)
           alignContent: 'center',
         }}
       >
+        <Button ghost>Default</Button>
         <Button
           primary
           inverted={invertedValue}
@@ -130,6 +131,9 @@ storiesOf('Button', module)
           alignContent: 'center',
         }}
       >
+        <Button ghost>
+          <Icon color={Theme.palette.white} name="maximize" />
+        </Button>
         <Button
           primary
           inverted={invertedValue}

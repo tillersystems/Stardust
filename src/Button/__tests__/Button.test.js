@@ -29,6 +29,15 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
+  it('should render ghost button', () => {
+    const render = mount(
+      <Button ghost theme={Theme}>
+        ghost button
+      </Button>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
   it('should render primary button', () => {
     const render = mount(
       <Button primary theme={Theme}>
