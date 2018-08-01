@@ -48,7 +48,7 @@ exports[`<Logo /> should render with custom color 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -184,7 +184,7 @@ exports[`<Logo /> should render with custom width & height 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -320,7 +320,7 @@ exports[`<Logo /> should render withouth a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },

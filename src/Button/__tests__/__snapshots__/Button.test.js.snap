@@ -95,7 +95,7 @@ exports[`<Button /> should render as big 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -226,7 +226,7 @@ exports[`<Button /> should render as big 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -359,7 +359,7 @@ exports[`<Button /> should render as big 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -542,7 +542,7 @@ exports[`<Button /> should render as disabled 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -673,7 +673,7 @@ exports[`<Button /> should render as disabled 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -806,7 +806,7 @@ exports[`<Button /> should render as disabled 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -988,7 +988,7 @@ exports[`<Button /> should render as fluid 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -1119,7 +1119,7 @@ exports[`<Button /> should render as fluid 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -1252,7 +1252,7 @@ exports[`<Button /> should render as fluid 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -1454,7 +1454,7 @@ exports[`<Button /> should render as inverted 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -1585,7 +1585,7 @@ exports[`<Button /> should render as inverted 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -1718,7 +1718,7 @@ exports[`<Button /> should render as inverted 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -1900,7 +1900,7 @@ exports[`<Button /> should render as medium 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2032,7 +2032,7 @@ exports[`<Button /> should render as medium 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -2166,7 +2166,7 @@ exports[`<Button /> should render as medium 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -2348,7 +2348,7 @@ exports[`<Button /> should render as rounded 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2479,7 +2479,7 @@ exports[`<Button /> should render as rounded 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -2612,7 +2612,7 @@ exports[`<Button /> should render as rounded 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -2797,7 +2797,7 @@ exports[`<Button /> should render as rounded and big 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -2928,7 +2928,7 @@ exports[`<Button /> should render as rounded and big 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -3061,7 +3061,7 @@ exports[`<Button /> should render as rounded and big 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -3246,7 +3246,7 @@ exports[`<Button /> should render as rounded and medium 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3378,7 +3378,7 @@ exports[`<Button /> should render as rounded and medium 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -3512,7 +3512,7 @@ exports[`<Button /> should render as rounded and medium 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -3697,7 +3697,7 @@ exports[`<Button /> should render as rounded and small 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -3828,7 +3828,7 @@ exports[`<Button /> should render as rounded and small 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -3961,7 +3961,7 @@ exports[`<Button /> should render as rounded and small 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -4145,7 +4145,7 @@ exports[`<Button /> should render as rounded and tiny 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -4277,7 +4277,7 @@ exports[`<Button /> should render as rounded and tiny 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -4410,7 +4410,7 @@ exports[`<Button /> should render as rounded and tiny 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -4592,7 +4592,7 @@ exports[`<Button /> should render as small 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -4723,7 +4723,7 @@ exports[`<Button /> should render as small 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -4856,7 +4856,7 @@ exports[`<Button /> should render as small 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -5037,7 +5037,7 @@ exports[`<Button /> should render as tiny 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -5169,7 +5169,7 @@ exports[`<Button /> should render as tiny 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -5302,7 +5302,7 @@ exports[`<Button /> should render as tiny 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -5482,7 +5482,7 @@ exports[`<Button /> should render failure button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -5613,7 +5613,7 @@ exports[`<Button /> should render failure button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -5746,7 +5746,7 @@ exports[`<Button /> should render failure button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -5948,7 +5948,7 @@ exports[`<Button /> should render failure inverted button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -6079,7 +6079,7 @@ exports[`<Button /> should render failure inverted button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -6212,7 +6212,7 @@ exports[`<Button /> should render failure inverted button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -6388,7 +6388,7 @@ exports[`<Button /> should render google button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -6519,7 +6519,7 @@ exports[`<Button /> should render google button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -6652,7 +6652,7 @@ exports[`<Button /> should render google button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -6832,7 +6832,7 @@ exports[`<Button /> should render light button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -6963,7 +6963,7 @@ exports[`<Button /> should render light button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -7096,7 +7096,7 @@ exports[`<Button /> should render light button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -7287,7 +7287,7 @@ exports[`<Button /> should render light inverted button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -7418,7 +7418,7 @@ exports[`<Button /> should render light inverted button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -7551,7 +7551,7 @@ exports[`<Button /> should render light inverted button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -7731,7 +7731,7 @@ exports[`<Button /> should render primary button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -7862,7 +7862,7 @@ exports[`<Button /> should render primary button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -7995,7 +7995,7 @@ exports[`<Button /> should render primary button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -8197,7 +8197,7 @@ exports[`<Button /> should render primary inverted button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -8328,7 +8328,7 @@ exports[`<Button /> should render primary inverted button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -8461,7 +8461,7 @@ exports[`<Button /> should render primary inverted button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -8637,7 +8637,7 @@ exports[`<Button /> should render secondary button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -8768,7 +8768,7 @@ exports[`<Button /> should render secondary button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -8901,7 +8901,7 @@ exports[`<Button /> should render secondary button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -9099,7 +9099,7 @@ exports[`<Button /> should render secondary inverted button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -9230,7 +9230,7 @@ exports[`<Button /> should render secondary inverted button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -9363,7 +9363,7 @@ exports[`<Button /> should render secondary inverted button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -9543,7 +9543,7 @@ exports[`<Button /> should render success button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -9674,7 +9674,7 @@ exports[`<Button /> should render success button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -9807,7 +9807,7 @@ exports[`<Button /> should render success button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -10009,7 +10009,7 @@ exports[`<Button /> should render success inverted button 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -10140,7 +10140,7 @@ exports[`<Button /> should render success inverted button 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -10273,7 +10273,7 @@ exports[`<Button /> should render success inverted button 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -10443,7 +10443,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -10574,7 +10574,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -10707,7 +10707,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
@@ -10878,7 +10878,7 @@ exports[`<Button /> should render withouth a problem and with margin 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 700,
+          "thick": 600,
           "thin": 200,
         },
       },
@@ -11010,7 +11010,7 @@ exports[`<Button /> should render withouth a problem and with margin 1`] = `
           },
           "weight": Object {
             "normal": 400,
-            "thick": 700,
+            "thick": 600,
             "thin": 200,
           },
         },
@@ -11144,7 +11144,7 @@ exports[`<Button /> should render withouth a problem and with margin 1`] = `
             },
             "weight": Object {
               "normal": 400,
-              "thick": 700,
+              "thick": 600,
               "thin": 200,
             },
           },
