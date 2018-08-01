@@ -16,7 +16,7 @@
     "test:cov": "yarn test --coverage",
     "test:ci": "yarn test --coverage --ci",
     "lint": "eslint .",
-    "format": "prettier --config .prettierrc --color --write \"{lib,tests}/**/*.js\"",
+    "format": "prettier --config .prettierrc --color --write \"src/**/*.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "yarn clean && yarn test && yarn build:commonjs && yarn build:es",
