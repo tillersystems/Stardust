@@ -1,0 +1,141 @@
+# Tiller - Stardust
+# This configuration file is part of Tiller Stardust
+
+version: 2
+
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# REFERENCES
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+references:
+
+  workspace_root: &workspace_root
+    /home/circleci/tiller-workspace
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
+  restore_deps_cache: &restore_deps_cache
+    restore_cache:
+      keys:
+        - dependencies-{{ checksum "package.json" }}
+        - dependencies-
+
+  save_deps_cache: &save_deps_cache
+    save_cache:
+      key: dependencies-{{ checksum "package.json" }}
+      paths:
+        - node_modules
+
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# DEFAULTS
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+defaults: &defaults
+  working_directory: *workspace_root
+  docker:
+    - image: circleci/node:latest
+
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# JOBS
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+jobs:
+  # Sets up the environment: checks out the code and installs dependencies.
+  setup:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_deps_cache
+      - run:
+          name: Install dependencies
+          command: yarn
+      - *save_deps_cache
+      - persist_to_workspace:
+          root: *workspace_root
+          paths: ./
+
+  # Runs unit tests.
+  unit-test:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run:
+          name: Run unit tests
+          command: yarn test:ci
+
+  # Runs formatter and linter.
+  lint:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run:
+          name: Run formatter
+          command: yarn format
+      - run:
+          name: Run linter
+          command: yarn lint
+
+  # Builds the artifact.
+  build:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - run:
+          name: Build project
+          command: yarn build
+
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# WORKFLOWS
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+workflows:
+  version: 2
+
+  # Triggered at every push.
+  # Tests, formats and lints source code.
+  # Builds the artifact for pushes to master.
+  push:
+    jobs:
+      - setup
+      - lint:
+          requires:
+            - setup
+      - unit-test:
+          requires:
+            - setup
+      - build:
+          requires:
+            - lint
+            - unit-test
+          filters:
+            branches:
+              only: master
+
+  # Triggered every night.
+  # Tests, formats and lints the source code, builds the artifact and deploys it to staging.
+  nightly:
+    triggers:
+      - schedule:
+          cron: "50 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - setup
+      - lint:
+          requires:
+            - setup
+      - unit-test:
+          requires:
+            - setup
+      - build:
+          requires:
+            - lint
+            - unit-test
