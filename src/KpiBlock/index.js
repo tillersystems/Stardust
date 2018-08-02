@@ -59,6 +59,7 @@ export default styled(KpiBlock)`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   padding: 3rem 1rem;
 
