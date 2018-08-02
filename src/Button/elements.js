@@ -144,6 +144,16 @@ export const Container = styled.button`
         border: 1px solid ${({ theme: { palette } }) => palette.gray};
       `}
 
+    /* Ghost */
+    ${({ ghost }) =>
+      ghost &&
+      css`
+        color: ${({ theme: { palette } }) => palette.anthracite};
+
+        background: none;
+        border: none;
+      `}
+
     /* Primary Button */
     ${({ primary }) =>
       primary &&
@@ -292,6 +302,15 @@ export const Container = styled.button`
             svg > path {
               fill: ${({ theme: { palette } }) => palette.white};
             }
+          `}
+
+        ${({ ghost }) =>
+          ghost &&
+          css`
+            color: current;
+
+            background: none;
+            border: none;
           `}
 
         ${({ primary }) =>

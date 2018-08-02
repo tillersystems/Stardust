@@ -5032,7 +5032,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
 .c8:hover:not([disabled]) {
   background: #dbdfe6;
   border: 1px solid #dbdfe6;
-  color: hsl(0,100%,100%)   color:#fff;
+  color: hsl(0,100%,100%)    color:#fff;
   background: #1c88bf;
   border: 1px solid #1c88bf;
 }
