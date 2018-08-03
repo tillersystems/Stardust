@@ -12,4 +12,5 @@ export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
 export { default as Popover } from './Popover';
 export { default as Theme } from './Theme';
+export { default as ToggleButton } from './ToggleButton';
 export { default as UserInfo } from './UserInfo';
