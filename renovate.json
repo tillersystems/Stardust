@@ -1,1 +1,12 @@
-{}
+{
+  "extends": ["config:base"],
+  "semanticCommits": true,
+  "semanticPrefix": "chore(yarn):",
+  "commitMessage": "{{semanticPrefix}}update {{depName}} to version {{newVersion}}",
+  "rebaseStalePrs": true,
+  "automerge": false,
+  "automergeType": "pr",
+  "labels": ["need review", "Dependencies Update"],
+  "assignees": ["spartDev"],
+  "reviewers": ["spartDev"]
+}
