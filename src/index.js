@@ -2,6 +2,7 @@
 // Please respect the alphabetical order
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
+export { default as ButtonGroup } from './ButtonGroup';
 export { default as Form } from './Form';
 export { default as Icon } from './Icon';
 export { default as Input } from './Input';
