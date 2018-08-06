@@ -17,10 +17,11 @@ import KpiChart from 'components';
 - `className` - Class needed by styled component.
 - `title` - KpiChart title.
 
-| propName | propType | defaultValue | isRequired |
-| -------- | :------: | :----------: | :--------: |
-| `className`| `string`|   `''`      |     -      |
-| `title` | `string`  |              |     *      |
+| propName    | propType | defaultValue | isRequired |
+| ----------- | :------: | :----------: | :--------: |
+| `className` | `string` |     `''`     |     -      |
+| `title`     | `string` |              |     \*     |
+| `label`     | `string` |              |     \*     |
 
 ### Example
 
@@ -28,6 +29,6 @@ import KpiChart from 'components';
 import { KpiChart } from 'components/KpiChart';
 
 render() {
-  return <KpiChart title="Chiffre d'affaires de la journée" />
+  return <KpiChart title="Chiffre d'affaires de la journée" label='Afficher le rapport' />
 }
 ```

@@ -68,11 +68,11 @@ storiesOf('KpiChart', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const Title = text('Title', "Chiffre d'affaires de la journée", 'Title');
-    const reportTitle = text('Report Title', 'Afficher le rapport', 'Report Title');
+    const label = text('Label', 'Afficher le rapport', 'Label');
     return (
       <KpiChart
         title={Title}
-        reportTitle={reportTitle}
+        label={label}
         render={() => (
           <ResponsiveBar
             data={data}

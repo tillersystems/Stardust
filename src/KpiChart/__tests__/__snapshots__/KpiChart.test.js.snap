@@ -263,14 +263,14 @@ exports[`<KpiChart /> should render with render props 1`] = `
   }
 >
   <Styled(KpiChart)
+    label="label"
     render={[Function]}
-    reportTitle="reportTitle"
     title="title"
   >
     <KpiChart
       className="c0"
+      label="label"
       render={[Function]}
-      reportTitle="reportTitle"
       title="title"
     >
       <div
@@ -438,7 +438,7 @@ exports[`<KpiChart /> should render with render props 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    reportTitle
+                    label
                   </button>
                 </styled.button>
               </Button>
@@ -714,13 +714,13 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   }
 >
   <Styled(KpiChart)
-    reportTitle="reportTitle"
+    label="label"
     title="title"
   >
     <KpiChart
       className="c0"
+      label="label"
       render={[Function]}
-      reportTitle="reportTitle"
       title="title"
     >
       <div
@@ -884,7 +884,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    reportTitle
+                    label
                   </button>
                 </styled.button>
               </Button>

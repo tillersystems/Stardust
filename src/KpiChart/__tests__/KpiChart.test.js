@@ -10,7 +10,7 @@ describe('<KpiChart />', () => {
   it('should render withouth a problem', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
-        <KpiChart title="title" reportTitle="reportTitle" />
+        <KpiChart title="title" label="label" />
       </ThemeProvider>,
     );
     expect(render).toMatchSnapshot();
@@ -19,7 +19,7 @@ describe('<KpiChart />', () => {
   it('should render with render props', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
-        <KpiChart title="title" reportTitle="reportTitle" render={() => <p>Render Props</p>} />
+        <KpiChart title="title" label="label" render={() => <p>Render Props</p>} />
       </ThemeProvider>,
     );
     expect(render).toMatchSnapshot();

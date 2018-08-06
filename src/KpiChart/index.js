@@ -21,7 +21,7 @@ class KpiChart extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    reportTitle: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
     render: PropTypes.func,
   };
 
@@ -45,7 +45,7 @@ class KpiChart extends PureComponent {
   };
 
   render() {
-    const { className, title, reportTitle, render } = this.props;
+    const { className, title, label, render } = this.props;
     return (
       <div className={className}>
         <Header>
@@ -56,7 +56,7 @@ class KpiChart extends PureComponent {
         </Header>
         <Body>{render()}</Body>
         <Footer>
-          <Button ghost>{reportTitle}</Button>
+          <Button ghost>{label}</Button>
         </Footer>
       </div>
     );
