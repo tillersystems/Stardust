@@ -41,15 +41,18 @@
     }
   },
   "peerDependencies": {
+    "popmotion": "^8.x",
     "prop-types": "^15.x",
     "react": "^16.x",
     "react-dom": "^16.x",
+    "react-pose": "^2.x",
     "styled-components": "^3.x"
   },
   "dependencies": {
     "initials": "^3.0.0",
     "luxon": "^1.3.3",
     "polished": "^1.9.3",
+    "react-portal": "^4.1.5",
     "styled-components-breakpoint": "^2.1.0"
   },
   "devDependencies": {

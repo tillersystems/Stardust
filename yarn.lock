@@ -8041,6 +8041,12 @@ react-onclickoutside@^6.5.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
 
+react-portal@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.1.5.tgz#6665d4d2a92d47d6f8b07a6529e26fc52d5cccde"
+  dependencies:
+    prop-types "^15.5.8"
+
 react-pose@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-2.2.0.tgz#b3bbda9b203d93c99889472b71d067bd5c96c27b"
