@@ -1,3 +1,11 @@
+<a name="0.4.0"></a>
+
+# [0.4.0](https://github.com/tillersystems/Stardust/compare/v0.3.2...v0.4.0) (2018-08-06)
+
+### Features
+
+- **kpiChart:** create component ([a49553d](https://github.com/tillersystems/Stardust/commit/a49553d))
+
 <a name="0.3.2"></a>
 
 ## [0.3.2](https://github.com/tillersystems/Stardust/compare/v0.3.1...v0.3.2) (2018-08-06)
