@@ -33,11 +33,7 @@ export const Container = styled.div`
   ${({ disabled }) =>
     disabled &&
     css`
-      ${({ checked }) =>
-        checked &&
-        css`
-          opacity: 0.4;
-        `};
+      opacity: 0.4;
     `};
 `;
 

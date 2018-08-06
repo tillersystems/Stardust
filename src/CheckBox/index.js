@@ -97,7 +97,7 @@ class CheckBox extends PureComponent {
     return (
       <Wrapper onClick={this.handleClick}>
         <Container hasFocus={hasFocus} checked={checked} disabled={disabled}>
-          {(checked || disabled) && (
+          {checked && (
             <Icon name="check-mark" color={Theme.palette.blue} width="1rem" height="1rem" />
           )}
           <input
@@ -107,6 +107,7 @@ class CheckBox extends PureComponent {
             checked={checked}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
+            disabled={disabled}
           />
         </Container>
 

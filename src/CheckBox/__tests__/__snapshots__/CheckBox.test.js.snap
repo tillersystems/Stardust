@@ -181,6 +181,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
           >
             <input
               checked={false}
+              disabled={false}
               id="test"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -431,6 +432,7 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
             </Styled(Icon)>
             <input
               checked={true}
+              disabled={true}
               id="test"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -679,6 +681,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
             </Styled(Icon)>
             <input
               checked={true}
+              disabled={false}
               id="test"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -705,12 +708,6 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
 `;
 
 exports[`<CheckBox /> should render without a problem when unchecked and disabled 1`] = `
-.c2 {
-  display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -741,9 +738,10 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
   border: 1px solid hsl(200,74%,46%);
   border-radius: 0.2rem;
   background: hsl(0,100%,100%);
+  opacity: 0.4;
 }
 
-.c3 {
+.c2 {
   display: block;
   margin-left: 0.7rem;
   color: hsl(213,17%,20%);
@@ -890,44 +888,9 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
             className="c1"
             disabled={true}
           >
-            <Styled(Icon)
-              color="hsl(200, 74%, 46%)"
-              height="1rem"
-              name="check-mark"
-              width="1rem"
-            >
-              <Icon
-                className=""
-                color="hsl(200, 74%, 46%)"
-                height="1rem"
-                name="check-mark"
-                spin={false}
-                width="1rem"
-              >
-                <styled.div
-                  spin={false}
-                >
-                  <div
-                    className="c2"
-                  >
-                    <svg
-                      height="1rem"
-                      viewBox="0 0 512 512"
-                      width="1rem"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
-                        fill="hsl(200, 74%, 46%)"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </styled.div>
-              </Icon>
-            </Styled(Icon)>
             <input
               checked={false}
+              disabled={true}
               id="test"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -942,7 +905,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
           htmlFor="test"
         >
           <label
-            className="c3"
+            className="c2"
             disabled={true}
             htmlFor="test"
           />
@@ -1134,6 +1097,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
           >
             <input
               checked={false}
+              disabled={false}
               id="test"
               onBlur={[Function]}
               onFocus={[Function]}
