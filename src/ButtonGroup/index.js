@@ -30,10 +30,25 @@ export default styled(ButtonGroup)`
         border-right: 1px solid #e1e7ec;
       }
     }
+
+    &:nth-child(n) {
+      border-right: 1px solid #e1e7ec;
+      border-left: 0;
+
+      &:hover {
+        border-right: 1px solid #e1e7ec;
+        border-left: 0;
+      }
+    }
+
     &:last-of-type {
       border-top-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-bottom-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-left: 0;
+
+      &:hover {
+        border-left: 0;
+      }
     }
   }
 `;

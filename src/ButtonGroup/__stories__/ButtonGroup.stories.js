@@ -65,6 +65,50 @@ storiesOf('ButtonGroup', module)
         </ButtonGroup>
         <ButtonGroup>
           <Button
+            primary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Left
+          </Button>
+          <Button
+            primary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            middle
+          </Button>
+          <Button
+            primary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Right
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button
             secondary
             inverted={invertedValue}
             rounded={roundedValue}
@@ -95,6 +139,50 @@ storiesOf('ButtonGroup', module)
         </ButtonGroup>
         <ButtonGroup>
           <Button
+            secondary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Left
+          </Button>
+          <Button
+            secondary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            center
+          </Button>
+          <Button
+            secondary
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Right
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button
             light
             inverted={invertedValue}
             rounded={roundedValue}
@@ -107,6 +195,50 @@ storiesOf('ButtonGroup', module)
             onClick={() => onClickAction('primary')}
           >
             Left
+          </Button>
+          <Button
+            light
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Right
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button
+            light
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Left
+          </Button>
+          <Button
+            light
+            inverted={invertedValue}
+            rounded={roundedValue}
+            fluid={fluidValue}
+            big={bigValue}
+            medium={mediumValue}
+            small={smallValue}
+            tiny={tinyValue}
+            disabled={disabledValue}
+            onClick={() => onClickAction('primary')}
+          >
+            Center
           </Button>
           <Button
             light
