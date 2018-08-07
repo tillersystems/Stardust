@@ -11,7 +11,7 @@ import styles from './styles';
 import { Theme } from '../src';
 
 setDefaults({
-  name: 'Tiller rigging',
+  name: 'Stardust',
   header: false,
   inline: true,
   source: true,
@@ -21,7 +21,8 @@ setDefaults({
 });
 
 addDecorator((story, context) => {
-  const readme = require(`../src/${context.kind}/README.md`);
+  const componentPath = context.kind.replace(' - ', '/');
+  const readme = require(`../src/${componentPath}/README.md`);
   return withDocs({
     PreviewComponent: styled.div`
       text-align: center;
