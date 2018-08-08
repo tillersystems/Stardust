@@ -17,12 +17,11 @@ import { Container, InputElement } from './elements';
  *
  * @return The status.
  */
-const getStatus = (loading, info, success, warning, error, search) => {
+const getStatus = (loading, info, success, warning, search) => {
   if (loading) return 'loading';
   if (info) return 'info';
   if (success) return 'success';
   if (warning) return 'warning';
-  if (error) return 'error';
   if (search) return 'search';
 };
 
@@ -184,7 +183,7 @@ class Input extends PureComponent {
 
     // We want to display loading status whether the input is disabled or not.
     // Other status are however omited in case the input is disabled.
-    const hasStatus = loading || (!disabled && (success || info || warning || error || search));
+    const hasStatus = loading || (!disabled && (success || info || warning || search));
 
     return (
       <Container
@@ -209,10 +208,7 @@ class Input extends PureComponent {
           onBlur={this.handleBlur}
         />
         {hasStatus && (
-          <Status
-            hasFocus={hasFocus}
-            status={getStatus(loading, info, success, warning, error, search)}
-          />
+          <Status hasFocus={hasFocus} status={getStatus(loading, info, success, warning, search)} />
         )}
         {label && labelPosition === 'right' && <Label icon={label} position="right" />}
       </Container>
