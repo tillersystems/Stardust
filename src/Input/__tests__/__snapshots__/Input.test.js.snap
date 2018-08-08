@@ -226,32 +226,6 @@ exports[`<Input /> should render disabled without problem 1`] = `
 `;
 
 exports[`<Input /> should render error without problem 1`] = `
-.c3 {
-  display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.8rem;
-  height: 1.8rem;
-  margin-right: 0.7rem;
-  border-radius: 50%;
-  background: hsl(6,79%,65%);
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -469,58 +443,6 @@ exports[`<Input /> should render error without problem 1`] = `
             value=""
           />
         </styled.input>
-        <Styled(Input.Status)
-          hasFocus={false}
-          status="error"
-        >
-          <Input.Status
-            className="c2"
-            hasFocus={false}
-            status="error"
-          >
-            <div
-              className="c2"
-            >
-              <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
-                height="1.1rem"
-                name="cross"
-                spin={false}
-                width="1.1rem"
-              >
-                <Icon
-                  className=""
-                  color="hsl(0, 100%, 100%)"
-                  height="1.1rem"
-                  name="cross"
-                  spin={false}
-                  width="1.1rem"
-                >
-                  <styled.div
-                    spin={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <svg
-                        height="1.1rem"
-                        viewBox="0 0 512 512"
-                        width="1.1rem"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M286.17 256l112.915 112.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0L256 286.17 143.085 399.085c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L225.83 256 112.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0L256 225.83l112.915-112.915c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L286.17 256z"
-                          fill="hsl(0, 100%, 100%)"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </styled.div>
-                </Icon>
-              </Styled(Icon)>
-            </div>
-          </Input.Status>
-        </Styled(Input.Status)>
       </div>
     </styled.div>
   </Input>
