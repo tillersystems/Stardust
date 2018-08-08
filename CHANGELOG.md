@@ -1,3 +1,16 @@
+<a name="0.5.0"></a>
+
+# [0.5.0](https://github.com/tillersystems/Stardust/compare/v0.4.0...v0.5.0) (2018-08-08)
+
+### Bug Fixes
+
+- **Checkbox:** fix when disabled ([df2cfa6](https://github.com/tillersystems/Stardust/commit/df2cfa6))
+
+### Features
+
+- **Checkbox:** create component ([d83b18c](https://github.com/tillersystems/Stardust/commit/d83b18c))
+- **Date:** create datePicker & dateRangePicker components ([2914e6e](https://github.com/tillersystems/Stardust/commit/2914e6e))
+
 <a name="0.4.0"></a>
 
 # [0.4.0](https://github.com/tillersystems/Stardust/compare/v0.3.2...v0.4.0) (2018-08-06)
