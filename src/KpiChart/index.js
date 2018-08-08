@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Button, Icon, Theme } from '..';
+import { Button } from '..';
 import { Body, Header, Footer, Title } from './elements';
 
 /**
@@ -32,17 +32,17 @@ class KpiChart extends PureComponent {
   };
 
   /** Internal state. */
-  state = {
-    settings: false,
-  };
+  // state = {
+  //   settings: false,
+  // };
 
   /**
    * Handles click event on settings.
    */
-  handleClick = () => {
-    const { settings } = this.state;
-    this.setState({ ...this.state, settings: !settings });
-  };
+  // handleClick = () => {
+  //   const { settings } = this.state;
+  //   this.setState({ ...this.state, settings: !settings });
+  // };
 
   render() {
     const { className, title, label, render } = this.props;
@@ -50,9 +50,9 @@ class KpiChart extends PureComponent {
       <div className={className}>
         <Header>
           <Title>{title}</Title>
-          <Button small ghost onClick={() => this.handleClick}>
+          {/* <Button small ghost onClick={() => this.handleClick}>
             <Icon name="cog" color={Theme.palette.anthracite} width="1.6rem" height="1.6rem" />
-          </Button>
+          </Button> */}
         </Header>
         <Body>{render()}</Body>
         <Footer>
