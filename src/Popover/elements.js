@@ -15,15 +15,20 @@ box-shadow: 0 0.2rem 1.6rem 0 hsla(0, 0%, 0%, 0.1), 0 0.2rem 1.6rem 0 hsla(206, 
 background: ${({ theme: { palette } }) => palette.white};
 
 &::before {
-  content: '';
+  content: "";
 
-  position: absolute;
-  top: -2rem;
+  display:block;
+
+  position:absolute;
+  top: -0.7rem;
   left: 50%;
+  z-index:-1;
 
-  transform: translateX(-50%);
+  height:14.14px;
+  width:14.14px;
 
-  border-width: 1rem;
-  border-style: solid;
-  border-color: transparent transparent ${({ theme: { palette } }) => palette.white} transparent;
+  transform: rotate(135deg);
+
+  background:white;
+  box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
 `;

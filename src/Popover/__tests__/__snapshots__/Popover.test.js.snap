@@ -11,16 +11,19 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
 }
 
 .c0::before {
-  content: '';
+  content: "";
+  display: block;
   position: absolute;
-  top: -2rem;
+  top: -0.7rem;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-width: 1rem;
-  border-style: solid;
-  border-color: transparent transparent hsl(0,100%,100%) transparent;
+  z-index: -1;
+  height: 14.14px;
+  width: 14.14px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  background: white;
+  box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
 }
 
 <ThemeProvider
