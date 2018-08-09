@@ -121,7 +121,7 @@ exports[`<Modal /> should render close modal withouth a problem 1`] = `
   <Modal
     active={false}
     height="35rem"
-    onOverlayClick={null}
+    onOverlayClick={[Function]}
     width="50rem"
   >
     <Portal>
@@ -259,7 +259,7 @@ exports[`<Modal /> should render open modal with overlay clickable withouth a pr
   <Modal
     active={false}
     height="35rem"
-    onOverlayClick={null}
+    onOverlayClick={[Function]}
     overlayClick={[Function]}
     width="50rem"
   >
@@ -514,7 +514,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   <Modal
     active={true}
     height="35rem"
-    onOverlayClick={null}
+    onOverlayClick={[Function]}
     width="50rem"
   >
     <Portal>
@@ -555,9 +555,12 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
               <div
                 className="c0"
               >
-                <styled.div>
+                <styled.div
+                  onClick={[Function]}
+                >
                   <div
                     className="c1"
+                    onClick={[Function]}
                   />
                 </styled.div>
                 <PoseGroup

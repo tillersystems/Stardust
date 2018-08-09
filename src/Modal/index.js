@@ -53,7 +53,7 @@ class Modal extends PureComponent {
     active: false,
     width: '48rem',
     height: '39rem',
-    onOverlayClick: null,
+    onOverlayClick: () => {},
   };
 
   /**
@@ -66,7 +66,7 @@ class Modal extends PureComponent {
         <PoseGroup animateOnMount>
           {active && (
             <ContainerAnimation pose={active ? 'enter' : 'exit'} key="ContainerAnimation">
-              {onOverlayClick ? <Overlay onClick={onOverlayClick} /> : <Overlay />}
+              <Overlay onClick={onOverlayClick} />
               <PoseGroup animateOnMount>
                 {active && (
                   <DialogAnimation
