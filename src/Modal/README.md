@@ -19,16 +19,16 @@ import { Modal } from 'components';
 - `className` - className needed by styled components.
 - `height` - Modal height.
 - `width` - Modal width.
-- `overlayClick` - A model can have a clickable overlay to close it.
+- `onOverlayClick` - A model can have a clickable overlay to close it.
 
-| propName       | propType | defaultValue | isRequired |
-| -------------- | -------- | ------------ | ---------- |
-| `active`       | `bool`   | `false`      | -          |
-| `children`     | `node`   | `null`       | -          |
-| `className`    | `string` | `''`         | -          |
-| `height`       | `string` | `48rem`      | -          |
-| `width`        | `string` | `39rem`      | -          |
-| `overlayClick` | `func`   | `null`       | -          |
+| propName         | propType | defaultValue | isRequired |
+| ---------------- | -------- | ------------ | ---------- |
+| `active`         | `bool`   | `false`      | -          |
+| `children`       | `node`   | `null`       | -          |
+| `className`      | `string` | `''`         | -          |
+| `height`         | `string` | `48rem`      | -          |
+| `width`          | `string` | `39rem`      | -          |
+| `onOverlayClick` | `func`   | `null`       | -          |
 
 ### Example
 
