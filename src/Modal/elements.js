@@ -60,7 +60,7 @@ export const Dialog = styled.dialog`
 
 export const Title = styled.p`
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
   font-size: ${({
     theme: {
       fonts: { size },
