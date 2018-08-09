@@ -1,3 +1,11 @@
+<a name="0.6.0"></a>
+
+# [0.6.0](https://github.com/tillersystems/Stardust/compare/v0.5.0...v0.6.0) (2018-08-09)
+
+### Features
+
+- **Popover:** create component ([9a10636](https://github.com/tillersystems/Stardust/commit/9a10636))
+
 <a name="0.5.0"></a>
 
 # [0.5.0](https://github.com/tillersystems/Stardust/compare/v0.4.0...v0.5.0) (2018-08-08)
