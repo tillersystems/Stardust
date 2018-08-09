@@ -15,7 +15,7 @@ import { Portal } from 'react-portal';
  * @param {string} className // className needed by styled components.
  * @param {string} height // Modal height.
  * @param {string} width // Modal width.
- * @param {string} overlayClick // A model can have a clickable overlay to close it.
+ * @param {string} onOverlayClick // A model can have a clickable overlay to close it.
  *
  * @return {jsx}
  */
@@ -42,7 +42,7 @@ class Modal extends PureComponent {
     active: bool,
     height: string,
     width: string,
-    overlayClick: func,
+    onOverlayClick: func,
   };
 
   /**
@@ -53,20 +53,20 @@ class Modal extends PureComponent {
     active: false,
     width: '48rem',
     height: '39rem',
-    overlayClick: null,
+    onOverlayClick: null,
   };
 
   /**
    * Render function
    */
   render() {
-    const { active, width, height, overlayClick, children } = this.props;
+    const { active, width, height, onOverlayClick, children } = this.props;
     return (
       <Portal>
         <PoseGroup animateOnMount>
           {active && (
             <ContainerAnimation pose={active ? 'enter' : 'exit'} key="ContainerAnimation">
-              {overlayClick ? <Overlay onClick={overlayClick} /> : <Overlay />}
+              {onOverlayClick ? <Overlay onClick={onOverlayClick} /> : <Overlay />}
               <PoseGroup animateOnMount>
                 {active && (
                   <DialogAnimation
