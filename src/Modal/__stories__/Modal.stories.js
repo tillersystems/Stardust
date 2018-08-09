@@ -172,7 +172,7 @@ storiesOf('Modal', module)
               <Modal.Header>
                 <Modal.Title>My title</Modal.Title>
                 {populatedHeader && (
-                  <Button light small onClick={() => store.set({ active: !store.get('active') })}>
+                  <Button ghost small onClick={() => store.set({ active: !store.get('active') })}>
                     <Icon color="#2B333D" name="cross" />
                   </Button>
                 )}
