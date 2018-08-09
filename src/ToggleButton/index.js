@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -22,26 +22,66 @@ import { Checkbox, Toggle } from './elements';
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-const ToggleButton = ({ className, checked, disabled, onToggle }) => (
-  <div className={className} onClick={() => !disabled && onToggle && onToggle(!checked)}>
-    <Checkbox type="checkbox" checked={checked} readOnly />
-    <Toggle checked={checked} readOnly={disabled} />
-  </div>
-);
+class ToggleButton extends PureComponent {
+  /** Display name. */
+  static displayName = 'ToggleButton';
 
-ToggleButton.propTypes = {
-  className: PropTypes.string,
-  onToggle: PropTypes.func,
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
+  /** Prop types. */
+  static propTypes = {
+    className: PropTypes.string,
+    checked: PropTypes.bool,
+    disabled: PropTypes.bool,
+    onToggle: PropTypes.func,
+  };
 
-ToggleButton.defaultProps = {
-  className: '',
-  onToggle: null,
-  checked: false,
-  disabled: false,
-};
+  /** Default props. */
+  static defaultProps = {
+    className: '',
+    checked: false,
+    disabled: false,
+    onToggle: null,
+  };
+
+  /** Internal state. */
+  state = {
+    checked: this.props.checked, // eslint-disable-line react/destructuring-assignment
+  };
+
+  componentDidUpdate(prevProps) {
+    const { checked } = this.props;
+    if (checked !== prevProps.checked) {
+      this.setState({ ...this.state, checked });
+    }
+  }
+
+  /**
+   * Handles Toggle
+   *
+   * @param {boolean} checked
+   */
+  handleToogle = checked => {
+    const { disabled, onToggle } = this.props;
+
+    if (!disabled && onToggle) {
+      onToggle(!checked);
+    } else if (!disabled) {
+      this.setState({ ...this.state, checked: !checked });
+    } else {
+      return null;
+    }
+  };
+
+  render() {
+    const { className, disabled } = this.props;
+    const { checked } = this.state;
+    return (
+      <div className={className} onClick={() => this.handleToogle(checked)}>
+        <Checkbox type="checkbox" checked={checked} readOnly />
+        <Toggle checked={checked} readOnly={disabled} />
+      </div>
+    );
+  }
+}
 
 export default styled(ToggleButton)`
   display: inline-block;
