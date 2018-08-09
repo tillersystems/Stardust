@@ -10,5 +10,6 @@ export { default as Input } from './Input';
 export { default as KpiChart } from './KpiChart';
 export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
+export { default as Popover } from './Popover';
 export { default as Theme } from './Theme';
 export { default as UserInfo } from './UserInfo';
