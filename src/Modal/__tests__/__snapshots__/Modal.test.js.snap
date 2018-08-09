@@ -331,7 +331,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
 }
 
 .c0 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -355,7 +355,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
 }
 
 .c1 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
