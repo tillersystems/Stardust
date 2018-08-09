@@ -56,7 +56,7 @@ storiesOf('Modal', module)
             active={store.get('active')}
             width={`${widthValue.toString()}rem`}
             height={`${heightValue.toString()}rem`}
-            overlayClick={() => {
+            onOverlayClick={() => {
               onOverlayClickAction();
               store.set({ active: !store.get('active') });
             }}
@@ -163,7 +163,7 @@ storiesOf('Modal', module)
             active={store.get('active')}
             width={`${widthValue.toString()}rem`}
             height={`${heightValue.toString()}rem`}
-            overlayClick={() => {
+            onOverlayClick={() => {
               onOverlayClickAction();
               store.set({ active: !store.get('active') });
             }}
