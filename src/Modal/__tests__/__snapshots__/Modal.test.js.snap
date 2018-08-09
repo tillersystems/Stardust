@@ -121,7 +121,7 @@ exports[`<Modal /> should render close modal withouth a problem 1`] = `
   <Modal
     active={false}
     height="35rem"
-    overlayClick={null}
+    onOverlayClick={null}
     width="50rem"
   >
     <Portal>
@@ -259,6 +259,7 @@ exports[`<Modal /> should render open modal with overlay clickable withouth a pr
   <Modal
     active={false}
     height="35rem"
+    onOverlayClick={null}
     overlayClick={[Function]}
     width="50rem"
   >
@@ -279,7 +280,7 @@ exports[`<Modal /> should render open modal with overlay clickable withouth a pr
 exports[`<Modal /> should render open modal withouth a problem 1`] = `
 .c3 {
   height: 6rem;
-  border-bottom: 0.1rem solid #edf0f5;
+  border-bottom: 0.1rem solid hsl(218,18%,91%);
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -513,7 +514,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   <Modal
     active={true}
     height="35rem"
-    overlayClick={null}
+    onOverlayClick={null}
     width="50rem"
   >
     <Portal>
