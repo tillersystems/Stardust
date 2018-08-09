@@ -21,7 +21,7 @@ background: ${({ theme: { palette } }) => palette.white};
 
   position:absolute;
   top: -0.7rem;
-  left: 50%;
+  left: ${({ arrowPositionX }) => arrowPositionX};
   z-index:-1;
 
   height:14.14px;

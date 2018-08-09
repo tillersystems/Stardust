@@ -24,6 +24,18 @@ storiesOf('Popover', module)
       'Dimensions',
     );
 
+    const arrowPositionXValue = number(
+      'arrowPositionX',
+      50,
+      {
+        range: true,
+        min: 5,
+        max: 90,
+        step: 1,
+      },
+      'Dimensions',
+    );
+
     return (
       <div style={{ position: 'relative' }}>
         <Button primary onClick={() => store.set({ active: !store.get('active') })}>
@@ -31,7 +43,11 @@ storiesOf('Popover', module)
         </Button>
         <div style={{ position: 'absolute', top: '100%', left: '-78px' }}>
           <State store={store}>
-            <Popover width={`${widthValue}rem`} active={store.get('active')}>
+            <Popover
+              width={`${widthValue}rem`}
+              arrowPositionX={`${(widthValue * arrowPositionXValue) / 100}rem`}
+              active={store.get('active')}
+            >
               Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
               sur la période séléctionnée.
             </Popover>

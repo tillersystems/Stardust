@@ -3,7 +3,7 @@
 exports[`<Popover /> should render open popover withouth a problem 1`] = `
 .c0 {
   position: relative;
-  width: 100rem;
+  width: auto;
   padding: 1.8rem;
   border-radius: 0.4rem;
   box-shadow: 0 0.2rem 1.6rem 0 hsla(0,0%,0%,0.1),0 0.2rem 1.6rem 0 hsla(206,23%,69%,0.1), 0 0 0 0.1rem hsl(207,22%,90%);
@@ -145,7 +145,8 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
 >
   <Popover
     active={true}
-    width="100rem"
+    arrowPositionX="50%"
+    width="auto"
   >
     <PoseGroup
       animateOnMount={true}
@@ -156,12 +157,14 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
       singleChildOnly={false}
     >
       <Component
+        arrowPositionX="50%"
         initialPose="exit"
         key="ContainerAnimation"
         pose="enter"
-        width="100rem"
+        width="auto"
       >
         <PoseElement
+          arrowPositionX="50%"
           elementType={[Function]}
           initialPose="exit"
           pose="enter"
@@ -177,16 +180,17 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
               },
             }
           }
-          width="100rem"
+          width="auto"
         >
           <styled.div
+            arrowPositionX="50%"
             hostRef={[Function]}
             innerRef={[Function]}
-            width="100rem"
+            width="auto"
           >
             <div
               className="c0"
-              width="100rem"
+              width="auto"
             >
               Children
             </div>
@@ -201,6 +205,7 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
 exports[`<Popover /> should render with a different width 1`] = `
 <Popover
   active={false}
+  arrowPositionX="50%"
   theme={
     Object {
       "breakpoints": Object {
@@ -332,6 +337,7 @@ exports[`<Popover /> should render with a different width 1`] = `
 exports[`<Popover /> should render withouth a problem 1`] = `
 <Popover
   active={false}
+  arrowPositionX="50%"
   theme={
     Object {
       "breakpoints": Object {
@@ -447,7 +453,7 @@ exports[`<Popover /> should render withouth a problem 1`] = `
       },
     }
   }
-  width="100rem"
+  width="auto"
 >
   <PoseGroup
     animateOnMount={true}
