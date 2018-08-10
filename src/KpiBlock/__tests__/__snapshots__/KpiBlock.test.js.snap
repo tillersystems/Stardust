@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Input /> should render with a negative variation value 1`] = `
+exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 .c2 {
   display: inline-block;
   font-size: 1rem;
@@ -249,7 +249,7 @@ exports[`<Input /> should render with a negative variation value 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem 1`] = `
+exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 .c2 {
   display: inline-block;
   font-size: 1rem;
@@ -489,6 +489,190 @@ exports[`<Input /> should render withouth a problem 1`] = `
         <styled.div>
           <div
             className="c4"
+          >
+            title
+          </div>
+        </styled.div>
+      </div>
+    </KpiBlock>
+  </Styled(KpiBlock)>
+</ThemeProvider>
+`;
+
+exports[`<KpiBlock /> should render withouth a problem 1`] = `
+.c1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: hsl(0,0%,0%);
+}
+
+.c2 {
+  font-size: 1.4rem;
+  color: hsl(206,16%,60%);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  height: 100%;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background: hsl(0,100%,100%);
+}
+
+<ThemeProvider
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "3.2rem",
+          "bigInt": 3.2,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.2rem",
+          "mediumInt": 1.2,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "#1c88bf",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkRed": "#ea6151",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(6, 79%, 65%)",
+          "darkBack": "#ea6151",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1978d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightRed": "#f1978d",
+        "marble": "hsl(206, 23%, 69%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(6, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+      },
+    }
+  }
+>
+  <Styled(KpiBlock)
+    title="title"
+    value="value"
+  >
+    <KpiBlock
+      className="c0"
+      title="title"
+      value="value"
+      variation={0}
+    >
+      <div
+        className="c0"
+      >
+        0
+        0
+        <styled.div>
+          <div
+            className="c1"
+          >
+            value
+          </div>
+        </styled.div>
+        <styled.div>
+          <div
+            className="c2"
           >
             title
           </div>
