@@ -2,12 +2,21 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select, text, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
+import { State, Store } from '@sambego/storybook-state';
 import { Input } from '../..';
 import { Data as IconNames } from '../../Icon/data';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
 const onBlurAction = action('onBlur');
+
+const storeWithState = new Store({
+  value: '',
+});
+
+const storeNumberWithState = new Store({
+  value: Number.Nan,
+});
 
 storiesOf('Input', module)
   .addDecorator(withKnobs)
@@ -69,6 +78,47 @@ storiesOf('Input', module)
         onFocus={onFocusAction}
         onBlur={onBlurAction}
       />
+    );
+  })
+
+  .add('controlled with state', () => {
+    const disabledValue = boolean('Disabled', false, 'General');
+
+    return (
+      <State store={storeWithState}>
+        <Input
+          type="text"
+          value={storeWithState.get('value')}
+          onChange={value => {
+            storeWithState.set({ value });
+            onChangeAction(value);
+          }}
+          placeHolder="Write some stuff"
+          disabled={disabledValue}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+        />
+      </State>
+    );
+  })
+
+  .add('controlled number with state', () => {
+    const disabledValue = boolean('Disabled', false, 'General');
+
+    return (
+      <State store={storeNumberWithState}>
+        <Input
+          type="number"
+          value={storeNumberWithState.get('value')}
+          onChange={value => {
+            storeNumberWithState.set({ value });
+            onChangeAction(value);
+          }}
+          disabled={disabledValue}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+        />
+      </State>
     );
   })
 

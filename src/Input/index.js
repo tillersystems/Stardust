@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import Status from './Status';
@@ -30,6 +30,9 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * Defnes an input component.
  */
 class Input extends PureComponent {
+  /** Reference to the inner input element. */
+  inputRef = createRef();
+
   /** Display name. */
   static displayName = 'Input';
 
@@ -76,11 +79,11 @@ class Input extends PureComponent {
 
     type: 'text',
     id: '',
-    value: '',
+    value: null,
     tabIndex: '0',
     placeHolder: '',
     disabled: false,
-    onChange: null,
+    onChange: () => {},
     onFocus: () => {},
     onBlur: () => {},
 
@@ -101,20 +104,28 @@ class Input extends PureComponent {
   /** Internal state. */
   state = {
     // Used for displaying the value in the "native" input (inner input).
-    // If the component is used by default, this state is updated by the
-    // "native" input. If the component is a controlled component, this
-    // value is managed by the user.
+    // If the component is used by default, this state is updated by the "native" input. If the
+    // component is a controlled component, this value is managed by the user.
     value: this.props.value, // eslint-disable-line react/destructuring-assignment
 
-    // Added state to bubble up focus from "native" input to the whole
-    // container.
+    // State to bubble up focus from "native" input to the whole container.
     hasFocus: false,
+
+    // Keeps track of the cursor's position for controlled input.
+    cursorPosition: 1,
   };
 
   componentDidUpdate(prevProps) {
-    const { value } = this.props;
+    const { type, value } = this.props;
     if (value !== prevProps.value) {
-      this.setState({ ...this.state, value });
+      this.setState({ ...this.state, value }, () => {
+        const { cursorPosition } = this.state;
+
+        if (type !== 'number') {
+          this.inputRef.selectionStart = cursorPosition;
+          this.inputRef.selectionEnd = cursorPosition;
+        }
+      });
     }
   }
 
@@ -124,13 +135,14 @@ class Input extends PureComponent {
    * @param {Object} e - The native event.
    */
   handleChange = e => {
-    const { disabled, onChange } = this.props;
-    const { value } = e.target;
+    const { disabled, value: propValue, onChange } = this.props;
+    const { value: eventValue, selectionStart: cursorPosition } = e.target;
 
-    if (!disabled && onChange) {
-      onChange(value);
-    } else {
-      this.setState({ ...this.state, value });
+    if (!disabled) {
+      const value = propValue || eventValue;
+      this.setState({ ...this.state, value, cursorPosition }, () => {
+        onChange(eventValue);
+      });
     }
   };
 
@@ -198,10 +210,11 @@ class Input extends PureComponent {
       >
         {label && labelPosition === 'left' && <Label icon={label} position="left" />}
         <InputElement
+          innerRef={ref => (this.inputRef = ref)}
           type={type}
           id={id}
           tabIndex={tabIndex}
-          value={value}
+          value={value || ''}
           placeholder={placeHolder}
           disabled={disabled}
           onChange={this.handleChange}
