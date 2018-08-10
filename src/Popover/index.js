@@ -17,10 +17,15 @@ import { PopOver } from './elements';
  * @return {jsx}
  */
 
-const Popover = ({ active, children, width }) => (
+const Popover = ({ active, arrowPositionX, children, width }) => (
   <PoseGroup animateOnMount>
     {active && (
-      <PopOverAnimation width={width} pose={active ? 'enter' : 'exit'} key="ContainerAnimation">
+      <PopOverAnimation
+        width={width}
+        pose={active ? 'enter' : 'exit'}
+        arrowPositionX={arrowPositionX}
+        key="ContainerAnimation"
+      >
         {children}
       </PopOverAnimation>
     )}
@@ -33,6 +38,7 @@ const Popover = ({ active, children, width }) => (
 const { bool, node, string } = PropTypes;
 Popover.propTypes = {
   active: bool,
+  arrowPositionX: string,
   children: node,
   width: string,
 };
@@ -42,8 +48,9 @@ Popover.propTypes = {
  */
 Popover.defaultProps = {
   active: false,
+  arrowPositionX: '50%',
   children: null,
-  width: '100rem',
+  width: 'auto',
 };
 
 /**
