@@ -6,8 +6,17 @@ import { ThemeProvider } from 'styled-components';
 import KpiBlock from '..';
 import Theme from '../../Theme';
 
-describe('<Input />', () => {
+describe('<KpiBlock />', () => {
   it('should render withouth a problem', () => {
+    const render = mount(
+      <ThemeProvider theme={Theme}>
+        <KpiBlock title="title" value="value" />
+      </ThemeProvider>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render with a positive variation value', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
         <KpiBlock title="title" value="value" variation={100} />
