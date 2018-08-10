@@ -1,3 +1,16 @@
+<a name="0.7.0"></a>
+
+# [0.7.0](https://github.com/tillersystems/Stardust/compare/v0.6.0...v0.7.0) (2018-08-10)
+
+### Bug Fixes
+
+- **modal:** fix overlay onscroll ([4425df6](https://github.com/tillersystems/Stardust/commit/4425df6))
+
+### Features
+
+- **modal:** create component ([782ec45](https://github.com/tillersystems/Stardust/commit/782ec45))
+- **ToogleButton:** create component ([a5d6acd](https://github.com/tillersystems/Stardust/commit/a5d6acd))
+
 <a name="0.6.0"></a>
 
 # [0.6.0](https://github.com/tillersystems/Stardust/compare/v0.5.0...v0.6.0) (2018-08-09)
