@@ -759,9 +759,9 @@
     lodash "^4.17.4"
     recompose "^0.26.0"
 
-"@sambego/storybook-state@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@sambego/storybook-state/-/storybook-state-1.1.0.tgz#844faed72c8ea1ad8964d528aeee8c237d8cf0e7"
+"@sambego/storybook-state@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@sambego/storybook-state/-/storybook-state-1.2.0.tgz#861bf76a35413d49d434e1dfddaad0f82ded815d"
   dependencies:
     uuid "^3.1.0"
 
