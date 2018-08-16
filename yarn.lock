@@ -7340,9 +7340,9 @@ polished@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
 
-popmotion-pose@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-2.1.0.tgz#d9b8b63ab7fa86441df00be9a296823c415334f8"
+popmotion-pose@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-2.1.2.tgz#90aa81e70f254f136fbc7c502f9b95b01ac946a9"
   dependencies:
     popmotion "^8.3.3"
     pose-core "^0.7.4"
@@ -8047,12 +8047,12 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-2.2.0.tgz#b3bbda9b203d93c99889472b71d067bd5c96c27b"
+react-pose@2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-2.2.3.tgz#5654d6211d77370da98d57627620ee65b5791736"
   dependencies:
     hey-listen "^1.0.5"
-    popmotion-pose "^2.1.0"
+    popmotion-pose "^2.1.2"
     tslib "^1.9.1"
 
 react-reconciler@^0.7.0:
