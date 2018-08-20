@@ -13,8 +13,14 @@ const getColor = color => {
 };
 
 const Icon = ({ name, color, height, width, spin }) => (
-  <Container {...{ spin }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 512 512">
+  <Container {...{ spin, width, height }}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: 'block' }}
+      width={width}
+      height={height}
+      viewBox="0 0 512 512"
+    >
       <path fill={getColor(color)} fillRule="evenodd" d={Data[name]} />
     </svg>
   </Container>

@@ -106,6 +106,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -628,6 +629,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1165,6 +1167,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1694,6 +1697,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2226,6 +2230,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2640,6 +2645,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -3053,6 +3059,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -3465,6 +3472,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -4015,6 +4023,7 @@ exports[`<Form /> should render form with size value 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -4526,6 +4535,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -5072,6 +5082,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);

@@ -15,6 +15,7 @@ exports[`<TextInput /> should render disabled without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -111,8 +112,11 @@ exports[`<TextInput /> should render disabled without problem 1`] = `
 exports[`<TextInput /> should render error without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -149,6 +153,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -264,13 +269,22 @@ exports[`<TextInput /> should render error without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -296,8 +310,11 @@ exports[`<TextInput /> should render error without problem 1`] = `
 exports[`<TextInput /> should render info without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .c2 {
@@ -334,6 +351,7 @@ exports[`<TextInput /> should render info without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -449,13 +467,22 @@ exports[`<TextInput /> should render info without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  height="2rem"
                   spin={false}
+                  width="2rem"
                 >
                   <div
                     className="c3"
+                    height="2rem"
+                    width="2rem"
                   >
                     <svg
                       height="2rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="2rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -478,13 +505,7 @@ exports[`<TextInput /> should render info without problem 1`] = `
 </TextInput>
 `;
 
-exports[`<TextInput /> should render input without problem when given a label 1`] = `
-.c2 {
-  display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
-}
-
+exports[`<TextInput /> should render input without problem when given a text label 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -498,11 +519,9 @@ exports[`<TextInput /> should render input without problem when given a label 1`
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 3.8rem;
-  height: 3.8rem;
+  padding: 1.1rem;
+  color: hsl(206,16%,60%);
   background: hsl(218,29%,95%);
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
   border-right: 1px solid hsl(218,18%,91%);
 }
 
@@ -520,6 +539,172 @@ exports[`<TextInput /> should render input without problem when given a label 1`
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(218,18%,91%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c2:focus,
+.c2:active {
+  outline: none;
+}
+
+<TextInput
+  _onBlur={[Function]}
+  _onFocus={[Function]}
+  disabled={false}
+  error={false}
+  fluid={false}
+  id=""
+  info={false}
+  label={
+    Object {
+      "text": "Pickle Rick",
+    }
+  }
+  labelPosition="left"
+  loading={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  password={false}
+  placeHolder=""
+  search={false}
+  success={false}
+  tabIndex="0"
+  value=""
+  warning={false}
+  width="25rem"
+>
+  <styled.div
+    disabled={false}
+    error={false}
+    hasFocus={false}
+    info={false}
+    success={false}
+    warning={false}
+    width="25rem"
+  >
+    <div
+      className="c0"
+      disabled={false}
+      width="25rem"
+    >
+      <Styled(Input.Label)
+        label={
+          Object {
+            "text": "Pickle Rick",
+          }
+        }
+        position="left"
+      >
+        <Input.Label
+          className="c1"
+          label={
+            Object {
+              "text": "Pickle Rick",
+            }
+          }
+          position="left"
+        >
+          <div
+            className="c1"
+          >
+            <span>
+              Pickle Rick
+            </span>
+          </div>
+        </Input.Label>
+      </Styled(Input.Label)>
+      <styled.input
+        disabled={false}
+        id=""
+        innerRef={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder=""
+        tabIndex="0"
+        type="text"
+        value=""
+      >
+        <input
+          className="c2"
+          disabled={false}
+          id=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder=""
+          tabIndex="0"
+          type="text"
+          value=""
+        />
+      </styled.input>
+    </div>
+  </styled.div>
+</TextInput>
+`;
+
+exports[`<TextInput /> should render input without problem when given an icon label 1`] = `
+.c2 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1.1rem;
+  color: hsl(206,16%,60%);
+  background: hsl(218,29%,95%);
+  border-right: 1px solid hsl(218,18%,91%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -552,7 +737,11 @@ exports[`<TextInput /> should render input without problem when given a label 1`
   fluid={false}
   id=""
   info={false}
-  label="cog"
+  label={
+    Object {
+      "icon": "cog",
+    }
+  }
   labelPosition="left"
   loading={false}
   onBlur={[Function]}
@@ -582,12 +771,20 @@ exports[`<TextInput /> should render input without problem when given a label 1`
       width="25rem"
     >
       <Styled(Input.Label)
-        icon="cog"
+        label={
+          Object {
+            "icon": "cog",
+          }
+        }
         position="left"
       >
         <Input.Label
           className="c1"
-          icon="cog"
+          label={
+            Object {
+              "icon": "cog",
+            }
+          }
           position="left"
         >
           <div
@@ -595,28 +792,37 @@ exports[`<TextInput /> should render input without problem when given a label 1`
           >
             <Styled(Icon)
               color="hsl(206, 16%, 60%)"
-              height="1.5rem"
+              height="1.6rem"
               name="cog"
-              width="1.5rem"
+              width="1.6rem"
             >
               <Icon
                 className=""
                 color="hsl(206, 16%, 60%)"
-                height="1.5rem"
+                height="1.6rem"
                 name="cog"
                 spin={false}
-                width="1.5rem"
+                width="1.6rem"
               >
                 <styled.div
+                  height="1.6rem"
                   spin={false}
+                  width="1.6rem"
                 >
                   <div
                     className="c2"
+                    height="1.6rem"
+                    width="1.6rem"
                   >
                     <svg
-                      height="1.5rem"
+                      height="1.6rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
-                      width="1.5rem"
+                      width="1.6rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -662,11 +868,14 @@ exports[`<TextInput /> should render input without problem when given a label 1`
 </TextInput>
 `;
 
-exports[`<TextInput /> should render input without problem when given a label and label position 1`] = `
+exports[`<TextInput /> should render input without problem when given an icon label and label position 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 .c2 {
@@ -682,11 +891,9 @@ exports[`<TextInput /> should render input without problem when given a label an
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 3.8rem;
-  height: 3.8rem;
+  padding: 1.1rem;
+  color: hsl(206,16%,60%);
   background: hsl(218,29%,95%);
-  border-top-right-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
   border-left: 1px solid hsl(218,18%,91%);
 }
 
@@ -704,6 +911,7 @@ exports[`<TextInput /> should render input without problem when given a label an
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -736,7 +944,11 @@ exports[`<TextInput /> should render input without problem when given a label an
   fluid={false}
   id=""
   info={false}
-  label="cog"
+  label={
+    Object {
+      "icon": "cog",
+    }
+  }
   labelPosition="right"
   loading={false}
   onBlur={[Function]}
@@ -791,12 +1003,20 @@ exports[`<TextInput /> should render input without problem when given a label an
         />
       </styled.input>
       <Styled(Input.Label)
-        icon="cog"
+        label={
+          Object {
+            "icon": "cog",
+          }
+        }
         position="right"
       >
         <Input.Label
           className="c2"
-          icon="cog"
+          label={
+            Object {
+              "icon": "cog",
+            }
+          }
           position="right"
         >
           <div
@@ -804,28 +1024,37 @@ exports[`<TextInput /> should render input without problem when given a label an
           >
             <Styled(Icon)
               color="hsl(206, 16%, 60%)"
-              height="1.5rem"
+              height="1.6rem"
               name="cog"
-              width="1.5rem"
+              width="1.6rem"
             >
               <Icon
                 className=""
                 color="hsl(206, 16%, 60%)"
-                height="1.5rem"
+                height="1.6rem"
                 name="cog"
                 spin={false}
-                width="1.5rem"
+                width="1.6rem"
               >
                 <styled.div
+                  height="1.6rem"
                   spin={false}
+                  width="1.6rem"
                 >
                   <div
                     className="c3"
+                    height="1.6rem"
+                    width="1.6rem"
                   >
                     <svg
-                      height="1.5rem"
+                      height="1.6rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
-                      width="1.5rem"
+                      width="1.6rem"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -849,8 +1078,11 @@ exports[`<TextInput /> should render input without problem when given a label an
 exports[`<TextInput /> should render loading without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2rem;
   -webkit-animation: iVXCSc 3s linear infinite;
   animation: iVXCSc 3s linear infinite;
 }
@@ -889,6 +1121,7 @@ exports[`<TextInput /> should render loading without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1003,13 +1236,22 @@ exports[`<TextInput /> should render loading without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  height="2rem"
                   spin={true}
+                  width="2rem"
                 >
                   <div
                     className="c3"
+                    height="2rem"
+                    width="2rem"
                   >
                     <svg
                       height="2rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="2rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1035,8 +1277,11 @@ exports[`<TextInput /> should render loading without problem 1`] = `
 exports[`<TextInput /> should render search without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -1073,6 +1318,7 @@ exports[`<TextInput /> should render search without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1187,13 +1433,22 @@ exports[`<TextInput /> should render search without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1219,8 +1474,11 @@ exports[`<TextInput /> should render search without problem 1`] = `
 exports[`<TextInput /> should render search without problem when focused 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -1258,6 +1516,7 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1373,13 +1632,22 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1405,8 +1673,11 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
 exports[`<TextInput /> should render success without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -1443,6 +1714,7 @@ exports[`<TextInput /> should render success without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1558,13 +1830,22 @@ exports[`<TextInput /> should render success without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1590,8 +1871,11 @@ exports[`<TextInput /> should render success without problem 1`] = `
 exports[`<TextInput /> should render warning without problem 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .c2 {
@@ -1628,6 +1912,7 @@ exports[`<TextInput /> should render warning without problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1743,13 +2028,22 @@ exports[`<TextInput /> should render warning without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  height="2rem"
                   spin={false}
+                  width="2rem"
                 >
                   <div
                     className="c3"
+                    height="2rem"
+                    width="2rem"
                   >
                     <svg
                       height="2rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="2rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1787,6 +2081,7 @@ exports[`<TextInput /> should render withouth a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1893,6 +2188,7 @@ exports[`<TextInput /> should render withouth a problem when fluid 1`] = `
   align-items: center;
   width: 100%;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1999,6 +2295,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2106,6 +2403,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2212,6 +2510,7 @@ exports[`<TextInput /> should render withouth a problem when given a type 1`] = 
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2318,6 +2617,7 @@ exports[`<TextInput /> should render withouth a problem when given a width 1`] =
   align-items: center;
   width: 123rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2424,6 +2724,7 @@ exports[`<TextInput /> should render withouth a problem when text changed 1`] = 
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2519,8 +2820,11 @@ exports[`<TextInput /> should render withouth a problem when text changed 1`] = 
 exports[`<TextInput /> should update the component when controlled value is changed 1`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -2557,6 +2861,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2671,13 +2976,22 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2703,8 +3017,11 @@ exports[`<TextInput /> should update the component when controlled value is chan
 exports[`<TextInput /> should update the component when controlled value is changed 2`] = `
 .c3 {
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .c2 {
@@ -2741,6 +3058,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2855,13 +3173,22 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 width="1.1rem"
               >
                 <styled.div
+                  height="1.1rem"
                   spin={false}
+                  width="1.1rem"
                 >
                   <div
                     className="c3"
+                    height="1.1rem"
+                    width="1.1rem"
                   >
                     <svg
                       height="1.1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1.1rem"
                       xmlns="http://www.w3.org/2000/svg"

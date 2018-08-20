@@ -75,13 +75,20 @@ describe('<TextInput />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render input without problem when given a label', () => {
-    const render = mountWithTheme(<TextInput value="" label="cog" />);
+  it('should render input without problem when given an icon label', () => {
+    const render = mountWithTheme(<TextInput value="" label={{ icon: 'cog' }} />);
     expect(render).toMatchSnapshot();
   });
 
-  it('should render input without problem when given a label and label position', () => {
-    const render = mountWithTheme(<TextInput value="" label="cog" labelPosition="right" />);
+  it('should render input without problem when given an icon label and label position', () => {
+    const render = mountWithTheme(
+      <TextInput value="" label={{ icon: 'cog' }} labelPosition="right" />,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render input without problem when given a text label', () => {
+    const render = mountWithTheme(<TextInput value="" label={{ text: 'Pickle Rick' }} />);
     expect(render).toMatchSnapshot();
   });
 

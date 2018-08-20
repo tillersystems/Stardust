@@ -210,6 +210,9 @@ exports[`<CheckBox /> should render without a problem 1`] = `
 exports[`<CheckBox /> should render without a problem when checked and disabled 1`] = `
 .c2 {
   display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -409,13 +412,22 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
                 width="1rem"
               >
                 <styled.div
+                  height="1rem"
                   spin={false}
+                  width="1rem"
                 >
                   <div
                     className="c2"
+                    height="1rem"
+                    width="1rem"
                   >
                     <svg
                       height="1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1rem"
                       xmlns="http://www.w3.org/2000/svg"
@@ -461,6 +473,9 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
 exports[`<CheckBox /> should render without a problem when checked and enabled 1`] = `
 .c2 {
   display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -658,13 +673,22 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
                 width="1rem"
               >
                 <styled.div
+                  height="1rem"
                   spin={false}
+                  width="1rem"
                 >
                   <div
                     className="c2"
+                    height="1rem"
+                    width="1rem"
                   >
                     <svg
                       height="1rem"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
                       viewBox="0 0 512 512"
                       width="1rem"
                       xmlns="http://www.w3.org/2000/svg"

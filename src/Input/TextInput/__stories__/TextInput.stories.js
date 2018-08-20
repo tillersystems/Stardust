@@ -120,7 +120,23 @@ storiesOf('Input - TextInput', module)
     );
   })
 
-  .add('with label', () => {
+  .add('with text label', () => {
+    const disabledValue = boolean('Disabled', false, 'General');
+
+    const labelValue = text('Label text', '', 'Label');
+    const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
+
+    return (
+      <TextInput
+        placeHolder="Write some stuff"
+        disabled={disabledValue}
+        label={{ text: labelValue }}
+        labelPosition={labelPositionValue}
+      />
+    );
+  })
+
+  .add('with icon label', () => {
     const disabledValue = boolean('Disabled', false, 'General');
 
     const labelValue = select('Label icon', Object.keys(IconNames), 'euro', 'Label');
@@ -130,7 +146,7 @@ storiesOf('Input - TextInput', module)
       <TextInput
         placeHolder="Write some stuff"
         disabled={disabledValue}
-        label={labelValue}
+        label={{ icon: labelValue }}
         labelPosition={labelPositionValue}
       />
     );

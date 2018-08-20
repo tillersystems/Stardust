@@ -12,8 +12,14 @@ export const spinAnimation = keyframes`
 
 export const Container = styled.div`
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1rem;
+
+  border-image-source: none;
+  border-image-width: 0;
+
+  padding: 0;
+
+  font-size: ${({ width }) => width};
+  line-height: ${({ width }) => width};
 
   ${({ spin }) =>
     spin &&

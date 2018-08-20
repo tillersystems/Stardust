@@ -76,7 +76,10 @@ class TextInput extends PureComponent {
     onBlur: PropTypes.func,
 
     // Label related props.
-    label: PropTypes.string,
+    label: PropTypes.shape({
+      text: PropTypes.string,
+      icon: PropTypes.string,
+    }),
     labelPosition: PropTypes.oneOf(['left', 'right']),
 
     // Status related props.
@@ -236,7 +239,7 @@ class TextInput extends PureComponent {
         warning={warning}
         error={error}
       >
-        {label && labelPosition === 'left' && <Label icon={label} position="left" />}
+        {label && labelPosition === 'left' && <Label label={label} position="left" />}
         <InputElement
           innerRef={ref => (this.inputRef = ref)}
           type={password ? 'password' : 'text'}
@@ -255,7 +258,7 @@ class TextInput extends PureComponent {
             status={getStatus(loading, info, success, warning, error, search)}
           />
         )}
-        {label && labelPosition === 'right' && <Label icon={label} position="right" />}
+        {label && labelPosition === 'right' && <Label label={label} position="right" />}
       </Container>
     );
   }
