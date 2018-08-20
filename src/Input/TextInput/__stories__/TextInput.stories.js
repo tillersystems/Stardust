@@ -123,7 +123,7 @@ storiesOf('Input - TextInput', module)
   .add('with text label', () => {
     const disabledValue = boolean('Disabled', false, 'General');
 
-    const labelValue = text('Label text', '', 'Label');
+    const labelValue = text('Label text', 'http://', 'Label');
     const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
 
     return (
@@ -140,7 +140,7 @@ storiesOf('Input - TextInput', module)
     const disabledValue = boolean('Disabled', false, 'General');
 
     const labelValue = select('Label icon', Object.keys(IconNames), 'euro', 'Label');
-    const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
+    const labelPositionValue = select('Label position', ['left', 'right'], 'right', 'Label');
 
     return (
       <TextInput

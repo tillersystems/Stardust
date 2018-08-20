@@ -13,15 +13,16 @@ import { TextInput } from '@tillersystems/stardust';
 - `id` - the ID of the input.
 - `width` - the width of the input.
 - `fluid` - whether the input takes all available space or not.
-- `type` - the type of input (`text` or `password`).
 - `value` - the value of the input.
 - `tabIndex` - index of the input in a parent form.
 - `placeHolder` - placeholder text.
 - `disabled` - whether the input is disabled or not.
+- `password` - whether the input is a password input or not.
 - `onChange` - handler of input value change.
 - `onFocus` - handler of input gains focus.
 - `onBlur` - handler of input looses focus.
-- `label` - name of label icon.
+- `label` - object defining the label (with either `icon` with the name of the icon to display, or
+  `text` with the text to display);
 - `labelPosition` - position of label (`left` or `right`).
 - `loading` - whether the input as status loading.
 - `info` - whether the input as status info.
@@ -34,16 +35,16 @@ import { TextInput } from '@tillersystems/stardust';
 | --------------- | :------: | :----------: | :--------: |
 | `width`         | `string` |   `25rem`    |     -      |
 | `fluid`         |  `bool`  |   `false`    |     -      |
-| `type`          | `string` |    `text`    |     -      |
 | `id`            | `string` |     `''`     |     -      |
 | `value`         | `string` |     `''`     |     -      |
 | `tabIndex`      | `string` |     `0`      |     -      |
 | `placeHolder`   | `string` |     `''`     |     -      |
 | `disabled`      |  `bool`  |   `false`    |     -      |
+| `password`      |  `bool`  |   `false`    |     -      |
 | `onChange`      |  `func`  |    `null`    |     -      |
 | `onFocus`       |  `func`  |  `() => {}`  |     -      |
 | `onBlur`        |  `func`  |  `() => {}`  |     -      |
-| `label`         | `string` |    `null`    |     -      |
+| `label`         | `Object` |    `null`    |     -      |
 | `labelPosition` | `string` |    `left`    |     -      |
 | `loading`       |  `bool`  |   `false`    |     -      |
 | `info`          |  `bool`  |   `false`    |     -      |
@@ -104,14 +105,24 @@ render() {
 
 #### TextInput with label
 
-The following snippet shows how to create an input with a label.
+The following snippets show how to create an input with a label.
 
 ```jsx
 import { TextInput } from '@tillersystems/stardust';
 
 render() {
   return (
-    <TextInput label="euro" labelPosition="right" />
+    <TextInput label={{ icon: "euro" }} labelPosition="right" />
+  );
+}
+```
+
+```jsx
+import { TextInput } from '@tillersystems/stardust';
+
+render() {
+  return (
+    <TextInput label={{ text: "http://" }} labelPosition="right" />
   );
 }
 ```
