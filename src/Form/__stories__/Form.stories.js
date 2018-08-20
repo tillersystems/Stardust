@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number } from '@storybook/addon-knobs/react';
 
-import { Button, Form, Input } from '../..';
+import { Button, Form, TextInput } from '../..';
 
 storiesOf('Form', module)
   .addDecorator(withKnobs)
@@ -11,7 +11,7 @@ storiesOf('Form', module)
       <Form onSubmit={() => {}} name="form">
         <Form.Group>
           <Form.Field label="Label">
-            <Input type="text" placeholder="tape inside me" />
+            <TextInput placeholder="tape inside me" />
           </Form.Field>
         </Form.Group>
       </Form>
@@ -63,10 +63,10 @@ storiesOf('Form', module)
           labelsWidth={`${labelsWidth}rem`}
         >
           <Form.Field label="Name" size={nameSizeValue.toString()}>
-            <Input fluid type="text" placeholder="Name" />
+            <TextInput fluid placeholder="Name" />
           </Form.Field>
           <Form.Field label="Surname" size={surnameSizeValue.toString()}>
-            <Input fluid type="text" placeholder="Surname" />
+            <TextInput fluid placeholder="Surname" />
           </Form.Field>
           <Form.Field size="20rem">
             <Button fluid primary>

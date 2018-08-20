@@ -6,7 +6,7 @@ export { default as CheckBox } from './CheckBox';
 export { DatePicker, DateRangePicker } from './Date';
 export { default as Form } from './Form';
 export { default as Icon } from './Icon';
-export { default as Input } from './Input';
+export { TextInput } from './Input';
 export { default as KpiChart } from './KpiChart';
 export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';

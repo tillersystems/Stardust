@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select, text, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
-import { Input } from '../..';
-import { Data as IconNames } from '../../Icon/data';
+import { TextInput } from '../..';
+import { Data as IconNames } from '../../../Icon/data';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
@@ -18,7 +18,7 @@ const storeNumberWithState = new Store({
   value: Number.Nan,
 });
 
-storiesOf('Input', module)
+storiesOf('Input - TextInput', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const widthValue = number(
@@ -34,8 +34,8 @@ storiesOf('Input', module)
     );
     const fluidValue = boolean('Fluid', false, 'Size');
 
-    const typeValue = select('Type', ['text', 'password', 'email'], 'text', 'General');
     const disabledValue = boolean('Disabled', false, 'General');
+    const isPasswordValue = boolean('Is password', false, 'General');
 
     const loadingValue = boolean('Loading', false, 'Status');
     const infoValue = boolean('Info', false, 'Status');
@@ -45,10 +45,10 @@ storiesOf('Input', module)
     const searchValue = boolean('Search', false, 'Status');
 
     return (
-      <Input
+      <TextInput
         width={`${widthValue}rem`}
+        password={isPasswordValue}
         fluid={fluidValue}
-        type={typeValue}
         placeHolder="Write some stuff"
         disabled={disabledValue}
         onFocus={onFocusAction}
@@ -64,13 +64,11 @@ storiesOf('Input', module)
   })
 
   .add('controlled', () => {
-    const typeValue = select('Type', ['text', 'password'], 'text', 'General');
     const disabledValue = boolean('Disabled', false, 'General');
     const valueValue = text('Value', '', 'General');
 
     return (
-      <Input
-        type={typeValue}
+      <TextInput
         value={valueValue}
         onChange={onChangeAction}
         placeHolder="Write some stuff"
@@ -86,7 +84,7 @@ storiesOf('Input', module)
 
     return (
       <State store={storeWithState}>
-        <Input
+        <TextInput
           type="text"
           value={storeWithState.get('value')}
           onChange={value => {
@@ -107,7 +105,7 @@ storiesOf('Input', module)
 
     return (
       <State store={storeNumberWithState}>
-        <Input
+        <TextInput
           type="number"
           value={storeNumberWithState.get('value')}
           onChange={value => {
@@ -123,15 +121,13 @@ storiesOf('Input', module)
   })
 
   .add('with label', () => {
-    const typeValue = select('Type', ['text', 'password'], 'text', 'General');
     const disabledValue = boolean('Disabled', false, 'General');
 
     const labelValue = select('Label icon', Object.keys(IconNames), 'euro', 'Label');
     const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
 
     return (
-      <Input
-        type={typeValue}
+      <TextInput
         placeHolder="Write some stuff"
         disabled={disabledValue}
         label={labelValue}
