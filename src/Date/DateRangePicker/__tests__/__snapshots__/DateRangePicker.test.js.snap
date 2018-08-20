@@ -48,35 +48,35 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -136,11 +136,11 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -154,7 +154,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   border-bottom-right-radius: 0.4rem;
 }
 
-.bGAVeQ > .c9 {
+.c29 > .c9 {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -4490,35 +4490,35 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -4578,15 +4578,15 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.bGAVeQ > .c9 {
+.c28 > .c9 {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -8600,35 +8600,35 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -8688,20 +8688,20 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.bGAVeQ > .c9 {
+.c29 > .c9 {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
 
-.jjnUZX > .c9 {
+.c30 > .c9 {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -12722,35 +12722,35 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -12810,11 +12810,11 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -16822,35 +16822,35 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -16910,11 +16910,11 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -20913,35 +20913,35 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -21001,11 +21001,11 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c28 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -25350,35 +25350,35 @@ exports[`<DatePicker /> should handle next month 1`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c19 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c19 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -25438,11 +25438,11 @@ exports[`<DatePicker /> should handle next month 1`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -29430,35 +29430,35 @@ exports[`<DatePicker /> should handle next month 2`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c26 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -29518,11 +29518,11 @@ exports[`<DatePicker /> should handle next month 2`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -33856,35 +33856,35 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   fill: hsl(0,100%,100%);
 }
 
-.dQHPcQ > .c9 {
+.c19 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dQHPcQ > .c9 {
+.c19 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kKCUqG > .c9 {
+.c20 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.AcrSr > .c9 {
+.c21 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.aUEFW > .c9 {
+.c22 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.fZDIhm > .c9 {
+.c23 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.kSfKcP > .c9 {
+.c24 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -33944,11 +33944,11 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
-.dXvggN > .c9 {
+.c25 > .c9 {
   color: hsl(218,18%,91%);
 }
 
@@ -38113,7 +38113,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   color: hsl(218,18%,91%);
 }
 
-.bQHRvD > .c9 {
+.c27 > .c9 {
   color: hsl(218,18%,91%);
 }
 
