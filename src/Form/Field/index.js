@@ -68,15 +68,13 @@ class Field extends PureComponent {
         type: { displayName },
       } = child;
 
-      if (displayName === 'Input') {
-        return cloneElement(child, { _onFocus: this.handleFocus, _onBlur: this.handleBlur });
-      }
+      const childProps = { _onFocus: this.handleFocus, _onBlur: this.handleBlur };
 
       if (displayName === 'Button') {
-        return cloneElement(child, { type: 'submit' });
+        childProps.type = 'submit';
       }
 
-      return child;
+      return cloneElement(child, childProps);
     });
 
     return (

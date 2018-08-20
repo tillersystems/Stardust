@@ -2593,6 +2593,8 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
+  color: hsl(200,74%,46%);
+  font-weight: 600;
 }
 
 .c5 {
@@ -2833,7 +2835,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                         className="c3"
                       >
                         <styled.label
-                          hasFocus={false}
+                          hasFocus={true}
                           labelInline={true}
                           width="10rem"
                         >
@@ -5392,11 +5394,15 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                 className=""
                               >
                                 <Button
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
                                   key=".0"
                                   primary={true}
                                   type="submit"
                                 >
                                   <Button
+                                    _onBlur={[Function]}
+                                    _onFocus={[Function]}
                                     big={false}
                                     className=""
                                     disabled={false}
@@ -5415,6 +5421,8 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     type="submit"
                                   >
                                     <styled.button
+                                      _onBlur={[Function]}
+                                      _onFocus={[Function]}
                                       big={false}
                                       className=""
                                       disabled={false}
