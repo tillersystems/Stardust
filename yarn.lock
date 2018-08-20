@@ -724,6 +724,16 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@emotion/is-prop-valid@^0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.5.tgz#25071b70957f250e7a8a543a9a187b09161f4d1c"
+  dependencies:
+    "@emotion/memoize" "^0.6.5"
+
+"@emotion/memoize@^0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.5.tgz#f868c314b889e7c3d84868a1d1cc323fbb40ca86"
+
 "@nivo/bar@0.42.1":
   version "0.42.1"
   resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.42.1.tgz#18b1b258adfd7399e69a70bfd608e4aaab301efd"
@@ -8060,10 +8070,11 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.0.1.tgz#848579da01ab0fda1850b16ae56ce9cff1432d32"
+react-pose@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.0.2.tgz#cc01ead1e04ba3d9f262d261c87fa53d00541a22"
   dependencies:
+    "@emotion/is-prop-valid" "^0.6.5"
     hey-listen "^1.0.5"
     popmotion-pose "^3.0.0"
     tslib "^1.9.1"
