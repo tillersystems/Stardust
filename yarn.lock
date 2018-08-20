@@ -8045,9 +8045,9 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.0.0.tgz#08afc12efb4057a0135a1f7a2f8a7f55afdd00a5"
+react-pose@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.0.1.tgz#848579da01ab0fda1850b16ae56ce9cff1432d32"
   dependencies:
     hey-listen "^1.0.5"
     popmotion-pose "^3.0.0"
