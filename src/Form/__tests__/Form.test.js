@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import Form from '..';
 import Theme from '../../Theme';
-import { Button, Input } from '../..';
+import { Button, TextInput } from '../..';
 
 describe('<Form />', () => {
   it('should render withouth a problem', () => {
@@ -14,7 +14,7 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group>
             <Form.Field label="my label">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field>
               <Button primary>Hello</Button>
@@ -33,10 +33,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group>
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field hasLabel labelContent="my label 2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -52,10 +52,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group>
             <Form.Field>
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field>
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -71,10 +71,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group row>
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field hasLabel labelContent="my label 2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -90,10 +90,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group inlineLabels>
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field hasLabel labelContent="my label 2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -109,10 +109,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group row inlineLabels>
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field label="my label 2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -128,10 +128,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group inlineLabels labelsWidth="10rem">
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field label="my label 2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -147,7 +147,7 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group inlineLabels labelsWidth="10rem">
             <Form.Field label="my label 1">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>
@@ -172,10 +172,10 @@ describe('<Form />', () => {
         <Form onSubmit={() => {}} name="form">
           <Form.Group inlineLabels labelsWidth="10rem">
             <Form.Field label="my label 1" size="3">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
             <Form.Field label="my label 2" size="2">
-              <Input type="text" placeholder="tape inside me" />
+              <TextInput placeholder="tape inside me" />
             </Form.Field>
           </Form.Group>
         </Form>

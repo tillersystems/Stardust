@@ -106,6 +106,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -319,7 +320,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -334,12 +335,12 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -385,7 +386,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -429,7 +430,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -444,12 +445,12 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -495,7 +496,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -628,6 +629,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -841,7 +843,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -856,12 +858,12 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -907,7 +909,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -961,7 +963,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -976,12 +978,12 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -1027,7 +1029,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -1165,6 +1167,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1378,7 +1381,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -1393,12 +1396,12 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -1444,7 +1447,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -1498,7 +1501,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -1513,12 +1516,12 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -1564,7 +1567,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -1694,6 +1697,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -1907,7 +1911,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -1922,12 +1926,12 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -1973,7 +1977,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -2027,7 +2031,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -2042,12 +2046,12 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -2093,7 +2097,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -2226,6 +2230,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2439,7 +2444,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -2454,12 +2459,12 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -2505,7 +2510,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -2640,6 +2645,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -2854,7 +2860,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -2869,12 +2875,12 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -2920,7 +2926,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -3053,6 +3059,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -3266,7 +3273,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -3281,12 +3288,12 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -3332,7 +3339,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -3465,6 +3472,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -3678,7 +3686,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -3693,12 +3701,12 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -3744,7 +3752,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -3798,7 +3806,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -3813,12 +3821,12 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -3864,7 +3872,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -4015,6 +4023,7 @@ exports[`<Form /> should render form with size value 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -4228,7 +4237,7 @@ exports[`<Form /> should render form with size value 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -4243,12 +4252,12 @@ exports[`<Form /> should render form with size value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -4294,7 +4303,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -4348,7 +4357,7 @@ exports[`<Form /> should render form with size value 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -4363,12 +4372,12 @@ exports[`<Form /> should render form with size value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -4414,7 +4423,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -4526,6 +4535,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -4727,7 +4737,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -4742,12 +4752,12 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -4793,7 +4803,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -4835,7 +4845,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -4850,12 +4860,12 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -4901,7 +4911,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -5072,6 +5082,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   align-items: center;
   width: 25rem;
   height: 4rem;
+  overflow: hidden;
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
@@ -5285,7 +5296,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                               <div
                                 className=""
                               >
-                                <Input
+                                <TextInput
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
                                   disabled={false}
@@ -5300,12 +5311,12 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
+                                  password={false}
                                   placeHolder=""
                                   placeholder="tape inside me"
                                   search={false}
                                   success={false}
                                   tabIndex="0"
-                                  type="text"
                                   value={null}
                                   warning={false}
                                   width="25rem"
@@ -5351,7 +5362,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                       </styled.input>
                                     </div>
                                   </styled.div>
-                                </Input>
+                                </TextInput>
                               </div>
                             </styled.div>
                           </div>
@@ -5394,11 +5405,15 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                 className=""
                               >
                                 <Button
+                                  _onBlur={[Function]}
+                                  _onFocus={[Function]}
                                   key=".0"
                                   primary={true}
                                   type="submit"
                                 >
                                   <Button
+                                    _onBlur={[Function]}
+                                    _onFocus={[Function]}
                                     big={false}
                                     className=""
                                     disabled={false}
@@ -5417,6 +5432,8 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     type="submit"
                                   >
                                     <styled.button
+                                      _onBlur={[Function]}
+                                      _onFocus={[Function]}
                                       big={false}
                                       className=""
                                       disabled={false}

@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   width: ${({ width }) => width};
   height: 4rem;
+  overflow: hidden;
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   border: 1px solid ${({ theme: { palette } }) => palette.gray};

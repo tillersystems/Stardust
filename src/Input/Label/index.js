@@ -10,9 +10,12 @@ import Theme from '../../Theme';
  *
  * @return {jsx}
  */
-const Label = ({ className, icon }) => (
+const Label = ({ className, label }) => (
   <div className={className}>
-    <Icon name={icon} color={Theme.palette.grey} width="1.5rem" height="1.5rem" />
+    {label.icon && (
+      <Icon name={label.icon} color={Theme.palette.grey} width="1.6rem" height="1.6rem" />
+    )}
+    {!label.icon && label.text && <span>{label.text}</span>}
   </div>
 );
 
@@ -20,15 +23,18 @@ const Label = ({ className, icon }) => (
 Label.displayName = 'Input.Label';
 
 /**Prop types. */
-const { string } = PropTypes;
+const { string, shape } = PropTypes;
 Label.propTypes = {
   className: string.isRequired,
-  icon: string,
+  label: shape({
+    text: string,
+    icon: string,
+  }),
 };
 
 /** Default props. */
 Label.defaultProps = {
-  icon: 'tiller',
+  label: { text: '' },
 };
 
 export default styled(Label)`
@@ -36,24 +42,20 @@ export default styled(Label)`
   align-items: center;
   justify-content: center;
 
-  width: 3.8rem;
-  height: 3.8rem;
+  padding: 1.1rem;
 
+  color: ${({ theme: { palette } }) => palette.grey};
   background: ${({ theme: { palette } }) => palette.bodyBackground};
 
   ${({ position }) =>
     position === 'left' &&
     css`
-      border-top-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-      border-bottom-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-right: 1px solid ${({ theme: { palette } }) => palette.gray};
     `};
 
   ${({ position }) =>
     position === 'right' &&
     css`
-      border-top-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-      border-bottom-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-left: 1px solid ${({ theme: { palette } }) => palette.gray};
     `};
 `;
