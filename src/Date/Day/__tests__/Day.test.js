@@ -1,11 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 import { DateTime } from 'luxon';
 
 import Day from '..';
-import Theme from '../../../Theme';
 
 describe('Day', () => {
   it('should render with no problem', () => {
@@ -18,12 +15,8 @@ describe('Day', () => {
       second: 0,
       zone: 'Europe/Paris',
     });
+    const render = mountWithTheme(<Day date={dateValue} />);
 
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Day date={dateValue} />
-      </ThemeProvider>,
-    );
     expect(render).toMatchSnapshot();
   });
 });

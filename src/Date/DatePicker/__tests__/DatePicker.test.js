@@ -1,11 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 import * as Luxon from 'luxon';
 
 import DatePicker from '..';
-import Theme from '../../../Theme';
 
 describe('<DatePicker />', () => {
   const mockLocalDateTime = Luxon.DateTime.fromObject({
@@ -23,21 +20,15 @@ describe('<DatePicker />', () => {
   });
 
   it('should render withouth a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <DatePicker minDate={mockLocalDateTime} defaultValue={mockLocalDateTime} />
-      </ThemeProvider>,
+    const render = mountWithTheme(
+      <DatePicker minDate={mockLocalDateTime} defaultValue={mockLocalDateTime} />,
     );
 
     expect(render).toMatchSnapshot();
   });
 
   it('should handle previous month', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <DatePicker defaultValue={mockLocalDateTime} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
 
     render
       .find('button')
@@ -48,11 +39,7 @@ describe('<DatePicker />', () => {
   });
 
   it('should handle next month', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <DatePicker defaultValue={mockLocalDateTime} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
 
     render
       .find('button')
@@ -70,11 +57,7 @@ describe('<DatePicker />', () => {
   });
 
   it('should handle date selection', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <DatePicker defaultValue={mockLocalDateTime} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
 
     render
       .find('Day')
@@ -92,11 +75,7 @@ describe('<DatePicker />', () => {
   });
 
   it('should handle date hover', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <DatePicker defaultValue={mockLocalDateTime} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
 
     render
       .find('Day')
