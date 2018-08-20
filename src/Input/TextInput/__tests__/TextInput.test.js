@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import TextInput from '..';
 import Theme from '../../../Theme';
 
-describe('<Input />', () => {
+describe('<TextInput />', () => {
   it('should render withouth a problem', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>

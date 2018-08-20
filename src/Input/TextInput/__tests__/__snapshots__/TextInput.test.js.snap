@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Input /> should render disabled without problem 1`] = `
+exports[`<TextInput /> should render disabled without problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -226,7 +226,7 @@ exports[`<Input /> should render disabled without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render error without problem 1`] = `
+exports[`<TextInput /> should render error without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -529,7 +529,7 @@ exports[`<Input /> should render error without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render info without problem 1`] = `
+exports[`<TextInput /> should render info without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -832,7 +832,7 @@ exports[`<Input /> should render info without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render input without problem when given a label 1`] = `
+exports[`<TextInput /> should render input without problem when given a label 1`] = `
 .c2 {
   display: inline-block;
   font-size: 1rem;
@@ -1134,7 +1134,7 @@ exports[`<Input /> should render input without problem when given a label 1`] = 
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render input without problem when given a label and label position 1`] = `
+exports[`<TextInput /> should render input without problem when given a label and label position 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -1436,7 +1436,7 @@ exports[`<Input /> should render input without problem when given a label and la
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render loading without problem 1`] = `
+exports[`<TextInput /> should render loading without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -1740,7 +1740,7 @@ exports[`<Input /> should render loading without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render search without problem 1`] = `
+exports[`<TextInput /> should render search without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -2042,7 +2042,7 @@ exports[`<Input /> should render search without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render search without problem when focused 1`] = `
+exports[`<TextInput /> should render search without problem when focused 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -2346,7 +2346,7 @@ exports[`<Input /> should render search without problem when focused 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render success without problem 1`] = `
+exports[`<TextInput /> should render success without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -2649,7 +2649,7 @@ exports[`<Input /> should render success without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render warning without problem 1`] = `
+exports[`<TextInput /> should render warning without problem 1`] = `
 .c3 {
   display: inline-block;
   font-size: 1rem;
@@ -2952,7 +2952,7 @@ exports[`<Input /> should render warning without problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem 1`] = `
+exports[`<TextInput /> should render withouth a problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3176,7 +3176,7 @@ exports[`<Input /> should render withouth a problem 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when fluid 1`] = `
+exports[`<TextInput /> should render withouth a problem when fluid 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3400,7 +3400,7 @@ exports[`<Input /> should render withouth a problem when fluid 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when focused and unfocuse 1`] = `
+exports[`<TextInput /> should render withouth a problem when focused and unfocuse 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3625,7 +3625,7 @@ exports[`<Input /> should render withouth a problem when focused and unfocuse 1`
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when focused and unfocuse 2`] = `
+exports[`<TextInput /> should render withouth a problem when focused and unfocuse 2`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3849,7 +3849,7 @@ exports[`<Input /> should render withouth a problem when focused and unfocuse 2`
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when given a type 1`] = `
+exports[`<TextInput /> should render withouth a problem when given a type 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4073,7 +4073,7 @@ exports[`<Input /> should render withouth a problem when given a type 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when given a width 1`] = `
+exports[`<TextInput /> should render withouth a problem when given a width 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4297,7 +4297,7 @@ exports[`<Input /> should render withouth a problem when given a width 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Input /> should render withouth a problem when text changed 1`] = `
+exports[`<TextInput /> should render withouth a problem when text changed 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
