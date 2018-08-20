@@ -3,6 +3,13 @@
     "@tillersystems/eslint-config/react",
     "plugin:jsx-a11y/recommended"
   ],
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "mount": true,
+    "shallow": true,
+    "mountWithTheme": true,
+    "shallowWithTheme": true,
+  },
   "env": {
     "browser": true
   },

@@ -1,27 +1,18 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import 'jest-styled-components';
-import { ThemeProvider } from 'styled-components';
 
 import TextInput from '..';
-import Theme from '../../../Theme';
 
 describe('<TextInput />', () => {
   it('should render withouth a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput placeHolder="default input" id="test" tabIndex="0" value="" />
-      </ThemeProvider>,
+    const render = mountWithTheme(
+      <TextInput placeHolder="default input" id="test" tabIndex="0" value="" />,
     );
     expect(render).toMatchSnapshot();
   });
 
   it('should render withouth a problem when focused and unfocuse', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput />);
 
     render.find('input').simulate('focus');
 
@@ -33,11 +24,7 @@ describe('<TextInput />', () => {
   });
 
   it('should render withouth a problem when text changed', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput />);
 
     render
       .find('input')
@@ -50,11 +37,7 @@ describe('<TextInput />', () => {
   it('should call change handler when controlled and text changed', () => {
     const spy = jest.fn();
 
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput onChange={spy} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput onChange={spy} />);
 
     render
       .find('input')
@@ -67,11 +50,7 @@ describe('<TextInput />', () => {
   it('should not call change handler when controlled and disabled and text changed', () => {
     const spy = jest.fn();
 
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput disabled onChange={spy} />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput disabled onChange={spy} />);
 
     render
       .find('input')
@@ -82,122 +61,78 @@ describe('<TextInput />', () => {
   });
 
   it('should render withouth a problem when given a width', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput width="123rem" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput width="123rem" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render withouth a problem when fluid', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput fluid />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput fluid />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render withouth a problem when given a type', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput password value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput password value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render input without problem when given a label', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput value="" label="cog" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput value="" label="cog" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render input without problem when given a label and label position', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput value="" label="cog" labelPosition="right" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput value="" label="cog" labelPosition="right" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render disabled without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput disabled value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput disabled value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render loading without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput loading value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput loading value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render info without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput info value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput info value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render success without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput success value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput success value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render warning without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput warning value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput warning value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render error without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput error value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput error value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render search without problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput search value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput search value="" />);
     expect(render).toMatchSnapshot();
   });
 
   it('should render search without problem when focused', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <TextInput search value="" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<TextInput search value="" />);
 
     render.find('input').simulate('focus');
 
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should update the component when controlled value is changed', () => {
+    const render = mountWithTheme(<TextInput search value="" />);
+
+    expect(render).toMatchSnapshot();
+    render.setProps({ value: '@test@ ' });
     expect(render).toMatchSnapshot();
   });
 });
