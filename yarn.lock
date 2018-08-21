@@ -7361,9 +7361,9 @@ popmotion-pose@^3.0.0:
     style-value-types "^3.0.3"
     tslib "^1.9.1"
 
-popmotion@8.3.4:
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.4.tgz#7dd1162c6a7efdfbaca2bcaaa628432dd6905559"
+popmotion@8.3.6:
+  version "8.3.6"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.6.tgz#33b214ca8e2b27029183d69fb6538368bba40e77"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^3.1.9"
