@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number, text, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, number, text, select, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 // import { State, Store } from '@sambego/storybook-state';
 import { NumberInput } from '../..';
-// import { Data as IconNames } from '../../../Icon/data';
+import { Data as IconNames } from '../../../Icon/data';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
@@ -12,12 +12,28 @@ const onBlurAction = action('onBlur');
 
 const getCommonKnobs = () => {
   return {
-    // - - - Appearance knobs - - -
+    // - - - Size knobs - - -
+    widthValue: number(
+      'Width',
+      25,
+      {
+        range: true,
+        min: 20,
+        max: 50,
+        step: 1,
+      },
+      'Size',
+    ),
+    fluidValue: boolean('Fluid', false, 'Size'),
 
+    // - - - Appearance knobs - - -
+    infoValue: boolean('Info', false, 'Appearance'),
+    successValue: boolean('Success', false, 'Appearance'),
+    warningValue: boolean('Warning', false, 'Appearance'),
+    errorValue: boolean('Error', false, 'Appearance'),
     validateValue: boolean('Validate', true, 'Appearance'),
 
     // - - - Value knobs - - -
-
     hasMinValue: boolean('Has minimum', false, 'Value'),
     minValue: number(
       'Minimum value',
@@ -55,7 +71,6 @@ const getCommonKnobs = () => {
     ),
 
     // - - - Format knobs - - -
-
     decimalsValue: number(
       'Decimals',
       2,
@@ -77,6 +92,12 @@ storiesOf('Input - NumberInput', module)
 
   .add('default', () => {
     const {
+      widthValue,
+      fluidValue,
+      infoValue,
+      successValue,
+      warningValue,
+      errorValue,
       validateValue,
       hasMinValue,
       minValue,
@@ -90,6 +111,12 @@ storiesOf('Input - NumberInput', module)
 
     return (
       <NumberInput
+        width={`${widthValue}rem`}
+        fluid={fluidValue}
+        info={infoValue}
+        success={successValue}
+        warning={warningValue}
+        error={errorValue}
         validate={validateValue}
         min={hasMinValue ? minValue : undefined}
         max={hasMaxValue ? maxValue : undefined}
@@ -105,6 +132,12 @@ storiesOf('Input - NumberInput', module)
 
   .add('controlled', () => {
     const {
+      widthValue,
+      fluidValue,
+      infoValue,
+      successValue,
+      warningValue,
+      errorValue,
       validateValue,
       hasMinValue,
       minValue,
@@ -130,6 +163,12 @@ storiesOf('Input - NumberInput', module)
 
     return (
       <NumberInput
+        width={`${widthValue}rem`}
+        fluid={fluidValue}
+        info={infoValue}
+        success={successValue}
+        warning={warningValue}
+        error={errorValue}
         validate={validateValue}
         value={valueValue}
         min={hasMinValue ? minValue : undefined}
@@ -140,6 +179,96 @@ storiesOf('Input - NumberInput', module)
         onChange={value => onChangeAction(value)}
         onFocus={onFocusAction}
         onBlur={onBlurAction}
+      />
+    );
+  })
+
+  .add('with text label', () => {
+    const {
+      widthValue,
+      fluidValue,
+      infoValue,
+      successValue,
+      warningValue,
+      errorValue,
+      validateValue,
+      hasMinValue,
+      minValue,
+      hasMaxValue,
+      maxValue,
+      stepValue,
+      decimalsValue,
+      defaultSeparatorValue,
+      separatorValue,
+    } = getCommonKnobs();
+
+    const labelValue = text('Label text', 'Amount:', 'Label');
+    const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
+
+    return (
+      <NumberInput
+        width={`${widthValue}rem`}
+        fluid={fluidValue}
+        info={infoValue}
+        success={successValue}
+        warning={warningValue}
+        error={errorValue}
+        validate={validateValue}
+        min={hasMinValue ? minValue : undefined}
+        max={hasMaxValue ? maxValue : undefined}
+        step={stepValue}
+        decimals={decimalsValue}
+        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+        onChange={value => onChangeAction(value)}
+        onFocus={onFocusAction}
+        onBlur={onBlurAction}
+        label={{ text: labelValue }}
+        labelPosition={labelPositionValue}
+      />
+    );
+  })
+
+  .add('with icon label', () => {
+    const {
+      widthValue,
+      fluidValue,
+      infoValue,
+      successValue,
+      warningValue,
+      errorValue,
+      validateValue,
+      hasMinValue,
+      minValue,
+      hasMaxValue,
+      maxValue,
+      stepValue,
+      decimalsValue,
+      defaultSeparatorValue,
+      separatorValue,
+    } = getCommonKnobs();
+
+    const labelValue = select('Label icon', Object.keys(IconNames), 'euro', 'Label');
+    const labelPositionValue = select('Label position', ['left', 'right'], 'right', 'Label');
+
+    return (
+      <NumberInput
+        width={`${widthValue}rem`}
+        fluid={fluidValue}
+        info={infoValue}
+        success={successValue}
+        warning={warningValue}
+        error={errorValue}
+        validate={validateValue}
+        min={hasMinValue ? minValue : undefined}
+        max={hasMaxValue ? maxValue : undefined}
+        step={stepValue}
+        decimals={decimalsValue}
+        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+        onChange={value => onChangeAction(value)}
+        onFocus={onFocusAction}
+        onBlur={onBlurAction}
+        label={{ icon: labelValue }}
+        labelPosition={labelPositionValue}
       />
     );
   });

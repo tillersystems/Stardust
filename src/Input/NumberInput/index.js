@@ -22,14 +22,34 @@ class NumberInput extends PureComponent {
 
   /** Prop types validation. */
   static propTypes = {
+    // - - - Size related props - - -
+    width: PropTypes.string,
+    fluid: PropTypes.bool,
+
+    // - - - DOM element related props - - -
+    id: PropTypes.string,
+    tabIndex: PropTypes.string,
+
     // - - - Input related props - - -
+    disabled: PropTypes.bool,
     value: PropTypes.number,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
 
     // - - - Appearance related props - - -
+    label: PropTypes.shape({
+      text: PropTypes.string,
+      icon: PropTypes.string,
+    }),
+    labelPosition: PropTypes.oneOf(['left', 'right']),
     validate: PropTypes.bool,
+
+    // - - - Status related props - - -
+    info: PropTypes.bool,
+    success: PropTypes.bool,
+    warning: PropTypes.bool,
+    error: PropTypes.bool,
 
     // - - - Number input related props - - -
     min: PropTypes.number,
@@ -39,22 +59,43 @@ class NumberInput extends PureComponent {
     // - - - Number format related props - - -
     decimals: PropTypes.number,
     separator: PropTypes.string,
+
+    // - - - Internal event handlers - - -
+    _onFocus: PropTypes.func,
+    _onBlur: PropTypes.func,
   };
 
   /** Default props. */
   static defaultProps = {
+    width: '25rem',
+    fluid: false,
+
+    id: '',
+    tabIndex: '0',
+
+    disabled: false,
     value: null,
     onChange: () => {},
     onFocus: () => {},
     onBlur: () => {},
 
+    label: null,
+    labelPosition: 'left',
     validate: false,
+
+    info: false,
+    success: false,
+    warning: false,
+    error: false,
 
     min: null,
     max: null,
     step: 1,
     decimals: 0,
     separator: getLocaleSeparator(),
+
+    _onFocus: () => {},
+    _onBlur: () => {},
   };
 
   /** Internal state. */
@@ -175,9 +216,10 @@ class NumberInput extends PureComponent {
    * Handles focus on the inner TextInput.
    */
   handleFocus = () => {
-    const { onFocus } = this.props;
+    const { onFocus, _onFocus } = this.props;
     this.setState({ ...this.state, hasFocus: true }, () => {
       onFocus();
+      _onFocus();
     });
   };
 
@@ -185,9 +227,10 @@ class NumberInput extends PureComponent {
    * Handles blur on the inner TextInput.
    */
   handleBlur = () => {
-    const { onBlur } = this.props;
+    const { onBlur, _onBlur } = this.props;
     this.setState({ ...this.state, hasFocus: false }, () => {
       onBlur();
+      _onBlur();
     });
   };
 
@@ -219,15 +262,37 @@ class NumberInput extends PureComponent {
    */
   render() {
     const { rawValue } = this.state;
-    const { validate } = this.props;
+    const {
+      width,
+      fluid,
+      id,
+      tabIndex,
+      disabled,
+      label,
+      labelPosition,
+      validate,
+      info,
+      success,
+      warning,
+      error,
+    } = this.props;
 
     const hasValidValue = this.isNumber(rawValue);
 
     return (
       <TextInput
+        width={width}
+        fluid={fluid}
+        id={id}
+        tabIndex={tabIndex}
+        disabled={disabled}
         value={this.formatValue()}
-        success={validate && hasValidValue}
-        error={validate && !hasValidValue}
+        label={label}
+        labelPosition={labelPosition}
+        info={info}
+        success={success || (validate && hasValidValue)}
+        warning={warning}
+        error={error || (validate && !hasValidValue)}
         onChange={this.handleChange}
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
