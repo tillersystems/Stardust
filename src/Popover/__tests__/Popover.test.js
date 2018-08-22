@@ -1,6 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 
 import Popover from '..';
@@ -22,11 +20,8 @@ describe('<Popover />', () => {
   });
 
   it('should render open popover withouth a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Popover active>Children</Popover>
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<Popover active>Children</Popover>);
+
     expect(render).toMatchSnapshot();
   });
 });

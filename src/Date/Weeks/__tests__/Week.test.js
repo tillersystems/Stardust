@@ -1,11 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 import { DateTime } from 'luxon';
 
 import Week from '..';
-import Theme from '../../../Theme';
 
 describe('<Weeks />', () => {
   const dateValue = DateTime.fromObject({
@@ -19,15 +16,13 @@ describe('<Weeks />', () => {
   });
 
   it('should render withouth a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Week
-          currentMonth={dateValue}
-          onDateClick={() => {}}
-          selectedDate={dateValue}
-          minDate={dateValue}
-        />
-      </ThemeProvider>,
+    const render = mountWithTheme(
+      <Week
+        currentMonth={dateValue}
+        onDateClick={() => {}}
+        selectedDate={dateValue}
+        minDate={dateValue}
+      />,
     );
     expect(render).toMatchSnapshot();
   });

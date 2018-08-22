@@ -1,27 +1,20 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 
 import KpiChart from '..';
-import Theme from '../../Theme';
 
 describe('<KpiChart />', () => {
   it('should render withouth a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <KpiChart title="title" label="label" />
-      </ThemeProvider>,
-    );
+    const render = mountWithTheme(<KpiChart title="title" label="label" />);
+
     expect(render).toMatchSnapshot();
   });
 
   it('should render with render props', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <KpiChart title="title" label="label" render={() => <p>Render Props</p>} />
-      </ThemeProvider>,
+    const render = mountWithTheme(
+      <KpiChart title="title" label="label" render={() => <p>Render Props</p>} />,
     );
+
     expect(render).toMatchSnapshot();
   });
 });
