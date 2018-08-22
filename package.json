@@ -82,7 +82,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "babel-runtime": "6.26.0",
-    "conventional-changelog-cli": "2.0.1",
+    "conventional-changelog-cli": "2.0.5",
     "cross-env": "5.2.0",
     "enzyme": "3.4.4",
     "enzyme-adapter-react-16": "npm:enzyme-react-adapter-future",
