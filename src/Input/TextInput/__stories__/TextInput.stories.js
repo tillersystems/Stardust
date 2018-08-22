@@ -14,10 +14,6 @@ const storeWithState = new Store({
   value: '',
 });
 
-const storeNumberWithState = new Store({
-  value: Number.Nan,
-});
-
 storiesOf('Input - TextInput', module)
   .addDecorator(withKnobs)
   .add('default', () => {
