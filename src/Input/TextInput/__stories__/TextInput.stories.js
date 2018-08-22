@@ -100,26 +100,6 @@ storiesOf('Input - TextInput', module)
     );
   })
 
-  .add('controlled number with state', () => {
-    const disabledValue = boolean('Disabled', false, 'General');
-
-    return (
-      <State store={storeNumberWithState}>
-        <TextInput
-          type="number"
-          value={storeNumberWithState.get('value')}
-          onChange={value => {
-            storeNumberWithState.set({ value });
-            onChangeAction(value);
-          }}
-          disabled={disabledValue}
-          onFocus={onFocusAction}
-          onBlur={onBlurAction}
-        />
-      </State>
-    );
-  })
-
   .add('with text label', () => {
     const disabledValue = boolean('Disabled', false, 'General');
 
