@@ -25,6 +25,8 @@ class NumberInput extends PureComponent {
     // - - - Input related props - - -
     value: PropTypes.number,
     onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
 
     // - - - Appearance related props - - -
     validate: PropTypes.bool,
@@ -43,6 +45,8 @@ class NumberInput extends PureComponent {
   static defaultProps = {
     value: null,
     onChange: () => {},
+    onFocus: () => {},
+    onBlur: () => {},
 
     validate: false,
 
@@ -74,30 +78,24 @@ class NumberInput extends PureComponent {
   }
 
   /**
+   * Handles updated step in component's lifecycle.
+   *
+   * @param {Object} prevProps - The component's previous props.
+   */
+  componentDidUpdate({ value: prevValue }) {
+    const { value: currValue } = this.props;
+
+    if (currValue != prevValue) {
+      this.updateValue(currValue);
+    }
+  }
+
+  /**
    * Handles unmounting step in component's lifecycle.
    */
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
-
-  /**
-   * Formats the given value into a displayable string in the inner TextInput.
-   *
-   * @returns {string}
-   */
-  formatValue = () => {
-    const { rawValue, parsedValue } = this.state;
-    const { value, decimals, separator } = this.props;
-
-    const displayedValue = value || parsedValue;
-
-    return (displayedValue
-      ? displayedValue.toFixed(decimals)
-      : rawValue
-        ? rawValue
-        : (0).toFixed(decimals)
-    ).replace('.', separator);
-  };
 
   /**
    * Checks whether the given value is a string of a number or not.
@@ -136,32 +134,61 @@ class NumberInput extends PureComponent {
   };
 
   /**
+   * Formats the given value into a displayable string in the inner TextInput.
+   *
+   * @returns {string}
+   */
+  formatValue = () => {
+    const { rawValue, parsedValue } = this.state;
+    const { decimals, separator } = this.props;
+
+    return (parsedValue
+      ? parsedValue.toFixed(decimals)
+      : rawValue
+        ? rawValue
+        : (0).toFixed(decimals)
+    ).replace('.', separator);
+  };
+
+  /**
    * Handles change in the inner TextInput.
    *
    * @param {string} rawValue - The new value of the inner TextInput.
    */
   handleChange = rawValue => {
-    const { separator } = this.props;
+    const { value, separator, onChange } = this.props;
 
     const parsedValue = this.isNumber(rawValue)
       ? parseFloat(rawValue.replace(separator, '.'))
       : null;
 
-    this.setState({ ...this.state, rawValue }, () => this.updateValue(parsedValue));
+    if (value && this.isNumber(rawValue)) {
+      onChange(parsedValue);
+    } else {
+      this.setState({ ...this.state, rawValue }, () => {
+        this.updateValue(parsedValue);
+      });
+    }
   };
 
   /**
    * Handles focus on the inner TextInput.
    */
   handleFocus = () => {
-    this.setState({ ...this.state, hasFocus: true });
+    const { onFocus } = this.props;
+    this.setState({ ...this.state, hasFocus: true }, () => {
+      onFocus();
+    });
   };
 
   /**
    * Handles blur on the inner TextInput.
    */
   handleBlur = () => {
-    this.setState({ ...this.state, hasFocus: false });
+    const { onBlur } = this.props;
+    this.setState({ ...this.state, hasFocus: false }, () => {
+      onBlur();
+    });
   };
 
   /**
@@ -171,20 +198,16 @@ class NumberInput extends PureComponent {
    */
   handleKeyDown = event => {
     const { hasFocus, parsedValue } = this.state;
-    const { step } = this.props;
+    const { value, step } = this.props;
 
     // Checks if the input has focus since we connect the event listener to the window.
-    if (hasFocus) {
+    if (!value && hasFocus) {
       if (event.code === 'ArrowUp') {
-        this.setState({ ...this.state, rawValue: this.formatValue() }, () => {
-          this.updateValue(parsedValue + step);
-        });
+        this.updateValue(parsedValue + step);
       }
 
       if (event.code === 'ArrowDown') {
-        this.setState({ ...this.state, rawValue: this.formatValue() }, () => {
-          this.updateValue(parsedValue - step);
-        });
+        this.updateValue(parsedValue - step);
       }
     }
   };

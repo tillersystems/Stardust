@@ -1,23 +1,48 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number, select, text, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, number, text, boolean } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
-import { State, Store } from '@sambego/storybook-state';
+// import { State, Store } from '@sambego/storybook-state';
 import { NumberInput } from '../..';
-import { Data as IconNames } from '../../../Icon/data';
+// import { Data as IconNames } from '../../../Icon/data';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
 const onBlurAction = action('onBlur');
 
-storiesOf('Input - NumberInput', module)
-  .addDecorator(withKnobs)
-  .add('default', () => {
+const getCommonKnobs = () => {
+  return {
     // - - - Appearance knobs - - -
-    const validateValue = boolean('Validate', true, 'Appearance');
 
-    // - - - Range knobs - - -
-    const stepValue = number(
+    validateValue: boolean('Validate', true, 'Appearance'),
+
+    // - - - Value knobs - - -
+
+    hasMinValue: boolean('Has minimum', false, 'Value'),
+    minValue: number(
+      'Minimum value',
+      0,
+      {
+        range: true,
+        min: 0,
+        max: 100,
+        step: 1,
+      },
+      'Value',
+    ),
+    hasMaxValue: boolean('Has maximum', false, 'Value'),
+    maxValue: number(
+      'Maximum value',
+      0,
+      {
+        range: true,
+        min: 0,
+        max: 100,
+        step: 1,
+      },
+      'Value',
+    ),
+    stepValue: number(
       'Step',
       1,
       {
@@ -26,11 +51,12 @@ storiesOf('Input - NumberInput', module)
         max: 2.0,
         step: 0.1,
       },
-      'Range',
-    );
+      'Value',
+    ),
 
     // - - - Format knobs - - -
-    const decimalsValue = number(
+
+    decimalsValue: number(
       'Decimals',
       2,
       {
@@ -40,19 +66,80 @@ storiesOf('Input - NumberInput', module)
         step: 1,
       },
       'Format',
-    );
-    const defaultSeparatorValue = boolean('Use default separator', true, 'Format');
-    const separatorValue = text('Separator', ',', 'Format');
+    ),
+    defaultSeparatorValue: boolean('Use default separator', true, 'Format'),
+    separatorValue: text('Separator', ',', 'Format'),
+  };
+};
+
+storiesOf('Input - NumberInput', module)
+  .addDecorator(withKnobs)
+
+  .add('default', () => {
+    const {
+      validateValue,
+      hasMinValue,
+      minValue,
+      hasMaxValue,
+      maxValue,
+      stepValue,
+      decimalsValue,
+      defaultSeparatorValue,
+      separatorValue,
+    } = getCommonKnobs();
 
     return (
       <NumberInput
         validate={validateValue}
-        min={0}
-        max={15}
+        min={hasMinValue ? minValue : undefined}
+        max={hasMaxValue ? maxValue : undefined}
         step={stepValue}
         decimals={decimalsValue}
         separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
         onChange={value => onChangeAction(value)}
+        onFocus={onFocusAction}
+        onBlur={onBlurAction}
+      />
+    );
+  })
+
+  .add('controlled', () => {
+    const {
+      validateValue,
+      hasMinValue,
+      minValue,
+      hasMaxValue,
+      maxValue,
+      stepValue,
+      decimalsValue,
+      defaultSeparatorValue,
+      separatorValue,
+    } = getCommonKnobs();
+
+    const valueValue = number(
+      'Value',
+      10,
+      {
+        range: true,
+        min: 0,
+        max: 100,
+        step: 0.5,
+      },
+      'Value',
+    );
+
+    return (
+      <NumberInput
+        validate={validateValue}
+        value={valueValue}
+        min={hasMinValue ? minValue : undefined}
+        max={hasMaxValue ? maxValue : undefined}
+        step={stepValue}
+        decimals={decimalsValue}
+        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+        onChange={value => onChangeAction(value)}
+        onFocus={onFocusAction}
+        onBlur={onBlurAction}
       />
     );
   });
