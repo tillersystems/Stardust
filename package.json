@@ -51,7 +51,7 @@
   "dependencies": {
     "initials": "^3.0.0",
     "luxon": "^1.3.3",
-    "polished": "^1.9.3",
+    "polished": "^2.0.0",
     "react-portal": "^4.1.5",
     "styled-components-breakpoint": "^2.1.0"
   },
