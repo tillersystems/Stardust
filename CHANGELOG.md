@@ -1,3 +1,18 @@
+<a name="1.0.0"></a>
+
+# [1.0.0](https://github.com/tillersystems/Stardust/compare/v0.7.0...v1.0.0) (2018-08-23)
+
+### Bug Fixes
+
+- **NumberInput:** fix lint error ([aa4286b](https://github.com/tillersystems/Stardust/commit/aa4286b))
+- **test:** fix UTs snapshots ([5aa6102](https://github.com/tillersystems/Stardust/commit/5aa6102))
+- **yarn:** update polished to version ^2.0.0 ([b068fee](https://github.com/tillersystems/Stardust/commit/b068fee))
+
+### Features
+
+- **NumberInput:** add basic component ([f227fa1](https://github.com/tillersystems/Stardust/commit/f227fa1))
+- **popover:** add the posibility to move the arrow ([9be5db4](https://github.com/tillersystems/Stardust/commit/9be5db4))
+
 <a name="0.7.0"></a>
 
 # [0.7.0](https://github.com/tillersystems/Stardust/compare/v0.6.0...v0.7.0) (2018-08-10)
