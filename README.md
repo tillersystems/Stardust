@@ -1,5 +1,6 @@
 <h1 align="center">
   <img height="200" src="./logo.png" />
+  <p align="center">Stardust</p>
 </h1>
 
 <p align="center">
@@ -13,8 +14,6 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT">
   </a>
 </p>
-
-# STARDUST
 
 **This Repo contains all sources used to build a TILLER design system library.**
 
