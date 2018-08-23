@@ -2280,7 +2280,7 @@ exports[`<TextInput /> should render withouth a problem when fluid 1`] = `
 </TextInput>
 `;
 
-exports[`<TextInput /> should render withouth a problem when focused and unfocuse 1`] = `
+exports[`<TextInput /> should render withouth a problem when focused and unfocused 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2388,7 +2388,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
 </TextInput>
 `;
 
-exports[`<TextInput /> should render withouth a problem when focused and unfocuse 2`] = `
+exports[`<TextInput /> should render withouth a problem when focused and unfocused 2`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;

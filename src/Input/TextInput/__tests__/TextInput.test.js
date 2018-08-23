@@ -11,15 +11,13 @@ describe('<TextInput />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render withouth a problem when focused and unfocuse', () => {
+  it('should render withouth a problem when focused and unfocused', () => {
     const render = mountWithTheme(<TextInput />);
 
     render.find('input').simulate('focus');
-
     expect(render).toMatchSnapshot();
 
     render.find('input').simulate('blur');
-
     expect(render).toMatchSnapshot();
   });
 

@@ -6,6 +6,7 @@
 // import { Container, InputElement } from './elements';
 
 export { default as TextInput } from './TextInput';
+export { default as NumberInput } from './NumberInput';
 
 // /**
 //  * Gets status name from status flags.

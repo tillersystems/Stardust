@@ -14,10 +14,6 @@ const storeWithState = new Store({
   value: '',
 });
 
-const storeNumberWithState = new Store({
-  value: Number.Nan,
-});
-
 storiesOf('Input - TextInput', module)
   .addDecorator(withKnobs)
   .add('default', () => {
@@ -92,26 +88,6 @@ storiesOf('Input - TextInput', module)
             onChangeAction(value);
           }}
           placeHolder="Write some stuff"
-          disabled={disabledValue}
-          onFocus={onFocusAction}
-          onBlur={onBlurAction}
-        />
-      </State>
-    );
-  })
-
-  .add('controlled number with state', () => {
-    const disabledValue = boolean('Disabled', false, 'General');
-
-    return (
-      <State store={storeNumberWithState}>
-        <TextInput
-          type="number"
-          value={storeNumberWithState.get('value')}
-          onChange={value => {
-            storeNumberWithState.set({ value });
-            onChangeAction(value);
-          }}
           disabled={disabledValue}
           onFocus={onFocusAction}
           onBlur={onBlurAction}
