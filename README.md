@@ -49,20 +49,13 @@ We have a few examples on Storybook, you can see them by running:
 
 ### Getting started
 
-To install the project, you should follow the [Installation guide](https://gitlab.com/thomasroux/watch-it/wikis/install).
+To install the project, you should follow the [Installation guide](https://github.com/tillersystems/Stardust/wiki/Installation-Guide).
 
 After that, you should be able to start the application with:
 
 ```bash
 yarn start
 ```
-
-### Using Redux DevTools
-
-[Redux Devtools](https://github.com/gaearon/redux-devtools) are enabled by default in development mode, but you need to install [Redux DevTools chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
-
-DevTools are not enabled during production.
-
 
 ### Directory Structure
 
@@ -80,14 +73,6 @@ To run [ESLint](http://eslint.org/) you could run
 - Discuss with team to improve/remove rules
 
 Don't prefix your css rules (-webkit, -moz, ...). It will be done automatically.
-
-### Images
-
-Now it's possible to render the image both on client and server. Please refer to this issue [#39](https://github.com/erikras/react-redux-universal-hot-example/issues/39) for more detail discussion, the usage would be like below (super easy):
-
-```javascript
-import logoImage from './logo.png';
-```
 
 ### Testing
 
