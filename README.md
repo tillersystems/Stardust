@@ -44,3 +44,66 @@ We have a few examples on Storybook, you can see them by running:
 
   $ npm run storybook
 ```
+
+## Contribute
+
+### Getting started
+
+To install the project, you should follow the [Installation guide](https://gitlab.com/thomasroux/watch-it/wikis/install).
+
+After that, you should be able to start the application with:
+
+```bash
+yarn start
+```
+
+### Using Redux DevTools
+
+[Redux Devtools](https://github.com/gaearon/redux-devtools) are enabled by default in development mode, but you need to install [Redux DevTools chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
+DevTools are not enabled during production.
+
+
+### Directory Structure
+
+**TODO**
+
+### Coding Style
+
+#### ESLINT
+
+To run [ESLint](http://eslint.org/) you could run
+
+- `yarn lint`
+- Use atom with this plugin : https://github.com/AtomLinter/linter-eslint. In settings make sure "Use global ESLint installation is **unchecked** to be sure that you are using project eslint configuration. Plus, don't hesitate to check fix errors on save !
+- You can override airbnb rules, add plugins or settings by editting `.eslintrc` file.
+- Discuss with team to improve/remove rules
+
+Don't prefix your css rules (-webkit, -moz, ...). It will be done automatically.
+
+### Images
+
+Now it's possible to render the image both on client and server. Please refer to this issue [#39](https://github.com/erikras/react-redux-universal-hot-example/issues/39) for more detail discussion, the usage would be like below (super easy):
+
+```javascript
+import logoImage from './logo.png';
+```
+
+### Testing
+
+#### Unit Tests
+
+The project uses [Jest](https://facebook.github.io/jest/) to run unit tests.
+
+To run the tests in the project, just simply run:
+```bash
+yarn test
+```
+
+### Dependencies
+Each dependency should be installed with `yarn add {dependency-name}` command.
+Each dev dependency should be installed with `yarn add {dependency-name} -D` command.
+
+---
+
+Thanks
