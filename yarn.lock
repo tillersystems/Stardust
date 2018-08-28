@@ -7363,10 +7363,11 @@ polished@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.0.tgz#f9f34a6efe1dd66eca540bb41a6b7058ae9b4fa7"
 
-popmotion-pose@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.0.0.tgz#0b8863b2b74fc15c0206e2462aa08f412bd2cf05"
+popmotion-pose@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.1.0.tgz#55cc9b2b2bb61cc07053c8b4551e64efbce734a0"
   dependencies:
+    hey-listen "^1.0.5"
     popmotion "^8.3.3"
     pose-core "^1.0.0"
     style-value-types "^3.0.3"
@@ -8081,13 +8082,13 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.0.2.tgz#cc01ead1e04ba3d9f262d261c87fa53d00541a22"
+react-pose@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.1.0.tgz#bc2463847099621864f03db5ba2bdb450fd2383a"
   dependencies:
     "@emotion/is-prop-valid" "^0.6.5"
     hey-listen "^1.0.5"
-    popmotion-pose "^3.0.0"
+    popmotion-pose "^3.1.0"
     tslib "^1.9.1"
 
 react-reconciler@^0.7.0:
