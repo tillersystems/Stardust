@@ -1,3 +1,11 @@
+<a name="1.0.1"></a>
+
+## [1.0.1](https://github.com/tillersystems/Stardust/compare/v1.0.0...v1.0.1) (2018-08-29)
+
+### Bug Fixes
+
+- **input:** fix number input import ([62b517b](https://github.com/tillersystems/Stardust/commit/62b517b))
+
 <a name="1.0.0"></a>
 
 # [1.0.0](https://github.com/tillersystems/Stardust/compare/v0.7.0...v1.0.0) (2018-08-23)
