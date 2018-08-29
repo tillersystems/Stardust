@@ -745,21 +745,21 @@
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.5.tgz#f868c314b889e7c3d84868a1d1cc323fbb40ca86"
 
-"@nivo/bar@0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.44.0.tgz#d111c7d523fa38ef3e994c2965a61fcf73ae14cb"
+"@nivo/bar@0.46.0":
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.46.0.tgz#c78e51ce09cc1558a1060c6e84d82767690b925f"
   dependencies:
-    "@nivo/core" "^0.44.0"
-    "@nivo/legends" "^0.44.0"
+    "@nivo/core" "^0.46.0"
+    "@nivo/legends" "^0.46.0"
     d3-scale "^1.0.6"
     d3-shape "^1.2.0"
     lodash "^4.17.4"
     react-motion "^0.5.2"
     recompose "^0.26.0"
 
-"@nivo/core@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.44.0.tgz#604a251bd02c16eb5b801503402ad6b858247ff4"
+"@nivo/core@^0.46.0":
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.46.0.tgz#32f421f1ab30ddbdb56d66d1b2d0ea9a41339ac8"
   dependencies:
     d3-color "^1.0.3"
     d3-format "^1.2.0"
@@ -773,9 +773,9 @@
     react-motion "^0.5.2"
     recompose "^0.26.0"
 
-"@nivo/legends@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.44.0.tgz#a88c68afe445146dad4a8bafb3143e754f1e05c2"
+"@nivo/legends@^0.46.0":
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.46.0.tgz#1bf1746b5f0bbfec0dd2cb69b913cded5cfef666"
   dependencies:
     lodash "^4.17.4"
     recompose "^0.26.0"
