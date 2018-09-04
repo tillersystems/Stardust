@@ -7324,14 +7324,14 @@ polished@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.0.tgz#f9f34a6efe1dd66eca540bb41a6b7058ae9b4fa7"
 
-popmotion-pose@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.1.0.tgz#55cc9b2b2bb61cc07053c8b4551e64efbce734a0"
+popmotion-pose@^3.2.1:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.2.2.tgz#60cb7031ef322e9803b3c93ae04f057cef795221"
   dependencies:
     hey-listen "^1.0.5"
-    popmotion "^8.3.3"
+    popmotion "^8.3.7"
     pose-core "^1.0.0"
-    style-value-types "^3.0.3"
+    style-value-types "^3.0.6"
     tslib "^1.9.1"
 
 popmotion@8.3.6:
@@ -7345,14 +7345,15 @@ popmotion@8.3.6:
     stylefire "^2.0.6"
     tslib "^1.9.1"
 
-popmotion@^8.3.3:
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.3.tgz#af87d4f260f323f0a47c36aea32a18b568640bb0"
+popmotion@^8.3.7:
+  version "8.3.8"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
   dependencies:
+    "@popmotion/easing" "^1.0.1"
     framesync "^3.1.9"
     hey-listen "^1.0.5"
-    style-value-types "^3.0.3"
-    stylefire "^2.0.6"
+    style-value-types "^3.0.6"
+    stylefire "^2.0.7"
     tslib "^1.9.1"
 
 pose-core@^1.0.0:
@@ -8043,13 +8044,13 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.1.0.tgz#bc2463847099621864f03db5ba2bdb450fd2383a"
+react-pose@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.2.1.tgz#a9f322fdb4b37e0b013996bd577a7ffc47a9746e"
   dependencies:
     "@emotion/is-prop-valid" "^0.6.5"
     hey-listen "^1.0.5"
-    popmotion-pose "^3.1.0"
+    popmotion-pose "^3.2.1"
     tslib "^1.9.1"
 
 react-reconciler@^0.7.0:
@@ -9154,6 +9155,10 @@ style-value-types@^3.0.4:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.6.tgz#144f634ba0c8f053ee615c7308adc97fe83917dd"
 
+style-value-types@^3.0.6:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.7.tgz#6e7a22cc8b1a4465193268ed66ad5f2a82579054"
+
 styled-components-breakpoint@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/styled-components-breakpoint/-/styled-components-breakpoint-2.1.0.tgz#839370362c1e084a23d1155286c9a8a1f2af853f"
@@ -9179,6 +9184,15 @@ stylefire@^2.0.6:
     framesync "^3.1.8"
     hey-listen "^1.0.4"
     style-value-types "^3.0.3"
+    tslib "^1.9.1"
+
+stylefire@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
+  dependencies:
+    framesync "^3.1.8"
+    hey-listen "^1.0.4"
+    style-value-types "^3.0.6"
     tslib "^1.9.1"
 
 stylis-rule-sheet@^0.0.10:
