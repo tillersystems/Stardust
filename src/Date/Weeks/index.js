@@ -105,11 +105,7 @@ const Weeks = ({
     days = [];
   }
 
-  return (
-    <div onMouseOut={() => onDateOver(null)} onBlur={() => {}}>
-      {rows}
-    </div>
-  );
+  return <div>{rows}</div>;
 };
 
 const { string, object, func } = PropTypes;

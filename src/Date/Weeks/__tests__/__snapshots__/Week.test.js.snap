@@ -189,10 +189,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
     selectedEndDate={null}
     selectedStartDate={null}
   >
-    <div
-      onBlur={[Function]}
-      onMouseOut={[Function]}
-    >
+    <div>
       <div
         className="c0"
         key="1530482400000"
