@@ -84,7 +84,7 @@
     "babel-runtime": "6.26.0",
     "conventional-changelog-cli": "2.0.5",
     "cross-env": "5.2.0",
-    "enzyme": "3.5.1",
+    "enzyme": "3.6.0",
     "enzyme-adapter-react-16": "npm:enzyme-react-adapter-future",
     "enzyme-to-json": "3.3.4",
     "eslint": "5.5.0",

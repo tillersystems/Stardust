@@ -3830,9 +3830,9 @@ enzyme-to-json@3.3.4:
   dependencies:
     lodash "^4.17.4"
 
-enzyme@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.5.1.tgz#aad0cbd005fee4cfd800b6451b64112b5374da67"
+enzyme@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.6.0.tgz#d213f280a258f61e901bc663d4cc2d6fd9a9dec8"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -7362,18 +7362,7 @@ popmotion-pose@^3.2.1:
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.3.8:
-  version "8.3.8"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
-  dependencies:
-    "@popmotion/easing" "^1.0.1"
-    framesync "^3.1.9"
-    hey-listen "^1.0.5"
-    style-value-types "^3.0.6"
-    stylefire "^2.0.7"
-    tslib "^1.9.1"
-
-popmotion@^8.3.7:
+popmotion@8.3.8, popmotion@^8.3.7:
   version "8.3.8"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
   dependencies:
@@ -9183,14 +9172,6 @@ style-loader@^0.20.3:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
 
-style-value-types@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.3.tgz#1643486f1b9cfb5402bb5e7876a984d6619e9f82"
-
-style-value-types@^3.0.6:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.7.tgz#6e7a22cc8b1a4465193268ed66ad5f2a82579054"
-
 style-value-types@^3.0.6:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.7.tgz#6e7a22cc8b1a4465193268ed66ad5f2a82579054"
@@ -9212,15 +9193,6 @@ styled-components@3.4.5:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
-
-stylefire@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.6.tgz#aa35093b782e1d2ea746d9aac483f38366954e19"
-  dependencies:
-    framesync "^3.1.8"
-    hey-listen "^1.0.4"
-    style-value-types "^3.0.3"
-    tslib "^1.9.1"
 
 stylefire@^2.0.7:
   version "2.0.7"
