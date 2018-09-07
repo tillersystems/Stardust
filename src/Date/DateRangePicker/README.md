@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import DateRangePicker from 'components/Date/DateRangePicker';
-
-// or
-
-import { DateRangePicker } from 'components';
+import { DateRangePicker } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -41,7 +37,7 @@ be affected unless the `value` prop is updated.
 #### Uncontrolled example
 
 ```jsx
-import { DateRangePicker } from 'components';
+import { DateRangePicker } from '@tillersystems/stardust';
 
 render() {
   return <DateRangePicker />
@@ -51,7 +47,7 @@ render() {
 #### Controlled example
 
 ```jsx
-import { DateRangePicker } from 'components';
+import { DateRangePicker } from '@tillersystems/stardust';
 import { DateTime, Interval } from 'luxon';
 
 let value = Interval.fromDateTimes(
