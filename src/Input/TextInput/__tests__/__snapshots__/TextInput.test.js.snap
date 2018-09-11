@@ -136,7 +136,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
   height: 1.8rem;
   margin-right: 0.7rem;
   border-radius: 50%;
-  background: hsl(6,79%,65%);
+  background: hsl(2,79%,65%);
 }
 
 .c0 {
@@ -157,7 +157,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
   border-radius: 0.4rem;
   border: 1px solid hsl(218,18%,91%);
   background-color: hsl(0,100%,100%);
-  border-color: hsl(6,79%,65%);
+  border-color: hsl(2,79%,65%);
 }
 
 .c1 {
@@ -264,12 +264,16 @@ exports[`<TextInput /> should render error without problem 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="cross"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >
@@ -462,12 +466,16 @@ exports[`<TextInput /> should render info without problem 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="2rem"
+                marginLeft={false}
+                marginRight={false}
                 name="info"
                 spin={false}
                 width="2rem"
               >
                 <styled.div
                   height="2rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="2rem"
                 >
@@ -800,12 +808,16 @@ exports[`<TextInput /> should render input without problem when given an icon la
                 className=""
                 color="hsl(206, 16%, 60%)"
                 height="1.6rem"
+                marginLeft={false}
+                marginRight={false}
                 name="cog"
                 spin={false}
                 width="1.6rem"
               >
                 <styled.div
                   height="1.6rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.6rem"
                 >
@@ -1032,12 +1044,16 @@ exports[`<TextInput /> should render input without problem when given an icon la
                 className=""
                 color="hsl(206, 16%, 60%)"
                 height="1.6rem"
+                marginLeft={false}
+                marginRight={false}
                 name="cog"
                 spin={false}
                 width="1.6rem"
               >
                 <styled.div
                   height="1.6rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.6rem"
                 >
@@ -1231,12 +1247,16 @@ exports[`<TextInput /> should render loading without problem 1`] = `
                 className=""
                 color="hsl(200, 74%, 46%)"
                 height="2rem"
+                marginLeft={false}
+                marginRight={false}
                 name="circle-notch"
                 spin={true}
                 width="2rem"
               >
                 <styled.div
                   height="2rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={true}
                   width="2rem"
                 >
@@ -1428,12 +1448,16 @@ exports[`<TextInput /> should render search without problem 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="search"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >
@@ -1627,12 +1651,16 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="search"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >
@@ -1825,12 +1853,16 @@ exports[`<TextInput /> should render success without problem 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="check-mark"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >
@@ -2023,12 +2055,16 @@ exports[`<TextInput /> should render warning without problem 1`] = `
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="2rem"
+                marginLeft={false}
+                marginRight={false}
                 name="exclamation-mark"
                 spin={false}
                 width="2rem"
               >
                 <styled.div
                   height="2rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="2rem"
                 >
@@ -2971,12 +3007,16 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="search"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >
@@ -3168,12 +3208,16 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="1.1rem"
+                marginLeft={false}
+                marginRight={false}
                 name="search"
                 spin={false}
                 width="1.1rem"
               >
                 <styled.div
                   height="1.1rem"
+                  marginLeft={false}
+                  marginRight={false}
                   spin={false}
                   width="1.1rem"
                 >

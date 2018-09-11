@@ -19,8 +19,8 @@ exports[`<KpiChart /> should render with render props 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -214,8 +214,8 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;

@@ -19,8 +19,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -81,30 +81,30 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -113,8 +113,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c18 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -125,8 +125,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -145,8 +145,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -160,8 +160,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -212,7 +212,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -247,8 +247,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -356,12 +356,16 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -2226,12 +2230,16 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -4364,8 +4372,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -4426,30 +4434,30 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -4458,8 +4466,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -4470,8 +4478,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -4495,8 +4503,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -4552,7 +4560,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -4587,8 +4595,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -4696,12 +4704,16 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -6566,12 +6578,16 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -8377,8 +8393,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -8439,30 +8455,30 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -8471,8 +8487,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -8483,8 +8499,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -8513,8 +8529,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -8527,8 +8543,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c21 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-right-radius: 0.4rem;
@@ -8577,7 +8593,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -8612,8 +8628,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -8721,12 +8737,16 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -10591,12 +10611,16 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -12402,8 +12426,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -12464,30 +12488,30 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -12496,8 +12520,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -12508,8 +12532,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -12528,8 +12552,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -12580,7 +12604,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -12615,8 +12639,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -12724,12 +12748,16 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -14594,12 +14622,16 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -16405,8 +16437,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -16467,30 +16499,30 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -16499,8 +16531,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -16511,8 +16543,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -16531,8 +16563,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -16574,7 +16606,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -16609,8 +16641,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -16718,12 +16750,16 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -18588,12 +18624,16 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -20399,8 +20439,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -20461,30 +20501,30 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -20493,8 +20533,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -20505,8 +20545,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -20525,8 +20565,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -20535,8 +20575,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c21 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -20587,7 +20627,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -20622,8 +20662,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -20731,12 +20771,16 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -22928,12 +22972,16 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -24739,8 +24787,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -24801,30 +24849,30 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -24833,8 +24881,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -24845,8 +24893,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -24897,7 +24945,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -24932,8 +24980,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -25041,12 +25089,16 @@ exports[`<DatePicker /> should handle next month 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -26911,12 +26963,16 @@ exports[`<DatePicker /> should handle next month 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -28722,8 +28778,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -28784,30 +28840,30 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -28816,8 +28872,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -28828,8 +28884,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -28848,8 +28904,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -28899,7 +28955,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -28934,8 +28990,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -29043,12 +29099,16 @@ exports[`<DatePicker /> should handle next month 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -30913,12 +30973,16 @@ exports[`<DatePicker /> should handle next month 2`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -33051,8 +33115,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -33113,30 +33177,30 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -33145,8 +33209,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -33157,8 +33221,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -33209,7 +33273,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -33244,8 +33308,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -33353,12 +33417,16 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -35223,12 +35291,16 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -37034,8 +37106,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -37081,8 +37153,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   margin-bottom: 0;
   padding: 0.7rem 1.4rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
   color: hsl(0,100%,100%);
   border: 1px solid;
   -webkit-transition: background 200ms ease;
@@ -37113,8 +37185,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -37130,8 +37202,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -37145,8 +37217,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -37160,8 +37232,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -37173,8 +37245,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -37184,8 +37256,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-right-radius: 0.4rem;
@@ -37197,30 +37269,30 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c22 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c23 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c24 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c25 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -37229,8 +37301,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c26 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -37245,8 +37317,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-right-radius: 0.4rem;
@@ -37303,7 +37375,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -37338,8 +37410,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -37449,12 +37521,16 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-left"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
@@ -39319,12 +39395,16 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                           className=""
                           color="hsl(213, 17%, 20%)"
                           height="20"
+                          marginLeft={false}
+                          marginRight={false}
                           name="chevron-right"
                           spin={false}
                           width="20"
                         >
                           <styled.div
                             height="20"
+                            marginLeft={false}
+                            marginRight={false}
                             spin={false}
                             width="20"
                           >
