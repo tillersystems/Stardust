@@ -12,8 +12,8 @@ const getColor = color => {
   return color;
 };
 
-const Icon = ({ name, color, height, width, spin }) => (
-  <Container {...{ spin, width, height }}>
+const Icon = ({ name, color, height, width, spin, marginRight, marginLeft }) => (
+  <Container {...{ spin, width, height, marginRight, marginLeft }}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block' }}
@@ -36,6 +36,8 @@ Icon.propTypes = {
   height: string,
   width: string,
   spin: bool,
+  marginRight: bool,
+  marginLeft: bool,
 };
 
 /**
@@ -46,6 +48,8 @@ Icon.defaultProps = {
   height: '20',
   width: '20',
   spin: false,
+  marginLeft: false,
+  marginRight: false,
 };
 
 export default styled(Icon)``;

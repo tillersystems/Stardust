@@ -26,4 +26,16 @@ export const Container = styled.div`
     css`
       animation: ${spinAnimation} 3s linear infinite;
     `};
+
+  ${({ marginRight }) =>
+    marginRight &&
+    css`
+      margin-right: 1rem;
+    `};
+
+  ${({ marginLeft }) =>
+    marginLeft &&
+    css`
+      margin-left: 1rem;
+    `};
 `;
