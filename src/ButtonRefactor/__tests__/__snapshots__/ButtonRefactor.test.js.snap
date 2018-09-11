@@ -1,0 +1,6429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonRefactor /> should render as big 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  padding: 0.8rem 1.8rem;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  big={true}
+  primary={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={true}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={true}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={true}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={true}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary small button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render as disabled 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  cursor: not-allowed;
+  opacity: 0.4;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  disabled={true}
+  primary={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={true}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={true}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={true}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={true}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Disabled button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render as fluid 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  fluid={true}
+  primary={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={true}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={true}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={true}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={true}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary fluid button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render as medium 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  padding: 0.8rem 1.6rem;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  medium={true}
+  primary={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    medium={true}
+    onClick={[Function]}
+    primary={true}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      medium={true}
+      onClick={[Function]}
+      primary={true}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary small button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render as small 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  primary={true}
+  small={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={true}
+    small={true}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={true}
+      small={true}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary small button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render failure button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(2,79%,65%);
+  border: 1px solid hsl(2,79%,65%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)     color:hsl(0,100%,100%);
+  background: #ea5751;
+  border: 1px solid #ea5751;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #c75b50;
+}
+
+<ButtonRefactor
+  failure={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={true}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={true}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Failure button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render ghost button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(213,17%,20%);
+  background: none;
+  border: none;
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)  color:current;
+  background: none;
+  border: none;
+}
+
+<ButtonRefactor
+  ghost={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    ghost={true}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      ghost={true}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        ghost button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render google button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: #ea4335;
+  border: 1px solid #ea4335;
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)       color:hsl(0,100%,100%);
+  background: #d62516;
+  border: 1px solid #ea4335;
+}
+
+<ButtonRefactor
+  isGoogle={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={true}
+    light={false}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={true}
+      light={false}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Google button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render light button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(57,13%,45%);
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(58,22%,90%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)      color:hsl(57,13%,45%);
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(58,22%,90%);
+}
+
+<ButtonRefactor
+  light={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={true}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={true}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Light button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render primary button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+  border: 1px solid hsl(200,74%,46%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)   color:#fff;
+  background: #1c88bf;
+  border: 1px solid #1c88bf;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #1979a8;
+}
+
+<ButtonRefactor
+  primary={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={true}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={true}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render success button 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(89,53%,52%);
+  border: 1px solid hsl(89,53%,52%);
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%)    color:#fff;
+  background: #7fbf3b;
+  border: 1px solid #7fbf3b;
+}
+
+.c0:hover:not([disabled]) svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0:active {
+  box-shadow: inset 0 0 0 2px #6c9e36;
+}
+
+<ButtonRefactor
+  success={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={true}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={true}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Secondary button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render withouth a problem 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%);
+}
+
+<ButtonRefactor
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
+
+exports[`<ButtonRefactor /> should render withouth a problem and with margin 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: true;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  font-size: calc(1.4rem + 0.2rem);
+  line-height: calc(1.4rem + 0.2rem);
+  color: hsl(0,100%,100%);
+  border: 1px solid;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.c0:hover:not([disabled]) {
+  background: #dbdfe6;
+  border: 1px solid #dbdfe6;
+  color: hsl(0,100%,100%);
+}
+
+<ButtonRefactor
+  marginLeft={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "alizarin": "hsl(6, 78%, 57%)",
+        "anthracite": "hsl(213, 17%, 20%)",
+        "black": "hsl(0, 0%, 0%)",
+        "blackLight": "hsl(213, 17%, 20%)",
+        "blue": "hsl(200, 74%, 46%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "carrot": "hsl(28, 80%, 52%)",
+        "clay": "hsl(215, 17%, 26%)",
+        "darkBlue": "hsl(59, 17%, 20%)",
+        "darkGray": "#dbdfe6",
+        "darkGreen": "#7fbf3b",
+        "darkGrey": "hsl(57,16%,60%)",
+        "darkRed": "#ea5751",
+        "emerald": "hsl(145, 63%, 49%)",
+        "fadeBlue": "hsl(210, 50%, 98%)",
+        "failure": Object {
+          "back": "hsl(2, 79%, 65%)",
+          "darkBack": "#ea5751",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#f1908d",
+          "lightFore": "#fff",
+        },
+        "googleBrandRed": "#ea4335",
+        "gray": "hsl(218, 18%, 91%)",
+        "green": "hsl(89, 53%, 52%)",
+        "grey": "hsl(206, 16%, 60%)",
+        "greygoose": "hsl(216, 29%, 97%)",
+        "lightBlue": "#3baae2",
+        "lightGray": "#fff",
+        "lightGreen": "#a0d16b",
+        "lightGrey": "hsl(58,22%,90%)",
+        "lightRed": "#f1908d",
+        "marble": "hsl(206, 23%, 69%)",
+        "mediumGrey": "hsl(57,23%,69%)",
+        "mysticGrey": "hsl(60,45%,98%)",
+        "orange": "hsl(34, 91%, 65%)",
+        "primary": Object {
+          "back": "hsl(200, 74%, 46%)",
+          "darkBack": "#1c88bf",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#3baae2",
+          "lightFore": "#fff",
+        },
+        "red": "hsl(2, 79%, 65%)",
+        "river": "hsl(204, 70%, 53%)",
+        "sand": "hsl(214, 8%, 84%)",
+        "secondary": Object {
+          "back": "hsl(0, 100%, 100%)",
+          "darkBack": "#f7f7f7",
+          "darkFore": "#8093a3",
+          "fore": "hsl(206, 16%, 60%)",
+          "lightBack": "#fff",
+          "lightFore": "#a6b4be",
+        },
+        "spaceGrey": "hsl(57,13%,45%)",
+        "success": Object {
+          "back": "hsl(89, 53%, 52%)",
+          "darkBack": "#7fbf3b",
+          "darkFore": "#f7f7f7",
+          "fore": "hsl(0, 100%, 100%)",
+          "lightBack": "#a0d16b",
+          "lightFore": "#fff",
+        },
+        "turquoise": "hsl(168, 76%, 42%)",
+        "white": "hsl(0, 100%, 100%)",
+        "wisteria": "hsl(282, 44%, 47%)",
+        "yellow": "hsl(9, 91%, 65%)",
+      },
+    }
+  }
+>
+  <ButtonRefactor
+    big={false}
+    className=""
+    disabled={false}
+    failure={false}
+    fluid={false}
+    isGoogle={false}
+    light={false}
+    marginLeft={true}
+    onClick={[Function]}
+    primary={false}
+    small={false}
+    success={false}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "anthracite": "hsl(213, 17%, 20%)",
+          "black": "hsl(0, 0%, 0%)",
+          "blackLight": "hsl(213, 17%, 20%)",
+          "blue": "hsl(200, 74%, 46%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "clay": "hsl(215, 17%, 26%)",
+          "darkBlue": "hsl(59, 17%, 20%)",
+          "darkGray": "#dbdfe6",
+          "darkGreen": "#7fbf3b",
+          "darkGrey": "hsl(57,16%,60%)",
+          "darkRed": "#ea5751",
+          "emerald": "hsl(145, 63%, 49%)",
+          "fadeBlue": "hsl(210, 50%, 98%)",
+          "failure": Object {
+            "back": "hsl(2, 79%, 65%)",
+            "darkBack": "#ea5751",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#f1908d",
+            "lightFore": "#fff",
+          },
+          "googleBrandRed": "#ea4335",
+          "gray": "hsl(218, 18%, 91%)",
+          "green": "hsl(89, 53%, 52%)",
+          "grey": "hsl(206, 16%, 60%)",
+          "greygoose": "hsl(216, 29%, 97%)",
+          "lightBlue": "#3baae2",
+          "lightGray": "#fff",
+          "lightGreen": "#a0d16b",
+          "lightGrey": "hsl(58,22%,90%)",
+          "lightRed": "#f1908d",
+          "marble": "hsl(206, 23%, 69%)",
+          "mediumGrey": "hsl(57,23%,69%)",
+          "mysticGrey": "hsl(60,45%,98%)",
+          "orange": "hsl(34, 91%, 65%)",
+          "primary": Object {
+            "back": "hsl(200, 74%, 46%)",
+            "darkBack": "#1c88bf",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#3baae2",
+            "lightFore": "#fff",
+          },
+          "red": "hsl(2, 79%, 65%)",
+          "river": "hsl(204, 70%, 53%)",
+          "sand": "hsl(214, 8%, 84%)",
+          "secondary": Object {
+            "back": "hsl(0, 100%, 100%)",
+            "darkBack": "#f7f7f7",
+            "darkFore": "#8093a3",
+            "fore": "hsl(206, 16%, 60%)",
+            "lightBack": "#fff",
+            "lightFore": "#a6b4be",
+          },
+          "spaceGrey": "hsl(57,13%,45%)",
+          "success": Object {
+            "back": "hsl(89, 53%, 52%)",
+            "darkBack": "#7fbf3b",
+            "darkFore": "#f7f7f7",
+            "fore": "hsl(0, 100%, 100%)",
+            "lightBack": "#a0d16b",
+            "lightFore": "#fff",
+          },
+          "turquoise": "hsl(168, 76%, 42%)",
+          "white": "hsl(0, 100%, 100%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+          "yellow": "hsl(9, 91%, 65%)",
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      big={false}
+      className=""
+      disabled={false}
+      failure={false}
+      fluid={false}
+      isGoogle={false}
+      light={false}
+      marginLeft={true}
+      onClick={[Function]}
+      primary={false}
+      small={false}
+      success={false}
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "anthracite": "hsl(213, 17%, 20%)",
+            "black": "hsl(0, 0%, 0%)",
+            "blackLight": "hsl(213, 17%, 20%)",
+            "blue": "hsl(200, 74%, 46%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "clay": "hsl(215, 17%, 26%)",
+            "darkBlue": "hsl(59, 17%, 20%)",
+            "darkGray": "#dbdfe6",
+            "darkGreen": "#7fbf3b",
+            "darkGrey": "hsl(57,16%,60%)",
+            "darkRed": "#ea5751",
+            "emerald": "hsl(145, 63%, 49%)",
+            "fadeBlue": "hsl(210, 50%, 98%)",
+            "failure": Object {
+              "back": "hsl(2, 79%, 65%)",
+              "darkBack": "#ea5751",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#f1908d",
+              "lightFore": "#fff",
+            },
+            "googleBrandRed": "#ea4335",
+            "gray": "hsl(218, 18%, 91%)",
+            "green": "hsl(89, 53%, 52%)",
+            "grey": "hsl(206, 16%, 60%)",
+            "greygoose": "hsl(216, 29%, 97%)",
+            "lightBlue": "#3baae2",
+            "lightGray": "#fff",
+            "lightGreen": "#a0d16b",
+            "lightGrey": "hsl(58,22%,90%)",
+            "lightRed": "#f1908d",
+            "marble": "hsl(206, 23%, 69%)",
+            "mediumGrey": "hsl(57,23%,69%)",
+            "mysticGrey": "hsl(60,45%,98%)",
+            "orange": "hsl(34, 91%, 65%)",
+            "primary": Object {
+              "back": "hsl(200, 74%, 46%)",
+              "darkBack": "#1c88bf",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#3baae2",
+              "lightFore": "#fff",
+            },
+            "red": "hsl(2, 79%, 65%)",
+            "river": "hsl(204, 70%, 53%)",
+            "sand": "hsl(214, 8%, 84%)",
+            "secondary": Object {
+              "back": "hsl(0, 100%, 100%)",
+              "darkBack": "#f7f7f7",
+              "darkFore": "#8093a3",
+              "fore": "hsl(206, 16%, 60%)",
+              "lightBack": "#fff",
+              "lightFore": "#a6b4be",
+            },
+            "spaceGrey": "hsl(57,13%,45%)",
+            "success": Object {
+              "back": "hsl(89, 53%, 52%)",
+              "darkBack": "#7fbf3b",
+              "darkFore": "#f7f7f7",
+              "fore": "hsl(0, 100%, 100%)",
+              "lightBack": "#a0d16b",
+              "lightFore": "#fff",
+            },
+            "turquoise": "hsl(168, 76%, 42%)",
+            "white": "hsl(0, 100%, 100%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+            "yellow": "hsl(9, 91%, 65%)",
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Primary margin button
+      </button>
+    </styled.button>
+  </ButtonRefactor>
+</ButtonRefactor>
+`;
