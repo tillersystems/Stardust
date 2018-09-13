@@ -1,0 +1,558 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckBox /> should render without a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid hsl(200,74%,46%);
+  border-radius: 0.2rem;
+  background: hsl(0,100%,100%);
+}
+
+.c2 {
+  display: block;
+  margin-left: 0.7rem;
+  color: hsl(213,17%,20%);
+}
+
+<CheckBox
+  checked={false}
+  disabled={false}
+  id="test"
+  onChange={null}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.div
+        checked={false}
+        disabled={false}
+        hasFocus={false}
+      >
+        <div
+          checked={false}
+          className="c1"
+          disabled={false}
+        >
+          <input
+            checked={false}
+            disabled={false}
+            id="test"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            tabIndex="0"
+            type="checkbox"
+          />
+        </div>
+      </styled.div>
+      <styled.label
+        disabled={false}
+        hasFocus={false}
+        htmlFor="test"
+      >
+        <label
+          className="c2"
+          disabled={false}
+          htmlFor="test"
+        />
+      </styled.label>
+    </div>
+  </styled.div>
+</CheckBox>
+`;
+
+exports[`<CheckBox /> should render without a problem when checked and disabled 1`] = `
+.c2 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid hsl(200,74%,46%);
+  border-radius: 0.2rem;
+  background: hsl(0,100%,100%);
+  opacity: 0.4;
+}
+
+.c3 {
+  display: block;
+  margin-left: 0.7rem;
+  color: hsl(213,17%,20%);
+  opacity: 0.4;
+}
+
+<CheckBox
+  checked={true}
+  disabled={true}
+  id="test"
+  onChange={null}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.div
+        checked={true}
+        disabled={true}
+        hasFocus={false}
+      >
+        <div
+          checked={true}
+          className="c1"
+          disabled={true}
+        >
+          <Styled(Icon)
+            color="hsl(200, 74%, 46%)"
+            height="1rem"
+            name="check-mark"
+            width="1rem"
+          >
+            <Icon
+              className=""
+              color="hsl(200, 74%, 46%)"
+              height="1rem"
+              name="check-mark"
+              spin={false}
+              width="1rem"
+            >
+              <styled.div
+                height="1rem"
+                spin={false}
+                width="1rem"
+              >
+                <div
+                  className="c2"
+                  height="1rem"
+                  width="1rem"
+                >
+                  <svg
+                    height="1rem"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                    viewBox="0 0 512 512"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
+                      fill="hsl(200, 74%, 46%)"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </styled.div>
+            </Icon>
+          </Styled(Icon)>
+          <input
+            checked={true}
+            disabled={true}
+            id="test"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            tabIndex="0"
+            type="checkbox"
+          />
+        </div>
+      </styled.div>
+      <styled.label
+        disabled={true}
+        hasFocus={false}
+        htmlFor="test"
+      >
+        <label
+          className="c3"
+          disabled={true}
+          htmlFor="test"
+        />
+      </styled.label>
+    </div>
+  </styled.div>
+</CheckBox>
+`;
+
+exports[`<CheckBox /> should render without a problem when checked and enabled 1`] = `
+.c2 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid hsl(200,74%,46%);
+  border-radius: 0.2rem;
+  background: hsl(0,100%,100%);
+}
+
+.c3 {
+  display: block;
+  margin-left: 0.7rem;
+  color: hsl(213,17%,20%);
+}
+
+<CheckBox
+  checked={true}
+  disabled={false}
+  id="test"
+  onChange={null}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.div
+        checked={true}
+        disabled={false}
+        hasFocus={false}
+      >
+        <div
+          checked={true}
+          className="c1"
+          disabled={false}
+        >
+          <Styled(Icon)
+            color="hsl(200, 74%, 46%)"
+            height="1rem"
+            name="check-mark"
+            width="1rem"
+          >
+            <Icon
+              className=""
+              color="hsl(200, 74%, 46%)"
+              height="1rem"
+              name="check-mark"
+              spin={false}
+              width="1rem"
+            >
+              <styled.div
+                height="1rem"
+                spin={false}
+                width="1rem"
+              >
+                <div
+                  className="c2"
+                  height="1rem"
+                  width="1rem"
+                >
+                  <svg
+                    height="1rem"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                    viewBox="0 0 512 512"
+                    width="1rem"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
+                      fill="hsl(200, 74%, 46%)"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </styled.div>
+            </Icon>
+          </Styled(Icon)>
+          <input
+            checked={true}
+            disabled={false}
+            id="test"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            tabIndex="0"
+            type="checkbox"
+          />
+        </div>
+      </styled.div>
+      <styled.label
+        disabled={false}
+        hasFocus={false}
+        htmlFor="test"
+      >
+        <label
+          className="c3"
+          disabled={false}
+          htmlFor="test"
+        />
+      </styled.label>
+    </div>
+  </styled.div>
+</CheckBox>
+`;
+
+exports[`<CheckBox /> should render without a problem when unchecked and disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid hsl(200,74%,46%);
+  border-radius: 0.2rem;
+  background: hsl(0,100%,100%);
+  opacity: 0.4;
+}
+
+.c2 {
+  display: block;
+  margin-left: 0.7rem;
+  color: hsl(213,17%,20%);
+  opacity: 0.4;
+}
+
+<CheckBox
+  checked={false}
+  disabled={true}
+  id="test"
+  onChange={null}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.div
+        checked={false}
+        disabled={true}
+        hasFocus={false}
+      >
+        <div
+          checked={false}
+          className="c1"
+          disabled={true}
+        >
+          <input
+            checked={false}
+            disabled={true}
+            id="test"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            tabIndex="0"
+            type="checkbox"
+          />
+        </div>
+      </styled.div>
+      <styled.label
+        disabled={true}
+        hasFocus={false}
+        htmlFor="test"
+      >
+        <label
+          className="c2"
+          disabled={true}
+          htmlFor="test"
+        />
+      </styled.label>
+    </div>
+  </styled.div>
+</CheckBox>
+`;
+
+exports[`<CheckBox /> should render without a problem when unchecked and enabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid hsl(200,74%,46%);
+  border-radius: 0.2rem;
+  background: hsl(0,100%,100%);
+}
+
+.c2 {
+  display: block;
+  margin-left: 0.7rem;
+  color: hsl(213,17%,20%);
+}
+
+<CheckBox
+  checked={false}
+  disabled={false}
+  id="test"
+  onChange={null}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.div
+        checked={false}
+        disabled={false}
+        hasFocus={false}
+      >
+        <div
+          checked={false}
+          className="c1"
+          disabled={false}
+        >
+          <input
+            checked={false}
+            disabled={false}
+            id="test"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            tabIndex="0"
+            type="checkbox"
+          />
+        </div>
+      </styled.div>
+      <styled.label
+        disabled={false}
+        hasFocus={false}
+        htmlFor="test"
+      >
+        <label
+          className="c2"
+          disabled={false}
+          htmlFor="test"
+        />
+      </styled.label>
+    </div>
+  </styled.div>
+</CheckBox>
+`;
