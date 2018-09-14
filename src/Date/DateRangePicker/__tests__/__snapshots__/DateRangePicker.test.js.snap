@@ -291,6 +291,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -506,10 +507,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -2369,10 +2367,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1530482400000"
@@ -4631,6 +4626,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -4846,10 +4842,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -6709,10 +6702,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -8656,6 +8646,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -8871,10 +8862,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -10734,10 +10722,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -12659,6 +12644,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -12874,10 +12860,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -14737,10 +14720,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               selectedEndDate={"2018-06-14T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -16653,6 +16633,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -16868,10 +16849,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               selectedEndDate={"2018-06-15T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -18731,10 +18709,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               selectedEndDate={"2018-06-15T23:59:59.999+02:00"}
               selectedStartDate={"2018-06-14T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -20666,6 +20641,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -20881,10 +20857,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
               selectedEndDate={"2018-05-15T23:59:59.999+02:00"}
               selectedStartDate={"2018-05-15T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1522620000000"
@@ -23071,10 +23044,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
               selectedEndDate={"2018-05-15T23:59:59.999+02:00"}
               selectedStartDate={"2018-05-15T00:00:00.000+02:00"}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -24976,6 +24946,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -25191,10 +25162,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -27054,10 +27022,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -28978,6 +28943,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -29193,10 +29159,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -31056,10 +31019,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1530482400000"
@@ -33288,6 +33248,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -33503,10 +33464,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1525644000000"
@@ -35366,10 +35324,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -37384,6 +37339,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   >
     <div
       className="c0"
+      onMouseLeave={[Function]}
     >
       <styled.div>
         <div
@@ -37599,10 +37555,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1528063200000"
@@ -39462,10 +39415,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               selectedEndDate={null}
               selectedStartDate={null}
             >
-              <div
-                onBlur={[Function]}
-                onMouseOut={[Function]}
-              >
+              <div>
                 <div
                   className="c7"
                   key="1530482400000"

@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import DatePicker from 'components/Date/DatePicker';
-
-// or
-
-import { DatePicker } from 'components';
+import { DatePicker } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -43,7 +39,7 @@ unless the `value` prop is updated.
 #### Uncontrolled example
 
 ```jsx
-import { DatePicker } from 'components';
+import { DatePicker } from '@tillersystems/stardust';
 
 render() {
   return <DatePicker />
@@ -53,7 +49,7 @@ render() {
 #### Controlled example
 
 ```jsx
-import { DatePicker } from 'components';
+import { DatePicker } from '@tillersystems/stardust';
 import { DateTime } from 'luxon';
 
 let value = DateTime.locale();

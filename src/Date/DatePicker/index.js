@@ -103,7 +103,7 @@ class DatePicker extends PureComponent {
     const isBeforeMaxDate = !maxDate || currentMonth.endOf('month') <= maxDate.endOf('month');
 
     return (
-      <div className={className}>
+      <div className={className} onMouseLeave={() => this.handleDateOver(null)}>
         <Header>
           <Button tiny light onClick={this.handlePrevMonthClick} disabled={!isAfterMinDate}>
             <Icon color={Theme.palette.anthracite} name="chevron-left" />

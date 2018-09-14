@@ -190,7 +190,7 @@ class DateRangePicker extends PureComponent {
     const isBeforeMaxDate = !maxDate || nextMonth.endOf('month') <= maxDate.endOf('month');
 
     return (
-      <div className={className}>
+      <div className={className} onMouseLeave={() => this.handleDateOver(null)}>
         <PickerContainer>
           <Header>
             <Button tiny light onClick={this.handlePrevMonthClick} disabled={!isAfterMinDate}>
