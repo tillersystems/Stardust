@@ -1702,10 +1702,11 @@ babel-plugin-react-docgen@^1.9.0:
     lodash "^4.17.0"
     react-docgen "^3.0.0-beta11"
 
-babel-plugin-styled-components@1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.6.4.tgz#24677e5b37a85b04aed855a5f81f1c7bfec77784"
+babel-plugin-styled-components@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.7.1.tgz#c291d2a48ec77bb0828275b87696b6594a2f80f9"
   dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0"
     lodash "^4.17.10"
 
 babel-plugin-syntax-async-functions@^6.8.0:
