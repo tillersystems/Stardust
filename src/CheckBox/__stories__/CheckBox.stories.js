@@ -16,6 +16,10 @@ storiesOf('CheckBox', module)
 
     return (
       <State store={store}>
+        <CheckBox disabled={!enabledValue} textAnnexe="You really should pick that choice.">
+          A really cool choice
+        </CheckBox>
+        <CheckBox disabled={!enabledValue}>A really cool choice</CheckBox>
         <CheckBox disabled={!enabledValue}>A really cool choice</CheckBox>
       </State>
     );

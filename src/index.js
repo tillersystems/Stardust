@@ -3,6 +3,7 @@
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as CheckBox } from './CheckBox';
+export { default as CheckBoxOld } from './CheckBoxOld';
 export { DatePicker, DateRangePicker } from './Date';
 export { default as Form } from './Form';
 export { default as Icon } from './Icon';
