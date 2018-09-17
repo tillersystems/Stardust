@@ -16,10 +16,10 @@ storiesOf('KpiBlock', module)
     const Title = text('Title', 'Commandes', 'Title');
     const Value = text('Value', '621', 'Value');
     const hasVariation = boolean('HasVariation', true, 'Variation');
-    const withCustomeValue = boolean('withCustomeValue', false, 'Value');
+    const withCustomValue = boolean('withCustomValue', false, 'Value');
     return (
       <KpiBlock
-        value={withCustomeValue ? <div>19</div> : Value}
+        value={withCustomValue ? <div>19</div> : Value}
         title={Title}
         variation={hasVariation ? Variation : false}
       />
