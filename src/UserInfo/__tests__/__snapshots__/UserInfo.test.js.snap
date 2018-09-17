@@ -177,16 +177,12 @@ exports[`<UserInfo /> should render a user picture 1`] = `
               className=""
               color="white"
               height="20"
-              marginLeft={false}
-              marginRight={false}
               name="power-off"
               spin={false}
               width="20"
             >
               <styled.div
                 height="20"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="20"
               >
@@ -384,16 +380,12 @@ exports[`<UserInfo /> should render withouth a problem 1`] = `
               className=""
               color="white"
               height="20"
-              marginLeft={false}
-              marginRight={false}
               name="power-off"
               spin={false}
               width="20"
             >
               <styled.div
                 height="20"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="20"
               >

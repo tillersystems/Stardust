@@ -34,7 +34,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-size: 1.4rem;
-  color: hsl(2,79%,65%);
+  color: hsl(6,79%,65%);
 }
 
 .c0 {
@@ -80,23 +80,19 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
           -100
            % 
           <Styled(Icon)
-            color="hsl(2, 79%, 65%)"
+            color="hsl(6, 79%, 65%)"
             name="caret-down"
           >
             <Icon
               className=""
-              color="hsl(2, 79%, 65%)"
+              color="hsl(6, 79%, 65%)"
               height="20"
-              marginLeft={false}
-              marginRight={false}
               name="caret-down"
               spin={false}
               width="20"
             >
               <styled.div
                 height="20"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="20"
               >
@@ -118,7 +114,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
                   >
                     <path
                       d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
-                      fill="hsl(2, 79%, 65%)"
+                      fill="hsl(6, 79%, 65%)"
                       fillRule="evenodd"
                     />
                   </svg>
@@ -235,16 +231,12 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
               className=""
               color="hsl(89, 53%, 52%)"
               height="20"
-              marginLeft={false}
-              marginRight={false}
               name="caret-up"
               spin={false}
               width="20"
             >
               <styled.div
                 height="20"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="20"
               >

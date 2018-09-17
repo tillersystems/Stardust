@@ -172,16 +172,12 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
               className=""
               color="hsl(200, 74%, 46%)"
               height="1rem"
-              marginLeft={false}
-              marginRight={false}
               name="check-mark"
               spin={false}
               width="1rem"
             >
               <styled.div
                 height="1rem"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="1rem"
               >
@@ -319,16 +315,12 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
               className=""
               color="hsl(200, 74%, 46%)"
               height="1rem"
-              marginLeft={false}
-              marginRight={false}
               name="check-mark"
               spin={false}
               width="1rem"
             >
               <styled.div
                 height="1rem"
-                marginLeft={false}
-                marginRight={false}
                 spin={false}
                 width="1rem"
               >
