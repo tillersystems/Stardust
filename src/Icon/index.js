@@ -36,8 +36,6 @@ Icon.propTypes = {
   height: string,
   width: string,
   spin: bool,
-  marginRight: bool,
-  marginLeft: bool,
 };
 
 /**
@@ -48,8 +46,6 @@ Icon.defaultProps = {
   height: '20',
   width: '20',
   spin: false,
-  marginLeft: false,
-  marginRight: false,
 };
 
 export default styled(Icon)``;
