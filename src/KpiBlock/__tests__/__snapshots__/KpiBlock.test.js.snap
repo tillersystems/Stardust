@@ -11,12 +11,6 @@ exports[`<KpiBlock /> should render with a custom a value 1`] = `
 }
 
 .c3 {
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: hsl(0,0%,0%);
-}
-
-.c4 {
   font-size: 1.4rem;
   color: hsl(206,16%,60%);
 }
@@ -59,13 +53,13 @@ exports[`<KpiBlock /> should render with a custom a value 1`] = `
 
 <Styled(KpiBlock)
   title="title"
-  value="<div>67</div>"
+  value={<Custom />}
   variation={-100}
 >
   <KpiBlock
     className="c0"
     title="title"
-    value="<div>67</div>"
+    value={<Custom />}
     variation={-100}
   >
     <div
@@ -124,16 +118,14 @@ exports[`<KpiBlock /> should render with a custom a value 1`] = `
           </Styled(Icon)>
         </div>
       </styled.div>
+      <Custom>
+        <div>
+          custom
+        </div>
+      </Custom>
       <styled.div>
         <div
           className="c3"
-        >
-          &lt;div&gt;67&lt;/div&gt;
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
         >
           title
         </div>
