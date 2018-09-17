@@ -49,17 +49,25 @@ const googleBrandRed = '#ea4335';
 // -end- Old colours palette
 
 // -start- New colours palette
-const red = 'hsl(2, 79%, 65%)';
+const whiteOpacity = opacity => `hsla(0, 100%, 100%, ${opacity})`;
+
+const red = 'hsl(6, 79%, 65%)';
+const red1 = 'hsl(6, 60%, 58%)';
+const red2 = 'hsl(6, 52%, 55%)';
 const green = 'hsl(89, 53%, 52%)';
+const green1 = 'hsl(89, 49%, 45%)';
+const green2 = 'hsl(89, 49%, 42%)';
 const blue = 'hsl(200, 74%, 46%)';
-const darkBlue = 'hsl(59, 17%, 20%)';
+const blue1 = 'hsl(200, 74%, 41%)';
+const blue2 = 'hsl(200, 74%, 38%)';
+const darkBlue = 'hsl(213, 17%, 20%)';
 const yellow = 'hsl(9, 91%, 65%)';
 
-const mysticGrey = 'hsl(60,45%,98%)';
-const lightGrey = 'hsl(58,22%,90%)';
-const mediumGrey = 'hsl(57,23%,69%)';
-const darkGrey = 'hsl(57,16%,60%)';
-const spaceGrey = 'hsl(57,13%,45%)';
+const mysticGrey = 'hsl(216,45%,98%)';
+const lightGrey = 'hsl(207,22%,90%)';
+const mediumGrey = 'hsl(206,23%,69%)';
+const darkGrey = 'hsl(206,16%,60%)';
+const spaceGrey = 'hsl(207,13%,45%)';
 
 const backPrimary = blue;
 const backFailure = red;
@@ -115,6 +123,10 @@ export const palette = {
     back: backPrimary,
     darkBack: dark(backPrimary),
     lightBack: light(backPrimary),
+
+    default: blue,
+    dark: blue1,
+    darker: blue2,
   },
 
   secondary: {
@@ -135,6 +147,10 @@ export const palette = {
     back: backSuccess,
     darkBack: dark(backSuccess),
     lightBack: light(backSuccess),
+
+    default: green,
+    dark: green1,
+    darker: green2,
   },
 
   failure: {
@@ -145,10 +161,15 @@ export const palette = {
     back: backFailure,
     darkBack: dark(backFailure),
     lightBack: light(backFailure),
+
+    default: red,
+    dark: red1,
+    darker: red2,
   },
   // -end- Old colours palette
 
   // -start- New colours palette
+  whiteOpacity,
   // red,
   // green,
   // blue,
