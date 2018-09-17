@@ -2,6 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 
 import Button from '..';
+import Icon from '../../Icon';
 import Theme from '../../Theme';
 
 describe('<Button />', () => {
@@ -10,7 +11,7 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render withouth a problem and with margin', () => {
+  it('should render without a problem and with margin', () => {
     const render = mount(
       <Button marginLeft theme={Theme}>
         Primary margin button
@@ -46,15 +47,6 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render primary inverted button', () => {
-    const render = mount(
-      <Button primary inverted theme={Theme}>
-        Primary Inverted button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
   it('should render secondary button', () => {
     const render = mount(
       <Button secondary theme={Theme}>
@@ -64,28 +56,10 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render secondary inverted button', () => {
-    const render = mount(
-      <Button secondary inverted theme={Theme}>
-        Secondary Inverted button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
   it('should render success button', () => {
     const render = mount(
       <Button success theme={Theme}>
-        Secondary button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render success inverted button', () => {
-    const render = mount(
-      <Button success inverted theme={Theme}>
-        Secondary Inverted button
+        Success button
       </Button>,
     );
     expect(render).toMatchSnapshot();
@@ -100,28 +74,10 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render failure inverted button', () => {
+  it('should render secondary button', () => {
     const render = mount(
-      <Button failure inverted theme={Theme}>
-        Failure Inverted button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render light button', () => {
-    const render = mount(
-      <Button light theme={Theme}>
-        Light button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render light inverted button', () => {
-    const render = mount(
-      <Button light inverted theme={Theme}>
-        Light Inverted button
+      <Button secondary theme={Theme}>
+        Secondary button
       </Button>,
     );
     expect(render).toMatchSnapshot();
@@ -139,34 +95,7 @@ describe('<Button />', () => {
   it('should render as big', () => {
     const render = mount(
       <Button primary big theme={Theme}>
-        Primary small button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as medium', () => {
-    const render = mount(
-      <Button primary medium theme={Theme}>
-        Primary small button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as tiny', () => {
-    const render = mount(
-      <Button primary tiny theme={Theme}>
-        Primary tiny button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as inverted', () => {
-    const render = mount(
-      <Button primary inverted theme={Theme}>
-        Primary small button
+        Primary big button
       </Button>,
     );
     expect(render).toMatchSnapshot();
@@ -190,46 +119,39 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render as rounded', () => {
+  it('should render with a left icon and a label', () => {
     const render = mount(
-      <Button primary rounded theme={Theme}>
-        Rounded button
+      <Button
+        primary
+        disabled
+        theme={Theme}
+        icon={<Icon color={Theme.palette.white} name="maximize" />}
+      >
+        Icon button
       </Button>,
     );
     expect(render).toMatchSnapshot();
   });
 
-  it('should render as rounded and small', () => {
+  it('should render with a right icon and a label', () => {
     const render = mount(
-      <Button primary small rounded theme={Theme}>
-        Small rounded button
+      <Button
+        primary
+        disabled
+        theme={Theme}
+        icon={<Icon color={Theme.palette.white} name="maximize" />}
+        iconPosition="right"
+      >
+        Icon button
       </Button>,
     );
     expect(render).toMatchSnapshot();
   });
 
-  it('should render as rounded and big', () => {
+  it('should render with an icon', () => {
     const render = mount(
-      <Button primary big rounded theme={Theme}>
-        Big rounded button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as rounded and medium', () => {
-    const render = mount(
-      <Button primary medium rounded theme={Theme}>
-        Big rounded button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as rounded and tiny', () => {
-    const render = mount(
-      <Button primary tiny rounded theme={Theme}>
-        Big rounded button
+      <Button primary disabled theme={Theme}>
+        <Icon color={Theme.palette.white} name="maximize" />
       </Button>,
     );
     expect(render).toMatchSnapshot();

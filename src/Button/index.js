@@ -2,9 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Container } from './elements';
+import { Container, ContainerIconLeft, ContainerIconRight } from './elements';
 
-const Button = ({ children, ...rest }) => <Container {...rest}>{children}</Container>;
+const displayIconLeft = (side, icon) => {
+  return side === 'right' || icon === null ? null : <ContainerIconLeft>{icon}</ContainerIconLeft>;
+};
+const displayIconRight = (side, icon) => {
+  return side === 'left' || icon === null ? null : <ContainerIconRight>{icon}</ContainerIconRight>;
+};
+
+const Button = ({ children, icon, iconPosition, ...rest }) => {
+  return (
+    <Container {...rest}>
+      {displayIconLeft(iconPosition, icon)} {children} {displayIconRight(iconPosition, icon)}
+    </Container>
+  );
+};
 
 const { node, func, string, bool } = PropTypes;
 Button.propTypes = {
@@ -13,17 +26,15 @@ Button.propTypes = {
   onClick: func,
   primary: bool,
   secondary: bool,
-  light: bool,
   success: bool,
   failure: bool,
-  inverted: bool,
   fluid: bool,
   big: bool,
-  tiny: bool,
   small: bool,
-  rounded: bool,
   disabled: bool,
   isGoogle: bool,
+  icon: node,
+  iconPosition: string,
 };
 
 Button.defaultProps = {
@@ -32,21 +43,19 @@ Button.defaultProps = {
   onClick: () => {},
   primary: false,
   secondary: false,
-  light: false,
   success: false,
   failure: false,
-  inverted: false,
   fluid: false,
   big: false,
-  tiny: false,
   small: false,
-  rounded: false,
   disabled: false,
   isGoogle: false,
+  icon: null,
+  iconPosition: 'left',
 };
 
-const StyledButton = styled(Button)``;
+const StyledButtonRefactor = styled(Button)``;
 
-StyledButton.displayName = 'Button';
+StyledButtonRefactor.displayName = 'Button';
 
-export default StyledButton;
+export default StyledButtonRefactor;

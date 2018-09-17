@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Button from 'components/Button';
-
-// or
-
-import { Button } from 'components';
+import { Button } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -19,40 +15,36 @@ import { Button } from 'components';
 - `ghost` - whether the button is a ghost button or not (a ghost button is a button that is not styled).
 - `primary` - whether the button is a primary button or not.
 - `secondary` - whether the button is a secondary button or not.
-- `light` - whether the button is a light button or not.
 - `success` - whether the button is a success button or not.
 - `failure` - whether the button is a failure button or not.
-- `inverted` - whether the button has inverted colors or not.
 - `fluid` - whether the button is fluid or not.
 - `big` - whether the button is big or not.
-- `tiny` - whether the button is tiny (no padding) or not.
 - `small` - whether the button is small or not.
-- `rounded` - whether the button has rounded corners or not.
 - `disabled` - whether the button is disabled or not.
 - `isGoogle` - whether the button is a Google button or not.
+- `icon` - add icon node here to illustrate the text aside.
+- `iconPosition` - set the icon position compared to the text. It will be set to the left side byt default.
 
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `children`  |  `node`  |    `null`    |     -      |
-| `ghost`     |  `bool`  |   `false`    |     -      |
-| `primary`   |  `bool`  |   `false`    |     -      |
-| `secondary` |  `bool`  |   `false`    |     -      |
-| `light`     |  `bool`  |   `false`    |     -      |
-| `success`   |  `bool`  |   `false`    |     -      |
-| `failure`   |  `bool`  |   `false`    |     -      |
-| `inverted`  |  `bool`  |   `false`    |     -      |
-| `fluid`     |  `bool`  |   `false`    |     -      |
-| `big`       |  `bool`  |   `false`    |     -      |
-| `tiny`      |  `bool`  |   `false`    |     -      |
-| `small`     |  `bool`  |   `false`    |     -      |
-| `rounded`   |  `bool`  |   `false`    |     -      |
-| `disabled`  |  `bool`  |   `false`    |     -      |
-| `isGoogle`  |  `bool`  |   `false`    |     -      |
+| propName       | propType | defaultValue | isRequired |
+| -------------- | :------: | :----------: | :--------: |
+| `children`     |  `node`  |    `null`    |     -      |
+| `ghost`        |  `bool`  |   `false`    |     -      |
+| `primary`      |  `bool`  |   `false`    |     -      |
+| `secondary`    |  `bool`  |   `false`    |     -      |
+| `success`      |  `bool`  |   `false`    |     -      |
+| `failure`      |  `bool`  |   `false`    |     -      |
+| `fluid`        |  `bool`  |   `false`    |     -      |
+| `big`          |  `bool`  |   `false`    |     -      |
+| `small`        |  `bool`  |   `false`    |     -      |
+| `disabled`     |  `bool`  |   `false`    |     -      |
+| `isGoogle`     |  `bool`  |   `false`    |     -      |
+| `icon`         |  `node`  |    `null`    |     -      |
+| `iconPosition` | `string` |    `left`    |     -      |
 
 ### Example
 
 ```jsx
-import Button from 'component/Button';
+import {Button} from '@tillersystems/stardust';
 
 render() {
   return (
