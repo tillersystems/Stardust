@@ -21,18 +21,16 @@ import { Title, Value, Variation } from './elements';
 
 const KpiBlock = ({ className, title, value, variation }) => (
   <div className={className}>
-    {variation &&
-      variation < 0 && (
-        <Variation negative>
-          {variation} % <Icon name="caret-down" color={Theme.palette.red} />
-        </Variation>
-      )}
-    {variation &&
-      variation >= 0 && (
-        <Variation positive>
-          +{variation} % <Icon name="caret-up" color={Theme.palette.green} />
-        </Variation>
-      )}
+    {variation < 0 && (
+      <Variation negative>
+        {variation} % <Icon name="caret-down" color={Theme.palette.red} />
+      </Variation>
+    )}
+    {variation >= 0 && (
+      <Variation positive>
+        +{variation} % <Icon name="caret-up" color={Theme.palette.green} />
+      </Variation>
+    )}
     <Value>{value}</Value>
     <Title>{title}</Title>
   </div>
