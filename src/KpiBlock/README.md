@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import { KpiBlock } from 'components/KpiBlock';
-
-// or
-
-import KpiBlock from 'components';
+import { KpiBlock } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -19,17 +15,17 @@ import KpiBlock from 'components';
 - `value` - KpiBlock value.
 - `variation` - KpiBlock variation (negative or positive).
 
-| propName | propType | defaultValue | isRequired |
-| -------- | :------: | :----------: | :--------: |
-| `className`| `string`|   `''`      |     -      |
-| `title` | `string`  |              |     *      |
-| `value` | `string`  |              |     *      |
-| `variation`| `number`|             |     *      |
+| propName    |        propType         | defaultValue | isRequired |
+| ----------- | :---------------------: | :----------: | :--------: |
+| `className` |        `string`         |     `''`     |     -      |
+| `title`     |        `string`         |              |     \*     |
+| `value`     | `string` / `node | | \* |
+| `variation` |    `number` / `bool`    |              |     -      |
 
 ### Example
 
 ```jsx
-import { KpiBlock } from 'components/KpiBlock';
+import { KpiBlock } from '@tillersystems/stardust';
 
 render() {
   return <KpiBlock title="commandes" value="657" variation={5} />
