@@ -13,7 +13,7 @@ class CheckBox extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     id: PropTypes.string.isRequired,
-    checked: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     onChange: PropTypes.func,
     textAnnexe: PropTypes.string,
@@ -22,7 +22,7 @@ class CheckBox extends PureComponent {
   /** Default props. */
   static defaultProps = {
     children: null,
-    checked: false,
+    defaultChecked: false,
     disabled: false,
     onChange: null,
     textAnnexe: null,
@@ -30,7 +30,7 @@ class CheckBox extends PureComponent {
 
   /** Internal state. */
   state = {
-    checked: false,
+    defaultChecked: false,
     hasFocus: false,
   };
 
@@ -38,9 +38,9 @@ class CheckBox extends PureComponent {
    * Handles mounting in component's lifecycle.
    */
   componentDidMount() {
-    const { checked } = this.props;
+    const { defaultChecked } = this.props;
     /* eslint-disable react/no-did-mount-set-state */
-    this.setState({ ...this.state, checked });
+    this.setState({ ...this.state, defaultChecked });
   }
 
   /**
@@ -49,11 +49,11 @@ class CheckBox extends PureComponent {
    * @param {Object} prevProps - The component's previous props.
    */
   componentDidUpdate(prevProps) {
-    const { checked } = this.props;
+    const { defaultChecked } = this.props;
 
-    if (checked !== prevProps.checked) {
+    if (defaultChecked !== prevProps.defaultChecked) {
       /* eslint-disable react/no-did-update-set-state */
-      this.setState({ ...this.state, checked: checked });
+      this.setState({ ...this.state, defaultChecked: defaultChecked });
     }
   }
 
@@ -75,14 +75,14 @@ class CheckBox extends PureComponent {
    * Handles click event on the check box.
    */
   handleClick = () => {
-    const { checked } = this.state;
+    const { defaultChecked } = this.state;
     const { disabled, onChange } = this.props;
 
     if (!disabled) {
       if (onChange) {
-        onChange(!checked);
+        onChange(!defaultChecked);
       } else {
-        this.setState({ ...this.state, checked: !checked });
+        this.setState({ ...this.state, defaultChecked: !defaultChecked });
       }
     }
   };
@@ -93,20 +93,20 @@ class CheckBox extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { hasFocus, checked } = this.state;
+    const { hasFocus, defaultChecked } = this.state;
     const { children, id, disabled, textAnnexe } = this.props;
 
     return (
       <Wrapper onClick={this.handleClick} textAnnexe={textAnnexe} disabled={disabled}>
-        <Container hasFocus={hasFocus} checked={checked} disabled={disabled}>
-          {checked && (
+        <Container hasFocus={hasFocus} defaultChecked={defaultChecked} disabled={disabled}>
+          {defaultChecked && (
             <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
           )}
           <input
             type="checkbox"
             tabIndex="0"
             id={id}
-            checked={checked}
+            defaultChecked={defaultChecked}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             disabled={disabled}
@@ -118,7 +118,7 @@ class CheckBox extends PureComponent {
           disabled={disabled}
           htmlFor={id}
           textAnnexe={textAnnexe}
-          checked={checked}
+          defaultChecked={defaultChecked}
         >
           {children}
         </Label>

@@ -11,12 +11,12 @@ export const Wrapper = styled.div`
 
   cursor: pointer;
 
-  padding: 6px 0;
+  padding: 0.6rem 0;
 
   ${({ textAnnexe }) =>
     textAnnexe &&
     css`
-      margin-bottom: 19px;
+      margin-bottom: 1.9rem;
     `};
 
   ${({ disabled }) =>
@@ -39,7 +39,7 @@ export const Container = styled.div`
   width: 1.6rem;
   height: 1.6rem;
 
-  border: 1px solid #e2e5ed;
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
 
   background: ${({ theme: { palette } }) => palette.white};
@@ -52,13 +52,17 @@ export const Container = styled.div`
       opacity: 0.4;
     `};
 
-  ${({ checked }) =>
-    checked &&
+  ${({ defaultChecked }) =>
+    defaultChecked &&
     css`
-      border: 1px solid #1b82b5;
-      background: ${({ theme: { palette } }) => palette.blue}
-        linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
-      box-shadow: inset 0 0.2rem 0 0 rgba(255, 255, 255, 0.1);
+      border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
+      background: ${({ theme: { palette } }) => palette.primary.default}
+        linear-gradient(
+          0deg,
+          ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
+          ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
+        );
+      box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
       transition: border ease 0.25s;
     `};
 `;
@@ -76,13 +80,13 @@ export const Label = styled.label`
   position: relative;
 
   margin-left: ${({ theme: { dimensions } }) => dimensions.small};
-  color: ${({ theme: { palette } }) => palette.clay};
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   ${({ disabled, hasFocus }) =>
     !disabled &&
     hasFocus &&
     css`
-      color: ${({ theme: { palette } }) => palette.blue};
+      color: ${({ theme: { palette } }) => palette.primary.default};
       font-weight: ${({
         theme: {
           fonts: { weight },
@@ -97,10 +101,10 @@ export const Label = styled.label`
       cursor: not-allowed;
     `};
 
-  ${({ checked }) =>
-    checked &&
+  ${({ defaultChecked }) =>
+    defaultChecked &&
     css`
-      color: ${({ theme: { palette } }) => palette.anthracite};
+      color: ${({ theme: { palette } }) => palette.darkBlue};
     `};
 
   /* if label got text annexe  */
@@ -111,11 +115,11 @@ export const Label = styled.label`
         content: "${textAnnexe}";
         position: absolute;
         left: 0;
-        bottom: -19px;
+        bottom: -1.9rem;
         width: 250%;
-        max-width: 300px;
+        max-width: 30rem;
         text-align: justify;
-        color: #889AA8;
+        color: ${({ theme: { palette } }) => palette.darkGrey};
       `};
   }
 `;
