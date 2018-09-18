@@ -1,3 +1,7 @@
+<a name="1.1.2"></a>
+
+## [1.1.2](https://github.com/tillersystems/Stardust/compare/v1.0.2...v1.1.2) (2018-09-18)
+
 <a name="1.0.2"></a>
 
 ## [1.0.2](https://github.com/tillersystems/Stardust/compare/v1.0.1...v1.0.2) (2018-09-14)
