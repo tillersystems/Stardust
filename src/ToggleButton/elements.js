@@ -13,12 +13,18 @@ const Toggle = styled.span`
 
   position: relative;
 
-  width: 3.2rem;
-  height: 1.8rem;
+  width: 3.8rem;
+  height: 2rem;
 
-  border-radius: 2.1rem;
+  border-radius: 1rem;
 
-  background: ${({ checked, theme: { palette } }) => (checked ? palette.blue : palette.gray)};
+  background: ${({ checked, theme: { palette } }) =>
+    checked
+      ? palette.blue + 'linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%)'
+      : palette.mysticGrey};
+
+  border: 1px solid
+    ${({ checked, theme: { palette } }) => (checked ? palette.blue : palette.mysticGrey)};
 
   cursor: pointer;
   pointer-events: none;
@@ -41,11 +47,11 @@ const Toggle = styled.span`
 
     background: ${({ theme: { palette } }) => palette.white};
 
-    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.1),
-      0 0 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
-    transition: transform 250ms ease, width 250ms, left 250ms;
-    transform: translateX(${({ checked }) => (checked ? '1.3rem' : 0)});
+    transition: transform 250ms ease;
+    transform: translateX(${({ checked }) => (checked ? '1.7rem' : 0)});
+    will-change: transform;
   }
 
   ${({ readOnly }) =>
