@@ -33,53 +33,57 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
 >
   <PoseGroup
     animateOnMount={true}
-    enterPose="enter"
-    exitPose="exit"
     flipMove={true}
-    preEnterPose="exit"
-    singleChildOnly={false}
   >
-    <Component
-      arrowPositionX="50%"
-      initialPose="exit"
-      key="ContainerAnimation"
-      pose="enter"
-      width="auto"
+    <Transition
+      animateOnMount={true}
+      enterPose="enter"
+      exitPose="exit"
+      flipMove={true}
+      preEnterPose="exit"
     >
-      <PoseElement
+      <Component
         arrowPositionX="50%"
-        elementType={[Function]}
         initialPose="exit"
+        key="ContainerAnimation"
         pose="enter"
-        poseConfig={
-          Object {
-            "enter": Object {
-              "opacity": 1,
-              "y": 15,
-            },
-            "exit": Object {
-              "opacity": 0,
-              "y": 30,
-            },
-          }
-        }
         width="auto"
       >
-        <styled.div
+        <PoseElement
           arrowPositionX="50%"
-          hostRef={[Function]}
-          innerRef={[Function]}
+          elementType={[Function]}
+          initialPose="exit"
+          pose="enter"
+          poseConfig={
+            Object {
+              "enter": Object {
+                "opacity": 1,
+                "y": 15,
+              },
+              "exit": Object {
+                "opacity": 0,
+                "y": 30,
+              },
+            }
+          }
           width="auto"
         >
-          <div
-            className="c0"
+          <styled.div
+            arrowPositionX="50%"
+            hostRef={[Function]}
+            innerRef={[Function]}
             width="auto"
           >
-            Children
-          </div>
-        </styled.div>
-      </PoseElement>
-    </Component>
+            <div
+              className="c0"
+              width="auto"
+            >
+              Children
+            </div>
+          </styled.div>
+        </PoseElement>
+      </Component>
+    </Transition>
   </PoseGroup>
 </Popover>
 `;
@@ -207,12 +211,16 @@ exports[`<Popover /> should render with a different width 1`] = `
 >
   <PoseGroup
     animateOnMount={true}
-    enterPose="enter"
-    exitPose="exit"
     flipMove={true}
-    preEnterPose="exit"
-    singleChildOnly={false}
-  />
+  >
+    <Transition
+      animateOnMount={true}
+      enterPose="enter"
+      exitPose="exit"
+      flipMove={true}
+      preEnterPose="exit"
+    />
+  </PoseGroup>
 </Popover>
 `;
 
@@ -339,11 +347,15 @@ exports[`<Popover /> should render withouth a problem 1`] = `
 >
   <PoseGroup
     animateOnMount={true}
-    enterPose="enter"
-    exitPose="exit"
     flipMove={true}
-    preEnterPose="exit"
-    singleChildOnly={false}
-  />
+  >
+    <Transition
+      animateOnMount={true}
+      enterPose="enter"
+      exitPose="exit"
+      flipMove={true}
+      preEnterPose="exit"
+    />
+  </PoseGroup>
 </Popover>
 `;
