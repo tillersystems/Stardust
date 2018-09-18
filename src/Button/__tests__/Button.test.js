@@ -11,15 +11,6 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render without a problem and with margin', () => {
-    const render = mount(
-      <Button marginLeft theme={Theme}>
-        Primary margin button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
   it('should render google button', () => {
     const render = mount(
       <Button isGoogle theme={Theme}>
@@ -74,15 +65,6 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render secondary button', () => {
-    const render = mount(
-      <Button secondary theme={Theme}>
-        Secondary button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
   it('should render as small', () => {
     const render = mount(
       <Button primary small theme={Theme}>
@@ -121,12 +103,7 @@ describe('<Button />', () => {
 
   it('should render with a left icon and a label', () => {
     const render = mount(
-      <Button
-        primary
-        disabled
-        theme={Theme}
-        icon={<Icon color={Theme.palette.white} name="maximize" />}
-      >
+      <Button primary theme={Theme} icon={<Icon color={Theme.palette.white} name="maximize" />}>
         Icon button
       </Button>,
     );
@@ -137,7 +114,6 @@ describe('<Button />', () => {
     const render = mount(
       <Button
         primary
-        disabled
         theme={Theme}
         icon={<Icon color={Theme.palette.white} name="maximize" />}
         iconPosition="right"
@@ -150,7 +126,7 @@ describe('<Button />', () => {
 
   it('should render with an icon', () => {
     const render = mount(
-      <Button primary disabled theme={Theme}>
+      <Button primary theme={Theme}>
         <Icon color={Theme.palette.white} name="maximize" />
       </Button>,
     );

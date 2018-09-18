@@ -12,8 +12,8 @@ const getColor = color => {
   return color;
 };
 
-const Icon = ({ name, color, height, width, spin, marginRight, marginLeft }) => (
-  <Container {...{ spin, width, height, marginRight, marginLeft }}>
+const Icon = ({ name, color, height, width, spin }) => (
+  <Container {...{ spin, width, height }}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block' }}

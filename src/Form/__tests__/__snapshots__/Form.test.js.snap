@@ -3869,7 +3869,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   outline: none;
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid hsl(200,74%,41%);
+  border: 1px solid #1873a0;
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
 }
 
@@ -3883,9 +3883,9 @@ exports[`<Form /> should render withouth a problem 1`] = `
 }
 
 .c8:active {
-  background-color: hsl(200,74%,41%);
-  border: 0.1rem solid hsl(200,74%,38%);
-  box-shadow: inset 0 0 0 0.1rem hsl(200,74%,38%);
+  background-color: #1873a0;
+  border: 1px solid #14638a;
+  box-shadow: inset 0 0 0 0.1rem #14638a;
 }
 
 .c6 {

@@ -235,21 +235,21 @@ export const Container = styled.button`
             primary &&
             css`
               background-color: ${({ theme: { palette } }) => palette.primary.dark};
-              border: 0.1rem solid ${({ theme: { palette } }) => palette.primary.darker};
+              border: 1px solid ${({ theme: { palette } }) => palette.primary.darker};
               box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.primary.darker};
             `}
           ${({ success }) =>
             success &&
             css`
               background-color: ${({ theme: { palette } }) => palette.success.dark};
-              border: 0.1rem solid ${({ theme: { palette } }) => palette.success.darker};
+              border: 1px solid ${({ theme: { palette } }) => palette.success.darker};
               box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.success.darker};
             `}
           ${({ failure }) =>
             failure &&
             css`
               background-color: ${({ theme: { palette } }) => palette.failure.dark};
-              border: 0.1rem solid ${({ theme: { palette } }) => palette.failure.darker};
+              border: 1px solid ${({ theme: { palette } }) => palette.failure.darker};
               box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.failure.darker};
             `}
     }

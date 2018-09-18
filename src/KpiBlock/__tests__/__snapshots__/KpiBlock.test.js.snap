@@ -17,7 +17,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 }
 
 .c4 {
-  font-size: 1.5999999999999999rem;
+  font-size: 1.4rem;
   color: hsl(206,16%,60%);
 }
 
@@ -33,7 +33,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: hsl(6,79%,65%);
 }
 
@@ -160,7 +160,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 }
 
 .c4 {
-  font-size: 1.5999999999999999rem;
+  font-size: 1.4rem;
   color: hsl(206,16%,60%);
 }
 
@@ -176,7 +176,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: hsl(89,53%,52%);
 }
 
@@ -295,7 +295,7 @@ exports[`<KpiBlock /> should render withouth a problem 1`] = `
 }
 
 .c2 {
-  font-size: 1.5999999999999999rem;
+  font-size: 1.4rem;
   color: hsl(206,16%,60%);
 }
 

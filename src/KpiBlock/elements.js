@@ -8,7 +8,7 @@ export const Value = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: ${({ theme: { fonts } }) => `${fonts.size.mediumInt + 0.2}rem`};
+  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
 
   color: ${({ theme: { palette } }) => palette.grey};
 `;
@@ -21,7 +21,7 @@ export const Variation = styled.div`
   display: flex;
   align-items: center;
 
-  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
+  font-size: ${({ theme: { fonts } }) => fonts.size.default};
 
   /* Negative */
   ${({ negative }) =>
