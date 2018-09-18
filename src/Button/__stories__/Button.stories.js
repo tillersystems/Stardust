@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
 import { Button, Icon, Theme } from '../..';
@@ -10,14 +10,9 @@ const onClickAction = action('onClick');
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('with properties', () => {
-    const invertedValue = boolean('Inverted', false, 'Appearance');
-    const roundedValue = boolean('Rounded', false, 'Appearance');
-
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
-    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
-    const tinyValue = boolean('Tiny', false, 'Layout');
 
     const disabledValue = boolean('Disabled', false, 'State');
 
@@ -33,16 +28,12 @@ storiesOf('Button', module)
           alignContent: 'center',
         }}
       >
-        <Button ghost>Default</Button>
+        <Button ghost>Ghost</Button>
         <Button
           primary
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('primary')}
         >
@@ -50,41 +41,19 @@ storiesOf('Button', module)
         </Button>
         <Button
           secondary
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('secondary')}
         >
-          Secondary
-        </Button>
-        <Button
-          light
-          inverted={invertedValue}
-          rounded={roundedValue}
-          fluid={fluidValue}
-          big={bigValue}
-          medium={mediumValue}
-          small={smallValue}
-          tiny={tinyValue}
-          disabled={disabledValue}
-          onClick={() => onClickAction('light')}
-        >
-          Light
+          secondary
         </Button>
         <Button
           success
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('success')}
         >
@@ -92,13 +61,9 @@ storiesOf('Button', module)
         </Button>
         <Button
           failure
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('failure')}
         >
@@ -108,14 +73,15 @@ storiesOf('Button', module)
     );
   })
   .add('with icons', () => {
-    const invertedValue = boolean('Inverted', false, 'Appearance');
-    const roundedValue = boolean('Rounded', false, 'Appearance');
-
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
-    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
-    const tinyValue = boolean('Tiny', false, 'Layout');
+    const positionOptions = {
+      left: 'left',
+      right: 'right',
+    };
+    const iconPositionValue = select('Icon position', positionOptions, 'left', 'Layout');
+    const labelValue = boolean('Label', true, 'Layout');
 
     const disabledValue = boolean('Disabled', false, 'State');
 
@@ -131,91 +97,68 @@ storiesOf('Button', module)
           alignContent: 'center',
         }}
       >
-        <Button ghost>
-          <Icon color={Theme.palette.white} name="maximize" />
+        <Button
+          ghost
+          icon={labelValue ? <Icon color={Theme.palette.white} name="maximize" /> : null}
+          iconPosition={iconPositionValue}
+        >
+          {labelValue ? 'ghost' : <Icon color={Theme.palette.white} name="maximize" />}
         </Button>
         <Button
           primary
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('primary')}
+          icon={labelValue ? <Icon color={Theme.palette.white} name="maximize" /> : null}
+          iconPosition={iconPositionValue}
         >
-          <Icon color={Theme.palette.white} name="maximize" />
+          {labelValue ? 'primary' : <Icon color={Theme.palette.white} name="maximize" />}
         </Button>
         <Button
           secondary
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('secondary')}
+          icon={labelValue ? <Icon color={Theme.palette.white} name="maximize" /> : null}
+          iconPosition={iconPositionValue}
         >
-          <Icon color={Theme.palette.grey} name="maximize" />
-        </Button>
-        <Button
-          light
-          inverted={invertedValue}
-          rounded={roundedValue}
-          fluid={fluidValue}
-          big={bigValue}
-          medium={mediumValue}
-          small={smallValue}
-          tiny={tinyValue}
-          disabled={disabledValue}
-          onClick={() => onClickAction('light')}
-        >
-          <Icon color={Theme.palette.grey} name="maximize" />
+          {labelValue ? 'secondary' : <Icon color={Theme.palette.white} name="maximize" />}
         </Button>
         <Button
           success
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('success')}
+          icon={labelValue ? <Icon color={Theme.palette.white} name="maximize" /> : null}
+          iconPosition={iconPositionValue}
         >
-          <Icon color={Theme.palette.white} name="maximize" />
+          {labelValue ? 'success' : <Icon color={Theme.palette.white} name="maximize" />}
         </Button>
         <Button
           failure
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('failure')}
+          icon={labelValue ? <Icon color={Theme.palette.white} name="maximize" /> : null}
+          iconPosition={iconPositionValue}
         >
-          <Icon color={Theme.palette.white} name="maximize" />
+          {labelValue ? 'failure' : <Icon color={Theme.palette.white} name="maximize" />}
         </Button>
       </div>
     );
   })
   .add('Google', () => {
-    const invertedValue = boolean('Inverted', false, 'Appearance');
-    const roundedValue = boolean('Rounded', false, 'Appearance');
-
     const fluidValue = boolean('Fluid', false, 'Layout');
     const bigValue = boolean('Big', false, 'Layout');
-    const mediumValue = boolean('Medium', false, 'Layout');
     const smallValue = boolean('Small', false, 'Layout');
-    const tinyValue = boolean('Tiny', false, 'Layout');
 
     const disabledValue = boolean('Disabled', false, 'State');
 
@@ -233,13 +176,9 @@ storiesOf('Button', module)
       >
         <Button
           isGoogle
-          inverted={invertedValue}
-          rounded={roundedValue}
           fluid={fluidValue}
           big={bigValue}
-          medium={mediumValue}
           small={smallValue}
-          tiny={tinyValue}
           disabled={disabledValue}
           onClick={() => onClickAction('Google')}
         >

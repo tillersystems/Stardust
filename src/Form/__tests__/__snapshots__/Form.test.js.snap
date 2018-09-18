@@ -52,12 +52,12 @@ exports[`<Form /> should render form block without a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -457,12 +457,12 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -874,12 +874,12 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -1286,12 +1286,12 @@ exports[`<Form /> should render form row without a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -1704,12 +1704,12 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -1999,12 +1999,12 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -2297,12 +2297,12 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -2592,12 +2592,12 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -3025,12 +3025,12 @@ exports[`<Form /> should render form with size value 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -3802,12 +3802,12 @@ exports[`<Form /> should render withouth a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.2rem;
+  min-height: 1.4rem;
   color: hsl(206,16%,60%);
   text-align: left;
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -3858,34 +3858,34 @@ exports[`<Form /> should render withouth a problem 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
   color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%);
-  border: 1px solid hsl(200,74%,46%);
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid #1873a0;
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
 }
 
-.c8:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  color: hsl(0,100%,100%)    color:#fff;
-  background: #1c88bf;
-  border: 1px solid #1c88bf;
-}
-
-.c8:hover:not([disabled]) svg > path {
+.c8 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c8:hover:not([disabled]):not(:active) {
+  background: hsl(200,74%,46%);
+  box-shadow: none;
+}
+
+.c8:active {
+  background-color: #1873a0;
+  border: 1px solid #14638a;
+  box-shadow: inset 0 0 0 0.1rem #14638a;
 }
 
 .c6 {
@@ -4122,16 +4122,14 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                   disabled={false}
                                   failure={false}
                                   fluid={false}
-                                  inverted={false}
+                                  icon={null}
+                                  iconPosition="left"
                                   isGoogle={false}
-                                  light={false}
                                   onClick={[Function]}
                                   primary={true}
-                                  rounded={false}
                                   secondary={false}
                                   small={false}
                                   success={false}
-                                  tiny={false}
                                   type="submit"
                                 >
                                   <styled.button
@@ -4142,16 +4140,12 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     disabled={false}
                                     failure={false}
                                     fluid={false}
-                                    inverted={false}
                                     isGoogle={false}
-                                    light={false}
                                     onClick={[Function]}
                                     primary={true}
-                                    rounded={false}
                                     secondary={false}
                                     small={false}
                                     success={false}
-                                    tiny={false}
                                     type="submit"
                                   >
                                     <button
@@ -4160,7 +4154,9 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                       onClick={[Function]}
                                       type="submit"
                                     >
+                                       
                                       Hello
+                                       
                                     </button>
                                   </styled.button>
                                 </Button>

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Colors helpers should render a darker color 1`] = `"#ea6151"`;
+
+exports[`Colors helpers should render a darker light on hsl color 1`] = `"#e74432"`;
+
+exports[`Colors helpers should render a lighter color 1`] = `"#f1978d"`;
+
+exports[`Colors helpers should render a white with an opacity 1`] = `"hsla(0, 100%, 100%, 0.1)"`;
+
+exports[`Colors helpers should render the lightness value of an hsl color 1`] = `0.65`;

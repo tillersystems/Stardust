@@ -2,8 +2,8 @@
 
 exports[`Day should render with no problem 1`] = `
 .c0 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 

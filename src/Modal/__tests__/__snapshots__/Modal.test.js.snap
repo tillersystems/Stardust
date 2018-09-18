@@ -154,7 +154,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   margin: 0 auto;
   padding: 0 1.5rem;
   color: hsl(0,0%,0%);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border-radius: 0.4rem;
   background: hsl(0,100%,100%);
 }

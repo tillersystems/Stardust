@@ -1,21 +1,17 @@
 /**
  * Defines the theming colors.
  */
+import { dark, light, whiteOpacity, setColorDark } from '../helpers/colors';
 
-import { lighten, darken } from 'polished';
-
-const dark = color => darken(0.03, color);
-
-const light = color => lighten(0.1, color);
-
+// -start- Old colours palette
 const white = 'hsl(0, 100%, 100%)';
 const gray = 'hsl(218, 18%, 91%)';
 const black = 'hsl(0, 0%, 0%)';
 const blackLight = 'hsl(213, 17%, 20%)';
 
-const red = 'hsl(6, 79%, 65%)';
-const green = 'hsl(89, 53%, 52%)';
-const blue = 'hsl(200, 74%, 46%)';
+// const red = 'hsl(6, 79%, 65%)';
+// const green = 'hsl(89, 53%, 52%)';
+// const blue = 'hsl(200, 74%, 46%)';
 const orange = 'hsl(34, 91%, 65%)';
 const anthracite = 'hsl(213, 17%, 20%)';
 const clay = 'hsl(215, 17%, 26%)';
@@ -33,20 +29,43 @@ const greygoose = 'hsl(216, 29%, 97%)';
 const fadeBlue = 'hsl(210, 50%, 98%)';
 
 const forePrimary = white;
-const backPrimary = blue;
+// const backPrimary = blue;
 
 const foreSecondary = grey;
 const backSecondary = white;
 
 const foreSuccess = white;
-const backSuccess = green;
+// const backSuccess = green;
 
 const foreFailure = white;
-const backFailure = red;
+// const backFailure = red;
 
 const googleBrandRed = '#ea4335';
+// -end- Old colours palette
+
+// -start- New colours palette
+
+// Primary color
+const red = 'hsl(6, 79%, 65%)';
+const green = 'hsl(89, 53%, 52%)';
+const blue = 'hsl(200, 74%, 46%)';
+const darkBlue = 'hsl(213, 17%, 20%)';
+const yellow = 'hsl(34, 91%, 65%)';
+
+// Shades of grey
+const mysticGrey = 'hsl(216,45%,98%)';
+const lightGrey = 'hsl(207,22%,90%)';
+const mediumGrey = 'hsl(206,23%,69%)';
+const darkGrey = 'hsl(206,16%,60%)';
+const spaceGrey = 'hsl(207,13%,45%)';
+
+const backPrimary = blue;
+const backFailure = red;
+const backSuccess = green;
+// -end- New colours palette
 
 export const palette = {
+  // -start- Old colours palette
   white,
   black,
   blackLight,
@@ -67,7 +86,7 @@ export const palette = {
   lightGreen: light(green),
 
   blue,
-  darkBlue: dark(blue),
+  // darkBlue: dark(blue),
   lightBlue: light(blue),
 
   orange,
@@ -94,6 +113,10 @@ export const palette = {
     back: backPrimary,
     darkBack: dark(backPrimary),
     lightBack: light(backPrimary),
+
+    default: blue,
+    dark: setColorDark(blue, 0.1),
+    darker: setColorDark(blue, 0.15),
   },
 
   secondary: {
@@ -114,6 +137,10 @@ export const palette = {
     back: backSuccess,
     darkBack: dark(backSuccess),
     lightBack: light(backSuccess),
+
+    default: green,
+    dark: setColorDark(green, 0.1),
+    darker: setColorDark(green, 0.15),
   },
 
   failure: {
@@ -124,5 +151,25 @@ export const palette = {
     back: backFailure,
     darkBack: dark(backFailure),
     lightBack: light(backFailure),
+
+    default: red,
+    dark: setColorDark(red, 0.1),
+    darker: setColorDark(red, 0.15),
   },
+  // -end- Old colours palette
+
+  // -start- New colours palette
+  whiteOpacity,
+  // red,
+  // green,
+  // blue,
+  darkBlue,
+  yellow,
+
+  mysticGrey,
+  lightGrey,
+  mediumGrey,
+  darkGrey,
+  spaceGrey,
+  // -end- New colours palette
 };

@@ -2,8 +2,8 @@
 
 exports[`<Weeks /> should render withouth a problem 1`] = `
 .c1 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -19,8 +19,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c4 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -34,8 +34,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -49,8 +49,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -62,8 +62,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c9 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -73,8 +73,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c10 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-right-radius: 0.4rem;
@@ -86,30 +86,30 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c12 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -118,8 +118,8 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;

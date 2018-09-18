@@ -17,34 +17,18 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -81,30 +65,30 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -113,8 +97,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c21 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -125,8 +109,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -137,8 +121,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -147,8 +131,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -165,8 +149,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -217,7 +201,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -252,8 +236,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -308,12 +292,12 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -326,12 +310,10 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -344,6 +326,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -387,6 +370,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -410,12 +394,12 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -428,12 +412,10 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -446,6 +428,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -489,6 +472,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -2585,34 +2569,18 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -2649,30 +2617,30 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -2681,8 +2649,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -2693,8 +2661,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -2705,8 +2673,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -2725,8 +2693,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -2782,7 +2750,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -2817,8 +2785,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -2873,12 +2841,12 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -2891,12 +2859,10 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -2909,6 +2875,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -2952,6 +2919,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -2975,12 +2943,12 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -2993,12 +2961,10 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -3011,6 +2977,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -3054,6 +3021,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -5150,34 +5118,18 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -5214,30 +5166,30 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -5246,8 +5198,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c21 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -5258,8 +5210,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -5270,8 +5222,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -5285,8 +5237,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -5296,8 +5248,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   background: #c0e4f6;
   border-top-left-radius: 0.4rem;
@@ -5353,7 +5305,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -5388,8 +5340,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -5444,12 +5396,12 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -5462,12 +5414,10 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -5480,6 +5430,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -5523,6 +5474,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -5546,12 +5498,12 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -5564,12 +5516,10 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -5582,6 +5532,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -5625,6 +5576,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -7721,34 +7673,18 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -7785,30 +7721,30 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -7817,8 +7753,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -7829,8 +7765,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -7841,8 +7777,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -7856,8 +7792,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -7908,7 +7844,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -7943,8 +7879,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -7999,12 +7935,12 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -8017,12 +7953,10 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -8035,6 +7969,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -8078,6 +8013,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -8101,12 +8037,12 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -8119,12 +8055,10 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -8137,6 +8071,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -8180,6 +8115,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -10276,34 +10212,18 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -10340,30 +10260,30 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -10372,8 +10292,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -10384,8 +10304,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -10396,8 +10316,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -10411,8 +10331,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -10463,7 +10383,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -10498,8 +10418,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -10554,12 +10474,12 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -10572,12 +10492,10 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -10590,6 +10508,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -10633,6 +10552,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -10656,12 +10576,12 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -10674,12 +10594,10 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -10692,6 +10610,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -10735,6 +10654,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -12831,34 +12751,18 @@ exports[`<DatePicker /> should handle next month 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -12895,30 +12799,30 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -12927,8 +12831,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -12939,8 +12843,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -12988,7 +12892,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -13023,8 +12927,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -13079,12 +12983,12 @@ exports[`<DatePicker /> should handle next month 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -13097,12 +13001,10 @@ exports[`<DatePicker /> should handle next month 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -13115,6 +13017,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -13158,6 +13061,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -13181,12 +13085,12 @@ exports[`<DatePicker /> should handle next month 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -13199,12 +13103,10 @@ exports[`<DatePicker /> should handle next month 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -13217,6 +13119,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -13260,6 +13163,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -15029,34 +14933,18 @@ exports[`<DatePicker /> should handle next month 2`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -15093,30 +14981,30 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -15125,8 +15013,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -15137,8 +15025,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -15149,8 +15037,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -15159,8 +15047,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -15213,7 +15101,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -15248,8 +15136,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -15304,12 +15192,12 @@ exports[`<DatePicker /> should handle next month 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -15322,12 +15210,10 @@ exports[`<DatePicker /> should handle next month 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -15340,6 +15226,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -15383,6 +15270,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -15406,12 +15294,12 @@ exports[`<DatePicker /> should handle next month 2`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -15424,12 +15312,10 @@ exports[`<DatePicker /> should handle next month 2`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -15442,6 +15328,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -15485,6 +15372,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -17581,34 +17469,18 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
@@ -17645,30 +17517,30 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c14 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -17677,8 +17549,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -17689,8 +17561,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
@@ -17738,7 +17610,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -17773,8 +17645,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -17829,12 +17701,12 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -17847,12 +17719,10 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -17865,6 +17735,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -17908,6 +17779,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -17931,12 +17803,12 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -17949,12 +17821,10 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -17967,6 +17837,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -18010,6 +17881,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -19779,40 +19651,24 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.2rem;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  color: hsl(206,23%,69%);
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
-.c2:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  background: hsl(218,29%,95%);
-  border: 1px solid hsl(218,18%,91%);
-}
-
-.c2:hover:not([disabled]) svg > path {
+.c2 svg > path {
   fill: hsl(0,100%,100%);
 }
 
 .c8 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -19828,8 +19684,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c11 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -19843,8 +19699,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c13 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -19858,8 +19714,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c15 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-left-radius: 0.4rem;
@@ -19871,8 +19727,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c16 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
 }
@@ -19882,8 +19738,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c17 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   cursor: not-allowed;
   border-top-right-radius: 0.4rem;
@@ -19895,30 +19751,30 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c19 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
 .c20 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
 .c21 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
 
 .c22 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
 }
 
@@ -19927,8 +19783,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c23 {
-  font-size: 1.2rem;
-  line-height: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
   cursor: pointer;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -19980,7 +19836,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c5 {
@@ -20015,8 +19871,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   align-items: center;
   margin-bottom: 1.5rem;
   color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
 
 .c4 {
@@ -20072,12 +19928,12 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -20090,12 +19946,10 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -20108,6 +19962,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -20151,6 +20006,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>
@@ -20174,12 +20030,12 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               disabled={false}
               failure={false}
               fluid={false}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
               light={true}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
@@ -20192,12 +20048,10 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                 disabled={false}
                 failure={false}
                 fluid={false}
-                inverted={false}
                 isGoogle={false}
                 light={true}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
@@ -20210,6 +20064,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -20253,6 +20108,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
+                   
                 </button>
               </styled.button>
             </Button>

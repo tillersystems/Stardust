@@ -17,28 +17,30 @@ exports[`<KpiChart /> should render with render props 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
   color: hsl(213,17%,20%);
   background: none;
   border: none;
 }
 
-.c5:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  color: hsl(0,100%,100%)   color:current;
+.c5 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c5 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+.c5:hover:not([disabled]):not(:active) {
+  color: current;
   background: none;
   border: none;
 }
@@ -146,16 +148,14 @@ exports[`<KpiChart /> should render with render props 1`] = `
               failure={false}
               fluid={false}
               ghost={true}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
-              light={false}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
-              tiny={false}
               type="button"
             >
               <styled.button
@@ -165,16 +165,12 @@ exports[`<KpiChart /> should render with render props 1`] = `
                 failure={false}
                 fluid={false}
                 ghost={true}
-                inverted={false}
                 isGoogle={false}
-                light={false}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
-                tiny={false}
                 type="button"
               >
                 <button
@@ -183,7 +179,9 @@ exports[`<KpiChart /> should render with render props 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   label
+                   
                 </button>
               </styled.button>
             </Button>
@@ -212,28 +210,30 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   align-items: center;
   margin-left: 0;
   margin-bottom: 0;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: calc(1.2rem + 0.2rem);
-  line-height: calc(1.2rem + 0.2rem);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  border: 1px solid;
-  -webkit-transition: background 200ms ease;
-  transition: background 200ms ease;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  color: #dbdfe6;
-  background: hsl(0,100%,100%);
-  border: 1px solid hsl(218,18%,91%);
   color: hsl(213,17%,20%);
   background: none;
   border: none;
 }
 
-.c5:hover:not([disabled]) {
-  background: #dbdfe6;
-  border: 1px solid #dbdfe6;
-  color: hsl(0,100%,100%)   color:current;
+.c5 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c5 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+.c5:hover:not([disabled]):not(:active) {
+  color: current;
   background: none;
   border: none;
 }
@@ -336,16 +336,14 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
               failure={false}
               fluid={false}
               ghost={true}
-              inverted={false}
+              icon={null}
+              iconPosition="left"
               isGoogle={false}
-              light={false}
               onClick={[Function]}
               primary={false}
-              rounded={false}
               secondary={false}
               small={false}
               success={false}
-              tiny={false}
               type="button"
             >
               <styled.button
@@ -355,16 +353,12 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
                 failure={false}
                 fluid={false}
                 ghost={true}
-                inverted={false}
                 isGoogle={false}
-                light={false}
                 onClick={[Function]}
                 primary={false}
-                rounded={false}
                 secondary={false}
                 small={false}
                 success={false}
-                tiny={false}
                 type="button"
               >
                 <button
@@ -373,7 +367,9 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
+                   
                   label
+                   
                 </button>
               </styled.button>
             </Button>

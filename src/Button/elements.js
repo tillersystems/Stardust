@@ -27,7 +27,14 @@ const getMargin = (margin, theme) => {
  * @param {Number} padding - The padding.
  * @param {Object} theme - The theme.
  */
-const getRoundedRadius = (padding, theme) => 0.1 + padding + theme.fonts.size.mediumInt / 2;
+
+export const ContainerIconRight = styled.span`
+  margin-left: 1rem;
+`;
+
+export const ContainerIconLeft = styled.span`
+  margin-right: 1rem;
+`;
 
 export const Container = styled.button`
     position: relative;
@@ -38,28 +45,29 @@ export const Container = styled.button`
 
     margin-left: ${({ marginLeft, theme }) => getMargin(marginLeft, theme)};
     margin-bottom: ${({ marginBottom, theme }) => getMargin(marginBottom, theme)};
-    padding: 0.7rem 1.4rem;
+    padding: 0.8rem 1.6rem;
     border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-    font-size: calc(${({
+    font-size: ${({
       theme: {
         fonts: { size },
       },
-    }) => size.mediumInt}rem + 0.2rem);
-    line-height: calc(${({
+    }) => size.medium};
+    line-height: ${({
       theme: {
         fonts: { size },
       },
-    }) => size.mediumInt}rem + 0.2rem);
+    }) => size.medium};
     color: ${({ theme: { palette } }) => palette.white};
 
-    background: ${({ theme: { palette } }) => palette.backgroundColor};
-    border: 1px solid ${({ theme: { palette } }) => palette.backgroundColor};
-
-    transition: background 200ms ease;
+    transition: background 200ms ease, box-shadow 200ms ease;
 
     cursor: pointer;
     outline: none;
+
+    svg > path {
+      fill: ${({ theme: { palette } }) => palette.white};
+    }
 
     /* Disabled */
     ${({ disabled }) =>
@@ -76,72 +84,28 @@ export const Container = styled.button`
         width: 100%;
       `}
 
-    /* rounded Button */
-    ${({ theme, rounded }) =>
-      rounded &&
-      css`
-        border-radius: ${getRoundedRadius(0.7, theme)}rem;
-      `};
-
-    /* Tiny Button */
-    ${({ tiny }) =>
-      tiny &&
-      css`
-        padding: 0.2rem;
-
-        ${({ theme, rounded }) =>
-          rounded &&
-          css`
-            border-radius: ${getRoundedRadius(0.4, theme)}rem;
-          `};
-      `}
     /* Small Button */
     ${({ small }) =>
       small &&
       css`
-        padding: 0.4rem 1.5rem;
-
-        ${({ theme, rounded }) =>
-          rounded &&
-          css`
-            border-radius: ${getRoundedRadius(0.4, theme)}rem;
-          `};
-      `}
-
-    /* Medium Button */
-    ${({ medium }) =>
-      medium &&
-      css`
-        padding: 1.2rem 1.5rem;
-
-        ${({ theme, rounded }) =>
-          rounded &&
-          css`
-            border-radius: ${getRoundedRadius(0.4, theme)}rem;
-          `};
+        padding: 0.4rem 0.8rem;
       `}
 
     /* Big Button */
     ${({ big }) =>
       big &&
       css`
-        padding: 1.5rem 3rem;
-
-        ${({ theme, rounded }) =>
-          rounded &&
-          css`
-            border-radius: ${getRoundedRadius(1.5, theme)}rem;
-          `};
-      `}
-
-    /* inverted Button */
-    ${inverted =>
-      inverted &&
-      css`
-        color: ${({ theme: { palette } }) => palette.darkGray};
-
-        background: ${({ theme: { palette } }) => palette.white};
-        border: 1px solid ${({ theme: { palette } }) => palette.gray};
+        padding: 0.8rem 1.8rem;
+        font-size: ${({
+          theme: {
+            fonts: { size },
+          },
+        }) => size.big};
+        line-height: ${({
+          theme: {
+            fonts: { size },
+          },
+        }) => size.big};
       `}
 
     /* Ghost */
@@ -149,130 +113,72 @@ export const Container = styled.button`
       ghost &&
       css`
         color: ${({ theme: { palette } }) => palette.anthracite};
-
         background: none;
         border: none;
+        svg > path {
+          fill: ${({ theme: { palette } }) => palette.anthracite};
+        }
       `}
 
     /* Primary Button */
     ${({ primary }) =>
       primary &&
       css`
-        color: ${({ theme: { palette } }) => palette.primary.fore};
-
-        background: ${({ theme: { palette } }) => palette.primary.back};
-        border: 1px solid ${({ theme: { palette } }) => palette.primary.back};
-      `}
-
-    /* Primary inverted Button */
-    ${({ primary, inverted }) =>
-      primary &&
-      inverted &&
-      css`
-        color: ${({ theme: { palette } }) => palette.primary.back};
-
-        background: ${({ theme: { palette } }) => palette.primary.fore};
-        border: 1px solid ${({ theme: { palette } }) => palette.primary.back};
-
-        svg > path {
-          fill: ${({ theme: { palette } }) => palette.primary.back};
-        }
-      `}
-
-    /* Secondary Button */
-    ${({ secondary }) =>
-      secondary &&
-      css`
-        color: ${({ theme: { palette } }) => palette.secondary.fore};
-
-        background: ${({ theme: { palette } }) => palette.secondary.back};
-        border: 1px solid ${({ theme: { palette } }) => palette.secondary.back};
-      `}
-
-    /* Secondary inverted Button */
-    ${({ secondary, inverted }) =>
-      secondary &&
-      inverted &&
-      css`
-        color: ${({ theme: { palette } }) => palette.secondary.back};
-
-        background: ${({ theme: { palette } }) => palette.secondary.fore};
-        border: 1px solid ${({ theme: { palette } }) => palette.secondary.back};
-
-        svg > path {
-          fill: ${({ theme: { palette } }) => palette.secondary.back};
-        }
+        color: ${({ theme: { palette } }) => palette.white};
+        background: ${({ theme: { palette } }) => palette.primary.back}
+          linear-gradient(
+            0deg,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
+          );
+        border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
+        box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
       `}
 
     /* Success Button */
     ${({ success }) =>
       success &&
       css`
-        color: ${({ theme: { palette } }) => palette.success.fore};
-
-        background: ${({ theme: { palette } }) => palette.success.back};
-        border: 1px solid ${({ theme: { palette } }) => palette.success.back};
-      `}
-
-    /* Success inverted Button */
-    ${({ success, inverted }) =>
-      success &&
-      inverted &&
-      css`
-        color: ${({ theme: { palette } }) => palette.success.back};
-
-        background: ${({ theme: { palette } }) => palette.success.fore};
-        border: 1px solid ${({ theme: { palette } }) => palette.success.back};
-
-        svg > path {
-          fill: ${({ theme: { palette } }) => palette.success.back};
-        }
+        color: ${({ theme: { palette } }) => palette.white};
+        background: ${({ theme: { palette } }) => palette.success.back}
+          linear-gradient(
+            0deg,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
+          );
+        border: 1px solid ${({ theme: { palette } }) => palette.success.dark};
+        box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
       `}
 
     /* Failure Button */
     ${({ failure }) =>
       failure &&
       css`
-        color: ${({ theme: { palette } }) => palette.failure.fore};
-
-        background: ${({ theme: { palette } }) => palette.failure.back};
-        border: 1px solid ${({ theme: { palette } }) => palette.failure.back};
+        color: ${({ theme: { palette } }) => palette.white};
+        background: ${({ theme: { palette } }) => palette.failure.back}
+          linear-gradient(
+            0deg,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
+            ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
+          );
+        border: 1px solid ${({ theme: { palette } }) => palette.failure.dark};
+        box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
       `}
 
-    /* Failure inverted Button */
-    ${({ failure, inverted }) =>
-      failure &&
-      inverted &&
+    /* Secondary Button */
+    ${({ secondary }) =>
+      secondary &&
       css`
-        color: ${({ theme: { palette } }) => palette.failure.back};
-
-        background: ${({ theme: { palette } }) => palette.failure.fore};
-        border: 1px solid ${({ theme: { palette } }) => palette.failure.back};
-
+        color: ${({ theme: { palette } }) => palette.spaceGrey};
+        background: linear-gradient(
+          180deg,
+          ${({ theme: { palette } }) => palette.white} 0%,
+          ${({ theme: { palette } }) => palette.mysticGrey} 100%
+        );
+        border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
         svg > path {
-          fill: ${({ theme: { palette } }) => palette.failure.back};
+          fill: ${({ theme: { palette } }) => palette.spaceGrey};
         }
-      `}
-
-    /* Light Button */
-    ${({ light }) =>
-      light &&
-      css`
-        color: ${({ theme: { palette } }) => palette.marble};
-
-        background: ${({ theme: { palette } }) => palette.white};
-        border: 1px solid ${({ theme: { palette } }) => palette.gray};
-
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-      `}
-
-    /* Light inverted Button */
-    ${({ light, inverted }) =>
-      light &&
-      inverted &&
-      css`
-        background: ${({ theme: { palette } }) => palette.gray};
-        border: 1px solid ${({ theme: { palette } }) => palette.gray};
       `}
 
     /* Google Button */
@@ -281,173 +187,70 @@ export const Container = styled.button`
       css`
         color: ${({ theme: { palette } }) => palette.white};
         background: ${({ theme: { palette } }) => palette.googleBrandRed};
-        border: 1px solid ${({ theme: { palette } }) => palette.googleBrandRed};
+        border: 0.1rem solid ${({ theme: { palette } }) => palette.googleBrandRed};
+        box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
       `};
 
     /* Hovered  */
-    &:hover:not([disabled]) {
-        background: ${({ theme: { palette } }) => palette.darkGray};
-        border: 1px solid ${({ theme: { palette } }) => palette.darkGray};
-
-        color: ${({ theme: { palette } }) => palette.white}
-
-        ${({ inverted }) =>
-          inverted &&
-          css`
-            color: ${({ theme: { palette } }) => palette.white};
-
-            background: ${({ theme: { palette } }) => palette.gray};
-            border: 1px solid ${({ theme: { palette } }) => palette.gray};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.white};
-            }
-          `}
+    &:hover:not([disabled]):not(:active) {
 
         ${({ ghost }) =>
           ghost &&
           css`
             color: current;
-
             background: none;
             border: none;
           `}
 
-        ${({ primary }) =>
-          primary &&
-          css`
-            color: ${({ theme: { palette } }) => palette.primary.lightFore};
-
-            background: ${({ theme: { palette } }) => palette.primary.darkBack};
-            border: 1px solid ${({ theme: { palette } }) => palette.primary.darkBack};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.white};
-            }
-          `}
-
-        ${({ primary, inverted }) =>
-          primary &&
-          inverted &&
-          css`
-            color: ${({ theme: { palette } }) => palette.primary.fore};
-
-            background: ${({ theme: { palette } }) => palette.primary.back};
-            border: 1px solid ${({ theme: { palette } }) => palette.primary.back};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.primary.fore};
-            }
-          `}
-
-        ${({ secondary }) =>
-          secondary &&
-          css`
-            color: ${({ theme: { palette } }) => palette.secondary.lightFore};
-
-            background: ${({ theme: { palette } }) => palette.secondary.darkBack};
-            border: 1px solid ${({ theme: { palette } }) => palette.secondary.darkBack};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.lightFore};
-            }
-          `}
-
-        ${({ secondary, inverted }) =>
-          secondary &&
-          inverted &&
-          css`
-            color: ${({ theme: { palette } }) => palette.secondary.fore};
-
-            background: ${({ theme: { palette } }) => palette.secondary.back};
-            border: 1px solid ${({ theme: { palette } }) => palette.secondary.back};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.secondary.fore};
-            }
-          `}
-
-        ${({ success }) =>
-          success &&
-          css`
-            color: ${({ theme: { palette } }) => palette.success.lightFore};
-
-            background: ${({ theme: { palette } }) => palette.success.darkBack};
-            border: 1px solid ${({ theme: { palette } }) => palette.success.darkBack};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.white};
-            }
-          `}
-
-        ${({ success, inverted }) =>
-          success &&
-          inverted &&
-          css`
-            color: ${({ theme: { palette } }) => palette.success.fore};
-
-            background: ${({ theme: { palette } }) => palette.success.back};
-            border: 1px solid ${({ theme: { palette } }) => palette.success.back};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.success.fore};
-            }
-          `}
-
-        ${({ failure }) =>
-          failure &&
-          css`
-            color: ${({ theme: { palette } }) => palette.failure.fore};
-
-            background: ${({ theme: { palette } }) => palette.failure.darkBack};
-            border: 1px solid ${({ theme: { palette } }) => palette.failure.darkBack};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.white};
-            }
-          `}
-
-        ${({ failure, inverted }) =>
-          failure &&
-          inverted &&
-          css`
-            color: ${({ theme: { palette } }) => palette.failure.fore};
-
-            background: ${({ theme: { palette } }) => palette.failure.back};
-            border: 1px solid ${({ theme: { palette } }) => palette.failure.back};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.failure.fore};
-            }
-          `}
-
-        ${({ light }) =>
-          light &&
-          css`
-            color: ${({ theme: { palette } }) => palette.failure.white};
-
-            background: ${({ theme: { palette } }) => palette.bodyBackground};
-            border: 1px solid ${({ theme: { palette } }) => palette.gray};
-
-            svg > path {
-              fill: ${({ theme: { palette } }) => palette.white};
-            }
-          `}
-
-        ${({ light, inverted }) =>
-          light &&
-          inverted &&
-          css`
-            background: ${({ theme: { palette } }) => palette.whiteexport};
-            border: 1px solid ${({ theme: { palette } }) => palette.gray};
-          `}
-
-          ${({ isGoogle }) =>
-            isGoogle &&
+          ${({ primary }) =>
+            primary &&
             css`
-              color: ${({ theme: { palette } }) => palette.white};
-              background: ${({ theme: { palette } }) => darken(0.1, palette.googleBrandRed)};
-              border: 1px solid ${({ theme: { palette } }) => palette.googleBrandRed};
-            `};
+              background: ${({ theme: { palette } }) => palette.primary.back};
+              box-shadow: none;
+            `}
+            
+          ${({ success }) =>
+            success &&
+            css`
+              background: ${({ theme: { palette } }) => palette.success.back};
+              box-shadow: none;
+            `}
+            
+          ${({ failure }) =>
+            failure &&
+            css`
+              background: ${({ theme: { palette } }) => palette.failure.back};
+              box-shadow: none;
+            `}
+
+        ${({ isGoogle }) =>
+          isGoogle &&
+          css`
+            background: ${({ theme: { palette } }) => darken(0.1, palette.googleBrandRed)};
+          `};
+    }
+    /* Activated  */
+    &:active {
+          ${({ primary }) =>
+            primary &&
+            css`
+              background-color: ${({ theme: { palette } }) => palette.primary.dark};
+              border: 1px solid ${({ theme: { palette } }) => palette.primary.darker};
+              box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.primary.darker};
+            `}
+          ${({ success }) =>
+            success &&
+            css`
+              background-color: ${({ theme: { palette } }) => palette.success.dark};
+              border: 1px solid ${({ theme: { palette } }) => palette.success.darker};
+              box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.success.darker};
+            `}
+          ${({ failure }) =>
+            failure &&
+            css`
+              background-color: ${({ theme: { palette } }) => palette.failure.dark};
+              border: 1px solid ${({ theme: { palette } }) => palette.failure.darker};
+              box-shadow: inset 0 0 0 0.1rem ${({ theme: { palette } }) => palette.failure.darker};
+            `}
     }
 `;

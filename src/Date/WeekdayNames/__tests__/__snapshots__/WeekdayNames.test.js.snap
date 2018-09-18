@@ -2,7 +2,7 @@
 
 exports[`<WeekdayNames /> should render withouth a problem 1`] = `
 .c1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .c0 {
