@@ -10,6 +10,7 @@ export { NumberInput, TextInput } from './Input';
 export { default as KpiChart } from './KpiChart';
 export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
+export { default as Loader } from './Loader';
 export { default as Modal } from './Modal';
 export { default as Popover } from './Popover';
 export { default as Theme } from './Theme';
