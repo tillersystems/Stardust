@@ -21,19 +21,20 @@ import { Title, Value, Variation } from './elements';
 
 const KpiBlock = ({ className, title, value, variation }) => (
   <div className={className}>
-    {variation &&
+    {variation !== false &&
       variation < 0 && (
         <Variation negative>
           {variation} % <Icon name="caret-down" color={Theme.palette.red} />
         </Variation>
       )}
-    {variation &&
+    {variation !== false &&
       variation >= 0 && (
         <Variation positive>
           +{variation} % <Icon name="caret-up" color={Theme.palette.green} />
         </Variation>
       )}
-    <Value>{value}</Value>
+    {typeof value === 'string' && <Value>{value}</Value>}
+    {React.isValidElement(value) && value}
     <Title>{title}</Title>
   </div>
 );
@@ -41,12 +42,12 @@ const KpiBlock = ({ className, title, value, variation }) => (
 /**
  * PropTypes Validation
  */
-const { number, string } = PropTypes;
+const { bool, number, node, oneOfType, string } = PropTypes;
 KpiBlock.propTypes = {
   className: string,
   title: string.isRequired,
-  value: string.isRequired,
-  variation: number,
+  value: oneOfType([string, node]).isRequired,
+  variation: oneOfType([bool, number]),
 };
 
 /**
@@ -54,7 +55,7 @@ KpiBlock.propTypes = {
  */
 KpiBlock.defaultProps = {
   className: '',
-  variation: 0,
+  variation: false,
 };
 
 export default styled(KpiBlock)`

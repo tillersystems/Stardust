@@ -21,4 +21,11 @@ describe('<KpiBlock />', () => {
 
     expect(render).toMatchSnapshot();
   });
+
+  it('should render with a custom a value', () => {
+    const Custom = () => <div>custom</div>;
+    const render = mountWithTheme(<KpiBlock title="title" value={<Custom />} variation={-100} />);
+
+    expect(render).toMatchSnapshot();
+  });
 });
