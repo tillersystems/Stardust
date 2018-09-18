@@ -10,12 +10,16 @@ exports[`<Modal /> should render close modal withouth a problem 1`] = `
   <Portal>
     <PoseGroup
       animateOnMount={true}
-      enterPose="enter"
-      exitPose="exit"
       flipMove={true}
-      preEnterPose="exit"
-      singleChildOnly={false}
-    />
+    >
+      <Transition
+        animateOnMount={true}
+        enterPose="enter"
+        exitPose="exit"
+        flipMove={true}
+        preEnterPose="exit"
+      />
+    </PoseGroup>
   </Portal>
 </Modal>
 `;
@@ -31,12 +35,16 @@ exports[`<Modal /> should render open modal with overlay clickable withouth a pr
   <Portal>
     <PoseGroup
       animateOnMount={true}
-      enterPose="enter"
-      exitPose="exit"
       flipMove={true}
-      preEnterPose="exit"
-      singleChildOnly={false}
-    />
+    >
+      <Transition
+        animateOnMount={true}
+        enterPose="enter"
+        exitPose="exit"
+        flipMove={true}
+        preEnterPose="exit"
+      />
+    </PoseGroup>
   </Portal>
 </Modal>
 `;
@@ -167,148 +175,156 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   <Portal>
     <PoseGroup
       animateOnMount={true}
-      enterPose="enter"
-      exitPose="exit"
       flipMove={true}
-      preEnterPose="exit"
-      singleChildOnly={false}
     >
-      <Component
-        initialPose="exit"
-        key="ContainerAnimation"
-        pose="enter"
+      <Transition
+        animateOnMount={true}
+        enterPose="enter"
+        exitPose="exit"
+        flipMove={true}
+        preEnterPose="exit"
       >
-        <PoseElement
-          elementType={[Function]}
+        <Component
           initialPose="exit"
+          key="ContainerAnimation"
           pose="enter"
-          poseConfig={
-            Object {
-              "enter": Object {
-                "opacity": 1,
-                "transition": [Function],
-              },
-              "exit": Object {
-                "opacity": 0,
-                "transition": [Function],
-              },
-            }
-          }
         >
-          <styled.div
-            hostRef={[Function]}
-            innerRef={[Function]}
+          <PoseElement
+            elementType={[Function]}
+            initialPose="exit"
+            pose="enter"
+            poseConfig={
+              Object {
+                "enter": Object {
+                  "opacity": 1,
+                  "transition": [Function],
+                },
+                "exit": Object {
+                  "opacity": 0,
+                  "transition": [Function],
+                },
+              }
+            }
           >
-            <div
-              className="c0"
+            <styled.div
+              hostRef={[Function]}
+              innerRef={[Function]}
             >
-              <styled.div
-                onClick={[Function]}
+              <div
+                className="c0"
               >
-                <div
-                  className="c1"
+                <styled.div
                   onClick={[Function]}
-                />
-              </styled.div>
-              <PoseGroup
-                animateOnMount={true}
-                enterPose="enter"
-                exitPose="exit"
-                flipMove={true}
-                preEnterPose="exit"
-                singleChildOnly={false}
-              >
-                <Component
-                  height="35rem"
-                  initialPose="exit"
-                  key="DialogAnimation"
-                  pose="enter"
-                  width="50rem"
                 >
-                  <PoseElement
-                    elementType={[Function]}
-                    getInitialPoseFromParent={[Function]}
-                    getParentPoseConfig={[Function]}
-                    height="35rem"
-                    initialPose="exit"
-                    onUnmount={[Function]}
-                    pose="enter"
-                    poseConfig={
-                      Object {
-                        "enter": Object {
-                          "y": 0,
-                        },
-                        "exit": Object {
-                          "y": 30,
-                        },
-                      }
-                    }
-                    registerChild={[Function]}
-                    width="50rem"
+                  <div
+                    className="c1"
+                    onClick={[Function]}
+                  />
+                </styled.div>
+                <PoseGroup
+                  animateOnMount={true}
+                  flipMove={true}
+                >
+                  <Transition
+                    animateOnMount={true}
+                    enterPose="enter"
+                    exitPose="exit"
+                    flipMove={true}
+                    preEnterPose="exit"
                   >
-                    <styled.dialog
+                    <Component
                       height="35rem"
-                      hostRef={[Function]}
-                      innerRef={[Function]}
+                      initialPose="exit"
+                      key="DialogAnimation"
+                      pose="enter"
                       width="50rem"
                     >
-                      <dialog
-                        className="c2"
+                      <PoseElement
+                        elementType={[Function]}
+                        getInitialPoseFromParent={[Function]}
+                        getParentPoseConfig={[Function]}
                         height="35rem"
+                        initialPose="exit"
+                        onUnmount={[Function]}
+                        pose="enter"
+                        poseConfig={
+                          Object {
+                            "enter": Object {
+                              "y": 0,
+                            },
+                            "exit": Object {
+                              "y": 30,
+                            },
+                          }
+                        }
+                        registerChild={[Function]}
                         width="50rem"
                       >
-                        <Styled(ModalHeader)>
-                          <ModalHeader
-                            className="c3"
+                        <styled.dialog
+                          height="35rem"
+                          hostRef={[Function]}
+                          innerRef={[Function]}
+                          width="50rem"
+                        >
+                          <dialog
+                            className="c2"
+                            height="35rem"
+                            width="50rem"
                           >
-                            <div
-                              className="c3"
-                            >
-                              Header
-                            </div>
-                          </ModalHeader>
-                        </Styled(ModalHeader)>
-                        <Styled(ModalBody)>
-                          <ModalBody
-                            className="c4"
-                          >
-                            <div
-                              className="c4"
-                            >
-                              Body
-                            </div>
-                          </ModalBody>
-                        </Styled(ModalBody)>
-                        <Styled(ModalFooter)>
-                          <ModalFooter
-                            alignment="left"
-                            className="c5"
-                          >
-                            <div
-                              alignment="left"
-                              className="c5"
-                            >
-                              <styled.div
-                                key="0/.0"
+                            <Styled(ModalHeader)>
+                              <ModalHeader
+                                className="c3"
                               >
                                 <div
-                                  className="c6"
+                                  className="c3"
                                 >
-                                  Footer
+                                  Header
                                 </div>
-                              </styled.div>
-                            </div>
-                          </ModalFooter>
-                        </Styled(ModalFooter)>
-                      </dialog>
-                    </styled.dialog>
-                  </PoseElement>
-                </Component>
-              </PoseGroup>
-            </div>
-          </styled.div>
-        </PoseElement>
-      </Component>
+                              </ModalHeader>
+                            </Styled(ModalHeader)>
+                            <Styled(ModalBody)>
+                              <ModalBody
+                                className="c4"
+                              >
+                                <div
+                                  className="c4"
+                                >
+                                  Body
+                                </div>
+                              </ModalBody>
+                            </Styled(ModalBody)>
+                            <Styled(ModalFooter)>
+                              <ModalFooter
+                                alignment="left"
+                                className="c5"
+                              >
+                                <div
+                                  alignment="left"
+                                  className="c5"
+                                >
+                                  <styled.div
+                                    key="0/.0"
+                                  >
+                                    <div
+                                      className="c6"
+                                    >
+                                      Footer
+                                    </div>
+                                  </styled.div>
+                                </div>
+                              </ModalFooter>
+                            </Styled(ModalFooter)>
+                          </dialog>
+                        </styled.dialog>
+                      </PoseElement>
+                    </Component>
+                  </Transition>
+                </PoseGroup>
+              </div>
+            </styled.div>
+          </PoseElement>
+        </Component>
+      </Transition>
     </PoseGroup>
   </Portal>
 </Modal>
