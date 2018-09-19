@@ -980,9 +980,9 @@
     react-split-pane "^0.1.77"
     react-treebeard "^2.1.0"
 
-"@tillersystems/eslint-config@1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.6.tgz#9c048ebe626ca7ed25b5924303ec4bfac5e7b7d5"
+"@tillersystems/eslint-config@1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.7.tgz#e9b304797a9a302abe570b82e5beba62c33fcab0"
 
 "@types/invariant@^2.2.29":
   version "2.2.29"
