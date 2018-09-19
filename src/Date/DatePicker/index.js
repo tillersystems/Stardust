@@ -106,13 +106,13 @@ class DatePicker extends PureComponent {
       <div className={className} onMouseLeave={() => this.handleDateOver(null)}>
         <Header>
           <Button tiny light onClick={this.handlePrevMonthClick} disabled={!isAfterMinDate}>
-            <Icon color={Theme.palette.anthracite} name="chevron-left" />
+            <Icon color={Theme.palette.darkBlue} name="chevron-left" />
           </Button>
           <HeaderTitle>
             {currentMonth.setLocale(locale).toLocaleString({ month: 'long', year: 'numeric' })}
           </HeaderTitle>
           <Button tiny light onClick={this.handleNextMonthClick} disabled={!isBeforeMaxDate}>
-            <Icon color={Theme.palette.anthracite} name="chevron-right" />
+            <Icon color={Theme.palette.darkBlue} name="chevron-right" />
           </Button>
         </Header>
         <>

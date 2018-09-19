@@ -10,7 +10,7 @@ import { Data } from '../data';
 storiesOf('Icon', module)
   .addDecorator(withKnobs)
   .add('default', () => {
-    const colorValue = color('Color', Theme.palette.anthracite, 'Color');
+    const colorValue = color('Color', Theme.palette.darkBlue, 'Color');
     const sizeOptions = { range: true, min: 10, max: 100, step: 10 };
     const sizeValue = number('Size', 20, sizeOptions, 'Size');
     return (

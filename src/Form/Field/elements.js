@@ -60,7 +60,7 @@ export const Label = styled.label`
     },
   }) => size.medium};
 
-  color: ${({ theme: { palette } }) => palette.grey};
+  color: ${({ theme: { palette } }) => palette.darkGrey};
   text-align: left;
 
   font-weight: ${({
@@ -93,7 +93,7 @@ export const Label = styled.label`
   ${({ hasFocus }) =>
     hasFocus &&
     css`
-      color: ${({ theme: { palette } }) => palette.blue};
+      color: ${({ theme: { palette } }) => palette.primary.default};
       font-weight: ${({
         theme: {
           fonts: { weight },

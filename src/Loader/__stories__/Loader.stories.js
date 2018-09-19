@@ -30,7 +30,7 @@ storiesOf('Loader', module)
       },
       'Size',
     );
-    const ColorValue = color('Color', Theme.palette.blue, 'Color');
+    const ColorValue = color('Color', Theme.palette.primary.default, 'Color');
 
     return <Loader color={ColorValue} width={`${widthValue}rem`} height={`${heightValue}rem`} />;
   });

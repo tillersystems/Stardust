@@ -33,35 +33,35 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c13 {
@@ -93,7 +93,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c11 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c18 {
@@ -105,7 +105,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c18 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -117,15 +117,15 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 {
@@ -192,7 +192,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -209,8 +209,8 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -254,7 +254,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 .c19 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -4357,35 +4357,35 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -4417,7 +4417,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -4429,7 +4429,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -4441,15 +4441,15 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
@@ -4511,7 +4511,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -4528,8 +4528,8 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -4573,7 +4573,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -8349,35 +8349,35 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -8409,7 +8409,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -8421,7 +8421,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -8433,15 +8433,15 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c29 > .c9 {
@@ -8515,7 +8515,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -8532,8 +8532,8 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -8577,7 +8577,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -12353,35 +12353,35 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -12413,7 +12413,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -12425,7 +12425,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -12437,15 +12437,15 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 {
@@ -12497,7 +12497,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -12514,8 +12514,8 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -12559,7 +12559,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -16335,35 +16335,35 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -16395,7 +16395,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -16407,7 +16407,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -16419,15 +16419,15 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 {
@@ -16470,7 +16470,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -16487,8 +16487,8 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -16532,7 +16532,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -20308,35 +20308,35 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c15 {
@@ -20368,7 +20368,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c11 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 {
@@ -20380,7 +20380,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c19 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -20392,15 +20392,15 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c28 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c13 {
@@ -20462,7 +20462,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -20479,8 +20479,8 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -20524,7 +20524,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
 .c20 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -24627,35 +24627,35 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c19 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -24687,7 +24687,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -24699,7 +24699,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -24711,15 +24711,15 @@ exports[`<DatePicker /> should handle next month 1`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c10 {
@@ -24751,7 +24751,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -24768,8 +24768,8 @@ exports[`<DatePicker /> should handle next month 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -24813,7 +24813,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -28589,35 +28589,35 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c13 {
@@ -28649,7 +28649,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c11 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -28661,7 +28661,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -28673,15 +28673,15 @@ exports[`<DatePicker /> should handle next month 2`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 {
@@ -28732,7 +28732,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -28749,8 +28749,8 @@ exports[`<DatePicker /> should handle next month 2`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -28794,7 +28794,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -32897,35 +32897,35 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c19 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c19 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c21 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c23 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c24 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -32957,7 +32957,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c16 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -32969,7 +32969,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -32981,15 +32981,15 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c10 {
@@ -33021,7 +33021,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -33038,8 +33038,8 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -33083,7 +33083,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
@@ -36901,11 +36901,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 {
@@ -36916,11 +36916,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c11 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c11 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c20 {
@@ -36935,7 +36935,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c20 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c13 {
@@ -36948,7 +36948,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c13 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c14 {
@@ -36959,7 +36959,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c14 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c15 {
@@ -36972,7 +36972,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c15 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c22 {
@@ -37004,7 +37004,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c25 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c26 {
@@ -37016,11 +37016,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c26 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c27 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 {
@@ -37033,11 +37033,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c17 > .c9 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c10 {
@@ -37078,7 +37078,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 .c6 {
@@ -37095,8 +37095,8 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  border-bottom: 1px solid hsl(218,18%,91%);
-  color: hsl(206,16%,60%);
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
 }
 
 .c1 {
@@ -37140,7 +37140,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
 .c18 {
   height: 100%;
   width: 0.1rem;
-  background: hsl(218,18%,91%);
+  background: hsl(206,23%,69%);
 }
 
 .c0 {
