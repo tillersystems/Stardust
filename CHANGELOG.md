@@ -1,3 +1,15 @@
+<a name="1.2.0"></a>
+
+# [1.2.0](https://github.com/tillersystems/Stardust/compare/v1.1.2...v1.2.0) (2018-09-19)
+
+### Bug Fixes
+
+- **KpiBlock:** fix when variation props receive 0 ([6988049](https://github.com/tillersystems/Stardust/commit/6988049))
+
+### Features
+
+- **Loader:** create Loader component ([18f48bb](https://github.com/tillersystems/Stardust/commit/18f48bb))
+
 <a name="1.1.2"></a>
 
 ## [1.1.2](https://github.com/tillersystems/Stardust/compare/v1.0.2...v1.1.2) (2018-09-18)
