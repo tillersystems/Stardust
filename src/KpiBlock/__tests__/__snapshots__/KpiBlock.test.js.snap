@@ -71,7 +71,7 @@ exports[`<KpiBlock /> should render with a custom a value 1`] = `
         <div
           className="c1"
         >
-          -100
+          -100.00
            % 
           <Styled(Icon)
             color="hsl(6, 79%, 65%)"
@@ -212,7 +212,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
         <div
           className="c1"
         >
-          -100
+          -100.00
            % 
           <Styled(Icon)
             color="hsl(6, 79%, 65%)"
@@ -356,7 +356,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
           className="c1"
         >
           +
-          100
+          100.00
            % 
           <Styled(Icon)
             color="hsl(89, 53%, 52%)"

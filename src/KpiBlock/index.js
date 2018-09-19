@@ -24,13 +24,13 @@ const KpiBlock = ({ className, title, value, variation }) => (
     {variation !== false &&
       variation < 0 && (
         <Variation negative>
-          {variation} % <Icon name="caret-down" color={Theme.palette.red} />
+          {variation.toFixed(2)} % <Icon name="caret-down" color={Theme.palette.red} />
         </Variation>
       )}
     {variation !== false &&
       variation >= 0 && (
         <Variation positive>
-          +{variation} % <Icon name="caret-up" color={Theme.palette.green} />
+          +{variation.toFixed(2)} % <Icon name="caret-up" color={Theme.palette.green} />
         </Variation>
       )}
     {typeof value === 'string' && <Value>{value}</Value>}
