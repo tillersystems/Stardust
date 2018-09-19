@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import { Checkbox, Toggle } from './elements';
 
 /**
- * Switch
+ * Toggle Button
  *
  * This component is in charge of displaying
- * a switch.
+ * a toggle button.
  *
  * @param {string} className // Class needed by styled component.
  * @param {bool} checked // Whether the button is checked or not.
@@ -88,7 +88,7 @@ export default styled(ToggleButton)`
 
   position: relative;
 
-  height: 1.8rem;
+  height: 2rem;
 
   vertical-align: middle;
 

@@ -10,10 +10,11 @@ exports[`<ToggleButton /> should render without a problem 1`] = `
 .c2 {
   display: inline-block;
   position: relative;
-  width: 3.2rem;
-  height: 1.8rem;
-  border-radius: 2.1rem;
-  background: hsl(218,18%,91%);
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(216,45%,98%);
+  border: 1px solid hsl(216,45%,98%);
   cursor: pointer;
   pointer-events: none;
 }
@@ -29,13 +30,14 @@ exports[`<ToggleButton /> should render without a problem 1`] = `
   width: 1.6rem;
   border-radius: 1.6rem;
   background: hsl(0,100%,100%);
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1),0 0 1px 0 rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-  -webkit-transition: -webkit-transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transition: transform 250ms ease,width 250ms,left 250ms;
-  transition: transform 250ms ease,width 250ms,left 250ms;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  will-change: transform;
 }
 
 .c2:active:before {
@@ -46,7 +48,7 @@ exports[`<ToggleButton /> should render without a problem 1`] = `
 .c0 {
   display: inline-block;
   position: relative;
-  height: 1.8rem;
+  height: 2rem;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -99,10 +101,11 @@ exports[`<ToggleButton /> should render without a problem when checked and disab
 .c2 {
   display: inline-block;
   position: relative;
-  width: 3.2rem;
-  height: 1.8rem;
-  border-radius: 2.1rem;
-  background: hsl(200,74%,46%);
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(200,74%,46%)linear-gradient(0deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%);
+  border: 1px solid hsl(200,74%,46%);
   cursor: pointer;
   pointer-events: none;
   opacity: 0.4;
@@ -119,19 +122,20 @@ exports[`<ToggleButton /> should render without a problem when checked and disab
   width: 1.6rem;
   border-radius: 1.6rem;
   background: hsl(0,100%,100%);
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1),0 0 1px 0 rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-  -webkit-transition: -webkit-transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transition: transform 250ms ease,width 250ms,left 250ms;
-  transition: transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transform: translateX(1.3rem);
-  -ms-transform: translateX(1.3rem);
-  transform: translateX(1.3rem);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
+  -webkit-transform: translateX(1.7rem);
+  -ms-transform: translateX(1.7rem);
+  transform: translateX(1.7rem);
+  will-change: transform;
 }
 
 .c0 {
   display: inline-block;
   position: relative;
-  height: 1.8rem;
+  height: 2rem;
   vertical-align: middle;
   cursor: not-allowed;
 }
@@ -187,10 +191,11 @@ exports[`<ToggleButton /> should render without a problem when checked and not d
 .c2 {
   display: inline-block;
   position: relative;
-  width: 3.2rem;
-  height: 1.8rem;
-  border-radius: 2.1rem;
-  background: hsl(200,74%,46%);
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(200,74%,46%)linear-gradient(0deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%);
+  border: 1px solid hsl(200,74%,46%);
   cursor: pointer;
   pointer-events: none;
 }
@@ -206,13 +211,14 @@ exports[`<ToggleButton /> should render without a problem when checked and not d
   width: 1.6rem;
   border-radius: 1.6rem;
   background: hsl(0,100%,100%);
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1),0 0 1px 0 rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-  -webkit-transition: -webkit-transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transition: transform 250ms ease,width 250ms,left 250ms;
-  transition: transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transform: translateX(1.3rem);
-  -ms-transform: translateX(1.3rem);
-  transform: translateX(1.3rem);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
+  -webkit-transform: translateX(1.7rem);
+  -ms-transform: translateX(1.7rem);
+  transform: translateX(1.7rem);
+  will-change: transform;
 }
 
 .c2:active:before {
@@ -223,7 +229,7 @@ exports[`<ToggleButton /> should render without a problem when checked and not d
 .c0 {
   display: inline-block;
   position: relative;
-  height: 1.8rem;
+  height: 2rem;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -279,10 +285,11 @@ exports[`<ToggleButton /> should render without a problem when unchecked and dis
 .c2 {
   display: inline-block;
   position: relative;
-  width: 3.2rem;
-  height: 1.8rem;
-  border-radius: 2.1rem;
-  background: hsl(218,18%,91%);
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(216,45%,98%);
+  border: 1px solid hsl(216,45%,98%);
   cursor: pointer;
   pointer-events: none;
   opacity: 0.4;
@@ -299,19 +306,20 @@ exports[`<ToggleButton /> should render without a problem when unchecked and dis
   width: 1.6rem;
   border-radius: 1.6rem;
   background: hsl(0,100%,100%);
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1),0 0 1px 0 rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-  -webkit-transition: -webkit-transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transition: transform 250ms ease,width 250ms,left 250ms;
-  transition: transform 250ms ease,width 250ms,left 250ms;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  will-change: transform;
 }
 
 .c0 {
   display: inline-block;
   position: relative;
-  height: 1.8rem;
+  height: 2rem;
   vertical-align: middle;
   cursor: not-allowed;
 }
@@ -367,10 +375,11 @@ exports[`<ToggleButton /> should render without a problem when unchecked and not
 .c2 {
   display: inline-block;
   position: relative;
-  width: 3.2rem;
-  height: 1.8rem;
-  border-radius: 2.1rem;
-  background: hsl(218,18%,91%);
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(216,45%,98%);
+  border: 1px solid hsl(216,45%,98%);
   cursor: pointer;
   pointer-events: none;
 }
@@ -386,13 +395,14 @@ exports[`<ToggleButton /> should render without a problem when unchecked and not
   width: 1.6rem;
   border-radius: 1.6rem;
   background: hsl(0,100%,100%);
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1),0 0 1px 0 rgba(0,0,0,0.1), 0 0 1px 0 rgba(0,0,0,0.1);
-  -webkit-transition: -webkit-transform 250ms ease,width 250ms,left 250ms;
-  -webkit-transition: transform 250ms ease,width 250ms,left 250ms;
-  transition: transform 250ms ease,width 250ms,left 250ms;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  will-change: transform;
 }
 
 .c2:active:before {
@@ -403,7 +413,7 @@ exports[`<ToggleButton /> should render without a problem when unchecked and not
 .c0 {
   display: inline-block;
   position: relative;
-  height: 1.8rem;
+  height: 2rem;
   vertical-align: middle;
   cursor: pointer;
 }
