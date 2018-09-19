@@ -8,12 +8,12 @@ import { Image } from './elements';
 
 // Define some colors
 const defaultColors = [
-  Theme.palette.emerald,
-  Theme.palette.river,
-  Theme.palette.wisteria,
-  Theme.palette.carrot,
-  Theme.palette.alizarin,
-  Theme.palette.turquoise,
+  Theme.palette.avatar.emerald,
+  Theme.palette.avatar.river,
+  Theme.palette.avatar.wisteria,
+  Theme.palette.avatar.carrot,
+  Theme.palette.avatar.alizarin,
+  Theme.palette.avatar.turquoise,
 ];
 
 /**

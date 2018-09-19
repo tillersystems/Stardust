@@ -8,7 +8,7 @@ export const Header = styled.div`
 
   margin-bottom: ${({ theme: { dimensions } }) => dimensions.medium};
 
-  color: ${({ theme: { palette } }) => palette.anthracite};
+  color: ${({ theme: { palette } }) => palette.darkBlue};
   font-size: ${({
     theme: {
       fonts: { size },

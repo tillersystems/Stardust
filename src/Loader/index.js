@@ -40,7 +40,7 @@ Loader.propTypes = {
  */
 Loader.defaultProps = {
   className: '',
-  color: Theme.palette.blue,
+  color: Theme.palette.primary.default,
   height: '2rem',
   width: '2rem',
 };

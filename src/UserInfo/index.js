@@ -53,8 +53,8 @@ export default styled(UserInfo)`
   padding: ${({ theme: { dimensions } }) => dimensions.medium};
 
   background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid ${({ theme: { palette } }) => palette.clay};
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.clay};
+  border-top: 1px solid ${({ theme: { palette } }) => palette.darkBlue};
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.darkBlue};
 
   color: ${({ theme: { palette } }) => palette.white};
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};

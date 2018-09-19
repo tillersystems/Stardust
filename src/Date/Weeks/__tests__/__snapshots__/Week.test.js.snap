@@ -11,11 +11,11 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c1 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c1 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c4 {
@@ -26,11 +26,11 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c4 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c4 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c6 {
@@ -45,7 +45,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c6 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c8 {
@@ -58,7 +58,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c8 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c9 {
@@ -69,7 +69,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c9 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c10 {
@@ -82,7 +82,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c10 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c12 {
@@ -114,7 +114,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c15 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c16 {
@@ -126,7 +126,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
 }
 
 .c16 > .c2 {
-  color: hsl(218,18%,91%);
+  color: hsl(207,22%,90%);
 }
 
 .c3 {
@@ -167,7 +167,7 @@ exports[`<Weeks /> should render withouth a problem 1`] = `
   -ms-flex-align: stretch;
   align-items: stretch;
   text-align: center;
-  color: hsl(206,16%,60%);
+  color: hsl(206,23%,69%);
 }
 
 <Styled(Weeks)

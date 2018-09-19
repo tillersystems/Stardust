@@ -53,7 +53,7 @@ export default styled(WeekdayNames)`
 
   text-align: center;
 
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.gray};
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.mediumGrey};
 
-  color: ${({ theme: { palette } }) => palette.grey};
+  color: ${({ theme: { palette } }) => palette.mediumGrey};
 `;

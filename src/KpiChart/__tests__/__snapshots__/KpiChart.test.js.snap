@@ -93,7 +93,7 @@ exports[`<KpiChart /> should render with render props 1`] = `
   padding: 2.4rem 2rem;
   height: 100%;
   border-radius: 0.4rem;
-  border: 1px solid hsl(218,18%,91%);
+  border: 1px solid hsl(207,22%,90%);
   background: hsl(0,100%,100%);
   font-size: 1.2rem;
 }
@@ -286,7 +286,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   padding: 2.4rem 2rem;
   height: 100%;
   border-radius: 0.4rem;
-  border: 1px solid hsl(218,18%,91%);
+  border: 1px solid hsl(207,22%,90%);
   background: hsl(0,100%,100%);
   font-size: 1.2rem;
 }

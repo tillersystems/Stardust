@@ -11,7 +11,7 @@ storiesOf('UserInfo', module)
     const nameValue = text('Name', 'Tony Starck', 'Name');
     const pictureValue = boolean('HasPiture', true, 'Picture');
     return (
-      <div style={{ width: '18rem', background: Theme.palette.anthracite }}>
+      <div style={{ width: '18rem', background: Theme.palette.darkBlue }}>
         <UserInfo
           name={nameValue}
           pictureSrc={

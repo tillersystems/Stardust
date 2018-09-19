@@ -11,7 +11,7 @@ ${({ shadowed }) =>
   shadowed &&
   css`
     & > ${Content} {
-      color: ${({ theme: { palette } }) => palette.gray};
+      color: ${({ theme: { palette } }) => palette.lightGrey};
     }
   `};
 
@@ -21,7 +21,7 @@ ${({ disabled }) =>
     cursor: not-allowed;
 
     & > ${Content} {
-      color: ${({ theme: { palette } }) => palette.gray};
+      color: ${({ theme: { palette } }) => palette.lightGrey};
     }
   `};
 
@@ -30,14 +30,14 @@ ${({ disabled }) =>
     css`
       & > ${Content} {
         color: ${({ theme: { palette } }) => palette.white};
-        background: ${({ theme: { palette } }) => palette.blue};
+        background: ${({ theme: { palette } }) => palette.primary.default};
       }
     `};
 
   ${({ highlighted }) =>
     highlighted &&
     css`
-      background: ${({ theme: { palette } }) => lighten(0.4, palette.blue)};
+      background: ${({ theme: { palette } }) => lighten(0.4, palette.primary.default)};
     `}
 
   ${({ starting }) =>

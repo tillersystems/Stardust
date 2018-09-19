@@ -6,5 +6,5 @@ export const Separator = styled.div`
   height: 100%;
   width: 0.1rem;
 
-  background: ${({ theme: { palette } }) => palette.gray};
+  background: ${({ theme: { palette } }) => palette.mediumGrey};
 `;
