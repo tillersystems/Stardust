@@ -11,32 +11,32 @@ describe('<CheckBox />', () => {
   });
 
   it('should render without a problem when checked and enabled', () => {
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked />);
+    const render = mountWithTheme(<CheckBox id="test" checked />);
 
     expect(render).toMatchSnapshot();
   });
 
   it('should render without a problem when unchecked and enabled', () => {
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked={false} />);
+    const render = mountWithTheme(<CheckBox id="test" checked={false} />);
 
     expect(render).toMatchSnapshot();
   });
 
   it('should render without a problem when checked and disabled', () => {
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked disabled />);
+    const render = mountWithTheme(<CheckBox id="test" checked disabled />);
 
     expect(render).toMatchSnapshot();
   });
 
   it('should render without a problem when unchecked and disabled', () => {
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked={false} disabled />);
+    const render = mountWithTheme(<CheckBox id="test" checked={false} disabled />);
 
     expect(render).toMatchSnapshot();
   });
 
   it('should call change handler when enabled', () => {
     const spy = jest.fn();
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked onChange={spy} />);
+    const render = mountWithTheme(<CheckBox id="test" checked onChange={spy} />);
 
     render.simulate('click');
 
@@ -45,7 +45,7 @@ describe('<CheckBox />', () => {
 
   it('should not call change handler when disabled', () => {
     const spy = jest.fn();
-    const render = mountWithTheme(<CheckBox id="test" defaultChecked disabled onChange={spy} />);
+    const render = mountWithTheme(<CheckBox id="test" checked disabled onChange={spy} />);
 
     render.simulate('click');
 

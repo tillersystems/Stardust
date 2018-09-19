@@ -6,7 +6,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { CheckBox } from '../..';
 
 const store = new Store({
-  defaultChecked: false,
+  checked: false,
 });
 
 storiesOf('CheckBox', module)
@@ -29,7 +29,7 @@ storiesOf('CheckBox', module)
     const enabledValue = boolean('Enabled', true, 'state');
 
     return (
-      <CheckBox defaultChecked={checkedValue} disabled={!enabledValue} onChange={() => {}}>
+      <CheckBox checked={checkedValue} disabled={!enabledValue} onChange={() => {}}>
         What?
       </CheckBox>
     );

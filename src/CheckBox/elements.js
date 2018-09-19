@@ -52,8 +52,8 @@ export const Container = styled.div`
       opacity: 0.4;
     `};
 
-  ${({ defaultChecked }) =>
-    defaultChecked &&
+  ${({ checked }) =>
+    checked &&
     css`
       border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
       background: ${({ theme: { palette } }) => palette.primary.default}
@@ -101,8 +101,8 @@ export const Label = styled.label`
       cursor: not-allowed;
     `};
 
-  ${({ defaultChecked }) =>
-    defaultChecked &&
+  ${({ checked }) =>
+    checked &&
     css`
       color: ${({ theme: { palette } }) => palette.darkBlue};
     `};
