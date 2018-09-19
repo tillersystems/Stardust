@@ -11,6 +11,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.6rem 0;
 }
 
 .c1 {
@@ -26,17 +27,21 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 1px solid hsl(200,74%,46%);
-  border-radius: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
   background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
 }
 
 .c2 {
   display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: 0.7rem;
-  color: hsl(213,17%,20%);
+  color: hsl(207,13%,45%);
 }
 
 <CheckBox
@@ -44,12 +49,16 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   disabled={false}
   id="test"
   onChange={null}
+  textAnnexe={null}
 >
   <styled.div
+    disabled={false}
     onClick={[Function]}
+    textAnnexe={null}
   >
     <div
       className="c0"
+      disabled={false}
       onClick={[Function]}
     >
       <styled.div
@@ -63,7 +72,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
           disabled={false}
         >
           <input
-            checked={false}
+            defaultChecked={false}
             disabled={false}
             id="test"
             onBlur={[Function]}
@@ -74,11 +83,14 @@ exports[`<CheckBox /> should render without a problem 1`] = `
         </div>
       </styled.div>
       <styled.label
+        checked={false}
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        textAnnexe={null}
       >
         <label
+          checked={false}
           className="c2"
           disabled={false}
           htmlFor="test"
@@ -109,6 +121,8 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.6rem 0;
+  cursor: not-allowed;
 }
 
 .c1 {
@@ -124,19 +138,30 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 1px solid hsl(200,74%,46%);
-  border-radius: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
   background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
   opacity: 0.4;
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
 }
 
 .c3 {
   display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: 0.7rem;
-  color: hsl(213,17%,20%);
+  color: hsl(207,13%,45%);
   opacity: 0.4;
+  cursor: not-allowed;
+  color: hsl(213,17%,20%);
 }
 
 <CheckBox
@@ -144,12 +169,16 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
   disabled={true}
   id="test"
   onChange={null}
+  textAnnexe={null}
 >
   <styled.div
+    disabled={true}
     onClick={[Function]}
+    textAnnexe={null}
   >
     <div
       className="c0"
+      disabled={true}
       onClick={[Function]}
     >
       <styled.div
@@ -163,14 +192,14 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
           disabled={true}
         >
           <Styled(Icon)
-            color="hsl(200, 74%, 46%)"
+            color="hsl(0, 100%, 100%)"
             height="1rem"
             name="check-mark"
             width="1rem"
           >
             <Icon
               className=""
-              color="hsl(200, 74%, 46%)"
+              color="hsl(0, 100%, 100%)"
               height="1rem"
               name="check-mark"
               spin={false}
@@ -199,7 +228,7 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
                   >
                     <path
                       d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
-                      fill="hsl(200, 74%, 46%)"
+                      fill="hsl(0, 100%, 100%)"
                       fillRule="evenodd"
                     />
                   </svg>
@@ -208,7 +237,7 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
             </Icon>
           </Styled(Icon)>
           <input
-            checked={true}
+            defaultChecked={true}
             disabled={true}
             id="test"
             onBlur={[Function]}
@@ -219,11 +248,14 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
         </div>
       </styled.div>
       <styled.label
+        checked={true}
         disabled={true}
         hasFocus={false}
         htmlFor="test"
+        textAnnexe={null}
       >
         <label
+          checked={true}
           className="c3"
           disabled={true}
           htmlFor="test"
@@ -254,6 +286,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.6rem 0;
 }
 
 .c1 {
@@ -269,16 +302,26 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 1px solid hsl(200,74%,46%);
-  border-radius: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
   background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
 }
 
 .c3 {
   display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
   color: hsl(213,17%,20%);
 }
 
@@ -287,12 +330,16 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
   disabled={false}
   id="test"
   onChange={null}
+  textAnnexe={null}
 >
   <styled.div
+    disabled={false}
     onClick={[Function]}
+    textAnnexe={null}
   >
     <div
       className="c0"
+      disabled={false}
       onClick={[Function]}
     >
       <styled.div
@@ -306,14 +353,14 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
           disabled={false}
         >
           <Styled(Icon)
-            color="hsl(200, 74%, 46%)"
+            color="hsl(0, 100%, 100%)"
             height="1rem"
             name="check-mark"
             width="1rem"
           >
             <Icon
               className=""
-              color="hsl(200, 74%, 46%)"
+              color="hsl(0, 100%, 100%)"
               height="1rem"
               name="check-mark"
               spin={false}
@@ -342,7 +389,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
                   >
                     <path
                       d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
-                      fill="hsl(200, 74%, 46%)"
+                      fill="hsl(0, 100%, 100%)"
                       fillRule="evenodd"
                     />
                   </svg>
@@ -351,7 +398,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
             </Icon>
           </Styled(Icon)>
           <input
-            checked={true}
+            defaultChecked={true}
             disabled={false}
             id="test"
             onBlur={[Function]}
@@ -362,11 +409,14 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
         </div>
       </styled.div>
       <styled.label
+        checked={true}
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        textAnnexe={null}
       >
         <label
+          checked={true}
           className="c3"
           disabled={false}
           htmlFor="test"
@@ -388,6 +438,8 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.6rem 0;
+  cursor: not-allowed;
 }
 
 .c1 {
@@ -403,19 +455,24 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 1px solid hsl(200,74%,46%);
-  border-radius: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
   background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
   opacity: 0.4;
 }
 
 .c2 {
   display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: 0.7rem;
-  color: hsl(213,17%,20%);
+  color: hsl(207,13%,45%);
   opacity: 0.4;
+  cursor: not-allowed;
 }
 
 <CheckBox
@@ -423,12 +480,16 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
   disabled={true}
   id="test"
   onChange={null}
+  textAnnexe={null}
 >
   <styled.div
+    disabled={true}
     onClick={[Function]}
+    textAnnexe={null}
   >
     <div
       className="c0"
+      disabled={true}
       onClick={[Function]}
     >
       <styled.div
@@ -442,7 +503,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
           disabled={true}
         >
           <input
-            checked={false}
+            defaultChecked={false}
             disabled={true}
             id="test"
             onBlur={[Function]}
@@ -453,11 +514,14 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
         </div>
       </styled.div>
       <styled.label
+        checked={false}
         disabled={true}
         hasFocus={false}
         htmlFor="test"
+        textAnnexe={null}
       >
         <label
+          checked={false}
           className="c2"
           disabled={true}
           htmlFor="test"
@@ -479,6 +543,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.6rem 0;
 }
 
 .c1 {
@@ -494,17 +559,21 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 1px solid hsl(200,74%,46%);
-  border-radius: 0.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
   background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
 }
 
 .c2 {
   display: block;
+  cursor: pointer;
+  position: relative;
   margin-left: 0.7rem;
-  color: hsl(213,17%,20%);
+  color: hsl(207,13%,45%);
 }
 
 <CheckBox
@@ -512,12 +581,16 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
   disabled={false}
   id="test"
   onChange={null}
+  textAnnexe={null}
 >
   <styled.div
+    disabled={false}
     onClick={[Function]}
+    textAnnexe={null}
   >
     <div
       className="c0"
+      disabled={false}
       onClick={[Function]}
     >
       <styled.div
@@ -531,7 +604,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
           disabled={false}
         >
           <input
-            checked={false}
+            defaultChecked={false}
             disabled={false}
             id="test"
             onBlur={[Function]}
@@ -542,11 +615,14 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
         </div>
       </styled.div>
       <styled.label
+        checked={false}
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        textAnnexe={null}
       >
         <label
+          checked={false}
           className="c2"
           disabled={false}
           htmlFor="test"

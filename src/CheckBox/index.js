@@ -16,6 +16,7 @@ class CheckBox extends PureComponent {
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     onChange: PropTypes.func,
+    textAnnexe: PropTypes.string,
   };
 
   /** Default props. */
@@ -24,6 +25,7 @@ class CheckBox extends PureComponent {
     checked: false,
     disabled: false,
     onChange: null,
+    textAnnexe: null,
   };
 
   /** Internal state. */
@@ -92,26 +94,32 @@ class CheckBox extends PureComponent {
    */
   render() {
     const { hasFocus, checked } = this.state;
-    const { children, id, disabled } = this.props;
+    const { children, id, disabled, textAnnexe } = this.props;
 
     return (
-      <Wrapper onClick={this.handleClick}>
+      <Wrapper onClick={this.handleClick} textAnnexe={textAnnexe} disabled={disabled}>
         <Container hasFocus={hasFocus} checked={checked} disabled={disabled}>
           {checked && (
-            <Icon name="check-mark" color={Theme.palette.blue} width="1rem" height="1rem" />
+            <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
           )}
           <input
             type="checkbox"
             tabIndex="0"
             id={id}
-            checked={checked}
+            defaultChecked={checked}
             onFocus={this.handleFocus}
             onBlur={this.handleBlur}
             disabled={disabled}
           />
         </Container>
 
-        <Label hasFocus={hasFocus} disabled={disabled} htmlFor={id}>
+        <Label
+          hasFocus={hasFocus}
+          disabled={disabled}
+          htmlFor={id}
+          textAnnexe={textAnnexe}
+          checked={checked}
+        >
           {children}
         </Label>
       </Wrapper>
