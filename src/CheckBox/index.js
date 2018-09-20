@@ -87,6 +87,10 @@ class CheckBox extends PureComponent {
     }
   };
 
+  preventDefaultAction = e => {
+    e.preventDefault();
+  };
+
   /**
    * Renders the component.
    *
@@ -119,6 +123,7 @@ class CheckBox extends PureComponent {
           htmlFor={id}
           textAnnexe={textAnnexe}
           checked={checked}
+          onClick={this.preventDefaultAction}
         >
           {children}
         </Label>

@@ -82,18 +82,6 @@ export const Label = styled.label`
   margin-left: ${({ theme: { dimensions } }) => dimensions.small};
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
-  ${({ disabled, hasFocus }) =>
-    !disabled &&
-    hasFocus &&
-    css`
-      color: ${({ theme: { palette } }) => palette.primary.default};
-      font-weight: ${({
-        theme: {
-          fonts: { weight },
-        },
-      }) => weight.thick};
-    `};
-
   ${({ disabled }) =>
     disabled &&
     css`

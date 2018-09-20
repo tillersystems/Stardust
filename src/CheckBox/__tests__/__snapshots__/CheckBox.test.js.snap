@@ -87,6 +87,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        onClick={[Function]}
         textAnnexe={null}
       >
         <label
@@ -94,6 +95,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
           className="c2"
           disabled={false}
           htmlFor="test"
+          onClick={[Function]}
         />
       </styled.label>
     </div>
@@ -252,6 +254,7 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
         disabled={true}
         hasFocus={false}
         htmlFor="test"
+        onClick={[Function]}
         textAnnexe={null}
       >
         <label
@@ -259,6 +262,7 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
           className="c3"
           disabled={true}
           htmlFor="test"
+          onClick={[Function]}
         />
       </styled.label>
     </div>
@@ -413,6 +417,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        onClick={[Function]}
         textAnnexe={null}
       >
         <label
@@ -420,6 +425,7 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
           className="c3"
           disabled={false}
           htmlFor="test"
+          onClick={[Function]}
         />
       </styled.label>
     </div>
@@ -518,6 +524,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
         disabled={true}
         hasFocus={false}
         htmlFor="test"
+        onClick={[Function]}
         textAnnexe={null}
       >
         <label
@@ -525,6 +532,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
           className="c2"
           disabled={true}
           htmlFor="test"
+          onClick={[Function]}
         />
       </styled.label>
     </div>
@@ -619,6 +627,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
         disabled={false}
         hasFocus={false}
         htmlFor="test"
+        onClick={[Function]}
         textAnnexe={null}
       >
         <label
@@ -626,6 +635,7 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
           className="c2"
           disabled={false}
           htmlFor="test"
+          onClick={[Function]}
         />
       </styled.label>
     </div>
