@@ -24,13 +24,13 @@ const KpiBlock = ({ className, title, value, variation }) => (
     {variation !== false &&
       variation < 0 && (
         <Variation negative>
-          {variation.toFixed(2)} % <Icon name="caret-down" color={Theme.palette.red} />
+          {variation.toFixed(2)} % <Icon name="caret-down" color={Theme.palette.failure.default} />
         </Variation>
       )}
     {variation !== false &&
       variation >= 0 && (
         <Variation positive>
-          +{variation.toFixed(2)} % <Icon name="caret-up" color={Theme.palette.green} />
+          +{variation.toFixed(2)} % <Icon name="caret-up" color={Theme.palette.success.default} />
         </Variation>
       )}
     {typeof value === 'string' && <Value>{value}</Value>}
@@ -71,7 +71,7 @@ export default styled(KpiBlock)`
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  border: 1px solid ${({ theme: { palette } }) => palette.gray};
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
 
   background: ${({ theme: { palette } }) => palette.white};
 `;

@@ -51,7 +51,7 @@ class KpiChart extends PureComponent {
         <Header>
           <Title>{title}</Title>
           {/* <Button small ghost onClick={() => this.handleClick}>
-            <Icon name="cog" color={Theme.palette.anthracite} width="1.6rem" height="1.6rem" />
+            <Icon name="cog" color={Theme.palette.darkBlue} width="1.6rem" height="1.6rem" />
           </Button> */}
         </Header>
         <Body>{render()}</Body>
@@ -75,7 +75,7 @@ export default styled(KpiChart)`
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  border: 1px solid ${({ theme: { palette } }) => palette.gray};
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
 
   background: ${({ theme: { palette } }) => palette.white};
 

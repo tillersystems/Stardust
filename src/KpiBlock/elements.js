@@ -4,13 +4,13 @@ export const Value = styled.div`
   font-size: ${({ theme: { fonts } }) => fonts.size.big};
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
 
-  color: ${({ theme: { palette } }) => palette.black};
+  color: ${({ theme: { palette } }) => palette.darkBlue};
 `;
 
 export const Title = styled.div`
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
 
-  color: ${({ theme: { palette } }) => palette.grey};
+  color: ${({ theme: { palette } }) => palette.mediumGrey};
 `;
 
 export const Variation = styled.div`
@@ -27,13 +27,13 @@ export const Variation = styled.div`
   ${({ negative }) =>
     negative &&
     css`
-      color: ${({ theme: { palette } }) => palette.red};
+      color: ${({ theme: { palette } }) => palette.failure.default};
     `};
 
   /* Positive */
   ${({ positive }) =>
     positive &&
     css`
-      color: ${({ theme: { palette } }) => palette.green};
+      color: ${({ theme: { palette } }) => palette.success.default};
     `};
 `;

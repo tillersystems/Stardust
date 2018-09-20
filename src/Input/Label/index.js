@@ -13,7 +13,7 @@ import Theme from '../../Theme';
 const Label = ({ className, label }) => (
   <div className={className}>
     {label.icon && (
-      <Icon name={label.icon} color={Theme.palette.grey} width="1.6rem" height="1.6rem" />
+      <Icon name={label.icon} color={Theme.palette.mediumGrey} width="1.6rem" height="1.6rem" />
     )}
     {!label.icon && label.text && <span>{label.text}</span>}
   </div>
@@ -44,18 +44,18 @@ export default styled(Label)`
 
   padding: 1.1rem;
 
-  color: ${({ theme: { palette } }) => palette.grey};
-  background: ${({ theme: { palette } }) => palette.bodyBackground};
+  color: ${({ theme: { palette } }) => palette.darkGrey};
+  background: ${({ theme: { palette } }) => palette.mysticGrey};
 
   ${({ position }) =>
     position === 'left' &&
     css`
-      border-right: 1px solid ${({ theme: { palette } }) => palette.gray};
+      border-right: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
     `};
 
   ${({ position }) =>
     position === 'right' &&
     css`
-      border-left: 1px solid ${({ theme: { palette } }) => palette.gray};
+      border-left: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
     `};
 `;

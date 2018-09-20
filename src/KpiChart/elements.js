@@ -12,7 +12,7 @@ export const Title = styled.div`
 
   padding-bottom: 0.5rem;
 
-  border-bottom: 1px dotted ${({ theme: { palette } }) => palette.anthracite};
+  border-bottom: 1px dotted ${({ theme: { palette } }) => palette.darkBlue};
 `;
 
 export const Body = styled.div`
@@ -25,6 +25,6 @@ export const Footer = styled.div`
   left: 1rem;
 
   button {
-    color: ${({ theme: { palette } }) => palette.primary.back};
+    color: ${({ theme: { palette } }) => palette.primary.default};
   }
 `;

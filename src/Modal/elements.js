@@ -41,7 +41,7 @@ export const Dialog = styled.dialog`
   margin: 0 auto;
   padding: 0 ${({ theme: { dimensions } }) => dimensions.medium};
 
-  color: ${({ theme: { palette } }) => palette.black};
+  color: ${({ theme: { palette } }) => palette.darkBlue};
   font-size: ${({
     theme: {
       fonts: { size },

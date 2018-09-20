@@ -112,11 +112,11 @@ export const Container = styled.button`
     ${({ ghost }) =>
       ghost &&
       css`
-        color: ${({ theme: { palette } }) => palette.anthracite};
+        color: ${({ theme: { palette } }) => palette.darkBlue};
         background: none;
         border: none;
         svg > path {
-          fill: ${({ theme: { palette } }) => palette.anthracite};
+          fill: ${({ theme: { palette } }) => palette.darkBlue};
         }
       `}
 
@@ -125,7 +125,7 @@ export const Container = styled.button`
       primary &&
       css`
         color: ${({ theme: { palette } }) => palette.white};
-        background: ${({ theme: { palette } }) => palette.primary.back}
+        background: ${({ theme: { palette } }) => palette.primary.default}
           linear-gradient(
             0deg,
             ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
@@ -140,7 +140,7 @@ export const Container = styled.button`
       success &&
       css`
         color: ${({ theme: { palette } }) => palette.white};
-        background: ${({ theme: { palette } }) => palette.success.back}
+        background: ${({ theme: { palette } }) => palette.success.default}
           linear-gradient(
             0deg,
             ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
@@ -155,7 +155,7 @@ export const Container = styled.button`
       failure &&
       css`
         color: ${({ theme: { palette } }) => palette.white};
-        background: ${({ theme: { palette } }) => palette.failure.back}
+        background: ${({ theme: { palette } }) => palette.failure.default}
           linear-gradient(
             0deg,
             ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
@@ -205,21 +205,21 @@ export const Container = styled.button`
           ${({ primary }) =>
             primary &&
             css`
-              background: ${({ theme: { palette } }) => palette.primary.back};
+              background: ${({ theme: { palette } }) => palette.primary.default};
               box-shadow: none;
             `}
             
           ${({ success }) =>
             success &&
             css`
-              background: ${({ theme: { palette } }) => palette.success.back};
+              background: ${({ theme: { palette } }) => palette.success.default};
               box-shadow: none;
             `}
             
           ${({ failure }) =>
             failure &&
             css`
-              background: ${({ theme: { palette } }) => palette.failure.back};
+              background: ${({ theme: { palette } }) => palette.failure.default};
               box-shadow: none;
             `}
 

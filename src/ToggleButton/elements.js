@@ -20,11 +20,15 @@ const Toggle = styled.span`
 
   background: ${({ checked, theme: { palette } }) =>
     checked
-      ? palette.blue + 'linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%)'
-      : palette.mysticGrey};
+      ? `${palette.primary.default} linear-gradient(
+          0deg,
+          ${palette.whiteOpacity(0)} 0%,
+          ${palette.whiteOpacity(0.1)} 100%
+        )`
+      : palette.lightGrey};
 
   border: 1px solid
-    ${({ checked, theme: { palette } }) => (checked ? palette.blue : palette.mysticGrey)};
+    ${({ checked, theme: { palette } }) => (checked ? palette.primary.default : palette.lightGrey)};
 
   cursor: pointer;
   pointer-events: none;

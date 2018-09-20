@@ -10,44 +10,44 @@ export const Container = styled.div`
   overflow: hidden;
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-  border: 1px solid ${({ theme: { palette } }) => palette.gray};
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   background-color: ${({ theme: { palette } }) => palette.white};
 
   ${({ error }) =>
     error &&
     css`
-      border-color: ${({ theme: { palette } }) => palette.red};
+      border-color: ${({ theme: { palette } }) => palette.failure.default};
     `};
 
   ${({ warning }) =>
     warning &&
     css`
-      border-color: ${({ theme: { palette } }) => palette.orange};
+      border-color: ${({ theme: { palette } }) => palette.warning.default};
     `};
 
   ${({ success }) =>
     success &&
     css`
-      border-color: ${({ theme: { palette } }) => palette.green};
+      border-color: ${({ theme: { palette } }) => palette.success.default};
     `};
 
   ${({ info }) =>
     info &&
     css`
-      border-color: ${({ theme: { palette } }) => palette.blue};
+      border-color: ${({ theme: { palette } }) => palette.primary.default};
     `};
 
   ${({ hasFocus }) =>
     hasFocus &&
     css`
-      border-color: ${({ theme: { palette } }) => palette.blue};
+      border-color: ${({ theme: { palette } }) => palette.primary.default};
     `};
 
   ${({ disabled }) =>
     disabled &&
     css`
       opacity: 0.4;
-      border-color: ${({ theme: { palette } }) => palette.gray};
+      border-color: ${({ theme: { palette } }) => palette.lightGrey};
     `};
 `;
 
