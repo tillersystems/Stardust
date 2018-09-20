@@ -25,7 +25,7 @@ const statusToIconName = {
 const Status = ({ className, status }) => (
   <div className={className}>
     <Icon
-      color={status === 'loading' ? Theme.palette.blue : Theme.palette.white}
+      color={status === 'loading' ? Theme.palette.primary.default : Theme.palette.white}
       name={statusToIconName[status]}
       width={['loading', 'info', 'warning'].includes(status) ? '2rem' : '1.1rem'}
       height={['loading', 'info', 'warning'].includes(status) ? '2rem' : '1.1rem'}
@@ -70,37 +70,37 @@ export default styled(Status)`
   ${({ status }) =>
     status === 'info' &&
     css`
-      background: ${({ theme: { palette } }) => palette.blue};
+      background: ${({ theme: { palette } }) => palette.primary.default};
     `};
 
   ${({ status }) =>
     status === 'success' &&
     css`
-      background: ${({ theme: { palette } }) => palette.green};
+      background: ${({ theme: { palette } }) => palette.success.default};
     `};
 
   ${({ status }) =>
     status === 'warning' &&
     css`
-      background: ${({ theme: { palette } }) => palette.orange};
+      background: ${({ theme: { palette } }) => palette.warning.default};
     `};
 
   ${({ status }) =>
     status === 'error' &&
     css`
-      background: ${({ theme: { palette } }) => palette.red};
+      background: ${({ theme: { palette } }) => palette.failure.default};
     `};
 
   ${({ status }) =>
     status === 'search' &&
     css`
-      background: ${({ theme: { palette } }) => palette.gray};
+      background: ${({ theme: { palette } }) => palette.lightGrey};
     `};
 
   ${({ status, hasFocus }) =>
     status === 'search' &&
     hasFocus &&
     css`
-      background: ${({ theme: { palette } }) => palette.blue};
+      background: ${({ theme: { palette } }) => palette.primary.default};
     `};
 `;

@@ -13,8 +13,8 @@ exports[`<ToggleButton /> should render without a problem 1`] = `
   width: 3.8rem;
   height: 2rem;
   border-radius: 1rem;
-  background: hsl(216,45%,98%);
-  border: 1px solid hsl(216,45%,98%);
+  background: hsl(207,22%,90%);
+  border: 1px solid hsl(207,22%,90%);
   cursor: pointer;
   pointer-events: none;
 }
@@ -104,7 +104,7 @@ exports[`<ToggleButton /> should render without a problem when checked and disab
   width: 3.8rem;
   height: 2rem;
   border-radius: 1rem;
-  background: hsl(200,74%,46%)linear-gradient(0deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%);
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
   border: 1px solid hsl(200,74%,46%);
   cursor: pointer;
   pointer-events: none;
@@ -194,7 +194,7 @@ exports[`<ToggleButton /> should render without a problem when checked and not d
   width: 3.8rem;
   height: 2rem;
   border-radius: 1rem;
-  background: hsl(200,74%,46%)linear-gradient(0deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 100%);
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
   border: 1px solid hsl(200,74%,46%);
   cursor: pointer;
   pointer-events: none;
@@ -288,8 +288,8 @@ exports[`<ToggleButton /> should render without a problem when unchecked and dis
   width: 3.8rem;
   height: 2rem;
   border-radius: 1rem;
-  background: hsl(216,45%,98%);
-  border: 1px solid hsl(216,45%,98%);
+  background: hsl(207,22%,90%);
+  border: 1px solid hsl(207,22%,90%);
   cursor: pointer;
   pointer-events: none;
   opacity: 0.4;
@@ -378,8 +378,8 @@ exports[`<ToggleButton /> should render without a problem when unchecked and not
   width: 3.8rem;
   height: 2rem;
   border-radius: 1rem;
-  background: hsl(216,45%,98%);
-  border: 1px solid hsl(216,45%,98%);
+  background: hsl(207,22%,90%);
+  border: 1px solid hsl(207,22%,90%);
   cursor: pointer;
   pointer-events: none;
 }

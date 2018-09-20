@@ -19,7 +19,7 @@ describe('<Loader />', () => {
   });
 
   it('should render with another color ', () => {
-    const wrapper = mount(<Loader color={Theme.palette.red} />);
+    const wrapper = mount(<Loader color={Theme.palette.failure.default} />);
 
     expect(wrapper).toMatchSnapshot();
   });

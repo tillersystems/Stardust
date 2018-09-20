@@ -143,5 +143,5 @@ export default styled(Weeks)`
 
   text-align: center;
 
-  color: ${({ theme: { palette } }) => palette.grey};
+  color: ${({ theme: { palette } }) => palette.mediumGrey};
 `;

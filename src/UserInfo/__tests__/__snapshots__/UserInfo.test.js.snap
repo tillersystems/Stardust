@@ -74,8 +74,8 @@ exports[`<UserInfo /> should render a user picture 1`] = `
   align-items: center;
   padding: 1.5rem;
   background: rgba(0,0,0,0.2);
-  border-top: 1px solid hsl(215,17%,26%);
-  border-bottom: 1px solid hsl(215,17%,26%);
+  border-top: 1px solid hsl(213,17%,20%);
+  border-bottom: 1px solid hsl(213,17%,20%);
   color: hsl(0,100%,100%);
   font-size: 1.4rem;
   cursor: pointer;
@@ -289,8 +289,8 @@ exports[`<UserInfo /> should render withouth a problem 1`] = `
   align-items: center;
   padding: 1.5rem;
   background: rgba(0,0,0,0.2);
-  border-top: 1px solid hsl(215,17%,26%);
-  border-bottom: 1px solid hsl(215,17%,26%);
+  border-top: 1px solid hsl(213,17%,20%);
+  border-bottom: 1px solid hsl(213,17%,20%);
   color: hsl(0,100%,100%);
   font-size: 1.4rem;
   cursor: pointer;

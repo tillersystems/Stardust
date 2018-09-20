@@ -23,7 +23,7 @@ ModalHeader.defaultProps = {
 
 export default styled(ModalHeader)`
   height: 6rem;
-  border-bottom: 0.1rem solid ${({ theme: { palette } }) => palette.gray};
+  border-bottom: 0.1rem solid ${({ theme: { palette } }) => palette.lightGrey};
   width: 100%;
   display: flex;
   align-items: center;
