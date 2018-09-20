@@ -15,7 +15,6 @@ class CheckBox extends PureComponent {
     id: PropTypes.string.isRequired,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
-    onChange: PropTypes.func,
     textAnnexe: PropTypes.string,
   };
 
@@ -24,14 +23,12 @@ class CheckBox extends PureComponent {
     children: null,
     checked: false,
     disabled: false,
-    onChange: null,
     textAnnexe: null,
   };
 
   /** Internal state. */
   state = {
     checked: false,
-    hasFocus: false,
   };
 
   /**
@@ -58,37 +55,15 @@ class CheckBox extends PureComponent {
   }
 
   /**
-   * Handles focus event on the check box.
-   */
-  handleFocus = () => {
-    this.setState({ ...this.state, hasFocus: true });
-  };
-
-  /**
-   * Handles blur event on the check box.
-   */
-  handleBlur = () => {
-    this.setState({ ...this.state, hasFocus: false });
-  };
-
-  /**
    * Handles click event on the check box.
    */
   handleClick = () => {
     const { checked } = this.state;
-    const { disabled, onChange } = this.props;
+    const { disabled } = this.props;
 
     if (!disabled) {
-      if (onChange) {
-        onChange(!checked);
-      } else {
-        this.setState({ ...this.state, checked: !checked });
-      }
+      this.setState({ ...this.state, checked: !checked });
     }
-  };
-
-  preventDefaultAction = e => {
-    e.preventDefault();
   };
 
   /**
@@ -97,12 +72,12 @@ class CheckBox extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { hasFocus, checked } = this.state;
+    const { checked } = this.state;
     const { children, id, disabled, textAnnexe } = this.props;
 
     return (
-      <Wrapper onClick={this.handleClick} textAnnexe={textAnnexe} disabled={disabled}>
-        <Container hasFocus={hasFocus} checked={checked} disabled={disabled}>
+      <Wrapper textAnnexe={textAnnexe} disabled={disabled}>
+        <Container onClick={this.handleClick} checked={checked} disabled={disabled}>
           {checked && (
             <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
           )}
@@ -111,20 +86,11 @@ class CheckBox extends PureComponent {
             tabIndex="0"
             id={id}
             defaultChecked={checked}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
             disabled={disabled}
           />
         </Container>
 
-        <Label
-          hasFocus={hasFocus}
-          disabled={disabled}
-          htmlFor={id}
-          textAnnexe={textAnnexe}
-          checked={checked}
-          onClick={this.preventDefaultAction}
-        >
+        <Label disabled={disabled} htmlFor={id} textAnnexe={textAnnexe} checked={checked}>
           {children}
         </Label>
       </Wrapper>

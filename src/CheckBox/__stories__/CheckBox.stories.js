@@ -38,7 +38,7 @@ storiesOf('CheckBox', module)
     const enabledValue = boolean('Enabled', true, 'state');
 
     return (
-      <CheckBox checked={checkedValue} disabled={!enabledValue} onChange={() => {}}>
+      <CheckBox checked={checkedValue} disabled={!enabledValue}>
         What?
       </CheckBox>
     );
