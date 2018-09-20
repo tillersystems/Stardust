@@ -33,22 +33,4 @@ describe('<CheckBox />', () => {
 
     expect(render).toMatchSnapshot();
   });
-
-  it('should call change handler when enabled', () => {
-    const spy = jest.fn();
-    const render = mountWithTheme(<CheckBox id="test" checked onChange={spy} />);
-
-    render.simulate('click');
-
-    expect(spy).toHaveBeenCalled();
-  });
-
-  it('should not call change handler when disabled', () => {
-    const spy = jest.fn();
-    const render = mountWithTheme(<CheckBox id="test" checked disabled onChange={spy} />);
-
-    render.simulate('click');
-
-    expect(spy).not.toHaveBeenCalled();
-  });
 });

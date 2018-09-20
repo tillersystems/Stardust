@@ -48,35 +48,31 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   checked={false}
   disabled={false}
   id="test"
-  onChange={null}
   textAnnexe={null}
 >
   <styled.div
     disabled={false}
-    onClick={[Function]}
     textAnnexe={null}
   >
     <div
       className="c0"
       disabled={false}
-      onClick={[Function]}
     >
       <styled.div
         checked={false}
         disabled={false}
-        hasFocus={false}
+        onClick={[Function]}
       >
         <div
           checked={false}
           className="c1"
           disabled={false}
+          onClick={[Function]}
         >
           <input
             defaultChecked={false}
             disabled={false}
             id="test"
-            onBlur={[Function]}
-            onFocus={[Function]}
             tabIndex="0"
             type="checkbox"
           />
@@ -85,7 +81,6 @@ exports[`<CheckBox /> should render without a problem 1`] = `
       <styled.label
         checked={false}
         disabled={false}
-        hasFocus={false}
         htmlFor="test"
         textAnnexe={null}
       >
@@ -168,28 +163,26 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
   checked={true}
   disabled={true}
   id="test"
-  onChange={null}
   textAnnexe={null}
 >
   <styled.div
     disabled={true}
-    onClick={[Function]}
     textAnnexe={null}
   >
     <div
       className="c0"
       disabled={true}
-      onClick={[Function]}
     >
       <styled.div
         checked={true}
         disabled={true}
-        hasFocus={false}
+        onClick={[Function]}
       >
         <div
           checked={true}
           className="c1"
           disabled={true}
+          onClick={[Function]}
         >
           <Styled(Icon)
             color="hsl(0, 100%, 100%)"
@@ -240,8 +233,6 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
             defaultChecked={true}
             disabled={true}
             id="test"
-            onBlur={[Function]}
-            onFocus={[Function]}
             tabIndex="0"
             type="checkbox"
           />
@@ -250,7 +241,6 @@ exports[`<CheckBox /> should render without a problem when checked and disabled 
       <styled.label
         checked={true}
         disabled={true}
-        hasFocus={false}
         htmlFor="test"
         textAnnexe={null}
       >
@@ -329,28 +319,26 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
   checked={true}
   disabled={false}
   id="test"
-  onChange={null}
   textAnnexe={null}
 >
   <styled.div
     disabled={false}
-    onClick={[Function]}
     textAnnexe={null}
   >
     <div
       className="c0"
       disabled={false}
-      onClick={[Function]}
     >
       <styled.div
         checked={true}
         disabled={false}
-        hasFocus={false}
+        onClick={[Function]}
       >
         <div
           checked={true}
           className="c1"
           disabled={false}
+          onClick={[Function]}
         >
           <Styled(Icon)
             color="hsl(0, 100%, 100%)"
@@ -401,8 +389,6 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
             defaultChecked={true}
             disabled={false}
             id="test"
-            onBlur={[Function]}
-            onFocus={[Function]}
             tabIndex="0"
             type="checkbox"
           />
@@ -411,7 +397,6 @@ exports[`<CheckBox /> should render without a problem when checked and enabled 1
       <styled.label
         checked={true}
         disabled={false}
-        hasFocus={false}
         htmlFor="test"
         textAnnexe={null}
       >
@@ -479,35 +464,31 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
   checked={false}
   disabled={true}
   id="test"
-  onChange={null}
   textAnnexe={null}
 >
   <styled.div
     disabled={true}
-    onClick={[Function]}
     textAnnexe={null}
   >
     <div
       className="c0"
       disabled={true}
-      onClick={[Function]}
     >
       <styled.div
         checked={false}
         disabled={true}
-        hasFocus={false}
+        onClick={[Function]}
       >
         <div
           checked={false}
           className="c1"
           disabled={true}
+          onClick={[Function]}
         >
           <input
             defaultChecked={false}
             disabled={true}
             id="test"
-            onBlur={[Function]}
-            onFocus={[Function]}
             tabIndex="0"
             type="checkbox"
           />
@@ -516,7 +497,6 @@ exports[`<CheckBox /> should render without a problem when unchecked and disable
       <styled.label
         checked={false}
         disabled={true}
-        hasFocus={false}
         htmlFor="test"
         textAnnexe={null}
       >
@@ -580,35 +560,31 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
   checked={false}
   disabled={false}
   id="test"
-  onChange={null}
   textAnnexe={null}
 >
   <styled.div
     disabled={false}
-    onClick={[Function]}
     textAnnexe={null}
   >
     <div
       className="c0"
       disabled={false}
-      onClick={[Function]}
     >
       <styled.div
         checked={false}
         disabled={false}
-        hasFocus={false}
+        onClick={[Function]}
       >
         <div
           checked={false}
           className="c1"
           disabled={false}
+          onClick={[Function]}
         >
           <input
             defaultChecked={false}
             disabled={false}
             id="test"
-            onBlur={[Function]}
-            onFocus={[Function]}
             tabIndex="0"
             type="checkbox"
           />
@@ -617,7 +593,6 @@ exports[`<CheckBox /> should render without a problem when unchecked and enabled
       <styled.label
         checked={false}
         disabled={false}
-        hasFocus={false}
         htmlFor="test"
         textAnnexe={null}
       >
