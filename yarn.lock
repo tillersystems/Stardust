@@ -4634,6 +4634,12 @@ framesync@^3.1.8, framesync@^3.1.9:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
 
+framesync@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-4.0.0.tgz#4f7d89d9b4960fece330a0d811c84b1602aace03"
+  dependencies:
+    hey-listen "^1.0.5"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -7411,7 +7417,18 @@ popmotion-pose@^3.3.0:
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.3.8, popmotion@^8.3.7:
+popmotion@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.4.0.tgz#1152245663ab7a8f154ec83c9e8aefc73bd35db4"
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    framesync "^4.0.0"
+    hey-listen "^1.0.5"
+    style-value-types "^3.0.6"
+    stylefire "^2.0.7"
+    tslib "^1.9.1"
+
+popmotion@^8.3.7:
   version "8.3.8"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
   dependencies:
