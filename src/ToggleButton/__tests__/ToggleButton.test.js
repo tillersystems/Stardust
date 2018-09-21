@@ -5,33 +5,33 @@ import ToggleButton from '..';
 
 describe('<ToggleButton />', () => {
   it('should render without a problem', () => {
-    const render = mountWithTheme(<ToggleButton />);
+    const render = shallowWithTheme(<ToggleButton />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render without a problem when checked and disabled', () => {
-    const render = mountWithTheme(<ToggleButton checked disabled />);
+    const render = shallowWithTheme(<ToggleButton checked disabled />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render without a problem when unchecked and disabled', () => {
-    const render = mountWithTheme(<ToggleButton checked={false} disabled />);
+    const render = shallowWithTheme(<ToggleButton checked={false} disabled />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render without a problem when checked and not disabled', () => {
-    const render = mountWithTheme(<ToggleButton checked disabled={false} />);
+    const render = shallowWithTheme(<ToggleButton checked disabled={false} />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render without a problem when unchecked and not disabled', () => {
-    const render = mountWithTheme(<ToggleButton checked={false} disabled={false} />);
+    const render = shallowWithTheme(<ToggleButton checked={false} disabled={false} />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 
   it('should call change handler when enabled', () => {
