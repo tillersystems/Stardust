@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> should render without a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+<div
+  className="c0"
+  disabled={false}
+>
+  <styled.div
+    checked={false}
+    disabled={false}
+    onClick={[Function]}
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="test"
+      name={null}
+      onChange={[Function]}
+      type="radio"
+      value=""
+    />
+  </styled.div>
+  <styled.label
+    checked={false}
+    disabled={false}
+    htmlFor="test"
+  >
+    test
+  </styled.label>
+</div>
+`;
+
+exports[`<RadioButton /> should render without a problem when radio is not selected and disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+  cursor: not-allowed;
+}
+
+<div
+  className="c0"
+  disabled={true}
+>
+  <styled.div
+    checked={false}
+    disabled={true}
+    onClick={[Function]}
+  >
+    <input
+      defaultChecked={false}
+      disabled={true}
+      id="test"
+      name={null}
+      onChange={[Function]}
+      type="radio"
+      value="apple"
+    />
+  </styled.div>
+  <styled.label
+    checked={false}
+    disabled={true}
+    htmlFor="test"
+  >
+    test
+  </styled.label>
+</div>
+`;
+
+exports[`<RadioButton /> should render without a problem when radio is not selected and enabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+<div
+  className="c0"
+  disabled={false}
+>
+  <styled.div
+    checked={false}
+    disabled={false}
+    onClick={[Function]}
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="test"
+      name={null}
+      onChange={[Function]}
+      type="radio"
+      value="apple"
+    />
+  </styled.div>
+  <styled.label
+    checked={false}
+    disabled={false}
+    htmlFor="test"
+  >
+    test
+  </styled.label>
+</div>
+`;
+
+exports[`<RadioButton /> should render without a problem when radio is selected  and disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+  cursor: not-allowed;
+}
+
+<div
+  className="c0"
+  disabled={true}
+>
+  <styled.div
+    checked={true}
+    disabled={true}
+    onClick={[Function]}
+  >
+    <input
+      defaultChecked={true}
+      disabled={true}
+      id="test"
+      name={null}
+      onChange={[Function]}
+      type="radio"
+      value="apple"
+    />
+  </styled.div>
+  <styled.label
+    checked={true}
+    disabled={true}
+    htmlFor="test"
+  >
+    test
+  </styled.label>
+</div>
+`;
+
+exports[`<RadioButton /> should render without a problem when radio is selected and enabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+<div
+  className="c0"
+  disabled={false}
+>
+  <styled.div
+    checked={true}
+    disabled={false}
+    onClick={[Function]}
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="test"
+      name={null}
+      onChange={[Function]}
+      type="radio"
+      value="apple"
+    />
+  </styled.div>
+  <styled.label
+    checked={true}
+    disabled={false}
+    htmlFor="test"
+  >
+    test
+  </styled.label>
+</div>
+`;
