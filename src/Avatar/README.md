@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Avatar from 'components/Avatar';
-
-// or
-
-import { Avatar } from 'components';
+import { Avatar } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -29,7 +25,7 @@ import { Avatar } from 'components';
 ### Example
 
 ```jsx
-import Avatar from 'components/Avatar';
+import { Avatar } from '@tillersystems/stardust';
 
 render() {
   return <Avatar name={name} src={imageUrl} size={size} />;
