@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import { Logo } from 'components/Logo';
-
-// or
-
-import Logo from 'components';
+import { Logo } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -27,7 +23,7 @@ import Logo from 'components';
 ### Example
 
 ```jsx
-import { Logo } from 'components/Logo';
+import { Logo } from '@tillersystems/stardust';
 
 render() {
   return <Logo color="red" width="230" height="76" />
