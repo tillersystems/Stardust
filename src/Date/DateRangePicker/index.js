@@ -193,7 +193,7 @@ class DateRangePicker extends PureComponent {
       <div className={className} onMouseLeave={() => this.handleDateOver(null)}>
         <PickerContainer>
           <Header>
-            <Button tiny light onClick={this.handlePrevMonthClick} disabled={!isAfterMinDate}>
+            <Button small secondary onClick={this.handlePrevMonthClick} disabled={!isAfterMinDate}>
               <Icon color={Theme.palette.darkBlue} name="chevron-left" />
             </Button>
             <HeaderTitle>
@@ -227,7 +227,7 @@ class DateRangePicker extends PureComponent {
             <HeaderTitle>
               {nextMonth.setLocale(locale).toLocaleString({ month: 'long', year: 'numeric' })}
             </HeaderTitle>
-            <Button tiny light onClick={this.handleNextMonthClick} disabled={!isBeforeMaxDate}>
+            <Button small secondary onClick={this.handleNextMonthClick} disabled={!isBeforeMaxDate}>
               <Icon color={Theme.palette.darkBlue} name="chevron-right" />
             </Button>
           </Header>
