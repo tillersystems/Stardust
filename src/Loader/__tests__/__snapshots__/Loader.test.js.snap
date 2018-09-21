@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> should render with another color  1`] = `
+.c0 {
+  -webkit-animation: rotate 1.4s linear infinite;
+  animation: rotate 1.4s linear infinite;
+  display: block;
+}
+
+.c0 .path {
+  stroke-linecap: round;
+  -webkit-animation: dash 1.4s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+<svg
+  aria-hidden="true"
+  className="c0"
+  height="2rem"
+  viewBox="0 0 50 50"
+  width="2rem"
+>
+  <circle
+    className="path"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    stroke="hsl(6, 79%, 65%)"
+    strokeWidth="4"
+  />
+</svg>
+`;
+
+exports[`<Loader /> should render with another size  1`] = `
+.c0 {
+  -webkit-animation: rotate 1.4s linear infinite;
+  animation: rotate 1.4s linear infinite;
+  display: block;
+}
+
+.c0 .path {
+  stroke-linecap: round;
+  -webkit-animation: dash 1.4s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+<svg
+  aria-hidden="true"
+  className="c0"
+  height="4rem"
+  viewBox="0 0 50 50"
+  width="4rem"
+>
+  <circle
+    className="path"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    stroke="hsl(200, 74%, 46%)"
+    strokeWidth="4"
+  />
+</svg>
+`;
+
+exports[`<Loader /> should render without a problem  1`] = `
+.c0 {
+  -webkit-animation: rotate 1.4s linear infinite;
+  animation: rotate 1.4s linear infinite;
+  display: block;
+}
+
+.c0 .path {
+  stroke-linecap: round;
+  -webkit-animation: dash 1.4s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+<svg
+  aria-hidden="true"
+  className="c0"
+  height="2rem"
+  viewBox="0 0 50 50"
+  width="2rem"
+>
+  <circle
+    className="path"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    stroke="hsl(200, 74%, 46%)"
+    strokeWidth="4"
+  />
+</svg>
+`;
