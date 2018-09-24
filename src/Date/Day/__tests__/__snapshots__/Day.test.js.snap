@@ -7,54 +7,19 @@ exports[`Day should render with no problem 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  width: 100%;
-  height: 100%;
-}
-
-<Day
-  date={"2018-07-15T00:00:00.000+02:00"}
+<div
+  className="c0"
   disabled={false}
-  highlightEnd={false}
-  highlightStart={false}
-  highlighted={false}
   onClick={[Function]}
-  onOver={[Function]}
+  onFocus={[Function]}
+  onMouseOver={[Function]}
   selected={false}
-  selectionEnd={false}
-  selectionStart={false}
-  shadowed={false}
 >
   <styled.div
-    disabled={false}
     ending={false}
-    highlighted={false}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOver={[Function]}
-    selected={false}
-    shadowed={false}
     starting={false}
   >
-    <div
-      className="c0"
-      disabled={false}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onMouseOver={[Function]}
-      selected={false}
-    >
-      <styled.div
-        ending={false}
-        starting={false}
-      >
-        <div
-          className="c1"
-        >
-          15
-        </div>
-      </styled.div>
-    </div>
+    15
   </styled.div>
-</Day>
+</div>
 `;

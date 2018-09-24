@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<WeekdayNames /> should render withouth a problem 1`] = `
-.c1 {
-  font-size: 1.4rem;
-}
-
 .c0 {
   display: grid;
   grid-template-columns: repeat(7,2.8rem);
@@ -19,79 +15,44 @@ exports[`<WeekdayNames /> should render withouth a problem 1`] = `
   color: hsl(206,23%,69%);
 }
 
-<Styled(WeekdayNames)>
-  <WeekdayNames
-    className="c0"
-    locale="en"
+<div
+  className="c0"
+  key="nodejs"
+>
+  <styled.div
+    key="Mon"
   >
-    <div
-      className="c0"
-      key="nodejs"
-    >
-      <styled.div
-        key="Mon"
-      >
-        <div
-          className="c1"
-        >
-          Mon
-        </div>
-      </styled.div>
-      <styled.div
-        key="Tue"
-      >
-        <div
-          className="c1"
-        >
-          Tue
-        </div>
-      </styled.div>
-      <styled.div
-        key="Wed"
-      >
-        <div
-          className="c1"
-        >
-          Wed
-        </div>
-      </styled.div>
-      <styled.div
-        key="Thu"
-      >
-        <div
-          className="c1"
-        >
-          Thu
-        </div>
-      </styled.div>
-      <styled.div
-        key="Fri"
-      >
-        <div
-          className="c1"
-        >
-          Fri
-        </div>
-      </styled.div>
-      <styled.div
-        key="Sat"
-      >
-        <div
-          className="c1"
-        >
-          Sat
-        </div>
-      </styled.div>
-      <styled.div
-        key="Sun"
-      >
-        <div
-          className="c1"
-        >
-          Sun
-        </div>
-      </styled.div>
-    </div>
-  </WeekdayNames>
-</Styled(WeekdayNames)>
+    Mon
+  </styled.div>
+  <styled.div
+    key="Tue"
+  >
+    Tue
+  </styled.div>
+  <styled.div
+    key="Wed"
+  >
+    Wed
+  </styled.div>
+  <styled.div
+    key="Thu"
+  >
+    Thu
+  </styled.div>
+  <styled.div
+    key="Fri"
+  >
+    Fri
+  </styled.div>
+  <styled.div
+    key="Sat"
+  >
+    Sat
+  </styled.div>
+  <styled.div
+    key="Sun"
+  >
+    Sun
+  </styled.div>
+</div>
 `;

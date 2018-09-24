@@ -26,10 +26,18 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c22 > .c9 {
@@ -287,9 +295,9 @@ exports[`<DatePicker /> should handle date hover 1`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -300,13 +308,11 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -316,13 +322,11 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -2154,9 +2158,9 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -2167,13 +2171,11 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -2183,13 +2185,11 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -4350,10 +4350,18 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c21 > .c9 {
@@ -4606,9 +4614,9 @@ exports[`<DatePicker /> should handle date hover 2`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -4619,13 +4627,11 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -4635,13 +4641,11 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -6473,9 +6477,9 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -6486,13 +6490,11 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -6502,13 +6504,11 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -8342,10 +8342,18 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c22 > .c9 {
@@ -8610,9 +8618,9 @@ exports[`<DatePicker /> should handle date hover 3`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -8623,13 +8631,11 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -8639,13 +8645,11 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -10477,9 +10481,9 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -10490,13 +10494,11 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -10506,13 +10508,11 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -12346,10 +12346,18 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c21 > .c9 {
@@ -12592,9 +12600,9 @@ exports[`<DatePicker /> should handle date selection 1`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -12605,13 +12613,11 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -12621,13 +12627,11 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -14459,9 +14463,9 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -14472,13 +14476,11 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -14488,13 +14490,11 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -16328,10 +16328,18 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c20 > .c9 {
@@ -16565,9 +16573,9 @@ exports[`<DatePicker /> should handle date selection 2`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -16578,13 +16586,11 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -16594,13 +16600,11 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -18432,9 +18436,9 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -18445,13 +18449,11 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -18461,13 +18463,11 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -20301,10 +20301,18 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c22 > .c9 {
@@ -20557,9 +20565,9 @@ exports[`<DatePicker /> should handle date selection 3`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -20570,13 +20578,11 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -20586,13 +20592,11 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -22751,9 +22755,9 @@ exports[`<DatePicker /> should handle date selection 3`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -22764,13 +22768,11 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -22780,13 +22782,11 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -24620,10 +24620,18 @@ exports[`<DatePicker /> should handle next month 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c19 > .c9 {
@@ -24846,9 +24854,9 @@ exports[`<DatePicker /> should handle next month 1`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -24859,13 +24867,11 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -24875,13 +24881,11 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -26713,9 +26717,9 @@ exports[`<DatePicker /> should handle next month 1`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -26726,13 +26730,11 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -26742,13 +26744,11 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -28582,10 +28582,18 @@ exports[`<DatePicker /> should handle next month 2`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c21 > .c9 {
@@ -28827,9 +28835,9 @@ exports[`<DatePicker /> should handle next month 2`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -28840,13 +28848,11 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -28856,13 +28862,11 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -30694,9 +30698,9 @@ exports[`<DatePicker /> should handle next month 2`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -30707,13 +30711,11 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -30723,13 +30725,11 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -32890,10 +32890,18 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c19 > .c9 {
@@ -33116,9 +33124,9 @@ exports[`<DatePicker /> should handle previous month 1`] = `
             >
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -33129,13 +33137,11 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -33145,13 +33151,11 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -34983,9 +34987,9 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -34996,13 +35000,11 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -35012,13 +35014,11 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -36852,10 +36852,18 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c19 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c19 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c2 {
@@ -36885,10 +36893,18 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   outline: none;
   cursor: not-allowed;
   opacity: 0.4;
+  padding: 0.4rem 0.8rem;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
 }
 
 .c2 svg > path {
   fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
 }
 
 .c8 {
@@ -37175,9 +37191,9 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
             >
               <Button
                 disabled={true}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -37188,13 +37204,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -37204,13 +37218,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button
@@ -39042,9 +39054,9 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               </styled.div>
               <Button
                 disabled={false}
-                light={true}
                 onClick={[Function]}
-                tiny={true}
+                secondary={true}
+                small={true}
               >
                 <Button
                   big={false}
@@ -39055,13 +39067,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   icon={null}
                   iconPosition="left"
                   isGoogle={false}
-                  light={true}
                   onClick={[Function]}
                   primary={false}
-                  secondary={false}
-                  small={false}
+                  secondary={true}
+                  small={true}
                   success={false}
-                  tiny={true}
                   type="button"
                 >
                   <styled.button
@@ -39071,13 +39081,11 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     failure={false}
                     fluid={false}
                     isGoogle={false}
-                    light={true}
                     onClick={[Function]}
                     primary={false}
-                    secondary={false}
-                    small={false}
+                    secondary={true}
+                    small={true}
                     success={false}
-                    tiny={true}
                     type="button"
                   >
                     <button

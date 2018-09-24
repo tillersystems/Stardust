@@ -15,8 +15,8 @@ describe('Day', () => {
       second: 0,
       zone: 'Europe/Paris',
     });
-    const render = mountWithTheme(<Day date={dateValue} />);
+    const render = shallowWithTheme(<Day date={dateValue} />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 });

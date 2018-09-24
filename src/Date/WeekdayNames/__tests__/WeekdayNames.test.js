@@ -5,8 +5,8 @@ import WeekdayNames from '..';
 
 describe('<WeekdayNames />', () => {
   it('should render withouth a problem', () => {
-    const render = mountWithTheme(<WeekdayNames />);
+    const render = shallowWithTheme(<WeekdayNames />);
 
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 });

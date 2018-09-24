@@ -16,7 +16,7 @@ describe('<Weeks />', () => {
   });
 
   it('should render withouth a problem', () => {
-    const render = mountWithTheme(
+    const render = shallowWithTheme(
       <Week
         currentMonth={dateValue}
         onDateClick={() => {}}
@@ -24,6 +24,6 @@ describe('<Weeks />', () => {
         minDate={dateValue}
       />,
     );
-    expect(render).toMatchSnapshot();
+    expect(render.dive()).toMatchSnapshot();
   });
 });
