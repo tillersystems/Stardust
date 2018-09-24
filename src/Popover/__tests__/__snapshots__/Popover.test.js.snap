@@ -37,12 +37,14 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
   >
     <Transition
       animateOnMount={true}
+      enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
       flipMove={true}
       preEnterPose="exit"
     >
       <Component
+        _pose="enter"
         arrowPositionX="50%"
         initialPose="exit"
         key="ContainerAnimation"
@@ -50,6 +52,7 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
         width="auto"
       >
         <PoseElement
+          _pose="enter"
           arrowPositionX="50%"
           elementType={[Function]}
           initialPose="exit"
@@ -208,6 +211,7 @@ exports[`<Popover /> should render with a different width 1`] = `
   >
     <Transition
       animateOnMount={true}
+      enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
       flipMove={true}
@@ -337,6 +341,7 @@ exports[`<Popover /> should render withouth a problem 1`] = `
   >
     <Transition
       animateOnMount={true}
+      enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
       flipMove={true}
