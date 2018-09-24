@@ -1,5 +1,6 @@
 // Components Library entry point
 // Please respect the alphabetical order
+export { default as Alert } from './Alert';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as CheckBox } from './CheckBox';

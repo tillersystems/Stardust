@@ -326,6 +326,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
                                 width="20"
                               >
                                 <styled.div
+                                  className=""
                                   height="20"
                                   spin={false}
                                   width="20"
@@ -960,6 +961,7 @@ exports[`<Select /> should render without a problem when the dropdown is open an
                                   width="20"
                                 >
                                   <styled.div
+                                    className=""
                                     height="20"
                                     spin={false}
                                     width="20"

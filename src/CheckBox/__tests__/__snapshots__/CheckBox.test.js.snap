@@ -105,6 +105,7 @@ exports[`<CheckBox /> should be checked with change 1`] = `
                   width="1rem"
                 >
                   <styled.div
+                    className=""
                     height="1rem"
                     spin={false}
                     width="1rem"
@@ -455,6 +456,7 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
                   width="1rem"
                 >
                   <styled.div
+                    className=""
                     height="1rem"
                     spin={false}
                     width="1rem"

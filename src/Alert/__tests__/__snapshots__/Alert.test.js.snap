@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should render a error alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+  background: hsl(6,79%,65%);
+}
+
+<div
+  className="c0"
+>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    name="exclamation-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;
+
+exports[`<Alert /> should render a info alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+  background: hsl(200,74%,46%);
+}
+
+<div
+  className="c0"
+>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    name="cog"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;
+
+exports[`<Alert /> should render a success alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+  background: hsl(89,53%,52%);
+}
+
+<div
+  className="c0"
+>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    name="check-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;
+
+exports[`<Alert /> should render a warning alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+  background: hsl(34,91%,65%);
+}
+
+<div
+  className="c0"
+>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    name="exclamation-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;
+
+exports[`<Alert /> should render without a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+>
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;

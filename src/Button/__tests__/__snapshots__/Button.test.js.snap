@@ -4637,6 +4637,7 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
                 width="20"
               >
                 <styled.div
+                  className=""
                   height="20"
                   spin={false}
                   width="20"
@@ -5133,6 +5134,7 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
                 width="20"
               >
                 <styled.div
+                  className=""
                   height="20"
                   spin={false}
                   width="20"
@@ -5604,6 +5606,7 @@ exports[`<Button /> should render with an icon 1`] = `
             width="20"
           >
             <styled.div
+              className=""
               height="20"
               spin={false}
               width="20"
