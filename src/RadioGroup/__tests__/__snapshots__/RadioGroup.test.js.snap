@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> should render without a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.6rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+}
+
+.c3 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+}
+
+<RadioGroup
+  groupName="vegetable"
+  isRow={false}
+  selectedValue={null}
+>
+  <styled.div
+    isRow={false}
+  >
+    <div
+      className="c0"
+    >
+      <RadioButton
+        disabled={false}
+        id="artichoke"
+        key=".0"
+        name="vegetable"
+        onChange={[Function]}
+        selectedValue={null}
+        value="artichoke"
+      >
+        <styled.div
+          disabled={false}
+        >
+          <div
+            className="c1"
+            disabled={false}
+          >
+            <styled.div
+              checked={false}
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                checked={false}
+                className="c2"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={false}
+                  disabled={false}
+                  id="artichoke"
+                  name="vegetable"
+                  onChange={[Function]}
+                  type="radio"
+                  value="artichoke"
+                />
+              </div>
+            </styled.div>
+            <styled.label
+              checked={false}
+              disabled={false}
+              htmlFor="artichoke"
+            >
+              <label
+                checked={false}
+                className="c3"
+                disabled={false}
+                htmlFor="artichoke"
+              >
+                artichoke
+              </label>
+            </styled.label>
+          </div>
+        </styled.div>
+      </RadioButton>
+      <RadioButton
+        disabled={false}
+        id="beetroot"
+        key=".1"
+        name="vegetable"
+        onChange={[Function]}
+        selectedValue={null}
+        value="beetroot"
+      >
+        <styled.div
+          disabled={false}
+        >
+          <div
+            className="c1"
+            disabled={false}
+          >
+            <styled.div
+              checked={false}
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                checked={false}
+                className="c2"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={false}
+                  disabled={false}
+                  id="beetroot"
+                  name="vegetable"
+                  onChange={[Function]}
+                  type="radio"
+                  value="beetroot"
+                />
+              </div>
+            </styled.div>
+            <styled.label
+              checked={false}
+              disabled={false}
+              htmlFor="beetroot"
+            >
+              <label
+                checked={false}
+                className="c3"
+                disabled={false}
+                htmlFor="beetroot"
+              >
+                beetroot
+              </label>
+            </styled.label>
+          </div>
+        </styled.div>
+      </RadioButton>
+      <RadioButton
+        disabled={false}
+        id="pumpkin"
+        key=".2"
+        name="vegetable"
+        onChange={[Function]}
+        selectedValue={null}
+        value="pumpkin"
+      >
+        <styled.div
+          disabled={false}
+        >
+          <div
+            className="c1"
+            disabled={false}
+          >
+            <styled.div
+              checked={false}
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                checked={false}
+                className="c2"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <input
+                  defaultChecked={false}
+                  disabled={false}
+                  id="pumpkin"
+                  name="vegetable"
+                  onChange={[Function]}
+                  type="radio"
+                  value="pumpkin"
+                />
+              </div>
+            </styled.div>
+            <styled.label
+              checked={false}
+              disabled={false}
+              htmlFor="pumpkin"
+            >
+              <label
+                checked={false}
+                className="c3"
+                disabled={false}
+                htmlFor="pumpkin"
+              >
+                pumpkin
+              </label>
+            </styled.label>
+          </div>
+        </styled.div>
+      </RadioButton>
+    </div>
+  </styled.div>
+</RadioGroup>
+`;
+
+exports[`<RadioGroup /> should render without a problem when it's in row 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.6rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+<div
+  className="c0"
+>
+  <RadioButton
+    disabled={false}
+    id="artichoke"
+    key=".0"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="artichoke"
+  >
+    artichoke
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="beetroot"
+    key=".1"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="beetroot"
+  >
+    beetroot
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="pumpkin"
+    key=".2"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="pumpkin"
+  >
+    pumpkin
+  </RadioButton>
+</div>
+`;
+
+exports[`<RadioGroup /> should render without a problem when radio is pre-selected 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.6rem;
+}
+
+<div
+  className="c0"
+>
+  <RadioButton
+    disabled={false}
+    id="artichoke"
+    key=".0"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue="artichoke"
+    value="artichoke"
+  >
+    artichoke
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="beetroot"
+    key=".1"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue="artichoke"
+    value="beetroot"
+  >
+    beetroot
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="pumpkin"
+    key=".2"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue="artichoke"
+    value="pumpkin"
+  >
+    pumpkin
+  </RadioButton>
+</div>
+`;
+
+exports[`<RadioGroup /> should render without a problem when radio is selected  and disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.6rem;
+}
+
+<div
+  className="c0"
+>
+  <RadioButton
+    disabled={false}
+    id="artichoke"
+    key=".0"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="artichoke"
+  >
+    artichoke
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="beetroot"
+    key=".1"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="beetroot"
+  >
+    beetroot
+  </RadioButton>
+  <RadioButton
+    disabled={false}
+    id="pumpkin"
+    key=".2"
+    name="vegetable"
+    onChange={[Function]}
+    selectedValue={null}
+    value="pumpkin"
+  >
+    pumpkin
+  </RadioButton>
+</div>
+`;
