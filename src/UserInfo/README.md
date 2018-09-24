@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import UserInfo from 'components/UserInfo';
-
-// or
-
-import { UserInfo } from 'components';
+import { UserInfo } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -19,17 +15,17 @@ import { UserInfo } from 'components';
 - `onClick` - onClick trigger.
 - `pictureSrc` - source image of a user.
 
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `className` | `string` |     `''`     |     -      |
-| `name`      | `string` |              |     \*     |
-| `onClick`   | `func`   |    `() => {}`|     -      |
-| `pictureSrc`| `string` |    `null`    |     -      |
+| propName     | propType | defaultValue | isRequired |
+| ------------ | :------: | :----------: | :--------: |
+| `className`  | `string` |     `''`     |     -      |
+| `name`       | `string` |              |     \*     |
+| `onClick`    |  `func`  |  `() => {}`  |     -      |
+| `pictureSrc` | `string` |    `null`    |     -      |
 
 ### Example
 
 ```jsx
-import UserInfo from 'components/UserInfo';
+import { UserInfo } from '@tillersystems/stardust';
 
 render() {
   return <UserInfo name={name} pictureSrc="http://examplePictureUrl.com" onClick={() => {}} />;
