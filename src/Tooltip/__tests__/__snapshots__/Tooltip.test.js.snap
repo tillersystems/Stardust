@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render a tooltip  displayed above the element 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  <button
+    key=".0"
+    onClick={[Function]}
+    onMouseEnter={null}
+    onMouseLeave={null}
+  >
+    Show Tooltip
+  </button>
+  <PoseGroup
+    animateOnMount={true}
+    flipMove={true}
+  />
+</div>
+`;
+
+exports[`<Tooltip /> should render a tooltip which can be displayed on hover 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  <button
+    key=".0"
+    onClick={null}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Show Tooltip
+  </button>
+  <PoseGroup
+    animateOnMount={true}
+    flipMove={true}
+  />
+</div>
+`;
+
+exports[`<Tooltip /> should render open popover withouth a problem 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  <button
+    key=".0"
+    onClick={[Function]}
+    onMouseEnter={null}
+    onMouseLeave={null}
+  >
+    Show Tooltip
+  </button>
+  <PoseGroup
+    animateOnMount={true}
+    flipMove={true}
+  >
+    <Component
+      arrowPositionX="50%"
+      key="ContainerAnimation"
+      pose="enter"
+      top={false}
+      width="auto"
+    >
+      Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur la période séléctionnée.
+    </Component>
+  </PoseGroup>
+</div>
+`;
+
+exports[`<Tooltip /> should render with a different width 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  <button
+    key=".0"
+    onClick={[Function]}
+    onMouseEnter={null}
+    onMouseLeave={null}
+  >
+    Show Tooltip
+  </button>
+  <PoseGroup
+    animateOnMount={true}
+    flipMove={true}
+  />
+</div>
+`;
+
+exports[`<Tooltip /> should render withouth a problem 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  <button
+    key=".0"
+    onClick={[Function]}
+    onMouseEnter={null}
+    onMouseLeave={null}
+  >
+    Show Tooltip
+  </button>
+  <PoseGroup
+    animateOnMount={true}
+    flipMove={true}
+  />
+</div>
+`;
