@@ -136,7 +136,7 @@ exports[`<UserInfo /> should render a user picture 1`] = `
             aria-label="Tony Starck"
             className="c1"
           >
-            <styled.img
+            <Image
               alt="Tony Starck"
               height={31}
               src="http://pictureSrc.com"
@@ -149,7 +149,7 @@ exports[`<UserInfo /> should render a user picture 1`] = `
                 src="http://pictureSrc.com"
                 width={31}
               />
-            </styled.img>
+            </Image>
           </div>
         </Avatar>
       </Styled(Avatar)>
