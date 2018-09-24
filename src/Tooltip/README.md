@@ -26,7 +26,7 @@ import { Tooltip } from '@tillersystems/stardust';
 | `arrowPositionX` | `string` |    `50%`     |     -      |
 | `children`       |  `node`  |    `null`    |     -      |
 | `width`          | `string` |    `auto`    |     -      |
-| `title`          | `string` |    `null`    |     -      |
+| `title`          | `string` |    `null`    |     \*     |
 
 ### Example
 

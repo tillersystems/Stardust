@@ -70,7 +70,7 @@ describe('<Tooltip />', () => {
   });
 
   it('should call componentDidUpdate when props are updated', () => {
-    let activeValue = false;
+    const activeValue = false;
     const render = shallowWithTheme(
       <Tooltip
         active={activeValue}

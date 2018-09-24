@@ -37,8 +37,8 @@ export const Container = styled.div`
     left: ${({ arrowPositionX }) => arrowPositionX};
     z-index: -1;
 
-    height: 7px;
-    width: 7px;
+    height: 0.7rem;
+    width: 0.7rem;
 
     background: ${({ theme: { palette } }) => palette.darkBlue};
     transform: translate3d(0, -50%, 0) rotate(135deg);

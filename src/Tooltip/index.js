@@ -8,7 +8,7 @@ import { Container, Wrapper } from './elements';
  * Tooltip
  *
  * This component is in charge of displaying
- * a popover
+ * a tooltip
  *
  * @param {bool} active // Boolean set if the Tooltip is showed or not.
  * @param {bool} hover // Boolean set to use click or hover to show the Tooltip.
@@ -30,7 +30,7 @@ class Tooltip extends React.Component {
     arrowPositionX: PropTypes.string,
     children: PropTypes.node,
     width: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
   };
 
   /** Default props. */
@@ -41,7 +41,6 @@ class Tooltip extends React.Component {
     arrowPositionX: '50%',
     children: null,
     width: 'auto',
-    title: null,
   };
 
   state = {

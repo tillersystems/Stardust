@@ -14,6 +14,7 @@ exports[`<Tooltip /> should render a tooltip  displayed above the element 1`] = 
     onClick={[Function]}
     onMouseEnter={null}
     onMouseLeave={null}
+    type="button"
   >
     Show Tooltip
   </button>
@@ -38,6 +39,7 @@ exports[`<Tooltip /> should render a tooltip which can be displayed on hover 1`]
     onClick={null}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    type="button"
   >
     Show Tooltip
   </button>
@@ -62,6 +64,7 @@ exports[`<Tooltip /> should render open popover withouth a problem 1`] = `
     onClick={[Function]}
     onMouseEnter={null}
     onMouseLeave={null}
+    type="button"
   >
     Show Tooltip
   </button>
@@ -96,6 +99,7 @@ exports[`<Tooltip /> should render with a different width 1`] = `
     onClick={[Function]}
     onMouseEnter={null}
     onMouseLeave={null}
+    type="button"
   >
     Show Tooltip
   </button>
@@ -120,6 +124,7 @@ exports[`<Tooltip /> should render withouth a problem 1`] = `
     onClick={[Function]}
     onMouseEnter={null}
     onMouseLeave={null}
+    type="button"
   >
     Show Tooltip
   </button>
