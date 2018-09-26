@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Value = styled.div`
-  font-size: ${({ theme: { fonts } }) => fonts.size.big};
+  font-size: ${({ theme: { fonts } }) => fonts.size.h2};
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
 
   color: ${({ theme: { palette } }) => palette.darkBlue};
