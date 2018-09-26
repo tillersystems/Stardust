@@ -1,3 +1,12 @@
+<a name="1.4.0"></a>
+
+# [1.4.0](https://github.com/tillersystems/Stardust/compare/v1.3.0...v1.4.0) (2018-09-26)
+
+### Bug Fixes
+
+- **DatePicker:** fix button ui ([a04aef2](https://github.com/tillersystems/Stardust/commit/a04aef2))
+- **KpiChart:** fix value font-size ([#138](https://github.com/tillersystems/Stardust/issues/138)) ([f47b78f](https://github.com/tillersystems/Stardust/commit/f47b78f))
+
 <a name="1.3.0"></a>
 
 # [1.3.0](https://github.com/tillersystems/Stardust/compare/v1.2.1...v1.3.0) (2018-09-20)
