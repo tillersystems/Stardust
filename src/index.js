@@ -17,4 +17,5 @@ export { default as Modal } from './Modal';
 export { default as Popover } from './Popover';
 export { default as Theme } from './Theme';
 export { default as ToggleButton } from './ToggleButton';
+export { default as Tooltip } from './Tooltip';
 export { default as UserInfo } from './UserInfo';
