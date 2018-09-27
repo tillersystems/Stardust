@@ -29,13 +29,10 @@ class Select extends PureComponent {
   };
 
   /** Internal state. */
-  constructor() {
-    super();
-    this.state = {
-      value: '',
-      showed: false,
-    };
-  }
+  state = {
+    value: '',
+    showed: false,
+  };
 
   /**
    * Handles mounting in component's lifecycle.

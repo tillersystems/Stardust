@@ -17,6 +17,7 @@ exports[`<Modal /> should render close modal withouth a problem 1`] = `
       >
         <Transition
           animateOnMount={true}
+          enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
           flipMove={true}
@@ -46,6 +47,7 @@ exports[`<Modal /> should render open modal with overlay clickable withouth a pr
       >
         <Transition
           animateOnMount={true}
+          enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
           flipMove={true}
@@ -344,17 +346,20 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
       >
         <Transition
           animateOnMount={true}
+          enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
           flipMove={true}
           preEnterPose="exit"
         >
           <Component
+            _pose="enter"
             initialPose="exit"
             key="ContainerAnimation"
             pose="enter"
           >
             <PoseElement
+              _pose="enter"
               elementType={[Function]}
               initialPose="exit"
               pose="enter"
@@ -392,12 +397,14 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
                   >
                     <Transition
                       animateOnMount={true}
+                      enterAfterExit={false}
                       enterPose="enter"
                       exitPose="exit"
                       flipMove={true}
                       preEnterPose="exit"
                     >
                       <Component
+                        _pose="enter"
                         height="35rem"
                         initialPose="exit"
                         key="DialogAnimation"
@@ -405,6 +412,7 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
                         width="50rem"
                       >
                         <PoseElement
+                          _pose="enter"
                           elementType={[Function]}
                           getInitialPoseFromParent={[Function]}
                           getParentPoseConfig={[Function]}

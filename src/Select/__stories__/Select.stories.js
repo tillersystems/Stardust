@@ -1,14 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, select, text } from '@storybook/addon-knobs/react';
 
 import { Select, Icon, Theme } from '../..';
 
 storiesOf('Select', module)
   .addDecorator(withKnobs)
   .add('default', () => {
+    const defaultValue = 'menu';
+    const titleValue = text('Title', defaultValue, 'state');
     return (
-      <Select title="menu">
+      <Select title={titleValue}>
         <option value="home">Home</option>
         <option value="calendar">Calendar</option>
         <option value="settings">Settings</option>
@@ -19,6 +21,8 @@ storiesOf('Select', module)
     );
   })
   .add('controlled', () => {
+    const defaultValue = 'menu';
+    const titleValue = text('Title', defaultValue, 'state');
     const options = {
       home: 'home',
       calendar: 'calendar',
@@ -28,7 +32,7 @@ storiesOf('Select', module)
     const selectedValue = select('Selected value', options, 'user', 'state');
     const showValue = boolean('Show', false, 'state');
     return (
-      <Select title="menu" show={showValue} selectedValue={selectedValue}>
+      <Select title={titleValue} show={showValue} selectedValue={selectedValue}>
         <option value="home">Home</option>
         <option value="calendar">Calendar</option>
         <option value="settings">Settings</option>

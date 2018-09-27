@@ -81,7 +81,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   color: hsl(213,17%,20%);
   font-size: 1.2rem;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.8rem;
   text-transform: uppercase;
   padding-bottom: 0.6rem;
 }
@@ -110,20 +110,21 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   cursor: pointer;
   text-align: left;
   padding: 0.8rem 1.2rem;
-  height: 38px;
-  width: 150px;
+  height: 3.8rem;
+  width: 15rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 4px;
   background-color: hsl(0,100%,100%);
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
   color: hsl(213,17%,20%);
+  font-size: 1.4rem;
   position: relative;
 }
 
 .c2::after {
   content: '';
   position: absolute;
-  right: 14px;
+  right: 1.4rem;
   top: 37%;
   width: 0;
   height: 0;
@@ -136,7 +137,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
 .c2::before {
   content: '';
   position: absolute;
-  right: 14px;
+  right: 1.4rem;
   bottom: 37%;
   width: 0;
   height: 0;
@@ -211,6 +212,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
             flipMove={true}
           >
             <Transition
+              enterAfterExit={false}
               enterPose="enter"
               exitPose="exit"
               flipMove={true}

@@ -8,13 +8,12 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h4`
   color: ${({ theme: { palette } }) => palette.darkBlue};
-  font-size: 1.2rem;
-  /* font-size: ${({ theme: { fonts } }) => fonts.default};	 */
+  font-size: ${({ theme: { fonts } }) => fonts.size.default};
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.8rem;
   text-transform: uppercase;
   padding-bottom: 0.6rem;
-  `;
+`;
 
 export const Dropdown = styled.ul`
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
@@ -44,19 +43,19 @@ export const Container = styled.div`
   cursor: pointer;
   text-align: left;
   padding: 0.8rem 1.2rem;
-  height: 38px;
-  width: 150px;
+  height: 3.8rem;
+  width: 15rem;
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: 4px;
   background-color: ${({ theme: { palette } }) => palette.white};
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
   color: ${({ theme: { palette } }) => palette.darkBlue};
-  font-size: ${({ theme: { fonts } }) => fonts.medium};
+  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   position: relative;
   &::after {
     content: '';
     position: absolute;
-    right: 14px;
+    right: 1.4rem;
     top: 37%;
     width: 0;
     height: 0;
@@ -68,7 +67,7 @@ export const Container = styled.div`
   &::before {
     content: '';
     position: absolute;
-    right: 14px;
+    right: 1.4rem;
     bottom: 37%;
     width: 0;
     height: 0;
