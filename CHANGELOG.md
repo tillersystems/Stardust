@@ -1,3 +1,7 @@
+<a name="1.5.0"></a>
+
+# [1.5.0](https://github.com/tillersystems/Stardust/compare/v1.4.0...v1.5.0) (2018-09-27)
+
 <a name="1.4.0"></a>
 
 # [1.4.0](https://github.com/tillersystems/Stardust/compare/v1.3.0...v1.4.0) (2018-09-26)
