@@ -10,17 +10,19 @@ import { Select } from '@tillersystems/stardust';
 
 ### Properties
 
-- `title` - Add a title to the select.
 - `prefix` - Add a text aside in the select next the selected value.
 - `selectedValue` - Pre select the value if defined.
 - `show` - Toggle the dropdown.
+- `placeholder` - Text written in the select to explicit the differents values.
+- `onClick` - Function fired when an element of the dropdown is selected. Return the state in parameter.
 
 | propName        | propType | defaultValue | isRequired |
 | --------------- | :------: | :----------: | :--------: |
-| `title`         | `string` |    `null`    |     -      |
 | `prefix`        | `string` |    `null`    |     -      |
 | `selectedValue` | `string` |    `null`    |     -      |
 | `show`          |  `bool`  |   `false`    |     -      |
+| `placeholder`   | `string` |    `null`    |     -      |
+| `onClick`       |  `func`  |    `null`    |     -      |
 
 ### Example
 
@@ -29,7 +31,7 @@ import { Select } from '@tillersystems/stardust';
 
 render() {
   return (
-    <Select title="menu">
+    <Select>
       <option value="home">Home</option>
       <option value="calendar">Calendar</option>
       <option value="settings">Settings</option>

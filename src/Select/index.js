@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Title, Container, Dropdown, Aside, Prefix } from './elements';
+import { Container, Dropdown, Aside, Prefix, Placeholder } from './elements';
 import Option from './Option';
 import posed, { PoseGroup } from 'react-pose';
 
@@ -13,40 +13,47 @@ class Select extends PureComponent {
   /** Prop types. */
   static propTypes = {
     children: PropTypes.node,
-    title: PropTypes.string,
     prefix: PropTypes.string,
     selectedValue: PropTypes.string,
     show: PropTypes.bool,
+    placeholder: PropTypes.string,
+    onClick: PropTypes.func,
   };
 
   /** Default props. */
   static defaultProps = {
     children: null,
-    title: null,
     prefix: null,
     selectedValue: null,
     show: false,
+    placeholder: null,
+    onClick: null,
   };
 
   /** Internal state. */
   state = {
     value: '',
     showed: false,
+    text: '',
   };
 
   /**
    * Handles mounting in component's lifecycle.
    */
   componentDidMount() {
-    const { children, show, selectedValue } = this.props;
+    const { children, show, selectedValue, placeholder } = this.props;
 
-    if (selectedValue !== null) {
-      const selectedChild = children.filter(child => child.props.value === selectedValue);
-      const { children: c, aside } = selectedChild[0].props;
-      this.handleClick(c, aside);
+    if (placeholder !== null) {
+      this.handleClick(placeholder, '', null);
     } else {
-      const { children: c, aside } = children[0].props;
-      this.handleClick(c, aside);
+      if (selectedValue !== null) {
+        const selectedChild = children.filter(child => child.props.value === selectedValue);
+        const { children: c, value, aside } = selectedChild[0].props;
+        this.handleClick(c, value, aside);
+      } else {
+        const { children: c, value, aside } = children[0].props;
+        this.handleClick(c, value, aside);
+      }
     }
 
     if (show !== null) {
@@ -65,11 +72,11 @@ class Select extends PureComponent {
     if (selectedValue !== prevProps.selectedValue) {
       if (selectedValue !== null) {
         const selectedChild = children.filter(child => child.props.value === selectedValue);
-        const { children: c, aside } = selectedChild[0].props;
-        this.handleClick(c, aside);
+        const { children: c, value, aside } = selectedChild[0].props;
+        this.handleClick(c, value, aside);
       } else {
-        const { children: c, aside } = children[0].props;
-        this.handleClick(c, aside);
+        const { children: c, value, aside } = children[0].props;
+        this.handleClick(c, value, aside);
       }
     }
 
@@ -78,16 +85,27 @@ class Select extends PureComponent {
     }
   }
 
-  handleClick = (val, aside) => {
-    this.setState({
-      value: val,
-      aside: aside,
-    });
+  handleClick = (text, val, aside) => {
+    const { onClick } = this.props;
+    this.setState(
+      {
+        text: text,
+        value: val,
+        aside: aside,
+      },
+      () => onClick && onClick(this.state),
+    );
   };
 
   toggleShow = () => {
     const { showed } = this.state;
     this.setState({ showed: !showed });
+  };
+
+  handleHide = e => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      this.setState({ showed: false });
+    }
   };
 
   /**
@@ -96,8 +114,8 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, title, prefix } = this.props;
-    const { value, showed, aside } = this.state;
+    const { children, prefix } = this.props;
+    const { value, text, showed, aside } = this.state;
 
     // const options = React.Children.map(children, option => option);
     const optionsCustom = React.Children.map(children, option => (
@@ -110,20 +128,14 @@ class Select extends PureComponent {
       </Select.Option>
     ));
     return (
-      <Wrapper>
-        <Title>{title}</Title>
-        <Container onClick={this.toggleShow}>
-          {prefix && <Prefix>{prefix}</Prefix>}
-          {aside && <Aside>{aside}</Aside>}
-          {value}
-          <PoseGroup>
-            {showed && (
-              <DropdownAnimation key="DropdownAnimation">{optionsCustom}</DropdownAnimation>
-            )}
-          </PoseGroup>
-          <select defaultValue={value}>{children}</select>
-        </Container>
-      </Wrapper>
+      <Container tabIndex="0" onClick={this.toggleShow} onBlur={this.handleHide}>
+        {prefix && <Prefix>{prefix}</Prefix>}
+        {aside && <Aside>{aside}</Aside>}
+        {value === '' ? <Placeholder>{text}</Placeholder> : text}
+        <PoseGroup>
+          {showed && <DropdownAnimation key="DropdownAnimation">{optionsCustom}</DropdownAnimation>}
+        </PoseGroup>
+      </Container>
     );
   }
 }

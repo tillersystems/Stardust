@@ -6,87 +6,65 @@ exports[`<Select /> should render without a problem 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
 }
 
 <div
   className="c0"
+  onBlur={[Function]}
+  onClick={[Function]}
+  tabIndex="0"
 >
-  <styled.h4>
-    menu
-  </styled.h4>
-  <styled.div
-    onClick={[Function]}
-  >
-    Home
-    <PoseGroup
-      flipMove={true}
-    />
-    <select
-      defaultValue="Home"
-    >
-      <option
-        value="home"
-      >
-        Home
-      </option>
-      <option
-        value="calendar"
-      >
-        Calendar
-      </option>
-      <option
-        value="settings"
-      >
-        Settings
-      </option>
-      <option
-        aside={
-          <Styled(Icon)
-            color="hsl(207,13%,45%)"
-            name="home"
-          />
-        }
-        value="user"
-      >
-        User
-      </option>
-    </select>
-  </styled.div>
+  Home
+  <PoseGroup
+    flipMove={true}
+  />
 </div>
 `;
 
 exports[`<Select /> should render without a problem when dropdown is open 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-}
-
 .c1 {
-  color: hsl(213,17%,20%);
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.8rem;
-  text-transform: uppercase;
-  padding-bottom: 0.6rem;
-}
-
-.c3 {
   border: 1px solid hsl(207,22%,90%);
   border-radius: 4px;
   position: absolute;
@@ -102,7 +80,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   transform-origin: 50% 0%;
 }
 
-.c2 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,8 +88,8 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   cursor: pointer;
   text-align: left;
   padding: 0.8rem 1.2rem;
-  height: 3.8rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 4px;
   background-color: hsl(0,100%,100%);
@@ -121,7 +99,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   position: relative;
 }
 
-.c2::after {
+.c0::after {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -134,7 +112,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   border-bottom: 3px solid hsl(207,13%,45%);
 }
 
-.c2::before {
+.c0::before {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -147,11 +125,11 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   border-top: 3px solid hsl(207,13%,45%);
 }
 
-.c2 > select {
+.c0 > select {
   display: none;
 }
 
-.c4 {
+.c2 {
   padding: 0.8rem 1.6rem;
   cursor: pointer;
   display: -webkit-box;
@@ -165,15 +143,15 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   box-shadow: 0 1px 0 0 hsl(207,22%,90%);
 }
 
-.c4:last-of-type {
+.c2:last-of-type {
   box-shadow: none;
 }
 
-.c5 {
+.c3 {
   padding-right: 0.8rem;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
   border-image-source: none;
   border-image-width: 0;
@@ -184,246 +162,273 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
 
 <Select
   id="select"
+  onClick={null}
+  placeholder={null}
   prefix={null}
   selectedValue={null}
   show={false}
-  title="menu"
 >
-  <styled.div>
+  <styled.div
+    onBlur={[Function]}
+    onClick={[Function]}
+    tabIndex="0"
+  >
     <div
       className="c0"
+      onBlur={[Function]}
+      onClick={[Function]}
+      tabIndex="0"
     >
-      <styled.h4>
-        <h4
-          className="c1"
-        >
-          menu
-        </h4>
-      </styled.h4>
-      <styled.div
-        onClick={[Function]}
+      Home
+      <PoseGroup
+        flipMove={true}
       >
-        <div
-          className="c2"
-          onClick={[Function]}
+        <Transition
+          enterAfterExit={false}
+          enterPose="enter"
+          exitPose="exit"
+          flipMove={true}
+          preEnterPose="exit"
         >
-          Home
-          <PoseGroup
-            flipMove={true}
+          <Component
+            _pose="enter"
+            initialPose="exit"
+            key="DropdownAnimation"
           >
-            <Transition
-              enterAfterExit={false}
-              enterPose="enter"
-              exitPose="exit"
-              flipMove={true}
-              preEnterPose="exit"
+            <PoseElement
+              _pose="enter"
+              elementType={[Function]}
+              initialPose="exit"
+              poseConfig={
+                Object {
+                  "enter": Object {
+                    "opacity": 1,
+                    "scaleY": 1,
+                  },
+                  "exit": Object {
+                    "opacity": 0,
+                    "scaleY": 0,
+                    "transition": Object {
+                      "opacity": Object {
+                        "duration": 250,
+                        "ease": "easeOut",
+                      },
+                    },
+                  },
+                }
+              }
             >
-              <Component
-                _pose="enter"
-                initialPose="exit"
-                key="DropdownAnimation"
+              <styled.ul
+                hostRef={[Function]}
+                innerRef={[Function]}
               >
-                <PoseElement
-                  _pose="enter"
-                  elementType={[Function]}
-                  initialPose="exit"
-                  poseConfig={
-                    Object {
-                      "enter": Object {
-                        "opacity": 1,
-                        "scaleY": 1,
-                      },
-                      "exit": Object {
-                        "opacity": 0,
-                        "scaleY": 0,
-                        "transition": Object {
-                          "opacity": Object {
-                            "duration": 250,
-                            "ease": "easeOut",
-                          },
-                        },
-                      },
-                    }
-                  }
+                <ul
+                  className="c1"
                 >
-                  <styled.ul
-                    hostRef={[Function]}
-                    innerRef={[Function]}
+                  <Option
+                    aside={null}
+                    key=".0"
+                    onClick={[Function]}
+                    value="home"
                   >
-                    <ul
-                      className="c3"
+                    <styled.li
+                      onClick={[Function]}
+                      value="home"
                     >
-                      <Option
-                        aside={null}
-                        key=".0"
+                      <li
+                        className="c2"
                         onClick={[Function]}
                         value="home"
                       >
-                        <styled.li
-                          onClick={[Function]}
-                          value="home"
-                        >
-                          <li
-                            className="c4"
-                            onClick={[Function]}
-                            value="home"
-                          >
-                            Home
-                          </li>
-                        </styled.li>
-                      </Option>
-                      <Option
-                        aside={null}
-                        key=".1"
+                        Home
+                      </li>
+                    </styled.li>
+                  </Option>
+                  <Option
+                    aside={null}
+                    key=".1"
+                    onClick={[Function]}
+                    value="calendar"
+                  >
+                    <styled.li
+                      onClick={[Function]}
+                      value="calendar"
+                    >
+                      <li
+                        className="c2"
                         onClick={[Function]}
                         value="calendar"
                       >
-                        <styled.li
-                          onClick={[Function]}
-                          value="calendar"
-                        >
-                          <li
-                            className="c4"
-                            onClick={[Function]}
-                            value="calendar"
-                          >
-                            Calendar
-                          </li>
-                        </styled.li>
-                      </Option>
-                      <Option
-                        aside={null}
-                        key=".2"
+                        Calendar
+                      </li>
+                    </styled.li>
+                  </Option>
+                  <Option
+                    aside={null}
+                    key=".2"
+                    onClick={[Function]}
+                    value="settings"
+                  >
+                    <styled.li
+                      onClick={[Function]}
+                      value="settings"
+                    >
+                      <li
+                        className="c2"
                         onClick={[Function]}
                         value="settings"
                       >
-                        <styled.li
-                          onClick={[Function]}
-                          value="settings"
-                        >
-                          <li
-                            className="c4"
-                            onClick={[Function]}
-                            value="settings"
-                          >
-                            Settings
-                          </li>
-                        </styled.li>
-                      </Option>
-                      <Option
-                        aside={
-                          <Styled(Icon)
-                            color="hsl(207,13%,45%)"
-                            name="home"
-                          />
-                        }
-                        key=".3"
+                        Settings
+                      </li>
+                    </styled.li>
+                  </Option>
+                  <Option
+                    aside={
+                      <Styled(Icon)
+                        color="hsl(207,13%,45%)"
+                        name="home"
+                      />
+                    }
+                    key=".3"
+                    onClick={[Function]}
+                    value="user"
+                  >
+                    <styled.li
+                      onClick={[Function]}
+                      value="user"
+                    >
+                      <li
+                        className="c2"
                         onClick={[Function]}
                         value="user"
                       >
-                        <styled.li
-                          onClick={[Function]}
-                          value="user"
-                        >
-                          <li
-                            className="c4"
-                            onClick={[Function]}
-                            value="user"
+                        <styled.span>
+                          <span
+                            className="c3"
                           >
-                            <styled.span>
-                              <span
-                                className="c5"
+                            <Styled(Icon)
+                              color="hsl(207,13%,45%)"
+                              name="home"
+                            >
+                              <Icon
+                                className=""
+                                color="hsl(207,13%,45%)"
+                                height="20"
+                                name="home"
+                                spin={false}
+                                width="20"
                               >
-                                <Styled(Icon)
-                                  color="hsl(207,13%,45%)"
-                                  name="home"
+                                <styled.div
+                                  height="20"
+                                  spin={false}
+                                  width="20"
                                 >
-                                  <Icon
-                                    className=""
-                                    color="hsl(207,13%,45%)"
+                                  <div
+                                    className="c4"
                                     height="20"
-                                    name="home"
-                                    spin={false}
                                     width="20"
                                   >
-                                    <styled.div
+                                    <svg
                                       height="20"
-                                      spin={false}
+                                      style={
+                                        Object {
+                                          "display": "block",
+                                        }
+                                      }
+                                      viewBox="0 0 512 512"
                                       width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
                                     >
-                                      <div
-                                        className="c6"
-                                        height="20"
-                                        width="20"
-                                      >
-                                        <svg
-                                          height="20"
-                                          style={
-                                            Object {
-                                              "display": "block",
-                                            }
-                                          }
-                                          viewBox="0 0 512 512"
-                                          width="20"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
-                                            fill="hsl(207,13%,45%)"
-                                            fillRule="evenodd"
-                                          />
-                                        </svg>
-                                      </div>
-                                    </styled.div>
-                                  </Icon>
-                                </Styled(Icon)>
-                              </span>
-                            </styled.span>
-                            User
-                          </li>
-                        </styled.li>
-                      </Option>
-                    </ul>
-                  </styled.ul>
-                </PoseElement>
-              </Component>
-            </Transition>
-          </PoseGroup>
-          <select
-            defaultValue="Home"
-          >
-            <option
-              value="home"
-            >
-              Home
-            </option>
-            <option
-              value="calendar"
-            >
-              Calendar
-            </option>
-            <option
-              value="settings"
-            >
-              Settings
-            </option>
-            <option
-              aside={
-                <Styled(Icon)
-                  color="hsl(207,13%,45%)"
-                  name="home"
-                />
-              }
-              value="user"
-            >
-              User
-            </option>
-          </select>
-        </div>
-      </styled.div>
+                                      <path
+                                        d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
+                                        fill="hsl(207,13%,45%)"
+                                        fillRule="evenodd"
+                                      />
+                                    </svg>
+                                  </div>
+                                </styled.div>
+                              </Icon>
+                            </Styled(Icon)>
+                          </span>
+                        </styled.span>
+                        User
+                      </li>
+                    </styled.li>
+                  </Option>
+                </ul>
+              </styled.ul>
+            </PoseElement>
+          </Component>
+        </Transition>
+      </PoseGroup>
     </div>
   </styled.div>
 </Select>
+`;
+
+exports[`<Select /> should render without a problem when placeholder is set 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
+}
+
+<div
+  className="c0"
+  onBlur={[Function]}
+  onClick={[Function]}
+  tabIndex="0"
+>
+  <styled.span>
+    Choose your menu
+  </styled.span>
+  <PoseGroup
+    flipMove={true}
+  />
+</div>
 `;
 
 exports[`<Select /> should render without a problem when props is set 1`] = `
@@ -432,101 +437,102 @@ exports[`<Select /> should render without a problem when props is set 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
 }
 
 <div
   className="c0"
+  onBlur={[Function]}
+  onClick={[Function]}
+  tabIndex="0"
 >
-  <styled.h4>
-    menu
-  </styled.h4>
-  <styled.div
-    onClick={[Function]}
+  Calendar
+  <PoseGroup
+    flipMove={true}
   >
-    Calendar
-    <PoseGroup
-      flipMove={true}
+    <Component
+      key="DropdownAnimation"
     >
-      <Component
-        key="DropdownAnimation"
-      >
-        <Option
-          aside={null}
-          key=".0"
-          onClick={[Function]}
-          value="home"
-        >
-          Home
-        </Option>
-        <Option
-          aside={null}
-          key=".1"
-          onClick={[Function]}
-          value="calendar"
-        >
-          Calendar
-        </Option>
-        <Option
-          aside={null}
-          key=".2"
-          onClick={[Function]}
-          value="settings"
-        >
-          Settings
-        </Option>
-        <Option
-          aside={
-            <Styled(Icon)
-              color="hsl(207,13%,45%)"
-              name="home"
-            />
-          }
-          key=".3"
-          onClick={[Function]}
-          value="user"
-        >
-          User
-        </Option>
-      </Component>
-    </PoseGroup>
-    <select
-      defaultValue="Calendar"
-    >
-      <option
+      <Option
+        aside={null}
+        key=".0"
+        onClick={[Function]}
         value="home"
       >
         Home
-      </option>
-      <option
+      </Option>
+      <Option
+        aside={null}
+        key=".1"
+        onClick={[Function]}
         value="calendar"
       >
         Calendar
-      </option>
-      <option
+      </Option>
+      <Option
+        aside={null}
+        key=".2"
+        onClick={[Function]}
         value="settings"
       >
         Settings
-      </option>
-      <option
+      </Option>
+      <Option
         aside={
           <Styled(Icon)
             color="hsl(207,13%,45%)"
             name="home"
           />
         }
+        key=".3"
+        onClick={[Function]}
         value="user"
       >
         User
-      </option>
-    </select>
-  </styled.div>
+      </Option>
+    </Component>
+  </PoseGroup>
 </div>
 `;
 
@@ -536,59 +542,60 @@ exports[`<Select /> should render without a problem when props selectedValue is 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
 }
 
 <div
   className="c0"
+  onBlur={[Function]}
+  onClick={[Function]}
+  tabIndex="0"
 >
-  <styled.h4>
-    menu
-  </styled.h4>
-  <styled.div
-    onClick={[Function]}
-  >
-    Home
-    <PoseGroup
-      flipMove={true}
-    />
-    <select
-      defaultValue="Home"
-    >
-      <option
-        value="home"
-      >
-        Home
-      </option>
-      <option
-        value="calendar"
-      >
-        Calendar
-      </option>
-      <option
-        value="settings"
-      >
-        Settings
-      </option>
-      <option
-        aside={
-          <Styled(Icon)
-            color="hsl(207,13%,45%)"
-            name="home"
-          />
-        }
-        value="user"
-      >
-        User
-      </option>
-    </select>
-  </styled.div>
+  Home
+  <PoseGroup
+    flipMove={true}
+  />
 </div>
 `;
 
@@ -598,100 +605,434 @@ exports[`<Select /> should render without a problem when settings is preselected
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
 }
 
 <div
   className="c0"
+  onBlur={[Function]}
+  onClick={[Function]}
+  tabIndex="0"
 >
-  <styled.h4>
-    menu
-  </styled.h4>
-  <styled.div
-    onClick={[Function]}
+  Settings
+  <PoseGroup
+    flipMove={true}
   >
-    Settings
-    <PoseGroup
-      flipMove={true}
+    <Component
+      key="DropdownAnimation"
     >
-      <Component
-        key="DropdownAnimation"
-      >
-        <Option
-          aside={null}
-          key=".0"
-          onClick={[Function]}
-          value="home"
-        >
-          Home
-        </Option>
-        <Option
-          aside={null}
-          key=".1"
-          onClick={[Function]}
-          value="calendar"
-        >
-          Calendar
-        </Option>
-        <Option
-          aside={null}
-          key=".2"
-          onClick={[Function]}
-          value="settings"
-        >
-          Settings
-        </Option>
-        <Option
-          aside={
-            <Styled(Icon)
-              color="hsl(207,13%,45%)"
-              name="home"
-            />
-          }
-          key=".3"
-          onClick={[Function]}
-          value="user"
-        >
-          User
-        </Option>
-      </Component>
-    </PoseGroup>
-    <select
-      defaultValue="Settings"
-    >
-      <option
+      <Option
+        aside={null}
+        key=".0"
+        onClick={[Function]}
         value="home"
       >
         Home
-      </option>
-      <option
+      </Option>
+      <Option
+        aside={null}
+        key=".1"
+        onClick={[Function]}
         value="calendar"
       >
         Calendar
-      </option>
-      <option
+      </Option>
+      <Option
+        aside={null}
+        key=".2"
+        onClick={[Function]}
         value="settings"
       >
         Settings
-      </option>
-      <option
+      </Option>
+      <Option
         aside={
           <Styled(Icon)
             color="hsl(207,13%,45%)"
             name="home"
           />
         }
+        key=".3"
+        onClick={[Function]}
         value="user"
       >
         User
-      </option>
-    </select>
-  </styled.div>
+      </Option>
+    </Component>
+  </PoseGroup>
+</div>
+`;
+
+exports[`<Select /> should render without a problem when the dropdown is open and get closed 1`] = `
+.c1 {
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  position: absolute;
+  list-style: none;
+  top: calc(100% + 0.4rem);
+  background-color: hsl(0,100%,100%);
+  width: 100%;
+  left: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  height: 100%;
+  width: 100%;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 4px;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
+  color: hsl(213,17%,20%);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c0 > select {
+  display: none;
+}
+
+.c2 {
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: 0 1px 0 0 hsl(207,22%,90%);
+}
+
+.c2:last-of-type {
+  box-shadow: none;
+}
+
+.c3 {
+  padding-right: 0.8rem;
+}
+
+.c4 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+<div>
+  <div
+    id="hide"
+  >
+    Hide dropdown
+  </div>
+  <Select
+    id="select"
+    onClick={null}
+    placeholder={null}
+    prefix={null}
+    selectedValue={null}
+    show={false}
+  >
+    <styled.div
+      onBlur={[Function]}
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <div
+        className="c0"
+        onBlur={[Function]}
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        Home
+        <PoseGroup
+          flipMove={true}
+        >
+          <Transition
+            enterAfterExit={false}
+            enterPose="enter"
+            exitPose="exit"
+            flipMove={true}
+            preEnterPose="exit"
+          >
+            <Component
+              _pose="exit"
+              initialPose="exit"
+              key="DropdownAnimation"
+              onPoseComplete={[Function]}
+              popFromFlow={true}
+            >
+              <PoseElement
+                _pose="exit"
+                elementType={[Function]}
+                initialPose="exit"
+                onPoseComplete={[Function]}
+                popFromFlow={true}
+                poseConfig={
+                  Object {
+                    "enter": Object {
+                      "opacity": 1,
+                      "scaleY": 1,
+                    },
+                    "exit": Object {
+                      "opacity": 0,
+                      "scaleY": 0,
+                      "transition": Object {
+                        "opacity": Object {
+                          "duration": 250,
+                          "ease": "easeOut",
+                        },
+                      },
+                    },
+                  }
+                }
+              >
+                <styled.ul
+                  hostRef={[Function]}
+                  innerRef={[Function]}
+                  style={
+                    Object {
+                      "height": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": 0,
+                    }
+                  }
+                >
+                  <ul
+                    className="c1"
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": 0,
+                      }
+                    }
+                  >
+                    <Option
+                      aside={null}
+                      key=".0"
+                      onClick={[Function]}
+                      value="home"
+                    >
+                      <styled.li
+                        onClick={[Function]}
+                        value="home"
+                      >
+                        <li
+                          className="c2"
+                          onClick={[Function]}
+                          value="home"
+                        >
+                          Home
+                        </li>
+                      </styled.li>
+                    </Option>
+                    <Option
+                      aside={null}
+                      key=".1"
+                      onClick={[Function]}
+                      value="calendar"
+                    >
+                      <styled.li
+                        onClick={[Function]}
+                        value="calendar"
+                      >
+                        <li
+                          className="c2"
+                          onClick={[Function]}
+                          value="calendar"
+                        >
+                          Calendar
+                        </li>
+                      </styled.li>
+                    </Option>
+                    <Option
+                      aside={null}
+                      key=".2"
+                      onClick={[Function]}
+                      value="settings"
+                    >
+                      <styled.li
+                        onClick={[Function]}
+                        value="settings"
+                      >
+                        <li
+                          className="c2"
+                          onClick={[Function]}
+                          value="settings"
+                        >
+                          Settings
+                        </li>
+                      </styled.li>
+                    </Option>
+                    <Option
+                      aside={
+                        <Styled(Icon)
+                          color="hsl(207,13%,45%)"
+                          name="home"
+                        />
+                      }
+                      key=".3"
+                      onClick={[Function]}
+                      value="user"
+                    >
+                      <styled.li
+                        onClick={[Function]}
+                        value="user"
+                      >
+                        <li
+                          className="c2"
+                          onClick={[Function]}
+                          value="user"
+                        >
+                          <styled.span>
+                            <span
+                              className="c3"
+                            >
+                              <Styled(Icon)
+                                color="hsl(207,13%,45%)"
+                                name="home"
+                              >
+                                <Icon
+                                  className=""
+                                  color="hsl(207,13%,45%)"
+                                  height="20"
+                                  name="home"
+                                  spin={false}
+                                  width="20"
+                                >
+                                  <styled.div
+                                    height="20"
+                                    spin={false}
+                                    width="20"
+                                  >
+                                    <div
+                                      className="c4"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg
+                                        height="20"
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        viewBox="0 0 512 512"
+                                        width="20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
+                                          fill="hsl(207,13%,45%)"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </styled.div>
+                                </Icon>
+                              </Styled(Icon)>
+                            </span>
+                          </styled.span>
+                          User
+                        </li>
+                      </styled.li>
+                    </Option>
+                  </ul>
+                </styled.ul>
+              </PoseElement>
+            </Component>
+          </Transition>
+        </PoseGroup>
+      </div>
+    </styled.div>
+  </Select>
+  ,
 </div>
 `;
