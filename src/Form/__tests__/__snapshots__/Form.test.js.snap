@@ -53,10 +53,11 @@ exports[`<Form /> should render form block without a problem 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -458,10 +459,11 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -875,10 +877,11 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -1287,10 +1290,11 @@ exports[`<Form /> should render form row without a problem 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -1705,10 +1709,11 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -2000,16 +2005,16 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
-  color: hsl(200,74%,46%);
-  font-weight: 600;
+  color: hsl(213,17%,20%);
 }
 
 .c5 {
@@ -2298,10 +2303,11 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -2593,10 +2599,11 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -3026,10 +3033,11 @@ exports[`<Form /> should render form with size value 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -3803,10 +3811,11 @@ exports[`<Form /> should render withouth a problem 1`] = `
 .c4 {
   width: 10rem;
   min-height: 1.4rem;
-  color: hsl(206,16%,60%);
+  color: hsl(213,17%,20%);
   text-align: left;
-  font-weight: 400;
-  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
