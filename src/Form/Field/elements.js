@@ -60,19 +60,20 @@ export const Label = styled.label`
     },
   }) => size.medium};
 
-  color: ${({ theme: { palette } }) => palette.darkGrey};
+  color: ${({ theme: { palette } }) => palette.darkBlue};
   text-align: left;
 
+  text-transform: uppercase;
   font-weight: ${({
     theme: {
       fonts: { weight },
     },
-  }) => weight.normal};
+  }) => weight.thick};
   font-size: ${({
     theme: {
       fonts: { size },
     },
-  }) => size.medium};
+  }) => size.default};
   line-height: ${({
     theme: {
       fonts: { size },
@@ -93,12 +94,7 @@ export const Label = styled.label`
   ${({ hasFocus }) =>
     hasFocus &&
     css`
-      color: ${({ theme: { palette } }) => palette.primary.default};
-      font-weight: ${({
-        theme: {
-          fonts: { weight },
-        },
-      }) => weight.thick};
+      color: ${({ theme: { palette } }) => palette.darkBlue};
     `};
 `;
 
