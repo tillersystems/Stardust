@@ -1,3 +1,11 @@
+<a name="1.7.0"></a>
+
+# [1.7.0](https://github.com/tillersystems/Stardust/compare/v1.6.0...v1.7.0) (2018-10-17)
+
+### Features
+
+- **icon:** add question mark icon ([4673535](https://github.com/tillersystems/Stardust/commit/4673535))
+
 <a name="1.6.0"></a>
 
 # [1.6.0](https://github.com/tillersystems/Stardust/compare/v1.5.0...v1.6.0) (2018-10-16)
