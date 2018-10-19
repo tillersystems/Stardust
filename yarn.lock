@@ -4665,7 +4665,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framesync@^3.1.8, framesync@^3.1.9:
+framesync@^3.1.8:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
 
@@ -7437,34 +7437,23 @@ polished@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.0.tgz#f9f34a6efe1dd66eca540bb41a6b7058ae9b4fa7"
 
-popmotion-pose@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.3.0.tgz#6df7843cbb5fee81f8d8977b0233b051247c2f4d"
+popmotion-pose@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.3.2.tgz#d5d3b888a98875f83bbd2c15ebeda07d48a14e5c"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     hey-listen "^1.0.5"
-    popmotion "^8.3.7"
+    popmotion "^8.4.0"
     pose-core "^2.0.0"
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.4.1:
+popmotion@8.4.1, popmotion@^8.4.0:
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.4.1.tgz#6d4c9a73012c09de5fbf6d503cd45feb0fa80d4d"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^4.0.0"
-    hey-listen "^1.0.5"
-    style-value-types "^3.0.6"
-    stylefire "^2.0.7"
-    tslib "^1.9.1"
-
-popmotion@^8.3.7:
-  version "8.3.8"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
-  dependencies:
-    "@popmotion/easing" "^1.0.1"
-    framesync "^3.1.9"
     hey-listen "^1.0.5"
     style-value-types "^3.0.6"
     stylefire "^2.0.7"
@@ -8172,13 +8161,13 @@ react-portal@^4.1.5:
   dependencies:
     prop-types "^15.5.8"
 
-react-pose@3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.3.6.tgz#c7f1b8240248414622924226d14000c4c5cdaee8"
+react-pose@3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-3.3.7.tgz#0938d0661681208c2fb9716af48ccfcf8dab77ba"
   dependencies:
     "@emotion/is-prop-valid" "^0.6.5"
     hey-listen "^1.0.5"
-    popmotion-pose "^3.3.0"
+    popmotion-pose "^3.3.2"
     react-is "^16.5.1"
     tslib "^1.9.1"
 
