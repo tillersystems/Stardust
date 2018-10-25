@@ -1,3 +1,12 @@
+<a name="1.8.0"></a>
+
+# [1.8.0](https://github.com/tillersystems/Stardust/compare/v1.7.0...v1.8.0) (2018-10-25)
+
+### Features
+
+- **icon:** add chevron-down & chevron-left icons ([#172](https://github.com/tillersystems/Stardust/issues/172)) ([19dba10](https://github.com/tillersystems/Stardust/commit/19dba10))
+- **Icon:** update info exclamation-mark & question-mark ([db3770c](https://github.com/tillersystems/Stardust/commit/db3770c))
+
 <a name="1.7.0"></a>
 
 # [1.7.0](https://github.com/tillersystems/Stardust/compare/v1.6.0...v1.7.0) (2018-10-17)
