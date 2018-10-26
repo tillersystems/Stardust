@@ -34,7 +34,7 @@ class Select extends PureComponent {
   state = {
     value: '',
     showed: false,
-    text: '',
+    placeholder: '',
   };
 
   /**
@@ -85,11 +85,11 @@ class Select extends PureComponent {
     }
   }
 
-  handleClick = (text, val, aside) => {
+  handleClick = (placeholder, val, aside) => {
     const { onClick } = this.props;
     this.setState(
       {
-        text: text,
+        placeholder: placeholder,
         value: val,
         aside: aside,
       },
@@ -115,7 +115,7 @@ class Select extends PureComponent {
    */
   render() {
     const { children, prefix } = this.props;
-    const { value, text, showed, aside } = this.state;
+    const { value, placeholder, showed, aside } = this.state;
 
     // const options = React.Children.map(children, option => option);
     const optionsCustom = React.Children.map(children, option => (
@@ -131,7 +131,7 @@ class Select extends PureComponent {
       <Container tabIndex="0" onClick={this.toggleShow} onBlur={this.handleHide}>
         {prefix && <Prefix>{prefix}</Prefix>}
         {aside && <Aside>{aside}</Aside>}
-        {value === '' ? <Placeholder>{text}</Placeholder> : text}
+        {value === '' ? <Placeholder>{placeholder}</Placeholder> : placeholder}
         <PoseGroup>
           {showed && <DropdownAnimation key="DropdownAnimation">{optionsCustom}</DropdownAnimation>}
         </PoseGroup>
