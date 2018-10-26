@@ -90,12 +90,6 @@ export const Label = styled.label`
       margin-right: 0.5rem;
       margin-left: 0;
     `};
-
-  ${({ hasFocus }) =>
-    hasFocus &&
-    css`
-      color: ${({ theme: { palette } }) => palette.darkBlue};
-    `};
 `;
 
 export const ElementContainer = styled.div`

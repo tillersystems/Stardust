@@ -2014,7 +2014,6 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
-  color: hsl(213,17%,20%);
 }
 
 .c5 {
