@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { stripUnit } from 'polished';
 
 export const Container = styled.div`
   display: flex;
@@ -30,10 +31,10 @@ export const Dialog = styled.dialog`
   height: ${({ height }) => height};
   width: ${({ width }) => width};
 
-  left: 50% !important;
-  top: 50% !important;
-  margin-left: ${({ width }) => `calc(-${width} / 2)`};
-  margin-top: ${({ height }) => `calc(-${height} / 2)`};
+  ${({ width, height }) => `
+    left: calc(50% - ${stripUnit(width) / 2}rem);
+    top: calc(50% - ${stripUnit(height) / 2}rem);
+  `}
 
   padding: 0 ${({ theme: { dimensions } }) => dimensions.medium};
 

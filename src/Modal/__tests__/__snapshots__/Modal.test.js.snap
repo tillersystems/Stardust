@@ -237,10 +237,8 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   flex-direction: column;
   height: 35rem;
   width: 50rem;
-  left: 50% !important;
-  top: 50% !important;
-  margin-left: calc(-50rem / 2);
-  margin-top: calc(-35rem / 2);
+  left: calc(50% - 25rem);
+  top: calc(50% - 17.5rem);
   padding: 0 1.5rem;
   color: hsl(213,17%,20%);
   font-size: 1.4rem;
@@ -357,10 +355,8 @@ exports[`<Modal /> should render open modal withouth a problem 1`] = `
   flex-direction: column;
   height: 35rem;
   width: 50rem;
-  left: 50% !important;
-  top: 50% !important;
-  margin-left: calc(-50rem / 2);
-  margin-top: calc(-35rem / 2);
+  left: calc(50% - 25rem);
+  top: calc(50% - 17.5rem);
   padding: 0 1.5rem;
   color: hsl(213,17%,20%);
   font-size: 1.4rem;
