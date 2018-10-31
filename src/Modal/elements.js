@@ -1,19 +1,12 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { stripUnit } from 'polished';
 
 export const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
-  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 
 export const Overlay = styled.div`
@@ -38,7 +31,11 @@ export const Dialog = styled.dialog`
   height: ${({ height }) => height};
   width: ${({ width }) => width};
 
-  margin: 0 auto;
+  ${({ width, height }) => `
+    left: calc(50% - ${stripUnit(width) / 2}rem);
+    top: calc(50% - ${stripUnit(height) / 2}rem);
+  `}
+
   padding: 0 ${({ theme: { dimensions } }) => dimensions.medium};
 
   color: ${({ theme: { palette } }) => palette.darkBlue};
@@ -54,7 +51,7 @@ export const Dialog = styled.dialog`
   /* For small devices */
   ${breakpoint('xs', 'sm')`
     width:90%;
-    margin: 0 auto;
+    margin-left: calc(-90% / 2)};
   `};
 `;
 

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import posed, { PoseGroup } from 'react-pose';
-import { easing, tween } from 'popmotion';
 import { Portal } from 'react-portal';
 
 /**
@@ -63,25 +62,16 @@ class Modal extends PureComponent {
     const { active, width, height, onOverlayClick, children } = this.props;
     return (
       <Portal>
-        <PoseGroup animateOnMount>
-          {active && (
-            <ContainerAnimation pose={active ? 'enter' : 'exit'} key="ContainerAnimation">
-              <Overlay onClick={onOverlayClick} />
-              <PoseGroup animateOnMount>
-                {active && (
-                  <DialogAnimation
-                    width={width}
-                    height={height}
-                    pose={active ? 'enter' : 'exit'}
-                    key="DialogAnimation"
-                  >
-                    {children}
-                  </DialogAnimation>
-                )}
-              </PoseGroup>
-            </ContainerAnimation>
-          )}
-        </PoseGroup>
+        <Container>
+          <PoseGroup>
+            {active && [
+              <OverlayAnimation onClick={onOverlayClick} key="Overlay" />,
+              <DialogAnimation width={width} height={height} key="Dialog">
+                {children}
+              </DialogAnimation>,
+            ]}
+          </PoseGroup>
+        </Container>
       </Portal>
     );
   }
@@ -90,27 +80,28 @@ class Modal extends PureComponent {
 /**
  * Animation
  */
-const tweenTransistion = props =>
-  tween({
-    ...props,
-    duration: 250,
-    ease: easing.easeOut,
-  });
-
-const ContainerAnimation = posed(Container)({
+const OverlayAnimation = posed(Overlay)({
   enter: {
     opacity: 1,
-    transition: tweenTransistion,
   },
   exit: {
     opacity: 0,
-    transition: tweenTransistion,
   },
 });
 const DialogAnimation = posed(Dialog)({
-  enter: { y: 0 },
+  enter: {
+    y: 0,
+    opacity: 1,
+    delay: 150,
+    transition: {
+      y: { type: 'spring', stiffness: 900, damping: 28 },
+      default: { duration: 150 },
+    },
+  },
   exit: {
-    y: 30,
+    y: 50,
+    opacity: 0,
+    transition: { duration: 150 },
   },
 });
 
