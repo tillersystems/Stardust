@@ -204,15 +204,22 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
                   "enter": Object {
                     "opacity": 1,
                     "scaleY": 1,
+                    "transition": Object {
+                      "default": Object {
+                        "duration": 150,
+                      },
+                      "scaleY": Object {
+                        "damping": 30,
+                        "stiffness": 900,
+                        "type": "spring",
+                      },
+                    },
                   },
                   "exit": Object {
                     "opacity": 0,
                     "scaleY": 0,
                     "transition": Object {
-                      "opacity": Object {
-                        "duration": 250,
-                        "ease": "easeOut",
-                      },
+                      "duration": 150,
                     },
                   },
                 }
@@ -658,49 +665,7 @@ exports[`<Select /> should render without a problem when settings is preselected
   Settings
   <PoseGroup
     flipMove={true}
-  >
-    <Component
-      key="DropdownAnimation"
-    >
-      <Option
-        aside={null}
-        key=".0"
-        onClick={[Function]}
-        value="home"
-      >
-        Home
-      </Option>
-      <Option
-        aside={null}
-        key=".1"
-        onClick={[Function]}
-        value="calendar"
-      >
-        Calendar
-      </Option>
-      <Option
-        aside={null}
-        key=".2"
-        onClick={[Function]}
-        value="settings"
-      >
-        Settings
-      </Option>
-      <Option
-        aside={
-          <Styled(Icon)
-            color="hsl(207,13%,45%)"
-            name="home"
-          />
-        }
-        key=".3"
-        onClick={[Function]}
-        value="user"
-      >
-        User
-      </Option>
-    </Component>
-  </PoseGroup>
+  />
 </div>
 `;
 
@@ -855,15 +820,22 @@ exports[`<Select /> should render without a problem when the dropdown is open an
                     "enter": Object {
                       "opacity": 1,
                       "scaleY": 1,
+                      "transition": Object {
+                        "default": Object {
+                          "duration": 150,
+                        },
+                        "scaleY": Object {
+                          "damping": 30,
+                          "stiffness": 900,
+                          "type": "spring",
+                        },
+                      },
                     },
                     "exit": Object {
                       "opacity": 0,
                       "scaleY": 0,
                       "transition": Object {
-                        "opacity": Object {
-                          "duration": 250,
-                          "ease": "easeOut",
-                        },
+                        "duration": 150,
                       },
                     },
                   }
