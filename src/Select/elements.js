@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-export const Title = styled.h4`
-  color: ${({ theme: { palette } }) => palette.darkBlue};
-  font-size: ${({ theme: { fonts } }) => fonts.size.default};
-  font-weight: 500;
-  line-height: 1.8rem;
-  text-transform: uppercase;
-  padding-bottom: 0.6rem;
-`;
-
 export const Dropdown = styled.ul`
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: 4px;
@@ -34,6 +19,10 @@ export const Prefix = styled.span`
   padding-right: 0.5rem;
 `;
 
+export const Placeholder = styled.span`
+  color: ${({ theme: { palette } }) => palette.darkGrey};
+`;
+
 export const Aside = styled.span`
   padding-right: 0.8rem;
 `;
@@ -43,8 +32,8 @@ export const Container = styled.div`
   cursor: pointer;
   text-align: left;
   padding: 0.8rem 1.2rem;
-  height: 3.8rem;
-  width: 15rem;
+  height: 100%;
+  width: 100%;
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: 4px;
   background-color: ${({ theme: { palette } }) => palette.white};
