@@ -4,21 +4,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { configure, addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
-import { setDefaults } from '@storybook/addon-info';
 import { withDocs } from 'storybook-readme';
 
 import styles from './styles';
 import { Theme } from '../src';
-
-setDefaults({
-  name: 'Stardust',
-  header: false,
-  inline: true,
-  source: true,
-  maxPropObjectKeys: 10000,
-  maxPropArrayLength: 10000,
-  maxPropStringLength: 10000,
-});
 
 addDecorator((story, context) => {
   const componentPath = context.kind.replace(' - ', '/');

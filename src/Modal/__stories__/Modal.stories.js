@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
-import { withKnobs, select, number, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, select, number, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Modal, Button, Icon } from '../..';
