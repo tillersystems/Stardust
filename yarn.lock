@@ -1098,6 +1098,14 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
+"@storybook/addon-options@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.0.2.tgz#76302ecbc8f8aec20026d90d850c591e5ac6bde2"
+  integrity sha512-x7tiFhVPbU5ca5lpj+5PF+Tj2PsdBb0pMUi94z6wvvh+S4+7BxTgHIqtGpQfLbgpcXXQkL/kGpEC1JYoz5QdrA==
+  dependencies:
+    "@storybook/addons" "4.0.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.2.tgz#95fa2384c122953359693849abd711a1611a9bcf"
