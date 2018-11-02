@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number, color } from '@storybook/addon-knobs/react';
+import { withKnobs, number, color } from '@storybook/addon-knobs';
 
 import { Loader } from '../..';
 import Theme from '../../Theme';
