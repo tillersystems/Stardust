@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, color, number } from '@storybook/addon-knobs/react';
+import { withKnobs, color, number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import { Icon, Theme } from '../..';

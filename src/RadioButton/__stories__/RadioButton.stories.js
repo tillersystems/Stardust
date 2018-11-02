@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 
 import { RadioButton } from '../..';
@@ -24,7 +24,6 @@ storiesOf('RadioButton', module)
           id="apple"
           name="fruit"
           value="apple"
-          onChange={this.handleChange}
         >
           apple
         </RadioButton>
@@ -49,7 +48,6 @@ storiesOf('RadioButton', module)
           id="apple"
           name="fruit"
           value="apple"
-          onChange={this.handleChange}
         >
           apple
         </RadioButton>
