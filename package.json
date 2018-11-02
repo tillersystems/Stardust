@@ -82,7 +82,7 @@
     "babel-plugin-styled-components": "1.8.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
-    "conventional-changelog-cli": "2.0.5",
+    "conventional-changelog-cli": "2.0.11",
     "cross-env": "5.2.0",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
