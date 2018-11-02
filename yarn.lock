@@ -8599,19 +8599,7 @@ popmotion-pose@^3.4.0:
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.4.1:
-  version "8.4.1"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.4.1.tgz#6d4c9a73012c09de5fbf6d503cd45feb0fa80d4d"
-  integrity sha512-j25mAl6QlGN/ErGR7dBCCvxIKQ5pSxqEwieeqvacC3ZByXy98+UnOj+vaeVlZcr2Bjl5q03xHe1gKyr4ursL1A==
-  dependencies:
-    "@popmotion/easing" "^1.0.1"
-    framesync "^4.0.0"
-    hey-listen "^1.0.5"
-    style-value-types "^3.0.6"
-    stylefire "^2.0.7"
-    tslib "^1.9.1"
-
-popmotion@^8.5.0:
+popmotion@8.5.0, popmotion@^8.5.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.0.tgz#9d5df110319990eb6ef1e16c0a5acd8d10249e76"
   integrity sha512-H/r0vbQO+Zgr4x4zmwiP2GFOCkp7UMd6A4jV66KDXenaH7+qDs+1raC+4QIEAOke/QigJaJ/W39om8vgr0pTOw==
