@@ -1,70 +1,79 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { Icon } from '..';
 import Theme from '../Theme';
-import { Wrapper, Container, Label } from './elements';
+import { BoxContainer, Label } from './elements';
 
 /**
- * Defines a checkbox component.
+ * Checkbox
+ *
+ * This component is in charge of displaying
+ * a checkbox
+ *
+ * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {string} className // Add a text aside in the select next the selected value.
+ * @param {bool} checked // Specifies whether the checkbox is selected.
+ * @param {bool} defaultChecked // Specifies the initial state: whether or not the checkbox is selected.
+ * @param {bool} disabled // Specifies whether the checkbox is disabled.
+ * @param {func} onChange // Callback fired when checkbox is triggered and state changes.
+ *
+ * @return {jsx}
  */
 class CheckBox extends PureComponent {
   /** Prop types. */
   static propTypes = {
     children: PropTypes.node,
-    id: PropTypes.string.isRequired,
+    className: PropTypes.string,
     checked: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
-    textAnnexe: PropTypes.string,
+    onChange: PropTypes.func,
   };
 
   /** Default props. */
   static defaultProps = {
     children: null,
-    checked: false,
+    className: '',
+    defaultChecked: false,
+    checked: undefined,
     disabled: false,
-    textAnnexe: null,
+    onChange: null,
   };
 
   /** Internal state. */
   state = {
-    checked: false,
+    checked: this.props.defaultChecked, // eslint-disable-line
   };
 
   /**
-   * Handles mounting in component's lifecycle.
+   * Handle Change
+   * fired when checkbox is triggered and state changes.
    */
-  componentDidMount() {
-    const { checked } = this.props;
-    /* eslint-disable react/no-did-mount-set-state */
-    this.setState({ ...this.state, checked });
-  }
+  handleChange = () => {
+    const { onChange, disabled } = this.props;
+    const checked = !this.isChecked();
+
+    if (disabled) {
+      return;
+    }
+
+    this.setState({ checked }, () => {
+      onChange && onChange;
+    });
+  };
 
   /**
-   * Handles update in component's lifecycle.
+   * isChecked
    *
-   * @param {Object} prevProps - The component's previous props.
+   * @return {boolean}
    */
-  componentDidUpdate(prevProps) {
+  isChecked() {
     const { checked } = this.props;
 
-    if (checked !== prevProps.checked) {
-      /* eslint-disable react/no-did-update-set-state */
-      this.setState({ ...this.state, checked: checked });
-    }
+    return checked || this.state.checked; // eslint-disable-line
   }
-
-  /**
-   * Handles click event on the check box.
-   */
-  handleClick = () => {
-    const { checked } = this.state;
-    const { disabled } = this.props;
-
-    if (!disabled) {
-      this.setState({ ...this.state, checked: !checked });
-    }
-  };
 
   /**
    * Renders the component.
@@ -73,29 +82,30 @@ class CheckBox extends PureComponent {
    */
   render() {
     const { checked } = this.state;
-    const { children, id, disabled, textAnnexe } = this.props;
+    const { className, children, id, defaultChecked, disabled, ...rest } = this.props;
 
     return (
-      <Wrapper textAnnexe={textAnnexe} disabled={disabled}>
-        <Container onClick={this.handleClick} checked={checked} disabled={disabled}>
-          {checked && (
-            <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
-          )}
-          <input
-            type="checkbox"
-            tabIndex="0"
-            id={id}
-            defaultChecked={checked}
-            disabled={disabled}
-          />
-        </Container>
-
-        <Label disabled={disabled} htmlFor={id} textAnnexe={textAnnexe} checked={checked}>
+      <div className={className} {...rest}>
+        <Label disabled={disabled} checked={checked}>
+          <BoxContainer checked={checked} disabled={disabled}>
+            {checked && (
+              <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
+            )}
+            <input
+              type="checkbox"
+              tabIndex={disabled ? -1 : 0}
+              defaultChecked={defaultChecked}
+              disabled={disabled}
+              onChange={this.handleChange}
+            />
+          </BoxContainer>
           {children}
         </Label>
-      </Wrapper>
+      </div>
     );
   }
 }
 
-export default CheckBox;
+export default styled(CheckBox)`
+  width: 100%;
+`;
