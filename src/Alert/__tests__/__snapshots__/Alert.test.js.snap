@@ -1,11 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Alert /> should be closable 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  background: hsl(206,16%,60%);
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  role="alert"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="info"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+  <Styled(Icon)
+    color="hsl(0, 100%, 100%)"
+    height="1.8rem"
+    name="cross"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+    width="1.8rem"
+  />
+</div>
+`;
+
 exports[`<Alert /> should render a error alert 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.3rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -17,23 +63,16 @@ exports[`<Alert /> should render a error alert 1`] = `
 
 <div
   className="c0"
+  role="alert"
 >
   <Styled(Icon)
+    aria-hidden="true"
     color="hsl(0, 100%, 100%)"
     name="exclamation-mark"
   />
   <styled.span>
     this is a message
   </styled.span>
-  <Styled(Icon)
-    color="hsl(0, 100%, 100%)"
-    height="1.8rem"
-    name="cross"
-    onClick={[Function]}
-    role="button"
-    tabIndex="0"
-    width="1.8rem"
-  />
 </div>
 `;
 
@@ -43,6 +82,10 @@ exports[`<Alert /> should render a info alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.3rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -54,23 +97,16 @@ exports[`<Alert /> should render a info alert 1`] = `
 
 <div
   className="c0"
+  role="alert"
 >
   <Styled(Icon)
+    aria-hidden="true"
     color="hsl(0, 100%, 100%)"
-    name="cog"
+    name="info"
   />
   <styled.span>
     this is a message
   </styled.span>
-  <Styled(Icon)
-    color="hsl(0, 100%, 100%)"
-    height="1.8rem"
-    name="cross"
-    onClick={[Function]}
-    role="button"
-    tabIndex="0"
-    width="1.8rem"
-  />
 </div>
 `;
 
@@ -80,6 +116,10 @@ exports[`<Alert /> should render a success alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.3rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -91,23 +131,16 @@ exports[`<Alert /> should render a success alert 1`] = `
 
 <div
   className="c0"
+  role="alert"
 >
   <Styled(Icon)
+    aria-hidden="true"
     color="hsl(0, 100%, 100%)"
     name="check-mark"
   />
   <styled.span>
     this is a message
   </styled.span>
-  <Styled(Icon)
-    color="hsl(0, 100%, 100%)"
-    height="1.8rem"
-    name="cross"
-    onClick={[Function]}
-    role="button"
-    tabIndex="0"
-    width="1.8rem"
-  />
 </div>
 `;
 
@@ -117,6 +150,10 @@ exports[`<Alert /> should render a warning alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.3rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -128,23 +165,16 @@ exports[`<Alert /> should render a warning alert 1`] = `
 
 <div
   className="c0"
+  role="alert"
 >
   <Styled(Icon)
+    aria-hidden="true"
     color="hsl(0, 100%, 100%)"
     name="exclamation-mark"
   />
   <styled.span>
     this is a message
   </styled.span>
-  <Styled(Icon)
-    color="hsl(0, 100%, 100%)"
-    height="1.8rem"
-    name="cross"
-    onClick={[Function]}
-    role="button"
-    tabIndex="0"
-    width="1.8rem"
-  />
 </div>
 `;
 
@@ -154,6 +184,10 @@ exports[`<Alert /> should render without a problem 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1.3rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -164,18 +198,15 @@ exports[`<Alert /> should render without a problem 1`] = `
 
 <div
   className="c0"
+  role="alert"
 >
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="info"
+  />
   <styled.span>
     this is a message
   </styled.span>
-  <Styled(Icon)
-    color="hsl(0, 100%, 100%)"
-    height="1.8rem"
-    name="cross"
-    onClick={[Function]}
-    role="button"
-    tabIndex="0"
-    width="1.8rem"
-  />
 </div>
 `;

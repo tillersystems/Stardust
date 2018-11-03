@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import posed, { PoseGroup } from 'react-pose';
+import { Portal } from 'react-portal';
 
 import { Icon, Theme } from '..';
-import { Message } from './elements';
+import { AlertContainer, Message } from './elements';
+import { STATUS_ICON_NAMES } from './constants';
 
 /**
  * Alert
@@ -11,101 +13,78 @@ import { Message } from './elements';
  * This component is in charge of displaying
  * an Alert for a user
  *
- * @param {string} className // className needed by styled components.
+ * @param {bool} closable // Whether it is possible to close the alert box.
  * @param {string} message // An alert can have a message description.
  * @param {func} onClose // An alert can have a clickable button to close it.
- * @param {bool} success // An Alert can be success.
- * @param {bool} info // An Alert can be info.
- * @param {bool} warning // An Alert can be warning.
- * @param {bool} error // An Alert can be error.
+ * @param {enum} type // The type of the message box.
  *
  * @return {jsx}
  */
 
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+class Alert extends Component {
+  render() {
+    const { active, type, message, closable, onClose } = this.props;
+    return (
+      <Portal>
+        <PoseGroup>
+          {active && [
+            <AlertAnimation role="alert" type={type} key="alert">
+              <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} aria-hidden="true" />
+              <Message>{message}</Message>
+              {closable && (
+                <Icon
+                  tabIndex="0"
+                  role="button"
+                  name="cross"
+                  color={Theme.palette.white}
+                  width="1.8rem"
+                  height="1.8rem"
+                  onClick={onClose}
+                />
+              )}
+            </AlertAnimation>,
+          ]}
+        </PoseGroup>
+      </Portal>
+    );
+  }
+}
 
-const Alert = ({ className, message, onClose, success, info, warning, error }) => (
-  <div className={className}>
-    {success && <Icon name="check-mark" color={Theme.palette.white} />}
-    {info && <Icon name="cog" color={Theme.palette.white} />}
-    {(warning || error) && <Icon name="exclamation-mark" color={Theme.palette.white} />}
-    <Message>{message}</Message>
-    <Icon
-      name="cross"
-      color={Theme.palette.white}
-      width="1.8rem"
-      height="1.8rem"
-      onClick={onClose}
-      role="button"
-      tabIndex="0"
-    />
-  </div>
-);
+/**
+ * Animation
+ */
+const AlertAnimation = posed(AlertContainer)({
+  enter: {
+    y: 0,
+    transition: {
+      y: { type: 'spring', stiffness: 400, damping: 35 },
+      default: { duration: 250 },
+    },
+  },
+  exit: {
+    y: -50,
+    transition: { duration: 150 },
+  },
+});
 
 /**
  * PropTypes Validation
  */
-const { bool, func, string } = PropTypes;
+const { bool, func, oneOf, string } = PropTypes;
 Alert.propTypes = {
-  className: string,
+  closable: bool,
   message: string.isRequired,
   onClose: func,
-  success: bool,
-  info: bool,
-  warning: bool,
-  error: bool,
+  type: oneOf(['success', 'info', 'warning', 'error']),
 };
 
 /**
  * Default props
  */
 Alert.defaultProps = {
-  className: '',
-  onClose: () => {},
-  success: false,
-  info: false,
-  warning: false,
-  error: false,
+  closable: false,
+  onClose: false,
+  type: 'info',
 };
 
-export default styled(Alert)`
-  display: flex;
-
-  padding: 1.3rem;
-  width: 100%;
-
-  border-radius: 0.5rem;
-
-  color: ${({ theme: { palette } }) => palette.white};
-  background: ${({ theme: { palette } }) => palette.darkGrey};
-
-  cursor: pointer;
-
-  /* success */
-  ${({ success }) =>
-    success &&
-    css`
-      background: ${({ theme: { palette } }) => palette.success.default};
-    `};
-
-  /* info */
-  ${({ info }) =>
-    info &&
-    css`
-      background: ${({ theme: { palette } }) => palette.primary.default};
-    `};
-
-  /* warning */
-  ${({ warning }) =>
-    warning &&
-    css`
-      background: ${({ theme: { palette } }) => palette.warning.default};
-    `};
-
-  /* warning */
-  ${({ error }) =>
-    error &&
-    css`
-      background: ${({ theme: { palette } }) => palette.failure.default};
-    `};
-`;
+export default Alert;

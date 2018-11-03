@@ -10,33 +10,41 @@ describe('<Alert />', () => {
     expect(render.dive()).toMatchSnapshot();
   });
 
+  it('should be closable', () => {
+    const render = shallowWithTheme(<Alert message="this is a message" closable />);
+
+    expect(render.dive()).toMatchSnapshot();
+  });
+
   it('should render a success alert', () => {
-    const render = shallowWithTheme(<Alert message="this is a message" success />);
+    const render = shallowWithTheme(<Alert message="this is a message" type="success" />);
 
     expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render a info alert', () => {
-    const render = shallowWithTheme(<Alert message="this is a message" info />);
+    const render = shallowWithTheme(<Alert message="this is a message" type="info" />);
 
     expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render a warning alert', () => {
-    const render = shallowWithTheme(<Alert message="this is a message" warning />);
+    const render = shallowWithTheme(<Alert message="this is a message" type="warning" />);
 
     expect(render.dive()).toMatchSnapshot();
   });
 
   it('should render a error alert', () => {
-    const render = shallowWithTheme(<Alert message="this is a message" error />);
+    const render = shallowWithTheme(<Alert message="this is a message" type="error" />);
 
     expect(render.dive()).toMatchSnapshot();
   });
 
-  it('should call onClode handler', () => {
+  it('should call onClose handler', () => {
     const handleOnClose = jest.fn();
-    const render = mountWithTheme(<Alert message="this is a message" onClose={handleOnClose} />);
+    const render = mountWithTheme(
+      <Alert message="this is a message" closable onClose={handleOnClose} />,
+    );
 
     render
       .find('Icon')
