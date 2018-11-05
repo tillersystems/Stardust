@@ -1,3 +1,9 @@
+## [1.8.1](https://github.com/tillersystems/Stardust/compare/v1.8.0...v1.8.1) (2018-11-05)
+
+### Bug Fixes
+
+- **test:** fix ci test ([84f8e34](https://github.com/tillersystems/Stardust/commit/84f8e34))
+
 <a name="1.8.0"></a>
 
 # [1.8.0](https://github.com/tillersystems/Stardust/compare/v1.7.0...v1.8.0) (2018-10-25)
