@@ -6,7 +6,7 @@
     "name": "Tillersystems",
     "url": "https://www.tillersystems.com/"
   },
-  "license": "MIT",
+  "license": "Apache 2.0",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
