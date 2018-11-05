@@ -16,6 +16,7 @@ export { default as Logo } from './Logo';
 export { default as Loader } from './Loader';
 export { default as Modal } from './Modal';
 export { default as Popover } from './Popover';
+export { default as Tag } from './Tag';
 export { default as Theme } from './Theme';
 export { default as ToggleButton } from './ToggleButton';
 export { default as Tooltip } from './Tooltip';
