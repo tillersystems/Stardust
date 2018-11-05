@@ -11,7 +11,7 @@
     <img src="https://badge.fury.io/js/%40tillersystems%2Fstardust.svg" alt="npm package" />
   </a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0">
-    <img src="https://camo.githubusercontent.com/bc5460ce7fb9ca29bd44d8f6210e693228dfc33e/68747470733a2f2f696d672e736869656c64732e696f2f6372617465732f6c2f72757374632d73657269616c697a652e737667" alt="Apache 2.0">
+   <img src="https://img.shields.io/badge/license-Apache%202-blue.svg" alt="Apache 2.0">
  </a>
 </p>
 
