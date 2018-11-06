@@ -1,3 +1,9 @@
+# [1.9.0](https://github.com/tillersystems/Stardust/compare/v1.8.1...v1.9.0) (2018-11-06)
+
+### Features
+
+- **Tag:** create tag component ([50eeee2](https://github.com/tillersystems/Stardust/commit/50eeee2))
+
 ## [1.8.1](https://github.com/tillersystems/Stardust/compare/v1.8.0...v1.8.1) (2018-11-05)
 
 ### Bug Fixes
