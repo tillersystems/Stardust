@@ -26,6 +26,6 @@ import { Tag } from '@tillersystems/stardust';
 import { Tag } from '@tillersystems/stardust';
 
 render() {
-  return <Tag color="red">Error</CheckBox>
+  return <Tag color="red">Error</Tag>
 }
 ```
