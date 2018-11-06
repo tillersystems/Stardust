@@ -60,7 +60,7 @@ class CheckBox extends PureComponent {
     }
 
     this.setState({ checked }, () => {
-      onChange && onChange;
+      onChange;
     });
   };
 
