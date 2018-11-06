@@ -1,6 +1,5 @@
 // Components Library entry point
 // Please respect the alphabetical order
-export { default as Alert } from './Alert';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as CheckBox } from './CheckBox';
@@ -11,6 +10,7 @@ export { default as Form } from './Form';
 export { default as Icon } from './Icon';
 export { NumberInput, TextInput } from './Input';
 export { default as KpiChart } from './KpiChart';
+export { default as Message } from './Message';
 export { default as Select } from './Select';
 export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
