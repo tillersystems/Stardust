@@ -33,7 +33,7 @@ storiesOf('CheckBox', module)
           <CheckBox
             checked={state.checked}
             disabled={!enabledValue}
-            onChange={() => store.set({ checked: !store.get('checked') })}
+            onChange={() => alert('toto') && store.set({ checked: !store.get('checked') })}
           >
             What?
           </CheckBox>

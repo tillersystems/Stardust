@@ -93,6 +93,10 @@ class CheckBox extends PureComponent {
             )}
             <input
               type="checkbox"
+              onClick={
+                // prevents clicking on the label trigging the event twice
+                event => event.stopPropagation()
+              }
               tabIndex={disabled ? -1 : 0}
               defaultChecked={defaultChecked}
               disabled={disabled}

@@ -139,6 +139,7 @@ exports[`<CheckBox /> should be checked with change 1`] = `
                 defaultChecked={false}
                 disabled={false}
                 onChange={[Function]}
+                onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
               />
@@ -236,6 +237,7 @@ exports[`<CheckBox /> should be disabled 1`] = `
                 defaultChecked={false}
                 disabled={true}
                 onChange={[Function]}
+                onClick={[Function]}
                 tabIndex={-1}
                 type="checkbox"
               />
@@ -333,6 +335,7 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
                 defaultChecked={false}
                 disabled={true}
                 onChange={[Function]}
+                onClick={[Function]}
                 tabIndex={-1}
                 type="checkbox"
               />
@@ -486,6 +489,7 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
                 defaultChecked={true}
                 disabled={false}
                 onChange={[Function]}
+                onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
               />
@@ -577,6 +581,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
                 defaultChecked={false}
                 disabled={false}
                 onChange={[Function]}
+                onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
               />
