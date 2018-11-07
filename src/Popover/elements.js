@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PopOver = styled.div`
 position: relative;
 
-width: ${({ width }) => width || 'auto'};
+width: ${({ width }) => width};
 
 padding: 1.8rem;
 
