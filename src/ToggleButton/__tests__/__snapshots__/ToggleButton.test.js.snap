@@ -1,5 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ToggleButton /> should call componentDidUpdate and setState 1`] = `
+.c1 {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+}
+
+.c2 {
+  display: inline-block;
+  position: relative;
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid hsl(200,74%,46%);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.c2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.2rem;
+  cursor: pointer;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: hsl(0,100%,100%);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
+  -webkit-transform: translateX(1.7rem);
+  -ms-transform: translateX(1.7rem);
+  transform: translateX(1.7rem);
+  will-change: transform;
+}
+
+.c2:active:before {
+  width: 3rem;
+  left: 0;
+}
+
+.c0 {
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+<FakeComponent>
+  <Styled(ToggleButton)
+    checked={true}
+    onToggle={[Function]}
+  >
+    <ToggleButton
+      checked={true}
+      className="c0"
+      disabled={false}
+      onToggle={[Function]}
+    >
+      <div
+        className="c0"
+        onClick={[Function]}
+      >
+        <styled.input
+          checked={true}
+          readOnly={true}
+          type="checkbox"
+        >
+          <input
+            checked={true}
+            className="c1"
+            readOnly={true}
+            type="checkbox"
+          />
+        </styled.input>
+        <styled.span
+          checked={true}
+          readOnly={false}
+        >
+          <span
+            checked={true}
+            className="c2"
+            readOnly={false}
+          />
+        </styled.span>
+      </div>
+    </ToggleButton>
+  </Styled(ToggleButton)>
+</FakeComponent>
+`;
+
 exports[`<ToggleButton /> should render without a problem 1`] = `
 .c0 {
   display: inline-block;
@@ -123,4 +219,95 @@ exports[`<ToggleButton /> should render without a problem when unchecked and not
     readOnly={false}
   />
 </div>
+`;
+
+exports[`<ToggleButton /> should toggle 1`] = `
+.c1 {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+}
+
+.c2 {
+  display: inline-block;
+  position: relative;
+  width: 3.8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid hsl(200,74%,46%);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.c2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.2rem;
+  cursor: pointer;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: hsl(0,100%,100%);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  -webkit-transition: -webkit-transform 250ms ease;
+  -webkit-transition: transform 250ms ease;
+  transition: transform 250ms ease;
+  -webkit-transform: translateX(1.7rem);
+  -ms-transform: translateX(1.7rem);
+  transform: translateX(1.7rem);
+  will-change: transform;
+}
+
+.c2:active:before {
+  width: 3rem;
+  left: 0;
+}
+
+.c0 {
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+<Styled(ToggleButton)>
+  <ToggleButton
+    checked={false}
+    className="c0"
+    disabled={false}
+    onToggle={null}
+  >
+    <div
+      className="c0"
+      onClick={[Function]}
+    >
+      <styled.input
+        checked={true}
+        readOnly={true}
+        type="checkbox"
+      >
+        <input
+          checked={true}
+          className="c1"
+          readOnly={true}
+          type="checkbox"
+        />
+      </styled.input>
+      <styled.span
+        checked={true}
+        readOnly={false}
+      >
+        <span
+          checked={true}
+          className="c2"
+          readOnly={false}
+        />
+      </styled.span>
+    </div>
+  </ToggleButton>
+</Styled(ToggleButton)>
 `;
