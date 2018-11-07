@@ -1280,9 +1280,9 @@
     react-modal "^3.6.1"
     react-treebeard "^3.1.0"
 
-"@tillersystems/eslint-config@1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.7.tgz#e9b304797a9a302abe570b82e5beba62c33fcab0"
+"@tillersystems/eslint-config@1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.8.tgz#d65afd9f64a4a24b12536882ca263e8092cbd02c"
 
 "@types/invariant@^2.2.29":
   version "2.2.29"
