@@ -13,7 +13,7 @@ src
 
 # storybook
 .storybook
-.cache
+.cache/
 
 # test
 coverage

@@ -60,6 +60,9 @@ class TextInput extends PureComponent {
 
   /** Props types validation. */
   static propTypes = {
+    // className needed by styled components.
+    className: PropTypes.string,
+
     // Size related props.
     width: PropTypes.string,
     fluid: PropTypes.bool,
@@ -97,6 +100,8 @@ class TextInput extends PureComponent {
 
   /** Default props. */
   static defaultProps = {
+    className: '',
+
     width: '25rem',
     fluid: false,
 
@@ -208,6 +213,7 @@ class TextInput extends PureComponent {
   render() {
     const { value, hasFocus } = this.state;
     const {
+      className,
       width,
       fluid,
       id,
@@ -231,6 +237,7 @@ class TextInput extends PureComponent {
 
     return (
       <Container
+        className={className}
         width={fluid ? '100%' : width}
         hasFocus={hasFocus}
         disabled={disabled}

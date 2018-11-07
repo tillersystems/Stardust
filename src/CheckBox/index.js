@@ -7,19 +7,7 @@ import Theme from '../Theme';
 import { BoxContainer, Label } from './elements';
 
 /**
- * Checkbox
- *
- * This component is in charge of displaying
- * a checkbox
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // Add a text aside in the select next the selected value.
- * @param {bool} checked // Specifies whether the checkbox is selected.
- * @param {bool} defaultChecked // Specifies the initial state: whether or not the checkbox is selected.
- * @param {bool} disabled // Specifies whether the checkbox is disabled.
- * @param {func} onChange // Callback fired when checkbox is triggered and state changes.
- *
- * @return {jsx}
+ * Defines a checkbox component.
  */
 class CheckBox extends PureComponent {
   /** Prop types. */
@@ -30,6 +18,7 @@ class CheckBox extends PureComponent {
     defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     onChange: PropTypes.func,
+    value: PropTypes.string,
   };
 
   /** Default props. */
@@ -40,6 +29,7 @@ class CheckBox extends PureComponent {
     checked: undefined,
     disabled: false,
     onChange: null,
+    value: '',
   };
 
   /** Internal state. */
@@ -82,7 +72,7 @@ class CheckBox extends PureComponent {
    */
   render() {
     const { checked } = this.state;
-    const { className, children, id, defaultChecked, disabled, ...rest } = this.props;
+    const { className, children, id, defaultChecked, disabled, value, ...rest } = this.props;
 
     return (
       <div className={className} {...rest}>
@@ -101,6 +91,7 @@ class CheckBox extends PureComponent {
               defaultChecked={defaultChecked}
               disabled={disabled}
               onChange={this.handleChange}
+              value={value}
             />
           </BoxContainer>
           {children}

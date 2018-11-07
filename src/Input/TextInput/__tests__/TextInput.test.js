@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 
-import TextInput from '..';
+import { TextInput } from '../../..';
 
 describe('<TextInput />', () => {
   it('should render withouth a problem', () => {

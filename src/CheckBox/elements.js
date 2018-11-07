@@ -59,10 +59,6 @@ export const Label = styled.label`
 
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
-  &:focus-within {
-    color: ${({ theme: { palette } }) => palette.darkBlue};
-  }
-
   ${({ disabled }) =>
     disabled &&
     css`
@@ -73,6 +69,7 @@ export const Label = styled.label`
   ${({ checked }) =>
     checked &&
     css`
-      color: ${({ theme: { palette } }) => palette.darkBlue};
+      color: ${({ theme: { palette } }) => palette.primary.default};
+      font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
     `};
 `;

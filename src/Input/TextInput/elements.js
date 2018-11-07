@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { placeholder } from 'polished';
 
 export const Container = styled.div`
   display: flex;
@@ -59,7 +60,12 @@ export const InputElement = styled.input`
   margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  font-size: 1.2rem;
+  ${({ theme: { palette } }) => placeholder({ color: palette.darGrey })}
+  ${placeholder({
+    'font-size': '1.4rem',
+  })};
+
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;

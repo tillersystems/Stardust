@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import TextInput from '../TextInput';
+import { TextInput } from '../../..';
 
 /**
  * Gets the locale decimal separator character from the browser.
@@ -186,8 +186,8 @@ class NumberInput extends PureComponent {
     return (parsedValue
       ? parsedValue.toFixed(decimals)
       : rawValue
-        ? rawValue
-        : (0).toFixed(decimals)
+      ? rawValue
+      : (0).toFixed(decimals)
     ).replace('.', separator);
   };
 
