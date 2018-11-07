@@ -116,14 +116,21 @@ class Tooltip extends React.Component {
  */
 const ToolTipAnimation = posed(Container)({
   enter: {
+    opacity: 1,
+    scale: 1,
     x: '-50%',
     y: ({ top }) => (top ? '-15px' : '15px'),
-    opacity: 1,
+    transition: {
+      scale: { type: 'spring', stiffness: 600, damping: 30 },
+      default: { duration: 100 },
+    },
   },
   exit: {
-    x: '-50%',
-    y: ({ top }) => (top ? '-30px' : '30px'),
     opacity: 0,
+    scale: 0.9,
+    x: '-50%',
+    y: ({ top }) => (top ? '-15px' : '15px'),
+    transition: { duration: 100 },
   },
 });
 
