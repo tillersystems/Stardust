@@ -18,14 +18,9 @@ import { PopOver } from './elements';
  */
 
 const Popover = ({ active, arrowPositionX, children, width }) => (
-  <PoseGroup animateOnMount>
+  <PoseGroup>
     {active && (
-      <PopOverAnimation
-        width={width}
-        pose={active ? 'enter' : 'exit'}
-        arrowPositionX={arrowPositionX}
-        key="ContainerAnimation"
-      >
+      <PopOverAnimation width={width} arrowPositionX={arrowPositionX} key="popover">
         {children}
       </PopOverAnimation>
     )}
@@ -57,10 +52,18 @@ Popover.defaultProps = {
  * Animation
  */
 const PopOverAnimation = posed(PopOver)({
-  enter: { y: 15, opacity: 1 },
+  enter: {
+    y: 15,
+    opacity: 1,
+    transition: {
+      y: { type: 'spring', stiffness: 900, damping: 30 },
+      default: { duration: 150 },
+    },
+  },
   exit: {
     y: 30,
     opacity: 0,
+    transition: { duration: 150 },
   },
 });
 
