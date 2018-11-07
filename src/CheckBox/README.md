@@ -10,17 +10,21 @@ import { CheckBox } from '@tillersystems/stardust';
 
 ### Properties
 
-- `checked` - Whether the button is checked or not.
-- `disabled` - Whether the button is enabled or not.
+- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+- `className` - Add a text aside in the select next the selected value.
+- `checked` - Specifies whether the checkbox is selected.
+- `defaultChecked` - Specifies the initial state: whether or not the checkbox is selected.
+- `disabled` - Specifies whether the checkbox is disabled.
 - `onChange` - Callback whence clicked.
-- `textAnnexe` - Text wich be displayed under the main one
 
-| propName     | propType | defaultValue | isRequired |
-| ------------ | :------: | :----------: | :--------: |
-| `checked`    |  `bool`  |   `false`    |     -      |
-| `disabled`   |  `bool`  |    `true`    |     -      |
-| `onChange`   |  `func`  |  `() => {}`  |     -      |
-| `textAnnexe` | `string` |    `null`    |     -      |
+| propName         | propType | defaultValue | isRequired |
+| ---------------- | :------: | :----------: | :--------: |
+| `children`       |  `node`  |    `null`    |     -      |
+| `className`      | `string` |     `''`     |     -      |
+| `checked`        |  `bool`  | `undefined`  |     -      |
+| `defaultChecked` |  `bool`  |   `false`    |     -      |
+| `disabled`       |  `bool`  |   `false`    |     -      |
+| `onChange`       |  `func`  |    `null`    |     -      |
 
 ### Example
 
@@ -28,6 +32,11 @@ import { CheckBox } from '@tillersystems/stardust';
 import { CheckBox } from '@tillersystems/stardust';
 
 render() {
-  return <CheckBox>Add sauce?</CheckBox>
+  return (
+    <div>
+      <CheckBox>Default</CheckBox>
+      <CheckBox defaultChecked>Checked</CheckBox>
+    </div>
+  )
 }
 ```

@@ -1,43 +1,19 @@
 import styled, { css } from 'styled-components';
 
 /**
- * Wrapper for the actual check box and its label.
- *
- * @return {jsx}
- */
-export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-
-  cursor: pointer;
-
-  padding: 0.6rem 0;
-
-  ${({ textAnnexe }) =>
-    textAnnexe &&
-    css`
-      margin-bottom: 1.9rem;
-    `};
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      cursor: not-allowed;
-    `};
-`;
-
-/**
  * Container of the actual check box.
  *
  * @return {jsx}
  */
-export const Container = styled.div`
+export const BoxContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 1.6rem;
   height: 1.6rem;
+
+  margin-right: ${({ theme: { dimensions } }) => dimensions.small};
 
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
@@ -50,6 +26,7 @@ export const Container = styled.div`
     disabled &&
     css`
       opacity: 0.4;
+      cursor: not-allowed;
     `};
 
   ${({ checked }) =>
@@ -73,14 +50,18 @@ export const Container = styled.div`
  * @return {jsx}
  */
 export const Label = styled.label`
-  display: block;
+  display: flex;
+  align-items: center;
 
   cursor: pointer;
 
   position: relative;
 
-  margin-left: ${({ theme: { dimensions } }) => dimensions.small};
   color: ${({ theme: { palette } }) => palette.spaceGrey};
+
+  &:focus-within {
+    color: ${({ theme: { palette } }) => palette.darkBlue};
+  }
 
   ${({ disabled }) =>
     disabled &&
@@ -94,20 +75,4 @@ export const Label = styled.label`
     css`
       color: ${({ theme: { palette } }) => palette.darkBlue};
     `};
-
-  /* if label got text annexe  */
-  &:after {
-    ${({ textAnnexe }) =>
-      textAnnexe &&
-      css`
-        content: "${textAnnexe}";
-        position: absolute;
-        left: 0;
-        bottom: -1.9rem;
-        width: 250%;
-        max-width: 30rem;
-        text-align: justify;
-        color: ${({ theme: { palette } }) => palette.darkGrey};
-      `};
-  }
 `;
