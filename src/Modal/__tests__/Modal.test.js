@@ -46,6 +46,76 @@ describe('<Modal />', () => {
     expect(render).toMatchSnapshot();
   });
 
+  it('should render open modal with centered body', () => {
+    const render = mountWithTheme(
+      <Modal active width="50rem" height="35rem">
+        <Modal.Header>
+          <Modal.Title>My title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body center>Body</Modal.Body>
+        <Modal.Footer>Footer</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render open modal a footer aligned to left', () => {
+    const render = mountWithTheme(
+      <Modal active width="50rem" height="35rem">
+        <Modal.Header>
+          <Modal.Title>My title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body center>Body</Modal.Body>
+        <Modal.Footer alignment="left">Footer</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render open modal a footer aligned to right', () => {
+    const render = mountWithTheme(
+      <Modal active width="50rem" height="35rem">
+        <Modal.Header>
+          <Modal.Title>My title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body center>Body</Modal.Body>
+        <Modal.Footer alignment="right">Footer</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render open modal a centered footer', () => {
+    const render = mountWithTheme(
+      <Modal active width="50rem" height="35rem">
+        <Modal.Header>
+          <Modal.Title>My title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body center>Body</Modal.Body>
+        <Modal.Footer alignment="center">Footer</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render open modal a spaced footer', () => {
+    const render = mountWithTheme(
+      <Modal active width="50rem" height="35rem">
+        <Modal.Header>
+          <Modal.Title>My title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body center>Body</Modal.Body>
+        <Modal.Footer alignment="spaced">Footer</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(render).toMatchSnapshot();
+  });
+
   it('should call overlayClick callback', () => {
     const spy = jest.fn();
     const render = mountWithTheme(
