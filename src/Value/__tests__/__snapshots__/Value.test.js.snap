@@ -137,6 +137,7 @@ exports[`<Value /> should render as negative 1`] = `
 exports[`<Value /> should render as postive 1`] = `
 .c0 {
   color: hsl(213,17%,20%);
+  color: hsl(89,53%,52%);
 }
 
 <ThemeProvider
@@ -250,13 +251,12 @@ exports[`<Value /> should render as postive 1`] = `
   }
 >
   <Styled(Value)
-    postive={true}
+    positive={true}
   >
     <Value
       className="c0"
       negative={false}
-      positive={false}
-      postive={true}
+      positive={true}
     >
       <div
         className="c0"
