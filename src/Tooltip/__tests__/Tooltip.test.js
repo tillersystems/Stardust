@@ -13,7 +13,7 @@ describe('<Tooltip />', () => {
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
-    expect(render.dive()).toMatchSnapshot();
+    expect(render).toMatchSnapshot();
   });
 
   it('should render with a different width', () => {
@@ -33,19 +33,6 @@ describe('<Tooltip />', () => {
     const render = shallowWithTheme(
       <Tooltip
         hover
-        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée."
-      >
-        <button type="button">Show Tooltip</button>
-      </Tooltip>,
-    );
-    expect(render.dive()).toMatchSnapshot();
-  });
-
-  it('should render a tooltip  displayed above the element', () => {
-    const render = shallowWithTheme(
-      <Tooltip
-        top
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
@@ -97,6 +84,41 @@ describe('<Tooltip />', () => {
     );
     render.find('#btn').simulate('click');
     expect(render.state().active).toEqual(true);
+  });
+
+  it('should toggle', () => {
+    const render = mountWithTheme(
+      <Tooltip
+        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+        sur la période séléctionnée."
+      >
+        <button type="button" id="btn">
+          Show Tooltip
+        </button>
+      </Tooltip>,
+    );
+    render.find('#btn').simulate('click');
+    expect(render).toMatchSnapshot();
+    render.find('#btn').simulate('click');
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render a tooltip  displayed above the element', () => {
+    const render = mountWithTheme(
+      <Tooltip
+        top
+        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+        sur la période séléctionnée."
+      >
+        <button type="button" id="btn">
+          Show Tooltip
+        </button>
+      </Tooltip>,
+    );
+
+    render.find('#btn').simulate('click');
+
+    expect(render).toMatchSnapshot();
   });
 
   it('should call hover handler', () => {
