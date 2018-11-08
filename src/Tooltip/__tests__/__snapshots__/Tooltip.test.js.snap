@@ -65,11 +65,9 @@ exports[`<Tooltip /> should render a tooltip  displayed above the element 1`] = 
         Show Tooltip
       </button>
       <PoseGroup
-        animateOnMount={true}
         flipMove={true}
       >
         <Transition
-          animateOnMount={true}
           enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
@@ -81,7 +79,6 @@ exports[`<Tooltip /> should render a tooltip  displayed above the element 1`] = 
             arrowPositionX="50%"
             initialPose="exit"
             key="ContainerAnimation"
-            pose="enter"
             top={true}
             width="auto"
           >
@@ -90,7 +87,6 @@ exports[`<Tooltip /> should render a tooltip  displayed above the element 1`] = 
               arrowPositionX="50%"
               elementType={[Function]}
               initialPose="exit"
-              pose="enter"
               poseConfig={
                 Object {
                   "enter": Object {
@@ -165,7 +161,6 @@ exports[`<Tooltip /> should render a tooltip which can be displayed on hover 1`]
     Show Tooltip
   </button>
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   />
 </div>
@@ -190,13 +185,11 @@ exports[`<Tooltip /> should render open popover withouth a problem 1`] = `
     Show Tooltip
   </button>
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   >
     <Component
       arrowPositionX="50%"
       key="ContainerAnimation"
-      pose="enter"
       top={false}
       width="auto"
     >
@@ -225,7 +218,6 @@ exports[`<Tooltip /> should render with a different width 1`] = `
     Show Tooltip
   </button>
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   />
 </div>
@@ -243,7 +235,6 @@ exports[`<Tooltip /> should render withouth a problem 1`] = `
     Show Tooltip
   </button>
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   />
 </styled.div>
@@ -307,11 +298,9 @@ exports[`<Tooltip /> should toggle 1`] = `
         Show Tooltip
       </button>
       <PoseGroup
-        animateOnMount={true}
         flipMove={true}
       >
         <Transition
-          animateOnMount={true}
           enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
@@ -323,7 +312,6 @@ exports[`<Tooltip /> should toggle 1`] = `
             arrowPositionX="50%"
             initialPose="exit"
             key="ContainerAnimation"
-            pose="enter"
             top={false}
             width="auto"
           >
@@ -332,7 +320,6 @@ exports[`<Tooltip /> should toggle 1`] = `
               arrowPositionX="50%"
               elementType={[Function]}
               initialPose="exit"
-              pose="enter"
               poseConfig={
                 Object {
                   "enter": Object {
@@ -446,11 +433,9 @@ exports[`<Tooltip /> should toggle 2`] = `
         Show Tooltip
       </button>
       <PoseGroup
-        animateOnMount={true}
         flipMove={true}
       >
         <Transition
-          animateOnMount={true}
           enterAfterExit={false}
           enterPose="enter"
           exitPose="exit"
@@ -464,7 +449,6 @@ exports[`<Tooltip /> should toggle 2`] = `
             key="ContainerAnimation"
             onPoseComplete={[Function]}
             popFromFlow={true}
-            pose="enter"
             top={false}
             width="auto"
           >
@@ -475,7 +459,6 @@ exports[`<Tooltip /> should toggle 2`] = `
               initialPose="exit"
               onPoseComplete={[Function]}
               popFromFlow={true}
-              pose="enter"
               poseConfig={
                 Object {
                   "enter": Object {

@@ -93,12 +93,11 @@ class Tooltip extends React.Component {
     return (
       <Wrapper>
         {childrenWithProps}
-        <PoseGroup animateOnMount>
+        <PoseGroup>
           {active && (
             <ToolTipAnimation
               top={top}
               width={width}
-              pose={active ? 'enter' : 'exit'}
               arrowPositionX={arrowPositionX}
               key="ContainerAnimation"
             >
