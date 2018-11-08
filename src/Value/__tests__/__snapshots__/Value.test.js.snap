@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Value /> should render with as negative 1`] = `
+exports[`<Value /> should render as negative 1`] = `
 .c0 {
   color: hsl(213,17%,20%);
   color: hsl(6,79%,65%);
@@ -134,7 +134,7 @@ exports[`<Value /> should render with as negative 1`] = `
 </ThemeProvider>
 `;
 
-exports[`<Value /> should render with as negative 2`] = `
+exports[`<Value /> should render as postive 1`] = `
 .c0 {
   color: hsl(213,17%,20%);
 }
