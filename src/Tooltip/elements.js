@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   position: absolute;
 
-  width: ${({ width }) => width || 'auto'};
+  width: ${({ width }) => width};
 
   padding: 0.6rem 1rem;
 
