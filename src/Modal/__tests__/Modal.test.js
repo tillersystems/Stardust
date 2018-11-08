@@ -32,7 +32,7 @@ describe('<Modal />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render open modal width a title', () => {
+  it('should render open modal with a title', () => {
     const render = mountWithTheme(
       <Modal active width="50rem" height="35rem">
         <Modal.Header>

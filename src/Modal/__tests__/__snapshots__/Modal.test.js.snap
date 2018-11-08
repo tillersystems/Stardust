@@ -73,7 +73,7 @@ exports[`<Modal /> should render close modal withouth a problem 1`] = `
 </Modal>
 `;
 
-exports[`<Modal /> should render open modal width a title 1`] = `
+exports[`<Modal /> should render open modal with a title 1`] = `
 .c3 {
   height: 6rem;
   border-bottom: 0.1rem solid hsl(207,22%,90%);
