@@ -32,11 +32,9 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
   width="auto"
 >
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   >
     <Transition
-      animateOnMount={true}
       enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
@@ -46,25 +44,34 @@ exports[`<Popover /> should render open popover withouth a problem 1`] = `
       <Component
         _pose="enter"
         arrowPositionX="50%"
-        initialPose="exit"
-        key="ContainerAnimation"
-        pose="enter"
+        key="popover"
         width="auto"
       >
         <PoseElement
           _pose="enter"
           arrowPositionX="50%"
           elementType={[Function]}
-          initialPose="exit"
-          pose="enter"
           poseConfig={
             Object {
               "enter": Object {
                 "opacity": 1,
+                "transition": Object {
+                  "default": Object {
+                    "duration": 150,
+                  },
+                  "y": Object {
+                    "damping": 30,
+                    "stiffness": 900,
+                    "type": "spring",
+                  },
+                },
                 "y": 15,
               },
               "exit": Object {
                 "opacity": 0,
+                "transition": Object {
+                  "duration": 150,
+                },
                 "y": 30,
               },
             }
@@ -206,11 +213,9 @@ exports[`<Popover /> should render with a different width 1`] = `
   width="10rem"
 >
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   >
     <Transition
-      animateOnMount={true}
       enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
@@ -336,11 +341,9 @@ exports[`<Popover /> should render withouth a problem 1`] = `
   width="auto"
 >
   <PoseGroup
-    animateOnMount={true}
     flipMove={true}
   >
     <Transition
-      animateOnMount={true}
       enterAfterExit={false}
       enterPose="enter"
       exitPose="exit"
