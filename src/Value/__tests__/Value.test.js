@@ -16,7 +16,7 @@ describe('<Value />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render with as negative', () => {
+  it('should render as negative', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
         <Value negative>-10</Value>
@@ -25,7 +25,7 @@ describe('<Value />', () => {
     expect(render).toMatchSnapshot();
   });
 
-  it('should render with as negative', () => {
+  it('should render as postive', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
         <Value postive>+10</Value>
