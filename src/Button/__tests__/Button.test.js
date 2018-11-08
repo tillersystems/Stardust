@@ -11,6 +11,24 @@ describe('<Button />', () => {
     expect(render).toMatchSnapshot();
   });
 
+  it('should render with predefined margin', () => {
+    const render = mount(
+      <Button theme={Theme} marginLeft="small" marginBottom="small">
+        Primary button
+      </Button>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render with different margin', () => {
+    const render = mount(
+      <Button theme={Theme} marginLeft="1rem" marginBottom="1rem">
+        Primary button
+      </Button>,
+    );
+    expect(render).toMatchSnapshot();
+  });
+
   it('should render google button', () => {
     const render = mount(
       <Button isGoogle theme={Theme}>
