@@ -11,7 +11,7 @@ describe('<Icon />', () => {
   });
 
   it('should render with different name', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" />);
+    const render = mount(<Icon theme={Theme} name="check" />);
     expect(render).toMatchSnapshot();
   });
 

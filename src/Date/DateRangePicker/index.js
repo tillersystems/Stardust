@@ -162,27 +162,27 @@ class DateRangePicker extends PureComponent {
       selectedStartDate && !selectedEndDate
         ? selectedStartDate
         : value
-          ? value.start
-          : selectedStartDate;
+        ? value.start
+        : selectedStartDate;
     const actualSelectedEndDate =
       selectedStartDate && !selectedEndDate
         ? selectedStartDate
         : value
-          ? value.end
-          : selectedEndDate;
+        ? value.end
+        : selectedEndDate;
 
     const highlightedStartDate =
       selectedStartDate && selectedEndDate
         ? hoveredDate
         : hoveredDate
-          ? DateTime.min(selectedStartDate || hoveredDate, selectedEndDate || hoveredDate)
-          : null;
+        ? DateTime.min(selectedStartDate || hoveredDate, selectedEndDate || hoveredDate)
+        : null;
     const highlightedEndDate =
       selectedStartDate && selectedEndDate
         ? hoveredDate
         : hoveredDate
-          ? DateTime.max(selectedStartDate || hoveredDate, selectedEndDate || hoveredDate)
-          : null;
+        ? DateTime.max(selectedStartDate || hoveredDate, selectedEndDate || hoveredDate)
+        : null;
 
     const nextMonth = currentMonth.plus({ months: 1 });
 
