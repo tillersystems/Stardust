@@ -32,6 +32,8 @@ const sortingDirectionToIconName = {
   desc: 'caret-down',
 };
 
+const { node, number, func, oneOfType, oneOf, bool, shape, array, string } = PropTypes;
+
 /**
  * Defines a Table component.
  *
@@ -42,23 +44,23 @@ class Table extends PureComponent {
   static propTypes = {
     colsDef: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.node.isRequired,
-        value: PropTypes.func.isRequired,
-        format: PropTypes.func,
-        width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        align: PropTypes.oneOf(['left', 'center', 'right']),
-        sortable: PropTypes.bool,
+        title: node.isRequired,
+        value: func.isRequired,
+        format: func,
+        width: oneOfType([string, number]),
+        align: oneOf(['left', 'center', 'right']),
+        sortable: bool,
       }),
     ).isRequired,
-    rowsDef: PropTypes.shape({
-      selectable: PropTypes.bool,
-      onSelect: PropTypes.func,
+    rowsDef: shape({
+      selectable: bool,
+      onSelect: func,
     }),
-    data: PropTypes.array.isRequired,
-    header: PropTypes.oneOf(['top', 'bottom', 'none']),
-    width: PropTypes.string,
-    compressedRows: PropTypes.bool,
-    noZebra: PropTypes.bool,
+    data: array.isRequired,
+    header: oneOf(['top', 'bottom', 'none']),
+    width: string,
+    compressedRows: bool,
+    noZebra: bool,
   };
 
   /** Default props. */
