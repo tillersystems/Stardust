@@ -28,7 +28,7 @@ describe('<Value />', () => {
   it('should render as postive', () => {
     const render = mount(
       <ThemeProvider theme={Theme}>
-        <Value postive>+10</Value>
+        <Value positive>+10</Value>
       </ThemeProvider>,
     );
     expect(render).toMatchSnapshot();
