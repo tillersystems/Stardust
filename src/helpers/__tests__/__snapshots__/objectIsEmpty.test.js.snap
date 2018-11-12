@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObjectIsEmpty should return false 1`] = `false`;
+
+exports[`ObjectIsEmpty should return true 1`] = `true`;

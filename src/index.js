@@ -1,5 +1,6 @@
 // Components Library entry point
 // Please respect the alphabetical order
+export { AlertConsumer, AlertProvider } from './Alert';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as ButtonGroup } from './ButtonGroup';

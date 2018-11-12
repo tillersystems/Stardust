@@ -31,13 +31,24 @@ exports[`<Message /> should render a error alert 1`] = `
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
   cursor: pointer;
-  background: hsl(34,91%,65%);
+  background: hsl(6,79%,65%);
+}
+
+.c0 button {
+  font-size: 1.4rem;
+  background: none;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
 }
 
 <div
   class="c0"
   type="error"
 >
+  <span
+    aria-label="this is a message"
+    role="alert"
+  />
   <div
     aria-hidden="true"
     class="c1"
@@ -103,10 +114,21 @@ exports[`<Message /> should render a info alert 1`] = `
   background: hsl(200,74%,46%);
 }
 
+.c0 button {
+  font-size: 1.4rem;
+  background: none;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+}
+
 <div
   class="c0"
   type="info"
 >
+  <span
+    aria-label="this is a message"
+    role="alert"
+  />
   <div
     aria-hidden="true"
     class="c1"
@@ -172,10 +194,21 @@ exports[`<Message /> should render a success alert 1`] = `
   background: hsl(89,53%,52%);
 }
 
+.c0 button {
+  font-size: 1.4rem;
+  background: none;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+}
+
 <div
   class="c0"
   type="success"
 >
+  <span
+    aria-label="this is a message"
+    role="alert"
+  />
   <div
     aria-hidden="true"
     class="c1"
@@ -238,13 +271,24 @@ exports[`<Message /> should render a warning alert 1`] = `
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
   cursor: pointer;
-  background: hsl(6,79%,65%);
+  background: hsl(34,91%,65%);
+}
+
+.c0 button {
+  font-size: 1.4rem;
+  background: none;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
 }
 
 <div
   class="c0"
   type="warning"
 >
+  <span
+    aria-label="this is a message"
+    role="alert"
+  />
   <div
     aria-hidden="true"
     class="c1"
@@ -309,10 +353,21 @@ exports[`<Message /> should render without a problem 1`] = `
   cursor: pointer;
 }
 
+.c0 button {
+  font-size: 1.4rem;
+  background: none;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+}
+
 <div
   class="c0"
   type="info"
 >
+  <span
+    aria-label="this is a message"
+    role="alert"
+  />
   <div
     aria-hidden="true"
     class="c1"

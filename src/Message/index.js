@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
@@ -6,6 +6,8 @@ import { Icon, Theme } from '..';
 import { Description } from './elements';
 import { STATUS_ICON_NAMES } from './constants';
 import { getStatusBackgroundColor } from './helpers';
+
+const { func, oneOf, string } = PropTypes;
 
 /**
  * Message
@@ -21,42 +23,101 @@ import { getStatusBackgroundColor } from './helpers';
  * @return {jsx}
  */
 
-const Message = ({ className, description, onClose, type }) => (
-  <div className={className} type={type}>
-    <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} aria-hidden="true" />
-    <Description>{description}</Description>
-    {onClose && (
-      <Icon
-        tabIndex="0"
-        role="button"
-        name="cross"
-        color={Theme.palette.white}
-        width="1.8rem"
-        height="1.8rem"
-        onClick={onClose}
-      />
-    )}
-  </div>
-);
-/**
- * PropTypes Validation
- */
-const { func, oneOf, string } = PropTypes;
-Message.propTypes = {
-  className: string,
-  description: string.isRequired,
-  onClose: func,
-  type: oneOf(['success', 'info', 'warning', 'error']),
-};
+class Message extends PureComponent {
+  closeButtonRef = React.createRef();
 
-/**
- * Default props
- */
-Message.defaultProps = {
-  className: '',
-  onClose: null,
-  type: 'info',
-};
+  /**
+   * PropTypes validation
+   */
+  static propTypes = {
+    ariaLabel: string,
+    className: string,
+    description: string.isRequired,
+    onClose: func,
+    onCloseText: string,
+    type: oneOf(['success', 'info', 'warning', 'error']),
+  };
+
+  /**
+   * Default propTypes
+   */
+  static defaultProps = {
+    ariaLabel: null,
+    className: '',
+    onClose: null,
+    onCloseText: '',
+    type: 'info',
+  };
+
+  componentDidMount() {
+    const elButton = this.closeButtonRef.current;
+
+    if (!elButton) return;
+
+    if (document.activeElement instanceof HTMLElement) {
+      this.previousFocus = document.activeElement;
+    }
+
+    elButton.focus();
+  }
+
+  componentWillUnmount() {
+    this.restoreFocus();
+  }
+
+  /**
+   * Handle Click
+   */
+  handleClick = e => {
+    const { onClose } = this.props;
+
+    if (onClose) onClose(e);
+  };
+
+  /**
+   * Handle Blur
+   */
+  handleBlur = () => {
+    this.restoreFocus();
+  };
+
+  /**
+   * Restor focus
+   */
+  restoreFocus = () => {
+    if (document.activeElement !== this.closeButtonRef.current) return;
+
+    if (this.previousFocus && this.previousFocus.focus) {
+      const scrollPosition = window.pageYOffset;
+      this.previousFocus.focus();
+      window.scrollTo({ top: scrollPosition });
+    }
+
+    this.previousFocus = null;
+  };
+
+  render() {
+    const { className, description, onClose, onCloseText, ariaLabel, type } = this.props;
+
+    return (
+      <div className={className} type={type}>
+        <span role="alert" aria-label={ariaLabel || description} />
+        <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} aria-hidden="true" />
+        <Description>{description}</Description>
+        {onClose && (
+          <button
+            type="button"
+            onClick={this.handleClick}
+            onBlur={this.handleBlur}
+            ref={this.closeButtonRef}
+          >
+            {onCloseText}
+          </button>
+        )}
+      </div>
+    );
+  }
+}
 
 const styledMessage = styled(Message)`
   display: flex;
@@ -74,6 +135,15 @@ const styledMessage = styled(Message)`
     css`
       background: ${getStatusBackgroundColor(theme, type)};
     `};
+
+  button {
+    font-size: 1.4rem;
+
+    background: none;
+    color: ${({ theme: { palette } }) => palette.white};
+
+    cursor: pointer;
+  }
 `;
 
 styledMessage.displayName = 'Message';

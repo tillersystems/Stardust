@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> -- helpers getAlertPosition should return Alert Css Position 1`] = `
+Array [
+  "
+      left: 0;
+      top: 0;
+    ",
+]
+`;
+
+exports[`<Alert /> -- helpers getPositionAnimation should return Animation position 1`] = `
+Object {
+  "x": "-50%",
+  "y": -60,
+}
+`;
