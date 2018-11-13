@@ -940,9 +940,9 @@
     react-motion "^0.5.2"
     recompose "^0.26.0"
 
-"@nivo/bar@0.51.0":
-  version "0.51.0"
-  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.51.0.tgz#8a6423be077677696ba01ed56c60b8a5f1fdae59"
+"@nivo/bar@0.51.1":
+  version "0.51.1"
+  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.51.1.tgz#d56642723c43df523845cea2ea86939adad1cb87"
   dependencies:
     "@nivo/axes" "0.51.0"
     "@nivo/core" "0.51.0"
