@@ -58,6 +58,8 @@ export const Container = styled.button`
         fonts: { size },
       },
     }) => size.medium};
+      font-weight: ${({ theme: { fonts } }) => fonts.weight.normal};
+
     color: ${({ theme: { palette } }) => palette.white};
 
     transition: background 200ms ease, box-shadow 200ms ease;
@@ -208,14 +210,14 @@ export const Container = styled.button`
               background: ${({ theme: { palette } }) => palette.primary.default};
               box-shadow: none;
             `}
-            
+
           ${({ success }) =>
             success &&
             css`
               background: ${({ theme: { palette } }) => palette.success.default};
               box-shadow: none;
             `}
-            
+
           ${({ failure }) =>
             failure &&
             css`

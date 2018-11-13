@@ -1,0 +1,2710 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> should render a big ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c4 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+.c5 .c1 {
+  border-radius: 0;
+}
+
+.c5 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #689c30;
+}
+
+.c5 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c5 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c5 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c6 .c1 {
+  border-radius: 0;
+}
+
+.c6 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e42f1b;
+}
+
+.c6 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c6 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c6 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c6 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  big={true}
+>
+  <ButtonGroup
+    big={true}
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        big={true}
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={true}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={true}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        big={true}
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={true}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={true}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a disabled ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c4 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+.c5 .c1 {
+  border-radius: 0;
+}
+
+.c5 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #689c30;
+}
+
+.c5 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c5 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c5 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c6 .c1 {
+  border-radius: 0;
+}
+
+.c6 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e42f1b;
+}
+
+.c6 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c6 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c6 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c6 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  disabled={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    disabled={true}
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        disabled={true}
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={true}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={true}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={true}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        disabled={true}
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={true}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={true}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={true}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a failure ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(6,79%,65%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid #e74432;
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2:hover:not([disabled]):not(:active) {
+  background: hsl(6,79%,65%);
+  box-shadow: none;
+}
+
+.c2:active {
+  background-color: #e74432;
+  border: 1px solid #e42f1b;
+  box-shadow: inset 0 0 0 0.1rem #e42f1b;
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c5 .c1 {
+  border-radius: 0;
+}
+
+.c5 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c5 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c5 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c5 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c5 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+.c6 .c1 {
+  border-radius: 0;
+}
+
+.c6 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #689c30;
+}
+
+.c6 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c6 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c6 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c6 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e42f1b;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  failure={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={true}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={true}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={true}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={true}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={true}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={true}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={true}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a fluid ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c4 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+.c5 .c1 {
+  border-radius: 0;
+}
+
+.c5 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #689c30;
+}
+
+.c5 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c5 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c5 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c6 .c1 {
+  border-radius: 0;
+}
+
+.c6 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e42f1b;
+}
+
+.c6 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c6 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c6 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c6 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  fluid={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    fluid={true}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        fluid={true}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={true}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={true}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        fluid={true}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={true}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={true}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a primary ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid #1873a0;
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2:hover:not([disabled]):not(:active) {
+  background: hsl(200,74%,46%);
+  box-shadow: none;
+}
+
+.c2:active {
+  background-color: #1873a0;
+  border: 1px solid #14638a;
+  box-shadow: inset 0 0 0 0.1rem #14638a;
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  primary={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    onChange={[Function]}
+    primary={true}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={true}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={true}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={true}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={true}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a secondary ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  border: 1px solid hsl(207,22%,90%);
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+<Styled(ButtonGroup)
+  secondary={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={true}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={true}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={true}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={true}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render a success ButtonGroup 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+  color: hsl(0,100%,100%);
+  background: hsl(89,53%,52%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  border: 1px solid #6da333;
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2:hover:not([disabled]):not(:active) {
+  background: hsl(89,53%,52%);
+  box-shadow: none;
+}
+
+.c2:active {
+  background-color: #6da333;
+  border: 1px solid #60902d;
+  box-shadow: inset 0 0 0 0.1rem #60902d;
+}
+
+.c3 .c1 {
+  border-radius: 0;
+}
+
+.c3 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c3 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c3 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c3 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c3 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c4 .c1 {
+  border-radius: 0;
+}
+
+.c4 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #1a7fb2;
+}
+
+.c4 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c4 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c4 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c4 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c5 .c1 {
+  border-radius: 0;
+}
+
+.c5 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+.c5 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c5 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c5 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c5 .c1[data-isactive='false'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c5 .c1[data-isactive='true'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-right: 1px solid #689c30;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  success={true}
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={true}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={true}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={true}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={true}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={true}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={true}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={true}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render with a defaultActiveButton 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)
+  defaultActiveButton="ON"
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton="ON"
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton="ON"
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton="ON"
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton="ON"
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton="ON"
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton="ON"
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton="ON"
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render withouth a problem 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(0,100%,100%);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+<Styled(ButtonGroup)>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton=""
+    failure={false}
+    onChange={[Function]}
+    primary={false}
+    secondary={false}
+    success={false}
+  >
+    <div
+      className="c0"
+      role="group"
+    >
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".0"
+        name="foo"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="foo"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="foo"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="foo"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              foo
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+      <Button
+        data-isactive={false}
+        defaultActiveButton=""
+        failure={false}
+        key=".1"
+        name="bar"
+        onChange={[Function]}
+        onClick={[Function]}
+        primary={false}
+        secondary={false}
+        success={false}
+      >
+        <Button
+          big={false}
+          className="c1 "
+          data-isactive={false}
+          defaultActiveButton=""
+          disabled={false}
+          failure={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          isGoogle={false}
+          name="bar"
+          onChange={[Function]}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          small={false}
+          success={false}
+          type="button"
+        >
+          <styled.button
+            big={false}
+            className="c1 "
+            data-isactive={false}
+            defaultActiveButton=""
+            disabled={false}
+            failure={false}
+            fluid={false}
+            isGoogle={false}
+            name="bar"
+            onChange={[Function]}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            small={false}
+            success={false}
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-isactive={false}
+              disabled={false}
+              name="bar"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="button"
+            >
+               
+              bar
+               
+            </button>
+          </styled.button>
+        </Button>
+      </Button>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;

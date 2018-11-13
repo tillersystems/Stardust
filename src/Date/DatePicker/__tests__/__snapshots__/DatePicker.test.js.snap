@@ -21,6 +21,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -2573,6 +2574,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -5122,6 +5124,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -7677,6 +7680,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -10216,6 +10220,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -12755,6 +12760,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -14937,6 +14943,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -17473,6 +17480,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -19655,6 +19663,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;

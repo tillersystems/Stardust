@@ -21,6 +21,7 @@ exports[`<Button /> should render as big 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -444,6 +445,7 @@ exports[`<Button /> should render as disabled 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -866,6 +868,7 @@ exports[`<Button /> should render as fluid 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -1287,6 +1290,7 @@ exports[`<Button /> should render as small 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -1708,6 +1712,7 @@ exports[`<Button /> should render failure button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -2127,6 +2132,7 @@ exports[`<Button /> should render ghost button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -2546,6 +2552,7 @@ exports[`<Button /> should render google button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -2958,6 +2965,7 @@ exports[`<Button /> should render primary button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -3377,6 +3385,7 @@ exports[`<Button /> should render secondary button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -3788,6 +3797,7 @@ exports[`<Button /> should render success button 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -4211,6 +4221,7 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -4703,6 +4714,7 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -5192,6 +5204,7 @@ exports[`<Button /> should render with an icon 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -5662,6 +5675,7 @@ exports[`<Button /> should render with different margin 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -6071,6 +6085,7 @@ exports[`<Button /> should render with predefined margin 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
@@ -6480,6 +6495,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;

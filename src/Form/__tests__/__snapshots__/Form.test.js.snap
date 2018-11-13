@@ -3870,6 +3870,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  font-weight: 400;
   color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
