@@ -80,11 +80,12 @@ class Field extends PureComponent {
     return (
       <Wrapper isRow={isRow} size={size}>
         <Container inlineLabel={inlineLabel} className={className}>
-          {label !== null && !(isRow == inlineLabel && label === '') && (
-            <Label labelInline={inlineLabel} width={labelWidth} hasFocus={hasFocus}>
-              {label}
-            </Label>
-          )}
+          {label !== null &&
+            !(isRow == inlineLabel && label === '') && (
+              <Label labelInline={inlineLabel} width={labelWidth} hasFocus={hasFocus}>
+                {label}
+              </Label>
+            )}
           <ElementContainer>
             <ElementWrapper>{injected}</ElementWrapper>
           </ElementContainer>

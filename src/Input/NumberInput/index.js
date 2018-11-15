@@ -186,8 +186,8 @@ class NumberInput extends PureComponent {
     return (parsedValue
       ? parsedValue.toFixed(decimals)
       : rawValue
-      ? rawValue
-      : (0).toFixed(decimals)
+        ? rawValue
+        : (0).toFixed(decimals)
     ).replace('.', separator);
   };
 

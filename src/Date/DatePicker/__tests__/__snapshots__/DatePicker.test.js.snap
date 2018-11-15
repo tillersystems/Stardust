@@ -344,6 +344,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -442,6 +443,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -2893,6 +2895,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -2991,6 +2994,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -5448,6 +5452,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -5546,6 +5551,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -7987,6 +7993,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -8085,6 +8092,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -10526,6 +10534,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -10624,6 +10633,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -13035,6 +13045,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -13133,6 +13144,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -15244,6 +15256,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -15342,6 +15355,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -17753,6 +17767,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -17851,6 +17866,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -19980,6 +19996,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"
@@ -20078,6 +20095,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       width="20"
                     >
                       <styled.div
+                        className=""
                         height="20"
                         spin={false}
                         width="20"

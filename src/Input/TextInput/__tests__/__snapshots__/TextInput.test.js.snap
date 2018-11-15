@@ -269,6 +269,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"
@@ -467,6 +468,7 @@ exports[`<TextInput /> should render info without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  className=""
                   height="2rem"
                   spin={false}
                   width="2rem"
@@ -805,6 +807,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
                 width="1.6rem"
               >
                 <styled.div
+                  className=""
                   height="1.6rem"
                   spin={false}
                   width="1.6rem"
@@ -1037,6 +1040,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
                 width="1.6rem"
               >
                 <styled.div
+                  className=""
                   height="1.6rem"
                   spin={false}
                   width="1.6rem"
@@ -1236,6 +1240,7 @@ exports[`<TextInput /> should render loading without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  className=""
                   height="2rem"
                   spin={true}
                   width="2rem"
@@ -1433,6 +1438,7 @@ exports[`<TextInput /> should render search without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"
@@ -1632,6 +1638,7 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"
@@ -1830,6 +1837,7 @@ exports[`<TextInput /> should render success without problem 1`] = `
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"
@@ -2028,6 +2036,7 @@ exports[`<TextInput /> should render warning without problem 1`] = `
                 width="2rem"
               >
                 <styled.div
+                  className=""
                   height="2rem"
                   spin={false}
                   width="2rem"
@@ -2976,6 +2985,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"
@@ -3173,6 +3183,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
                 width="1.1rem"
               >
                 <styled.div
+                  className=""
                   height="1.1rem"
                   spin={false}
                   width="1.1rem"

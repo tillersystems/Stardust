@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Message /> should render a error alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  background: hsl(34,91%,65%);
+}
+
+<div
+  className="c0"
+  type="error"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="exclamation-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+</div>
+`;
+
+exports[`<Message /> should render a info alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  background: hsl(200,74%,46%);
+}
+
+<div
+  className="c0"
+  type="info"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="info"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+</div>
+`;
+
+exports[`<Message /> should render a success alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  background: hsl(89,53%,52%);
+}
+
+<div
+  className="c0"
+  type="success"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="check-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+</div>
+`;
+
+exports[`<Message /> should render a warning alert 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  background: hsl(6,79%,65%);
+}
+
+<div
+  className="c0"
+  type="warning"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="exclamation-mark"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+</div>
+`;
+
+exports[`<Message /> should render without a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  type="info"
+>
+  <Styled(Icon)
+    aria-hidden="true"
+    color="hsl(0, 100%, 100%)"
+    name="info"
+  />
+  <styled.span>
+    this is a message
+  </styled.span>
+</div>
+`;

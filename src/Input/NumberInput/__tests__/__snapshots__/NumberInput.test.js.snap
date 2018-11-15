@@ -320,6 +320,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
                   width="1.1rem"
                 >
                   <styled.div
+                    className=""
                     height="1.1rem"
                     spin={false}
                     width="1.1rem"
@@ -544,6 +545,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
                   width="2rem"
                 >
                   <styled.div
+                    className=""
                     height="2rem"
                     spin={false}
                     width="2rem"
@@ -942,6 +944,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
                   width="1.6rem"
                 >
                   <styled.div
+                    className=""
                     height="1.6rem"
                     spin={false}
                     width="1.6rem"
@@ -1204,6 +1207,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
                   width="1.6rem"
                 >
                   <styled.div
+                    className=""
                     height="1.6rem"
                     spin={false}
                     width="1.6rem"
@@ -1562,6 +1566,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
                   width="1.1rem"
                 >
                   <styled.div
+                    className=""
                     height="1.1rem"
                     spin={false}
                     width="1.1rem"
@@ -1786,6 +1791,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
                   width="2rem"
                 >
                   <styled.div
+                    className=""
                     height="2rem"
                     spin={false}
                     width="2rem"

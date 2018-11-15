@@ -9,4 +9,4 @@ package-lock.json
 node_modules
 es
 lib
-.cache
+.cache/

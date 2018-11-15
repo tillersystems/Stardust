@@ -10,6 +10,7 @@ export { default as Form } from './Form';
 export { default as Icon } from './Icon';
 export { NumberInput, TextInput } from './Input';
 export { default as KpiChart } from './KpiChart';
+export { default as Message } from './Message';
 export { default as Select } from './Select';
 export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
