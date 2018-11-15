@@ -24,8 +24,34 @@ export const Body = styled.div`
   width: 100%;
 `;
 
+/**
+ * Gets the value of flex attribute for a column.
+ *
+ * If the given width is an integer, this means that cells width are given in weights relative to each other, hence the
+ * resulting flex value (in a container with flex direction set to row), should be the weight (the given integer).
+ * If the given value is a width as a string (for instance with px or rem), the flex attribute shouldn't be used (because
+ * width attribute is used in place), and thus the flex value is set to initial.
+ *
+ * @param {string} width - The width of the column.
+ *
+ * @returns {string} - The value of the CSS flex attribute.
+ */
 const getCellFlex = width => (width === parseInt(width).toString() ? width : 'initial');
+
+/**
+ * Gets the value of width attribute for a column.
+ *
+ * If the given width is a string, this means that cells width are given in weights relative to each other, hence the
+ * resulting width value (in a container with flex direction set to row), should be the weight (the given string).
+ * If the given value is a width as an integer, the width attribute shouldn't be used (because
+ * width attribute is used in place), and thus the width value is set to initial.
+ *
+ * @param {string} width - The width of the column.
+ *
+ * @returns {string} - The value of the CSS width attribute.
+ */
 const getCellWidth = width => (width !== parseInt(width).toString() ? width : 'initial');
+
 const cellAlignToJustify = {
   left: 'flex-start',
   center: 'center',

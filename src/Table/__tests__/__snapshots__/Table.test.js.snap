@@ -486,6 +486,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -2370,6 +2371,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -4254,6 +4256,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -6138,6 +6141,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -8022,6 +8026,7 @@ exports[`<Table /> should render without a problem 1`] = `
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -9907,6 +9912,7 @@ exports[`<Table /> should render without a problem when given a compressed rows 
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -11787,6 +11793,7 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -13671,6 +13678,7 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -16794,6 +16802,7 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -17439,6 +17448,7 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -20928,6 +20938,7 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -22847,6 +22858,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
@@ -24766,6 +24778,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
                                     width="1.5rem"
                                   >
                                     <styled.div
+                                      className=""
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
