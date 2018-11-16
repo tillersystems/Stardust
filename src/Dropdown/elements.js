@@ -66,7 +66,7 @@ export const Menu = styled.ul`
   max-height: 28rem;
 
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: 4px;
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
   list-style: none;
   overflow-y: auto;
