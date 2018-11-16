@@ -7,8 +7,22 @@ import Theme from '../Theme';
 import { BoxContainer, Label } from './elements';
 
 /**
- * Defines a checkbox component.
+ * CheckBox
+ *
+ * This component is in charge of displaying
+ * a checkBox
+ *
+ * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {string} className // Add a text aside in the select next the selected value.
+ * @param {boolean} checked // Specifies whether the checkbox is selected.
+ * @param {boolean} defaultChecked // Specifies the initial state: whether or not the checkbox is selected.
+ * @param {boolean} disabled // Specifies whether the checkbox is disabled.
+ * @param {function} onChange // Callback whence clicked.
+ * @param {string} value // The value to be used in the checkbox input. This is the value that will be returned on form submission.
+ *
+ * @return {jsx}
  */
+
 class CheckBox extends PureComponent {
   /** Prop types. */
   static propTypes = {

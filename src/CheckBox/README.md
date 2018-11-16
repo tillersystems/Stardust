@@ -16,6 +16,7 @@ import { CheckBox } from '@tillersystems/stardust';
 - `defaultChecked` - Specifies the initial state: whether or not the checkbox is selected.
 - `disabled` - Specifies whether the checkbox is disabled.
 - `onChange` - Callback whence clicked.
+- `value` - The value to be used in the checkbox input. This is the value that will be returned on form submission.
 
 | propName         | propType | defaultValue | isRequired |
 | ---------------- | :------: | :----------: | :--------: |
@@ -25,6 +26,7 @@ import { CheckBox } from '@tillersystems/stardust';
 | `defaultChecked` |  `bool`  |   `false`    |     -      |
 | `disabled`       |  `bool`  |   `false`    |     -      |
 | `onChange`       |  `func`  |    `null`    |     -      |
+| `value`          | `string` |     `''`     |     -      |
 
 ### Example
 

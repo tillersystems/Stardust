@@ -52,7 +52,7 @@ exports[`<Dropdown /> should close the dropdown when clicking outside of the com
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
@@ -304,7 +304,7 @@ exports[`<Dropdown /> should close the dropdown when clicking outside of the com
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
@@ -640,7 +640,7 @@ exports[`<Dropdown /> should filter items 1`] = `
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
@@ -1287,7 +1287,7 @@ exports[`<Dropdown /> should return Not Found if not item found 1`] = `
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
@@ -1696,7 +1696,7 @@ exports[`<Dropdown /> should toogle the dropdown 1`] = `
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
@@ -1948,7 +1948,7 @@ exports[`<Dropdown /> should toogle the dropdown 2`] = `
   width: 100%;
   max-height: 28rem;
   border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
+  border-radius: 0.4rem;
   list-style: none;
   overflow-y: auto;
   background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
