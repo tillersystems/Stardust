@@ -75,11 +75,11 @@ exports[`<Dropdown /> should close the dropdown when clicking outside of the com
   cursor: pointer;
 }
 
-.c3:nth-child(1) {
+.c3:first-child {
   padding-top: 1.8rem;
 }
 
-.c3:last-of-type {
+.c3:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -327,11 +327,11 @@ exports[`<Dropdown /> should close the dropdown when clicking outside of the com
   cursor: pointer;
 }
 
-.c3:nth-child(1) {
+.c3:first-child {
   padding-top: 1.8rem;
 }
 
-.c3:last-of-type {
+.c3:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -663,11 +663,11 @@ exports[`<Dropdown /> should filter items 1`] = `
   cursor: pointer;
 }
 
-.c4:nth-child(1) {
+.c4:first-child {
   padding-top: 1.8rem;
 }
 
-.c4:last-of-type {
+.c4:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -684,7 +684,7 @@ exports[`<Dropdown /> should filter items 1`] = `
   cursor: pointer;
 }
 
-.c11:nth-child(1) {
+.c11:first-child {
   padding-top: 1.8rem;
 }
 
@@ -692,7 +692,7 @@ exports[`<Dropdown /> should filter items 1`] = `
   padding-top: 1.8rem;
 }
 
-.c11:last-of-type {
+.c11:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -1310,11 +1310,11 @@ exports[`<Dropdown /> should return Not Found if not item found 1`] = `
   cursor: pointer;
 }
 
-.c4:nth-child(1) {
+.c4:first-child {
   padding-top: 1.8rem;
 }
 
-.c4:last-of-type {
+.c4:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -1719,11 +1719,11 @@ exports[`<Dropdown /> should toogle the dropdown 1`] = `
   cursor: pointer;
 }
 
-.c3:nth-child(1) {
+.c3:first-child {
   padding-top: 1.8rem;
 }
 
-.c3:last-of-type {
+.c3:last-child {
   padding-bottom: 1.8rem;
 }
 
@@ -1971,11 +1971,11 @@ exports[`<Dropdown /> should toogle the dropdown 2`] = `
   cursor: pointer;
 }
 
-.c3:nth-child(1) {
+.c3:first-child {
   padding-top: 1.8rem;
 }
 
-.c3:last-of-type {
+.c3:last-child {
   padding-bottom: 1.8rem;
 }
 

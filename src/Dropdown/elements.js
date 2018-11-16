@@ -88,7 +88,7 @@ export const MenuItem = styled.li`
 
   padding: 0.9rem 1.2rem;
 
-  &:nth-child(1) {
+  &:first-child {
     padding-top: 1.8rem;
   }
 
@@ -100,7 +100,7 @@ export const MenuItem = styled.li`
       }
     `}
 
-  &:last-of-type {
+  &:last-child {
     padding-bottom: 1.8rem;
   }
 
