@@ -954,6 +954,7 @@ exports[`<Dropdown /> should filter items 1`] = `
                                                   width="1.1rem"
                                                 >
                                                   <styled.div
+                                                    className=""
                                                     height="1.1rem"
                                                     spin={false}
                                                     width="1.1rem"
@@ -1577,6 +1578,7 @@ exports[`<Dropdown /> should return Not Found if not item found 1`] = `
                                                   width="1.1rem"
                                                 >
                                                   <styled.div
+                                                    className=""
                                                     height="1.1rem"
                                                     spin={false}
                                                     width="1.1rem"

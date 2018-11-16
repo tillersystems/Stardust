@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { TextInput } from '../../..';
+import { TextInput } from '../..';
 
 /**
  * Gets the locale decimal separator character from the browser.

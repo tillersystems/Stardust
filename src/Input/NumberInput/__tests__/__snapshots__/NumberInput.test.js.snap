@@ -31,10 +31,26 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -70,6 +86,7 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={true}
     error={false}
     fluid={false}
@@ -91,6 +108,7 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={true}
       error={false}
       hasFocus={false}
@@ -136,15 +154,6 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
 `;
 
 exports[`<NumberInput /> should render error without problem 1`] = `
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,15 +203,40 @@ exports[`<NumberInput /> should render error without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 <NumberInput
@@ -233,6 +267,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={true}
     fluid={false}
@@ -254,6 +289,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={true}
       hasFocus={false}
@@ -361,15 +397,6 @@ exports[`<NumberInput /> should render error without problem 1`] = `
 `;
 
 exports[`<NumberInput /> should render info without problem 1`] = `
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -419,15 +446,40 @@ exports[`<NumberInput /> should render info without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 <NumberInput
@@ -458,6 +510,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -479,6 +532,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -633,10 +687,26 @@ exports[`<NumberInput /> should render input without problem when given a text l
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c2::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c2:focus,
@@ -676,6 +746,7 @@ exports[`<NumberInput /> should render input without problem when given a text l
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -701,6 +772,7 @@ exports[`<NumberInput /> should render input without problem when given a text l
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -772,15 +844,6 @@ exports[`<NumberInput /> should render input without problem when given a text l
 `;
 
 exports[`<NumberInput /> should render input without problem when given an icon label 1`] = `
-.c2 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -828,15 +891,40 @@ exports[`<NumberInput /> should render input without problem when given an icon 
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c3::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c3:focus,
 .c3:active {
   outline: none;
+}
+
+.c2 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 <NumberInput
@@ -871,6 +959,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -896,6 +985,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1010,15 +1100,6 @@ exports[`<NumberInput /> should render input without problem when given an icon 
 `;
 
 exports[`<NumberInput /> should render input without problem when given an icon label and label position 1`] = `
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1066,15 +1147,40 @@ exports[`<NumberInput /> should render input without problem when given an icon 
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 <NumberInput
@@ -1109,6 +1215,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -1134,6 +1241,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1276,10 +1384,26 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -1316,6 +1440,7 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -1337,6 +1462,7 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1382,15 +1508,6 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
 `;
 
 exports[`<NumberInput /> should render success without problem 1`] = `
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1440,15 +1557,40 @@ exports[`<NumberInput /> should render success without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 <NumberInput
@@ -1479,6 +1621,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -1500,6 +1643,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1607,15 +1751,6 @@ exports[`<NumberInput /> should render success without problem 1`] = `
 `;
 
 exports[`<NumberInput /> should render warning without problem 1`] = `
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1665,15 +1800,40 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 <NumberInput
@@ -1704,6 +1864,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -1725,6 +1886,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1860,10 +2022,26 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -1899,6 +2077,7 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -1920,6 +2099,7 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -1993,10 +2173,26 @@ exports[`<NumberInput /> should render withouth a problem when fluid 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2032,6 +2228,7 @@ exports[`<NumberInput /> should render withouth a problem when fluid 1`] = `
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={true}
@@ -2053,6 +2250,7 @@ exports[`<NumberInput /> should render withouth a problem when fluid 1`] = `
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -2127,10 +2325,26 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2166,6 +2380,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2187,6 +2402,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={true}
@@ -2260,10 +2476,26 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2299,6 +2531,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2320,6 +2553,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -2393,10 +2627,26 @@ exports[`<NumberInput /> should render withouth a problem when given a width 1`]
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2432,6 +2682,7 @@ exports[`<NumberInput /> should render withouth a problem when given a width 1`]
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2453,6 +2704,7 @@ exports[`<NumberInput /> should render withouth a problem when given a width 1`]
     width="123rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -2527,10 +2779,26 @@ exports[`<NumberInput /> should render withouth a problem when value changed 1`]
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2566,6 +2834,7 @@ exports[`<NumberInput /> should render withouth a problem when value changed 1`]
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2587,6 +2856,7 @@ exports[`<NumberInput /> should render withouth a problem when value changed 1`]
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={true}
@@ -2660,10 +2930,26 @@ exports[`<NumberInput /> should update the component when controlled value is ch
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2699,6 +2985,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2720,6 +3007,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
@@ -2793,10 +3081,26 @@ exports[`<NumberInput /> should update the component when controlled value is ch
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -2832,6 +3136,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
   <TextInput
     _onBlur={[Function]}
     _onFocus={[Function]}
+    className=""
     disabled={false}
     error={false}
     fluid={false}
@@ -2853,6 +3158,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
     width="25rem"
   >
     <styled.div
+      className=""
       disabled={false}
       error={false}
       hasFocus={false}
