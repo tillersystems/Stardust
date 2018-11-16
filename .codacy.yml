@@ -1,0 +1,4 @@
+exclude_paths:
+  - 'src/**/*.md'
+  - 'src/**/*.test.js'
+  - 'src/**/*.stories.js'
