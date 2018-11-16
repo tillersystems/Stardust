@@ -61,11 +61,9 @@ export const InputElement = styled.input`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
   ${({ theme: { palette } }) => placeholder({ color: palette.darGrey })}
-  ${placeholder({
-    'font-size': '1.4rem',
-  })};
+  ${({ theme: { fonts } }) => placeholder({ 'font-size': fonts.size.medium })}
 
-  font-size: 1.4rem;
+  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   border: none;
   padding: 0;
   text-align: left;
