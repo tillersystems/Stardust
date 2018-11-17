@@ -43,7 +43,7 @@ storiesOf('Tooltip', module)
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
-        <Button primary>Show Tooltip</Button>
+        <Button appearance="primary">Show Tooltip</Button>
       </Tooltip>
     );
   })

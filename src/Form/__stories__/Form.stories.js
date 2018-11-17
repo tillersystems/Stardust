@@ -69,7 +69,7 @@ storiesOf('Form', module)
             <TextInput fluid placeholder="Surname" />
           </Form.Field>
           <Form.Field size="20rem">
-            <Button fluid primary>
+            <Button fluid appearance="primary">
               Validate
             </Button>
           </Form.Field>

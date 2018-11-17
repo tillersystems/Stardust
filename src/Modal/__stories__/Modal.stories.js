@@ -48,7 +48,7 @@ storiesOf('Modal', module)
 
     return (
       <div>
-        <Button primary onClick={() => store.set({ active: !store.get('active') })}>
+        <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
           Open modal
         </Button>
         <State store={store}>
@@ -155,7 +155,7 @@ storiesOf('Modal', module)
 
     return (
       <div>
-        <Button primary onClick={() => store.set({ active: !store.get('active') })}>
+        <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
           Open modal
         </Button>
         <State store={store}>
@@ -172,7 +172,7 @@ storiesOf('Modal', module)
               <Modal.Header>
                 <Modal.Title>My title</Modal.Title>
                 {populatedHeader && (
-                  <Button ghost small onClick={() => store.set({ active: !store.get('active') })}>
+                  <Button size="small" onClick={() => store.set({ active: !store.get('active') })}>
                     <Icon color="#2B333D" name="cross" />
                   </Button>
                 )}
@@ -186,7 +186,7 @@ storiesOf('Modal', module)
                 {range(populatedFooter).map(p => (
                   <Button
                     key={p}
-                    primary
+                    appearance="primary"
                     onClick={() => store.set({ active: !store.get('active') })}
                   >
                     Close modal

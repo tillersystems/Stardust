@@ -3,10 +3,10 @@
 exports[`<KpiChart /> should render with render props 1`] = `
 .c5 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -15,20 +15,23 @@ exports[`<KpiChart /> should render with render props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  border: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c5 svg > path {
@@ -37,12 +40,6 @@ exports[`<KpiChart /> should render with render props 1`] = `
 
 .c5 svg > path {
   fill: hsl(213,17%,20%);
-}
-
-.c5:hover:not([disabled]):not(:active) {
-  color: current;
-  background: none;
-  border: none;
 }
 
 .c1 {
@@ -138,54 +135,46 @@ exports[`<KpiChart /> should render with render props 1`] = `
         <div
           className="c4"
         >
-          <Button
+          <Styled(Button)
             ghost={true}
           >
             <Button
-              big={false}
+              appearance="default"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               ghost={true}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={false}
-              small={false}
-              success={false}
+              size="default"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="default"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
                 ghost={true}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={false}
-                small={false}
-                success={false}
+                size="default"
                 type="button"
               >
                 <button
                   className="c5"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="default"
                   type="button"
                 >
-                   
                   label
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
     </div>
@@ -196,10 +185,10 @@ exports[`<KpiChart /> should render with render props 1`] = `
 exports[`<KpiChart /> should render withouth a problem 1`] = `
 .c5 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -208,20 +197,23 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  border: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c5 svg > path {
@@ -230,12 +222,6 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
 
 .c5 svg > path {
   fill: hsl(213,17%,20%);
-}
-
-.c5:hover:not([disabled]):not(:active) {
-  color: current;
-  background: none;
-  border: none;
 }
 
 .c1 {
@@ -326,54 +312,46 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
         <div
           className="c4"
         >
-          <Button
+          <Styled(Button)
             ghost={true}
           >
             <Button
-              big={false}
+              appearance="default"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               ghost={true}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={false}
-              small={false}
-              success={false}
+              size="default"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="default"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
                 ghost={true}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={false}
-                small={false}
-                success={false}
+                size="default"
                 type="button"
               >
                 <button
                   className="c5"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="default"
                   type="button"
                 >
-                   
                   label
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
     </div>
