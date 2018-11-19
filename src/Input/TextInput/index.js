@@ -42,6 +42,7 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * @param {boolean} success - Whether to display an input that is successful or not.
  * @param {boolean} warning - Whether to display an input that is warning or not.
  * @param {boolean} error - Whether to display an input that has failed or not.
+ * @param {boolean} ghost - Whether to display an input with no border.
  * @param {boolean} search - Whether to display an input that meant for search or not.
  * @param {string} value - The value of the input. If provided, switches to controlled mode.
  * @param {boolean} password - Whether the input is a password input or not.
@@ -92,6 +93,7 @@ class TextInput extends PureComponent {
     warning: PropTypes.bool,
     error: PropTypes.bool,
     search: PropTypes.bool,
+    ghost: PropTypes.bool,
 
     // Internal event handlers.
     _onFocus: PropTypes.func,
@@ -124,6 +126,7 @@ class TextInput extends PureComponent {
     warning: false,
     error: false,
     search: false,
+    ghost: false,
 
     _onFocus: () => {},
     _onBlur: () => {},
@@ -224,6 +227,7 @@ class TextInput extends PureComponent {
       labelPosition,
       loading,
       info,
+      ghost,
       success,
       warning,
       error,
@@ -245,6 +249,7 @@ class TextInput extends PureComponent {
         success={success}
         warning={warning}
         error={error}
+        ghost={ghost}
       >
         {label && labelPosition === 'left' && <Label label={label} position="left" />}
         <InputElement

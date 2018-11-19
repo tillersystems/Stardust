@@ -120,6 +120,11 @@ describe('<TextInput />', () => {
     expect(render).toMatchSnapshot();
   });
 
+  it('should render ghost input without problem', () => {
+    const render = mountWithTheme(<TextInput ghost value="" />);
+    expect(render).toMatchSnapshot();
+  });
+
   it('should render search without problem', () => {
     const render = mountWithTheme(<TextInput search value="" />);
     expect(render).toMatchSnapshot();

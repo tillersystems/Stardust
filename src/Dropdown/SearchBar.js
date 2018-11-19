@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { SearchInput } from './elements';
+import TextInput from '../Input/TextInput';
 
 const { func, string } = PropTypes;
 
@@ -56,7 +56,8 @@ class SearchBar extends PureComponent {
 
     return (
       <div className={className}>
-        <SearchInput
+        <TextInput
+          ghost
           data-test="search-input"
           value={value}
           onChange={this.handleChange}
@@ -71,4 +72,5 @@ class SearchBar extends PureComponent {
 
 export default styled(SearchBar)`
   width: 100%;
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
 `;

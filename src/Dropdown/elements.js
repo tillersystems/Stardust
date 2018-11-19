@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-import TextInput from '../Input/TextInput';
-
 export const Header = styled.button`
   display: flex;
 
@@ -112,10 +110,4 @@ export const SearchInputContainer = styled(MenuItem)`
   &:first-of-type {
     padding: 0;
   }
-`;
-
-export const SearchInput = styled(TextInput)`
-  border: 0;
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: 0;
 `;

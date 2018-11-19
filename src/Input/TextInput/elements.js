@@ -14,6 +14,12 @@ export const Container = styled.div`
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   background-color: ${({ theme: { palette } }) => palette.white};
 
+  ${({ ghost }) =>
+    ghost &&
+    css`
+      border: 0;
+    `};
+
   ${({ error }) =>
     error &&
     css`

@@ -26,6 +26,7 @@ import { TextInput } from '@tillersystems/stardust';
 - `labelPosition` - position of label (`left` or `right`).
 - `loading` - whether the input as status loading.
 - `info` - whether the input as status info.
+- `ghost` - Whether to display an input with no border.
 - `success` - whether the input as status success.
 - `warning` - whether the input as status warning.
 - `error` - whether the input as status error.
@@ -48,6 +49,7 @@ import { TextInput } from '@tillersystems/stardust';
 | `labelPosition` | `string` |    `left`    |     -      |
 | `loading`       |  `bool`  |   `false`    |     -      |
 | `info`          |  `bool`  |   `false`    |     -      |
+| `ghost`         |  `bool`  |   `false`    |     -      |
 | `success`       |  `bool`  |   `false`    |     -      |
 | `warning`       |  `bool`  |   `false`    |     -      |
 | `error`         |  `bool`  |   `false`    |     -      |

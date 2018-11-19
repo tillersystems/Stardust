@@ -65,6 +65,7 @@ exports[`<TextInput /> should render disabled without problem 1`] = `
   disabled={true}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -86,6 +87,7 @@ exports[`<TextInput /> should render disabled without problem 1`] = `
     className=""
     disabled={true}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -220,6 +222,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
   disabled={false}
   error={true}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -241,6 +244,7 @@ exports[`<TextInput /> should render error without problem 1`] = `
     className=""
     disabled={false}
     error={true}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -344,6 +348,134 @@ exports[`<TextInput /> should render error without problem 1`] = `
 </TextInput>
 `;
 
+exports[`<TextInput /> should render ghost input without problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(207,22%,90%);
+  background-color: hsl(0,100%,100%);
+  border: 0;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c1::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1:focus,
+.c1:active {
+  outline: none;
+}
+
+<TextInput
+  _onBlur={[Function]}
+  _onFocus={[Function]}
+  className=""
+  disabled={false}
+  error={false}
+  fluid={false}
+  ghost={true}
+  id=""
+  info={false}
+  label={null}
+  labelPosition="left"
+  loading={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  password={false}
+  placeHolder=""
+  search={false}
+  success={false}
+  tabIndex="0"
+  value=""
+  warning={false}
+  width="25rem"
+>
+  <styled.div
+    className=""
+    disabled={false}
+    error={false}
+    ghost={true}
+    hasFocus={false}
+    info={false}
+    success={false}
+    warning={false}
+    width="25rem"
+  >
+    <div
+      className="c0"
+      disabled={false}
+      width="25rem"
+    >
+      <styled.input
+        disabled={false}
+        id=""
+        innerRef={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder=""
+        tabIndex="0"
+        type="text"
+        value=""
+      >
+        <input
+          className="c1"
+          disabled={false}
+          id=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder=""
+          tabIndex="0"
+          type="text"
+          value=""
+        />
+      </styled.input>
+    </div>
+  </styled.div>
+</TextInput>
+`;
+
 exports[`<TextInput /> should render info without problem 1`] = `
 .c2 {
   display: -webkit-box;
@@ -437,6 +569,7 @@ exports[`<TextInput /> should render info without problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={true}
   label={null}
@@ -458,6 +591,7 @@ exports[`<TextInput /> should render info without problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={true}
     success={false}
@@ -643,6 +777,7 @@ exports[`<TextInput /> should render input without problem when given a text lab
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={
@@ -668,6 +803,7 @@ exports[`<TextInput /> should render input without problem when given a text lab
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -826,6 +962,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={
@@ -851,6 +988,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -1052,6 +1190,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={
@@ -1077,6 +1216,7 @@ exports[`<TextInput /> should render input without problem when given an icon la
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -1281,6 +1421,7 @@ exports[`<TextInput /> should render loading without problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -1302,6 +1443,7 @@ exports[`<TextInput /> should render loading without problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -1497,6 +1639,7 @@ exports[`<TextInput /> should render search without problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -1518,6 +1661,7 @@ exports[`<TextInput /> should render search without problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -1715,6 +1859,7 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -1736,6 +1881,7 @@ exports[`<TextInput /> should render search without problem when focused 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={true}
     info={false}
     success={false}
@@ -1932,6 +2078,7 @@ exports[`<TextInput /> should render success without problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -1953,6 +2100,7 @@ exports[`<TextInput /> should render success without problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={true}
@@ -2149,6 +2297,7 @@ exports[`<TextInput /> should render warning without problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2170,6 +2319,7 @@ exports[`<TextInput /> should render warning without problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -2336,6 +2486,7 @@ exports[`<TextInput /> should render withouth a problem 1`] = `
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id="test"
   info={false}
   label={null}
@@ -2357,6 +2508,7 @@ exports[`<TextInput /> should render withouth a problem 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -2461,6 +2613,7 @@ exports[`<TextInput /> should render withouth a problem when fluid 1`] = `
   disabled={false}
   error={false}
   fluid={true}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2482,6 +2635,7 @@ exports[`<TextInput /> should render withouth a problem when fluid 1`] = `
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -2587,6 +2741,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2608,6 +2763,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={true}
     info={false}
     success={false}
@@ -2712,6 +2868,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2733,6 +2890,7 @@ exports[`<TextInput /> should render withouth a problem when focused and unfocus
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -2837,6 +2995,7 @@ exports[`<TextInput /> should render withouth a problem when given a type 1`] = 
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2858,6 +3017,7 @@ exports[`<TextInput /> should render withouth a problem when given a type 1`] = 
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -2962,6 +3122,7 @@ exports[`<TextInput /> should render withouth a problem when given a width 1`] =
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -2983,6 +3144,7 @@ exports[`<TextInput /> should render withouth a problem when given a width 1`] =
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -3088,6 +3250,7 @@ exports[`<TextInput /> should render withouth a problem when text changed 1`] = 
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -3109,6 +3272,7 @@ exports[`<TextInput /> should render withouth a problem when text changed 1`] = 
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={true}
     info={false}
     success={false}
@@ -3242,6 +3406,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -3263,6 +3428,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
@@ -3458,6 +3624,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
   disabled={false}
   error={false}
   fluid={false}
+  ghost={false}
   id=""
   info={false}
   label={null}
@@ -3479,6 +3646,7 @@ exports[`<TextInput /> should update the component when controlled value is chan
     className=""
     disabled={false}
     error={false}
+    ghost={false}
     hasFocus={false}
     info={false}
     success={false}
