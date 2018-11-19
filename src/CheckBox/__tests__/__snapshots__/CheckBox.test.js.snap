@@ -50,11 +50,8 @@ exports[`<CheckBox /> should be checked with change 1`] = `
   cursor: pointer;
   position: relative;
   color: hsl(207,13%,45%);
-  color: hsl(213,17%,20%);
-}
-
-.c1:focus-within {
-  color: hsl(213,17%,20%);
+  color: hsl(200,74%,46%);
+  font-weight: 600;
 }
 
 .c0 {
@@ -67,6 +64,7 @@ exports[`<CheckBox /> should be checked with change 1`] = `
     defaultChecked={false}
     disabled={false}
     onChange={null}
+    value=""
   >
     <div
       className="c0"
@@ -143,6 +141,7 @@ exports[`<CheckBox /> should be checked with change 1`] = `
                 onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
+                value=""
               />
             </div>
           </styled.div>
@@ -195,10 +194,6 @@ exports[`<CheckBox /> should be disabled 1`] = `
   cursor: not-allowed;
 }
 
-.c1:focus-within {
-  color: hsl(213,17%,20%);
-}
-
 .c0 {
   width: 100%;
 }
@@ -211,6 +206,7 @@ exports[`<CheckBox /> should be disabled 1`] = `
     defaultChecked={false}
     disabled={true}
     onChange={null}
+    value=""
   >
     <div
       className="c0"
@@ -241,6 +237,7 @@ exports[`<CheckBox /> should be disabled 1`] = `
                 onClick={[Function]}
                 tabIndex={-1}
                 type="checkbox"
+                value=""
               />
             </div>
           </styled.div>
@@ -293,10 +290,6 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
   cursor: not-allowed;
 }
 
-.c1:focus-within {
-  color: hsl(213,17%,20%);
-}
-
 .c0 {
   width: 100%;
 }
@@ -309,6 +302,7 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
     defaultChecked={false}
     disabled={true}
     onChange={null}
+    value=""
   >
     <div
       className="c0"
@@ -339,6 +333,7 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
                 onClick={[Function]}
                 tabIndex={-1}
                 type="checkbox"
+                value=""
               />
             </div>
           </styled.div>
@@ -399,11 +394,8 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
   cursor: pointer;
   position: relative;
   color: hsl(207,13%,45%);
-  color: hsl(213,17%,20%);
-}
-
-.c1:focus-within {
-  color: hsl(213,17%,20%);
+  color: hsl(200,74%,46%);
+  font-weight: 600;
 }
 
 .c0 {
@@ -418,6 +410,7 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
     defaultChecked={true}
     disabled={false}
     onChange={null}
+    value=""
   >
     <div
       className="c0"
@@ -494,6 +487,7 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
                 onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
+                value=""
               />
             </div>
           </styled.div>
@@ -542,10 +536,6 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c1:focus-within {
-  color: hsl(213,17%,20%);
-}
-
 .c0 {
   width: 100%;
 }
@@ -556,6 +546,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
     defaultChecked={false}
     disabled={false}
     onChange={null}
+    value=""
   >
     <div
       className="c0"
@@ -586,6 +577,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
                 onClick={[Function]}
                 tabIndex={0}
                 type="checkbox"
+                value=""
               />
             </div>
           </styled.div>

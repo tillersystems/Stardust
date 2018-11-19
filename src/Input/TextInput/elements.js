@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { placeholder } from 'polished';
 
 export const Container = styled.div`
   display: flex;
@@ -12,6 +13,12 @@ export const Container = styled.div`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   background-color: ${({ theme: { palette } }) => palette.white};
+
+  ${({ ghost }) =>
+    ghost &&
+    css`
+      border: 0;
+    `};
 
   ${({ error }) =>
     error &&
@@ -59,7 +66,10 @@ export const InputElement = styled.input`
   margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  font-size: 1.2rem;
+  ${({ theme: { palette } }) => placeholder({ color: palette.darGrey })}
+  ${({ theme: { fonts } }) => placeholder({ 'font-size': fonts.size.medium })}
+
+  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   border: none;
   padding: 0;
   text-align: left;

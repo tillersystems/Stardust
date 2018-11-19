@@ -121,10 +121,26 @@ exports[`<Form /> should render form block without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -207,9 +223,11 @@ exports[`<Form /> should render form block without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -230,8 +248,10 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -317,9 +337,11 @@ exports[`<Form /> should render form block without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -340,8 +362,10 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -527,10 +551,26 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -613,9 +653,11 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -636,8 +678,10 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -733,9 +777,11 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -756,8 +802,10 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -948,10 +996,26 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -1034,9 +1098,11 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -1057,8 +1123,10 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -1154,9 +1222,11 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -1177,8 +1247,10 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -1361,10 +1433,26 @@ exports[`<Form /> should render form row without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -1447,9 +1535,11 @@ exports[`<Form /> should render form row without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -1470,8 +1560,10 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -1567,9 +1659,11 @@ exports[`<Form /> should render form row without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -1590,8 +1684,10 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -1777,10 +1873,26 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -1863,9 +1975,11 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -1886,8 +2000,10 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -2074,10 +2190,26 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -2160,9 +2292,11 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -2183,8 +2317,10 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={true}
                                   info={false}
                                   success={false}
@@ -2370,10 +2506,26 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -2456,9 +2608,11 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -2479,8 +2633,10 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -2666,10 +2822,26 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -2752,9 +2924,11 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -2775,8 +2949,10 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -2872,9 +3048,11 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -2895,8 +3073,10 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -3100,10 +3280,26 @@ exports[`<Form /> should render form with size value 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -3186,9 +3382,11 @@ exports[`<Form /> should render form with size value 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -3209,8 +3407,10 @@ exports[`<Form /> should render form with size value 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -3306,9 +3506,11 @@ exports[`<Form /> should render form with size value 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -3329,8 +3531,10 @@ exports[`<Form /> should render form with size value 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -3494,10 +3698,26 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c6::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c6:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c6::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c6:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c6:focus,
@@ -3568,9 +3788,11 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -3591,8 +3813,10 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -3676,9 +3900,11 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -3699,8 +3925,10 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}
@@ -3924,10 +4152,26 @@ exports[`<Form /> should render withouth a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border: none;
   padding: 0;
   text-align: left;
+}
+
+.c7::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7:-ms-input-placeholder {
+  font-size: 1.4rem;
 }
 
 .c7:focus,
@@ -4010,9 +4254,11 @@ exports[`<Form /> should render withouth a problem 1`] = `
                               <TextInput
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
+                                className=""
                                 disabled={false}
                                 error={false}
                                 fluid={false}
+                                ghost={false}
                                 id=""
                                 info={false}
                                 key=".0"
@@ -4033,8 +4279,10 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                 width="25rem"
                               >
                                 <styled.div
+                                  className=""
                                   disabled={false}
                                   error={false}
+                                  ghost={false}
                                   hasFocus={false}
                                   info={false}
                                   success={false}

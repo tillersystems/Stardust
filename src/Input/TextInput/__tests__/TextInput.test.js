@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 
-import TextInput from '..';
+import { TextInput } from '../../..';
 
 describe('<TextInput />', () => {
   it('should render withouth a problem', () => {
@@ -117,6 +117,11 @@ describe('<TextInput />', () => {
 
   it('should render error without problem', () => {
     const render = mountWithTheme(<TextInput error value="" />);
+    expect(render).toMatchSnapshot();
+  });
+
+  it('should render ghost input without problem', () => {
+    const render = mountWithTheme(<TextInput ghost value="" />);
     expect(render).toMatchSnapshot();
   });
 
