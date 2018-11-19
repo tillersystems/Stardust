@@ -80,7 +80,7 @@ class Dropdown extends PureComponent {
    * Handle Click Outside
    */
   handleClickOutside = () => {
-    this.setState({ displayMenu: false });
+    this.toggleMenu(false);
 
     // Clear input value
     this.resetSearchInput();
