@@ -18,6 +18,7 @@ const { bool, func, node, string } = PropTypes;
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className // Add a text aside in the select next the selected value.
  * @param {node} noResultLabel // Label to display when no result found.
+ * @param {function} onToggle // Callback called when Dropdown is toggled.
  * @param {bool} searchable // Whether the dropdown is searchable.
  * @param {string} searchBarPlacholder // SearchBar input placholder.
  * @param {node} title // Dropdown title.
