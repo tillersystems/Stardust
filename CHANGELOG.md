@@ -1,3 +1,18 @@
+# [1.10.0](https://github.com/tillersystems/Stardust/compare/v1.9.0...v1.10.0) (2018-11-19)
+
+### Bug Fixes
+
+- **Checkbox:** juste call the function ([ba8b65b](https://github.com/tillersystems/Stardust/commit/ba8b65b))
+- **Table:** destructure proptype ([569cb64](https://github.com/tillersystems/Stardust/commit/569cb64))
+- **userInfo:** remove userInfo ([#198](https://github.com/tillersystems/Stardust/issues/198)) ([f58ec21](https://github.com/tillersystems/Stardust/commit/f58ec21))
+
+### Features
+
+- **Alert:** create Alert component ([70f1e6f](https://github.com/tillersystems/Stardust/commit/70f1e6f))
+- **Dropdown:** create Dropdown component ([#199](https://github.com/tillersystems/Stardust/issues/199)) ([4a5f90b](https://github.com/tillersystems/Stardust/commit/4a5f90b))
+- **Table:** create Table component ([460fade](https://github.com/tillersystems/Stardust/commit/460fade))
+- **Value:** create value component ([#186](https://github.com/tillersystems/Stardust/issues/186)) ([63bc3d3](https://github.com/tillersystems/Stardust/commit/63bc3d3))
+
 # [1.9.0](https://github.com/tillersystems/Stardust/compare/v1.8.1...v1.9.0) (2018-11-06)
 
 ### Features
