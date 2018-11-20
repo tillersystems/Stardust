@@ -8740,10 +8740,10 @@ popmotion-pose@^3.4.0:
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.5.2:
-  version "8.5.2"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.2.tgz#5c271fc4370f2739970c3a04bc890b7dbc8e519e"
-  integrity sha512-RZxR8TlEJ4mLePKMyJnz+OczEq81Yb6eHohLzA05bczpytC9nC9Ak5i+CHAoHaXEpW4dGqs0oeLeURnU/DUVMQ==
+popmotion@8.5.3:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.3.tgz#693a197c7d724ce9999cc1b6410530360ac347cd"
+  integrity sha512-y6Fi/K1JvRFfvYn0BUPH7EUMYywvMwB5MocYwAPD2PkDwZ5D+L5ZidAQ9M/4nto9YU//2F2Q9xR6XztGnDfvyQ==
   dependencies:
     "@popmotion/easing" "^1.0.1"
     "@popmotion/popcorn" "^0.2.0"
