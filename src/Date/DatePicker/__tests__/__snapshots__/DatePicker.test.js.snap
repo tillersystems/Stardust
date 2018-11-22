@@ -3,10 +3,10 @@
 exports[`<DatePicker /> should handle date hover 1`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -15,21 +15,24 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -288,49 +291,42 @@ exports[`<DatePicker /> should handle date hover 1`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -375,11 +371,10 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -387,49 +382,42 @@ exports[`<DatePicker /> should handle date hover 1`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -474,11 +462,10 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -2557,10 +2544,10 @@ exports[`<DatePicker /> should handle date hover 1`] = `
 exports[`<DatePicker /> should handle date hover 2`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2569,21 +2556,24 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -2839,49 +2829,42 @@ exports[`<DatePicker /> should handle date hover 2`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -2926,11 +2909,10 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -2938,49 +2920,42 @@ exports[`<DatePicker /> should handle date hover 2`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -3025,11 +3000,10 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -5108,10 +5082,10 @@ exports[`<DatePicker /> should handle date hover 2`] = `
 exports[`<DatePicker /> should handle date hover 3`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5120,21 +5094,24 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -5396,49 +5373,42 @@ exports[`<DatePicker /> should handle date hover 3`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -5483,11 +5453,10 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -5495,49 +5464,42 @@ exports[`<DatePicker /> should handle date hover 3`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -5582,11 +5544,10 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -7665,10 +7626,10 @@ exports[`<DatePicker /> should handle date hover 3`] = `
 exports[`<DatePicker /> should handle date selection 1`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -7677,21 +7638,24 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -7937,49 +7901,42 @@ exports[`<DatePicker /> should handle date selection 1`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -8024,11 +7981,10 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -8036,49 +7992,42 @@ exports[`<DatePicker /> should handle date selection 1`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -8123,11 +8072,10 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -10206,10 +10154,10 @@ exports[`<DatePicker /> should handle date selection 1`] = `
 exports[`<DatePicker /> should handle date selection 2`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -10218,21 +10166,24 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -10478,49 +10429,42 @@ exports[`<DatePicker /> should handle date selection 2`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -10565,11 +10509,10 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -10577,49 +10520,42 @@ exports[`<DatePicker /> should handle date selection 2`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -10664,11 +10600,10 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -12747,10 +12682,10 @@ exports[`<DatePicker /> should handle date selection 2`] = `
 exports[`<DatePicker /> should handle next month 1`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -12759,21 +12694,24 @@ exports[`<DatePicker /> should handle next month 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -12989,49 +12927,42 @@ exports[`<DatePicker /> should handle next month 1`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -13076,11 +13007,10 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -13088,49 +13018,42 @@ exports[`<DatePicker /> should handle next month 1`] = `
               June 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -13175,11 +13098,10 @@ exports[`<DatePicker /> should handle next month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -14931,10 +14853,10 @@ exports[`<DatePicker /> should handle next month 1`] = `
 exports[`<DatePicker /> should handle next month 2`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -14943,21 +14865,24 @@ exports[`<DatePicker /> should handle next month 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -15200,49 +15125,42 @@ exports[`<DatePicker /> should handle next month 2`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -15287,11 +15205,10 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -15299,49 +15216,42 @@ exports[`<DatePicker /> should handle next month 2`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -15386,11 +15296,10 @@ exports[`<DatePicker /> should handle next month 2`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -17469,10 +17378,10 @@ exports[`<DatePicker /> should handle next month 2`] = `
 exports[`<DatePicker /> should handle previous month 1`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -17481,21 +17390,24 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -17711,49 +17623,42 @@ exports[`<DatePicker /> should handle previous month 1`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -17798,11 +17703,10 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -17810,49 +17714,42 @@ exports[`<DatePicker /> should handle previous month 1`] = `
               June 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -17897,11 +17794,10 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)
@@ -19653,10 +19549,10 @@ exports[`<DatePicker /> should handle previous month 1`] = `
 exports[`<DatePicker /> should render withouth a problem 1`] = `
 .c2 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -19665,21 +19561,24 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
+  padding: 0.4rem 0.8rem;
 }
 
 .c2 svg > path {
@@ -19940,49 +19839,42 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
         <div
           className="c1"
         >
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-left"
@@ -20027,11 +19919,10 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
           <styled.div>
             <div
               className="c4"
@@ -20039,49 +19930,42 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
               July 2018
             </div>
           </styled.div>
-          <Button
+          <Styled(Button)
+            appearance="secondary"
             disabled={false}
             onClick={[Function]}
-            secondary={true}
-            small={true}
+            size="small"
           >
             <Button
-              big={false}
+              appearance="secondary"
               className=""
               disabled={false}
-              failure={false}
               fluid={false}
               icon={null}
               iconPosition="left"
-              isGoogle={false}
               onClick={[Function]}
-              primary={false}
-              secondary={true}
-              small={true}
-              success={false}
+              size="small"
               type="button"
             >
               <styled.button
-                big={false}
+                appearance="secondary"
                 className=""
                 disabled={false}
-                failure={false}
                 fluid={false}
-                isGoogle={false}
+                icon={null}
+                iconPosition="left"
                 onClick={[Function]}
-                primary={false}
-                secondary={true}
-                small={true}
-                success={false}
+                size="small"
                 type="button"
               >
                 <button
                   className="c2"
                   disabled={false}
+                  icon={null}
                   onClick={[Function]}
+                  size="small"
                   type="button"
                 >
-                   
                   <Styled(Icon)
                     color="hsl(213, 17%, 20%)"
                     name="chevron-right"
@@ -20126,11 +20010,10 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                       </styled.div>
                     </Icon>
                   </Styled(Icon)>
-                   
                 </button>
               </styled.button>
             </Button>
-          </Button>
+          </Styled(Button)>
         </div>
       </styled.div>
       <Styled(WeekdayNames)

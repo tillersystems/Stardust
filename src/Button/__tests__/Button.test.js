@@ -7,147 +7,95 @@ import Theme from '../../Theme';
 
 describe('<Button />', () => {
   it('should render withouth a problem', () => {
-    const render = mount(<Button theme={Theme}>Primary button</Button>);
+    const render = mount(<Button theme={Theme}>Text</Button>);
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render with predefined margin', () => {
+  it('should render with another appearance', () => {
     const render = mount(
-      <Button theme={Theme} marginLeft="small" marginBottom="small">
-        Primary button
+      <Button theme={Theme} appearance="primary">
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render with different margin', () => {
+  it('should render with a different size', () => {
     const render = mount(
-      <Button theme={Theme} marginLeft="1rem" marginBottom="1rem">
-        Primary button
+      <Button theme={Theme} size="large">
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render google button', () => {
+  it('should render a fluid button', () => {
     const render = mount(
-      <Button isGoogle theme={Theme}>
-        Google button
+      <Button theme={Theme} fluid>
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render ghost button', () => {
+  it('should render with a type submit', () => {
     const render = mount(
-      <Button ghost theme={Theme}>
-        ghost button
+      <Button theme={Theme} type="submit">
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render primary button', () => {
+  it('should render a disabled button', () => {
     const render = mount(
-      <Button primary theme={Theme}>
-        Primary button
+      <Button theme={Theme} disabled>
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render secondary button', () => {
+  it('should render a left icon', () => {
+    const icon = <Icon color={Theme.palette.white} name="calendar" />;
+    const iconPosition = 'left';
     const render = mount(
-      <Button secondary theme={Theme}>
-        Secondary button
+      <Button theme={Theme} icon={icon} iconPosition={iconPosition}>
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render success button', () => {
+  it('should render a right icon', () => {
+    const icon = <Icon color={Theme.palette.white} name="calendar" />;
+    const iconPosition = 'right';
     const render = mount(
-      <Button success theme={Theme}>
-        Success button
+      <Button theme={Theme} icon={icon} iconPosition={iconPosition}>
+        Text
       </Button>,
     );
+
     expect(render).toMatchSnapshot();
   });
 
-  it('should render failure button', () => {
+  it('should respond to a click handler', () => {
+    const spy = jest.fn();
     const render = mount(
-      <Button failure theme={Theme}>
-        Failure button
+      <Button theme={Theme} onClick={spy}>
+        Text
       </Button>,
     );
-    expect(render).toMatchSnapshot();
-  });
 
-  it('should render as small', () => {
-    const render = mount(
-      <Button primary small theme={Theme}>
-        Primary small button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
+    render.simulate('click');
 
-  it('should render as big', () => {
-    const render = mount(
-      <Button primary big theme={Theme}>
-        Primary big button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as fluid', () => {
-    const render = mount(
-      <Button primary fluid theme={Theme}>
-        Primary fluid button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render as disabled', () => {
-    const render = mount(
-      <Button primary disabled theme={Theme}>
-        Disabled button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render with a left icon and a label', () => {
-    const render = mount(
-      <Button primary theme={Theme} icon={<Icon color={Theme.palette.white} name="maximize" />}>
-        Icon button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render with a right icon and a label', () => {
-    const render = mount(
-      <Button
-        primary
-        theme={Theme}
-        icon={<Icon color={Theme.palette.white} name="maximize" />}
-        iconPosition="right"
-      >
-        Icon button
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render with an icon', () => {
-    const render = mount(
-      <Button primary theme={Theme}>
-        <Icon color={Theme.palette.white} name="maximize" />
-      </Button>,
-    );
-    expect(render).toMatchSnapshot();
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

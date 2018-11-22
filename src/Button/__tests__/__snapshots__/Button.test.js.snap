@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> should render as big 1`] = `
+exports[`<Button /> should render a disabled button 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -15,466 +15,37 @@ exports[`<Button /> should render as big 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.8rem 1.8rem;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
-}
-
-<Button
-  big={true}
-  primary={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={true}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={true}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary big button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render as disabled 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
   padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
   cursor: not-allowed;
   opacity: 0.4;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
 }
 
 .c0 svg > path {
   fill: hsl(0,100%,100%);
 }
 
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
+.c0 svg > path {
+  fill: hsl(213,17%,20%);
 }
 
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
-}
-
-<Button
+<Styled(Button)
   disabled={true}
-  primary={true}
   theme={
     Object {
       "breakpoints": Object {
@@ -585,19 +156,14 @@ exports[`<Button /> should render as disabled 1`] = `
   }
 >
   <Button
-    big={false}
+    appearance="default"
     className=""
     disabled={true}
-    failure={false}
     fluid={false}
     icon={null}
     iconPosition="left"
-    isGoogle={false}
     onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
+    size="default"
     theme={
       Object {
         "breakpoints": Object {
@@ -709,17 +275,14 @@ exports[`<Button /> should render as disabled 1`] = `
     type="button"
   >
     <styled.button
-      big={false}
+      appearance="default"
       className=""
       disabled={true}
-      failure={false}
       fluid={false}
-      isGoogle={false}
+      icon={null}
+      iconPosition="left"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
+      size="default"
       theme={
         Object {
           "breakpoints": Object {
@@ -833,25 +396,25 @@ exports[`<Button /> should render as disabled 1`] = `
       <button
         className="c0"
         disabled={true}
+        icon={null}
         onClick={[Function]}
+        size="default"
         type="button"
       >
-         
-        Disabled button
-         
+        Text
       </button>
     </styled.button>
   </Button>
-</Button>
+</Styled(Button)>
 `;
 
-exports[`<Button /> should render as fluid 1`] = `
+exports[`<Button /> should render a fluid button 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -860,1281 +423,23 @@ exports[`<Button /> should render as fluid 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
   width: 100%;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
-}
-
-<Button
-  fluid={true}
-  primary={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={true}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={true}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary fluid button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render as small 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  padding: 0.4rem 0.8rem;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
-}
-
-<Button
-  primary={true}
-  small={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={true}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={true}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary small button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render failure button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(6,79%,65%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #e74432;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(6,79%,65%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #e74432;
-  border: 1px solid #e42f1b;
-  box-shadow: inset 0 0 0 0.1rem #e42f1b;
-}
-
-<Button
-  failure={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={true}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={true}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Failure button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render ghost button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
   color: hsl(213,17%,20%);
   background: none;
-  border: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c0 svg > path {
@@ -2145,1246 +450,402 @@ exports[`<Button /> should render ghost button 1`] = `
   fill: hsl(213,17%,20%);
 }
 
-.c0:hover:not([disabled]):not(:active) {
-  color: current;
+<Styled(Button)
+  fluid={true}
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <Button
+    appearance="default"
+    className=""
+    disabled={false}
+    fluid={true}
+    icon={null}
+    iconPosition="left"
+    onClick={[Function]}
+    size="default"
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      appearance="default"
+      className=""
+      disabled={false}
+      fluid={true}
+      icon={null}
+      iconPosition="left"
+      onClick={[Function]}
+      size="default"
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "avatar": Object {
+              "alizarin": "hsl(6, 78%, 57%)",
+              "carrot": "hsl(28, 80%, 52%)",
+              "emerald": "hsl(145, 63%, 49%)",
+              "river": "hsl(204, 70%, 53%)",
+              "turquoise": "hsl(168, 76%, 42%)",
+              "wisteria": "hsl(282, 44%, 47%)",
+            },
+            "black": "hsl(0, 0%, 0%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "darkBlue": "hsl(213, 17%, 20%)",
+            "darkGrey": "hsl(206,16%,60%)",
+            "failure": Object {
+              "dark": "#e74432",
+              "darker": "#e42f1b",
+              "default": "hsl(6, 79%, 65%)",
+            },
+            "googleBrandRed": "hsl(5, 81%, 56%)",
+            "lightGrey": "hsl(207,22%,90%)",
+            "mediumGrey": "hsl(206,23%,69%)",
+            "mysticGrey": "hsl(216,45%,98%)",
+            "primary": Object {
+              "dark": "#1873a0",
+              "darker": "#14638a",
+              "default": "hsl(200, 74%, 46%)",
+            },
+            "secondary": Object {
+              "default": "hsl(0, 100%, 100%)",
+            },
+            "spaceGrey": "hsl(207,13%,45%)",
+            "success": Object {
+              "dark": "#6da333",
+              "darker": "#60902d",
+              "default": "hsl(89, 53%, 52%)",
+            },
+            "warning": Object {
+              "dark": "#f59a24",
+              "darker": "#f48f0b",
+              "default": "hsl(34, 91%, 65%)",
+            },
+            "white": "hsl(0, 100%, 100%)",
+            "whiteOpacity": [Function],
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        icon={null}
+        onClick={[Function]}
+        size="default"
+        type="button"
+      >
+        Text
+      </button>
+    </styled.button>
+  </Button>
+</Styled(Button)>
+`;
+
+exports[`<Button /> should render a left icon 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
   background: none;
-  border: none;
-}
-
-<Button
-  ghost={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    ghost={true}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      ghost={true}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        ghost button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render google button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
   padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(5,81%,56%);
-  border: 0.1rem solid hsl(5,81%,56%);
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: #d52616;
-}
-
-<Button
-  isGoogle={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={true}
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={true}
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Google button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render primary button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
-}
-
-<Button
-  primary={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render secondary button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(207,13%,45%);
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
-  border: 1px solid hsl(207,22%,90%);
 }
 
 .c0 svg > path {
@@ -3392,849 +853,19 @@ exports[`<Button /> should render secondary button 1`] = `
 }
 
 .c0 svg > path {
-  fill: hsl(207,13%,45%);
+  fill: hsl(213,17%,20%);
 }
 
-<Button
-  secondary={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={false}
-    secondary={true}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={false}
-      secondary={true}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Secondary button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render success button 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(89,53%,52%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #6da333;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(89,53%,52%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #6da333;
-  border: 1px solid #60902d;
-  box-shadow: inset 0 0 0 0.1rem #60902d;
-}
-
-<Button
-  success={true}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={true}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={true}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Success button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render with a left icon and a label 1`] = `
 .c1 {
-  margin-right: 1rem;
-}
-
-.c0 {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  margin-right: 1rem;
   margin-left: 0;
-  margin-bottom: 0;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
 }
 
 .c2 {
@@ -4246,14 +877,14 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
   line-height: 20;
 }
 
-<Button
+<Styled(Button)
   icon={
     <Styled(Icon)
       color="hsl(0, 100%, 100%)"
-      name="maximize"
+      name="calendar"
     />
   }
-  primary={true}
+  iconPosition="left"
   theme={
     Object {
       "breakpoints": Object {
@@ -4364,24 +995,19 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
   }
 >
   <Button
-    big={false}
+    appearance="default"
     className=""
     disabled={false}
-    failure={false}
     fluid={false}
     icon={
       <Styled(Icon)
         color="hsl(0, 100%, 100%)"
-        name="maximize"
+        name="calendar"
       />
     }
     iconPosition="left"
-    isGoogle={false}
     onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
+    size="default"
     theme={
       Object {
         "breakpoints": Object {
@@ -4493,17 +1119,19 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
     type="button"
   >
     <styled.button
-      big={false}
+      appearance="default"
       className=""
       disabled={false}
-      failure={false}
       fluid={false}
-      isGoogle={false}
+      icon={
+        <Styled(Icon)
+          color="hsl(0, 100%, 100%)"
+          name="calendar"
+        />
+      }
+      iconPosition="left"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
+      size="default"
       theme={
         Object {
           "breakpoints": Object {
@@ -4617,22 +1245,31 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
       <button
         className="c0"
         disabled={false}
+        icon={
+          <Styled(Icon)
+            color="hsl(0, 100%, 100%)"
+            name="calendar"
+          />
+        }
         onClick={[Function]}
+        size="default"
         type="button"
       >
-        <styled.span>
+        <styled.span
+          left={true}
+        >
           <span
             className="c1"
           >
             <Styled(Icon)
               color="hsl(0, 100%, 100%)"
-              name="maximize"
+              name="calendar"
             >
               <Icon
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="20"
-                name="maximize"
+                name="calendar"
                 spin={false}
                 width="20"
               >
@@ -4659,7 +1296,7 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M170.667 42.667C182.449 42.667 192 52.217 192 64c0 11.782-9.551 21.333-21.333 21.333h-64c-11.782 0-21.334 9.552-21.334 21.334v64C85.333 182.449 75.783 192 64 192c-11.782 0-21.333-9.551-21.333-21.333v-64c0-35.347 28.653-64 64-64h64zm298.666 128c0 11.782-9.55 21.333-21.333 21.333-11.782 0-21.333-9.551-21.333-21.333v-64c0-11.782-9.552-21.334-21.334-21.334h-64C329.551 85.333 320 75.783 320 64c0-11.782 9.551-21.333 21.333-21.333h64c35.347 0 64 28.653 64 64v64zm-128 298.666c-11.782 0-21.333-9.55-21.333-21.333 0-11.782 9.551-21.333 21.333-21.333h64c11.782 0 21.334-9.552 21.334-21.334v-64c0-11.782 9.55-21.333 21.333-21.333 11.782 0 21.333 9.551 21.333 21.333v64c0 35.347-28.653 64-64 64h-64zm-298.666-128C42.667 329.551 52.217 320 64 320c11.782 0 21.333 9.551 21.333 21.333v64c0 11.782 9.552 21.334 21.334 21.334h64c11.782 0 21.333 9.55 21.333 21.333 0 11.782-9.551 21.333-21.333 21.333h-64c-35.347 0-64-28.653-64-64v-64z"
+                        d="M426.667 192v-64c0-11.782-9.552-21.333-21.334-21.333h-42.666V128c0 11.782-9.552 21.333-21.334 21.333S320 139.783 320 128v-21.333H192V128c0 11.782-9.551 21.333-21.333 21.333-11.782 0-21.334-9.55-21.334-21.333v-21.333h-42.666c-11.782 0-21.334 9.55-21.334 21.333v64h341.334zm0 42.667H85.333v192c0 11.782 9.552 21.333 21.334 21.333h298.666c11.782 0 21.334-9.551 21.334-21.333v-192zM192 64h128V42.667c0-11.782 9.551-21.334 21.333-21.334 11.782 0 21.334 9.552 21.334 21.334V64h42.666c35.347 0 64 28.654 64 64v298.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V128c0-35.346 28.653-64 64-64h42.666V42.667c0-11.782 9.552-21.334 21.334-21.334S192 30.885 192 42.667V64z"
                         fill="hsl(0, 100%, 100%)"
                         fillRule="evenodd"
                       />
@@ -4670,26 +1307,20 @@ exports[`<Button /> should render with a left icon and a label 1`] = `
             </Styled(Icon)>
           </span>
         </styled.span>
-         
-        Icon button
-         
+        Text
       </button>
     </styled.button>
   </Button>
-</Button>
+</Styled(Button)>
 `;
 
-exports[`<Button /> should render with a right icon and a label 1`] = `
-.c1 {
-  margin-left: 1rem;
-}
-
+exports[`<Button /> should render a right icon 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4698,36 +1329,43 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c0 svg > path {
   fill: hsl(0,100%,100%);
 }
 
-.c0:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
+.c0 svg > path {
+  fill: hsl(213,17%,20%);
 }
 
-.c0:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  margin-right: 0;
+  margin-left: 1rem;
 }
 
 .c2 {
@@ -4739,15 +1377,14 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
   line-height: 20;
 }
 
-<Button
+<Styled(Button)
   icon={
     <Styled(Icon)
       color="hsl(0, 100%, 100%)"
-      name="maximize"
+      name="calendar"
     />
   }
   iconPosition="right"
-  primary={true}
   theme={
     Object {
       "breakpoints": Object {
@@ -4858,24 +1495,19 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
   }
 >
   <Button
-    big={false}
+    appearance="default"
     className=""
     disabled={false}
-    failure={false}
     fluid={false}
     icon={
       <Styled(Icon)
         color="hsl(0, 100%, 100%)"
-        name="maximize"
+        name="calendar"
       />
     }
     iconPosition="right"
-    isGoogle={false}
     onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
+    size="default"
     theme={
       Object {
         "breakpoints": Object {
@@ -4987,17 +1619,19 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
     type="button"
   >
     <styled.button
-      big={false}
+      appearance="default"
       className=""
       disabled={false}
-      failure={false}
       fluid={false}
-      isGoogle={false}
+      icon={
+        <Styled(Icon)
+          color="hsl(0, 100%, 100%)"
+          name="calendar"
+        />
+      }
+      iconPosition="right"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
+      size="default"
       theme={
         Object {
           "breakpoints": Object {
@@ -5111,25 +1745,31 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
       <button
         className="c0"
         disabled={false}
+        icon={
+          <Styled(Icon)
+            color="hsl(0, 100%, 100%)"
+            name="calendar"
+          />
+        }
         onClick={[Function]}
+        size="default"
         type="button"
       >
-         
-        Icon button
-         
-        <styled.span>
+        <styled.span
+          right={true}
+        >
           <span
             className="c1"
           >
             <Styled(Icon)
               color="hsl(0, 100%, 100%)"
-              name="maximize"
+              name="calendar"
             >
               <Icon
                 className=""
                 color="hsl(0, 100%, 100%)"
                 height="20"
-                name="maximize"
+                name="calendar"
                 spin={false}
                 width="20"
               >
@@ -5156,7 +1796,7 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M170.667 42.667C182.449 42.667 192 52.217 192 64c0 11.782-9.551 21.333-21.333 21.333h-64c-11.782 0-21.334 9.552-21.334 21.334v64C85.333 182.449 75.783 192 64 192c-11.782 0-21.333-9.551-21.333-21.333v-64c0-35.347 28.653-64 64-64h64zm298.666 128c0 11.782-9.55 21.333-21.333 21.333-11.782 0-21.333-9.551-21.333-21.333v-64c0-11.782-9.552-21.334-21.334-21.334h-64C329.551 85.333 320 75.783 320 64c0-11.782 9.551-21.333 21.333-21.333h64c35.347 0 64 28.653 64 64v64zm-128 298.666c-11.782 0-21.333-9.55-21.333-21.333 0-11.782 9.551-21.333 21.333-21.333h64c11.782 0 21.334-9.552 21.334-21.334v-64c0-11.782 9.55-21.333 21.333-21.333 11.782 0 21.333 9.551 21.333 21.333v64c0 35.347-28.653 64-64 64h-64zm-298.666-128C42.667 329.551 52.217 320 64 320c11.782 0 21.333 9.551 21.333 21.333v64c0 11.782 9.552 21.334 21.334 21.334h64c11.782 0 21.333 9.55 21.333 21.333 0 11.782-9.551 21.333-21.333 21.333h-64c-35.347 0-64-28.653-64-64v-64z"
+                        d="M426.667 192v-64c0-11.782-9.552-21.333-21.334-21.333h-42.666V128c0 11.782-9.552 21.333-21.334 21.333S320 139.783 320 128v-21.333H192V128c0 11.782-9.551 21.333-21.333 21.333-11.782 0-21.334-9.55-21.334-21.333v-21.333h-42.666c-11.782 0-21.334 9.55-21.334 21.333v64h341.334zm0 42.667H85.333v192c0 11.782 9.552 21.333 21.334 21.333h298.666c11.782 0 21.334-9.551 21.334-21.333v-192zM192 64h128V42.667c0-11.782 9.551-21.334 21.333-21.334 11.782 0 21.334 9.552 21.334 21.334V64h42.666c35.347 0 64 28.654 64 64v298.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V128c0-35.346 28.653-64 64-64h42.666V42.667c0-11.782 9.552-21.334 21.334-21.334S192 30.885 192 42.667V64z"
                         fill="hsl(0, 100%, 100%)"
                         fillRule="evenodd"
                       />
@@ -5167,19 +1807,20 @@ exports[`<Button /> should render with a right icon and a label 1`] = `
             </Styled(Icon)>
           </span>
         </styled.span>
+        Text
       </button>
     </styled.button>
   </Button>
-</Button>
+</Styled(Button)>
 `;
 
-exports[`<Button /> should render with an icon 1`] = `
+exports[`<Button /> should render with a different size 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5188,21 +1829,838 @@ exports[`<Button /> should render with an icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.c0 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+<Styled(Button)
+  size="large"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <Button
+    appearance="default"
+    className=""
+    disabled={false}
+    fluid={false}
+    icon={null}
+    iconPosition="left"
+    onClick={[Function]}
+    size="large"
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+    type="button"
+  >
+    <styled.button
+      appearance="default"
+      className=""
+      disabled={false}
+      fluid={false}
+      icon={null}
+      iconPosition="left"
+      onClick={[Function]}
+      size="large"
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "avatar": Object {
+              "alizarin": "hsl(6, 78%, 57%)",
+              "carrot": "hsl(28, 80%, 52%)",
+              "emerald": "hsl(145, 63%, 49%)",
+              "river": "hsl(204, 70%, 53%)",
+              "turquoise": "hsl(168, 76%, 42%)",
+              "wisteria": "hsl(282, 44%, 47%)",
+            },
+            "black": "hsl(0, 0%, 0%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "darkBlue": "hsl(213, 17%, 20%)",
+            "darkGrey": "hsl(206,16%,60%)",
+            "failure": Object {
+              "dark": "#e74432",
+              "darker": "#e42f1b",
+              "default": "hsl(6, 79%, 65%)",
+            },
+            "googleBrandRed": "hsl(5, 81%, 56%)",
+            "lightGrey": "hsl(207,22%,90%)",
+            "mediumGrey": "hsl(206,23%,69%)",
+            "mysticGrey": "hsl(216,45%,98%)",
+            "primary": Object {
+              "dark": "#1873a0",
+              "darker": "#14638a",
+              "default": "hsl(200, 74%, 46%)",
+            },
+            "secondary": Object {
+              "default": "hsl(0, 100%, 100%)",
+            },
+            "spaceGrey": "hsl(207,13%,45%)",
+            "success": Object {
+              "dark": "#6da333",
+              "darker": "#60902d",
+              "default": "hsl(89, 53%, 52%)",
+            },
+            "warning": Object {
+              "dark": "#f59a24",
+              "darker": "#f48f0b",
+              "default": "hsl(34, 91%, 65%)",
+            },
+            "white": "hsl(0, 100%, 100%)",
+            "whiteOpacity": [Function],
+          },
+        }
+      }
+      type="button"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        icon={null}
+        onClick={[Function]}
+        size="large"
+        type="button"
+      >
+        Text
+      </button>
+    </styled.button>
+  </Button>
+</Styled(Button)>
+`;
+
+exports[`<Button /> should render with a type submit 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.8rem 1.6rem;
+}
+
+.c0 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c0 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+<Styled(Button)
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+  type="submit"
+>
+  <Button
+    appearance="default"
+    className=""
+    disabled={false}
+    fluid={false}
+    icon={null}
+    iconPosition="left"
+    onClick={[Function]}
+    size="default"
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+    type="submit"
+  >
+    <styled.button
+      appearance="default"
+      className=""
+      disabled={false}
+      fluid={false}
+      icon={null}
+      iconPosition="left"
+      onClick={[Function]}
+      size="default"
+      theme={
+        Object {
+          "breakpoints": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+            "xs": 0,
+          },
+          "dimensions": Object {
+            "big": "3.1rem",
+            "bigInt": 3.1,
+            "huge": "4.5rem",
+            "hugeInt": 4.5,
+            "medium": "1.5rem",
+            "mediumInt": 1.5,
+            "radius": "0.4rem",
+            "radiusInt": 0.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "fonts": Object {
+            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+            "size": Object {
+              "big": "1.6rem",
+              "bigInt": 1.6,
+              "default": "1.2rem",
+              "defaultInt": 1.2,
+              "h1": "3.6rem",
+              "h1Int": 3.6,
+              "h2": "3rem",
+              "h2Int": 3,
+              "h3": "2.6rem",
+              "h3Int": 2.6,
+              "h4": "2.2rem",
+              "h4Int": 2.2,
+              "h5": "2.0rem",
+              "h5Int": 2,
+              "h6": "1.8rem",
+              "h6Int": 1.8,
+              "huge": "6.4rem",
+              "hugeInt": 6.4,
+              "medium": "1.4rem",
+              "mediumInt": 1.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "spacing": Object {
+              "big": "1.5px",
+              "medium": "1px",
+              "small": "0.5px",
+            },
+            "weight": Object {
+              "normal": 400,
+              "thick": 600,
+              "thin": 200,
+            },
+          },
+          "palette": Object {
+            "avatar": Object {
+              "alizarin": "hsl(6, 78%, 57%)",
+              "carrot": "hsl(28, 80%, 52%)",
+              "emerald": "hsl(145, 63%, 49%)",
+              "river": "hsl(204, 70%, 53%)",
+              "turquoise": "hsl(168, 76%, 42%)",
+              "wisteria": "hsl(282, 44%, 47%)",
+            },
+            "black": "hsl(0, 0%, 0%)",
+            "bodyBackground": "hsl(218, 29%, 95%)",
+            "darkBlue": "hsl(213, 17%, 20%)",
+            "darkGrey": "hsl(206,16%,60%)",
+            "failure": Object {
+              "dark": "#e74432",
+              "darker": "#e42f1b",
+              "default": "hsl(6, 79%, 65%)",
+            },
+            "googleBrandRed": "hsl(5, 81%, 56%)",
+            "lightGrey": "hsl(207,22%,90%)",
+            "mediumGrey": "hsl(206,23%,69%)",
+            "mysticGrey": "hsl(216,45%,98%)",
+            "primary": Object {
+              "dark": "#1873a0",
+              "darker": "#14638a",
+              "default": "hsl(200, 74%, 46%)",
+            },
+            "secondary": Object {
+              "default": "hsl(0, 100%, 100%)",
+            },
+            "spaceGrey": "hsl(207,13%,45%)",
+            "success": Object {
+              "dark": "#6da333",
+              "darker": "#60902d",
+              "default": "hsl(89, 53%, 52%)",
+            },
+            "warning": Object {
+              "dark": "#f59a24",
+              "darker": "#f48f0b",
+              "default": "hsl(34, 91%, 65%)",
+            },
+            "white": "hsl(0, 100%, 100%)",
+            "whiteOpacity": [Function],
+          },
+        }
+      }
+      type="submit"
+    >
+      <button
+        className="c0"
+        disabled={false}
+        icon={null}
+        onClick={[Function]}
+        size="default"
+        type="submit"
+      >
+        Text
+      </button>
+    </styled.button>
+  </Button>
+</Styled(Button)>
+`;
+
+exports[`<Button /> should render with another appearance 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
   background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
   border: 1px solid #1873a0;
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  padding: 0.8rem 1.6rem;
 }
 
 .c0 svg > path {
@@ -5220,17 +2678,8 @@ exports[`<Button /> should render with an icon 1`] = `
   box-shadow: inset 0 0 0 0.1rem #14638a;
 }
 
-.c1 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
-<Button
-  primary={true}
+<Styled(Button)
+  appearance="primary"
   theme={
     Object {
       "breakpoints": Object {
@@ -5341,19 +2790,14 @@ exports[`<Button /> should render with an icon 1`] = `
   }
 >
   <Button
-    big={false}
+    appearance="primary"
     className=""
     disabled={false}
-    failure={false}
     fluid={false}
     icon={null}
     iconPosition="left"
-    isGoogle={false}
     onClick={[Function]}
-    primary={true}
-    secondary={false}
-    small={false}
-    success={false}
+    size="default"
     theme={
       Object {
         "breakpoints": Object {
@@ -5465,17 +2909,14 @@ exports[`<Button /> should render with an icon 1`] = `
     type="button"
   >
     <styled.button
-      big={false}
+      appearance="primary"
       className=""
       disabled={false}
-      failure={false}
       fluid={false}
-      isGoogle={false}
+      icon={null}
+      iconPosition="left"
       onClick={[Function]}
-      primary={true}
-      secondary={false}
-      small={false}
-      success={false}
+      size="default"
       theme={
         Object {
           "breakpoints": Object {
@@ -5589,886 +3030,25 @@ exports[`<Button /> should render with an icon 1`] = `
       <button
         className="c0"
         disabled={false}
+        icon={null}
         onClick={[Function]}
+        size="default"
         type="button"
       >
-         
-        <Styled(Icon)
-          color="hsl(0, 100%, 100%)"
-          name="maximize"
-        >
-          <Icon
-            className=""
-            color="hsl(0, 100%, 100%)"
-            height="20"
-            name="maximize"
-            spin={false}
-            width="20"
-          >
-            <styled.div
-              className=""
-              height="20"
-              spin={false}
-              width="20"
-            >
-              <div
-                className="c1"
-                height="20"
-                width="20"
-              >
-                <svg
-                  height="20"
-                  style={
-                    Object {
-                      "display": "block",
-                    }
-                  }
-                  viewBox="0 0 512 512"
-                  width="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M170.667 42.667C182.449 42.667 192 52.217 192 64c0 11.782-9.551 21.333-21.333 21.333h-64c-11.782 0-21.334 9.552-21.334 21.334v64C85.333 182.449 75.783 192 64 192c-11.782 0-21.333-9.551-21.333-21.333v-64c0-35.347 28.653-64 64-64h64zm298.666 128c0 11.782-9.55 21.333-21.333 21.333-11.782 0-21.333-9.551-21.333-21.333v-64c0-11.782-9.552-21.334-21.334-21.334h-64C329.551 85.333 320 75.783 320 64c0-11.782 9.551-21.333 21.333-21.333h64c35.347 0 64 28.653 64 64v64zm-128 298.666c-11.782 0-21.333-9.55-21.333-21.333 0-11.782 9.551-21.333 21.333-21.333h64c11.782 0 21.334-9.552 21.334-21.334v-64c0-11.782 9.55-21.333 21.333-21.333 11.782 0 21.333 9.551 21.333 21.333v64c0 35.347-28.653 64-64 64h-64zm-298.666-128C42.667 329.551 52.217 320 64 320c11.782 0 21.333 9.551 21.333 21.333v64c0 11.782 9.552 21.334 21.334 21.334h64c11.782 0 21.333 9.55 21.333 21.333 0 11.782-9.551 21.333-21.333 21.333h-64c-35.347 0-64-28.653-64-64v-64z"
-                    fill="hsl(0, 100%, 100%)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-            </styled.div>
-          </Icon>
-        </Styled(Icon)>
-         
+        Text
       </button>
     </styled.button>
   </Button>
-</Button>
-`;
-
-exports[`<Button /> should render with different margin 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-<Button
-  marginBottom="1rem"
-  marginLeft="1rem"
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    marginBottom="1rem"
-    marginLeft="1rem"
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      marginBottom="1rem"
-      marginLeft="1rem"
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
-`;
-
-exports[`<Button /> should render with predefined margin 1`] = `
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0.7rem;
-  margin-bottom: 0.7rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  outline: none;
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-<Button
-  marginBottom="small"
-  marginLeft="small"
-  theme={
-    Object {
-      "breakpoints": Object {
-        "lg": 992,
-        "md": 768,
-        "sm": 576,
-        "xl": 1200,
-        "xs": 0,
-      },
-      "dimensions": Object {
-        "big": "3.1rem",
-        "bigInt": 3.1,
-        "huge": "4.5rem",
-        "hugeInt": 4.5,
-        "medium": "1.5rem",
-        "mediumInt": 1.5,
-        "radius": "0.4rem",
-        "radiusInt": 0.4,
-        "small": "0.7rem",
-        "smallInt": 0.7,
-        "tiny": "0.3rem",
-        "tinyInt": 0.3,
-      },
-      "fonts": Object {
-        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-        "size": Object {
-          "big": "1.6rem",
-          "bigInt": 1.6,
-          "default": "1.2rem",
-          "defaultInt": 1.2,
-          "h1": "3.6rem",
-          "h1Int": 3.6,
-          "h2": "3rem",
-          "h2Int": 3,
-          "h3": "2.6rem",
-          "h3Int": 2.6,
-          "h4": "2.2rem",
-          "h4Int": 2.2,
-          "h5": "2.0rem",
-          "h5Int": 2,
-          "h6": "1.8rem",
-          "h6Int": 1.8,
-          "huge": "6.4rem",
-          "hugeInt": 6.4,
-          "medium": "1.4rem",
-          "mediumInt": 1.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "spacing": Object {
-          "big": "1.5px",
-          "medium": "1px",
-          "small": "0.5px",
-        },
-        "weight": Object {
-          "normal": 400,
-          "thick": 600,
-          "thin": 200,
-        },
-      },
-      "palette": Object {
-        "avatar": Object {
-          "alizarin": "hsl(6, 78%, 57%)",
-          "carrot": "hsl(28, 80%, 52%)",
-          "emerald": "hsl(145, 63%, 49%)",
-          "river": "hsl(204, 70%, 53%)",
-          "turquoise": "hsl(168, 76%, 42%)",
-          "wisteria": "hsl(282, 44%, 47%)",
-        },
-        "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
-        "darkBlue": "hsl(213, 17%, 20%)",
-        "darkGrey": "hsl(206,16%,60%)",
-        "failure": Object {
-          "dark": "#e74432",
-          "darker": "#e42f1b",
-          "default": "hsl(6, 79%, 65%)",
-        },
-        "googleBrandRed": "hsl(5, 81%, 56%)",
-        "lightGrey": "hsl(207,22%,90%)",
-        "mediumGrey": "hsl(206,23%,69%)",
-        "mysticGrey": "hsl(216,45%,98%)",
-        "primary": Object {
-          "dark": "#1873a0",
-          "darker": "#14638a",
-          "default": "hsl(200, 74%, 46%)",
-        },
-        "secondary": Object {
-          "default": "hsl(0, 100%, 100%)",
-        },
-        "spaceGrey": "hsl(207,13%,45%)",
-        "success": Object {
-          "dark": "#6da333",
-          "darker": "#60902d",
-          "default": "hsl(89, 53%, 52%)",
-        },
-        "warning": Object {
-          "dark": "#f59a24",
-          "darker": "#f48f0b",
-          "default": "hsl(34, 91%, 65%)",
-        },
-        "white": "hsl(0, 100%, 100%)",
-        "whiteOpacity": [Function],
-      },
-    }
-  }
->
-  <Button
-    big={false}
-    className=""
-    disabled={false}
-    failure={false}
-    fluid={false}
-    icon={null}
-    iconPosition="left"
-    isGoogle={false}
-    marginBottom="small"
-    marginLeft="small"
-    onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
-    theme={
-      Object {
-        "breakpoints": Object {
-          "lg": 992,
-          "md": 768,
-          "sm": 576,
-          "xl": 1200,
-          "xs": 0,
-        },
-        "dimensions": Object {
-          "big": "3.1rem",
-          "bigInt": 3.1,
-          "huge": "4.5rem",
-          "hugeInt": 4.5,
-          "medium": "1.5rem",
-          "mediumInt": 1.5,
-          "radius": "0.4rem",
-          "radiusInt": 0.4,
-          "small": "0.7rem",
-          "smallInt": 0.7,
-          "tiny": "0.3rem",
-          "tinyInt": 0.3,
-        },
-        "fonts": Object {
-          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-          "size": Object {
-            "big": "1.6rem",
-            "bigInt": 1.6,
-            "default": "1.2rem",
-            "defaultInt": 1.2,
-            "h1": "3.6rem",
-            "h1Int": 3.6,
-            "h2": "3rem",
-            "h2Int": 3,
-            "h3": "2.6rem",
-            "h3Int": 2.6,
-            "h4": "2.2rem",
-            "h4Int": 2.2,
-            "h5": "2.0rem",
-            "h5Int": 2,
-            "h6": "1.8rem",
-            "h6Int": 1.8,
-            "huge": "6.4rem",
-            "hugeInt": 6.4,
-            "medium": "1.4rem",
-            "mediumInt": 1.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "spacing": Object {
-            "big": "1.5px",
-            "medium": "1px",
-            "small": "0.5px",
-          },
-          "weight": Object {
-            "normal": 400,
-            "thick": 600,
-            "thin": 200,
-          },
-        },
-        "palette": Object {
-          "avatar": Object {
-            "alizarin": "hsl(6, 78%, 57%)",
-            "carrot": "hsl(28, 80%, 52%)",
-            "emerald": "hsl(145, 63%, 49%)",
-            "river": "hsl(204, 70%, 53%)",
-            "turquoise": "hsl(168, 76%, 42%)",
-            "wisteria": "hsl(282, 44%, 47%)",
-          },
-          "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(218, 29%, 95%)",
-          "darkBlue": "hsl(213, 17%, 20%)",
-          "darkGrey": "hsl(206,16%,60%)",
-          "failure": Object {
-            "dark": "#e74432",
-            "darker": "#e42f1b",
-            "default": "hsl(6, 79%, 65%)",
-          },
-          "googleBrandRed": "hsl(5, 81%, 56%)",
-          "lightGrey": "hsl(207,22%,90%)",
-          "mediumGrey": "hsl(206,23%,69%)",
-          "mysticGrey": "hsl(216,45%,98%)",
-          "primary": Object {
-            "dark": "#1873a0",
-            "darker": "#14638a",
-            "default": "hsl(200, 74%, 46%)",
-          },
-          "secondary": Object {
-            "default": "hsl(0, 100%, 100%)",
-          },
-          "spaceGrey": "hsl(207,13%,45%)",
-          "success": Object {
-            "dark": "#6da333",
-            "darker": "#60902d",
-            "default": "hsl(89, 53%, 52%)",
-          },
-          "warning": Object {
-            "dark": "#f59a24",
-            "darker": "#f48f0b",
-            "default": "hsl(34, 91%, 65%)",
-          },
-          "white": "hsl(0, 100%, 100%)",
-          "whiteOpacity": [Function],
-        },
-      }
-    }
-    type="button"
-  >
-    <styled.button
-      big={false}
-      className=""
-      disabled={false}
-      failure={false}
-      fluid={false}
-      isGoogle={false}
-      marginBottom="small"
-      marginLeft="small"
-      onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
-      theme={
-        Object {
-          "breakpoints": Object {
-            "lg": 992,
-            "md": 768,
-            "sm": 576,
-            "xl": 1200,
-            "xs": 0,
-          },
-          "dimensions": Object {
-            "big": "3.1rem",
-            "bigInt": 3.1,
-            "huge": "4.5rem",
-            "hugeInt": 4.5,
-            "medium": "1.5rem",
-            "mediumInt": 1.5,
-            "radius": "0.4rem",
-            "radiusInt": 0.4,
-            "small": "0.7rem",
-            "smallInt": 0.7,
-            "tiny": "0.3rem",
-            "tinyInt": 0.3,
-          },
-          "fonts": Object {
-            "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
-            "size": Object {
-              "big": "1.6rem",
-              "bigInt": 1.6,
-              "default": "1.2rem",
-              "defaultInt": 1.2,
-              "h1": "3.6rem",
-              "h1Int": 3.6,
-              "h2": "3rem",
-              "h2Int": 3,
-              "h3": "2.6rem",
-              "h3Int": 2.6,
-              "h4": "2.2rem",
-              "h4Int": 2.2,
-              "h5": "2.0rem",
-              "h5Int": 2,
-              "h6": "1.8rem",
-              "h6Int": 1.8,
-              "huge": "6.4rem",
-              "hugeInt": 6.4,
-              "medium": "1.4rem",
-              "mediumInt": 1.4,
-              "small": "0.7rem",
-              "smallInt": 0.7,
-              "tiny": "0.3rem",
-              "tinyInt": 0.3,
-            },
-            "spacing": Object {
-              "big": "1.5px",
-              "medium": "1px",
-              "small": "0.5px",
-            },
-            "weight": Object {
-              "normal": 400,
-              "thick": 600,
-              "thin": 200,
-            },
-          },
-          "palette": Object {
-            "avatar": Object {
-              "alizarin": "hsl(6, 78%, 57%)",
-              "carrot": "hsl(28, 80%, 52%)",
-              "emerald": "hsl(145, 63%, 49%)",
-              "river": "hsl(204, 70%, 53%)",
-              "turquoise": "hsl(168, 76%, 42%)",
-              "wisteria": "hsl(282, 44%, 47%)",
-            },
-            "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(218, 29%, 95%)",
-            "darkBlue": "hsl(213, 17%, 20%)",
-            "darkGrey": "hsl(206,16%,60%)",
-            "failure": Object {
-              "dark": "#e74432",
-              "darker": "#e42f1b",
-              "default": "hsl(6, 79%, 65%)",
-            },
-            "googleBrandRed": "hsl(5, 81%, 56%)",
-            "lightGrey": "hsl(207,22%,90%)",
-            "mediumGrey": "hsl(206,23%,69%)",
-            "mysticGrey": "hsl(216,45%,98%)",
-            "primary": Object {
-              "dark": "#1873a0",
-              "darker": "#14638a",
-              "default": "hsl(200, 74%, 46%)",
-            },
-            "secondary": Object {
-              "default": "hsl(0, 100%, 100%)",
-            },
-            "spaceGrey": "hsl(207,13%,45%)",
-            "success": Object {
-              "dark": "#6da333",
-              "darker": "#60902d",
-              "default": "hsl(89, 53%, 52%)",
-            },
-            "warning": Object {
-              "dark": "#f59a24",
-              "darker": "#f48f0b",
-              "default": "hsl(34, 91%, 65%)",
-            },
-            "white": "hsl(0, 100%, 100%)",
-            "whiteOpacity": [Function],
-          },
-        }
-      }
-      type="button"
-    >
-      <button
-        className="c0"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-         
-        Primary button
-         
-      </button>
-    </styled.button>
-  </Button>
-</Button>
+</Styled(Button)>
 `;
 
 exports[`<Button /> should render withouth a problem 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -6477,24 +3057,34 @@ exports[`<Button /> should render withouth a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c0 svg > path {
   fill: hsl(0,100%,100%);
 }
 
-<Button
+.c0 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+<Styled(Button)
   theme={
     Object {
       "breakpoints": Object {
@@ -6605,19 +3195,14 @@ exports[`<Button /> should render withouth a problem 1`] = `
   }
 >
   <Button
-    big={false}
+    appearance="default"
     className=""
     disabled={false}
-    failure={false}
     fluid={false}
     icon={null}
     iconPosition="left"
-    isGoogle={false}
     onClick={[Function]}
-    primary={false}
-    secondary={false}
-    small={false}
-    success={false}
+    size="default"
     theme={
       Object {
         "breakpoints": Object {
@@ -6729,17 +3314,14 @@ exports[`<Button /> should render withouth a problem 1`] = `
     type="button"
   >
     <styled.button
-      big={false}
+      appearance="default"
       className=""
       disabled={false}
-      failure={false}
       fluid={false}
-      isGoogle={false}
+      icon={null}
+      iconPosition="left"
       onClick={[Function]}
-      primary={false}
-      secondary={false}
-      small={false}
-      success={false}
+      size="default"
       theme={
         Object {
           "breakpoints": Object {
@@ -6853,14 +3435,14 @@ exports[`<Button /> should render withouth a problem 1`] = `
       <button
         className="c0"
         disabled={false}
+        icon={null}
         onClick={[Function]}
+        size="default"
         type="button"
       >
-         
-        Primary button
-         
+        Text
       </button>
     </styled.button>
   </Button>
-</Button>
+</Styled(Button)>
 `;

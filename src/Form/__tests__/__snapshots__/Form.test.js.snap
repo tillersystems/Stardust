@@ -4080,10 +4080,10 @@ exports[`<Form /> should render withouth a problem 1`] = `
 
 .c8 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4092,36 +4092,31 @@ exports[`<Form /> should render withouth a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0;
-  margin-bottom: 0;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.4rem;
   color: hsl(0,100%,100%);
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   outline: none;
-  color: hsl(0,100%,100%);
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
-  border: 1px solid #1873a0;
-  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.8rem 1.6rem;
 }
 
 .c8 svg > path {
   fill: hsl(0,100%,100%);
 }
 
-.c8:hover:not([disabled]):not(:active) {
-  background: hsl(200,74%,46%);
-  box-shadow: none;
-}
-
-.c8:active {
-  background-color: #1873a0;
-  border: 1px solid #14638a;
-  box-shadow: inset 0 0 0 0.1rem #14638a;
+.c8 svg > path {
+  fill: hsl(213,17%,20%);
 }
 
 .c6 {
@@ -4363,60 +4358,53 @@ exports[`<Form /> should render withouth a problem 1`] = `
                             <div
                               className=""
                             >
-                              <Button
+                              <Styled(Button)
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
                                 key=".0"
                                 primary={true}
-                                type="submit"
                               >
                                 <Button
                                   _onBlur={[Function]}
                                   _onFocus={[Function]}
-                                  big={false}
+                                  appearance="default"
                                   className=""
                                   disabled={false}
-                                  failure={false}
                                   fluid={false}
                                   icon={null}
                                   iconPosition="left"
-                                  isGoogle={false}
                                   onClick={[Function]}
                                   primary={true}
-                                  secondary={false}
-                                  small={false}
-                                  success={false}
-                                  type="submit"
+                                  size="default"
+                                  type="button"
                                 >
                                   <styled.button
                                     _onBlur={[Function]}
                                     _onFocus={[Function]}
-                                    big={false}
+                                    appearance="default"
                                     className=""
                                     disabled={false}
-                                    failure={false}
                                     fluid={false}
-                                    isGoogle={false}
+                                    icon={null}
+                                    iconPosition="left"
                                     onClick={[Function]}
                                     primary={true}
-                                    secondary={false}
-                                    small={false}
-                                    success={false}
-                                    type="submit"
+                                    size="default"
+                                    type="button"
                                   >
                                     <button
                                       className="c8"
                                       disabled={false}
+                                      icon={null}
                                       onClick={[Function]}
-                                      type="submit"
+                                      size="default"
+                                      type="button"
                                     >
-                                       
                                       Hello
-                                       
                                     </button>
                                   </styled.button>
                                 </Button>
-                              </Button>
+                              </Styled(Button)>
                             </div>
                           </styled.div>
                         </div>

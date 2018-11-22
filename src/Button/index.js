@@ -2,60 +2,112 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Container, ContainerIconLeft, ContainerIconRight } from './elements';
+import { Container, ContainerIcon } from './elements';
 
-const displayIconLeft = (side, icon) => {
-  return side === 'right' || icon === null ? null : <ContainerIconLeft>{icon}</ContainerIconLeft>;
-};
-const displayIconRight = (side, icon) => {
-  return side === 'left' || icon === null ? null : <ContainerIconRight>{icon}</ContainerIconRight>;
-};
+/**
+ * Button
+ *
+ * This component is in charge of displaying
+ * a button
+ *
+ * @param {string} appearance // The base styling to apply to the button.
+ * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {string} className // ClassName needed by styled components.
+ * @param {bool} fluid // Whether the button is fluid or not.
+ * @param {bool} disabled // Whether the button is disabled or not.
+ * @param {node} icon // Add icon node here to illustrate the text aside.
+ * @param {enum} icon // Set the icon position compared to the text. It will be set to the left side by default.
+ * @param {function} onClick // Handler of click on the button.
+ * @param {enum} size // Whether the button size is small, default or large. It will be set to default by default.
+ * @param {enum} type // Whether it is a button or a form submission.
+ *
+ * @return {jsx}
+ */
 
-const Button = ({ children, icon, iconPosition, ...rest }) => {
+const Button = ({
+  appearance,
+  children,
+  className,
+  disabled,
+  fluid,
+  icon,
+  iconPosition,
+  onClick,
+  size,
+  type,
+  ...rest
+}) => {
   return (
-    <Container {...rest}>
-      {displayIconLeft(iconPosition, icon)} {children} {displayIconRight(iconPosition, icon)}
+    <Container
+      appearance={appearance}
+      className={className}
+      disabled={disabled}
+      fluid={fluid}
+      icon={icon}
+      iconPosition={iconPosition}
+      onClick={onClick}
+      size={size}
+      type={type}
+      {...rest}
+    >
+      {displayIcon(iconPosition, icon)}
+      {children}
     </Container>
   );
 };
 
-const { node, func, string, bool } = PropTypes;
+/**
+ * displayIcon
+ *
+ * This function is a helper to place
+ * the icon correctly inside a button.
+ * He return an react element with the
+ * good props: left or right.
+ *
+ * @param {string} side // The side where the icon should be positioned [left or right].
+ * @param {jsx} icon // The icon elements.
+ *
+ * @return {jsx}
+ */
+const displayIcon = (side, icon) => {
+  if (!side || !icon) return null;
+  return {
+    left: <ContainerIcon left>{icon}</ContainerIcon>,
+    right: <ContainerIcon right>{icon}</ContainerIcon>,
+  }[side];
+};
+
+/**
+ * PropTypes Validation.
+ */
+const { bool, func, node, oneOf, string } = PropTypes;
 Button.propTypes = {
+  appearance: oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'google']),
   children: node,
-  type: string,
-  onClick: func,
-  primary: bool,
-  secondary: bool,
-  success: bool,
-  failure: bool,
-  fluid: bool,
-  big: bool,
-  small: bool,
+  className: string,
   disabled: bool,
-  isGoogle: bool,
+  fluid: bool,
   icon: node,
   iconPosition: string,
+  onClick: func,
+  size: oneOf(['small', 'default', 'large']),
+  type: oneOf(['button', 'submit']),
 };
 
+/**
+ * Default props.
+ */
 Button.defaultProps = {
+  appearance: 'default',
   children: null,
-  type: 'button',
-  onClick: () => {},
-  primary: false,
-  secondary: false,
-  success: false,
-  failure: false,
-  fluid: false,
-  big: false,
-  small: false,
+  className: '',
   disabled: false,
-  isGoogle: false,
+  fluid: false,
   icon: null,
   iconPosition: 'left',
+  onClick: () => {},
+  size: 'default',
+  type: 'button',
 };
 
-const StyledButtonRefactor = styled(Button)``;
-
-StyledButtonRefactor.displayName = 'Button';
-
-export default StyledButtonRefactor;
+export default styled(Button)``;

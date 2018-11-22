@@ -38,7 +38,7 @@ storiesOf('Popover', module)
 
     return (
       <div style={{ position: 'relative' }}>
-        <Button primary onClick={() => store.set({ active: !store.get('active') })}>
+        <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
           Show Popover
         </Button>
         <div style={{ position: 'absolute', top: '100%', left: '-78px' }}>
