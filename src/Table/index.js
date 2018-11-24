@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import SortBy from 'lodash/sortBy';
-import Reverse from 'lodash/reverse';
 
 import { Icon, Theme } from '..';
+import sortElementsInArray from '../helpers/sortElementsInArray';
 import {
   Container,
   Header,
@@ -195,11 +194,16 @@ class Table extends PureComponent {
     });
     if (index >= 0) {
       if (direction === 'asc') {
-        sortedData = SortBy(sortedData, [d => colsDef[index].value(d.item)]);
+        sortedData = sortedData.sort(
+          (a, b) =>
+            -sortElementsInArray(colsDef[index].value(a.item), colsDef[index].value(b.item)),
+        );
       }
 
       if (direction === 'desc') {
-        sortedData = Reverse(sortedData);
+        sortedData = sortedData.sort((a, b) =>
+          sortElementsInArray(colsDef[index].value(a.item), colsDef[index].value(b.item)),
+        );
       }
     }
 
