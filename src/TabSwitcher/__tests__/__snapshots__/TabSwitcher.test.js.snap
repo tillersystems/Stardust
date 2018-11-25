@@ -1,0 +1,915 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabSwitcher /> should render with no <Tabpanels> background 1`] = `
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0px hsl(200,74%,46%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c1:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c1 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c2:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c2 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  padding: 1.6rem 3rem;
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-left: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+  background: hsl(0,100%,100%);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  background: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  list-style-type: none;
+  background: hsl(0,100%,100%);
+}
+
+<TabSwitcher
+  defaultActiveTabId="alfa"
+>
+  <Styled(TabList)>
+    <TabList
+      className="c0"
+    >
+      <ul
+        className="c0"
+        role="tablist"
+      >
+        <Tab
+          id="alfa"
+        >
+          <styled.li
+            isActive={true}
+            role="presentation"
+          >
+            <li
+              className="c1"
+              role="presentation"
+            >
+              <div
+                aria-selected="true"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="0"
+              >
+                Alfa
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+        <Tab
+          id="bravo"
+        >
+          <styled.li
+            isActive={false}
+            role="presentation"
+          >
+            <li
+              className="c2"
+              role="presentation"
+            >
+              <div
+                aria-selected="false"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="-1"
+              >
+                Bravo
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+      </ul>
+    </TabList>
+  </Styled(TabList)>
+  <TabPanels
+    className=""
+    noBackground={true}
+    noBorder={false}
+  >
+    <styled.div
+      className=""
+      noBackground={true}
+      noBorder={false}
+    >
+      <div
+        className="c3"
+      >
+        <TabPanel
+          whenActive="alfa"
+        >
+          <section
+            aria-labelledby="alfa"
+            role="tabpanel"
+            tabIndex="0"
+          >
+            <div>
+              Alfa Tab
+            </div>
+          </section>
+        </TabPanel>
+        <TabPanel
+          whenActive="bravo"
+        />
+      </div>
+    </styled.div>
+  </TabPanels>
+</TabSwitcher>
+`;
+
+exports[`<TabSwitcher /> should render with no <Tabpanels> border 1`] = `
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0px hsl(200,74%,46%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c1:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c1 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c2:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c2 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  padding: 1.6rem 3rem;
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-left: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+  background: hsl(0,100%,100%);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  list-style-type: none;
+  background: hsl(0,100%,100%);
+}
+
+<TabSwitcher
+  defaultActiveTabId="alfa"
+>
+  <Styled(TabList)>
+    <TabList
+      className="c0"
+    >
+      <ul
+        className="c0"
+        role="tablist"
+      >
+        <Tab
+          id="alfa"
+        >
+          <styled.li
+            isActive={true}
+            role="presentation"
+          >
+            <li
+              className="c1"
+              role="presentation"
+            >
+              <div
+                aria-selected="true"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="0"
+              >
+                Alfa
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+        <Tab
+          id="bravo"
+        >
+          <styled.li
+            isActive={false}
+            role="presentation"
+          >
+            <li
+              className="c2"
+              role="presentation"
+            >
+              <div
+                aria-selected="false"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="-1"
+              >
+                Bravo
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+      </ul>
+    </TabList>
+  </Styled(TabList)>
+  <TabPanels
+    className=""
+    noBackground={false}
+    noBorder={true}
+  >
+    <styled.div
+      className=""
+      noBackground={false}
+      noBorder={true}
+    >
+      <div
+        className="c3"
+      >
+        <TabPanel
+          whenActive="alfa"
+        >
+          <section
+            aria-labelledby="alfa"
+            role="tabpanel"
+            tabIndex="0"
+          >
+            <div>
+              Alfa Tab
+            </div>
+          </section>
+        </TabPanel>
+        <TabPanel
+          whenActive="bravo"
+        />
+      </div>
+    </styled.div>
+  </TabPanels>
+</TabSwitcher>
+`;
+
+exports[`<TabSwitcher /> should render without a problem 1`] = `
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0px hsl(200,74%,46%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c1:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c1 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c2:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c2 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  padding: 1.6rem 3rem;
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-left: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+  background: hsl(0,100%,100%);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  list-style-type: none;
+  background: hsl(0,100%,100%);
+}
+
+<TabSwitcher
+  defaultActiveTabId="alfa"
+>
+  <Styled(TabList)>
+    <TabList
+      className="c0"
+    >
+      <ul
+        className="c0"
+        role="tablist"
+      >
+        <Tab
+          id="alfa"
+        >
+          <styled.li
+            isActive={true}
+            role="presentation"
+          >
+            <li
+              className="c1"
+              role="presentation"
+            >
+              <div
+                aria-selected="true"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="0"
+              >
+                Alfa
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+        <Tab
+          id="bravo"
+        >
+          <styled.li
+            isActive={false}
+            role="presentation"
+          >
+            <li
+              className="c2"
+              role="presentation"
+            >
+              <div
+                aria-selected="false"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="-1"
+              >
+                Bravo
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+      </ul>
+    </TabList>
+  </Styled(TabList)>
+  <TabPanels
+    className=""
+    noBackground={false}
+    noBorder={false}
+  >
+    <styled.div
+      className=""
+      noBackground={false}
+      noBorder={false}
+    >
+      <div
+        className="c3"
+      >
+        <TabPanel
+          whenActive="alfa"
+        >
+          <section
+            aria-labelledby="alfa"
+            role="tabpanel"
+            tabIndex="0"
+          >
+            <div>
+              Alfa Tab
+            </div>
+          </section>
+        </TabPanel>
+        <TabPanel
+          whenActive="bravo"
+        />
+      </div>
+    </styled.div>
+  </TabPanels>
+</TabSwitcher>
+`;
+
+exports[`<TabSwitcher /> should switch to another tab 1`] = `
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0px hsl(200,74%,46%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c2:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c2 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c1:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c1 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  padding: 1.6rem 3rem;
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-left: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+  background: hsl(0,100%,100%);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  background: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  list-style-type: none;
+  background: hsl(0,100%,100%);
+}
+
+<TabSwitcher
+  defaultActiveTabId="alfa"
+>
+  <Styled(TabList)>
+    <TabList
+      className="c0"
+    >
+      <ul
+        className="c0"
+        role="tablist"
+      >
+        <Tab
+          id="alfa"
+        >
+          <styled.li
+            isActive={false}
+            role="presentation"
+          >
+            <li
+              className="c1"
+              role="presentation"
+            >
+              <div
+                aria-selected="false"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="-1"
+              >
+                Alfa
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+        <Tab
+          id="bravo"
+        >
+          <styled.li
+            isActive={true}
+            role="presentation"
+          >
+            <li
+              className="c2"
+              role="presentation"
+            >
+              <div
+                aria-selected="true"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="0"
+              >
+                Bravo
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+      </ul>
+    </TabList>
+  </Styled(TabList)>
+  <TabPanels
+    className=""
+    noBackground={true}
+    noBorder={false}
+  >
+    <styled.div
+      className=""
+      noBackground={true}
+      noBorder={false}
+    >
+      <div
+        className="c3"
+      >
+        <TabPanel
+          whenActive="alfa"
+        />
+        <TabPanel
+          whenActive="bravo"
+        >
+          <section
+            aria-labelledby="bravo"
+            role="tabpanel"
+            tabIndex="0"
+          >
+            <div>
+              Bravo Tab
+            </div>
+          </section>
+        </TabPanel>
+      </div>
+    </styled.div>
+  </TabPanels>
+</TabSwitcher>
+`;
+
+exports[`<TabSwitcher /> should switch to another tab 2`] = `
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 0px hsl(200,74%,46%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c2:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c2 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+}
+
+.c1:first-child {
+  border-left: 1px solid hsl(207,22%,90%);
+}
+
+.c1 > div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  padding: 1.6rem 3rem;
+  border-bottom: 1px solid hsl(207,22%,90%);
+  border-left: 1px solid hsl(207,22%,90%);
+  border-right: 1px solid hsl(207,22%,90%);
+  background: hsl(0,100%,100%);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  background: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.5rem;
+  list-style-type: none;
+  background: hsl(0,100%,100%);
+}
+
+<TabSwitcher
+  defaultActiveTabId="alfa"
+>
+  <Styled(TabList)>
+    <TabList
+      className="c0"
+    >
+      <ul
+        className="c0"
+        role="tablist"
+      >
+        <Tab
+          id="alfa"
+        >
+          <styled.li
+            isActive={false}
+            role="presentation"
+          >
+            <li
+              className="c1"
+              role="presentation"
+            >
+              <div
+                aria-selected="false"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="-1"
+              >
+                Alfa
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+        <Tab
+          id="bravo"
+        >
+          <styled.li
+            isActive={true}
+            role="presentation"
+          >
+            <li
+              className="c2"
+              role="presentation"
+            >
+              <div
+                aria-selected="true"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="tab"
+                tabIndex="0"
+              >
+                Bravo
+              </div>
+            </li>
+          </styled.li>
+        </Tab>
+      </ul>
+    </TabList>
+  </Styled(TabList)>
+  <TabPanels
+    className=""
+    noBackground={true}
+    noBorder={false}
+  >
+    <styled.div
+      className=""
+      noBackground={true}
+      noBorder={false}
+    >
+      <div
+        className="c3"
+      >
+        <TabPanel
+          whenActive="alfa"
+        />
+        <TabPanel
+          whenActive="bravo"
+        >
+          <section
+            aria-labelledby="bravo"
+            role="tabpanel"
+            tabIndex="0"
+          >
+            <div>
+              Bravo Tab
+            </div>
+          </section>
+        </TabPanel>
+      </div>
+    </styled.div>
+  </TabPanels>
+</TabSwitcher>
+`;
