@@ -49,14 +49,18 @@ class ButtonGroup extends PureComponent {
 
   /**
    * updateActiveButton.
-   * Tell to the store witch button is activated
+   *
+   * Handles click on a child button.
+   * In addition, notifies the parent about a click on a button child.
+   *
    * @param {string} name
+   * @param {function} onClick
    */
-  updateActiveButton = (name, hasClick) => {
+  updateActiveButton = (name, onClick) => {
     const { onChange } = this.props;
     this.setState({ activeButton: name }, () => {
       onChange && onChange(name);
-      hasClick && hasClick();
+      onClick && onClick();
     });
   };
 
