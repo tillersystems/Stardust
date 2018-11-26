@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`sortElementsInArray helpers should return -1 1`] = `-1`;
-
-exports[`sortElementsInArray helpers should return 0 1`] = `0`;
-
-exports[`sortElementsInArray helpers should return 1 1`] = `1`;
