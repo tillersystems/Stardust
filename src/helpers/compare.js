@@ -15,11 +15,5 @@
  */
 
 export default function compare(a, b) {
-  if (b < a) {
-    return -1;
-  }
-  if (b > a) {
-    return 1;
-  }
-  return 0;
+  return b > a ? 1 : b < a ? -1 : 0;
 }
