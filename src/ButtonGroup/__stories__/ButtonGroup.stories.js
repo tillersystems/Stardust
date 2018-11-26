@@ -39,7 +39,7 @@ storiesOf('ButtonGroup', module)
     const iconName = select('Icon Name', getIconName, 'calendar', 'Layout');
     return (
       <div>
-        <ButtonGroup defaultActiveButton="ON" onChange={name => onClickAction(name)}>
+        <ButtonGroup defaultActiveButtonName="ON" onChange={name => onClickAction(name)}>
           <Button
             name="ON"
             appearance={appearance}

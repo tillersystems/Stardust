@@ -257,6 +257,7 @@ exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
   <ButtonGroup
     className="c0"
     defaultActiveButton="ON"
+    defaultActiveButtonName=""
     onChange={[Function]}
     theme={
       Object {
@@ -375,7 +376,7 @@ exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
       <Styled(Button)
         appearance="secondary"
         data-appearance="secondary"
-        data-isactive={true}
+        data-isactive={false}
         key=".0"
         name="ON"
         onClick={[Function]}
@@ -492,7 +493,7 @@ exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
           appearance="secondary"
           className="c1 "
           data-appearance="secondary"
-          data-isactive={true}
+          data-isactive={false}
           disabled={false}
           fluid={false}
           icon={null}
@@ -614,7 +615,7 @@ exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
             appearance="secondary"
             className="c1 "
             data-appearance="secondary"
-            data-isactive={true}
+            data-isactive={false}
             disabled={false}
             fluid={false}
             icon={null}
@@ -735,7 +736,7 @@ exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
             <button
               className="c1 c2"
               data-appearance="secondary"
-              data-isactive={true}
+              data-isactive={false}
               disabled={false}
               icon={null}
               name="ON"
@@ -1292,6 +1293,7 @@ exports[`<ButtonGroup /> should not clone child if not a button element 1`] = `
   <ButtonGroup
     className="c0"
     defaultActiveButton="ON"
+    defaultActiveButtonName=""
     onChange={[Function]}
     theme={
       Object {
@@ -1637,6 +1639,7 @@ exports[`<ButtonGroup /> should render with a default value 1`] = `
   <ButtonGroup
     className="c0"
     defaultActiveButton="ON"
+    defaultActiveButtonName=""
     onChange={[Function]}
     theme={
       Object {
@@ -1755,7 +1758,7 @@ exports[`<ButtonGroup /> should render with a default value 1`] = `
       <Styled(Button)
         appearance="secondary"
         data-appearance="secondary"
-        data-isactive={true}
+        data-isactive={false}
         key=".0"
         name="ON"
         onClick={[Function]}
@@ -1872,7 +1875,7 @@ exports[`<ButtonGroup /> should render with a default value 1`] = `
           appearance="secondary"
           className="c1 "
           data-appearance="secondary"
-          data-isactive={true}
+          data-isactive={false}
           disabled={false}
           fluid={false}
           icon={null}
@@ -1994,7 +1997,7 @@ exports[`<ButtonGroup /> should render with a default value 1`] = `
             appearance="secondary"
             className="c1 "
             data-appearance="secondary"
-            data-isactive={true}
+            data-isactive={false}
             disabled={false}
             fluid={false}
             icon={null}
@@ -2115,7 +2118,7 @@ exports[`<ButtonGroup /> should render with a default value 1`] = `
             <button
               className="c1 c2"
               data-appearance="secondary"
-              data-isactive={true}
+              data-isactive={false}
               disabled={false}
               icon={null}
               name="ON"
@@ -2722,6 +2725,7 @@ exports[`<ButtonGroup /> should render with a default value 2`] = `
   <ButtonGroup
     className="c0"
     defaultActiveButton="ON"
+    defaultActiveButtonName=""
     onChange={[Function]}
     theme={
       Object {
@@ -2840,7 +2844,7 @@ exports[`<ButtonGroup /> should render with a default value 2`] = `
       <Styled(Button)
         appearance="secondary"
         data-appearance="secondary"
-        data-isactive={true}
+        data-isactive={false}
         key=".0"
         name="ON"
         onClick={[Function]}
@@ -2957,7 +2961,7 @@ exports[`<ButtonGroup /> should render with a default value 2`] = `
           appearance="secondary"
           className="c1 "
           data-appearance="secondary"
-          data-isactive={true}
+          data-isactive={false}
           disabled={false}
           fluid={false}
           icon={null}
@@ -3079,7 +3083,7 @@ exports[`<ButtonGroup /> should render with a default value 2`] = `
             appearance="secondary"
             className="c1 "
             data-appearance="secondary"
-            data-isactive={true}
+            data-isactive={false}
             disabled={false}
             fluid={false}
             icon={null}
@@ -3200,7 +3204,7 @@ exports[`<ButtonGroup /> should render with a default value 2`] = `
             <button
               className="c1 c2"
               data-appearance="secondary"
-              data-isactive={true}
+              data-isactive={false}
               disabled={false}
               icon={null}
               name="ON"
@@ -3805,7 +3809,7 @@ exports[`<ButtonGroup /> should render withouth a problem 1`] = `
 >
   <ButtonGroup
     className="c0"
-    defaultActiveButton=""
+    defaultActiveButtonName=""
     onChange={[Function]}
     theme={
       Object {

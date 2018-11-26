@@ -29,7 +29,7 @@ class ButtonGroup extends PureComponent {
     children: node,
     className: string,
     onChange: func,
-    defaultActiveButton: string,
+    defaultActiveButtonName: string,
   };
 
   /**
@@ -39,12 +39,12 @@ class ButtonGroup extends PureComponent {
     children: null,
     className: '',
     onChange: () => {},
-    defaultActiveButton: '',
+    defaultActiveButtonName: '',
   };
 
   /** Internal state. */
   state = {
-    activeButton: this.props.defaultActiveButton, // eslint-disable-line react/destructuring-assignment
+    activeButton: this.props.defaultActiveButtonName, // eslint-disable-line react/destructuring-assignment
   };
 
   /**
