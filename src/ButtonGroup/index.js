@@ -54,7 +54,6 @@ class ButtonGroup extends PureComponent {
    */
   updateActiveButton = (name, hasClick) => {
     const { onChange } = this.props;
-
     this.setState({ activeButton: name }, () => {
       onChange && onChange(name);
       hasClick && hasClick();
@@ -73,7 +72,6 @@ class ButtonGroup extends PureComponent {
     return (
       <div role="group" className={className} tabIndex="-1">
         {Children.map(children, child => {
-          let hasClick;
           if (child.props.disabled) {
             return child;
           }
@@ -83,11 +81,9 @@ class ButtonGroup extends PureComponent {
           if (!child.props.name) {
             throw new Error('"name" prop must be provided to Button');
           }
-          if (child.props.onClick) {
-            hasClick = child.props.onClick;
-          }
+
           return cloneElement(child, {
-            onClick: () => this.updateActiveButton(child.props.name, hasClick),
+            onClick: () => this.updateActiveButton(child.props.name, child.props.onClick),
             'data-isactive': activeButton === child.props.name,
             'data-appearance': child.props.appearance,
           });
