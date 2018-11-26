@@ -1,7 +1,7 @@
 /**
- * Sort elements in array
+ * Compare
  *
- * Compare function in order to sort an array of objects.
+ * Compare function.
  *
  * Function should always return a number, either positive, negative or 0
  * If the return number is negative, A will be shown before B.
@@ -14,7 +14,7 @@
  * @return {number}
  */
 
-export default function sortElementsInArray(a, b) {
+export default function compare(a, b) {
   if (b < a) {
     return -1;
   }

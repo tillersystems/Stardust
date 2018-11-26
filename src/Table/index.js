@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon, Theme } from '..';
-import sortElementsInArray from '../helpers/sortElementsInArray';
+import compare from '../helpers/compare';
 import {
   Container,
   Header,
@@ -195,14 +195,13 @@ class Table extends PureComponent {
     if (index >= 0) {
       if (direction === 'asc') {
         sortedData = sortedData.sort(
-          (a, b) =>
-            -sortElementsInArray(colsDef[index].value(a.item), colsDef[index].value(b.item)),
+          (a, b) => -compare(colsDef[index].value(a.item), colsDef[index].value(b.item)),
         );
       }
 
       if (direction === 'desc') {
         sortedData = sortedData.sort((a, b) =>
-          sortElementsInArray(colsDef[index].value(a.item), colsDef[index].value(b.item)),
+          compare(colsDef[index].value(a.item), colsDef[index].value(b.item)),
         );
       }
     }
