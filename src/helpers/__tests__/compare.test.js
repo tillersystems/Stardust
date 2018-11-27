@@ -1,6 +1,6 @@
 import compare from '../compare';
 
-describe('sortElementsInArray helpers', () => {
+describe('compare helpers', () => {
   it('should return 0', () => {
     const compareNumber = compare(1, 1);
     expect(compareNumber).toBe(0);
