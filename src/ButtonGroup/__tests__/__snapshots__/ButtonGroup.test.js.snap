@@ -1,0 +1,4683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> should not clone child if disabled 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.c3 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c3 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+  fill: rgba(30,146,204,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] svg > path {
+  fill: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'],
+.c0 .c1[data-isactive='false'][data-appearance='default'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+  fill: rgba(100,116,130,0.7);
+}
+
+<Styled(ButtonGroup)
+  defaultActiveButton="ON"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton="ON"
+    defaultActiveButtonName=""
+    onChange={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+      role="group"
+      tabIndex="-1"
+    >
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".0"
+        name="ON"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="ON"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="ON"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="ON"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              ON
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+      <Styled(Button)
+        appearance="secondary"
+        disabled={true}
+        key=".1"
+        name="OFF"
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          disabled={true}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="OFF"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            disabled={true}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="OFF"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c3"
+              disabled={true}
+              icon={null}
+              name="OFF"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              OFF
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should not clone child if not a button element 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+  fill: rgba(30,146,204,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] svg > path {
+  fill: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'],
+.c0 .c1[data-isactive='false'][data-appearance='default'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+  fill: rgba(100,116,130,0.7);
+}
+
+<Styled(ButtonGroup)
+  defaultActiveButton="ON"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton="ON"
+    defaultActiveButtonName=""
+    onChange={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+      role="group"
+      tabIndex="-1"
+    >
+      <div
+        key=".0"
+        name="ON"
+      >
+        ON
+      </div>
+      <div
+        key=".1"
+        name="OFF"
+      >
+        OFF
+      </div>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render with a default value 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+  fill: rgba(30,146,204,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] svg > path {
+  fill: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'],
+.c0 .c1[data-isactive='false'][data-appearance='default'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+  fill: rgba(100,116,130,0.7);
+}
+
+<Styled(ButtonGroup)
+  defaultActiveButton="ON"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton="ON"
+    defaultActiveButtonName=""
+    onChange={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+      role="group"
+      tabIndex="-1"
+    >
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".0"
+        name="ON"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="ON"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="ON"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="ON"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              ON
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".1"
+        name="OFF"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="OFF"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="OFF"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="OFF"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              OFF
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render with a default value 2`] = `
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+  fill: rgba(30,146,204,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] svg > path {
+  fill: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'],
+.c0 .c1[data-isactive='false'][data-appearance='default'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+  fill: rgba(100,116,130,0.7);
+}
+
+<Styled(ButtonGroup)
+  defaultActiveButton="ON"
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButton="ON"
+    defaultActiveButtonName=""
+    onChange={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+      role="group"
+      tabIndex="-1"
+    >
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".0"
+        name="ON"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="ON"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="ON"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="ON"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              ON
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".1"
+        name="OFF"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="OFF"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="OFF"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="OFF"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              OFF
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
+
+exports[`<ButtonGroup /> should render withouth a problem 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:nth-child(n):not(:first-of-type) {
+  border-left: 0;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-left: 0;
+}
+
+.c0 .c1[data-isactive='true'] {
+  text-shadow: 0.6px 0 0 currentColor;
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+  color: hsl(200,74%,46%);
+}
+
+.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+  fill: rgba(30,146,204,0.7);
+}
+
+.c0 .c1[data-isactive='false'] {
+  color: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'] svg > path {
+  fill: rgba(255,255,255,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'],
+.c0 .c1[data-isactive='false'][data-appearance='default'] {
+  color: rgba(100,116,130,0.7);
+}
+
+.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+  fill: rgba(100,116,130,0.7);
+}
+
+<Styled(ButtonGroup)
+  theme={
+    Object {
+      "breakpoints": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+        "xs": 0,
+      },
+      "dimensions": Object {
+        "big": "3.1rem",
+        "bigInt": 3.1,
+        "huge": "4.5rem",
+        "hugeInt": 4.5,
+        "medium": "1.5rem",
+        "mediumInt": 1.5,
+        "radius": "0.4rem",
+        "radiusInt": 0.4,
+        "small": "0.7rem",
+        "smallInt": 0.7,
+        "tiny": "0.3rem",
+        "tinyInt": 0.3,
+      },
+      "fonts": Object {
+        "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+        "size": Object {
+          "big": "1.6rem",
+          "bigInt": 1.6,
+          "default": "1.2rem",
+          "defaultInt": 1.2,
+          "h1": "3.6rem",
+          "h1Int": 3.6,
+          "h2": "3rem",
+          "h2Int": 3,
+          "h3": "2.6rem",
+          "h3Int": 2.6,
+          "h4": "2.2rem",
+          "h4Int": 2.2,
+          "h5": "2.0rem",
+          "h5Int": 2,
+          "h6": "1.8rem",
+          "h6Int": 1.8,
+          "huge": "6.4rem",
+          "hugeInt": 6.4,
+          "medium": "1.4rem",
+          "mediumInt": 1.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "spacing": Object {
+          "big": "1.5px",
+          "medium": "1px",
+          "small": "0.5px",
+        },
+        "weight": Object {
+          "normal": 400,
+          "thick": 600,
+          "thin": 200,
+        },
+      },
+      "palette": Object {
+        "avatar": Object {
+          "alizarin": "hsl(6, 78%, 57%)",
+          "carrot": "hsl(28, 80%, 52%)",
+          "emerald": "hsl(145, 63%, 49%)",
+          "river": "hsl(204, 70%, 53%)",
+          "turquoise": "hsl(168, 76%, 42%)",
+          "wisteria": "hsl(282, 44%, 47%)",
+        },
+        "black": "hsl(0, 0%, 0%)",
+        "bodyBackground": "hsl(218, 29%, 95%)",
+        "darkBlue": "hsl(213, 17%, 20%)",
+        "darkGrey": "hsl(206,16%,60%)",
+        "failure": Object {
+          "dark": "#e74432",
+          "darker": "#e42f1b",
+          "default": "hsl(6, 79%, 65%)",
+        },
+        "googleBrandRed": "hsl(5, 81%, 56%)",
+        "lightGrey": "hsl(207,22%,90%)",
+        "mediumGrey": "hsl(206,23%,69%)",
+        "mysticGrey": "hsl(216,45%,98%)",
+        "primary": Object {
+          "dark": "#1873a0",
+          "darker": "#14638a",
+          "default": "hsl(200, 74%, 46%)",
+        },
+        "secondary": Object {
+          "default": "hsl(0, 100%, 100%)",
+        },
+        "spaceGrey": "hsl(207,13%,45%)",
+        "success": Object {
+          "dark": "#6da333",
+          "darker": "#60902d",
+          "default": "hsl(89, 53%, 52%)",
+        },
+        "warning": Object {
+          "dark": "#f59a24",
+          "darker": "#f48f0b",
+          "default": "hsl(34, 91%, 65%)",
+        },
+        "white": "hsl(0, 100%, 100%)",
+        "whiteOpacity": [Function],
+      },
+    }
+  }
+>
+  <ButtonGroup
+    className="c0"
+    defaultActiveButtonName=""
+    onChange={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "lg": 992,
+          "md": 768,
+          "sm": 576,
+          "xl": 1200,
+          "xs": 0,
+        },
+        "dimensions": Object {
+          "big": "3.1rem",
+          "bigInt": 3.1,
+          "huge": "4.5rem",
+          "hugeInt": 4.5,
+          "medium": "1.5rem",
+          "mediumInt": 1.5,
+          "radius": "0.4rem",
+          "radiusInt": 0.4,
+          "small": "0.7rem",
+          "smallInt": 0.7,
+          "tiny": "0.3rem",
+          "tinyInt": 0.3,
+        },
+        "fonts": Object {
+          "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+          "size": Object {
+            "big": "1.6rem",
+            "bigInt": 1.6,
+            "default": "1.2rem",
+            "defaultInt": 1.2,
+            "h1": "3.6rem",
+            "h1Int": 3.6,
+            "h2": "3rem",
+            "h2Int": 3,
+            "h3": "2.6rem",
+            "h3Int": 2.6,
+            "h4": "2.2rem",
+            "h4Int": 2.2,
+            "h5": "2.0rem",
+            "h5Int": 2,
+            "h6": "1.8rem",
+            "h6Int": 1.8,
+            "huge": "6.4rem",
+            "hugeInt": 6.4,
+            "medium": "1.4rem",
+            "mediumInt": 1.4,
+            "small": "0.7rem",
+            "smallInt": 0.7,
+            "tiny": "0.3rem",
+            "tinyInt": 0.3,
+          },
+          "spacing": Object {
+            "big": "1.5px",
+            "medium": "1px",
+            "small": "0.5px",
+          },
+          "weight": Object {
+            "normal": 400,
+            "thick": 600,
+            "thin": 200,
+          },
+        },
+        "palette": Object {
+          "avatar": Object {
+            "alizarin": "hsl(6, 78%, 57%)",
+            "carrot": "hsl(28, 80%, 52%)",
+            "emerald": "hsl(145, 63%, 49%)",
+            "river": "hsl(204, 70%, 53%)",
+            "turquoise": "hsl(168, 76%, 42%)",
+            "wisteria": "hsl(282, 44%, 47%)",
+          },
+          "black": "hsl(0, 0%, 0%)",
+          "bodyBackground": "hsl(218, 29%, 95%)",
+          "darkBlue": "hsl(213, 17%, 20%)",
+          "darkGrey": "hsl(206,16%,60%)",
+          "failure": Object {
+            "dark": "#e74432",
+            "darker": "#e42f1b",
+            "default": "hsl(6, 79%, 65%)",
+          },
+          "googleBrandRed": "hsl(5, 81%, 56%)",
+          "lightGrey": "hsl(207,22%,90%)",
+          "mediumGrey": "hsl(206,23%,69%)",
+          "mysticGrey": "hsl(216,45%,98%)",
+          "primary": Object {
+            "dark": "#1873a0",
+            "darker": "#14638a",
+            "default": "hsl(200, 74%, 46%)",
+          },
+          "secondary": Object {
+            "default": "hsl(0, 100%, 100%)",
+          },
+          "spaceGrey": "hsl(207,13%,45%)",
+          "success": Object {
+            "dark": "#6da333",
+            "darker": "#60902d",
+            "default": "hsl(89, 53%, 52%)",
+          },
+          "warning": Object {
+            "dark": "#f59a24",
+            "darker": "#f48f0b",
+            "default": "hsl(34, 91%, 65%)",
+          },
+          "white": "hsl(0, 100%, 100%)",
+          "whiteOpacity": [Function],
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+      role="group"
+      tabIndex="-1"
+    >
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".0"
+        name="ON"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="ON"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="ON"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="ON"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              ON
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+      <Styled(Button)
+        appearance="secondary"
+        data-appearance="secondary"
+        data-isactive={false}
+        key=".1"
+        name="OFF"
+        onClick={[Function]}
+        theme={
+          Object {
+            "breakpoints": Object {
+              "lg": 992,
+              "md": 768,
+              "sm": 576,
+              "xl": 1200,
+              "xs": 0,
+            },
+            "dimensions": Object {
+              "big": "3.1rem",
+              "bigInt": 3.1,
+              "huge": "4.5rem",
+              "hugeInt": 4.5,
+              "medium": "1.5rem",
+              "mediumInt": 1.5,
+              "radius": "0.4rem",
+              "radiusInt": 0.4,
+              "small": "0.7rem",
+              "smallInt": 0.7,
+              "tiny": "0.3rem",
+              "tinyInt": 0.3,
+            },
+            "fonts": Object {
+              "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+              "size": Object {
+                "big": "1.6rem",
+                "bigInt": 1.6,
+                "default": "1.2rem",
+                "defaultInt": 1.2,
+                "h1": "3.6rem",
+                "h1Int": 3.6,
+                "h2": "3rem",
+                "h2Int": 3,
+                "h3": "2.6rem",
+                "h3Int": 2.6,
+                "h4": "2.2rem",
+                "h4Int": 2.2,
+                "h5": "2.0rem",
+                "h5Int": 2,
+                "h6": "1.8rem",
+                "h6Int": 1.8,
+                "huge": "6.4rem",
+                "hugeInt": 6.4,
+                "medium": "1.4rem",
+                "mediumInt": 1.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "spacing": Object {
+                "big": "1.5px",
+                "medium": "1px",
+                "small": "0.5px",
+              },
+              "weight": Object {
+                "normal": 400,
+                "thick": 600,
+                "thin": 200,
+              },
+            },
+            "palette": Object {
+              "avatar": Object {
+                "alizarin": "hsl(6, 78%, 57%)",
+                "carrot": "hsl(28, 80%, 52%)",
+                "emerald": "hsl(145, 63%, 49%)",
+                "river": "hsl(204, 70%, 53%)",
+                "turquoise": "hsl(168, 76%, 42%)",
+                "wisteria": "hsl(282, 44%, 47%)",
+              },
+              "black": "hsl(0, 0%, 0%)",
+              "bodyBackground": "hsl(218, 29%, 95%)",
+              "darkBlue": "hsl(213, 17%, 20%)",
+              "darkGrey": "hsl(206,16%,60%)",
+              "failure": Object {
+                "dark": "#e74432",
+                "darker": "#e42f1b",
+                "default": "hsl(6, 79%, 65%)",
+              },
+              "googleBrandRed": "hsl(5, 81%, 56%)",
+              "lightGrey": "hsl(207,22%,90%)",
+              "mediumGrey": "hsl(206,23%,69%)",
+              "mysticGrey": "hsl(216,45%,98%)",
+              "primary": Object {
+                "dark": "#1873a0",
+                "darker": "#14638a",
+                "default": "hsl(200, 74%, 46%)",
+              },
+              "secondary": Object {
+                "default": "hsl(0, 100%, 100%)",
+              },
+              "spaceGrey": "hsl(207,13%,45%)",
+              "success": Object {
+                "dark": "#6da333",
+                "darker": "#60902d",
+                "default": "hsl(89, 53%, 52%)",
+              },
+              "warning": Object {
+                "dark": "#f59a24",
+                "darker": "#f48f0b",
+                "default": "hsl(34, 91%, 65%)",
+              },
+              "white": "hsl(0, 100%, 100%)",
+              "whiteOpacity": [Function],
+            },
+          }
+        }
+      >
+        <Button
+          appearance="secondary"
+          className="c1 "
+          data-appearance="secondary"
+          data-isactive={false}
+          disabled={false}
+          fluid={false}
+          icon={null}
+          iconPosition="left"
+          name="OFF"
+          onClick={[Function]}
+          size="default"
+          theme={
+            Object {
+              "breakpoints": Object {
+                "lg": 992,
+                "md": 768,
+                "sm": 576,
+                "xl": 1200,
+                "xs": 0,
+              },
+              "dimensions": Object {
+                "big": "3.1rem",
+                "bigInt": 3.1,
+                "huge": "4.5rem",
+                "hugeInt": 4.5,
+                "medium": "1.5rem",
+                "mediumInt": 1.5,
+                "radius": "0.4rem",
+                "radiusInt": 0.4,
+                "small": "0.7rem",
+                "smallInt": 0.7,
+                "tiny": "0.3rem",
+                "tinyInt": 0.3,
+              },
+              "fonts": Object {
+                "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                "size": Object {
+                  "big": "1.6rem",
+                  "bigInt": 1.6,
+                  "default": "1.2rem",
+                  "defaultInt": 1.2,
+                  "h1": "3.6rem",
+                  "h1Int": 3.6,
+                  "h2": "3rem",
+                  "h2Int": 3,
+                  "h3": "2.6rem",
+                  "h3Int": 2.6,
+                  "h4": "2.2rem",
+                  "h4Int": 2.2,
+                  "h5": "2.0rem",
+                  "h5Int": 2,
+                  "h6": "1.8rem",
+                  "h6Int": 1.8,
+                  "huge": "6.4rem",
+                  "hugeInt": 6.4,
+                  "medium": "1.4rem",
+                  "mediumInt": 1.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "spacing": Object {
+                  "big": "1.5px",
+                  "medium": "1px",
+                  "small": "0.5px",
+                },
+                "weight": Object {
+                  "normal": 400,
+                  "thick": 600,
+                  "thin": 200,
+                },
+              },
+              "palette": Object {
+                "avatar": Object {
+                  "alizarin": "hsl(6, 78%, 57%)",
+                  "carrot": "hsl(28, 80%, 52%)",
+                  "emerald": "hsl(145, 63%, 49%)",
+                  "river": "hsl(204, 70%, 53%)",
+                  "turquoise": "hsl(168, 76%, 42%)",
+                  "wisteria": "hsl(282, 44%, 47%)",
+                },
+                "black": "hsl(0, 0%, 0%)",
+                "bodyBackground": "hsl(218, 29%, 95%)",
+                "darkBlue": "hsl(213, 17%, 20%)",
+                "darkGrey": "hsl(206,16%,60%)",
+                "failure": Object {
+                  "dark": "#e74432",
+                  "darker": "#e42f1b",
+                  "default": "hsl(6, 79%, 65%)",
+                },
+                "googleBrandRed": "hsl(5, 81%, 56%)",
+                "lightGrey": "hsl(207,22%,90%)",
+                "mediumGrey": "hsl(206,23%,69%)",
+                "mysticGrey": "hsl(216,45%,98%)",
+                "primary": Object {
+                  "dark": "#1873a0",
+                  "darker": "#14638a",
+                  "default": "hsl(200, 74%, 46%)",
+                },
+                "secondary": Object {
+                  "default": "hsl(0, 100%, 100%)",
+                },
+                "spaceGrey": "hsl(207,13%,45%)",
+                "success": Object {
+                  "dark": "#6da333",
+                  "darker": "#60902d",
+                  "default": "hsl(89, 53%, 52%)",
+                },
+                "warning": Object {
+                  "dark": "#f59a24",
+                  "darker": "#f48f0b",
+                  "default": "hsl(34, 91%, 65%)",
+                },
+                "white": "hsl(0, 100%, 100%)",
+                "whiteOpacity": [Function],
+              },
+            }
+          }
+          type="button"
+        >
+          <styled.button
+            appearance="secondary"
+            className="c1 "
+            data-appearance="secondary"
+            data-isactive={false}
+            disabled={false}
+            fluid={false}
+            icon={null}
+            iconPosition="left"
+            name="OFF"
+            onClick={[Function]}
+            size="default"
+            theme={
+              Object {
+                "breakpoints": Object {
+                  "lg": 992,
+                  "md": 768,
+                  "sm": 576,
+                  "xl": 1200,
+                  "xs": 0,
+                },
+                "dimensions": Object {
+                  "big": "3.1rem",
+                  "bigInt": 3.1,
+                  "huge": "4.5rem",
+                  "hugeInt": 4.5,
+                  "medium": "1.5rem",
+                  "mediumInt": 1.5,
+                  "radius": "0.4rem",
+                  "radiusInt": 0.4,
+                  "small": "0.7rem",
+                  "smallInt": 0.7,
+                  "tiny": "0.3rem",
+                  "tinyInt": 0.3,
+                },
+                "fonts": Object {
+                  "family": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+                  "size": Object {
+                    "big": "1.6rem",
+                    "bigInt": 1.6,
+                    "default": "1.2rem",
+                    "defaultInt": 1.2,
+                    "h1": "3.6rem",
+                    "h1Int": 3.6,
+                    "h2": "3rem",
+                    "h2Int": 3,
+                    "h3": "2.6rem",
+                    "h3Int": 2.6,
+                    "h4": "2.2rem",
+                    "h4Int": 2.2,
+                    "h5": "2.0rem",
+                    "h5Int": 2,
+                    "h6": "1.8rem",
+                    "h6Int": 1.8,
+                    "huge": "6.4rem",
+                    "hugeInt": 6.4,
+                    "medium": "1.4rem",
+                    "mediumInt": 1.4,
+                    "small": "0.7rem",
+                    "smallInt": 0.7,
+                    "tiny": "0.3rem",
+                    "tinyInt": 0.3,
+                  },
+                  "spacing": Object {
+                    "big": "1.5px",
+                    "medium": "1px",
+                    "small": "0.5px",
+                  },
+                  "weight": Object {
+                    "normal": 400,
+                    "thick": 600,
+                    "thin": 200,
+                  },
+                },
+                "palette": Object {
+                  "avatar": Object {
+                    "alizarin": "hsl(6, 78%, 57%)",
+                    "carrot": "hsl(28, 80%, 52%)",
+                    "emerald": "hsl(145, 63%, 49%)",
+                    "river": "hsl(204, 70%, 53%)",
+                    "turquoise": "hsl(168, 76%, 42%)",
+                    "wisteria": "hsl(282, 44%, 47%)",
+                  },
+                  "black": "hsl(0, 0%, 0%)",
+                  "bodyBackground": "hsl(218, 29%, 95%)",
+                  "darkBlue": "hsl(213, 17%, 20%)",
+                  "darkGrey": "hsl(206,16%,60%)",
+                  "failure": Object {
+                    "dark": "#e74432",
+                    "darker": "#e42f1b",
+                    "default": "hsl(6, 79%, 65%)",
+                  },
+                  "googleBrandRed": "hsl(5, 81%, 56%)",
+                  "lightGrey": "hsl(207,22%,90%)",
+                  "mediumGrey": "hsl(206,23%,69%)",
+                  "mysticGrey": "hsl(216,45%,98%)",
+                  "primary": Object {
+                    "dark": "#1873a0",
+                    "darker": "#14638a",
+                    "default": "hsl(200, 74%, 46%)",
+                  },
+                  "secondary": Object {
+                    "default": "hsl(0, 100%, 100%)",
+                  },
+                  "spaceGrey": "hsl(207,13%,45%)",
+                  "success": Object {
+                    "dark": "#6da333",
+                    "darker": "#60902d",
+                    "default": "hsl(89, 53%, 52%)",
+                  },
+                  "warning": Object {
+                    "dark": "#f59a24",
+                    "darker": "#f48f0b",
+                    "default": "hsl(34, 91%, 65%)",
+                  },
+                  "white": "hsl(0, 100%, 100%)",
+                  "whiteOpacity": [Function],
+                },
+              }
+            }
+            type="button"
+          >
+            <button
+              className="c1 c2"
+              data-appearance="secondary"
+              data-isactive={false}
+              disabled={false}
+              icon={null}
+              name="OFF"
+              onClick={[Function]}
+              size="default"
+              type="button"
+            >
+              OFF
+            </button>
+          </styled.button>
+        </Button>
+      </Styled(Button)>
+    </div>
+  </ButtonGroup>
+</Styled(ButtonGroup)>
+`;
