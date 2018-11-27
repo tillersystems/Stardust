@@ -1,3 +1,13 @@
+# [1.11.0](https://github.com/tillersystems/Stardust/compare/v1.10.0...v1.11.0) (2018-11-27)
+
+### Features
+
+- **Button:** new button refactor ([#218](https://github.com/tillersystems/Stardust/issues/218)) ([a8a9edc](https://github.com/tillersystems/Stardust/commit/a8a9edc))
+- **ButtonGroup:** create button group component ([95e8ff6](https://github.com/tillersystems/Stardust/commit/95e8ff6))
+- **groupButton:** add documentation ([0acf67e](https://github.com/tillersystems/Stardust/commit/0acf67e))
+- **groupButton:** directly passing child.props.onClick to gain in a readability ([e2618ce](https://github.com/tillersystems/Stardust/commit/e2618ce))
+- **groupButton:** rename props ([0501b40](https://github.com/tillersystems/Stardust/commit/0501b40))
+
 # [1.10.0](https://github.com/tillersystems/Stardust/compare/v1.9.0...v1.10.0) (2018-11-19)
 
 ### Bug Fixes
