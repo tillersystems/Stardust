@@ -193,17 +193,11 @@ class Table extends PureComponent {
       };
     });
     if (index >= 0) {
-      if (direction === 'asc') {
-        sortedData = sortedData.sort(
-          (a, b) => -compare(colsDef[index].value(a.item), colsDef[index].value(b.item)),
-        );
-      }
-
-      if (direction === 'desc') {
-        sortedData = sortedData.sort((a, b) =>
+      sortedData = sortedData.sort(
+        (a, b) =>
+          (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) *
           compare(colsDef[index].value(a.item), colsDef[index].value(b.item)),
-        );
-      }
+      );
     }
 
     return (
