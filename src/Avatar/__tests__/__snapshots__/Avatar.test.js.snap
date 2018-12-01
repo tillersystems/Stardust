@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Avatar /> should render with a custom user image 1`] = `
+.c1 {
+  border-radius: 50%;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,18 +27,23 @@ exports[`<Avatar /> should render with a custom user image 1`] = `
 
 <div
   aria-label="James Bond"
-  className="c0"
+  class="c0"
 >
-  <Image
+  <img
     alt="James Bond"
-    height={31}
+    class="c1"
+    height="31"
     src="http://urlofmyimage.com"
-    width={31}
+    width="31"
   />
 </div>
 `;
 
 exports[`<Avatar /> should render withouth a custom size 1`] = `
+.c1 {
+  border-radius: 50%;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,11 +66,15 @@ exports[`<Avatar /> should render withouth a custom size 1`] = `
 
 <div
   aria-label="James Bond"
-  className="c0"
+  class="c0"
 >
-  <span>
-    JB
-  </span>
+  <img
+    alt="James Bond"
+    class="c1"
+    height="41"
+    src="http://urlofmyimage.com"
+    width="41"
+  />
 </div>
 `;
 
@@ -88,7 +101,7 @@ exports[`<Avatar /> should render withouth a problem 1`] = `
 
 <div
   aria-label="James Bond"
-  className="c0"
+  class="c0"
 >
   <span>
     JB

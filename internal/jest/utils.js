@@ -1,8 +1,17 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
+import { render } from 'react-testing-library';
 import { ThemeProvider } from 'styled-components';
 
 import Theme from '../../src/Theme';
+
+// Workaround to render a component and provide it with a theme
+const customRender = (node, options) => {
+  return render(<ThemeProvider theme={Theme}>{node}</ThemeProvider>, options);
+};
+
+// override render method
+export { customRender as render };
 
 // Workaround to mount a component as root, and provide it with a theme
 // https://github.com/styled-components/jest-styled-components#theming
