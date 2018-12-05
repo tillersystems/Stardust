@@ -25,8 +25,8 @@ addDecorator((story, context) => {
     PreviewComponent: styled.div`
       text-align: center;
       padding: 2.5rem;
-      box-shadow: 0 0 4rem hsla(0, 0%, 0%, 0.1);
-      background: hsl(218, 29%, 95%);
+      box-shadow: 0 0 0.3rem hsla(0, 0%, 0%, 0.3);
+      background: hsl(0, 0%, 97%);
       margin: 5rem 0;
     `,
   })(readme)(story, context);
