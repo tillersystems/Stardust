@@ -1,3 +1,18 @@
+# [1.12.0](https://github.com/tillersystems/Stardust/compare/v1.11.0...v1.12.0) (2018-12-05)
+
+### Bug Fixes
+
+- **Checkbox:** fix checkbox not updated correctly when use as controlled component ([#238](https://github.com/tillersystems/Stardust/issues/238)) ([1e3505a](https://github.com/tillersystems/Stardust/commit/1e3505a))
+- **table:** refactoring sort ([d629b66](https://github.com/tillersystems/Stardust/commit/d629b66))
+- **table:** rename function ([9280a86](https://github.com/tillersystems/Stardust/commit/9280a86))
+- **table:** rewrite test ([c076a57](https://github.com/tillersystems/Stardust/commit/c076a57))
+- **table:** use ternary expressions ([f4d8ed0](https://github.com/tillersystems/Stardust/commit/f4d8ed0))
+- **Table:** fix desc / asc order ([63465d0](https://github.com/tillersystems/Stardust/commit/63465d0))
+
+### Features
+
+- **file-icon:** add file icon to data ([#237](https://github.com/tillersystems/Stardust/issues/237)) ([48f6ba1](https://github.com/tillersystems/Stardust/commit/48f6ba1))
+
 # [1.11.0](https://github.com/tillersystems/Stardust/compare/v1.10.0...v1.11.0) (2018-11-27)
 
 ### Features
