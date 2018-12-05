@@ -29,7 +29,6 @@ class CheckBox extends PureComponent {
     children: PropTypes.node,
     className: PropTypes.string,
     checked: PropTypes.bool,
-    defaultChecked: PropTypes.bool,
     disabled: PropTypes.bool,
     onChange: PropTypes.func,
     value: PropTypes.string,
@@ -39,8 +38,7 @@ class CheckBox extends PureComponent {
   static defaultProps = {
     children: null,
     className: '',
-    defaultChecked: false,
-    checked: undefined,
+    checked: false,
     disabled: false,
     onChange: null,
     value: '',
@@ -48,8 +46,23 @@ class CheckBox extends PureComponent {
 
   /** Internal state. */
   state = {
-    checked: this.props.defaultChecked, // eslint-disable-line
+    checked: this.props.checked, // eslint-disable-line
   };
+
+  /**
+   * Component Did Update
+   * Method invoked immediately after updating occur.
+   */
+  componentDidUpdate(prevProps) {
+    const { checked } = this.props;
+
+    // Update state only if props are changed
+    if (prevProps.checked !== checked) {
+      this.setState({
+        checked,
+      });
+    }
+  }
 
   /**
    * Handle Change
@@ -57,27 +70,16 @@ class CheckBox extends PureComponent {
    */
   handleChange = () => {
     const { onChange, disabled } = this.props;
-    const checked = !this.isChecked();
+    const { checked } = this.state;
 
     if (disabled) {
       return;
     }
 
-    this.setState({ checked }, () => {
+    this.setState({ checked: !checked }, () => {
       onChange;
     });
   };
-
-  /**
-   * isChecked
-   *
-   * @return {boolean}
-   */
-  isChecked() {
-    const { checked } = this.props;
-
-    return checked || this.state.checked; // eslint-disable-line
-  }
 
   /**
    * Renders the component.
@@ -102,7 +104,7 @@ class CheckBox extends PureComponent {
                 event => event.stopPropagation()
               }
               tabIndex={disabled ? -1 : 0}
-              defaultChecked={defaultChecked}
+              checked={checked}
               disabled={disabled}
               onChange={this.handleChange}
               value={value}
