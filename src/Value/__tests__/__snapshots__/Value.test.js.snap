@@ -79,7 +79,7 @@ exports[`<Value /> should render as negative 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -213,7 +213,7 @@ exports[`<Value /> should render as postive 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -346,7 +346,7 @@ exports[`<Value /> should render withouth a problem 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {

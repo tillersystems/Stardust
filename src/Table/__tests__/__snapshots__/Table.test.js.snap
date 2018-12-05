@@ -288,7 +288,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -2173,7 +2173,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -4058,7 +4058,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -5943,7 +5943,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -7828,7 +7828,7 @@ exports[`<Table /> should render without a problem 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -9714,7 +9714,7 @@ exports[`<Table /> should render without a problem when given a compressed rows 
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -11595,7 +11595,7 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -13480,7 +13480,7 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -15365,7 +15365,7 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -17250,7 +17250,7 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -19067,7 +19067,7 @@ exports[`<Table /> should render without a problem when no header 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -20740,7 +20740,7 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -22642,7 +22642,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -24562,7 +24562,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(218, 29%, 95%)",
+        "bodyBackground": "hsl(210, 33%, 99%);",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
