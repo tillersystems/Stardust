@@ -16,7 +16,7 @@ storiesOf('CheckBox', module)
 
     return (
       <>
-        <CheckBox defaultChecked disabled={!enabledValue}>
+        <CheckBox checked disabled={!enabledValue}>
           A really cool choice
         </CheckBox>
         <CheckBox disabled={!enabledValue}>A really cool choice</CheckBox>
@@ -31,7 +31,7 @@ storiesOf('CheckBox', module)
       <State store={store}>
         {state => (
           <CheckBox
-            defaultChecked={state.checked}
+            checked={state.checked}
             disabled={!enabledValue}
             onChange={() => store.set({ checked: !store.get('checked') })}
           >
