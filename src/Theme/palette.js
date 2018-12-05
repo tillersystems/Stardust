@@ -22,7 +22,7 @@ const blue = 'hsl(200, 74%, 46%)';
 const green = 'hsl(89, 53%, 52%)';
 const red = 'hsl(6, 79%, 65%)';
 const yellow = 'hsl(34, 91%, 65%)';
-const bodyBackground = 'hsl(218, 29%, 95%)';
+const bodyBackground = 'hsl(210, 33%, 99%);';
 const darkBlue = 'hsl(213, 17%, 20%)';
 
 // Shades of grey
