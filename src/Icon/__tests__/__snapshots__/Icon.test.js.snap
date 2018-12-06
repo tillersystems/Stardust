@@ -87,7 +87,7 @@ exports[`<Icon /> should render with a spin loader 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -202,7 +202,7 @@ exports[`<Icon /> should render with a spin loader 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -316,7 +316,7 @@ exports[`<Icon /> should render with a spin loader 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -467,7 +467,7 @@ exports[`<Icon /> should render with different color 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -582,7 +582,7 @@ exports[`<Icon /> should render with different color 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -696,7 +696,7 @@ exports[`<Icon /> should render with different color 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -846,7 +846,7 @@ exports[`<Icon /> should render with different name 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -961,7 +961,7 @@ exports[`<Icon /> should render with different name 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -1075,7 +1075,7 @@ exports[`<Icon /> should render with different name 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -1226,7 +1226,7 @@ exports[`<Icon /> should render with different size 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -1342,7 +1342,7 @@ exports[`<Icon /> should render with different size 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -1457,7 +1457,7 @@ exports[`<Icon /> should render with different size 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -1609,7 +1609,7 @@ exports[`<Icon /> should render with predifined color 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -1724,7 +1724,7 @@ exports[`<Icon /> should render with predifined color 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -1838,7 +1838,7 @@ exports[`<Icon /> should render with predifined color 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -1988,7 +1988,7 @@ exports[`<Icon /> should render withouth a problem 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -2103,7 +2103,7 @@ exports[`<Icon /> should render withouth a problem 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -2217,7 +2217,7 @@ exports[`<Icon /> should render withouth a problem 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {

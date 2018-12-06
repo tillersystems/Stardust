@@ -118,7 +118,7 @@ exports[`<Button /> should render a disabled button 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -236,7 +236,7 @@ exports[`<Button /> should render a disabled button 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -355,7 +355,7 @@ exports[`<Button /> should render a disabled button 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -524,7 +524,7 @@ exports[`<Button /> should render a fluid button 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -642,7 +642,7 @@ exports[`<Button /> should render a fluid button 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -761,7 +761,7 @@ exports[`<Button /> should render a fluid button 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -957,7 +957,7 @@ exports[`<Button /> should render a left icon 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -1080,7 +1080,7 @@ exports[`<Button /> should render a left icon 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -1204,7 +1204,7 @@ exports[`<Button /> should render a left icon 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -1457,7 +1457,7 @@ exports[`<Button /> should render a right icon 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -1580,7 +1580,7 @@ exports[`<Button /> should render a right icon 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -1704,7 +1704,7 @@ exports[`<Button /> should render a right icon 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -1932,7 +1932,7 @@ exports[`<Button /> should render with a different size 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -2050,7 +2050,7 @@ exports[`<Button /> should render with a different size 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -2169,7 +2169,7 @@ exports[`<Button /> should render with a different size 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -2337,7 +2337,7 @@ exports[`<Button /> should render with a type submit 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -2456,7 +2456,7 @@ exports[`<Button /> should render with a type submit 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -2575,7 +2575,7 @@ exports[`<Button /> should render with a type submit 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -2752,7 +2752,7 @@ exports[`<Button /> should render with another appearance 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -2870,7 +2870,7 @@ exports[`<Button /> should render with another appearance 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -2989,7 +2989,7 @@ exports[`<Button /> should render with another appearance 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
@@ -3157,7 +3157,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
           "wisteria": "hsl(282, 44%, 47%)",
         },
         "black": "hsl(0, 0%, 0%)",
-        "bodyBackground": "hsl(210, 33%, 99%);",
+        "bodyBackground": "hsl(220, 27%, 94%)",
         "darkBlue": "hsl(213, 17%, 20%)",
         "darkGrey": "hsl(206,16%,60%)",
         "failure": Object {
@@ -3275,7 +3275,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
             "wisteria": "hsl(282, 44%, 47%)",
           },
           "black": "hsl(0, 0%, 0%)",
-          "bodyBackground": "hsl(210, 33%, 99%);",
+          "bodyBackground": "hsl(220, 27%, 94%)",
           "darkBlue": "hsl(213, 17%, 20%)",
           "darkGrey": "hsl(206,16%,60%)",
           "failure": Object {
@@ -3394,7 +3394,7 @@ exports[`<Button /> should render withouth a problem 1`] = `
               "wisteria": "hsl(282, 44%, 47%)",
             },
             "black": "hsl(0, 0%, 0%)",
-            "bodyBackground": "hsl(210, 33%, 99%);",
+            "bodyBackground": "hsl(220, 27%, 94%)",
             "darkBlue": "hsl(213, 17%, 20%)",
             "darkGrey": "hsl(206,16%,60%)",
             "failure": Object {
