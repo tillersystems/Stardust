@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Button, NumberInput } from '..';
+import { Container, InputElement } from '../Input/TextInput/elements';
 
 const { string, number } = PropTypes;
 
@@ -26,6 +27,8 @@ class Increment extends PureComponent {
     step: number,
     max: number,
     min: number,
+    width: string,
+    appearance: string,
   };
 
   /**
@@ -36,12 +39,17 @@ class Increment extends PureComponent {
     step: 1,
     max: 1000,
     min: 0,
+    width: '5rem',
+    appearance: 'secondary',
   };
 
   state = {
     counter: 0,
   };
 
+  /**
+   * Increment counter.
+   */
   increment = () => {
     const { counter } = this.state;
     const { step, max } = this.props;
@@ -50,6 +58,9 @@ class Increment extends PureComponent {
     });
   };
 
+  /**
+   * Decrement counter.
+   */
   decrement = () => {
     const { counter } = this.state;
     const { step, min } = this.props;
@@ -64,17 +75,25 @@ class Increment extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { className, step, max, min } = this.props;
+    const { className, step, max, min, width, appearance } = this.props;
     const { counter } = this.state;
 
     return (
-      <div role="group" className={className} tabIndex="-1" step={step} max={max} min={min}>
-        <Button appearance="primary" onClick={this.increment}>
-          +
-        </Button>
-        <NumberInput value={counter} />
-        <Button appearance="primary" onClick={this.decrement}>
+      <div
+        role="group"
+        className={className}
+        tabIndex="-1"
+        step={step}
+        max={max}
+        min={min}
+        width={width}
+      >
+        <Button appearance={appearance} onClick={this.decrement}>
           -
+        </Button>
+        <NumberInput value={counter} width={width} />
+        <Button appearance={appearance} onClick={this.increment}>
+          +
         </Button>
       </div>
     );
@@ -85,10 +104,12 @@ export default styled(Increment)`
   display: flex;
   ${Button} {
     border-radius: 0;
+    font-size: ${({ theme: { fonts } }) => fonts.size.h5};
 
     &:first-of-type {
       border-top-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-bottom-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+      border-right: 0;
     }
 
     &:nth-child(n):not(:first-of-type) {
@@ -100,9 +121,21 @@ export default styled(Increment)`
       border-bottom-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-left: 0;
     }
+  }
 
-    ${NumberInput} {
-      border-radius: 0;
+  ${Container} {
+    border-radius: 0;
+    &:focus,
+    &:active {
+      border: none;
+      border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
     }
+  }
 
+  ${InputElement} {
+    border-radius: 0;
+    &:focus {
+      border: none;
+    }
+  }
 `;
