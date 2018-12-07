@@ -6,5 +6,5 @@ import { Increment } from '../..';
 storiesOf('Increment', module)
   .addDecorator(withKnobs)
   .add('default', () => {
-    return <Increment />;
+    return <Increment initialCount={0} step={10} max={100} min={0} />;
   });

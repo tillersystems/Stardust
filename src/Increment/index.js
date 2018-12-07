@@ -23,7 +23,6 @@ class Increment extends PureComponent {
    */
   static propTypes = {
     className: string,
-    initialCount: number,
     step: number,
     max: number,
     min: number,
@@ -34,7 +33,6 @@ class Increment extends PureComponent {
    */
   static defaultProps = {
     className: '',
-    initialCount: 0,
     step: 1,
     max: 1000,
     min: 0,
@@ -48,7 +46,7 @@ class Increment extends PureComponent {
     const { counter } = this.state;
     const { step, max } = this.props;
     this.setState({
-      counter: counter <= max ? counter : counter + step,
+      counter: counter === max ? counter : counter + step,
     });
   };
 
@@ -66,11 +64,11 @@ class Increment extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { className, initialCount } = this.props;
+    const { className, step, max, min } = this.props;
     const { counter } = this.state;
 
     return (
-      <div role="group" className={className} tabIndex="-1" initialCount={initialCount}>
+      <div role="group" className={className} tabIndex="-1" step={step} max={max} min={min}>
         <Button appearance="primary" onClick={this.increment}>
           +
         </Button>
