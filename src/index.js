@@ -10,6 +10,7 @@ export { default as RadioGroup } from './RadioGroup';
 export { DatePicker, DateRangePicker } from './Date';
 export { default as Form } from './Form';
 export { default as Icon } from './Icon';
+export { default as Increment } from './Increment';
 export { NumberInput, TextInput } from './Input';
 export { default as KpiChart } from './KpiChart';
 export { default as Message } from './Message';
