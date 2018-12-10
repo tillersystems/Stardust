@@ -8,22 +8,23 @@ import { Container, InputElement } from '../Input/TextInput/elements';
 const { string, number } = PropTypes;
 
 /**
- * Increment.
+ * Counter.
  *
  * This component is in charge of displaying
- * an increment group with minus and add button.
+ * an Counter component.
  *
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className // Add a text aside in the select next the selected value.
  *
  * @return {jsx}
  */
-class Increment extends PureComponent {
+class Counter extends PureComponent {
   /**
    * PropTypes Validation.
    */
   static propTypes = {
     className: string,
+    defaultCountValue: number,
     step: number,
     max: number,
     min: number,
@@ -36,6 +37,7 @@ class Increment extends PureComponent {
    */
   static defaultProps = {
     className: '',
+    defaultCountValue: 0,
     step: 1,
     max: 1000,
     min: 0,
@@ -44,7 +46,7 @@ class Increment extends PureComponent {
   };
 
   state = {
-    counter: 0,
+    counter: this.props.defaultCountValue, // eslint-disable-line react/destructuring-assignment,
   };
 
   /**
@@ -100,7 +102,7 @@ class Increment extends PureComponent {
   }
 }
 
-export default styled(Increment)`
+export default styled(Counter)`
   display: flex;
   ${Button} {
     border-radius: 0;

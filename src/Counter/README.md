@@ -1,9 +1,9 @@
-# Increment
+# Counter
 
 ### Usage
 
 ```jsx
-import { Increment } from '@tillersystems/stardust';
+import { Counter } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
@@ -31,11 +31,11 @@ import { Increment } from '@tillersystems/stardust';
 The following snippet shows how to create a increment component.
 
 ```jsx
-import { Increment } from '@tillersystems/stardust';
+import { Counter } from '@tillersystems/stardust';
 
 render() {
   return (
-    <Increment
+    <Counter
         step={myStepValue}
         max={maxValue}
         min={minValue}

@@ -1,19 +1,19 @@
 import React from 'react';
 import 'jest-styled-components';
 
-import Increment from '..';
+import Counter from '..';
 import { Button } from '../..';
 
-describe('<Increment />', () => {
+describe('<Counter />', () => {
   it('should match snapshot', () => {
-    const render = shallowWithTheme(<Increment />);
+    const render = shallowWithTheme(<Counter />);
 
     expect(render.dive()).toMatchSnapshot();
   });
 
   it('should match snapshot when - button is clicked', () => {
     const render = mountWithTheme(
-      <Increment step={1} max={100} min={0} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} appearance="secondary" width="5rem" />,
     );
 
     render
@@ -26,7 +26,7 @@ describe('<Increment />', () => {
 
   it('should match snapshot when + button is clicked', () => {
     const render = mountWithTheme(
-      <Increment step={1} max={100} min={0} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} appearance="secondary" width="5rem" />,
     );
 
     render

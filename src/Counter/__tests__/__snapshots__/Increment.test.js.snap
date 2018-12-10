@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Increment /> should match snapshot 1`] = `
+exports[`<Counter /> should match snapshot 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,7 +96,7 @@ exports[`<Increment /> should match snapshot 1`] = `
 </div>
 `;
 
-exports[`<Increment /> should match snapshot when + button is clicked 1`] = `
+exports[`<Counter /> should match snapshot when + button is clicked 1`] = `
 .c2 {
   position: relative;
   display: -webkit-inline-box;
@@ -240,14 +240,14 @@ exports[`<Increment /> should match snapshot when + button is clicked 1`] = `
   border: none;
 }
 
-<Styled(Increment)
+<Styled(Counter)
   appearance="secondary"
   max={100}
   min={0}
   step={1}
   width="5rem"
 >
-  <Increment
+  <Counter
     appearance="secondary"
     className="c0"
     max={100}
@@ -438,11 +438,11 @@ exports[`<Increment /> should match snapshot when + button is clicked 1`] = `
         </Button>
       </Styled(Button)>
     </div>
-  </Increment>
-</Styled(Increment)>
+  </Counter>
+</Styled(Counter)>
 `;
 
-exports[`<Increment /> should match snapshot when - button is clicked 1`] = `
+exports[`<Counter /> should match snapshot when - button is clicked 1`] = `
 .c2 {
   position: relative;
   display: -webkit-inline-box;
@@ -586,14 +586,14 @@ exports[`<Increment /> should match snapshot when - button is clicked 1`] = `
   border: none;
 }
 
-<Styled(Increment)
+<Styled(Counter)
   appearance="secondary"
   max={100}
   min={0}
   step={1}
   width="5rem"
 >
-  <Increment
+  <Counter
     appearance="secondary"
     className="c0"
     max={100}
@@ -784,6 +784,6 @@ exports[`<Increment /> should match snapshot when - button is clicked 1`] = `
         </Button>
       </Styled(Button)>
     </div>
-  </Increment>
-</Styled(Increment)>
+  </Counter>
+</Styled(Counter)>
 `;

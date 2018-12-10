@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select } from '@storybook/addon-knobs';
-import { Increment } from '../..';
+import { Counter } from '../..';
 
-storiesOf('Increment', module)
+storiesOf('Counter', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const step = number(
@@ -65,12 +65,6 @@ storiesOf('Increment', module)
     );
 
     return (
-      <Increment
-        step={step}
-        max={max}
-        min={min}
-        appearance={appearance}
-        width={`${widthValue}rem`}
-      />
+      <Counter step={step} max={max} min={min} appearance={appearance} width={`${widthValue}rem`} />
     );
   });
