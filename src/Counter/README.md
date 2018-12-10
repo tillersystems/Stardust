@@ -10,19 +10,27 @@ import { Counter } from '@tillersystems/stardust';
 
 ### Properties
 
-- `width` - the width of the input.
-- `step` - step for increment / decrement value.
+- `appearance` - Button appareance.
+- `className` - className needed by styled component.
+- `countValue` - Count value.
 - `max` - Maximum value allowed.
 - `min` - Minimum value allowed.
-- `appearance` - Button appareance.
+- `onIncrement` - Callback function called on increment.
+- `onDecrement` - Callback function called on decrement.
+- `step` - step for increment / decrement value.
+- `width` - the width of the input.
 
-| propName     | propType | defaultValue | isRequired |
-| ------------ | :------: | :----------: | :--------: |
-| `width`      | `string` |    `5rem`    |     -      |
-| `step`       | `number` |     `1`      |     -      |
-| `max`        | `number` |    `100`     |     -      |
-| `min`        | `number` |     `0`      |     -      |
-| `appareance` | `string` | `secondary`  |     -      |
+| propName      | propType | defaultValue | isRequired |
+| ------------- | :------: | :----------: | :--------: |
+| `appareance`  | `string` | `secondary`  |     -      |
+| `className`   | `string` |     `''`     |     -      |
+| `countValue`  | `number` |     `0`      |     -      |
+| `max`         | `number` |    `100`     |     -      |
+| `min`         | `number` |     `0`      |     -      |
+| `onIncrement` |  `func`  |  `() => {}`  |     -      |
+| `onDecrement` |  `func`  |  `() => {}`  |     -      |
+| `step`        | `number` |     `1`      |     -      |
+| `width`       | `string` |    `5rem`    |     -      |
 
 ### Example
 
@@ -39,6 +47,8 @@ render() {
         step={myStepValue}
         max={maxValue}
         min={minValue}
+        onIncrement={() => {}}
+        onDecrement={() => {}}
         appearance={appearance}
         width={`${widthValue}rem`}
       />

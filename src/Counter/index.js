@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Button, NumberInput } from '..';
-import { Container, InputElement } from '../Input/TextInput/elements';
+import { Button } from '..';
+import { FakeInput } from './elements';
 
-const { string, number } = PropTypes;
+const { func, number, string } = PropTypes;
 
 /**
  * Counter.
@@ -13,8 +13,15 @@ const { string, number } = PropTypes;
  * This component is in charge of displaying
  * an Counter component.
  *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // Add a text aside in the select next the selected value.
+ * @param {string} appearance // Button appareance.
+ * @param {string} className // className needed by styled component.
+ * @param {number} countValue // Count value.
+ * @param {number} max // Maximum value allowed.
+ * @param {number} min // Minimum value allowed.
+ * @param {func} onIncrement // Callback function called on increment.
+ * @param {func} onDecrement // Callback function called on decrement.
+ * @param {number} step // Step for increment / decrement value.
+ * @param {string} width // The width of the input.
  *
  * @return {jsx}
  */
@@ -23,13 +30,15 @@ class Counter extends PureComponent {
    * PropTypes Validation.
    */
   static propTypes = {
+    appearance: string,
     className: string,
-    defaultCountValue: number,
-    step: number,
+    countValue: number,
     max: number,
     min: number,
+    onIncrement: func,
+    onDecrement: func,
+    step: number,
     width: string,
-    appearance: string,
   };
 
   /**
@@ -37,38 +46,63 @@ class Counter extends PureComponent {
    */
   static defaultProps = {
     className: '',
-    defaultCountValue: 0,
+    countValue: 0,
     step: 1,
     max: 1000,
     min: 0,
     width: '5rem',
     appearance: 'secondary',
+    onIncrement: () => {},
+    onDecrement: () => {},
   };
 
   state = {
-    counter: this.props.defaultCountValue, // eslint-disable-line react/destructuring-assignment,
+    count: this.props.countValue || 0, // eslint-disable-line react/destructuring-assignment,
   };
+
+  /**
+   * Component Did Update
+   * Method invoked immediately after updating occur.
+   */
+  componentDidUpdate(prevProps) {
+    const { countValue } = this.props;
+
+    // Update state only if props are changed
+    if (prevProps.countValue !== countValue) {
+      this.setState({
+        count: countValue,
+      });
+    }
+  }
 
   /**
    * Increment counter.
    */
   increment = () => {
-    const { counter } = this.state;
-    const { step, max } = this.props;
-    this.setState({
-      counter: counter === max ? counter : counter + step,
-    });
+    const { count } = this.state;
+    const { step, max, onIncrement } = this.props;
+
+    this.setState(
+      prevState => ({
+        count: count === max ? prevState.count : prevState.count + step,
+      }),
+      () => (count === max ? null : onIncrement()),
+    );
   };
 
   /**
    * Decrement counter.
    */
   decrement = () => {
-    const { counter } = this.state;
-    const { step, min } = this.props;
-    this.setState({
-      counter: counter === min ? counter : counter - step,
-    });
+    const { count } = this.state;
+    const { step, min, onDecrement } = this.props;
+
+    this.setState(
+      prevState => ({
+        count: count === min ? prevState.count : prevState.count - step,
+      }),
+      () => (count === min ? null : onDecrement()),
+    );
   };
 
   /**
@@ -78,7 +112,7 @@ class Counter extends PureComponent {
    */
   render() {
     const { className, step, max, min, width, appearance } = this.props;
-    const { counter } = this.state;
+    const { count } = this.state;
 
     return (
       <div
@@ -93,7 +127,9 @@ class Counter extends PureComponent {
         <Button appearance={appearance} onClick={this.decrement}>
           -
         </Button>
-        <NumberInput value={counter} width={width} />
+        <FakeInput width={width} data-test="fakeinput">
+          {count}
+        </FakeInput>
         <Button appearance={appearance} onClick={this.increment}>
           +
         </Button>
@@ -111,33 +147,11 @@ export default styled(Counter)`
     &:first-of-type {
       border-top-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-bottom-left-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-      border-right: 0;
-    }
-
-    &:nth-child(n):not(:first-of-type) {
-      border-left: 0;
     }
 
     &:last-of-type {
       border-top-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
       border-bottom-right-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-      border-left: 0;
-    }
-  }
-
-  ${Container} {
-    border-radius: 0;
-    &:focus,
-    &:active {
-      border: none;
-      border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-    }
-  }
-
-  ${InputElement} {
-    border-radius: 0;
-    &:focus {
-      border: none;
     }
   }
 `;

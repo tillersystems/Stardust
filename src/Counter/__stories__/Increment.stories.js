@@ -1,7 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select } from '@storybook/addon-knobs';
+import { State, Store } from '@sambego/storybook-state';
+
 import { Counter } from '../..';
+
+const store = new Store({
+  count: 0,
+});
 
 storiesOf('Counter', module)
   .addDecorator(withKnobs)
@@ -63,8 +69,23 @@ storiesOf('Counter', module)
       },
       'Size',
     );
+    const OnIncrement = () => store.set({ count: store.get('count') + 1 });
+    const OnDecrement = () => store.set({ count: store.get('count') - 1 });
 
     return (
-      <Counter step={step} max={max} min={min} appearance={appearance} width={`${widthValue}rem`} />
+      <State store={store}>
+        {state => (
+          <Counter
+            step={step}
+            max={max}
+            min={min}
+            onIncrement={() => OnIncrement()}
+            onDecrement={() => OnDecrement()}
+            countValue={state.count}
+            appearance={appearance}
+            width={`${widthValue}rem`}
+          />
+        )}
+      </State>
     );
   });
