@@ -29,7 +29,8 @@
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublishOnly": "yarn build",
-    "release": "./internal/tools/release.sh"
+    "release": "./internal/tools/release.sh",
+    "storybook-build": "build-storybook -c .storybook -o .out"
   },
   "publishConfig": {
     "access": "public"
