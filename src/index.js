@@ -18,6 +18,7 @@ export { default as KpiBlock } from './KpiBlock';
 export { default as Logo } from './Logo';
 export { default as Loader } from './Loader';
 export { default as Modal } from './Modal';
+export { default as OnWindowResize } from './OnWindowResize';
 export { default as Popover } from './Popover';
 export { default as Table } from './Table';
 export { default as Tag } from './Tag';

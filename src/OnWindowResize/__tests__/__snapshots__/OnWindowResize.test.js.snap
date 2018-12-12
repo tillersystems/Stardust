@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OnWindowResize /> should render withouth a problem 1`] = `
+<Resize
+  breakpoint="sm"
+/>
+`;
+
+exports[`<OnWindowResize /> should render withouth a problem with custom breakpoint 1`] = `
+<Resize
+  breakpoint="md"
+/>
+`;
+
+exports[`<OnWindowResize /> should resize without problems 1`] = `
+<Resize
+  breakpoint="sm"
+/>
+`;
+
+exports[`<OnWindowResize /> should unmount without problems 1`] = `
+<Resize
+  breakpoint="sm"
+/>
+`;
