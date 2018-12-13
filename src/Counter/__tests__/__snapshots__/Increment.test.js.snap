@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> should render withouth a problem 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .c1 {
+  border-radius: 0;
+  font-size: 2.0rem;
+}
+
+.c0 .c1:first-of-type {
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.c0 .c1:last-of-type {
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+<div
+  className="c0"
+  max={1000}
+  min={0}
+  role="group"
+  step={1}
+  tabIndex="-1"
+  width="5rem"
+>
+  <Styled(Button)
+    appearance="secondary"
+    onClick={[Function]}
+  >
+    -
+  </Styled(Button)>
+  <styled.span
+    data-test="fakeinput"
+    width="5rem"
+  >
+    0
+  </styled.span>
+  <Styled(Button)
+    appearance="secondary"
+    onClick={[Function]}
+  >
+    +
+  </Styled(Button)>
+</div>
+`;
