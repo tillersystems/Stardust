@@ -76,9 +76,9 @@ class Counter extends PureComponent {
   }
 
   /**
-   * Increment counter.
+   * Handle Increment click.
    */
-  increment = () => {
+  handleIncrementClick = () => {
     const { count } = this.state;
     const { step, max, onIncrement } = this.props;
 
@@ -91,9 +91,9 @@ class Counter extends PureComponent {
   };
 
   /**
-   * Decrement counter.
+   * Handle Decrement click.
    */
-  decrement = () => {
+  handleDecrementClick = () => {
     const { count } = this.state;
     const { step, min, onDecrement } = this.props;
 
@@ -124,13 +124,13 @@ class Counter extends PureComponent {
         min={min}
         width={width}
       >
-        <Button appearance={appearance} onClick={this.decrement}>
+        <Button appearance={appearance} onClick={this.handleDecrementClick}>
           -
         </Button>
         <FakeInput width={width} data-test="fakeinput">
           {count}
         </FakeInput>
-        <Button appearance={appearance} onClick={this.increment}>
+        <Button appearance={appearance} onClick={this.handleIncrementClick}>
           +
         </Button>
       </div>
