@@ -1,3 +1,14 @@
+# [1.13.0](https://github.com/tillersystems/Stardust/compare/v1.12.0...v1.13.0) (2018-12-13)
+
+### Bug Fixes
+
+- **Theme:** change bodyBackground color palette ([f156723](https://github.com/tillersystems/Stardust/commit/f156723))
+- **Theme:** change bodyBackground color palette ([8375278](https://github.com/tillersystems/Stardust/commit/8375278))
+
+### Features
+
+- **Counter:** Increase / Decrease component ([#240](https://github.com/tillersystems/Stardust/issues/240)) ([eba32d7](https://github.com/tillersystems/Stardust/commit/eba32d7))
+
 # [1.12.0](https://github.com/tillersystems/Stardust/compare/v1.11.0...v1.12.0) (2018-12-05)
 
 ### Bug Fixes
