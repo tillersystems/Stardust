@@ -50,6 +50,7 @@ render() {
         onIncrement={() => {}}
         onDecrement={() => {}}
         appearance={appearance}
+        value={0}
         width={`${widthValue}rem`}
       />
   );
