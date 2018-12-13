@@ -13,7 +13,7 @@ describe('<Counter />', () => {
 
   it('should increment counter', () => {
     const render = mountWithTheme(
-      <Counter step={1} max={100} min={0} countValue={0} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} value={0} appearance="secondary" width="5rem" />,
     );
 
     render
@@ -31,7 +31,7 @@ describe('<Counter />', () => {
 
   it('should decrement counter', () => {
     const render = mountWithTheme(
-      <Counter step={1} max={100} min={0} countValue={10} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} value={10} appearance="secondary" width="5rem" />,
     );
 
     render
@@ -49,7 +49,7 @@ describe('<Counter />', () => {
 
   it('should decrement counter until the min value', () => {
     const render = mountWithTheme(
-      <Counter step={1} max={100} min={0} countValue={99} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} value={99} appearance="secondary" width="5rem" />,
     );
 
     render
@@ -74,7 +74,7 @@ describe('<Counter />', () => {
 
   it('should decrement counter until the min value', () => {
     const render = mountWithTheme(
-      <Counter step={1} max={100} min={0} countValue={1} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} value={1} appearance="secondary" width="5rem" />,
     );
 
     render
@@ -105,7 +105,7 @@ describe('<Counter />', () => {
         max={100}
         min={0}
         onIncrement={spy}
-        countValue={10}
+        value={10}
         appearance="secondary"
         width="5rem"
       />,
@@ -127,7 +127,7 @@ describe('<Counter />', () => {
         max={100}
         min={0}
         onDecrement={spy}
-        countValue={10}
+        value={10}
         appearance="secondary"
         width="5rem"
       />,

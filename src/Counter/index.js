@@ -15,12 +15,12 @@ const { func, number, string } = PropTypes;
  *
  * @param {string} appearance // Button appareance.
  * @param {string} className // className needed by styled component.
- * @param {number} countValue // Count value.
  * @param {number} max // Maximum value allowed.
  * @param {number} min // Minimum value allowed.
  * @param {func} onIncrement // Callback function called on increment.
  * @param {func} onDecrement // Callback function called on decrement.
  * @param {number} step // Step for increment / decrement value.
+ * @param {number} value // incremented/decremented value. The value is set to 0 if no value provided.
  * @param {string} width // The width of the input.
  *
  * @return {jsx}
@@ -32,12 +32,12 @@ class Counter extends PureComponent {
   static propTypes = {
     appearance: string,
     className: string,
-    countValue: number,
     max: number,
     min: number,
     onIncrement: func,
     onDecrement: func,
     step: number,
+    value: number,
     width: string,
   };
 
@@ -46,7 +46,7 @@ class Counter extends PureComponent {
    */
   static defaultProps = {
     className: '',
-    countValue: 0,
+    value: 0,
     step: 1,
     max: 1000,
     min: 0,
@@ -57,7 +57,7 @@ class Counter extends PureComponent {
   };
 
   state = {
-    count: this.props.countValue || 0, // eslint-disable-line react/destructuring-assignment,
+    count: this.props.value, // eslint-disable-line react/destructuring-assignment,
   };
 
   /**
@@ -65,12 +65,12 @@ class Counter extends PureComponent {
    * Method invoked immediately after updating occur.
    */
   componentDidUpdate(prevProps) {
-    const { countValue } = this.props;
+    const { value } = this.props;
 
     // Update state only if props are changed
-    if (prevProps.countValue !== countValue) {
+    if (prevProps.value !== value) {
       this.setState({
-        count: countValue,
+        count: value,
       });
     }
   }

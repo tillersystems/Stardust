@@ -12,24 +12,24 @@ import { Counter } from '@tillersystems/stardust';
 
 - `appearance` - Button appareance.
 - `className` - className needed by styled component.
-- `countValue` - Count value.
 - `max` - Maximum value allowed.
 - `min` - Minimum value allowed.
 - `onIncrement` - Callback function called on increment.
 - `onDecrement` - Callback function called on decrement.
-- `step` - step for increment / decrement value.
+- `step` - step for increment/decrement value.
+- `value` - incremented/decremented value. The value is set to 0 if no value provided.
 - `width` - the width of the input.
 
 | propName      | propType | defaultValue | isRequired |
 | ------------- | :------: | :----------: | :--------: |
 | `appareance`  | `string` | `secondary`  |     -      |
 | `className`   | `string` |     `''`     |     -      |
-| `countValue`  | `number` |     `0`      |     -      |
 | `max`         | `number` |    `100`     |     -      |
 | `min`         | `number` |     `0`      |     -      |
 | `onIncrement` |  `func`  |  `() => {}`  |     -      |
 | `onDecrement` |  `func`  |  `() => {}`  |     -      |
 | `step`        | `number` |     `1`      |     -      |
+| `value`       | `number` |     `0`      |     -      |
 | `width`       | `string` |    `5rem`    |     -      |
 
 ### Example
