@@ -36,7 +36,7 @@ import { Counter } from '@tillersystems/stardust';
 
 #### Standard use case
 
-The following snippet shows how to create a increment component.
+The following snippet shows how to create a counter component.
 
 ```jsx
 import { Counter } from '@tillersystems/stardust';
