@@ -9,6 +9,7 @@
     "shallow": true,
     "mountWithTheme": true,
     "shallowWithTheme": true,
+    "render": true,
   },
   "env": {
     "browser": true
