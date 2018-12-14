@@ -23,6 +23,7 @@ const lightGrey = 'hsl(207,22%,90%)';
 const mediumGrey = 'hsl(206,23%,69%)';
 const darkGrey = 'hsl(206,16%,60%)';
 const spaceGrey = 'hsl(207,13%,45%)';
+const paleGrey = 'hsl(240, 33%, 99%)';
 const veryLightBlue = 'hsl(220, 27%, 94%)';
 
 // Primary colors
@@ -30,7 +31,7 @@ const blue = 'hsl(200, 74%, 46%)';
 const green = 'hsl(89, 53%, 52%)';
 const red = 'hsl(6, 79%, 65%)';
 const yellow = 'hsl(34, 91%, 65%)';
-const bodyBackground = veryLightBlue;
+const bodyBackground = paleGrey;
 const darkBlue = 'hsl(213, 17%, 20%)';
 
 export const palette = {
@@ -78,6 +79,7 @@ export const palette = {
     darker: setColorDark(yellow, 0.15),
   },
   darkBlue,
+  veryLightBlue,
 
   // Shades of grey
   mysticGrey,
@@ -85,4 +87,5 @@ export const palette = {
   mediumGrey,
   darkGrey,
   spaceGrey,
+  paleGrey,
 };
