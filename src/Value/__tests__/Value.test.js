@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import 'jest-styled-components';
 
@@ -8,29 +7,29 @@ import Theme from '../../Theme';
 
 describe('<Value />', () => {
   it('should render withouth a problem', () => {
-    const render = mount(
+    const { container } = render(
       <ThemeProvider theme={Theme}>
         <Value>0</Value>
       </ThemeProvider>,
     );
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render as negative', () => {
-    const render = mount(
+    const { container } = render(
       <ThemeProvider theme={Theme}>
         <Value negative>-10</Value>
       </ThemeProvider>,
     );
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render as postive', () => {
-    const render = mount(
+    const { container } = render(
       <ThemeProvider theme={Theme}>
         <Value positive>+10</Value>
       </ThemeProvider>,
     );
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
