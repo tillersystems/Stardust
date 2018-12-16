@@ -1467,16 +1467,16 @@
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"
 
-"@storybook/addon-actions@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.1.tgz#c8f939ddf75d61a25c907544b35f8793769f5084"
+"@storybook/addon-actions@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.2.tgz#0249822e85accf85311a1a4a6f8feee7cc42e171"
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.1"
-    "@storybook/components" "4.1.1"
-    "@storybook/core-events" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/components" "4.1.2"
+    "@storybook/core-events" "4.1.2"
     core-js "^2.5.7"
     deep-equal "^1.0.1"
     global "^4.3.2"
@@ -1486,14 +1486,14 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.1.tgz#c79bffa5ecfbb91987f483fe3c4f5f706cc777d6"
+"@storybook/addon-info@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.2.tgz#a02bc0ab292a114502ccb59c5965404c030e07e1"
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.1"
-    "@storybook/client-logger" "4.1.1"
-    "@storybook/components" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/client-logger" "4.1.2"
+    "@storybook/components" "4.1.2"
     core-js "^2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
@@ -1503,14 +1503,14 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-knobs@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-4.1.1.tgz#cb131121ffeac10d5d7ddfc28ba036449c2a4a11"
+"@storybook/addon-knobs@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-4.1.2.tgz#bb79d443a51788701dc2d97cd3b821267715cac1"
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.1"
-    "@storybook/components" "4.1.1"
-    "@storybook/core-events" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/components" "4.1.2"
+    "@storybook/core-events" "4.1.2"
     copy-to-clipboard "^3.0.8"
     core-js "^2.5.7"
     escape-html "^1.0.3"
@@ -1522,53 +1522,53 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.1.tgz#94c694754d8ec848bd3785c05b0366a3b5c368c7"
+"@storybook/addon-links@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.2.tgz#f5fce2a96b86574a4f8d3195dc249093dafe4055"
   dependencies:
-    "@storybook/addons" "4.1.1"
-    "@storybook/components" "4.1.1"
-    "@storybook/core-events" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/components" "4.1.2"
+    "@storybook/core-events" "4.1.2"
     core-js "^2.5.7"
     global "^4.3.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-options@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.1.tgz#85b4443db0675a1513460c8d64282004831bf6e3"
+"@storybook/addon-options@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.2.tgz#879f82877998d0b08f757a3e402fa83e41351930"
   dependencies:
-    "@storybook/addons" "4.1.1"
+    "@storybook/addons" "4.1.2"
     core-js "^2.5.7"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.1.tgz#79aa4b81cc54ae46590926acf2dd7e0fcb5cc25a"
+"@storybook/addons@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.2.tgz#c5b21f19b9d648a52800f6854f8ca99d08e71aef"
   dependencies:
-    "@storybook/channels" "4.1.1"
-    "@storybook/components" "4.1.1"
+    "@storybook/channels" "4.1.2"
+    "@storybook/components" "4.1.2"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/channel-postmessage@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-4.1.1.tgz#8fa61a2e788d3dfbaff77ea807bf0fcfd946d6df"
+"@storybook/channel-postmessage@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-4.1.2.tgz#081884d3b34e277cdb0a872b5e94920759b0f60b"
   dependencies:
-    "@storybook/channels" "4.1.1"
+    "@storybook/channels" "4.1.2"
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
-"@storybook/channels@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.1.tgz#53268bfb77a854e39bfd3c89991ac2114092a018"
+"@storybook/channels@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.2.tgz#4efc82e2775fc143d5c5aa95b332ddd0e5b5bdd2"
 
-"@storybook/client-logger@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.1.tgz#afb2f7d080576be24f14e3880a60b4d86646c363"
+"@storybook/client-logger@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.2.tgz#4169e84a9a6d001eb99bcd1a2e365977f365fc34"
 
-"@storybook/components@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.1.1.tgz#81633e13134dd53ee1e707268b1e89aa2642c5c7"
+"@storybook/components@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.1.2.tgz#e7b52e19dde4e22db3625230280290e346dcb7bc"
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
@@ -1581,25 +1581,25 @@
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
 
-"@storybook/core-events@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.1.tgz#29e95368f298d12bcd685c9825de8509de5d62d4"
+"@storybook/core-events@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.2.tgz#73c36938537158d1f22767cd183a59576089c1d7"
 
-"@storybook/core@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-4.1.1.tgz#d381cd40aafd9ac023be22b2bf6c09419dee3de8"
+"@storybook/core@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-4.1.2.tgz#b97ef2a8430012f1c8c6992a4c9cd186014deef7"
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.2.0"
     "@babel/preset-env" "^7.2.0"
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.1"
-    "@storybook/channel-postmessage" "4.1.1"
-    "@storybook/client-logger" "4.1.1"
-    "@storybook/core-events" "4.1.1"
-    "@storybook/node-logger" "4.1.1"
-    "@storybook/ui" "4.1.1"
+    "@storybook/addons" "4.1.2"
+    "@storybook/channel-postmessage" "4.1.2"
+    "@storybook/client-logger" "4.1.2"
+    "@storybook/core-events" "4.1.2"
+    "@storybook/node-logger" "4.1.2"
+    "@storybook/ui" "4.1.2"
     airbnb-js-shims "^1 || ^2"
     autoprefixer "^9.3.1"
     babel-plugin-macros "^2.4.2"
@@ -1661,9 +1661,9 @@
     "@storybook/react-simple-di" "^1.2.1"
     babel-runtime "6.x.x"
 
-"@storybook/node-logger@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-4.1.1.tgz#e0df3beeaaa81fbe244f5682cb11618e53be8e94"
+"@storybook/node-logger@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-4.1.2.tgz#fa2a70f0c3154acbd399211276a24fa82b533fe1"
   dependencies:
     chalk "^2.4.1"
     core-js "^2.5.7"
@@ -1713,16 +1713,16 @@
   dependencies:
     babel-runtime "^6.5.0"
 
-"@storybook/react@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-4.1.1.tgz#8983db657e4a10ddd0957e0b6389f9f41055c970"
+"@storybook/react@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-4.1.2.tgz#dd2a717f55e48daa90ff3f9ecf9120db8edbeb80"
   dependencies:
     "@babel/plugin-transform-react-constant-elements" "^7.2.0"
     "@babel/preset-flow" "^7.0.0"
     "@babel/preset-react" "^7.0.0"
     "@emotion/styled" "^0.10.6"
-    "@storybook/core" "4.1.1"
-    "@storybook/node-logger" "4.1.1"
+    "@storybook/core" "4.1.2"
+    "@storybook/node-logger" "4.1.2"
     "@svgr/webpack" "^4.0.3"
     babel-plugin-named-asset-import "^0.2.3"
     babel-plugin-react-docgen "^2.0.0"
@@ -1740,15 +1740,15 @@
     semver "^5.6.0"
     webpack "^4.23.1"
 
-"@storybook/ui@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-4.1.1.tgz#f45788b86ef448e2134b26038b83eabf3d0f8d67"
+"@storybook/ui@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-4.1.2.tgz#f48042eef72ae4a21fe62463fa2e5d0b71b5fd1f"
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/components" "4.1.1"
-    "@storybook/core-events" "4.1.1"
+    "@storybook/components" "4.1.2"
+    "@storybook/core-events" "4.1.2"
     "@storybook/mantra-core" "^1.7.2"
     "@storybook/podda" "^1.2.3"
     "@storybook/react-komposer" "^2.0.5"
