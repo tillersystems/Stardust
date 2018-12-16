@@ -124,13 +124,13 @@ class Counter extends PureComponent {
         min={min}
         width={width}
       >
-        <Button appearance={appearance} onClick={this.handleDecrementClick}>
+        <Button appearance={appearance} onClick={this.handleDecrementClick} data-testid="decrement">
           -
         </Button>
-        <FakeInput width={width} data-test="fakeinput">
+        <FakeInput width={width} data-testid="fakeinput">
           {count}
         </FakeInput>
-        <Button appearance={appearance} onClick={this.handleIncrementClick}>
+        <Button appearance={appearance} onClick={this.handleIncrementClick} data-testid="increment">
           +
         </Button>
       </div>

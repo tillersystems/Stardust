@@ -1,6 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Counter /> should render withouth a problem 1`] = `
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(207,13%,45%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  border: 1px solid hsl(207,22%,90%);
+  padding: 0.8rem 1.6rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(207,13%,45%);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 5rem;
+  background: hsl(0,100%,100%);
+  border-top: 1px solid hsl(207,22%,90%);
+  border-bottom: 1px solid hsl(207,22%,90%);
+  color: hsl(213,17%,20%);
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -24,31 +86,34 @@ exports[`<Counter /> should render withouth a problem 1`] = `
 }
 
 <div
-  className="c0"
-  max={1000}
-  min={0}
+  class="c0"
+  max="1000"
+  min="0"
   role="group"
-  step={1}
-  tabIndex="-1"
+  step="1"
+  tabindex="-1"
   width="5rem"
 >
-  <Styled(Button)
-    appearance="secondary"
-    onClick={[Function]}
+  <button
+    class="c1 c2"
+    data-testid="decrement"
+    type="button"
   >
     -
-  </Styled(Button)>
-  <styled.span
-    data-test="fakeinput"
+  </button>
+  <span
+    class="c3"
+    data-testid="fakeinput"
     width="5rem"
   >
     0
-  </styled.span>
-  <Styled(Button)
-    appearance="secondary"
-    onClick={[Function]}
+  </span>
+  <button
+    class="c1 c2"
+    data-testid="increment"
+    type="button"
   >
     +
-  </Styled(Button)>
+  </button>
 </div>
 `;
