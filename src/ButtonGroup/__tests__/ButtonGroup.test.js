@@ -1,143 +1,131 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import { Button, ButtonGroup } from '../..';
-import Theme from '../../Theme';
 
 describe('<ButtonGroup />', () => {
-  it('should render withouth a problem', () => {
-    const render = mount(
-      <ButtonGroup theme={Theme}>
-        <Button theme={Theme} name="ON" appearance="secondary">
+  test('should render withouth a problem', () => {
+    const { container } = render(
+      <ButtonGroup>
+        <Button name="ON" appearance="secondary">
           ON
         </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary">
+        <Button name="OFF" appearance="secondary">
           OFF
         </Button>
       </ButtonGroup>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a default value', () => {
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON">
-        <Button theme={Theme} name="ON" appearance="secondary">
+  test('should render with a default value', () => {
+    const { getByText } = render(
+      <ButtonGroup defaultActiveButtonName="ON">
+        <Button name="ON" appearance="secondary">
           ON
         </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary">
+        <Button name="OFF" appearance="secondary">
+          OFF
+        </Button>
+      </ButtonGroup>,
+    );
+    const offButton = getByText('ON');
+
+    expect(offButton).toHaveAttribute('data-isactive', 'true');
+  });
+
+  test('should not clone child if disabled', () => {
+    const { getByText } = render(
+      <ButtonGroup defaultActiveButton="ON">
+        <Button name="ON" appearance="secondary">
+          ON
+        </Button>
+        <Button name="OFF" appearance="secondary" disabled>
           OFF
         </Button>
       </ButtonGroup>,
     );
 
-    expect(render).toMatchSnapshot();
+    const offButton = getByText('OFF');
+
+    expect(offButton).toHaveAttribute('disabled');
+    expect(offButton).not.toHaveAttribute('data-isactive', 'true');
+    expect(offButton).not.toHaveAttribute('data-appearance', 'secondary');
   });
 
-  it('should render with a default value', () => {
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON">
-        <Button theme={Theme} name="ON" appearance="secondary">
-          ON
-        </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary">
-          OFF
-        </Button>
-      </ButtonGroup>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should not clone child if disabled', () => {
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON">
-        <Button theme={Theme} name="ON" appearance="secondary">
-          ON
-        </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary" disabled>
-          OFF
-        </Button>
-      </ButtonGroup>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should not clone child if not a button element', () => {
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON">
+  test('should not clone child if not a button element', () => {
+    const { getByText } = render(
+      <ButtonGroup defaultActiveButton="ON">
         <div name="ON">ON</div>
         <div name="OFF">OFF</div>
       </ButtonGroup>,
     );
 
-    expect(render).toMatchSnapshot();
+    const onButton = getByText('ON');
+    const offButton = getByText('OFF');
+
+    expect(onButton).not.toHaveAttribute('data-isactive', 'true');
+    expect(onButton).not.toHaveAttribute('data-appearance', 'secondary');
+    expect(offButton).not.toHaveAttribute('data-isactive', 'true');
+    expect(offButton).not.toHaveAttribute('data-appearance', 'secondary');
   });
 
-  it('should respond to a click handler', () => {
+  test('should respond to a click handler', () => {
     const spy = jest.fn();
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON" onChange={spy}>
-        <Button theme={Theme} name="ON" appearance="secondary">
+    const { getByText } = render(
+      <ButtonGroup defaultActiveButton="ON" onChange={spy}>
+        <Button name="ON" appearance="secondary">
           ON
         </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary">
+        <Button name="OFF" appearance="secondary">
           OFF
         </Button>
       </ButtonGroup>,
     );
 
-    render
-      .find(Button)
-      .last()
-      .simulate('click');
+    const offButton = getByText('OFF');
+
+    fireEvent.click(offButton);
 
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('should call the onclick handler on child button', () => {
+  test('should call the onclick handler on child button', () => {
     const spy = jest.fn();
     const spy2 = jest.fn();
-    const render = mount(
-      <ButtonGroup theme={Theme} defaultActiveButton="ON" onChange={spy}>
-        <Button theme={Theme} name="ON" appearance="secondary">
+    const { getByText } = render(
+      <ButtonGroup defaultActiveButton="ON" onChange={spy}>
+        <Button name="ON" appearance="secondary">
           ON
         </Button>
-        <Button theme={Theme} name="OFF" appearance="secondary" onClick={spy2}>
+        <Button name="OFF" appearance="secondary" onClick={spy2}>
           OFF
         </Button>
       </ButtonGroup>,
     );
 
-    render
-      .find(Button)
-      .last()
-      .simulate('click');
+    const offButton = getByText('OFF');
+
+    fireEvent.click(offButton);
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy2).toHaveBeenCalledTimes(1);
   });
 
-  it('should throw an error if child has not name props', () => {
-    let error;
-    try {
-      const render = mount(
-        <ButtonGroup theme={Theme} defaultActiveButton="ON">
-          <Button theme={Theme} appearance="secondary">
-            ON
-          </Button>
-          <Button theme={Theme} appearance="secondary">
-            OFF
-          </Button>
+  test('should throw an error if child has not name props', () => {
+    const renderComponent = () =>
+      render(
+        <ButtonGroup defaultActiveButtonName="ON">
+          <Button appearance="secondary">ON</Button>
+          <Button appearance="secondary">OFF</Button>
         </ButtonGroup>,
       );
-      expect(render).toMatchSnapshot();
-    } catch (e) {
-      error = e;
-    }
-
-    expect(error).toBeInstanceOf(Error);
+    expect(renderComponent).toThrow(
+      'Error: Uncaught [Error: "name" prop must be provided to Button]',
+    );
+    expect(renderComponent).toThrow(
+      /Warning: Render methods should be a pure function of props and state;/i,
+    );
   });
 });
