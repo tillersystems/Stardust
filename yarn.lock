@@ -4061,7 +4061,7 @@ cosmiconfig@^4.0.0:
     parse-json "^4.0.0"
     require-from-string "^2.0.1"
 
-cosmiconfig@^5.0.5, cosmiconfig@^5.0.6:
+cosmiconfig@^5.0.5:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.6.tgz#dca6cf680a0bd03589aff684700858c81abeeb39"
   dependencies:
@@ -6094,11 +6094,11 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-husky@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-1.2.0.tgz#d631dda1e4a9ee8ba69a10b0c51a0e2c66e711e5"
+husky@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-1.2.1.tgz#33628f7013e345c1790a4dbe4642ad047f772dee"
   dependencies:
-    cosmiconfig "^5.0.6"
+    cosmiconfig "^5.0.7"
     execa "^1.0.0"
     find-up "^3.0.0"
     get-stdin "^6.0.0"
