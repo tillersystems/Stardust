@@ -1,100 +1,85 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Button from '..';
 import Icon from '../../Icon';
 import Theme from '../../Theme';
 
 describe('<Button />', () => {
-  it('should render withouth a problem', () => {
-    const render = mount(<Button theme={Theme}>Text</Button>);
+  test('should render withouth a problem', () => {
+    const { container } = render(<Button>Text</Button>);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with another appearance', () => {
-    const render = mount(
-      <Button theme={Theme} appearance="primary">
-        Text
-      </Button>,
-    );
+  test('should render with another appearance', () => {
+    const { container } = render(<Button appearance="primary">Text</Button>);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a different size', () => {
-    const render = mount(
-      <Button theme={Theme} size="large">
-        Text
-      </Button>,
-    );
+  test('should render with a different size', () => {
+    const { getByText } = render(<Button size="large">Text</Button>);
+    const buttonNode = getByText('Text');
 
-    expect(render).toMatchSnapshot();
+    expect(buttonNode).toHaveStyleRule('padding', '0.8rem 1.8rem');
+    expect(buttonNode).toHaveStyleRule('font-size', Theme.fonts.size.big);
+    expect(buttonNode).toHaveStyleRule('line-height', Theme.fonts.size.big);
   });
 
-  it('should render a fluid button', () => {
-    const render = mount(
-      <Button theme={Theme} fluid>
-        Text
-      </Button>,
-    );
+  test('should render a fluid button', () => {
+    const { getByText } = render(<Button fluid>Text</Button>);
+    const buttonNode = getByText('Text');
 
-    expect(render).toMatchSnapshot();
+    expect(buttonNode).toHaveStyleRule('width', '100%');
   });
 
-  it('should render with a type submit', () => {
-    const render = mount(
-      <Button theme={Theme} type="submit">
-        Text
-      </Button>,
-    );
+  test('should render with a type submit', () => {
+    const { getByText } = render(<Button type="submit">Text</Button>);
+    const buttonNode = getByText('Text');
 
-    expect(render).toMatchSnapshot();
+    expect(buttonNode).toHaveAttribute('type', 'submit');
   });
 
-  it('should render a disabled button', () => {
-    const render = mount(
-      <Button theme={Theme} disabled>
-        Text
-      </Button>,
-    );
+  test('should render a disabled button', () => {
+    const { getByText } = render(<Button disabled>Text</Button>);
+    const buttonNode = getByText('Text');
 
-    expect(render).toMatchSnapshot();
+    expect(buttonNode).toHaveAttribute('disabled', '');
+    expect(buttonNode).toHaveStyleRule('cursor', 'not-allowed');
+    expect(buttonNode).toHaveStyleRule('opacity', '0.4');
   });
 
-  it('should render a left icon', () => {
+  test('should render a left icon', () => {
     const icon = <Icon color={Theme.palette.white} name="calendar" />;
     const iconPosition = 'left';
-    const render = mount(
-      <Button theme={Theme} icon={icon} iconPosition={iconPosition}>
+    const { container } = render(
+      <Button icon={icon} iconPosition={iconPosition}>
         Text
       </Button>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render a right icon', () => {
+  test('should render a right icon', () => {
     const icon = <Icon color={Theme.palette.white} name="calendar" />;
     const iconPosition = 'right';
-    const render = mount(
-      <Button theme={Theme} icon={icon} iconPosition={iconPosition}>
+    const { container } = render(
+      <Button icon={icon} iconPosition={iconPosition}>
         Text
       </Button>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should respond to a click handler', () => {
+  test('should respond to a click handler', () => {
     const spy = jest.fn();
-    const render = mount(
-      <Button theme={Theme} onClick={spy}>
-        Text
-      </Button>,
-    );
+    const { getByText } = render(<Button onClick={spy}>Text</Button>);
+    const buttonNode = getByText('Text');
 
-    render.simulate('click');
+    fireEvent.click(buttonNode);
 
     expect(spy).toHaveBeenCalledTimes(1);
   });
