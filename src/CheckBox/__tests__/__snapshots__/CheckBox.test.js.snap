@@ -1,6 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckBox /> should be checked with change 1`] = `
+exports[`<CheckBox /> should be checked on change 1`] = `
+<input
+  data-testid="checkBoxInput"
+  tabindex="0"
+  type="checkbox"
+  value=""
+/>
+`;
+
+exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.7rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  background: hsl(0,100%,100%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  color: hsl(207,13%,45%);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+  class="c0"
+  data-testid="checkBox"
+>
+  <label
+    class="c1"
+    disabled=""
+  >
+    <div
+      class="c2"
+      data-testid="checkBoxContainer"
+      disabled=""
+    >
+      <input
+        data-testid="checkBoxInput"
+        disabled=""
+        tabindex="-1"
+        type="checkbox"
+        value=""
+      />
+    </div>
+    label
+  </label>
+</div>
+`;
+
+exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
 .c3 {
   display: inline-block;
   border-image-source: none;
@@ -58,138 +139,53 @@ exports[`<CheckBox /> should be checked with change 1`] = `
   width: 100%;
 }
 
-<Styled(CheckBox)>
-  <CheckBox
-    checked={false}
-    className="c0"
-    disabled={false}
-    onChange={null}
-    value=""
+<div
+  class="c0"
+  data-testid="checkBox"
+>
+  <label
+    class="c1"
   >
     <div
-      checked={false}
-      className="c0"
-      onChange={null}
+      class="c2"
+      data-testid="checkBoxContainer"
     >
-      <styled.label
-        checked={true}
-        disabled={false}
+      <div
+        class="c3"
+        data-testid="iconContainer"
+        height="1rem"
+        width="1rem"
       >
-        <label
-          checked={true}
-          className="c1"
-          disabled={false}
+        <svg
+          data-testid="iconSvg"
+          height="1rem"
+          style="display: block;"
+          viewBox="0 0 512 512"
+          width="1rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <styled.div
-            checked={true}
-            disabled={false}
-          >
-            <div
-              checked={true}
-              className="c2"
-              disabled={false}
-            >
-              <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
-                height="1rem"
-                name="check-mark"
-                width="1rem"
-              >
-                <Icon
-                  className=""
-                  color="hsl(0, 100%, 100%)"
-                  height="1rem"
-                  name="check-mark"
-                  spin={false}
-                  width="1rem"
-                >
-                  <styled.div
-                    className=""
-                    data-testid="iconContainer"
-                    height="1rem"
-                    spin={false}
-                    width="1rem"
-                  >
-                    <div
-                      className="c3"
-                      data-testid="iconContainer"
-                      height="1rem"
-                      width="1rem"
-                    >
-                      <svg
-                        data-testid="iconSvg"
-                        height="1rem"
-                        style={
-                          Object {
-                            "display": "block",
-                          }
-                        }
-                        viewBox="0 0 512 512"
-                        width="1rem"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
-                          data-testid="iconSvgPath"
-                          fill="hsl(0, 100%, 100%)"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                  </styled.div>
-                </Icon>
-              </Styled(Icon)>
-              <input
-                checked={true}
-                disabled={false}
-                onChange={[Function]}
-                onClick={[Function]}
-                tabIndex={0}
-                type="checkbox"
-                value=""
-              />
-            </div>
-          </styled.div>
-        </label>
-      </styled.label>
-    </div>
-  </CheckBox>
-</Styled(CheckBox)>
-`;
-
-exports[`<CheckBox /> should be disabled 1`] = `
-.c0 {
-  width: 100%;
-}
-
-<div
-  checked={false}
-  className="c0"
-  onChange={null}
->
-  <styled.label
-    checked={false}
-    disabled={true}
-  >
-    <styled.div
-      checked={false}
-      disabled={true}
-    >
+          <path
+            d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
+            data-testid="iconSvgPath"
+            fill="hsl(0, 100%, 100%)"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
       <input
-        checked={false}
-        disabled={true}
-        onChange={[Function]}
-        onClick={[Function]}
-        tabIndex={-1}
+        checked=""
+        data-testid="checkBoxInput"
+        tabindex="0"
         type="checkbox"
         value=""
       />
-    </styled.div>
-  </styled.label>
+    </div>
+    label
+  </label>
 </div>
 `;
 
-exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
+exports[`<CheckBox /> should render without a problem 1`] = `
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -211,8 +207,6 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
   background: hsl(0,100%,100%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .c1 {
@@ -227,131 +221,31 @@ exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
   cursor: pointer;
   position: relative;
   color: hsl(207,13%,45%);
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .c0 {
   width: 100%;
 }
 
-<Styled(CheckBox)
-  disabled={true}
+<div
+  class="c0"
+  data-testid="checkBox"
 >
-  <CheckBox
-    checked={false}
-    className="c0"
-    disabled={true}
-    onChange={null}
-    value=""
+  <label
+    class="c1"
   >
     <div
-      checked={false}
-      className="c0"
-      onChange={null}
+      class="c2"
+      data-testid="checkBoxContainer"
     >
-      <styled.label
-        checked={false}
-        disabled={true}
-      >
-        <label
-          checked={false}
-          className="c1"
-          disabled={true}
-        >
-          <styled.div
-            checked={false}
-            disabled={true}
-          >
-            <div
-              checked={false}
-              className="c2"
-              disabled={true}
-            >
-              <input
-                checked={false}
-                disabled={true}
-                onChange={[Function]}
-                onClick={[Function]}
-                tabIndex={-1}
-                type="checkbox"
-                value=""
-              />
-            </div>
-          </styled.div>
-        </label>
-      </styled.label>
+      <input
+        data-testid="checkBoxInput"
+        tabindex="0"
+        type="checkbox"
+        value=""
+      />
     </div>
-  </CheckBox>
-</Styled(CheckBox)>
-`;
-
-exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
-.c0 {
-  width: 100%;
-}
-
-<div
-  checked={true}
-  className="c0"
-  onChange={null}
->
-  <styled.label
-    checked={true}
-    disabled={false}
-  >
-    <styled.div
-      checked={true}
-      disabled={false}
-    >
-      <Styled(Icon)
-        color="hsl(0, 100%, 100%)"
-        height="1rem"
-        name="check-mark"
-        width="1rem"
-      />
-      <input
-        checked={true}
-        disabled={false}
-        onChange={[Function]}
-        onClick={[Function]}
-        tabIndex={0}
-        type="checkbox"
-        value=""
-      />
-    </styled.div>
-  </styled.label>
-</div>
-`;
-
-exports[`<CheckBox /> should render without a problem 1`] = `
-.c0 {
-  width: 100%;
-}
-
-<div
-  checked={false}
-  className="c0"
-  onChange={null}
->
-  <styled.label
-    checked={false}
-    disabled={false}
-  >
-    <styled.div
-      checked={false}
-      disabled={false}
-    >
-      <input
-        checked={false}
-        disabled={false}
-        onChange={[Function]}
-        onClick={[Function]}
-        tabIndex={0}
-        type="checkbox"
-        value=""
-      />
-    </styled.div>
-  </styled.label>
+    label
+  </label>
 </div>
 `;
