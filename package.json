@@ -25,7 +25,7 @@
     "format": "prettier --config .prettierrc --color --write \"src/**/*.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "yarn clean && yarn test && yarn build:commonjs && yarn build:es",
+    "build": "yarn clean && yarn test:ci && yarn build:commonjs && yarn build:es",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublishOnly": "yarn build",
