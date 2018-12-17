@@ -5,17 +5,21 @@ import Logo from '..';
 
 describe('<Logo />', () => {
   it('should render withouth a problem', () => {
-    const render = shallowWithTheme(<Logo />);
-    expect(render).toMatchSnapshot();
+    const { container } = render(<Logo />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render with custom width & height', () => {
-    const render = shallowWithTheme(<Logo width="300" height="80" />);
-    expect(render).toMatchSnapshot();
+    const { getByTestId } = render(<Logo width="300" height="80" />);
+    const logoNode = getByTestId('logo');
+    expect(logoNode).toHaveAttribute('width', '300');
+    expect(logoNode).toHaveAttribute('height', '80');
   });
 
   it('should render with custom color', () => {
-    const render = shallowWithTheme(<Logo color="hsl(217, 89%, 61%)" />);
-    expect(render).toMatchSnapshot();
+    const color = 'hsl(217, 89%, 61%)';
+    const { getByTestId } = render(<Logo color={color} />);
+    const logoPathNode = getByTestId('logoPath');
+    expect(logoPathNode).toHaveAttribute('fill', color);
   });
 });
