@@ -489,16 +489,19 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -511,6 +514,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -2376,16 +2380,19 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -2398,6 +2405,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
                                         >
                                           <path
                                             d="m 384.662 352 h -257.324 c -17.818 0 -26.741 -21.543 -14.142 -34.142 l 128.662 -128.662 c 7.81 -7.81 20.474 -7.81 28.284 0 l 128.662 128.662 c 12.6 12.599 3.676 34.142 -14.142 34.142 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -4263,16 +4271,19 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -4285,6 +4296,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
                                         >
                                           <path
                                             d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -6150,16 +6162,19 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -6172,6 +6187,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -8037,16 +8053,19 @@ exports[`<Table /> should render without a problem 1`] = `
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -8059,6 +8078,7 @@ exports[`<Table /> should render without a problem 1`] = `
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -9925,16 +9945,19 @@ exports[`<Table /> should render without a problem when given a compressed rows 
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -9947,6 +9970,7 @@ exports[`<Table /> should render without a problem when given a compressed rows 
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -11808,16 +11832,19 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -11830,6 +11857,7 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -13695,16 +13723,19 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -13717,6 +13748,7 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -16821,16 +16853,19 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c13"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -16843,6 +16878,7 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -17469,16 +17505,19 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -17491,6 +17530,7 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -20963,16 +21003,19 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -20985,6 +21028,7 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -22885,16 +22929,19 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -22907,6 +22954,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
                                         >
                                           <path
                                             d="m 137 288 h 238 c 21.4 0 32.1 25.9 17 41 l -119 119 c -9.4 9.4 -24.6 9.4 -33.9 0 l -119.1 -119 c -15.1 -15.1 -4.4 -41 17 -41 z m 255 -105 l -119 -119 c -9.4 -9.4 -24.6 -9.4 -33.9 0 l -119.1 119 c -15.1 15.1 -4.4 41 17 41 h 238 c 21.4 0 32.1 -25.9 17 -41 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />
@@ -24807,16 +24855,19 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
                                   >
                                     <styled.div
                                       className=""
+                                      data-testid="iconContainer"
                                       height="1.5rem"
                                       spin={false}
                                       width="1.5rem"
                                     >
                                       <div
                                         className="c7"
+                                        data-testid="iconContainer"
                                         height="1.5rem"
                                         width="1.5rem"
                                       >
                                         <svg
+                                          data-testid="iconSvg"
                                           height="1.5rem"
                                           style={
                                             Object {
@@ -24829,6 +24880,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
                                         >
                                           <path
                                             d="m 384.662 352 h -257.324 c -17.818 0 -26.741 -21.543 -14.142 -34.142 l 128.662 -128.662 c 7.81 -7.81 20.474 -7.81 28.284 0 l 128.662 128.662 c 12.6 12.599 3.676 34.142 -14.142 34.142 z"
+                                            data-testid="iconSvgPath"
                                             fill="hsl(206,23%,69%)"
                                             fillRule="evenodd"
                                           />

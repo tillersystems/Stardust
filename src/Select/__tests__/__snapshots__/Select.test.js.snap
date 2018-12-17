@@ -327,16 +327,19 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
                               >
                                 <styled.div
                                   className=""
+                                  data-testid="iconContainer"
                                   height="20"
                                   spin={false}
                                   width="20"
                                 >
                                   <div
                                     className="c4"
+                                    data-testid="iconContainer"
                                     height="20"
                                     width="20"
                                   >
                                     <svg
+                                      data-testid="iconSvg"
                                       height="20"
                                       style={
                                         Object {
@@ -349,6 +352,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
                                     >
                                       <path
                                         d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
+                                        data-testid="iconSvgPath"
                                         fill="hsl(207,13%,45%)"
                                         fillRule="evenodd"
                                       />
@@ -962,16 +966,19 @@ exports[`<Select /> should render without a problem when the dropdown is open an
                                 >
                                   <styled.div
                                     className=""
+                                    data-testid="iconContainer"
                                     height="20"
                                     spin={false}
                                     width="20"
                                   >
                                     <div
                                       className="c4"
+                                      data-testid="iconContainer"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
+                                        data-testid="iconSvg"
                                         height="20"
                                         style={
                                           Object {
@@ -984,6 +991,7 @@ exports[`<Select /> should render without a problem when the dropdown is open an
                                       >
                                         <path
                                           d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
+                                          data-testid="iconSvgPath"
                                           fill="hsl(207,13%,45%)"
                                           fillRule="evenodd"
                                         />

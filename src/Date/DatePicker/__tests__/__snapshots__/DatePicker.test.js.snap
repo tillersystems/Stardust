@@ -341,16 +341,19 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -363,6 +366,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -432,16 +436,19 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -454,6 +461,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -2879,16 +2887,19 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -2901,6 +2912,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -2970,16 +2982,19 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -2992,6 +3007,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -5423,16 +5439,19 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -5445,6 +5464,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -5514,16 +5534,19 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -5536,6 +5559,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -7951,16 +7975,19 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -7973,6 +8000,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -8042,16 +8070,19 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -8064,6 +8095,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -10479,16 +10511,19 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -10501,6 +10536,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -10570,16 +10606,19 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -10592,6 +10631,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -12977,16 +13017,19 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -12999,6 +13042,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -13068,16 +13112,19 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -13090,6 +13137,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -15175,16 +15223,19 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -15197,6 +15248,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -15266,16 +15318,19 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -15288,6 +15343,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -17673,16 +17729,19 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -17695,6 +17754,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -17764,16 +17824,19 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -17786,6 +17849,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -19889,16 +19953,19 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -19911,6 +19978,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                           >
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
@@ -19980,16 +20048,19 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     >
                       <styled.div
                         className=""
+                        data-testid="iconContainer"
                         height="20"
                         spin={false}
                         width="20"
                       >
                         <div
                           className="c3"
+                          data-testid="iconContainer"
                           height="20"
                           width="20"
                         >
                           <svg
+                            data-testid="iconSvg"
                             height="20"
                             style={
                               Object {
@@ -20002,6 +20073,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                           >
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+                              data-testid="iconSvgPath"
                               fill="hsl(213, 17%, 20%)"
                               fillRule="evenodd"
                             />
