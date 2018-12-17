@@ -6,12 +6,10 @@ exports[`<Value /> should render as negative 1`] = `
   color: hsl(6,79%,65%);
 }
 
-<div>
-  <div
-    class="c0"
-  >
-    -10
-  </div>
+<div
+  class="c0"
+>
+  -10
 </div>
 `;
 
@@ -21,12 +19,10 @@ exports[`<Value /> should render as postive 1`] = `
   color: hsl(89,53%,52%);
 }
 
-<div>
-  <div
-    class="c0"
-  >
-    +10
-  </div>
+<div
+  class="c0"
+>
+  +10
 </div>
 `;
 
@@ -35,11 +31,9 @@ exports[`<Value /> should render withouth a problem 1`] = `
   color: hsl(213,17%,20%);
 }
 
-<div>
-  <div
-    class="c0"
-  >
-    0
-  </div>
+<div
+  class="c0"
+>
+  0
 </div>
 `;
