@@ -945,16 +945,19 @@ exports[`<Dropdown /> should filter items 1`] = `
                                               >
                                                 <styled.div
                                                   className=""
+                                                  data-testid="iconContainer"
                                                   height="1.1rem"
                                                   spin={false}
                                                   width="1.1rem"
                                                 >
                                                   <div
                                                     className="c9"
+                                                    data-testid="iconContainer"
                                                     height="1.1rem"
                                                     width="1.1rem"
                                                   >
                                                     <svg
+                                                      data-testid="iconSvg"
                                                       height="1.1rem"
                                                       style={
                                                         Object {
@@ -967,6 +970,7 @@ exports[`<Dropdown /> should filter items 1`] = `
                                                     >
                                                       <path
                                                         d="M384.68 354.51l78.405 78.405c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-78.404-78.404c-32.847 26.274-74.51 41.986-119.844 41.986-106.039 0-192-85.962-192-192 0-106.039 85.961-192 192-192 106.038 0 192 85.961 192 192 0 45.333-15.712 86.997-41.986 119.844zm-42.464-16.24C368.09 311.417 384 274.9 384 234.667c0-82.475-66.859-149.334-149.333-149.334-82.475 0-149.334 66.86-149.334 149.334S152.193 384 234.667 384c40.233 0 76.75-15.91 103.603-41.784a21.534 21.534 0 0 1 3.946-3.946z"
+                                                        data-testid="iconSvgPath"
                                                         fill="hsl(0, 100%, 100%)"
                                                         fillRule="evenodd"
                                                       />
@@ -1558,16 +1562,19 @@ exports[`<Dropdown /> should return Not Found if not item found 1`] = `
                                               >
                                                 <styled.div
                                                   className=""
+                                                  data-testid="iconContainer"
                                                   height="1.1rem"
                                                   spin={false}
                                                   width="1.1rem"
                                                 >
                                                   <div
                                                     className="c9"
+                                                    data-testid="iconContainer"
                                                     height="1.1rem"
                                                     width="1.1rem"
                                                   >
                                                     <svg
+                                                      data-testid="iconSvg"
                                                       height="1.1rem"
                                                       style={
                                                         Object {
@@ -1580,6 +1587,7 @@ exports[`<Dropdown /> should return Not Found if not item found 1`] = `
                                                     >
                                                       <path
                                                         d="M384.68 354.51l78.405 78.405c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-78.404-78.404c-32.847 26.274-74.51 41.986-119.844 41.986-106.039 0-192-85.962-192-192 0-106.039 85.961-192 192-192 106.038 0 192 85.961 192 192 0 45.333-15.712 86.997-41.986 119.844zm-42.464-16.24C368.09 311.417 384 274.9 384 234.667c0-82.475-66.859-149.334-149.333-149.334-82.475 0-149.334 66.86-149.334 149.334S152.193 384 234.667 384c40.233 0 76.75-15.91 103.603-41.784a21.534 21.534 0 0 1 3.946-3.946z"
+                                                        data-testid="iconSvgPath"
                                                         fill="hsl(0, 100%, 100%)"
                                                         fillRule="evenodd"
                                                       />

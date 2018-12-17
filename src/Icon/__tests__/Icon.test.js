@@ -5,33 +5,48 @@ import Icon from '..';
 import Theme from '../../Theme';
 
 describe('<Icon />', () => {
-  it('should render withouth a problem', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" />);
-    expect(render).toMatchSnapshot();
+  test('should render without a problem', () => {
+    const { container } = render(<Icon name="calendar" />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with different name', () => {
-    const render = mount(<Icon theme={Theme} name="check" />);
-    expect(render).toMatchSnapshot();
+  test('should render with different name', () => {
+    const { container } = render(<Icon name="check" />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with different size', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" witdth="2rem" height="2rem" />);
-    expect(render).toMatchSnapshot();
+  test('should render with different size', () => {
+    const customSize = '2rem';
+    const { getByTestId } = render(<Icon name="calendar" width={customSize} height={customSize} />);
+    const iconSvgNode = getByTestId('iconSvg');
+    const iconNode = getByTestId('iconContainer');
+
+    expect(iconSvgNode).toHaveAttribute('width', customSize);
+    expect(iconSvgNode).toHaveAttribute('height', customSize);
+    expect(iconNode).toHaveStyleRule('font-size', customSize);
+    expect(iconNode).toHaveStyleRule('line-height', customSize);
   });
 
-  it('should render with predifined color', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" color="darkBlue" />);
-    expect(render).toMatchSnapshot();
+  test('should render with predifined color', () => {
+    const { getByTestId } = render(<Icon name="calendar" color="darkBlue" />);
+    const iconSvgPathNode = getByTestId('iconSvgPath');
+
+    expect(iconSvgPathNode).toHaveAttribute('fill', Theme.palette.darkBlue);
   });
 
-  it('should render with different color', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" color="hsl(120, 80%, 20%)" />);
-    expect(render).toMatchSnapshot();
+  test('should render with different color', () => {
+    const customColor = 'hsl(120, 80%, 20%)';
+    const { getByTestId } = render(<Icon name="calendar" color={customColor} />);
+    const iconSvgPathNode = getByTestId('iconSvgPath');
+
+    expect(iconSvgPathNode).toHaveAttribute('fill', customColor);
   });
 
-  it('should render with a spin loader', () => {
-    const render = mount(<Icon theme={Theme} name="calendar" spin />);
-    expect(render).toMatchSnapshot();
+  test('should render with a spin loader', () => {
+    const { container } = render(<Icon name="calendar" spin />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
