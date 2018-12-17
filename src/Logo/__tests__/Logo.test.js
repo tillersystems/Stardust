@@ -10,12 +10,16 @@ describe('<Logo />', () => {
   });
 
   it('should render with custom width & height', () => {
-    const { container } = render(<Logo width="300" height="80" />);
-    expect(container.firstChild).toMatchSnapshot();
+    const { getByTestId } = render(<Logo width="300" height="80" />);
+    const logoNode = getByTestId('logo');
+    expect(logoNode).toHaveAttribute('width', '300');
+    expect(logoNode).toHaveAttribute('height', '80');
   });
 
   it('should render with custom color', () => {
-    const { container } = render(<Logo color="hsl(217, 89%, 61%)" />);
-    expect(container.firstChild).toMatchSnapshot();
+    const color = 'hsl(217, 89%, 61%)';
+    const { getByTestId } = render(<Logo color={color} />);
+    const logoPathNode = getByTestId('logoPath');
+    expect(logoPathNode).toHaveAttribute('fill', color);
   });
 });
