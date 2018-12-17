@@ -1,49 +1,47 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Message from '..';
 
 describe('<Message />', () => {
-  it('should render without a problem', () => {
-    const render = shallowWithTheme(<Message description="this is a message" />);
+  test('should render without a problem', () => {
+    const { container } = render(<Message description="this is a message" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render a success alert', () => {
-    const render = shallowWithTheme(<Message description="this is a message" type="success" />);
+  test('should render a success alert', () => {
+    const { container } = render(<Message description="this is a message" type="success" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render a info alert', () => {
-    const render = shallowWithTheme(<Message description="this is a message" type="info" />);
+  test('should render a info alert', () => {
+    const { container } = render(<Message description="this is a message" type="info" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render a warning alert', () => {
-    const render = shallowWithTheme(<Message description="this is a message" type="warning" />);
+  test('should render a warning alert', () => {
+    const { container } = render(<Message description="this is a message" type="warning" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render a error alert', () => {
-    const render = shallowWithTheme(<Message description="this is a message" type="error" />);
+  test('should render a error alert', () => {
+    const { container } = render(<Message description="this is a message" type="error" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should call onClose handler', () => {
+  test('should call onClose handler', () => {
     const handleOnClose = jest.fn();
-    const render = mountWithTheme(
-      <Message description="this is a message" onClose={handleOnClose} />,
+    const { queryAllByTestId } = render(
+      <Message description="this is a message" type="error" onClose={handleOnClose} />,
     );
+    const dismissMessageNode = queryAllByTestId('iconSvg');
 
-    render
-      .find('Icon')
-      .last()
-      .simulate('click');
+    fireEvent.click(dismissMessageNode[1]);
 
     expect(handleOnClose).toHaveBeenCalled();
   });
