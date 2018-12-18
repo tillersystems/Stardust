@@ -20,7 +20,12 @@ import { PopOver } from './elements';
 const Popover = ({ active, arrowPositionX, children, width }) => (
   <PoseGroup>
     {active && (
-      <PopOverAnimation width={width} arrowPositionX={arrowPositionX} key="popover">
+      <PopOverAnimation
+        width={width}
+        arrowPositionX={arrowPositionX}
+        key="popover"
+        data-testid="popover"
+      >
         {children}
       </PopOverAnimation>
     )}
