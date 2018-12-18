@@ -16,7 +16,7 @@ import styled from 'styled-components';
  */
 
 const Tag = ({ children, className, color, ...rest }) => (
-  <div className={className} {...rest}>
+  <div className={className} {...rest} data-testid="tag">
     {children}
   </div>
 );

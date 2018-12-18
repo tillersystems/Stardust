@@ -4,15 +4,15 @@ import 'jest-styled-components';
 import Tag from '..';
 
 describe('<Tag />', () => {
-  it('should render withouth a problem', () => {
-    const render = shallowWithTheme(<Tag />);
+  test('should render withouth a problem', () => {
+    const { container } = render(<Tag />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should have a color', () => {
-    const render = shallowWithTheme(<Tag color="red" />);
+  test('should have a color', () => {
+    const { getByTestId } = render(<Tag color="red" />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(getByTestId('tag')).toHaveStyleRule('background', 'red');
   });
 });

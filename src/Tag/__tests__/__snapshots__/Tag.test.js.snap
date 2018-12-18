@@ -1,20 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> should have a color 1`] = `
-.c0 {
-  position: relative;
-  display: inline-block;
-  padding: 0.2rem 0.8rem 0.4rem;
-  border-radius: 0.5rem;
-  color: hsl(0,100%,100%);
-  background: red;
-}
-
-<div
-  className="c0"
-/>
-`;
-
 exports[`<Tag /> should render withouth a problem 1`] = `
 .c0 {
   position: relative;
@@ -25,6 +10,7 @@ exports[`<Tag /> should render withouth a problem 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
+  data-testid="tag"
 />
 `;
