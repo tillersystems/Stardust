@@ -55,7 +55,6 @@ class Dropdown extends PureComponent {
 
   /** preserve the initial state in a new object. */
   baseState = this.state;
-
   /**
    * Toogle Menu
    */
@@ -65,6 +64,7 @@ class Dropdown extends PureComponent {
 
     this.setState(
       prevState => ({
+        ...prevState,
         displayMenu: !prevState.displayMenu,
       }),
       () => {
@@ -127,12 +127,7 @@ class Dropdown extends PureComponent {
 
     return (
       <div className={className}>
-        <Header
-          onClick={this.toggleMenu}
-          aria-haspopup="true"
-          aria-expanded={displayMenu}
-          data-test="dropdown-header"
-        >
+        <Header onClick={this.toggleMenu} aria-haspopup="true" aria-expanded={displayMenu}>
           {title}
         </Header>
         <PoseGroup>

@@ -7,7 +7,15 @@ import Theme from '../../src/Theme';
 
 // Workaround to render a component and provide it with a theme
 const customRender = (node, options) => {
-  return render(<ThemeProvider theme={Theme}>{node}</ThemeProvider>, options);
+  const rendered = render(<ThemeProvider theme={Theme}>{node}</ThemeProvider>, options);
+  return {
+    ...rendered,
+    rerender: newUi =>
+      customRender(newUi, {
+        container: rendered.container,
+        baseElement: rendered.baseElement,
+      }),
+  };
 };
 
 // override render method
