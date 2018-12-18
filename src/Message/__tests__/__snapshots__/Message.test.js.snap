@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Message /> should render a error alert 1`] = `
+.c1 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -18,21 +35,58 @@ exports[`<Message /> should render a error alert 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   type="error"
 >
-  <Styled(Icon)
+  <div
     aria-hidden="true"
-    color="hsl(0, 100%, 100%)"
-    name="exclamation-mark"
-  />
-  <styled.span>
+    class="c1"
+    data-testid="iconContainer"
+    height="20"
+    width="20"
+  >
+    <svg
+      data-testid="iconSvg"
+      height="20"
+      style="display: block;"
+      viewBox="0 0 512 512"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm0-138.373c10.784 0 19.525-8.742 19.525-19.525 0-10.784-8.741-19.526-19.525-19.526-10.784 0-19.525 8.742-19.525 19.526 0 10.783 8.741 19.525 19.525 19.525zm-19.525-175.729V256c0 10.784 8.741 19.525 19.525 19.525 10.784 0 19.525-8.741 19.525-19.525v-78.102c0-10.783-8.741-19.525-19.525-19.525-10.784 0-19.525 8.742-19.525 19.525z"
+        data-testid="iconSvgPath"
+        fill="hsl(0, 100%, 100%)"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <span
+    class="c2"
+  >
     this is a message
-  </styled.span>
+  </span>
 </div>
 `;
 
 exports[`<Message /> should render a info alert 1`] = `
+.c1 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,21 +104,58 @@ exports[`<Message /> should render a info alert 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   type="info"
 >
-  <Styled(Icon)
+  <div
     aria-hidden="true"
-    color="hsl(0, 100%, 100%)"
-    name="info"
-  />
-  <styled.span>
+    class="c1"
+    data-testid="iconContainer"
+    height="20"
+    width="20"
+  >
+    <svg
+      data-testid="iconSvg"
+      height="20"
+      style="display: block;"
+      viewBox="0 0 512 512"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm21.333-150.667V256c0-11.782-9.55-21.333-21.333-21.333-11.782 0-21.333 9.55-21.333 21.333v85.333c0 11.782 9.55 21.334 21.333 21.334 11.782 0 21.333-9.552 21.333-21.334zM256 192c11.782 0 21.333-9.551 21.333-21.333 0-11.782-9.55-21.334-21.333-21.334-11.782 0-21.333 9.552-21.333 21.334S244.217 192 256 192z"
+        data-testid="iconSvgPath"
+        fill="hsl(0, 100%, 100%)"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <span
+    class="c2"
+  >
     this is a message
-  </styled.span>
+  </span>
 </div>
 `;
 
 exports[`<Message /> should render a success alert 1`] = `
+.c1 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -82,21 +173,58 @@ exports[`<Message /> should render a success alert 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   type="success"
 >
-  <Styled(Icon)
+  <div
     aria-hidden="true"
-    color="hsl(0, 100%, 100%)"
-    name="check-mark"
-  />
-  <styled.span>
+    class="c1"
+    data-testid="iconContainer"
+    height="20"
+    width="20"
+  >
+    <svg
+      data-testid="iconSvg"
+      height="20"
+      style="display: block;"
+      viewBox="0 0 512 512"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
+        data-testid="iconSvgPath"
+        fill="hsl(0, 100%, 100%)"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <span
+    class="c2"
+  >
     this is a message
-  </styled.span>
+  </span>
 </div>
 `;
 
 exports[`<Message /> should render a warning alert 1`] = `
+.c1 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -114,21 +242,58 @@ exports[`<Message /> should render a warning alert 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   type="warning"
 >
-  <Styled(Icon)
+  <div
     aria-hidden="true"
-    color="hsl(0, 100%, 100%)"
-    name="exclamation-mark"
-  />
-  <styled.span>
+    class="c1"
+    data-testid="iconContainer"
+    height="20"
+    width="20"
+  >
+    <svg
+      data-testid="iconSvg"
+      height="20"
+      style="display: block;"
+      viewBox="0 0 512 512"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm0-138.373c10.784 0 19.525-8.742 19.525-19.525 0-10.784-8.741-19.526-19.525-19.526-10.784 0-19.525 8.742-19.525 19.526 0 10.783 8.741 19.525 19.525 19.525zm-19.525-175.729V256c0 10.784 8.741 19.525 19.525 19.525 10.784 0 19.525-8.741 19.525-19.525v-78.102c0-10.783-8.741-19.525-19.525-19.525-10.784 0-19.525 8.742-19.525 19.525z"
+        data-testid="iconSvgPath"
+        fill="hsl(0, 100%, 100%)"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <span
+    class="c2"
+  >
     this is a message
-  </styled.span>
+  </span>
 </div>
 `;
 
 exports[`<Message /> should render without a problem 1`] = `
+.c1 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -145,16 +310,36 @@ exports[`<Message /> should render without a problem 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
   type="info"
 >
-  <Styled(Icon)
+  <div
     aria-hidden="true"
-    color="hsl(0, 100%, 100%)"
-    name="info"
-  />
-  <styled.span>
+    class="c1"
+    data-testid="iconContainer"
+    height="20"
+    width="20"
+  >
+    <svg
+      data-testid="iconSvg"
+      height="20"
+      style="display: block;"
+      viewBox="0 0 512 512"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm21.333-150.667V256c0-11.782-9.55-21.333-21.333-21.333-11.782 0-21.333 9.55-21.333 21.333v85.333c0 11.782 9.55 21.334 21.333 21.334 11.782 0 21.333-9.552 21.333-21.334zM256 192c11.782 0 21.333-9.551 21.333-21.333 0-11.782-9.55-21.334-21.333-21.334-11.782 0-21.333 9.552-21.333 21.334S244.217 192 256 192z"
+        data-testid="iconSvgPath"
+        fill="hsl(0, 100%, 100%)"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <span
+    class="c2"
+  >
     this is a message
-  </styled.span>
+  </span>
 </div>
 `;
