@@ -65,7 +65,7 @@ class Modal extends PureComponent {
         <Container>
           <PoseGroup>
             {active && [
-              <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-test="overlay" />,
+              <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-testid="overlay" />,
               <DialogAnimation width={width} height={height} key="Dialog">
                 {children}
               </DialogAnimation>,

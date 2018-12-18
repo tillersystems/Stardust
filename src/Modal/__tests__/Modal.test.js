@@ -1,11 +1,11 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Modal from '..';
 
 describe('<Modal />', () => {
-  it('should render close modal withouth a problem', () => {
-    const render = mountWithTheme(
+  test('should render close modal withouth a problem', () => {
+    const { container } = render(
       <Modal width="50rem" height="35rem">
         <Modal.Header>Header</Modal.Header>
         <Modal.Body>Body</Modal.Body>
@@ -13,15 +13,15 @@ describe('<Modal />', () => {
       </Modal>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should have default onOverlayClick', () => {
+  test('should have default onOverlayClick', () => {
     expect(Modal.defaultProps.onOverlayClick()).toMatchSnapshot();
   });
 
-  it('should render open modal withouth a problem', () => {
-    const render = mountWithTheme(
+  test('should render open modal withouth a problem', () => {
+    const { container } = render(
       <Modal active width="50rem" height="35rem">
         <Modal.Header>Header</Modal.Header>
         <Modal.Body>Body</Modal.Body>
@@ -29,107 +29,53 @@ describe('<Modal />', () => {
       </Modal>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render open modal with a title', () => {
-    const render = mountWithTheme(
+  test('should render open modal with a title', () => {
+    const title = 'My title';
+    const { getByText } = render(
       <Modal active width="50rem" height="35rem">
         <Modal.Header>
-          <Modal.Title>My title</Modal.Title>
+          <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>Body</Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
       </Modal>,
     );
-
-    expect(render).toMatchSnapshot();
+    const titleNode = getByText(title);
+    expect(titleNode).toBeInTheDocument();
   });
 
-  it('should render open modal with centered body', () => {
-    const render = mountWithTheme(
+  test('should render open modal with centered body', () => {
+    const body = 'Body';
+    const { getByText } = render(
       <Modal active width="50rem" height="35rem">
         <Modal.Header>
           <Modal.Title>My title</Modal.Title>
         </Modal.Header>
-        <Modal.Body center>Body</Modal.Body>
+        <Modal.Body center>{body}</Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
       </Modal>,
     );
+    const bodyNode = getByText(body);
 
-    expect(render).toMatchSnapshot();
+    expect(bodyNode).toHaveStyleRule('margin', 'auto');
   });
 
-  it('should render open modal a footer aligned to left', () => {
-    const render = mountWithTheme(
-      <Modal active width="50rem" height="35rem">
-        <Modal.Header>
-          <Modal.Title>My title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body center>Body</Modal.Body>
-        <Modal.Footer alignment="left">Footer</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render open modal a footer aligned to right', () => {
-    const render = mountWithTheme(
-      <Modal active width="50rem" height="35rem">
-        <Modal.Header>
-          <Modal.Title>My title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body center>Body</Modal.Body>
-        <Modal.Footer alignment="right">Footer</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render open modal a centered footer', () => {
-    const render = mountWithTheme(
-      <Modal active width="50rem" height="35rem">
-        <Modal.Header>
-          <Modal.Title>My title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body center>Body</Modal.Body>
-        <Modal.Footer alignment="center">Footer</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render open modal a spaced footer', () => {
-    const render = mountWithTheme(
-      <Modal active width="50rem" height="35rem">
-        <Modal.Header>
-          <Modal.Title>My title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body center>Body</Modal.Body>
-        <Modal.Footer alignment="spaced">Footer</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should call overlayClick callback', () => {
+  test('should call overlayClick callback', () => {
     const spy = jest.fn();
-    const render = mountWithTheme(
+    const { getByTestId } = render(
       <Modal active width="50rem" height="35rem" onOverlayClick={spy}>
         <Modal.Header>Header</Modal.Header>
         <Modal.Body>Body</Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
       </Modal>,
     );
+    const overlay = getByTestId('overlay');
 
-    render
-      .find('[data-test="overlay"]')
-      .first()
-      .simulate('click');
+    // Click on the overlay
+    fireEvent.click(overlay);
 
     expect(spy).toHaveBeenCalled();
   });
