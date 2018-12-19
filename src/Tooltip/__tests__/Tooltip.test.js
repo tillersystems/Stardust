@@ -1,11 +1,11 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Tooltip from '..';
 
 describe('<Tooltip />', () => {
-  it('should render withouth a problem', () => {
-    const render = shallowWithTheme(
+  test('should render withouth a problem', () => {
+    const { container } = render(
       <Tooltip
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
@@ -13,37 +13,11 @@ describe('<Tooltip />', () => {
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a different width', () => {
-    const render = shallowWithTheme(
-      <Tooltip
-        width="40rem"
-        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée."
-      >
-        <button type="button">Show Tooltip</button>
-      </Tooltip>,
-    );
-    expect(render.dive()).toMatchSnapshot();
-  });
-
-  it('should render a tooltip which can be displayed on hover', () => {
-    const render = shallowWithTheme(
-      <Tooltip
-        hover
-        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée."
-      >
-        <button type="button">Show Tooltip</button>
-      </Tooltip>,
-    );
-    expect(render.dive()).toMatchSnapshot();
-  });
-
-  it('should render open popover withouth a problem', () => {
-    const render = shallowWithTheme(
+  test('should render open a tooltip withouth a problem', () => {
+    const { getByTestId } = render(
       <Tooltip
         active
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
@@ -52,90 +26,99 @@ describe('<Tooltip />', () => {
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
+    const tooltipNode = getByTestId('tooltip');
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(tooltipNode).toBeInTheDocument();
   });
 
-  it('should call componentDidUpdate when props are updated', () => {
-    const activeValue = false;
-    const render = shallowWithTheme(
+  test('should render with a different width', () => {
+    const width = '40rem';
+    const { getByTestId } = render(
       <Tooltip
-        active={activeValue}
+        active
+        width={width}
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
-    render.setProps({ active: true });
-    expect(render.state().active).toEqual(true);
+    const tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toHaveStyleRule('width', width);
   });
 
-  it('should call click handler', () => {
-    const render = shallowWithTheme(
+  test('should toggle on click', done => {
+    const buttonText = 'Show Tooltip';
+    const { queryByTestId, getByTestId, getByText } = render(
       <Tooltip
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
-        <button type="button" id="btn">
-          Show Tooltip
-        </button>
+        <button type="button">{buttonText}</button>
       </Tooltip>,
     );
-    render.find('#btn').simulate('click');
-    expect(render.state().active).toEqual(true);
+    const buttonNode = getByText(buttonText);
+
+    fireEvent.click(buttonNode);
+
+    let tooltipNode;
+    tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toBeInTheDocument();
+
+    fireEvent.click(buttonNode);
+
+    setTimeout(() => {
+      tooltipNode = queryByTestId('tooltip');
+      expect(tooltipNode).toBeNull();
+      done();
+    }, 500);
   });
 
-  it('should toggle', () => {
-    const render = mountWithTheme(
-      <Tooltip
-        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée."
-      >
-        <button type="button" id="btn">
-          Show Tooltip
-        </button>
-      </Tooltip>,
-    );
-    render.find('#btn').simulate('click');
-    expect(render).toMatchSnapshot();
-    render.find('#btn').simulate('click');
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render a tooltip  displayed above the element', () => {
-    const render = mountWithTheme(
-      <Tooltip
-        top
-        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée."
-      >
-        <button type="button" id="btn">
-          Show Tooltip
-        </button>
-      </Tooltip>,
-    );
-
-    render.find('#btn').simulate('click');
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should call hover handler', () => {
-    const render = mountWithTheme(
+  test('should toggle on mouseEnter/mouseLeave ', done => {
+    const buttonText = 'Show Tooltip';
+    const { queryByTestId, getByTestId, getByText } = render(
       <Tooltip
         hover
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
-        <button type="button" id="btn">
-          Show Tooltip
-        </button>
+        <button type="button">{buttonText}</button>
       </Tooltip>,
     );
-    render.find('#btn').simulate('mouseenter');
-    expect(render.state().active).toEqual(true);
-    render.find('#btn').simulate('mouseleave');
-    expect(render.state().active).toEqual(false);
+    const buttonNode = getByText(buttonText);
+
+    fireEvent.mouseEnter(buttonNode);
+
+    let tooltipNode;
+    tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toBeInTheDocument();
+
+    fireEvent.mouseLeave(buttonNode);
+
+    setTimeout(() => {
+      tooltipNode = queryByTestId('tooltip');
+      expect(tooltipNode).toBeNull();
+      done();
+    }, 500);
+  });
+
+  test('should render a tooltip  displayed above the element', () => {
+    const { getByTestId } = render(
+      <Tooltip
+        active
+        top
+        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+        sur la période séléctionnée."
+      >
+        <button type="button">Show Tooltip</button>
+      </Tooltip>,
+    );
+    const tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toHaveStyleRule('bottom', '100%');
+    expect(tooltipNode).toHaveStyleRule('top', 'auto');
   });
 });

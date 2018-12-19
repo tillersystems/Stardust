@@ -100,6 +100,7 @@ class Tooltip extends React.Component {
               width={width}
               arrowPositionX={arrowPositionX}
               key="ContainerAnimation"
+              data-testid="tooltip"
             >
               {title}
             </ToolTipAnimation>
