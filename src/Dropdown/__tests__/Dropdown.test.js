@@ -17,7 +17,7 @@ describe('<Dropdown />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toogle the dropdown', done => {
+  test('should toggle the dropdown', done => {
     const props = { title: 'title' };
     const { queryAllByText, getByText } = render(
       <Dropdown {...props}>
@@ -88,9 +88,9 @@ describe('<Dropdown />', () => {
     expect(ItemNode[1]).toBeInTheDocument();
     expect(ItemNode[2]).toBeInTheDocument();
 
-    // Clicking oustide of the conponent
-    // we need tout dispatch a mousedown event: react-onclickoutside library
-    // explicitly listened for mousedown events.
+    // Clicking outside of the conponent
+    // we need to dispatch a mousedown event: react-onclickoutside library
+    // explicitly listening for mousedown events.
     // See: https://github.com/Pomax/react-onclickoutside/issues/104
     document.dispatchEvent(new MouseEvent('mousedown'));
 
@@ -106,7 +106,7 @@ describe('<Dropdown />', () => {
   });
 
   test('should filter items', () => {
-    const props = { title: 'title', searchable: true, searchBarPlacholder: 'search' };
+    const props = { title: 'title', searchable: true, searchBarPlaceholder: 'search' };
     const { queryAllByText, getByText, getByPlaceholderText } = render(
       <Dropdown {...props}>
         <div>Item1</div>
@@ -140,7 +140,7 @@ describe('<Dropdown />', () => {
     const props = {
       title: 'title',
       searchable: true,
-      searchBarPlacholder: 'search',
+      searchBarPlaceholder: 'search',
       noResultLabel: 'Not Found',
     };
     const { queryAllByText, getByText, getByPlaceholderText } = render(
@@ -162,7 +162,7 @@ describe('<Dropdown />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    const SearchInput = getByPlaceholderText(props.searchBarPlacholder);
+    const SearchInput = getByPlaceholderText(props.searchBarPlaceholder);
 
     // Type Item2 in search input
     fireEvent.change(SearchInput, { target: { value: 'qwerty' } });

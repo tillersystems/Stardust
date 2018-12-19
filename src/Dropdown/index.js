@@ -20,7 +20,7 @@ const { bool, func, node, string } = PropTypes;
  * @param {node} noResultLabel // Label to display when no result found.
  * @param {function} onToggle // Callback called when Dropdown is toggled.
  * @param {bool} searchable // Whether the dropdown is searchable.
- * @param {string} searchBarPlacholder // SearchBar input placholder.
+ * @param {string} searchBarPlaceholder // SearchBar input placeholder.
  * @param {node} title // Dropdown title.
  *
  * @return {jsx}
@@ -34,7 +34,7 @@ class Dropdown extends PureComponent {
     noResultLabel: string,
     onToggle: func,
     searchable: bool,
-    searchBarPlacholder: string,
+    searchBarPlaceholder: string,
     title: node.isRequired,
   };
 
@@ -44,7 +44,7 @@ class Dropdown extends PureComponent {
     noResultLabel: null,
     onToggle: () => {},
     searchable: false,
-    searchBarPlacholder: '',
+    searchBarPlaceholder: '',
   };
 
   /** Internal state. */
@@ -114,7 +114,7 @@ class Dropdown extends PureComponent {
       noResultLabel,
       title,
       searchable,
-      searchBarPlacholder,
+      searchBarPlaceholder,
     } = this.props;
     const { displayMenu, searchKeyword } = this.state;
 
@@ -136,7 +136,7 @@ class Dropdown extends PureComponent {
               {searchable && (
                 <SearchInputContainer>
                   <SearchBar
-                    placeHolder={searchBarPlacholder}
+                    placeHolder={searchBarPlaceholder}
                     onChange={this.handleSearch}
                     value={searchKeyword}
                   />
