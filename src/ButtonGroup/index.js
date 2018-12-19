@@ -79,7 +79,7 @@ class ButtonGroup extends PureComponent {
           if (child.props.disabled) {
             return child;
           }
-          if (child.type !== Button) {
+          if (child.type.displayName !== 'Button') {
             return child;
           }
           if (!child.props.name) {
