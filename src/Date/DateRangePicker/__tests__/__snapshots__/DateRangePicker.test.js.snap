@@ -296,7 +296,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -383,7 +383,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -2156,7 +2156,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   July 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -2243,7 +2243,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -4612,7 +4612,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -4699,7 +4699,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -6472,7 +6472,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -6559,7 +6559,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -8613,7 +8613,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -8700,7 +8700,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -10473,7 +10473,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -10560,7 +10560,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -12592,7 +12592,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -12679,7 +12679,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -14452,7 +14452,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -14539,7 +14539,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -16562,7 +16562,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -16649,7 +16649,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -18422,7 +18422,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -18509,7 +18509,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -20551,7 +20551,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -20638,7 +20638,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -22738,7 +22738,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                   May 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -22825,7 +22825,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -24837,7 +24837,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -24924,7 +24924,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -26697,7 +26697,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -26784,7 +26784,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -28815,7 +28815,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -28902,7 +28902,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -30675,7 +30675,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   July 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -30762,7 +30762,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -33101,7 +33101,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -33188,7 +33188,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -34961,7 +34961,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   June 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -35048,7 +35048,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)
@@ -37168,7 +37168,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
             <div
               className="c1"
             >
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={true}
                 onClick={[Function]}
@@ -37255,7 +37255,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
               <styled.div>
                 <div
                   className="c4"
@@ -39028,7 +39028,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   July 2018
                 </div>
               </styled.div>
-              <Styled(Button)
+              <Button
                 appearance="secondary"
                 disabled={false}
                 onClick={[Function]}
@@ -39115,7 +39115,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                     </button>
                   </styled.button>
                 </Button>
-              </Styled(Button)>
+              </Button>
             </div>
           </styled.div>
           <Styled(WeekdayNames)

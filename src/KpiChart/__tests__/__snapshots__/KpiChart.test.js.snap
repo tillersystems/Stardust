@@ -135,7 +135,7 @@ exports[`<KpiChart /> should render with render props 1`] = `
         <div
           className="c4"
         >
-          <Styled(Button)
+          <Button
             ghost={true}
           >
             <Button
@@ -174,7 +174,7 @@ exports[`<KpiChart /> should render with render props 1`] = `
                 </button>
               </styled.button>
             </Button>
-          </Styled(Button)>
+          </Button>
         </div>
       </styled.div>
     </div>
@@ -312,7 +312,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
         <div
           className="c4"
         >
-          <Styled(Button)
+          <Button
             ghost={true}
           >
             <Button
@@ -351,7 +351,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
                 </button>
               </styled.button>
             </Button>
-          </Styled(Button)>
+          </Button>
         </div>
       </styled.div>
     </div>
