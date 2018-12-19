@@ -1,3 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tooltip /> should render withouth a problem 1`] = `undefined`;
+exports[`<Tooltip /> should render withouth a problem 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+<div
+  class="c0"
+>
+  <button
+    type="button"
+  >
+    Show Tooltip
+  </button>
+</div>
+`;

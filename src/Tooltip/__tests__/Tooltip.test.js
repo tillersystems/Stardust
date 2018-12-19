@@ -13,10 +13,10 @@ describe('<Tooltip />', () => {
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
-    expect(container.fisrtChild).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render open popover withouth a problem', () => {
+  test('should render open a tooltip withouth a problem', () => {
     const { getByTestId } = render(
       <Tooltip
         active
@@ -58,16 +58,16 @@ describe('<Tooltip />', () => {
         <button type="button">{buttonText}</button>
       </Tooltip>,
     );
-    const buttonpNode = getByText(buttonText);
+    const buttonNode = getByText(buttonText);
 
-    fireEvent.click(buttonpNode);
+    fireEvent.click(buttonNode);
 
     let tooltipNode;
     tooltipNode = getByTestId('tooltip');
 
     expect(tooltipNode).toBeInTheDocument();
 
-    fireEvent.click(buttonpNode);
+    fireEvent.click(buttonNode);
 
     setTimeout(() => {
       tooltipNode = queryByTestId('tooltip');
@@ -87,16 +87,16 @@ describe('<Tooltip />', () => {
         <button type="button">{buttonText}</button>
       </Tooltip>,
     );
-    const buttonpNode = getByText(buttonText);
+    const buttonNode = getByText(buttonText);
 
-    fireEvent.mouseEnter(buttonpNode);
+    fireEvent.mouseEnter(buttonNode);
 
     let tooltipNode;
     tooltipNode = getByTestId('tooltip');
 
     expect(tooltipNode).toBeInTheDocument();
 
-    fireEvent.mouseLeave(buttonpNode);
+    fireEvent.mouseLeave(buttonNode);
 
     setTimeout(() => {
       tooltipNode = queryByTestId('tooltip');
