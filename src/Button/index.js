@@ -110,4 +110,8 @@ Button.defaultProps = {
   type: 'button',
 };
 
-export default styled(Button)``;
+const styledButton = styled(Button)``;
+
+styledButton.displayName = 'Button';
+
+export default styledButton;

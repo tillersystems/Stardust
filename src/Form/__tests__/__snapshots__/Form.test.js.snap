@@ -4358,11 +4358,12 @@ exports[`<Form /> should render withouth a problem 1`] = `
                             <div
                               className=""
                             >
-                              <Styled(Button)
+                              <Button
                                 _onBlur={[Function]}
                                 _onFocus={[Function]}
                                 key=".0"
                                 primary={true}
+                                type="submit"
                               >
                                 <Button
                                   _onBlur={[Function]}
@@ -4376,7 +4377,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                   onClick={[Function]}
                                   primary={true}
                                   size="default"
-                                  type="button"
+                                  type="submit"
                                 >
                                   <styled.button
                                     _onBlur={[Function]}
@@ -4390,7 +4391,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     onClick={[Function]}
                                     primary={true}
                                     size="default"
-                                    type="button"
+                                    type="submit"
                                   >
                                     <button
                                       className="c8"
@@ -4398,13 +4399,13 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                       icon={null}
                                       onClick={[Function]}
                                       size="default"
-                                      type="button"
+                                      type="submit"
                                     >
                                       Hello
                                     </button>
                                   </styled.button>
                                 </Button>
-                              </Styled(Button)>
+                              </Button>
                             </div>
                           </styled.div>
                         </div>
