@@ -1,116 +1,178 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Dropdown from '..';
 
 describe('<Dropdown />', () => {
-  it('should render without a problem', () => {
-    const render = mountWithTheme(
-      <Dropdown title="title">
+  test('should render without a problem', () => {
+    const props = { title: 'title' };
+    const { container } = render(
+      <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should toogle the dropdown', () => {
-    const render = mountWithTheme(
-      <Dropdown title="title">
+  test('should toggle the dropdown', done => {
+    const props = { title: 'title' };
+    const { queryAllByText, getByText } = render(
+      <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
+    const button = getByText(props.title);
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
 
     // Open Dropdown
-    render
-      .find('[data-test="dropdown-header"]')
-      .at(1)
-      .simulate('click');
+    fireEvent.click(button);
 
-    expect(render).toMatchSnapshot();
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
+    let ItemNode;
+    ItemNode = queryAllByText(/Item/);
+
+    expect(ItemNode).toHaveLength(3);
+    expect(ItemNode[0]).toBeInTheDocument();
+    expect(ItemNode[1]).toBeInTheDocument();
+    expect(ItemNode[2]).toBeInTheDocument();
 
     // Close Dropdown
-    render
-      .find('[data-test="dropdown-header"]')
-      .at(1)
-      .simulate('click');
+    fireEvent.click(button);
 
-    expect(render).toMatchSnapshot();
+    setTimeout(() => {
+      ItemNode = queryAllByText(/Item/);
+      expect(button).toHaveAttribute('aria-expanded', 'false');
+      expect(button).toHaveAttribute('aria-haspopup', 'true');
+      expect(ItemNode[0]).toBeUndefined();
+      expect(ItemNode[1]).toBeUndefined();
+      expect(ItemNode[2]).toBeUndefined();
+      done();
+    }, 500);
   });
 
-  it('should close the dropdown when clicking outside of the component', () => {
-    const render = mountWithTheme(
-      <Dropdown title="title">
+  test('should close the dropdown when clicking outside of the component', done => {
+    const props = { title: 'title' };
+    const { queryAllByText, getByText } = render(
+      <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
 
+    const button = getByText(props.title);
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
     // Open Dropdown
-    render
-      .find('[data-test="dropdown-header"]')
-      .at(1)
-      .simulate('click');
+    fireEvent.click(button);
 
-    expect(render).toMatchSnapshot();
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    // Clicking oustide of the conponent
-    // we need tout dispatch a mousedown event: react-onclickoutside library
-    // explicitly listened for mousedown events.
+    let ItemNode;
+    ItemNode = queryAllByText(/Item/);
+
+    expect(ItemNode).toHaveLength(3);
+    expect(ItemNode[0]).toBeInTheDocument();
+    expect(ItemNode[1]).toBeInTheDocument();
+    expect(ItemNode[2]).toBeInTheDocument();
+
+    // Clicking outside of the conponent
+    // we need to dispatch a mousedown event: react-onclickoutside library
+    // explicitly listening for mousedown events.
     // See: https://github.com/Pomax/react-onclickoutside/issues/104
     document.dispatchEvent(new MouseEvent('mousedown'));
 
-    expect(render).toMatchSnapshot();
+    setTimeout(() => {
+      ItemNode = queryAllByText(/Item/);
+      expect(button).toHaveAttribute('aria-expanded', 'false');
+      expect(button).toHaveAttribute('aria-haspopup', 'true');
+      expect(ItemNode[0]).toBeUndefined();
+      expect(ItemNode[1]).toBeUndefined();
+      expect(ItemNode[2]).toBeUndefined();
+      done();
+    }, 500);
   });
 
-  it('should filter items', () => {
-    const render = mountWithTheme(
-      <Dropdown title="title" searchable>
+  test('should filter items', () => {
+    const props = { title: 'title', searchable: true, searchBarPlaceholder: 'search' };
+    const { queryAllByText, getByText, getByPlaceholderText } = render(
+      <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
 
+    const button = getByText(props.title);
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
     // Open Dropdown
-    render
-      .find('[data-test="dropdown-header"]')
-      .at(1)
-      .simulate('click');
+    fireEvent.click(button);
+
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
 
     // Type Item2 in search input
-    render
-      .find('[data-test="search-input"] input')
-      .simulate('change', { target: { value: 'Item2' } });
+    fireEvent.change(getByPlaceholderText('search'), { target: { value: 'Item2' } });
 
-    expect(render).toMatchSnapshot();
+    const ItemNode = queryAllByText(/Item/);
+    const Item2Node = getByText('Item2');
+
+    expect(ItemNode).toHaveLength(1);
+    expect(Item2Node).toBeInTheDocument();
   });
 
-  it('should return Not Found if not item found', () => {
-    const render = mountWithTheme(
-      <Dropdown title="title" searchable noResultLabel="Not Found">
+  test('should return Not Found if not item found', () => {
+    const props = {
+      title: 'title',
+      searchable: true,
+      searchBarPlaceholder: 'search',
+      noResultLabel: 'Not Found',
+    };
+    const { queryAllByText, getByText, getByPlaceholderText } = render(
+      <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
 
+    const button = getByText(props.title);
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
     // Open Dropdown
-    render
-      .find('[data-test="dropdown-header"]')
-      .at(1)
-      .simulate('click');
+    fireEvent.click(button);
+
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
+    const SearchInput = getByPlaceholderText(props.searchBarPlaceholder);
 
     // Type Item2 in search input
-    render
-      .find('[data-test="search-input"] input')
-      .simulate('change', { target: { value: 'qwerty' } });
+    fireEvent.change(SearchInput, { target: { value: 'qwerty' } });
 
-    expect(render).toMatchSnapshot();
+    const NotFoundNode = getByText(props.noResultLabel);
+    const ItemNode = queryAllByText(/Item/);
+
+    expect(NotFoundNode).toBeInTheDocument();
+    expect(ItemNode[0]).toBeUndefined();
+    expect(ItemNode[1]).toBeUndefined();
+    expect(ItemNode[2]).toBeUndefined();
   });
 });
