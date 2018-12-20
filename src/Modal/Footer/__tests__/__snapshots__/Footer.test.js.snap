@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal.Footer /> should render without a problem 1`] = `
+.c1 {
+  margin-left: 0.7rem;
+}
+
+.c1:first-child {
+  margin-left: 0;
+}
+
+.c1:last-child {
+  margin-right: 0;
+}
+
+.c0 {
+  height: 6rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  alignment="left"
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    Footer
+  </div>
+</div>
+`;
