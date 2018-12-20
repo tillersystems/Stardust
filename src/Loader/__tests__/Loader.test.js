@@ -1,25 +1,27 @@
-import 'jest-styled-components';
 import React from 'react';
 
 import Loader from '..';
 import Theme from '../../Theme';
 
 describe('<Loader />', () => {
-  it('should render without a problem ', () => {
-    const render = shallow(<Loader />);
+  test('should render without a problem ', () => {
+    const { container } = render(<Loader />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with another size ', () => {
-    const render = shallow(<Loader width="4rem" height="4rem" />);
+  test('should render with another size ', () => {
+    const size = '4rem';
+    const { container } = render(<Loader width={size} height={size} />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toHaveAttribute('width', size);
+    expect(container.firstChild).toHaveAttribute('height', size);
   });
 
-  it('should render with another color ', () => {
-    const render = shallow(<Loader color={Theme.palette.failure.default} />);
+  test('should render with another color ', () => {
+    const { getByTestId } = render(<Loader color={Theme.palette.failure.default} />);
+    const circleShapeNode = getByTestId('circleShape');
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(circleShapeNode).toHaveAttribute('stroke', Theme.palette.failure.default);
   });
 });
