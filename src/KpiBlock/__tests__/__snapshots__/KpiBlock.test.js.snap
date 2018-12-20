@@ -1,145 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<KpiBlock /> should render with a custom a value 1`] = `
-.c2 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
-.c3 {
-  font-size: 1.4rem;
-  color: hsl(206,23%,69%);
-}
-
-.c1 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 1.2rem;
-  color: hsl(6,79%,65%);
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 3rem 1rem;
-  height: 100%;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background: hsl(0,100%,100%);
-}
-
-<Styled(KpiBlock)
-  title="title"
-  value={<Custom />}
-  variation={-100}
->
-  <KpiBlock
-    className="c0"
-    title="title"
-    value={<Custom />}
-    variation={-100}
-  >
-    <div
-      className="c0"
-    >
-      <styled.div
-        negative={true}
-      >
-        <div
-          className="c1"
-        >
-          -100.00
-           % 
-          <Styled(Icon)
-            color="hsl(6, 79%, 65%)"
-            name="caret-down"
-          >
-            <Icon
-              className=""
-              color="hsl(6, 79%, 65%)"
-              height="20"
-              name="caret-down"
-              spin={false}
-              width="20"
-            >
-              <styled.div
-                className=""
-                data-testid="iconContainer"
-                height="20"
-                spin={false}
-                width="20"
-              >
-                <div
-                  className="c2"
-                  data-testid="iconContainer"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    data-testid="iconSvg"
-                    height="20"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    viewBox="0 0 512 512"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
-                      data-testid="iconSvgPath"
-                      fill="hsl(6, 79%, 65%)"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </styled.div>
-            </Icon>
-          </Styled(Icon)>
-        </div>
-      </styled.div>
-      <Custom>
-        <div>
-          custom
-        </div>
-      </Custom>
-      <styled.div>
-        <div
-          className="c3"
-        >
-          title
-        </div>
-      </styled.div>
-    </div>
-  </KpiBlock>
-</Styled(KpiBlock)>
-`;
-
 exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 .c2 {
   display: inline-block;
@@ -197,95 +57,48 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   background: hsl(0,100%,100%);
 }
 
-<Styled(KpiBlock)
-  title="title"
-  value="value"
-  variation={-100}
+<div
+  class="c0"
 >
-  <KpiBlock
-    className="c0"
-    title="title"
-    value="value"
-    variation={-100}
+  <div
+    class="c1"
   >
+    -100.00
+     % 
     <div
-      className="c0"
+      class="c2"
+      data-testid="iconContainer"
+      height="20"
+      width="20"
     >
-      <styled.div
-        negative={true}
+      <svg
+        data-testid="iconSvg"
+        height="20"
+        style="display: block;"
+        viewBox="0 0 512 512"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          className="c1"
-        >
-          -100.00
-           % 
-          <Styled(Icon)
-            color="hsl(6, 79%, 65%)"
-            name="caret-down"
-          >
-            <Icon
-              className=""
-              color="hsl(6, 79%, 65%)"
-              height="20"
-              name="caret-down"
-              spin={false}
-              width="20"
-            >
-              <styled.div
-                className=""
-                data-testid="iconContainer"
-                height="20"
-                spin={false}
-                width="20"
-              >
-                <div
-                  className="c2"
-                  data-testid="iconContainer"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    data-testid="iconSvg"
-                    height="20"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    viewBox="0 0 512 512"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
-                      data-testid="iconSvgPath"
-                      fill="hsl(6, 79%, 65%)"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </styled.div>
-            </Icon>
-          </Styled(Icon)>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c3"
-        >
-          value
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          title
-        </div>
-      </styled.div>
+        <path
+          d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
+          data-testid="iconSvgPath"
+          fill="hsl(6, 79%, 65%)"
+          fill-rule="evenodd"
+        />
+      </svg>
     </div>
-  </KpiBlock>
-</Styled(KpiBlock)>
+  </div>
+  <div
+    class="c3"
+  >
+    value
+  </div>
+  <div
+    class="c4"
+  >
+    title
+  </div>
+</div>
 `;
 
 exports[`<KpiBlock /> should render with a positive variation value 1`] = `
@@ -345,96 +158,49 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   background: hsl(0,100%,100%);
 }
 
-<Styled(KpiBlock)
-  title="title"
-  value="value"
-  variation={100}
+<div
+  class="c0"
 >
-  <KpiBlock
-    className="c0"
-    title="title"
-    value="value"
-    variation={100}
+  <div
+    class="c1"
   >
+    +
+    100.00
+     % 
     <div
-      className="c0"
+      class="c2"
+      data-testid="iconContainer"
+      height="20"
+      width="20"
     >
-      <styled.div
-        positive={true}
+      <svg
+        data-testid="iconSvg"
+        height="20"
+        style="display: block;"
+        viewBox="0 0 512 512"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          className="c1"
-        >
-          +
-          100.00
-           % 
-          <Styled(Icon)
-            color="hsl(89, 53%, 52%)"
-            name="caret-up"
-          >
-            <Icon
-              className=""
-              color="hsl(89, 53%, 52%)"
-              height="20"
-              name="caret-up"
-              spin={false}
-              width="20"
-            >
-              <styled.div
-                className=""
-                data-testid="iconContainer"
-                height="20"
-                spin={false}
-                width="20"
-              >
-                <div
-                  className="c2"
-                  data-testid="iconContainer"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    data-testid="iconSvg"
-                    height="20"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    viewBox="0 0 512 512"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m 384.662 352 h -257.324 c -17.818 0 -26.741 -21.543 -14.142 -34.142 l 128.662 -128.662 c 7.81 -7.81 20.474 -7.81 28.284 0 l 128.662 128.662 c 12.6 12.599 3.676 34.142 -14.142 34.142 z"
-                      data-testid="iconSvgPath"
-                      fill="hsl(89, 53%, 52%)"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </styled.div>
-            </Icon>
-          </Styled(Icon)>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c3"
-        >
-          value
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          title
-        </div>
-      </styled.div>
+        <path
+          d="m 384.662 352 h -257.324 c -17.818 0 -26.741 -21.543 -14.142 -34.142 l 128.662 -128.662 c 7.81 -7.81 20.474 -7.81 28.284 0 l 128.662 128.662 c 12.6 12.599 3.676 34.142 -14.142 34.142 z"
+          data-testid="iconSvgPath"
+          fill="hsl(89, 53%, 52%)"
+          fill-rule="evenodd"
+        />
+      </svg>
     </div>
-  </KpiBlock>
-</Styled(KpiBlock)>
+  </div>
+  <div
+    class="c3"
+  >
+    value
+  </div>
+  <div
+    class="c4"
+  >
+    title
+  </div>
+</div>
 `;
 
 exports[`<KpiBlock /> should render withouth a problem 1`] = `
@@ -469,34 +235,18 @@ exports[`<KpiBlock /> should render withouth a problem 1`] = `
   background: hsl(0,100%,100%);
 }
 
-<Styled(KpiBlock)
-  title="title"
-  value="value"
+<div
+  class="c0"
 >
-  <KpiBlock
-    className="c0"
-    title="title"
-    value="value"
-    variation={false}
+  <div
+    class="c1"
   >
-    <div
-      className="c0"
-    >
-      <styled.div>
-        <div
-          className="c1"
-        >
-          value
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c2"
-        >
-          title
-        </div>
-      </styled.div>
-    </div>
-  </KpiBlock>
-</Styled(KpiBlock)>
+    value
+  </div>
+  <div
+    class="c2"
+  >
+    title
+  </div>
+</div>
 `;

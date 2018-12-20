@@ -1,31 +1,31 @@
 import React from 'react';
-import 'jest-styled-components';
 
 import KpiBlock from '..';
 
 describe('<KpiBlock />', () => {
-  it('should render withouth a problem', () => {
-    const render = mountWithTheme(<KpiBlock title="title" value="value" />);
+  test('should render withouth a problem', () => {
+    const { container } = render(<KpiBlock title="title" value="value" />);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a positive variation value', () => {
-    const render = mountWithTheme(<KpiBlock title="title" value="value" variation={100} />);
+  test('should render with a positive variation value', () => {
+    const { container } = render(<KpiBlock title="title" value="value" variation={100} />);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a negative variation value', () => {
-    const render = mountWithTheme(<KpiBlock title="title" value="value" variation={-100} />);
+  test('should render with a negative variation value', () => {
+    const { container } = render(<KpiBlock title="title" value="value" variation={-100} />);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a custom a value', () => {
-    const Custom = () => <div>custom</div>;
-    const render = mountWithTheme(<KpiBlock title="title" value={<Custom />} variation={-100} />);
+  test('should render with a custom a value', () => {
+    const Custom = () => <div data-testid="customeValue">custom</div>;
+    const { getByTestId } = render(<KpiBlock title="title" value={<Custom />} variation={-100} />);
+    const customeValueNode = getByTestId('customeValue');
 
-    expect(render).toMatchSnapshot();
+    expect(customeValueNode).toBeInTheDocument();
   });
 });
