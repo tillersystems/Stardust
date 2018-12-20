@@ -6,7 +6,7 @@
   "rebaseStalePrs": true,
   "automerge": false,
   "automergeType": "pr",
-  "labels": ["need review", "Dependencies Update"],
-  "assignees": ["spartDev"],
-  "reviewers": ["spartDev"]
+  "labels": ["need review", "Dependencies Update", "renovate"],
+  "assignees": ["spartDev", "sun-tea"],
+  "reviewers": ["spartDev", "sun-tea"]
 }
