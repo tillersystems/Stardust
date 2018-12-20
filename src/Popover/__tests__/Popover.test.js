@@ -1,27 +1,30 @@
 import React from 'react';
-import 'jest-styled-components';
 
 import Popover from '..';
-import Theme from '../../Theme';
 
 describe('<Popover />', () => {
-  it('should render withouth a problem', () => {
-    const render = mount(<Popover theme={Theme}>Children</Popover>);
-    expect(render).toMatchSnapshot();
+  test('should render withouth a problem', () => {
+    const { container } = render(<Popover>Children</Popover>);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with a different width', () => {
-    const render = mount(
-      <Popover theme={Theme} width="10rem">
+  test('should render open popover withouth a problem', () => {
+    const { getByTestId } = render(<Popover active>Children</Popover>);
+    const popoverNode = getByTestId('popover');
+
+    expect(popoverNode).toBeInTheDocument();
+  });
+
+  test('should render with a different width', () => {
+    const width = '10rem';
+    const { getByTestId } = render(
+      <Popover active width={width}>
         Children
       </Popover>,
     );
-    expect(render).toMatchSnapshot();
-  });
+    const popoverNode = getByTestId('popover');
 
-  it('should render open popover withouth a problem', () => {
-    const render = mountWithTheme(<Popover active>Children</Popover>);
-
-    expect(render).toMatchSnapshot();
+    expect(popoverNode).toHaveStyleRule('width', width);
   });
 });

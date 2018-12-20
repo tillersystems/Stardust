@@ -10,7 +10,7 @@ import { PopOver } from './elements';
  * This component is in charge of displaying
  * a popover
  *
- * @param {boool} active // Boolean set to display or hide the popover.
+ * @param {bool} active // Boolean set to display or hide the popover.
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} width // Popover width.
  *
@@ -20,7 +20,12 @@ import { PopOver } from './elements';
 const Popover = ({ active, arrowPositionX, children, width }) => (
   <PoseGroup>
     {active && (
-      <PopOverAnimation width={width} arrowPositionX={arrowPositionX} key="popover">
+      <PopOverAnimation
+        width={width}
+        arrowPositionX={arrowPositionX}
+        key="popover"
+        data-testid="popover"
+      >
         {children}
       </PopOverAnimation>
     )}
