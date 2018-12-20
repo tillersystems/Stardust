@@ -1,3 +1,14 @@
+# [1.14.0](https://github.com/tillersystems/Stardust/compare/v1.13.0...v1.14.0) (2018-12-20)
+
+### Bug Fixes
+
+- **CI:** fix CI build ([437cb6d](https://github.com/tillersystems/Stardust/commit/437cb6d))
+
+### Features
+
+- **pin:** add new pin component ([#303](https://github.com/tillersystems/Stardust/issues/303)) ([ca29a39](https://github.com/tillersystems/Stardust/commit/ca29a39))
+- **Theme:** add new color palette ([9517106](https://github.com/tillersystems/Stardust/commit/9517106))
+
 # [1.13.0](https://github.com/tillersystems/Stardust/compare/v1.12.0...v1.13.0) (2018-12-13)
 
 ### Bug Fixes
