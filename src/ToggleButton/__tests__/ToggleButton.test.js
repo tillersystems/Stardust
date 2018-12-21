@@ -1,87 +1,56 @@
-import React, { PureComponent } from 'react';
-import 'jest-styled-components';
+import React from 'react';
+import { fireEvent } from 'react-testing-library';
 
 import ToggleButton from '..';
 
 describe('<ToggleButton />', () => {
-  it('should render without a problem', () => {
-    const render = shallowWithTheme(<ToggleButton />);
+  test('should render without a problem', () => {
+    const { container } = render(<ToggleButton />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render without a problem when checked and disabled', () => {
-    const render = shallowWithTheme(<ToggleButton checked disabled />);
+  test('should render without a problem when checked', () => {
+    const { container } = render(<ToggleButton checked />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render without a problem when unchecked and disabled', () => {
-    const render = shallowWithTheme(<ToggleButton checked={false} disabled />);
+  test('should render without a problem when disabled', () => {
+    const { container, getByTestId } = render(<ToggleButton disabled />);
+    const toggleNode = getByTestId('toggle-button');
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toHaveStyleRule('cursor', 'not-allowed');
+    expect(toggleNode).toHaveStyleRule('opacity', '0.4');
   });
 
-  it('should render without a problem when checked and not disabled', () => {
-    const render = shallowWithTheme(<ToggleButton checked />);
+  test('should toggle', () => {
+    const { container } = render(<ToggleButton />);
 
-    expect(render.dive()).toMatchSnapshot();
-  });
+    fireEvent.click(container.firstChild);
 
-  it('should render without a problem when unchecked and not disabled', () => {
-    const render = shallowWithTheme(<ToggleButton checked={false} />);
+    expect(render).toMatchSnapshot();
 
-    expect(render.dive()).toMatchSnapshot();
-  });
-
-  it('should toggle', () => {
-    const render = mountWithTheme(<ToggleButton />);
-
-    render.find('ToggleButton').simulate('click');
+    fireEvent.click(container.firstChild);
 
     expect(render).toMatchSnapshot();
   });
 
-  it('should call change handler when enabled', () => {
+  test('should call change handler when enabled', () => {
     const handleToggleMock = jest.fn();
-    const render = mountWithTheme(<ToggleButton checked onToggle={handleToggleMock} />);
+    const { container } = render(<ToggleButton checked onToggle={handleToggleMock} />);
 
-    render.find('ToggleButton').simulate('click');
+    fireEvent.click(container.firstChild);
 
-    expect(handleToggleMock).toHaveBeenCalled();
+    expect(handleToggleMock).toHaveBeenCalledTimes(1);
   });
 
-  it('should not call change handler when disabled', () => {
+  test('should not call change handler when disabled', () => {
     const handleToggleMock = jest.fn();
-    const render = mountWithTheme(<ToggleButton checked disabled onToggle={handleToggleMock} />);
+    const { container } = render(<ToggleButton checked disabled onToggle={handleToggleMock} />);
 
-    render.find('ToggleButton').simulate('click');
+    fireEvent.click(container.firstChild);
 
     expect(handleToggleMock).not.toHaveBeenCalled();
-  });
-
-  it('should call componentDidUpdate and setState', () => {
-    class FakeComponent extends PureComponent {
-      state = {
-        checked: false,
-      };
-
-      handleToogle = () => {
-        const { checked } = this.state;
-        this.setState({ ...this.state, checked: !checked });
-      };
-
-      render() {
-        const { checked } = this.state;
-
-        return <ToggleButton checked={checked} onToggle={this.handleToogle} />;
-      }
-    }
-
-    const render = mountWithTheme(<FakeComponent />);
-
-    render.find('ToggleButton').simulate('click');
-
-    expect(render).toMatchSnapshot();
   });
 });
