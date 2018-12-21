@@ -77,7 +77,7 @@ class ToggleButton extends PureComponent {
     return (
       <div className={className} onClick={() => this.handleToogle(checked)}>
         <Checkbox type="checkbox" checked={checked} readOnly />
-        <Toggle checked={checked} readOnly={disabled} />
+        <Toggle checked={checked} readOnly={disabled} data-testid="toggle-button" />
       </div>
     );
   }
