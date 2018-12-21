@@ -20,7 +20,16 @@ import Theme from '../Theme';
 
 const Loader = ({ className, color, width, height }) => (
   <svg className={className} viewBox="0 0 50 50" width={width} height={height} aria-hidden="true">
-    <circle className="path" cx="25" cy="25" r="20" fill="none" stroke={color} strokeWidth="4" />
+    <circle
+      className="path"
+      cx="25"
+      cy="25"
+      r="20"
+      fill="none"
+      stroke={color}
+      strokeWidth="4"
+      data-testid="circleShape"
+    />
   </svg>
 );
 
