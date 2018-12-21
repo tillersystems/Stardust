@@ -1,3 +1,9 @@
+## [1.14.1](https://github.com/tillersystems/Stardust/compare/v1.14.0...v1.14.1) (2018-12-21)
+
+### Bug Fixes
+
+- **Pin:** export Pin component ([#307](https://github.com/tillersystems/Stardust/issues/307)) ([e894e03](https://github.com/tillersystems/Stardust/commit/e894e03))
+
 # [1.14.0](https://github.com/tillersystems/Stardust/compare/v1.13.0...v1.14.0) (2018-12-20)
 
 ### Bug Fixes
