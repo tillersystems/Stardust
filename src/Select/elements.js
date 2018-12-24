@@ -1,53 +1,37 @@
 import styled from 'styled-components';
 
-export const Dropdown = styled.ul`
-  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: 4px;
-  position: absolute;
-  list-style: none;
-  top: calc(100% + 0.4rem);
-  background-color: ${({ theme: { palette } }) => palette.white};
-  width: 100%;
-  left: 0;
-  max-height: 160px;
-  overflow-y: auto;
-  transform-origin: 50% 0%;
-`;
-
-export const Prefix = styled.span`
-  color: ${({ theme: { palette } }) => palette.darkGrey};
-  padding-right: 0.5rem;
-`;
-
-export const Placeholder = styled.span`
-  color: ${({ theme: { palette } }) => palette.darkGrey};
-`;
-
-export const Aside = styled.span`
-  padding-right: 0.8rem;
-`;
-
-export const Container = styled.div`
+export const Header = styled.button`
   display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
+
   height: 100%;
   width: 100%;
-  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: 4px;
-  background-color: ${({ theme: { palette } }) => palette.white};
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-  color: ${({ theme: { palette } }) => palette.darkBlue};
+
+  padding: 0.8rem 1.2rem;
+
+  cursor: pointer;
+  text-align: left;
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
-  position: relative;
+
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+
+  background: linear-gradient(
+    180deg,
+    ${({ theme: { palette } }) => palette.white} 0%,
+    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+  );
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
+
   &::after {
     content: '';
+
     position: absolute;
     right: 1.4rem;
     top: 37%;
+
     width: 0;
     height: 0;
+
     border: 0 solid transparent;
     border-right-width: 3px;
     border-left-width: 3px;
@@ -55,17 +39,59 @@ export const Container = styled.div`
   }
   &::before {
     content: '';
+
     position: absolute;
     right: 1.4rem;
     bottom: 37%;
+
     width: 0;
     height: 0;
+
     border: 0 solid transparent;
     border-left-width: 3px;
     border-right-width: 3px;
     border-top: 3px solid ${({ theme: { palette } }) => palette.spaceGrey};
   }
-  & > select {
-    display: none;
+`;
+
+export const Menu = styled.ul`
+  position: absolute;
+  top: calc(100% + 0.1rem);
+  left: 0;
+
+  width: 100%;
+  max-height: 28rem;
+
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+
+  list-style: none;
+  overflow-y: auto;
+
+  background: linear-gradient(
+    180deg,
+    ${({ theme: { palette } }) => palette.white} 0%,
+    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+  );
+
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
+
+  transform-origin: 50% 0%;
+`;
+
+export const MenuItem = styled.li`
+  display: flex;
+  align-items: center;
+
+  padding: 0.9rem 1.2rem;
+
+  &:first-child {
+    padding-top: 1.8rem;
   }
+
+  &:last-child {
+    padding-bottom: 1.8rem;
+  }
+
+  cursor: pointer;
 `;
