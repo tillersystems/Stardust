@@ -1,24 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ListItem, Aside } from './elements';
-
-const Option = ({ children, value, onClick, aside }) => (
-  <ListItem value={value} onClick={() => onClick(children, value, aside)}>
-    {aside && <Aside>{aside}</Aside>}
-    {children}
-  </ListItem>
-);
+const Option = ({ children, className }) => <div className={className}>{children}</div>;
 
 /**
  * PropTypes Validation
  */
-const { node, string, func } = PropTypes;
+const { node, string } = PropTypes;
 Option.propTypes = {
   children: node,
-  aside: node,
-  value: string,
-  onClick: func,
+  className: string,
 };
 
 /**
@@ -26,9 +17,7 @@ Option.propTypes = {
  */
 Option.defaultProps = {
   children: null,
-  aside: null,
-  value: '',
-  onClick: null,
+  className: '',
 };
 
 export default Option;

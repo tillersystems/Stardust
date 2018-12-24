@@ -1,22 +1,24 @@
 import React, { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 import posed, { PoseGroup } from 'react-pose';
 
-import { Container, Dropdown, Aside, Prefix, Placeholder } from './elements';
+import { Header, Menu, MenuItem } from './elements';
 import Option from './Option';
 
+const { bool, func, node, string } = PropTypes;
+
 /**
- * Modal
+ * Select
  *
  * This component is in charge of displaying
  * a select
  *
- * @param {string} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} prefix // Add a text aside in the select next the selected value.
- * @param {string} selectedValue // Pre select the value if defined.
- * @param {string} show // Boolean set to display or hide options.
- * @param {string} placeholder // Text written in the select to explicit the differents values.
- * @param {string} onClick // Function fired when an element of the dropdown is selected. Return the state in parameter.
+ * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {string} className /// className needed by styled components.
+ * @param {function} onSelected // Function fired when an element of the <Select /> is selected.
+ * @param {function} onToggle // Function fired when the <Select /> is toggled.
+ * @param {string} title // Title of the <Select /> component.
  *
  * @return {jsx}
  */
@@ -26,114 +28,68 @@ class Select extends PureComponent {
 
   /** Prop types. */
   static propTypes = {
-    children: PropTypes.node,
-    prefix: PropTypes.string,
-    selectedValue: PropTypes.string,
-    show: PropTypes.bool,
-    placeholder: PropTypes.string,
-    onClick: PropTypes.func,
+    children: node,
+    className: string,
+    disabled: bool,
+    onSelected: func,
+    onToggle: func,
+    title: string.isRequired,
   };
 
   /** Default props. */
   static defaultProps = {
     children: null,
-    prefix: null,
-    selectedValue: null,
-    show: false,
-    placeholder: null,
-    onClick: null,
+    className: '',
+    disabled: false,
+    onSelected: () => {},
+    onToggle: () => {},
   };
 
   /** Internal state. */
   state = {
-    value: '',
-    showed: false,
-    placeholder: '',
+    displayMenu: false,
+    headerTitle: this.props.title, // eslint-disable-line react/destructuring-assignment
   };
 
   /**
-   * componentDidMount
-   * Handles mounting
-   * in component's lifecycle.
+   * Toogle Menu
    */
-  componentDidMount() {
-    const { children, selectedValue, placeholder } = this.props;
+  toggleMenu = () => {
+    const { displayMenu } = this.state;
+    const { onToggle } = this.props;
 
-    if (placeholder !== null) {
-      this.handleClick(placeholder, '', null);
-    } else {
-      if (selectedValue !== null) {
-        const selectedChild = children.filter(child => child.props.value === selectedValue);
-        const { children: c, value, aside } = selectedChild[0].props;
-        this.handleClick(c, value, aside);
-      } else {
-        const { children: c, value, aside } = children[0].props;
-        this.handleClick(c, value, aside);
-      }
-    }
-  }
-
-  /**
-   * componentDidUpdate
-   * Handles update
-   * in component's lifecycle.
-   *
-   * @param {Object} prevProps - The component's previous props.
-   */
-  componentDidUpdate(prevProps) {
-    const { children, show, selectedValue } = this.props;
-
-    if (selectedValue !== prevProps.selectedValue) {
-      if (selectedValue !== null) {
-        const selectedChild = children.filter(child => child.props.value === selectedValue);
-        const { children: c, value, aside } = selectedChild[0].props;
-        this.handleClick(c, value, aside);
-      } else {
-        const { children: c, value, aside } = children[0].props;
-        this.handleClick(c, value, aside);
-      }
-    }
-
-    if (show !== prevProps.show) {
-      this.setState({ showed: show });
-    }
-  }
-
-  /**
-   * Handle Click
-   *
-   * @param {string} placeholder - Text written in the select to explicit the differents values.
-   * @param {string} val - The option value.
-   * @param {string} aside - Icon aside in the select next the selected value.
-   */
-  handleClick = (placeholder, val, aside) => {
-    const { onClick } = this.props;
     this.setState(
-      {
-        placeholder: placeholder,
-        value: val,
-        aside: aside,
+      prevState => ({
+        ...prevState,
+        displayMenu: !prevState.displayMenu,
+      }),
+      () => {
+        onToggle && onToggle(!displayMenu);
       },
-      () => onClick && onClick(this.state),
     );
   };
 
   /**
-   * Handle Toggle
+   * Handle Selected
+   *
+   * @param {object} currentTarget
+   *
    */
-  toggleShow = () => {
-    const { showed } = this.state;
-    this.setState({ showed: !showed });
-  };
+  handleSelected({ currentTarget }) {
+    const { onSelected } = this.props;
+    const headerTitle = currentTarget.textContent;
 
-  /**
-   * Handle Hide
-   */
-  handleHide = e => {
-    if (!e.currentTarget.contains(e.relatedTarget)) {
-      this.setState({ showed: false });
-    }
-  };
+    this.setState(
+      prevState => ({
+        ...prevState,
+        headerTitle,
+      }),
+      () => {
+        onSelected && onSelected(headerTitle);
+        this.toggleMenu();
+      },
+    );
+  }
 
   /**
    * Renders the component.
@@ -141,24 +97,31 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, prefix } = this.props;
-    const { value, placeholder, showed, aside } = this.state;
-
-    const options = Children.map(children, ({ props: { value, aside, children } }) => (
-      <Select.Option value={value} aside={aside} onClick={this.handleClick}>
-        {children}
-      </Select.Option>
-    ));
+    const { children, className, disabled } = this.props;
+    const { displayMenu, headerTitle } = this.state;
 
     return (
-      <Container tabIndex="0" onClick={this.toggleShow} onBlur={this.handleHide}>
-        {prefix && <Prefix>{prefix}</Prefix>}
-        {aside && <Aside>{aside}</Aside>}
-        {value === '' ? <Placeholder>{placeholder}</Placeholder> : placeholder}
+      <div className={className}>
+        <Header
+          onClick={!disabled ? this.toggleMenu : null}
+          disabled={disabled}
+          aria-haspopup="true"
+          aria-expanded={displayMenu}
+        >
+          {headerTitle}
+        </Header>
         <PoseGroup>
-          {showed && <DropdownAnimation key="DropdownAnimation">{options}</DropdownAnimation>}
+          {displayMenu && (
+            <MenuAnimation key="Menu" role="menu">
+              {Children.map(children, child => (
+                <MenuItem key={child} role="menuitem" onClick={event => this.handleSelected(event)}>
+                  {child}
+                </MenuItem>
+              ))}
+            </MenuAnimation>
+          )}
         </PoseGroup>
-      </Container>
+      </div>
     );
   }
 }
@@ -166,12 +129,12 @@ class Select extends PureComponent {
 /**
  * Animation
  */
-const DropdownAnimation = posed(Dropdown)({
+const MenuAnimation = posed(Menu)({
   enter: {
     opacity: 1,
     scaleY: 1,
     transition: {
-      scaleY: { type: 'spring', stiffness: 900, damping: 30 },
+      scaleY: { ease: 'anticipate', duration: 150 },
       default: { duration: 150 },
     },
   },
@@ -182,4 +145,17 @@ const DropdownAnimation = posed(Dropdown)({
   },
 });
 
-export default Select;
+export default styled(Select)`
+  position: relative;
+  user-select: none;
+
+  /* Disabled */
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      ${Header} {
+        cursor: not-allowed;
+        opacity: 0.4;
+      }
+    `}
+`;

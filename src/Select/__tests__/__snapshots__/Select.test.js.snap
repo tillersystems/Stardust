@@ -1,105 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Select /> should render without a problem 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-  height: 100%;
-  width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
-  font-size: 1.4rem;
-  position: relative;
-}
-
-.c0::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c0::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 > select {
-  display: none;
-}
-
-<div
-  className="c0"
-  onBlur={[Function]}
-  onClick={[Function]}
-  tabIndex="0"
->
-  Home
-  <PoseGroup
-    flipMove={true}
-  />
-</div>
-`;
-
-exports[`<Select /> should render without a problem when dropdown is open 1`] = `
 .c1 {
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  position: absolute;
-  list-style: none;
-  top: calc(100% + 0.4rem);
-  background-color: hsl(0,100%,100%);
-  width: 100%;
-  left: 0;
-  max-height: 160px;
-  overflow-y: auto;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-}
-
-.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
   height: 100%;
   width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  text-align: left;
   font-size: 1.4rem;
-  position: relative;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  color: hsl(207,13%,45%);
 }
 
-.c0::after {
+.c1::after {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -112,7 +31,7 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   border-bottom: 3px solid hsl(207,13%,45%);
 }
 
-.c0::before {
+.c1::before {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -125,280 +44,46 @@ exports[`<Select /> should render without a problem when dropdown is open 1`] = 
   border-top: 3px solid hsl(207,13%,45%);
 }
 
-.c0 > select {
-  display: none;
+.c0 {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
+<div
+  class="c0"
+>
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="c1"
+  >
+    title
+  </button>
+</div>
+`;
+
+exports[`<Select /> should render without a problem when disabled 1`] = `
 .c2 {
-  padding: 0.8rem 1.6rem;
-  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-shadow: 0 1px 0 0 hsl(207,22%,90%);
-}
-
-.c2:last-of-type {
-  box-shadow: none;
-}
-
-.c3 {
-  padding-right: 0.8rem;
-}
-
-.c4 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
-<Select
-  id="select"
-  onClick={null}
-  placeholder={null}
-  prefix={null}
-  selectedValue={null}
-  show={false}
->
-  <styled.div
-    onBlur={[Function]}
-    onClick={[Function]}
-    tabIndex="0"
-  >
-    <div
-      className="c0"
-      onBlur={[Function]}
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      Home
-      <PoseGroup
-        flipMove={true}
-      >
-        <Transition
-          enterAfterExit={false}
-          enterPose="enter"
-          exitPose="exit"
-          flipMove={true}
-          preEnterPose="exit"
-        >
-          <Component
-            _pose="enter"
-            initialPose="exit"
-            key="DropdownAnimation"
-          >
-            <PoseElement
-              _pose="enter"
-              elementType={[Function]}
-              initialPose="exit"
-              poseConfig={
-                Object {
-                  "enter": Object {
-                    "opacity": 1,
-                    "scaleY": 1,
-                    "transition": Object {
-                      "default": Object {
-                        "duration": 150,
-                      },
-                      "scaleY": Object {
-                        "damping": 30,
-                        "stiffness": 900,
-                        "type": "spring",
-                      },
-                    },
-                  },
-                  "exit": Object {
-                    "opacity": 0,
-                    "scaleY": 0,
-                    "transition": Object {
-                      "duration": 150,
-                    },
-                  },
-                }
-              }
-            >
-              <styled.ul
-                hostRef={[Function]}
-                innerRef={[Function]}
-              >
-                <ul
-                  className="c1"
-                >
-                  <Option
-                    aside={null}
-                    key=".0"
-                    onClick={[Function]}
-                    value="home"
-                  >
-                    <styled.li
-                      onClick={[Function]}
-                      value="home"
-                    >
-                      <li
-                        className="c2"
-                        onClick={[Function]}
-                        value="home"
-                      >
-                        Home
-                      </li>
-                    </styled.li>
-                  </Option>
-                  <Option
-                    aside={null}
-                    key=".1"
-                    onClick={[Function]}
-                    value="calendar"
-                  >
-                    <styled.li
-                      onClick={[Function]}
-                      value="calendar"
-                    >
-                      <li
-                        className="c2"
-                        onClick={[Function]}
-                        value="calendar"
-                      >
-                        Calendar
-                      </li>
-                    </styled.li>
-                  </Option>
-                  <Option
-                    aside={null}
-                    key=".2"
-                    onClick={[Function]}
-                    value="settings"
-                  >
-                    <styled.li
-                      onClick={[Function]}
-                      value="settings"
-                    >
-                      <li
-                        className="c2"
-                        onClick={[Function]}
-                        value="settings"
-                      >
-                        Settings
-                      </li>
-                    </styled.li>
-                  </Option>
-                  <Option
-                    aside={
-                      <Styled(Icon)
-                        color="hsl(207,13%,45%)"
-                        name="home"
-                      />
-                    }
-                    key=".3"
-                    onClick={[Function]}
-                    value="user"
-                  >
-                    <styled.li
-                      onClick={[Function]}
-                      value="user"
-                    >
-                      <li
-                        className="c2"
-                        onClick={[Function]}
-                        value="user"
-                      >
-                        <styled.span>
-                          <span
-                            className="c3"
-                          >
-                            <Styled(Icon)
-                              color="hsl(207,13%,45%)"
-                              name="home"
-                            >
-                              <Icon
-                                className=""
-                                color="hsl(207,13%,45%)"
-                                height="20"
-                                name="home"
-                                spin={false}
-                                width="20"
-                              >
-                                <styled.div
-                                  className=""
-                                  data-testid="iconContainer"
-                                  height="20"
-                                  spin={false}
-                                  width="20"
-                                >
-                                  <div
-                                    className="c4"
-                                    data-testid="iconContainer"
-                                    height="20"
-                                    width="20"
-                                  >
-                                    <svg
-                                      data-testid="iconSvg"
-                                      height="20"
-                                      style={
-                                        Object {
-                                          "display": "block",
-                                        }
-                                      }
-                                      viewBox="0 0 512 512"
-                                      width="20"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
-                                        data-testid="iconSvgPath"
-                                        fill="hsl(207,13%,45%)"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </div>
-                                </styled.div>
-                              </Icon>
-                            </Styled(Icon)>
-                          </span>
-                        </styled.span>
-                        User
-                      </li>
-                    </styled.li>
-                  </Option>
-                </ul>
-              </styled.ul>
-            </PoseElement>
-          </Component>
-        </Transition>
-      </PoseGroup>
-    </div>
-  </styled.div>
-</Select>
-`;
-
-exports[`<Select /> should render without a problem when placeholder is set 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
   height: 100%;
   width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  text-align: left;
   font-size: 1.4rem;
-  position: relative;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
+  color: hsl(207,13%,45%);
 }
 
-.c0::after {
+.c2::after {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -411,7 +96,7 @@ exports[`<Select /> should render without a problem when placeholder is set 1`] 
   border-bottom: 3px solid hsl(207,13%,45%);
 }
 
-.c0::before {
+.c2::before {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -424,597 +109,29 @@ exports[`<Select /> should render without a problem when placeholder is set 1`] 
   border-top: 3px solid hsl(207,13%,45%);
 }
 
-.c0 > select {
-  display: none;
+.c0 {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .c1 {
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 
 <div
-  className="c0"
-  onBlur={[Function]}
-  onClick={[Function]}
-  tabIndex="0"
+  class="c0"
 >
-  <styled.span>
-    Choose your menu
-  </styled.span>
-  <PoseGroup
-    flipMove={true}
-  />
-</div>
-`;
-
-exports[`<Select /> should render without a problem when props is set 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-  height: 100%;
-  width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
-  font-size: 1.4rem;
-  position: relative;
-}
-
-.c0::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c0::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 > select {
-  display: none;
-}
-
-<div
-  className="c0"
-  onBlur={[Function]}
-  onClick={[Function]}
-  tabIndex="0"
->
-  Calendar
-  <PoseGroup
-    flipMove={true}
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="c1 c2"
+    disabled=""
   >
-    <Component
-      key="DropdownAnimation"
-    >
-      <Option
-        aside={null}
-        key=".0"
-        onClick={[Function]}
-        value="home"
-      >
-        Home
-      </Option>
-      <Option
-        aside={null}
-        key=".1"
-        onClick={[Function]}
-        value="calendar"
-      >
-        Calendar
-      </Option>
-      <Option
-        aside={null}
-        key=".2"
-        onClick={[Function]}
-        value="settings"
-      >
-        Settings
-      </Option>
-      <Option
-        aside={
-          <Styled(Icon)
-            color="hsl(207,13%,45%)"
-            name="home"
-          />
-        }
-        key=".3"
-        onClick={[Function]}
-        value="user"
-      >
-        User
-      </Option>
-    </Component>
-  </PoseGroup>
-</div>
-`;
-
-exports[`<Select /> should render without a problem when props selectedValue is unset 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-  height: 100%;
-  width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
-  font-size: 1.4rem;
-  position: relative;
-}
-
-.c0::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c0::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 > select {
-  display: none;
-}
-
-<div
-  className="c0"
-  onBlur={[Function]}
-  onClick={[Function]}
-  tabIndex="0"
->
-  Home
-  <PoseGroup
-    flipMove={true}
-  />
-</div>
-`;
-
-exports[`<Select /> should render without a problem when settings is preselected and dropdown is showed 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-  height: 100%;
-  width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
-  font-size: 1.4rem;
-  position: relative;
-}
-
-.c0::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c0::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 > select {
-  display: none;
-}
-
-<div
-  className="c0"
-  onBlur={[Function]}
-  onClick={[Function]}
-  tabIndex="0"
->
-  Settings
-  <PoseGroup
-    flipMove={true}
-  />
-</div>
-`;
-
-exports[`<Select /> should render without a problem when the dropdown is open and get closed 1`] = `
-.c1 {
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  position: absolute;
-  list-style: none;
-  top: calc(100% + 0.4rem);
-  background-color: hsl(0,100%,100%);
-  width: 100%;
-  left: 0;
-  max-height: 160px;
-  overflow-y: auto;
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  padding: 0.8rem 1.2rem;
-  height: 100%;
-  width: 100%;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 4px;
-  background-color: hsl(0,100%,100%);
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08);
-  color: hsl(213,17%,20%);
-  font-size: 1.4rem;
-  position: relative;
-}
-
-.c0::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c0::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 > select {
-  display: none;
-}
-
-.c2 {
-  padding: 0.8rem 1.6rem;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-shadow: 0 1px 0 0 hsl(207,22%,90%);
-}
-
-.c2:last-of-type {
-  box-shadow: none;
-}
-
-.c3 {
-  padding-right: 0.8rem;
-}
-
-.c4 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
-<div>
-  <div
-    id="hide"
-  >
-    Hide dropdown
-  </div>
-  <Select
-    id="select"
-    onClick={null}
-    placeholder={null}
-    prefix={null}
-    selectedValue={null}
-    show={false}
-  >
-    <styled.div
-      onBlur={[Function]}
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      <div
-        className="c0"
-        onBlur={[Function]}
-        onClick={[Function]}
-        tabIndex="0"
-      >
-        Home
-        <PoseGroup
-          flipMove={true}
-        >
-          <Transition
-            enterAfterExit={false}
-            enterPose="enter"
-            exitPose="exit"
-            flipMove={true}
-            preEnterPose="exit"
-          >
-            <Component
-              _pose="exit"
-              initialPose="exit"
-              key="DropdownAnimation"
-              onPoseComplete={[Function]}
-              popFromFlow={true}
-            >
-              <PoseElement
-                _pose="exit"
-                elementType={[Function]}
-                initialPose="exit"
-                onPoseComplete={[Function]}
-                popFromFlow={true}
-                poseConfig={
-                  Object {
-                    "enter": Object {
-                      "opacity": 1,
-                      "scaleY": 1,
-                      "transition": Object {
-                        "default": Object {
-                          "duration": 150,
-                        },
-                        "scaleY": Object {
-                          "damping": 30,
-                          "stiffness": 900,
-                          "type": "spring",
-                        },
-                      },
-                    },
-                    "exit": Object {
-                      "opacity": 0,
-                      "scaleY": 0,
-                      "transition": Object {
-                        "duration": 150,
-                      },
-                    },
-                  }
-                }
-              >
-                <styled.ul
-                  hostRef={[Function]}
-                  innerRef={[Function]}
-                  style={
-                    Object {
-                      "height": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "top": 0,
-                      "width": 0,
-                    }
-                  }
-                >
-                  <ul
-                    className="c1"
-                    style={
-                      Object {
-                        "height": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "top": 0,
-                        "width": 0,
-                      }
-                    }
-                  >
-                    <Option
-                      aside={null}
-                      key=".0"
-                      onClick={[Function]}
-                      value="home"
-                    >
-                      <styled.li
-                        onClick={[Function]}
-                        value="home"
-                      >
-                        <li
-                          className="c2"
-                          onClick={[Function]}
-                          value="home"
-                        >
-                          Home
-                        </li>
-                      </styled.li>
-                    </Option>
-                    <Option
-                      aside={null}
-                      key=".1"
-                      onClick={[Function]}
-                      value="calendar"
-                    >
-                      <styled.li
-                        onClick={[Function]}
-                        value="calendar"
-                      >
-                        <li
-                          className="c2"
-                          onClick={[Function]}
-                          value="calendar"
-                        >
-                          Calendar
-                        </li>
-                      </styled.li>
-                    </Option>
-                    <Option
-                      aside={null}
-                      key=".2"
-                      onClick={[Function]}
-                      value="settings"
-                    >
-                      <styled.li
-                        onClick={[Function]}
-                        value="settings"
-                      >
-                        <li
-                          className="c2"
-                          onClick={[Function]}
-                          value="settings"
-                        >
-                          Settings
-                        </li>
-                      </styled.li>
-                    </Option>
-                    <Option
-                      aside={
-                        <Styled(Icon)
-                          color="hsl(207,13%,45%)"
-                          name="home"
-                        />
-                      }
-                      key=".3"
-                      onClick={[Function]}
-                      value="user"
-                    >
-                      <styled.li
-                        onClick={[Function]}
-                        value="user"
-                      >
-                        <li
-                          className="c2"
-                          onClick={[Function]}
-                          value="user"
-                        >
-                          <styled.span>
-                            <span
-                              className="c3"
-                            >
-                              <Styled(Icon)
-                                color="hsl(207,13%,45%)"
-                                name="home"
-                              >
-                                <Icon
-                                  className=""
-                                  color="hsl(207,13%,45%)"
-                                  height="20"
-                                  name="home"
-                                  spin={false}
-                                  width="20"
-                                >
-                                  <styled.div
-                                    className=""
-                                    data-testid="iconContainer"
-                                    height="20"
-                                    spin={false}
-                                    width="20"
-                                  >
-                                    <div
-                                      className="c4"
-                                      data-testid="iconContainer"
-                                      height="20"
-                                      width="20"
-                                    >
-                                      <svg
-                                        data-testid="iconSvg"
-                                        height="20"
-                                        style={
-                                          Object {
-                                            "display": "block",
-                                          }
-                                        }
-                                        viewBox="0 0 512 512"
-                                        width="20"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M341.333 448h64c11.782 0 21.334-9.551 21.334-21.333V202.434L256 69.693 85.333 202.433v224.234c0 11.782 9.552 21.333 21.334 21.333h64V256c0-11.782 9.55-21.333 21.333-21.333h128c11.782 0 21.333 9.55 21.333 21.333v192zm-42.666 0V277.333h-85.334V448h85.334zM50.903 175.16l192-149.333a21.333 21.333 0 0 1 26.194 0l192 149.333a21.333 21.333 0 0 1 8.236 16.84v234.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V192c0-6.583 3.04-12.798 8.236-16.84z"
-                                          data-testid="iconSvgPath"
-                                          fill="hsl(207,13%,45%)"
-                                          fillRule="evenodd"
-                                        />
-                                      </svg>
-                                    </div>
-                                  </styled.div>
-                                </Icon>
-                              </Styled(Icon)>
-                            </span>
-                          </styled.span>
-                          User
-                        </li>
-                      </styled.li>
-                    </Option>
-                  </ul>
-                </styled.ul>
-              </PoseElement>
-            </Component>
-          </Transition>
-        </PoseGroup>
-      </div>
-    </styled.div>
-  </Select>
-  ,
+    title
+  </button>
 </div>
 `;
