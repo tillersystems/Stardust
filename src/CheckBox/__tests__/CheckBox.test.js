@@ -24,13 +24,28 @@ describe('<CheckBox />', () => {
     expect(checkboxNode).toHaveStyleRule('cursor', 'not-allowed');
   });
 
-  test('should be checked on change', () => {
+  test('should toggle', () => {
     const { getByLabelText } = render(<CheckBox>label</CheckBox>);
     const checkboxNode = getByLabelText('label');
 
     fireEvent.click(checkboxNode);
 
     expect(checkboxNode).toMatchSnapshot();
+
+    fireEvent.click(checkboxNode);
+
+    expect(checkboxNode).toMatchSnapshot();
+  });
+
+  test('should call componentDidUpdate', () => {
+    const { getByLabelText, rerender } = render(<CheckBox>label</CheckBox>);
+    const checkboxNode = getByLabelText('label');
+
+    expect(checkboxNode).not.toBeNull();
+
+    rerender(<CheckBox checked>label</CheckBox>);
+
+    expect(checkboxNode).not.toBeNull();
   });
 
   test('should not be checked with change when disabled', () => {

@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckBox /> should be checked on change 1`] = `
-<input
-  data-testid="checkBoxInput"
-  tabindex="0"
-  type="checkbox"
-  value=""
-/>
-`;
-
 exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
 .c2 {
   display: -webkit-box;
@@ -248,4 +239,22 @@ exports[`<CheckBox /> should render without a problem 1`] = `
     label
   </label>
 </div>
+`;
+
+exports[`<CheckBox /> should toggle 1`] = `
+<input
+  data-testid="checkBoxInput"
+  tabindex="0"
+  type="checkbox"
+  value=""
+/>
+`;
+
+exports[`<CheckBox /> should toggle 2`] = `
+<input
+  data-testid="checkBoxInput"
+  tabindex="0"
+  type="checkbox"
+  value=""
+/>
 `;
