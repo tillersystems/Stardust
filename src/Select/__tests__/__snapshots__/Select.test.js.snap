@@ -60,7 +60,7 @@ exports[`<Select /> should render without a problem 1`] = `
     aria-haspopup="true"
     class="c1"
   >
-    title
+    placeholder
   </button>
 </div>
 `;
@@ -131,7 +131,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
     class="c1 c2"
     disabled=""
   >
-    title
+    placeholder
   </button>
 </div>
 `;

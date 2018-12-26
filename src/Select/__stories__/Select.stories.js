@@ -8,13 +8,20 @@ import { Select } from '../..';
 storiesOf('Select', module)
   .addDecorator(withKnobs)
   .add('default', () => {
-    const Title = text('Title', 'Choose your menu', 'State');
+    const placeholder = text('Placeholder', 'Choose your menu', 'State');
     const onToggle = action('onToggle');
-    const onSelected = action('onSelected');
+    const onChange = action('onChange');
     const disabled = boolean('Disabled', false, 'State');
+    const resetValue = boolean('Reset value', false, 'State');
 
     return (
-      <Select title={Title} onToggle={onToggle} onSelected={onSelected} disabled={disabled}>
+      <Select
+        placeholder={placeholder}
+        onToggle={onToggle}
+        onChange={onChange}
+        disabled={disabled}
+        resetValue={resetValue}
+      >
         <Select.Option>Home</Select.Option>
         <Select.Option>Calendar</Select.Option>
         <Select.Option>Settings</Select.Option>
