@@ -14,32 +14,57 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   padding: 0.6rem;
 }
 
-<div
-  className="c0"
-  disabled={false}
->
-  <styled.div
-    checked={false}
-    disabled={false}
-    onClick={[Function]}
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+}
+
+.c2 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+}
+
+<div>
+  <div
+    class="c0"
   >
-    <input
-      defaultChecked={false}
-      disabled={false}
-      id="test"
-      name={null}
-      onChange={[Function]}
-      type="radio"
-      value=""
-    />
-  </styled.div>
-  <styled.label
-    checked={false}
-    disabled={false}
-    htmlFor="test"
-  >
-    test
-  </styled.label>
+    <div
+      class="c1"
+    >
+      <input
+        id="test"
+        type="radio"
+        value=""
+      />
+    </div>
+    <label
+      class="c2"
+      for="test"
+    >
+      test
+    </label>
+  </div>
 </div>
 `;
 
@@ -58,32 +83,62 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   cursor: not-allowed;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+  opacity: 0.4;
+}
+
+.c2 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 <div
-  className="c0"
-  disabled={true}
+  class="c0"
+  disabled=""
 >
-  <styled.div
-    checked={false}
-    disabled={true}
-    onClick={[Function]}
+  <div
+    class="c1"
+    disabled=""
   >
     <input
-      defaultChecked={false}
-      disabled={true}
+      disabled=""
       id="test"
-      name={null}
-      onChange={[Function]}
       type="radio"
       value="apple"
     />
-  </styled.div>
-  <styled.label
-    checked={false}
-    disabled={true}
-    htmlFor="test"
+  </div>
+  <label
+    class="c2"
+    disabled=""
+    for="test"
   >
     test
-  </styled.label>
+  </label>
 </div>
 `;
 
@@ -101,32 +156,55 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   padding: 0.6rem;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+}
+
+.c2 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+}
+
 <div
-  className="c0"
-  disabled={false}
+  class="c0"
 >
-  <styled.div
-    checked={false}
-    disabled={false}
-    onClick={[Function]}
+  <div
+    class="c1"
   >
     <input
-      defaultChecked={false}
-      disabled={false}
       id="test"
-      name={null}
-      onChange={[Function]}
       type="radio"
       value="apple"
     />
-  </styled.div>
-  <styled.label
-    checked={false}
-    disabled={false}
-    htmlFor="test"
+  </div>
+  <label
+    class="c2"
+    for="test"
   >
     test
-  </styled.label>
+  </label>
 </div>
 `;
 
@@ -145,32 +223,84 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   cursor: not-allowed;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+  opacity: 0.4;
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c1:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c2 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+  opacity: 0.4;
+  cursor: not-allowed;
+  color: hsl(213,17%,20%);
+}
+
 <div
-  className="c0"
-  disabled={true}
+  class="c0"
+  disabled=""
 >
-  <styled.div
-    checked={true}
-    disabled={true}
-    onClick={[Function]}
+  <div
+    class="c1"
+    disabled=""
   >
     <input
-      defaultChecked={true}
-      disabled={true}
+      checked=""
+      disabled=""
       id="test"
-      name={null}
-      onChange={[Function]}
       type="radio"
       value="apple"
     />
-  </styled.div>
-  <styled.label
-    checked={true}
-    disabled={true}
-    htmlFor="test"
+  </div>
+  <label
+    class="c2"
+    disabled=""
+    for="test"
   >
     test
-  </styled.label>
+  </label>
 </div>
 `;
 
@@ -188,31 +318,76 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   padding: 0.6rem;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 50%;
+  background: linear-gradient( 0deg, hsl(216,45%,98%) 0%, hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(216,45%,98%);
+  -webkit-transition: background-color ease 0.25s;
+  transition: background-color ease 0.25s;
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c1:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c2 {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0.7rem;
+  color: hsl(207,13%,45%);
+  color: hsl(213,17%,20%);
+}
+
 <div
-  className="c0"
-  disabled={false}
+  class="c0"
 >
-  <styled.div
-    checked={true}
-    disabled={false}
-    onClick={[Function]}
+  <div
+    class="c1"
   >
     <input
-      defaultChecked={true}
-      disabled={false}
+      checked=""
       id="test"
-      name={null}
-      onChange={[Function]}
       type="radio"
       value="apple"
     />
-  </styled.div>
-  <styled.label
-    checked={true}
-    disabled={false}
-    htmlFor="test"
+  </div>
+  <label
+    class="c2"
+    for="test"
   >
     test
-  </styled.label>
+  </label>
 </div>
 `;
