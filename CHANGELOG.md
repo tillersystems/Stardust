@@ -1,3 +1,9 @@
+# [1.16.0](https://github.com/tillersystems/Stardust/compare/v1.15.0...v1.16.0) (2018-12-26)
+
+### Features
+
+- **Icons:** add new icons ([#315](https://github.com/tillersystems/Stardust/issues/315)) ([8278f72](https://github.com/tillersystems/Stardust/commit/8278f72))
+
 # [1.15.0](https://github.com/tillersystems/Stardust/compare/v1.14.2...v1.15.0) (2018-12-26)
 
 ### Features
