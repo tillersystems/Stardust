@@ -91,14 +91,15 @@ class CheckBox extends PureComponent {
     const { className, children, id, defaultChecked, disabled, value, ...rest } = this.props;
 
     return (
-      <div className={className} {...rest}>
+      <div className={className} {...rest} data-testid="checkBox">
         <Label disabled={disabled} checked={checked}>
-          <BoxContainer checked={checked} disabled={disabled}>
+          <BoxContainer checked={checked} disabled={disabled} data-testid="checkBoxContainer">
             {checked && (
               <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
             )}
             <input
               type="checkbox"
+              data-testid="checkBoxInput"
               onClick={
                 // prevents clicking on the label trigging the event twice
                 event => event.stopPropagation()
