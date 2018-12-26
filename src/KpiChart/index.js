@@ -31,28 +31,12 @@ class KpiChart extends PureComponent {
     render: () => {},
   };
 
-  /** Internal state. */
-  // state = {
-  //   settings: false,
-  // };
-
-  /**
-   * Handles click event on settings.
-   */
-  // handleClick = () => {
-  //   const { settings } = this.state;
-  //   this.setState({ ...this.state, settings: !settings });
-  // };
-
   render() {
     const { className, title, label, render } = this.props;
     return (
       <div className={className}>
         <Header>
           <Title>{title}</Title>
-          {/* <Button small ghost onClick={() => this.handleClick}>
-            <Icon name="cog" color={Theme.palette.darkBlue} width="1.6rem" height="1.6rem" />
-          </Button> */}
         </Header>
         <Body>{render()}</Body>
         <Footer>

@@ -1,20 +1,21 @@
 import React from 'react';
-import 'jest-styled-components';
 
 import KpiChart from '..';
 
 describe('<KpiChart />', () => {
-  it('should render withouth a problem', () => {
-    const render = mountWithTheme(<KpiChart title="title" label="label" />);
+  test('should render withouth a problem', () => {
+    const { container } = render(<KpiChart title="title" label="label" />);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render with render props', () => {
-    const render = mountWithTheme(
+  test('should render with render props', () => {
+    const { getByText } = render(
       <KpiChart title="title" label="label" render={() => <p>Render Props</p>} />,
     );
 
-    expect(render).toMatchSnapshot();
+    const renderNode = getByText('Render Props');
+
+    expect(renderNode).toBeInTheDocument();
   });
 });
