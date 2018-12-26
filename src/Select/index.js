@@ -34,6 +34,7 @@ class Select extends PureComponent {
     onSelected: func,
     onToggle: func,
     title: string.isRequired,
+    resetTitle: bool,
   };
 
   /** Default props. */
@@ -43,12 +44,32 @@ class Select extends PureComponent {
     disabled: false,
     onSelected: () => {},
     onToggle: () => {},
+    resetTitle: false,
   };
+
+  /**
+   * getDerivedStateFromProps
+   *
+   * @param {object} props
+   * @param {object} state
+   *
+   * @return {object}
+   */
+  static getDerivedStateFromProps(props, state) {
+    if (props.resetTitle !== state.resetTitle) {
+      return {
+        headerTitle: props.title,
+      };
+    }
+
+    return null;
+  }
 
   /** Internal state. */
   state = {
     displayMenu: false,
     headerTitle: this.props.title, // eslint-disable-line react/destructuring-assignment
+    resetTitle: this.props.resetTitle, // eslint-disable-line react/destructuring-assignment
   };
 
   /**

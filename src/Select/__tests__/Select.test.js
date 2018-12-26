@@ -128,4 +128,29 @@ describe('<Select />', () => {
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith('Item');
   });
+
+  test('should call getDerivedStateFromProps', () => {
+    const props = { title: 'title', resetTitle: false };
+    const { container, rerender } = render(
+      <Select {...props}>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+      </Select>,
+    );
+
+    expect(container.firstChild).toBeInTheDocument();
+
+    rerender(
+      <Select {...props} resetTitle>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+      </Select>,
+    );
+
+    expect(container.firstChild).toBeInTheDocument();
+  });
 });
