@@ -1,187 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<KpiChart /> should render with render props 1`] = `
-.c5 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  max-width: 100%;
-  width: auto;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: hsl(0,100%,100%);
-  cursor: pointer;
-  outline: none;
-  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
-  transition: background 200ms ease,box-shadow 200ms ease;
-  color: hsl(213,17%,20%);
-  background: none;
-  padding: 0.8rem 1.6rem;
-}
-
-.c5 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c5 svg > path {
-  fill: hsl(213,17%,20%);
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 {
-  font-weight: 600;
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px dotted hsl(213,17%,20%);
-}
-
-.c3 {
-  height: 37.3rem;
-}
-
-.c4 {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1rem;
-}
-
-.c4 button {
-  color: hsl(200,74%,46%);
-}
-
-.c0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 2.4rem 2rem;
-  height: 100%;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background: hsl(0,100%,100%);
-  font-size: 1.2rem;
-}
-
-<Styled(KpiChart)
-  label="label"
-  render={[Function]}
-  title="title"
->
-  <KpiChart
-    className="c0"
-    label="label"
-    render={[Function]}
-    title="title"
-  >
-    <div
-      className="c0"
-    >
-      <styled.div>
-        <div
-          className="c1"
-        >
-          <styled.div>
-            <div
-              className="c2"
-            >
-              title
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c3"
-        >
-          <p>
-            Render Props
-          </p>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          <Button
-            ghost={true}
-          >
-            <Button
-              appearance="default"
-              className=""
-              disabled={false}
-              fluid={false}
-              ghost={true}
-              icon={null}
-              iconPosition="left"
-              onClick={[Function]}
-              size="default"
-              type="button"
-            >
-              <styled.button
-                appearance="default"
-                className=""
-                disabled={false}
-                fluid={false}
-                ghost={true}
-                icon={null}
-                iconPosition="left"
-                onClick={[Function]}
-                size="default"
-                type="button"
-              >
-                <button
-                  className="c5"
-                  disabled={false}
-                  icon={null}
-                  onClick={[Function]}
-                  size="default"
-                  type="button"
-                >
-                  label
-                </button>
-              </styled.button>
-            </Button>
-          </Button>
-        </div>
-      </styled.div>
-    </div>
-  </KpiChart>
-</Styled(KpiChart)>
-`;
-
 exports[`<KpiChart /> should render withouth a problem 1`] = `
 .c5 {
   position: relative;
@@ -277,84 +95,30 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   font-size: 1.2rem;
 }
 
-<Styled(KpiChart)
-  label="label"
-  title="title"
+<div
+  class="c0"
 >
-  <KpiChart
-    className="c0"
-    label="label"
-    render={[Function]}
-    title="title"
+  <div
+    class="c1"
   >
     <div
-      className="c0"
+      class="c2"
     >
-      <styled.div>
-        <div
-          className="c1"
-        >
-          <styled.div>
-            <div
-              className="c2"
-            >
-              title
-            </div>
-          </styled.div>
-        </div>
-      </styled.div>
-      <styled.div>
-        <div
-          className="c3"
-        />
-      </styled.div>
-      <styled.div>
-        <div
-          className="c4"
-        >
-          <Button
-            ghost={true}
-          >
-            <Button
-              appearance="default"
-              className=""
-              disabled={false}
-              fluid={false}
-              ghost={true}
-              icon={null}
-              iconPosition="left"
-              onClick={[Function]}
-              size="default"
-              type="button"
-            >
-              <styled.button
-                appearance="default"
-                className=""
-                disabled={false}
-                fluid={false}
-                ghost={true}
-                icon={null}
-                iconPosition="left"
-                onClick={[Function]}
-                size="default"
-                type="button"
-              >
-                <button
-                  className="c5"
-                  disabled={false}
-                  icon={null}
-                  onClick={[Function]}
-                  size="default"
-                  type="button"
-                >
-                  label
-                </button>
-              </styled.button>
-            </Button>
-          </Button>
-        </div>
-      </styled.div>
+      title
     </div>
-  </KpiChart>
-</Styled(KpiChart)>
+  </div>
+  <div
+    class="c3"
+  />
+  <div
+    class="c4"
+  >
+    <button
+      class="c5"
+      type="button"
+    >
+      label
+    </button>
+  </div>
+</div>
 `;
