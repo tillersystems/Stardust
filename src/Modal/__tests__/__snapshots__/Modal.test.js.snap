@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Modal /> should have default onOverlayClick 1`] = `undefined`;
-
-exports[`<Modal /> should render close modal withouth a problem 1`] = `null`;
-
-exports[`<Modal /> should render open modal withouth a problem 1`] = `null`;
