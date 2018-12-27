@@ -5,7 +5,7 @@ import Select from '..';
 
 describe('<Select />', () => {
   test('should render without a problem', () => {
-    const props = { title: 'title' };
+    const props = { placeholder: 'placeholder' };
     const { container } = render(
       <Select {...props}>
         <Select.Option>Item</Select.Option>
@@ -19,7 +19,7 @@ describe('<Select />', () => {
   });
 
   test('should render without a problem when disabled', () => {
-    const props = { title: 'title', disabled: true };
+    const props = { placeholder: 'placeholder', disabled: true };
     const { container } = render(
       <Select {...props}>
         <Select.Option>Item</Select.Option>
@@ -33,7 +33,7 @@ describe('<Select />', () => {
   });
 
   test('should toggle the Select', done => {
-    const props = { title: 'title' };
+    const props = { placeholder: 'placeholder' };
     const { queryAllByText, getByText } = render(
       <Select {...props}>
         <Select.Option>Item</Select.Option>
@@ -43,7 +43,7 @@ describe('<Select />', () => {
       </Select>,
     );
 
-    const button = getByText(props.title);
+    const button = getByText(props.placeholder);
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -78,7 +78,7 @@ describe('<Select />', () => {
 
   test('should call onToggle when Select is toggled', () => {
     const spy = jest.fn();
-    const props = { title: 'title', onToggle: spy };
+    const props = { placeholder: 'placeholder', onToggle: spy };
     const { getByText } = render(
       <Select {...props}>
         <Select.Option>Item</Select.Option>
@@ -88,7 +88,7 @@ describe('<Select />', () => {
       </Select>,
     );
 
-    const button = getByText(props.title);
+    const button = getByText(props.placeholder);
 
     // Open Select
     fireEvent.click(button);
@@ -103,9 +103,9 @@ describe('<Select />', () => {
     expect(spy).toHaveBeenCalledWith(false);
   });
 
-  test('should call onSelected when an item option is selected', () => {
+  test('should call onChange when an item option is selected', () => {
     const spy = jest.fn();
-    const props = { title: 'title', onSelected: spy };
+    const props = { placeholder: 'placeholder', onChange: spy };
     const { queryAllByText, getByText } = render(
       <Select {...props}>
         <Select.Option>Item</Select.Option>
@@ -115,7 +115,7 @@ describe('<Select />', () => {
       </Select>,
     );
 
-    const button = getByText(props.title);
+    const button = getByText(props.placeholder);
 
     // Open Select
     fireEvent.click(button);
@@ -127,5 +127,30 @@ describe('<Select />', () => {
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith('Item');
+  });
+
+  test('should call getDerivedStateFromProps', () => {
+    const props = { placeholder: 'placeholder', resetValue: false };
+    const { container, rerender } = render(
+      <Select {...props}>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+      </Select>,
+    );
+
+    expect(container.firstChild).toBeInTheDocument();
+
+    rerender(
+      <Select {...props} resetValue>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+        <Select.Option>Item</Select.Option>
+      </Select>,
+    );
+
+    expect(container.firstChild).toBeInTheDocument();
   });
 });

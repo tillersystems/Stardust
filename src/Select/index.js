@@ -16,9 +16,10 @@ const { bool, func, node, string } = PropTypes;
  *
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className /// className needed by styled components.
- * @param {function} onSelected // Function fired when an element of the <Select /> is selected.
+ * @param {function} onChange // Function fired when an element of the <Select /> is selected.
  * @param {function} onToggle // Function fired when the <Select /> is toggled.
- * @param {string} title // Title of the <Select /> component.
+ * @param {string} placeholder // placeholder of the <Select /> component.
+ * @param {boolean} resetValue // Title of the <Select /> component.
  *
  * @return {jsx}
  */
@@ -31,9 +32,10 @@ class Select extends PureComponent {
     children: node,
     className: string,
     disabled: bool,
-    onSelected: func,
+    onChange: func,
     onToggle: func,
-    title: string.isRequired,
+    placeholder: string.isRequired,
+    resetValue: bool,
   };
 
   /** Default props. */
@@ -41,14 +43,35 @@ class Select extends PureComponent {
     children: null,
     className: '',
     disabled: false,
-    onSelected: () => {},
+    onChange: () => {},
     onToggle: () => {},
+    resetValue: false,
   };
+
+  /**
+   * getDerivedStateFromProps
+   *
+   * @param {object} props
+   * @param {object} state
+   *
+   * @return {object}
+   */
+  static getDerivedStateFromProps(props, state) {
+    if (props.resetValue !== state.resetValue) {
+      return {
+        value: null,
+      };
+    }
+
+    return null;
+  }
 
   /** Internal state. */
   state = {
     displayMenu: false,
-    headerTitle: this.props.title, // eslint-disable-line react/destructuring-assignment
+    placeholder: this.props.placeholder, // eslint-disable-line react/destructuring-assignment
+    value: null,
+    resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
   };
 
   /**
@@ -76,16 +99,16 @@ class Select extends PureComponent {
    *
    */
   handleSelected({ currentTarget }) {
-    const { onSelected } = this.props;
-    const headerTitle = currentTarget.textContent;
+    const { onChange } = this.props;
+    const value = currentTarget.textContent;
 
     this.setState(
       prevState => ({
         ...prevState,
-        headerTitle,
+        value,
       }),
       () => {
-        onSelected && onSelected(headerTitle);
+        onChange && onChange(value);
         this.toggleMenu();
       },
     );
@@ -98,7 +121,7 @@ class Select extends PureComponent {
    */
   render() {
     const { children, className, disabled } = this.props;
-    const { displayMenu, headerTitle } = this.state;
+    const { displayMenu, placeholder, value } = this.state;
 
     return (
       <div className={className}>
@@ -108,7 +131,8 @@ class Select extends PureComponent {
           aria-haspopup="true"
           aria-expanded={displayMenu}
         >
-          {headerTitle}
+          {/* if value is defined use them instead show the placeholder */}
+          {value ? value : placeholder}
         </Header>
         <PoseGroup>
           {displayMenu && (
