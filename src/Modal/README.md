@@ -19,6 +19,7 @@ import { Modal } from 'components';
 - `className` - className needed by styled components.
 - `height` - Modal height.
 - `width` - Modal width.
+- `padding` - Modal padding.
 - `onOverlayClick` - A model can have a clickable overlay to close it.
 
 | propName         | propType | defaultValue | isRequired |
@@ -28,6 +29,7 @@ import { Modal } from 'components';
 | `className`      | `string` | `''`         | -          |
 | `height`         | `string` | `48rem`      | -          |
 | `width`          | `string` | `39rem`      | -          |
+| `padding`        | `string` | `1.5rem`     | -          |
 | `onOverlayClick` | `func`   | `null`       | -          |
 
 ### Example
@@ -37,7 +39,7 @@ import Modal from 'components/modal';
 
 render() {
   return (
-    <Modal active={false} width="50" height="35">
+    <Modal active={false} width="50" height="35" padding="2">
       <Modal.Header>Header</Modal.Header>
       <Modal.Body>Body</Modal.Body>
       <Modal.Footer>

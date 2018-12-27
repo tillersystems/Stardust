@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import posed, { PoseGroup } from 'react-pose';
 import { Portal } from 'react-portal';
+import Theme from '../Theme';
 
 /**
  * Modal
@@ -14,6 +15,7 @@ import { Portal } from 'react-portal';
  * @param {string} className // className needed by styled components.
  * @param {string} height // Modal height.
  * @param {string} width // Modal width.
+ * @param {string} padding // Modal padding.
  * @param {string} onOverlayClick // A model can have a clickable overlay to close it.
  *
  * @return {jsx}
@@ -41,6 +43,7 @@ class Modal extends PureComponent {
     active: bool,
     height: string,
     width: string,
+    padding: string,
     onOverlayClick: func,
   };
 
@@ -52,6 +55,7 @@ class Modal extends PureComponent {
     active: false,
     width: '48rem',
     height: '39rem',
+    padding: Theme.dimensions.medium,
     onOverlayClick: () => {},
   };
 
@@ -59,14 +63,14 @@ class Modal extends PureComponent {
    * Render function
    */
   render() {
-    const { active, width, height, onOverlayClick, children } = this.props;
+    const { active, width, height, padding, onOverlayClick, children } = this.props;
     return (
       <Portal>
         <Container>
           <PoseGroup>
             {active && [
               <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-testid="overlay" />,
-              <DialogAnimation width={width} height={height} key="Dialog">
+              <DialogAnimation width={width} height={height} padding={padding} key="Dialog">
                 {children}
               </DialogAnimation>,
             ]}

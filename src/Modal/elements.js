@@ -36,7 +36,7 @@ export const Dialog = styled.dialog`
     top: calc(50% - ${stripUnit(height) / 2}rem);
   `}
 
-  padding: 0 ${({ theme: { dimensions } }) => dimensions.medium};
+  padding: ${({ padding }) => padding};
 
   color: ${({ theme: { palette } }) => palette.darkBlue};
   font-size: ${({

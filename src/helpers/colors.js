@@ -6,7 +6,7 @@ export const light = color => lighten(0.1, color);
 
 export const whiteOpacity = opacity => `hsla(0, 100%, 100%, ${opacity})`;
 
-export const getLigntness = color => {
+export const getLightness = color => {
   const colorWithoutPar = color.replace(/[hsl(%)]/g, '');
   const hslValue = colorWithoutPar.split(',');
   const lightessValue = hslValue[2];
@@ -14,5 +14,5 @@ export const getLigntness = color => {
 };
 
 export const setColorDark = (color, light) => {
-  return setLightness(getLigntness(color) - light, color);
+  return setLightness(getLightness(color) - light, color);
 };
