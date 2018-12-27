@@ -4,32 +4,24 @@ import { fireEvent } from 'react-testing-library';
 import Modal from '..';
 
 describe('<Modal />', () => {
-  test('should render close modal withouth a problem', () => {
-    const { container } = render(
-      <Modal width="50rem" height="35rem" padding="4rem">
-        <Modal.Header>Header</Modal.Header>
-        <Modal.Body>Body</Modal.Body>
-        <Modal.Footer>Footer</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('should have default onOverlayClick', () => {
-    expect(Modal.defaultProps.onOverlayClick()).toMatchSnapshot();
-  });
-
   test('should render open modal withouth a problem', () => {
-    const { container } = render(
+    const Header = 'My title';
+    const Body = 'body';
+    const Footer = 'footer';
+    const { getByText } = render(
       <Modal active width="50rem" height="35rem" padding="4rem">
-        <Modal.Header>Header</Modal.Header>
-        <Modal.Body>Body</Modal.Body>
-        <Modal.Footer>Footer</Modal.Footer>
+        <Modal.Header>{Header}</Modal.Header>
+        <Modal.Body>{Body}</Modal.Body>
+        <Modal.Footer>{Footer}</Modal.Footer>
       </Modal>,
     );
+    const HeaderNode = getByText(Header);
+    const BodyNode = getByText(Body);
+    const FooterNode = getByText(Footer);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(HeaderNode).toBeInTheDocument();
+    expect(BodyNode).toBeInTheDocument();
+    expect(FooterNode).toBeInTheDocument();
   });
 
   test('should render open modal with a title', () => {
