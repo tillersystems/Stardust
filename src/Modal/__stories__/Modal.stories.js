@@ -45,6 +45,17 @@ storiesOf('Modal', module)
       },
       'Dimensions',
     );
+    const paddingValue = number(
+      'Padding',
+      2,
+      {
+        range: true,
+        min: 1,
+        max: 10,
+        step: 1,
+      },
+      'Dimensions',
+    );
 
     return (
       <div>
@@ -54,8 +65,9 @@ storiesOf('Modal', module)
         <State store={store}>
           <Modal
             active={store.get('active')}
-            width={`${widthValue.toString()}rem`}
-            height={`${heightValue.toString()}rem`}
+            width={`${widthValue}rem`}
+            height={`${heightValue}rem`}
+            padding={`${paddingValue}rem`}
             onOverlayClick={() => {
               onOverlayClickAction();
               store.set({ active: !store.get('active') });
@@ -92,14 +104,26 @@ storiesOf('Modal', module)
       },
       'Dimensions',
     );
+    const paddingValue = number(
+      'Padding',
+      2,
+      {
+        range: true,
+        min: 1,
+        max: 10,
+        step: 1,
+      },
+      'Dimensions',
+    );
 
     return (
       <div>
         <span>Control modal from knobs!</span>
         <Modal
           active={activeValue}
-          width={`${widthValue.toString()}rem`}
-          height={`${heightValue.toString()}rem`}
+          width={`${widthValue}rem`}
+          height={`${heightValue}rem`}
+          padding={`${paddingValue}rem`}
         >
           <Modal.Body>Click on overlay to close me :-)</Modal.Body>
         </Modal>
@@ -127,6 +151,17 @@ storiesOf('Modal', module)
         min: 10,
         max: 80,
         step: 2,
+      },
+      'Dimensions',
+    );
+    const paddingValue = number(
+      'Padding',
+      2,
+      {
+        range: true,
+        min: 1,
+        max: 10,
+        step: 1,
       },
       'Dimensions',
     );
@@ -161,8 +196,9 @@ storiesOf('Modal', module)
         <State store={store}>
           <Modal
             active={store.get('active')}
-            width={`${widthValue.toString()}rem`}
-            height={`${heightValue.toString()}rem`}
+            width={`${widthValue}rem`}
+            height={`${heightValue}rem`}
+            padding={`${paddingValue}rem`}
             onOverlayClick={() => {
               onOverlayClickAction();
               store.set({ active: !store.get('active') });

@@ -6,7 +6,7 @@ import Modal from '..';
 describe('<Modal />', () => {
   test('should render close modal withouth a problem', () => {
     const { container } = render(
-      <Modal width="50rem" height="35rem">
+      <Modal width="50rem" height="35rem" padding="4rem">
         <Modal.Header>Header</Modal.Header>
         <Modal.Body>Body</Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
@@ -22,7 +22,7 @@ describe('<Modal />', () => {
 
   test('should render open modal withouth a problem', () => {
     const { container } = render(
-      <Modal active width="50rem" height="35rem">
+      <Modal active width="50rem" height="35rem" padding="4rem">
         <Modal.Header>Header</Modal.Header>
         <Modal.Body>Body</Modal.Body>
         <Modal.Footer>Footer</Modal.Footer>
@@ -35,7 +35,7 @@ describe('<Modal />', () => {
   test('should render open modal with a title', () => {
     const title = 'My title';
     const { getByText } = render(
-      <Modal active width="50rem" height="35rem">
+      <Modal active width="50rem" height="35rem" padding="4rem">
         <Modal.Header>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
