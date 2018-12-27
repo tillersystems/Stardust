@@ -1,3 +1,9 @@
+# [1.17.0](https://github.com/tillersystems/Stardust/compare/v1.16.0...v1.17.0) (2018-12-27)
+
+### Features
+
+- **modal:** add custom padding ([#318](https://github.com/tillersystems/Stardust/issues/318)) ([f3c2e8e](https://github.com/tillersystems/Stardust/commit/f3c2e8e))
+
 # [1.16.0](https://github.com/tillersystems/Stardust/compare/v1.15.0...v1.16.0) (2018-12-26)
 
 ### Features
