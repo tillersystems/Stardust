@@ -1,6 +1,6 @@
 import 'jest-styled-components';
 
-import { dark, light, whiteOpacity, getLigntness, setColorDark } from '../colors';
+import { dark, light, whiteOpacity, getLightness, setColorDark } from '../colors';
 
 describe('Colors helpers', () => {
   it('should render a darker color', () => {
@@ -16,7 +16,7 @@ describe('Colors helpers', () => {
     expect(expectedValue).toMatchSnapshot();
   });
   it('should render the lightness value of an hsl color', () => {
-    const expectedValue = getLigntness('hsl(6, 79%, 65%)');
+    const expectedValue = getLightness('hsl(6, 79%, 65%)');
     expect(expectedValue).toMatchSnapshot();
   });
   it('should render a darker light on hsl color', () => {
