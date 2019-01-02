@@ -82,7 +82,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
         <path
           d="m 384.662 160 h -257.324 c -17.818 0 -26.741 21.543 -14.142 34.142 l 128.662 128.662 c 7.81 7.81 20.474 7.81 28.284 0 l 128.662 -128.662 c 12.6 -12.599 3.676 -34.142 -14.142 -34.142 z"
           data-testid="iconSvgPath"
-          fill="hsl(6, 79%, 65%)"
+          fill="hsl(6,79%,65%)"
           fill-rule="evenodd"
         />
       </svg>
@@ -184,7 +184,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
         <path
           d="m 384.662 352 h -257.324 c -17.818 0 -26.741 -21.543 -14.142 -34.142 l 128.662 -128.662 c 7.81 -7.81 20.474 -7.81 28.284 0 l 128.662 128.662 c 12.6 12.599 3.676 34.142 -14.142 34.142 z"
           data-testid="iconSvgPath"
-          fill="hsl(89, 53%, 52%)"
+          fill="hsl(89,53%,52%)"
           fill-rule="evenodd"
         />
       </svg>

@@ -27,7 +27,7 @@ exports[`<Loader /> should render without a problem  1`] = `
     data-testid="circleShape"
     fill="none"
     r="20"
-    stroke="hsl(200, 74%, 46%)"
+    stroke="hsl(200,74%,46%)"
     stroke-width="4"
   />
 </svg>

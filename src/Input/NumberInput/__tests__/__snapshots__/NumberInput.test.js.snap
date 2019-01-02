@@ -125,6 +125,7 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={true}
           id=""
           innerRef={[Function]}
@@ -138,6 +139,7 @@ exports[`<NumberInput /> should render disabled without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={true}
             id=""
             onBlur={[Function]}
@@ -308,6 +310,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -321,6 +324,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -343,9 +347,10 @@ exports[`<NumberInput /> should render error without problem 1`] = `
           >
             <div
               className="c2"
+              data-testid="status"
             >
               <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
+                color="hsl(0,100%,100%)"
                 height="1.1rem"
                 name="cross"
                 spin={false}
@@ -353,7 +358,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
               >
                 <Icon
                   className=""
-                  color="hsl(0, 100%, 100%)"
+                  color="hsl(0,100%,100%)"
                   height="1.1rem"
                   name="cross"
                   spin={false}
@@ -387,7 +392,7 @@ exports[`<NumberInput /> should render error without problem 1`] = `
                         <path
                           d="M286.17 256l112.915 112.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0L256 286.17 143.085 399.085c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L225.83 256 112.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0L256 225.83l112.915-112.915c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L286.17 256z"
                           data-testid="iconSvgPath"
-                          fill="hsl(0, 100%, 100%)"
+                          fill="hsl(0,100%,100%)"
                           fillRule="evenodd"
                         />
                       </svg>
@@ -557,6 +562,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -570,6 +576,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -592,9 +599,10 @@ exports[`<NumberInput /> should render info without problem 1`] = `
           >
             <div
               className="c2"
+              data-testid="status"
             >
               <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
+                color="hsl(0,100%,100%)"
                 height="2rem"
                 name="info"
                 spin={false}
@@ -602,7 +610,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
               >
                 <Icon
                   className=""
-                  color="hsl(0, 100%, 100%)"
+                  color="hsl(0,100%,100%)"
                   height="2rem"
                   name="info"
                   spin={false}
@@ -636,7 +644,7 @@ exports[`<NumberInput /> should render info without problem 1`] = `
                         <path
                           d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm21.333-150.667V256c0-11.782-9.55-21.333-21.333-21.333-11.782 0-21.333 9.55-21.333 21.333v85.333c0 11.782 9.55 21.334 21.333 21.334 11.782 0 21.333-9.552 21.333-21.334zM256 192c11.782 0 21.333-9.551 21.333-21.333 0-11.782-9.55-21.334-21.333-21.334-11.782 0-21.333 9.552-21.333 21.334S244.217 192 256 192z"
                           data-testid="iconSvgPath"
-                          fill="hsl(0, 100%, 100%)"
+                          fill="hsl(0,100%,100%)"
                           fillRule="evenodd"
                         />
                       </svg>
@@ -829,6 +837,7 @@ exports[`<NumberInput /> should render input without problem when given a text l
           </Input.Label>
         </Styled(Input.Label)>
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -842,6 +851,7 @@ exports[`<NumberInput /> should render input without problem when given a text l
         >
           <input
             className="c2"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1091,6 +1101,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
           </Input.Label>
         </Styled(Input.Label)>
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -1104,6 +1115,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
         >
           <input
             className="c3"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1280,6 +1292,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -1293,6 +1306,7 @@ exports[`<NumberInput /> should render input without problem when given an icon 
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1507,6 +1521,7 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -1520,6 +1535,7 @@ exports[`<NumberInput /> should render loading without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1690,6 +1706,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -1703,6 +1720,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1725,9 +1743,10 @@ exports[`<NumberInput /> should render success without problem 1`] = `
           >
             <div
               className="c2"
+              data-testid="status"
             >
               <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
+                color="hsl(0,100%,100%)"
                 height="1.1rem"
                 name="check-mark"
                 spin={false}
@@ -1735,7 +1754,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
               >
                 <Icon
                   className=""
-                  color="hsl(0, 100%, 100%)"
+                  color="hsl(0,100%,100%)"
                   height="1.1rem"
                   name="check-mark"
                   spin={false}
@@ -1769,7 +1788,7 @@ exports[`<NumberInput /> should render success without problem 1`] = `
                         <path
                           d="M411.582 134.248c8.33-8.33 21.838-8.33 30.17 0 8.33 8.332 8.33 21.84 0 30.17L207.085 399.085c-8.331 8.331-21.839 8.331-30.17 0L70.248 292.418c-8.33-8.33-8.33-21.838 0-30.17 8.332-8.33 21.84-8.33 30.17 0L192 353.83l219.582-219.582z"
                           data-testid="iconSvgPath"
-                          fill="hsl(0, 100%, 100%)"
+                          fill="hsl(0,100%,100%)"
                           fillRule="evenodd"
                         />
                       </svg>
@@ -1939,6 +1958,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -1952,6 +1972,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -1974,9 +1995,10 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
           >
             <div
               className="c2"
+              data-testid="status"
             >
               <Styled(Icon)
-                color="hsl(0, 100%, 100%)"
+                color="hsl(0,100%,100%)"
                 height="2rem"
                 name="exclamation-mark"
                 spin={false}
@@ -1984,7 +2006,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
               >
                 <Icon
                   className=""
-                  color="hsl(0, 100%, 100%)"
+                  color="hsl(0,100%,100%)"
                   height="2rem"
                   name="exclamation-mark"
                   spin={false}
@@ -2018,7 +2040,7 @@ exports[`<NumberInput /> should render warning without problem 1`] = `
                         <path
                           d="M256 492C125.66 492 20 386.34 20 256S125.66 20 256 20s236 105.66 236 236-105.66 236-236 236zm0-138.373c10.784 0 19.525-8.742 19.525-19.525 0-10.784-8.741-19.526-19.525-19.526-10.784 0-19.525 8.742-19.525 19.526 0 10.783 8.741 19.525 19.525 19.525zm-19.525-175.729V256c0 10.784 8.741 19.525 19.525 19.525 10.784 0 19.525-8.741 19.525-19.525v-78.102c0-10.783-8.741-19.525-19.525-19.525-10.784 0-19.525 8.742-19.525 19.525z"
                           data-testid="iconSvgPath"
-                          fill="hsl(0, 100%, 100%)"
+                          fill="hsl(0,100%,100%)"
                           fillRule="evenodd"
                         />
                       </svg>
@@ -2158,6 +2180,7 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2171,6 +2194,7 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -2311,6 +2335,7 @@ exports[`<NumberInput /> should render withouth a problem when fluid 1`] = `
         width="100%"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2324,6 +2349,7 @@ exports[`<NumberInput /> should render withouth a problem when fluid 1`] = `
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -2465,6 +2491,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2478,6 +2505,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -2618,6 +2646,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2631,6 +2660,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -2771,6 +2801,7 @@ exports[`<NumberInput /> should render withouth a problem when given a width 1`]
         width="123rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2784,6 +2815,7 @@ exports[`<NumberInput /> should render withouth a problem when given a width 1`]
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -2925,6 +2957,7 @@ exports[`<NumberInput /> should render withouth a problem when value changed 1`]
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -2938,6 +2971,7 @@ exports[`<NumberInput /> should render withouth a problem when value changed 1`]
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -3078,6 +3112,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -3091,6 +3126,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
@@ -3231,6 +3267,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
         width="25rem"
       >
         <styled.input
+          data-testid="input"
           disabled={false}
           id=""
           innerRef={[Function]}
@@ -3244,6 +3281,7 @@ exports[`<NumberInput /> should update the component when controlled value is ch
         >
           <input
             className="c1"
+            data-testid="input"
             disabled={false}
             id=""
             onBlur={[Function]}
