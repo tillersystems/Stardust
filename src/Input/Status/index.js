@@ -23,7 +23,7 @@ const statusToIconName = {
  * @return {jsx}
  */
 const Status = ({ className, status }) => (
-  <div className={className}>
+  <div className={className} data-testid="status">
     <Icon
       color={status === 'loading' ? Theme.palette.primary.default : Theme.palette.white}
       name={statusToIconName[status]}
