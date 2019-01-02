@@ -15,7 +15,6 @@ import { BoxContainer, Label } from './elements';
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className // Add a text aside in the select next the selected value.
  * @param {boolean} checked // Specifies whether the checkbox is selected.
- * @param {boolean} defaultChecked // Specifies the initial state: whether or not the checkbox is selected.
  * @param {boolean} disabled // Specifies whether the checkbox is disabled.
  * @param {function} onChange // Callback whence clicked.
  * @param {string} value // The value to be used in the checkbox input. This is the value that will be returned on form submission.
@@ -88,7 +87,7 @@ class CheckBox extends PureComponent {
    */
   render() {
     const { checked } = this.state;
-    const { className, children, id, defaultChecked, disabled, value, ...rest } = this.props;
+    const { className, children, disabled, value, ...rest } = this.props;
 
     return (
       <div className={className} {...rest} data-testid="checkBox">
