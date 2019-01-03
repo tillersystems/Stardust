@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/tillersystems/Stardust/compare/v1.17.0...v1.18.0) (2019-01-03)
+
+### Features
+
+- **Select:** add the possibility to reset the headerTitle ([#314](https://github.com/tillersystems/Stardust/issues/314)) ([6fd523d](https://github.com/tillersystems/Stardust/commit/6fd523d))
+- **Theme:** create a story which lists all color palette ([#329](https://github.com/tillersystems/Stardust/issues/329)) ([25a185c](https://github.com/tillersystems/Stardust/commit/25a185c))
+
 # [1.17.0](https://github.com/tillersystems/Stardust/compare/v1.16.0...v1.17.0) (2018-12-27)
 
 ### Features
