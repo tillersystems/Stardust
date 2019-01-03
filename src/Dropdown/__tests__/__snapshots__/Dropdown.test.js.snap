@@ -55,11 +55,13 @@ exports[`<Dropdown /> should render without a problem 1`] = `
 
 <div
   class="c0"
+  data-testid="dropdown"
 >
   <button
     aria-expanded="false"
     aria-haspopup="true"
     class="c1"
+    data-testid="dropdown-button"
   >
     title
   </button>

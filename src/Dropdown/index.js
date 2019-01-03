@@ -126,8 +126,13 @@ class Dropdown extends PureComponent {
     );
 
     return (
-      <div className={className}>
-        <Header onClick={this.toggleMenu} aria-haspopup="true" aria-expanded={displayMenu}>
+      <div className={className} data-testid="dropdown">
+        <Header
+          onClick={this.toggleMenu}
+          aria-haspopup="true"
+          aria-expanded={displayMenu}
+          data-testid="dropdown-button"
+        >
           {title}
         </Header>
         <PoseGroup>
