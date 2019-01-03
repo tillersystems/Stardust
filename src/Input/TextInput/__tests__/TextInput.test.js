@@ -1,148 +1,167 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
+import Theme from '../../../Theme';
 
-import { TextInput } from '../../..';
+import TextInput from '..';
 
 describe('<TextInput />', () => {
-  it('should render withouth a problem', () => {
-    const render = mountWithTheme(
+  test('should render withouth a problem', () => {
+    const { container } = render(
       <TextInput placeHolder="default input" id="test" tabIndex="0" value="" />,
     );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('should render withouth a problem when focused and unfocused', () => {
+    const { getByTestId } = render(<TextInput />);
+    const inputeNode = getByTestId('input');
+
+    fireEvent.focus(inputeNode);
+    expect(render).toMatchSnapshot();
+
+    fireEvent.blur(inputeNode);
     expect(render).toMatchSnapshot();
   });
 
-  it('should render withouth a problem when focused and unfocused', () => {
-    const render = mountWithTheme(<TextInput />);
+  test('allow the user to type a word', () => {
+    const { getByTestId } = render(<TextInput />);
+    const inputeNode = getByTestId('input');
+    const inputValue = 'hello';
 
-    render.find('input').simulate('focus');
-    expect(render).toMatchSnapshot();
+    fireEvent.change(inputeNode, { target: { value: inputValue } });
 
-    render.find('input').simulate('blur');
-    expect(render).toMatchSnapshot();
+    expect(inputeNode.value).toEqual(inputValue);
   });
 
-  it('should render withouth a problem when text changed', () => {
-    const render = mountWithTheme(<TextInput />);
-
-    render
-      .find('input')
-      .simulate('focus')
-      .simulate('change', { target: { name: 'input', value: 'hello' } });
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should call change handler when controlled and text changed', () => {
+  test('should call change handler when controlled and text changed', () => {
     const spy = jest.fn();
+    const { getByTestId } = render(<TextInput onChange={spy} />);
+    const inputeNode = getByTestId('input');
+    const inputValue = 'hello';
 
-    const render = mountWithTheme(<TextInput onChange={spy} />);
-
-    render
-      .find('input')
-      .simulate('focus')
-      .simulate('change', { target: { name: 'input', value: 'hello' } });
+    fireEvent.change(inputeNode, { target: { value: inputValue } });
 
     expect(spy.mock.calls[0][0]).toBe('hello');
   });
 
-  it('should not call change handler when controlled and disabled and text changed', () => {
+  test('should not call change handler when controlled and disabled and text changed', () => {
     const spy = jest.fn();
+    const { getByTestId } = render(<TextInput disabled onChange={spy} />);
+    const inputeNode = getByTestId('input');
+    const inputValue = 'hello';
 
-    const render = mountWithTheme(<TextInput disabled onChange={spy} />);
-
-    render
-      .find('input')
-      .simulate('focus')
-      .simulate('change', { target: { name: 'input', value: 'hello' } });
+    fireEvent.change(inputeNode, { target: { value: inputValue } });
 
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('should render withouth a problem when given a width', () => {
-    const render = mountWithTheme(<TextInput width="123rem" />);
-    expect(render).toMatchSnapshot();
+  test('should have a custom width', () => {
+    const width = '123rem';
+    const { container } = render(<TextInput width={width} />);
+
+    expect(container.firstChild).toHaveStyleRule('width', width);
   });
 
-  it('should render withouth a problem when fluid', () => {
-    const render = mountWithTheme(<TextInput fluid />);
-    expect(render).toMatchSnapshot();
+  test('should render as fluid', () => {
+    const { container } = render(<TextInput fluid />);
+
+    expect(container.firstChild).toHaveStyleRule('width', '100%');
   });
 
-  it('should render withouth a problem when given a type', () => {
-    const render = mountWithTheme(<TextInput password value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a different type', () => {
+    const { getByTestId } = render(<TextInput password value="" />);
+    const inputeNode = getByTestId('input');
+
+    expect(inputeNode.type).toMatchSnapshot();
   });
 
-  it('should render input without problem when given an icon label', () => {
-    const render = mountWithTheme(<TextInput value="" label={{ icon: 'cog' }} />);
-    expect(render).toMatchSnapshot();
+  test('should have an icon label', () => {
+    const { container } = render(<TextInput value="" label={{ icon: 'cog' }} />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render input without problem when given an icon label and label position', () => {
-    const render = mountWithTheme(
+  test('should have an icon icon label and label position', () => {
+    const { container } = render(
       <TextInput value="" label={{ icon: 'cog' }} labelPosition="right" />,
     );
-    expect(render).toMatchSnapshot();
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render input without problem when given a text label', () => {
-    const render = mountWithTheme(<TextInput value="" label={{ text: 'Pickle Rick' }} />);
-    expect(render).toMatchSnapshot();
+  test('should have a text label', () => {
+    const { container } = render(<TextInput value="" label={{ text: 'Pickle Rick' }} />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render disabled without problem', () => {
-    const render = mountWithTheme(<TextInput disabled value="" />);
-    expect(render).toMatchSnapshot();
+  test('should render disabled without problem', () => {
+    const { container, getByTestId } = render(<TextInput disabled value="" />);
+    const inputeNode = getByTestId('input');
+
+    expect(container.firstChild).toHaveStyleRule('opacity', '0.4');
+    expect(container.firstChild).toHaveStyleRule('border-color', Theme.palette.lightGrey);
+    expect(inputeNode.disabled).toBeTruthy();
   });
 
-  it('should render loading without problem', () => {
-    const render = mountWithTheme(<TextInput loading value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a loading status', () => {
+    const { getByTestId } = render(<TextInput loading value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render info without problem', () => {
-    const render = mountWithTheme(<TextInput info value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a status info', () => {
+    const { container, getByTestId } = render(<TextInput info value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(container.firstChild).toHaveStyleRule('border-color', Theme.palette.primary.default);
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render success without problem', () => {
-    const render = mountWithTheme(<TextInput success value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a status success', () => {
+    const { container, getByTestId } = render(<TextInput success value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(container.firstChild).toHaveStyleRule('border-color', Theme.palette.success.default);
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render warning without problem', () => {
-    const render = mountWithTheme(<TextInput warning value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a status warning', () => {
+    const { container, getByTestId } = render(<TextInput warning value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(container.firstChild).toHaveStyleRule('border-color', Theme.palette.warning.default);
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render error without problem', () => {
-    const render = mountWithTheme(<TextInput error value="" />);
-    expect(render).toMatchSnapshot();
+  test('should render error without problem', () => {
+    const { container, getByTestId } = render(<TextInput error value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(container.firstChild).toHaveStyleRule('border-color', Theme.palette.failure.default);
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render ghost input without problem', () => {
-    const render = mountWithTheme(<TextInput ghost value="" />);
-    expect(render).toMatchSnapshot();
+  test('should render ghost input without problem', () => {
+    const { container } = render(<TextInput ghost value="" />);
+
+    expect(container.firstChild).toHaveStyleRule('border', '0');
   });
 
-  it('should render search without problem', () => {
-    const render = mountWithTheme(<TextInput search value="" />);
-    expect(render).toMatchSnapshot();
+  test('should have a search status', () => {
+    const { getByTestId } = render(<TextInput search value="" />);
+    const statusNode = getByTestId('status');
+
+    expect(statusNode).toBeInTheDocument();
   });
 
-  it('should render search without problem when focused', () => {
-    const render = mountWithTheme(<TextInput search value="" />);
+  test('should render search status input without problem when focused', () => {
+    const { container, getByTestId } = render(<TextInput search value="" />);
+    const inputeNode = getByTestId('input');
 
-    render.find('input').simulate('focus');
+    fireEvent.click(inputeNode);
 
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should update the component when controlled value is changed', () => {
-    const render = mountWithTheme(<TextInput search value="" />);
-
-    expect(render).toMatchSnapshot();
-    render.setProps({ value: '@test@ ' });
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

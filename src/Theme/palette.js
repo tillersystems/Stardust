@@ -3,19 +3,19 @@
  */
 import { whiteOpacity, setColorDark } from '../helpers/colors';
 // Black and white colors
-const white = 'hsl(0, 100%, 100%)';
-const black = 'hsl(0, 0%, 0%)';
+const white = 'hsl(0,100%,100%)';
+const black = 'hsl(0,0%,0%)';
 
 // Avatar colors
-const emerald = 'hsl(145, 63%, 49%)';
-const river = 'hsl(204, 70%, 53%)';
-const wisteria = 'hsl(282, 44%, 47%)';
-const carrot = 'hsl(28, 80%, 52%)';
-const alizarin = 'hsl(6, 78%, 57%)';
-const turquoise = 'hsl(168, 76%, 42%)';
+const emerald = 'hsl(145,63%,49%)';
+const river = 'hsl(204,70%,53%)';
+const wisteria = 'hsl(282,44%,47%)';
+const carrot = 'hsl(28,80%,52%)';
+const alizarin = 'hsl(6,78%,57%)';
+const turquoise = 'hsl(168,76%,42%)';
 
 // Google color
-const googleBrandRed = 'hsl(5, 81%, 56%)';
+const googleBrandRed = 'hsl(5,81%,56%)';
 
 // Shades of grey
 const mysticGrey = 'hsl(216,45%,98%)';
@@ -23,16 +23,16 @@ const lightGrey = 'hsl(207,22%,90%)';
 const mediumGrey = 'hsl(206,23%,69%)';
 const darkGrey = 'hsl(206,16%,60%)';
 const spaceGrey = 'hsl(207,13%,45%)';
-const paleGrey = 'hsl(240, 33%, 99%)';
-const veryLightBlue = 'hsl(220, 27%, 94%)';
+const paleGrey = 'hsl(240,33%,99%)';
+const veryLightBlue = 'hsl(220,27%,94%)';
 
 // Primary colors
-const blue = 'hsl(200, 74%, 46%)';
-const green = 'hsl(89, 53%, 52%)';
-const red = 'hsl(6, 79%, 65%)';
-const yellow = 'hsl(34, 91%, 65%)';
+const blue = 'hsl(200,74%,46%)';
+const green = 'hsl(89,53%,52%)';
+const red = 'hsl(6,79%,65%)';
+const yellow = 'hsl(34,91%,65%)';
 const bodyBackground = paleGrey;
-const darkBlue = 'hsl(213, 17%, 20%)';
+const darkBlue = 'hsl(213,17%,20%)';
 
 export const palette = {
   // Black and white colors

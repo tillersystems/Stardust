@@ -328,12 +328,12 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -367,7 +367,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -423,12 +423,12 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -462,7 +462,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -2874,12 +2874,12 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -2913,7 +2913,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -2969,12 +2969,12 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -3008,7 +3008,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -5426,12 +5426,12 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -5465,7 +5465,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -5521,12 +5521,12 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -5560,7 +5560,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -7962,12 +7962,12 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -8001,7 +8001,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -8057,12 +8057,12 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -8096,7 +8096,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -10498,12 +10498,12 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -10537,7 +10537,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -10593,12 +10593,12 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -10632,7 +10632,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -13004,12 +13004,12 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -13043,7 +13043,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -13099,12 +13099,12 @@ exports[`<DatePicker /> should handle next month 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -13138,7 +13138,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -15210,12 +15210,12 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -15249,7 +15249,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -15305,12 +15305,12 @@ exports[`<DatePicker /> should handle next month 2`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -15344,7 +15344,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -17716,12 +17716,12 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -17755,7 +17755,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -17811,12 +17811,12 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -17850,7 +17850,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -19940,12 +19940,12 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-left"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-left"
                       spin={false}
@@ -19979,7 +19979,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                             <path
                               d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>
@@ -20035,12 +20035,12 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                   type="button"
                 >
                   <Styled(Icon)
-                    color="hsl(213, 17%, 20%)"
+                    color="hsl(213,17%,20%)"
                     name="chevron-right"
                   >
                     <Icon
                       className=""
-                      color="hsl(213, 17%, 20%)"
+                      color="hsl(213,17%,20%)"
                       height="20"
                       name="chevron-right"
                       spin={false}
@@ -20074,7 +20074,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
                             <path
                               d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
                               data-testid="iconSvgPath"
-                              fill="hsl(213, 17%, 20%)"
+                              fill="hsl(213,17%,20%)"
                               fillRule="evenodd"
                             />
                           </svg>

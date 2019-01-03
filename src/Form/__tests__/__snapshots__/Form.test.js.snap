@@ -264,6 +264,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -277,6 +278,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -378,6 +380,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -391,6 +394,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -694,6 +698,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -707,6 +712,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -818,6 +824,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -831,6 +838,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -1139,6 +1147,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -1152,6 +1161,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -1263,6 +1273,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -1276,6 +1287,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -1576,6 +1588,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -1589,6 +1602,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -1700,6 +1714,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -1713,6 +1728,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -2016,6 +2032,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -2029,6 +2046,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -2333,6 +2351,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -2346,6 +2365,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -2649,6 +2669,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -2662,6 +2683,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -2965,6 +2987,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -2978,6 +3001,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -3089,6 +3113,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -3102,6 +3127,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -3423,6 +3449,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -3436,6 +3463,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -3547,6 +3575,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -3560,6 +3589,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -3829,6 +3859,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -3842,6 +3873,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                     >
                                       <input
                                         className="c6"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -3941,6 +3973,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -3954,6 +3987,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                     >
                                       <input
                                         className="c6"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
@@ -4290,6 +4324,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     width="25rem"
                                   >
                                     <styled.input
+                                      data-testid="input"
                                       disabled={false}
                                       id=""
                                       innerRef={[Function]}
@@ -4303,6 +4338,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     >
                                       <input
                                         className="c7"
+                                        data-testid="input"
                                         disabled={false}
                                         id=""
                                         onBlur={[Function]}
