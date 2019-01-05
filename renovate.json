@@ -1,9 +1,6 @@
 {
-  "extends": ["config:base"],
-  "semanticCommits": true,
-  "semanticPrefix": "chore(yarn):",
-  "commitMessage": "{{semanticPrefix}}update {{depName}} to version {{newVersion}}",
-  "rebaseStalePrs": true,
+  "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+  "prBodyColumns": ["Package", "Update", "Type", "New value", "Package file", "References"],
   "automerge": false,
   "automergeType": "pr",
   "labels": ["need review", "Dependencies Update", "renovate"],
