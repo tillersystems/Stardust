@@ -36,7 +36,7 @@ export const Container = styled.button`
   ${({ theme, appearance }) => getAppearance(theme, appearance)};
 
   /* Button Size: [small, default, large] */
-  ${({ theme, size }) => getSize(theme, size)};
+  ${({ theme, size, icon }) => getSize(theme, size, icon)};
 
   /* Button Disabled */
   ${({ disabled }) =>
