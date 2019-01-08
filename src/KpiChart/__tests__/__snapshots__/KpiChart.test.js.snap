@@ -23,7 +23,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -31,7 +31,7 @@ exports[`<KpiChart /> should render withouth a problem 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 2.2rem;
 }
 
 .c5 svg > path {
