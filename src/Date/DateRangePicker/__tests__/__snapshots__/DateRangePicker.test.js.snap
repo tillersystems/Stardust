@@ -23,7 +23,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -32,7 +32,7 @@ exports[`<DatePicker /> should handle date hover 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -4344,7 +4344,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -4353,7 +4353,7 @@ exports[`<DatePicker /> should handle date hover 2`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -8333,7 +8333,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -8342,7 +8342,7 @@ exports[`<DatePicker /> should handle date hover 3`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -12334,7 +12334,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -12343,7 +12343,7 @@ exports[`<DatePicker /> should handle date selection 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -16313,7 +16313,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -16322,7 +16322,7 @@ exports[`<DatePicker /> should handle date selection 2`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -20283,7 +20283,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -20292,7 +20292,7 @@ exports[`<DatePicker /> should handle date selection 3`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -24599,7 +24599,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -24608,7 +24608,7 @@ exports[`<DatePicker /> should handle next month 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -28558,7 +28558,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -28567,7 +28567,7 @@ exports[`<DatePicker /> should handle next month 2`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -32863,7 +32863,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -32872,7 +32872,7 @@ exports[`<DatePicker /> should handle previous month 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c2 svg > path {
@@ -36822,7 +36822,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -36831,7 +36831,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
 }
 
 .c19 svg > path {
@@ -36864,7 +36864,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   padding: 0.8rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
   outline: none;
@@ -36873,7 +36873,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.4rem 0.8rem;
+  padding: 0.35rem 1.4rem;
   cursor: not-allowed;
   opacity: 0.4;
 }

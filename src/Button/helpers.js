@@ -112,18 +112,18 @@ export const getAppearance = ({ palette }, appearance) => {
  * @param {string} size // The button size.
  */
 
-export const getSize = ({ fonts }, size) => {
+export const getSize = ({ fonts }, size, icon) => {
   return {
     small: css`
-      padding: 0.4rem 0.8rem;
+      padding: ${!icon ? '0.35rem 1.4rem' : '0.35rem 1.6rem 0.35rem 0.9rem'};
     `,
     default: css`
-      padding: 0.8rem 1.6rem;
+      padding: ${!icon ? '0.75rem 2.2rem' : '0.75rem 2.4rem 0.75rem 1.4rem'};
     `,
     large: css`
-      padding: 0.8rem 1.8rem;
+      padding: ${!icon ? '0.7rem 2.4rem' : '0.7rem 2.4rem 0.7rem 1.8rem'};
       font-size: ${fonts.size.big};
-      line-height: ${fonts.size.big};
+      line-height: 1.5;
     `,
   }[size];
 };

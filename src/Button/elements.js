@@ -19,7 +19,7 @@ export const Container = styled.button`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
-  line-height: ${({ theme: { fonts } }) => fonts.size.medium};
+  line-height: 1.57;
 
   color: ${({ theme: { palette } }) => palette.white};
 
@@ -36,7 +36,7 @@ export const Container = styled.button`
   ${({ theme, appearance }) => getAppearance(theme, appearance)};
 
   /* Button Size: [small, default, large] */
-  ${({ theme, size }) => getSize(theme, size)};
+  ${({ theme, size, icon }) => getSize(theme, size, icon)};
 
   /* Button Disabled */
   ${({ disabled }) =>

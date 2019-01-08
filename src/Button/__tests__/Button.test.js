@@ -22,9 +22,9 @@ describe('<Button />', () => {
     const { getByText } = render(<Button size="large">Text</Button>);
     const buttonNode = getByText('Text');
 
-    expect(buttonNode).toHaveStyleRule('padding', '0.8rem 1.8rem');
+    expect(buttonNode).toHaveStyleRule('padding', '0.7rem 2.4rem');
     expect(buttonNode).toHaveStyleRule('font-size', Theme.fonts.size.big);
-    expect(buttonNode).toHaveStyleRule('line-height', Theme.fonts.size.big);
+    expect(buttonNode).toHaveStyleRule('line-height', '1.5');
   });
 
   test('should render a fluid button', () => {
