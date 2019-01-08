@@ -1,3 +1,9 @@
+## [1.18.1](https://github.com/tillersystems/Stardust/compare/v1.18.0...v1.18.1) (2019-01-08)
+
+### Bug Fixes
+
+- **renovate:** Fix Renovate Configuration ([4d82cba](https://github.com/tillersystems/Stardust/commit/4d82cba))
+
 # [1.18.0](https://github.com/tillersystems/Stardust/compare/v1.17.0...v1.18.0) (2019-01-03)
 
 ### Features
