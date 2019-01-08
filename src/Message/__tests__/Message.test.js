@@ -36,12 +36,18 @@ describe('<Message />', () => {
 
   test('should call onClose handler', () => {
     const handleOnClose = jest.fn();
-    const { queryAllByTestId } = render(
-      <Message description="this is a message" type="error" onClose={handleOnClose} />,
+    const closeText = 'close';
+    const { getByText } = render(
+      <Message
+        description="this is a message"
+        type="error"
+        onClose={handleOnClose}
+        onCloseText={closeText}
+      />,
     );
-    const dismissMessageNode = queryAllByTestId('iconSvg');
+    const dismissMessageNode = getByText(closeText);
 
-    fireEvent.click(dismissMessageNode[1]);
+    fireEvent.click(dismissMessageNode);
 
     expect(handleOnClose).toHaveBeenCalled();
   });

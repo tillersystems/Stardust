@@ -43,6 +43,7 @@ exports[`<Message /> should render a error alert 1`] = `
 
 <div
   class="c0"
+  data-testid="message"
   type="error"
 >
   <span
@@ -123,6 +124,7 @@ exports[`<Message /> should render a info alert 1`] = `
 
 <div
   class="c0"
+  data-testid="message"
   type="info"
 >
   <span
@@ -203,6 +205,7 @@ exports[`<Message /> should render a success alert 1`] = `
 
 <div
   class="c0"
+  data-testid="message"
   type="success"
 >
   <span
@@ -283,6 +286,7 @@ exports[`<Message /> should render a warning alert 1`] = `
 
 <div
   class="c0"
+  data-testid="message"
   type="warning"
 >
   <span
@@ -362,6 +366,7 @@ exports[`<Message /> should render without a problem 1`] = `
 
 <div
   class="c0"
+  data-testid="message"
   type="info"
 >
   <span

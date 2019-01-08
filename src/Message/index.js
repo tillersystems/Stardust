@@ -100,7 +100,7 @@ class Message extends PureComponent {
     const { className, description, onClose, onCloseText, ariaLabel, type } = this.props;
 
     return (
-      <div className={className} type={type}>
+      <div className={className} type={type} data-testid="message">
         <span role="alert" aria-label={ariaLabel || description} />
         <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} aria-hidden="true" />
         <Description>{description}</Description>
