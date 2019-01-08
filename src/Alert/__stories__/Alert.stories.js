@@ -40,7 +40,10 @@ storiesOf('Alert', module)
       <AlertProvider component={Message} {...options}>
         <AlertConsumer>
           {({ show, hide }) => (
-            <Button primary onClick={() => show({ ...alertProps, onClose: hide, type: typeValue })}>
+            <Button
+              appearance="primary"
+              onClick={() => show({ ...alertProps, onClose: hide, type: typeValue })}
+            >
               Show alert
             </Button>
           )}

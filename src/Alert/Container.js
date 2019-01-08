@@ -13,9 +13,10 @@ const { ACTIVE, INACTIVE } = Status;
  * This component is in charge of displaying
  * the alert container
  *
- * @param {object} alertProps
+ * @param {object} alertProps // Alert props passed down to the component
  * @param {function} component // Presentational component for displaying message.
- * @param {function} onHide
+ * @param {function} onHide // Callback function called when alert disapear.
+ * @param {function} hostRef // hostRef used by react pose
  * @param {string} position // Position of the alert on the screen.
  * @param {number} timeout // The time until an alert is dismissed, in milliseconds.
  *
@@ -29,6 +30,7 @@ class AlertContainer extends PureComponent {
   static propTypes = {
     alertProps: object.isRequired,
     component: func.isRequired,
+    hostRef: func.isRequired,
     onHide: func.isRequired,
     position: oneOf([
       'top-left',
@@ -106,7 +108,12 @@ class AlertContainer extends PureComponent {
     }
 
     return (
-      <Container {...attributes} position={position} innerRef={hostRef}>
+      <Container
+        {...attributes}
+        position={position}
+        innerRef={hostRef}
+        data-testid="alert-container"
+      >
         <Component {...alertProps} />
       </Container>
     );
