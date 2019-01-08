@@ -115,15 +115,15 @@ export const getAppearance = ({ palette }, appearance) => {
 export const getSize = ({ fonts }, size) => {
   return {
     small: css`
-      padding: 0.4rem 0.8rem;
+      padding: 0.35rem 1.4rem;
     `,
     default: css`
-      padding: 0.8rem 1.6rem;
+      padding: 0.75rem 2.2rem;
     `,
     large: css`
-      padding: 0.8rem 1.8rem;
+      padding: 0.7rem 2.4rem;
       font-size: ${fonts.size.big};
-      line-height: ${fonts.size.big};
+      line-height: 1.5;
     `,
   }[size];
 };
