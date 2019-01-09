@@ -49,29 +49,37 @@ class Message extends PureComponent {
     type: 'info',
   };
 
+  /**
+   * Handles mounted event of component's lifecycle.
+   */
   componentDidMount() {
-    const elButton = this.closeButtonRef.current;
+    const closeButton = this.closeButtonRef.current;
 
-    if (!elButton) return;
+    if (!closeButton) return;
 
     if (document.activeElement instanceof HTMLElement) {
       this.previousFocus = document.activeElement;
     }
 
-    elButton.focus();
+    closeButton.focus();
   }
 
+  /**
+   * Handles unmounted event of component's lifecycle.
+   */
   componentWillUnmount() {
     this.restoreFocus();
   }
 
   /**
    * Handle Click
+   *
+   * @param {syntheticEvent} event
    */
-  handleClick = e => {
+  handleClick = event => {
     const { onClose } = this.props;
 
-    if (onClose) onClose(e);
+    if (onClose) onClose(event);
   };
 
   /**
@@ -96,6 +104,11 @@ class Message extends PureComponent {
     this.previousFocus = null;
   };
 
+  /**
+   * Renders the component.
+   *
+   * @returns {jsx}
+   */
   render() {
     const { className, description, onClose, onCloseText, ariaLabel, type } = this.props;
 
