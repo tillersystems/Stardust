@@ -53,15 +53,15 @@ class Message extends PureComponent {
    * Handles mounted event of component's lifecycle.
    */
   componentDidMount() {
-    const closeButton = this.closeButtonRef.current;
+    const dismissButton = this.closeButtonRef.current;
 
-    if (!closeButton) return;
+    if (!dismissButton) return;
 
     if (document.activeElement instanceof HTMLElement) {
       this.previousFocus = document.activeElement;
     }
 
-    closeButton.focus();
+    dismissButton.focus();
   }
 
   /**
