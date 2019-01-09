@@ -85,6 +85,11 @@ class AlertProvider extends PureComponent {
     this.setState({ alert: {}, active: false });
   };
 
+  /**
+   * Renders the component.
+   *
+   * @returns {jsx}
+   */
   render() {
     const { children, component, timeout, position } = this.props;
     const { alert, active } = this.state;

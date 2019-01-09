@@ -50,11 +50,17 @@ class AlertContainer extends PureComponent {
     status: INACTIVE,
   };
 
+  /**
+   * Handles mounted event of component's lifecycle.
+   */
   componentDidMount() {
     this.setState({ status: ACTIVE });
     this.startTimer();
   }
 
+  /**
+   * Handles unmounted event of component's lifecycle.
+   */
   componentWillUnmount() {
     this.stopTimer();
   }
@@ -93,6 +99,11 @@ class AlertContainer extends PureComponent {
     });
   };
 
+  /**
+   * Renders the component.
+   *
+   * @returns {jsx}
+   */
   render() {
     const { alertProps, component: Component, hostRef, position } = this.props;
     const { status } = this.state;
