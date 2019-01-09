@@ -5,7 +5,7 @@ import posed, { PoseGroup } from 'react-pose';
 
 import Container from './Container';
 import { getPositionAnimation } from './helpers';
-import isEmpty from '../helpers/objectIsEmpty';
+import isObjectEmpty from '../helpers/objectIsEmpty';
 
 const { node, number, func, oneOf } = PropTypes;
 const { Consumer, Provider } = React.createContext({});
@@ -68,7 +68,7 @@ class AlertProvider extends PureComponent {
   show = obj => {
     const { alert } = this.state;
 
-    if (!isEmpty(alert)) {
+    if (!isObjectEmpty(alert)) {
       return;
     }
 

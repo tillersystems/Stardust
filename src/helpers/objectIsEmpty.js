@@ -1,5 +1,5 @@
 /**
- * isEmpty
+ * isObjectEmpty
  *
  * Check if an object is empty
  *
@@ -8,11 +8,11 @@
  * @return {boolean}
  */
 
-function isEmpty(obj) {
+function isObjectEmpty(obj) {
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) return false;
   }
   return true;
 }
 
-export default isEmpty;
+export default isObjectEmpty;
