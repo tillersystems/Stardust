@@ -1,6 +1,6 @@
 import React from 'react';
-import 'jest-styled-components';
 import * as Luxon from 'luxon';
+import { fireEvent } from 'react-testing-library';
 
 import DatePicker from '..';
 
@@ -19,83 +19,57 @@ describe('<DatePicker />', () => {
     Luxon.DateTime.local = jest.fn().mockImplementation(() => mockLocalDateTime);
   });
 
-  it('should render withouth a problem', () => {
-    const render = mountWithTheme(
+  test('should render withouth a problem', () => {
+    const { container } = render(
       <DatePicker minDate={mockLocalDateTime} defaultValue={mockLocalDateTime} />,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should handle previous month', () => {
-    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
+  test('should select a date', () => {
+    const { getByText } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 
-    render
-      .find('button')
-      .first()
-      .simulate('click');
+    const daySelected = getByText('20');
 
-    expect(render).toMatchSnapshot();
+    // Click on previous month button
+    fireEvent.click(daySelected);
+
+    expect(daySelected).toBeInTheDocument();
   });
 
-  it('should handle next month', () => {
-    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
+  test('should handle previous month', () => {
+    const { getByTestId, getByText } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 
-    render
-      .find('button')
-      .first()
-      .simulate('click');
+    const previousMonthButton = getByTestId('pervious-month-button');
 
-    expect(render).toMatchSnapshot();
+    // Click on previous month button
+    fireEvent.click(previousMonthButton);
 
-    render
-      .find('button')
-      .last()
-      .simulate('click');
+    const excpectedMonth = getByText(/June/);
 
-    expect(render).toMatchSnapshot();
+    expect(excpectedMonth).toBeInTheDocument();
   });
 
-  it('should handle date selection', () => {
-    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
+  test('should handle next month', () => {
+    const { getByTestId, getByText } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 
-    render
-      .find('Day')
-      .at(17)
-      .simulate('click');
+    const nextMonthButton = getByTestId('next-month-button');
 
-    expect(render).toMatchSnapshot();
+    // Click on previous month button
+    fireEvent.click(nextMonthButton);
 
-    render
-      .find('Day')
-      .at(22)
-      .simulate('click');
+    const excpectedMonth = getByText(/August/);
 
-    expect(render).toMatchSnapshot();
+    expect(excpectedMonth).toBeInTheDocument();
   });
 
-  it('should handle date hover', () => {
-    const render = mountWithTheme(<DatePicker defaultValue={mockLocalDateTime} />);
+  test('should handle mouse Leave', () => {
+    const { container } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 
-    render
-      .find('Day')
-      .at(17)
-      .simulate('mouseover');
+    // Mouse Leave on DatePicker
+    fireEvent.mouseLeave(container.firstChild);
 
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(17)
-      .simulate('click');
-
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(22)
-      .simulate('mouseover');
-
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 });

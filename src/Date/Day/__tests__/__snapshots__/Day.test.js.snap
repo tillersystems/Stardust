@@ -7,19 +7,18 @@ exports[`Day should render with no problem 1`] = `
   cursor: pointer;
 }
 
+.c1 {
+  width: 100%;
+  height: 100%;
+}
+
 <div
-  className="c0"
-  disabled={false}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onMouseOver={[Function]}
-  selected={false}
+  class="c0"
 >
-  <styled.div
-    ending={false}
-    starting={false}
+  <div
+    class="c1"
   >
     15
-  </styled.div>
+  </div>
 </div>
 `;
