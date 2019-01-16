@@ -52,11 +52,11 @@ const Footer = styled.div`
 /**
  * PropTypes Validation.
  */
-const { string } = PropTypes;
+const { number: numberProp, string } = PropTypes;
 IconCard.propTypes = {
   name: string.isRequired,
   color: string,
-  size: string,
+  size: numberProp,
 };
 
 /**
