@@ -1,3 +1,13 @@
+# [1.19.0](https://github.com/tillersystems/Stardust/compare/v1.18.1...v1.19.0) (2019-01-17)
+
+### Bug Fixes
+
+- **tools:** fix wrong url to changelog ([#348](https://github.com/tillersystems/Stardust/issues/348)) ([78fde10](https://github.com/tillersystems/Stardust/commit/78fde10))
+
+### Features
+
+- **Icon:** New icon added for Icon component ([#345](https://github.com/tillersystems/Stardust/issues/345)) ([e8c3f6e](https://github.com/tillersystems/Stardust/commit/e8c3f6e))
+
 ## [1.18.1](https://github.com/tillersystems/Stardust/compare/v1.18.0...v1.18.1) (2019-01-08)
 
 ### Bug Fixes
