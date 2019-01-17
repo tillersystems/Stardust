@@ -54,7 +54,7 @@ printf "\n\n[Release]: update changelog"
 
 # git add and tag
 commitMessage="release v$newVersion
-See https://github.com/tillersystems/tiller-eslint-config/blob/master/CHANGELOG.md"
+See https://github.com/tillersystems/Stardust/blob/master/CHANGELOG.md"
 git add package.json CHANGELOG.md README.md
 printf %s "$commitMessage" | git commit --file -
 git tag "v$newVersion"
