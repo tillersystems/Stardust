@@ -194,7 +194,7 @@ class DateRangePicker extends PureComponent {
         <PickerContainer>
           <Header>
             <Button
-              data-testid="pervious-month-button"
+              data-testid="previous-month-button"
               appearance="secondary"
               size="small"
               onClick={this.handlePrevMonthClick}

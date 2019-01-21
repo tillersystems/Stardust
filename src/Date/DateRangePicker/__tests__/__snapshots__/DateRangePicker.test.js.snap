@@ -359,7 +359,7 @@ exports[`<DatePicker /> should render withouth a problem 1`] = `
     >
       <button
         class="c2"
-        data-testid="pervious-month-button"
+        data-testid="previous-month-button"
         disabled=""
         type="button"
       >

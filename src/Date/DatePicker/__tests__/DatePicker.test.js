@@ -41,7 +41,7 @@ describe('<DatePicker />', () => {
   test('should handle previous month', () => {
     const { getByTestId, getByText } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 
-    const previousMonthButton = getByTestId('pervious-month-button');
+    const previousMonthButton = getByTestId('previous-month-button');
 
     // Click on previous month button
     fireEvent.click(previousMonthButton);

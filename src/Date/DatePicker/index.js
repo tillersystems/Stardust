@@ -106,7 +106,7 @@ class DatePicker extends PureComponent {
       <div className={className} onMouseLeave={() => this.handleDateOver(null)}>
         <Header>
           <Button
-            data-testid="pervious-month-button"
+            data-testid="previous-month-button"
             appearance="secondary"
             size="small"
             onClick={this.handlePrevMonthClick}

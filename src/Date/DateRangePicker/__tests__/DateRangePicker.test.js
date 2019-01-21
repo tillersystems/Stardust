@@ -45,14 +45,14 @@ describe('<DatePicker />', () => {
   it('should handle previous month', () => {
     const { getByTestId, getByText } = render(<DateRangePicker />);
 
-    const previousMonthButton = getByTestId('pervious-month-button');
+    const previousMonthButton = getByTestId('previous-month-button');
 
     // Click on previous month button
     fireEvent.click(previousMonthButton);
 
-    const excpectedMonth = getByText(/June/);
+    const expectedMonth = getByText(/June/);
 
-    expect(excpectedMonth).toBeInTheDocument();
+    expect(expectedMonth).toBeInTheDocument();
 
     expect(render).toMatchSnapshot();
   });
@@ -65,9 +65,9 @@ describe('<DatePicker />', () => {
     // Click on previous month button
     fireEvent.click(nextMonthButton);
 
-    const excpectedMonth = getByText(/August/);
+    const expectedMonth = getByText(/August/);
 
-    expect(excpectedMonth).toBeInTheDocument();
+    expect(expectedMonth).toBeInTheDocument();
   });
 
   test('should handle mouse Leave', () => {
