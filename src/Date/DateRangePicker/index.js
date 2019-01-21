@@ -194,6 +194,7 @@ class DateRangePicker extends PureComponent {
         <PickerContainer>
           <Header>
             <Button
+              data-testid="previous-month-button"
               appearance="secondary"
               size="small"
               onClick={this.handlePrevMonthClick}
@@ -233,6 +234,7 @@ class DateRangePicker extends PureComponent {
               {nextMonth.setLocale(locale).toLocaleString({ month: 'long', year: 'numeric' })}
             </HeaderTitle>
             <Button
+              data-testid="next-month-button"
               appearance="secondary"
               size="small"
               onClick={this.handleNextMonthClick}

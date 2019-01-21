@@ -1,12 +1,17 @@
 import React from 'react';
-import 'jest-styled-components';
 
 import WeekdayNames from '..';
 
 describe('<WeekdayNames />', () => {
-  it('should render withouth a problem', () => {
-    const render = shallowWithTheme(<WeekdayNames />);
+  test('should render withouth a problem', () => {
+    const { container } = render(<WeekdayNames />);
 
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('should render with a different locale', () => {
+    const { container } = render(<WeekdayNames locale="ar" />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

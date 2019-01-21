@@ -1,6 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import * as Luxon from 'luxon';
+import { fireEvent } from 'react-testing-library';
 
 import DateRangePicker from '..';
 
@@ -20,87 +21,61 @@ describe('<DatePicker />', () => {
   });
 
   it('should render withouth a problem', () => {
-    const render = mountWithTheme(<DateRangePicker minDate={mockLocalDateTime} />);
+    const { container } = render(<DateRangePicker minDate={mockLocalDateTime} />);
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('should select a range date', () => {
+    const { getByText } = render(<DateRangePicker maxDate={mockLocalDateTime} />);
+
+    const dayfrom = getByText('10');
+    const dayTo = getByText('12');
+
+    // Click on first range day
+    fireEvent.click(dayfrom);
+
+    // Click on last range day
+    fireEvent.click(dayTo);
+
+    expect(dayfrom).toBeInTheDocument();
+    expect(dayTo).toBeInTheDocument();
   });
 
   it('should handle previous month', () => {
-    const render = mountWithTheme(<DateRangePicker />);
+    const { getByTestId, getByText } = render(<DateRangePicker />);
 
-    render
-      .find('button')
-      .first()
-      .simulate('click');
+    const previousMonthButton = getByTestId('previous-month-button');
+
+    // Click on previous month button
+    fireEvent.click(previousMonthButton);
+
+    const expectedMonth = getByText(/June/);
+
+    expect(expectedMonth).toBeInTheDocument();
 
     expect(render).toMatchSnapshot();
   });
 
   it('should handle next month', () => {
-    const render = mountWithTheme(<DateRangePicker />);
+    const { getByTestId, getByText } = render(<DateRangePicker />);
 
-    render
-      .find('button')
-      .first()
-      .simulate('click');
+    const nextMonthButton = getByTestId('next-month-button');
 
-    expect(render).toMatchSnapshot();
+    // Click on previous month button
+    fireEvent.click(nextMonthButton);
 
-    render
-      .find('button')
-      .last()
-      .simulate('click');
+    const expectedMonth = getByText(/August/);
 
-    expect(render).toMatchSnapshot();
+    expect(expectedMonth).toBeInTheDocument();
   });
 
-  it('should handle date selection', () => {
-    const render = mountWithTheme(<DateRangePicker />);
+  test('should handle mouse Leave', () => {
+    const { container } = render(<DateRangePicker />);
 
-    render
-      .find('Day')
-      .at(17)
-      .simulate('click');
+    // Mouse Leave on DatePicker
+    fireEvent.mouseLeave(container.firstChild);
 
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(53)
-      .simulate('click');
-
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(15)
-      .simulate('click');
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should handle date hover', () => {
-    const render = mountWithTheme(<DateRangePicker />);
-
-    render
-      .find('Day')
-      .at(17)
-      .simulate('mouseover');
-
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(17)
-      .simulate('click');
-
-    expect(render).toMatchSnapshot();
-
-    render
-      .find('Day')
-      .at(53)
-      .simulate('mouseover');
-
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toBeInTheDocument();
   });
 });

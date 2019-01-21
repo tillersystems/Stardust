@@ -19,7 +19,7 @@ import { DayName } from './elements';
 const WeekdayNames = ({ className, locale }) => {
   const dayNames = Info.weekdays('short', { locale });
   return (
-    <div className={className} key={name}>
+    <div className={className}>
       {dayNames.map(dayName => (
         <DayName key={dayName}>{dayName}</DayName>
       ))}

@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<WeekdayNames /> should render withouth a problem 1`] = `
+exports[`<WeekdayNames /> should render with a different locale 1`] = `
+.c1 {
+  font-size: 1.4rem;
+}
+
 .c0 {
   display: grid;
   grid-template-columns: repeat(7,2.8rem);
@@ -16,43 +20,102 @@ exports[`<WeekdayNames /> should render withouth a problem 1`] = `
 }
 
 <div
-  className="c0"
-  key="nodejs"
+  class="c0"
 >
-  <styled.div
-    key="Mon"
+  <div
+    class="c1"
   >
     Mon
-  </styled.div>
-  <styled.div
-    key="Tue"
+  </div>
+  <div
+    class="c1"
   >
     Tue
-  </styled.div>
-  <styled.div
-    key="Wed"
+  </div>
+  <div
+    class="c1"
   >
     Wed
-  </styled.div>
-  <styled.div
-    key="Thu"
+  </div>
+  <div
+    class="c1"
   >
     Thu
-  </styled.div>
-  <styled.div
-    key="Fri"
+  </div>
+  <div
+    class="c1"
   >
     Fri
-  </styled.div>
-  <styled.div
-    key="Sat"
+  </div>
+  <div
+    class="c1"
   >
     Sat
-  </styled.div>
-  <styled.div
-    key="Sun"
+  </div>
+  <div
+    class="c1"
   >
     Sun
-  </styled.div>
+  </div>
+</div>
+`;
+
+exports[`<WeekdayNames /> should render withouth a problem 1`] = `
+.c1 {
+  font-size: 1.4rem;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(7,2.8rem);
+  grid-template-rows: 2rem;
+  justify-items: stretch;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  text-align: center;
+  border-bottom: 1px solid hsl(206,23%,69%);
+  color: hsl(206,23%,69%);
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    Mon
+  </div>
+  <div
+    class="c1"
+  >
+    Tue
+  </div>
+  <div
+    class="c1"
+  >
+    Wed
+  </div>
+  <div
+    class="c1"
+  >
+    Thu
+  </div>
+  <div
+    class="c1"
+  >
+    Fri
+  </div>
+  <div
+    class="c1"
+  >
+    Sat
+  </div>
+  <div
+    class="c1"
+  >
+    Sun
+  </div>
 </div>
 `;
