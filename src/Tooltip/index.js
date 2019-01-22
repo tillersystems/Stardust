@@ -16,6 +16,7 @@ import { Container, Wrapper } from './elements';
  * @param {string} arrowPositionX // Set position of the Tooltip's arrow.
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
  * @param {string} width // Tooltip width.
+ * @param {string} className // Here the className is used to overwrite the component's style.
  * @param {string} title // Tooltip main text.
  *
  * @return {jsx}
@@ -30,6 +31,7 @@ class Tooltip extends React.Component {
     arrowPositionX: PropTypes.string,
     children: PropTypes.node,
     width: PropTypes.string,
+    className: PropTypes.string,
     title: PropTypes.string.isRequired,
   };
 
@@ -41,6 +43,7 @@ class Tooltip extends React.Component {
     arrowPositionX: '50%',
     children: null,
     width: 'auto',
+    className: '',
   };
 
   state = {
@@ -81,7 +84,7 @@ class Tooltip extends React.Component {
   };
 
   render() {
-    const { top, hover, arrowPositionX, children, width, title } = this.props;
+    const { className, top, hover, arrowPositionX, children, width, title } = this.props;
     const { active } = this.state;
     const childrenWithProps = React.Children.map(children, child =>
       React.cloneElement(child, {
@@ -91,7 +94,7 @@ class Tooltip extends React.Component {
       }),
     );
     return (
-      <Wrapper>
+      <Wrapper className={className}>
         {childrenWithProps}
         <PoseGroup>
           {active && (
