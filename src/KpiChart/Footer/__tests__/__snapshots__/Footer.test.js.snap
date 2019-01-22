@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KpiChart.Footer /> should render without a problem 1`] = `
+.c0 {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.c0 button {
+  color: hsl(200,74%,46%);
+}
+
+<div
+  class="c0"
+>
+  Footer
+</div>
+`;

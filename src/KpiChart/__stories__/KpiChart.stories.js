@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { ResponsiveBar } from '@nivo/bar';
 
-import { KpiChart } from '../..';
+import { Button, KpiChart } from '../..';
 
 const data = [
   {
@@ -70,10 +70,11 @@ storiesOf('KpiChart', module)
     const Title = text('Title', "Chiffre d'affaires de la journée", 'Title');
     const label = text('Label', 'Afficher le rapport', 'Label');
     return (
-      <KpiChart
-        title={Title}
-        label={label}
-        render={() => (
+      <KpiChart>
+        <KpiChart.Header>
+          <KpiChart.Title>{Title}</KpiChart.Title>
+        </KpiChart.Header>
+        <KpiChart.Body>
           <ResponsiveBar
             data={data}
             keys={['25 juil. 2017', '25 juil. 2018']}
@@ -86,8 +87,7 @@ storiesOf('KpiChart', module)
             }}
             padding={0.3}
             groupMode="grouped"
-            colors="d320"
-            colorBy="id"
+            colors="nivo"
             borderColor="inherit:darker(1.6)"
             axisBottom={{
               orient: 'bottom',
@@ -128,7 +128,10 @@ storiesOf('KpiChart', module)
               },
             }}
           />
-        )}
-      />
+        </KpiChart.Body>
+        <KpiChart.Footer>
+          <Button ghost>{label}</Button>
+        </KpiChart.Footer>
+      </KpiChart>
     );
   });
