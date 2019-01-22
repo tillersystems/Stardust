@@ -16,7 +16,7 @@ import { Container, Wrapper } from './elements';
  * @param {string} arrowPositionX // Set position of the Tooltip's arrow.
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
  * @param {string} width // Tooltip width.
- * @param {string} className // Here the className is used to overwrite the component's style.
+ * @param {bool} invertColor // invertColor is used in case if tooltip need to change color.
  * @param {string} title // Tooltip main text.
  *
  * @return {jsx}
@@ -31,7 +31,7 @@ class Tooltip extends React.Component {
     arrowPositionX: PropTypes.string,
     children: PropTypes.node,
     width: PropTypes.string,
-    className: PropTypes.string,
+    invertColor: PropTypes.bool,
     title: PropTypes.string.isRequired,
   };
 
@@ -43,7 +43,7 @@ class Tooltip extends React.Component {
     arrowPositionX: '50%',
     children: null,
     width: 'auto',
-    className: '',
+    invertColor: false,
   };
 
   state = {
@@ -84,7 +84,7 @@ class Tooltip extends React.Component {
   };
 
   render() {
-    const { className, top, hover, arrowPositionX, children, width, title } = this.props;
+    const { invertColor, top, hover, arrowPositionX, children, width, title } = this.props;
     const { active } = this.state;
     const childrenWithProps = React.Children.map(children, child =>
       React.cloneElement(child, {
@@ -94,7 +94,7 @@ class Tooltip extends React.Component {
       }),
     );
     return (
-      <Wrapper className={className}>
+      <Wrapper>
         {childrenWithProps}
         <PoseGroup>
           {active && (
@@ -104,6 +104,7 @@ class Tooltip extends React.Component {
               arrowPositionX={arrowPositionX}
               key="ContainerAnimation"
               data-testid="tooltip"
+              invertColor={invertColor}
             >
               {title}
             </ToolTipAnimation>

@@ -7,16 +7,21 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   position: absolute;
-
+  z-index: 10;
   width: ${({ width }) => width};
 
   padding: 0.6rem 1rem;
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  color: ${({ theme: { palette } }) => palette.white};
+  font-size: 1.4rem;
+  color: ${({ invertColor, theme: { palette } }) =>
+    invertColor ? palette.darkBlue : palette.white};
 
-  background: ${({ theme: { palette } }) => palette.darkBlue};
+  background: ${({ invertColor, theme: { palette } }) =>
+    invertColor ? palette.white : palette.darkBlue};
+  box-shadow: ${({ invertColor, theme: { palette } }) =>
+    invertColor ? `0 0 0 1px ${palette.lightGrey}, 0 2px 16px 0 rgba(0, 0, 0, 0.1);` : `none`};
 
   top: 100%;
   left: 50%;
@@ -40,7 +45,8 @@ export const Container = styled.div`
     height: 0.7rem;
     width: 0.7rem;
 
-    background: ${({ theme: { palette } }) => palette.darkBlue};
+    background: ${({ invertColor, theme: { palette } }) =>
+      invertColor ? palette.white : palette.darkBlue};
     transform: translate3d(0, -50%, 0) rotate(135deg);
     ${({ top }) =>
       top &&
