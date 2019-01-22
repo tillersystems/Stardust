@@ -3,19 +3,38 @@ import React from 'react';
 import KpiChart from '..';
 
 describe('<KpiChart />', () => {
-  test('should render withouth a problem', () => {
-    const { container } = render(<KpiChart title="title" label="label" />);
+  test('should render without a problem', () => {
+    const Header = 'My title';
+    const Body = 'body';
+    const Footer = 'footer';
+    const { getByText } = render(
+      <KpiChart>
+        <KpiChart.Header>{Header}</KpiChart.Header>
+        <KpiChart.Body>{Body}</KpiChart.Body>
+        <KpiChart.Footer>{Footer}</KpiChart.Footer>
+      </KpiChart>,
+    );
+    const HeaderNode = getByText(Header);
+    const BodyNode = getByText(Body);
+    const FooterNode = getByText(Footer);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(HeaderNode).toBeInTheDocument();
+    expect(BodyNode).toBeInTheDocument();
+    expect(FooterNode).toBeInTheDocument();
   });
 
-  test('should render with render props', () => {
+  test('should render kpi chart with a title without a problem', () => {
+    const Title = 'My title';
     const { getByText } = render(
-      <KpiChart title="title" label="label" render={() => <p>Render Props</p>} />,
+      <KpiChart>
+        <KpiChart.Header>
+          <KpiChart.Title>{Title}</KpiChart.Title>
+        </KpiChart.Header>
+        <KpiChart.Body>Body</KpiChart.Body>
+        <KpiChart.Footer>Footer</KpiChart.Footer>
+      </KpiChart>,
     );
-
-    const renderNode = getByText('Render Props');
-
-    expect(renderNode).toBeInTheDocument();
+    const TitleNode = getByText(Title);
+    expect(TitleNode).toBeInTheDocument();
   });
 });

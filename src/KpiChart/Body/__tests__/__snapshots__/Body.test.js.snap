@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KpiChart.Body /> should render without a problem 1`] = `
+.c0 {
+  height: 37.3rem;
+}
+
+<div
+  class="c0"
+>
+  Body
+</div>
+`;
