@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/tillersystems/Stardust/compare/v1.19.0...v1.19.1) (2019-01-22)
+
+### Bug Fixes
+
+- **Icon:** fix svg path for zap icon ([#352](https://github.com/tillersystems/Stardust/issues/352)) ([2e00261](https://github.com/tillersystems/Stardust/commit/2e00261))
+
 # [1.19.0](https://github.com/tillersystems/Stardust/compare/v1.18.1...v1.19.0) (2019-01-17)
 
 ### Bug Fixes
