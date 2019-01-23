@@ -16,20 +16,3 @@ exports[`<Tooltip /> should render without a problem 1`] = `
   </button>
 </div>
 `;
-
-exports[`<Tooltip /> should render without a problem with inverted color 1`] = `
-.c0 {
-  position: relative;
-  display: inline-block;
-}
-
-<div
-  class="c0"
->
-  <button
-    type="button"
-  >
-    Show Tooltip
-  </button>
-</div>
-`;

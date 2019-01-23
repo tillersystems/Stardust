@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 
 import { Button, Tooltip } from '../..';
 
@@ -9,7 +9,15 @@ storiesOf('Tooltip', module)
   .add('default', () => {
     const topValue = boolean('Top', false, 'State');
     const hoverValue = boolean('Hover', false, 'State');
-    const invertColorValue = boolean('InvertColor', false, 'State');
+    const appearance = select(
+      'Appearance',
+      {
+        dark: 'dark',
+        light: 'light',
+      },
+      'dark',
+      'State',
+    );
 
     const widthValue = number(
       'Width',
@@ -38,7 +46,7 @@ storiesOf('Tooltip', module)
     return (
       <Tooltip
         top={topValue}
-        invertColor={invertColorValue}
+        appearance={appearance}
         hover={hoverValue}
         width={`${widthValue}rem`}
         arrowPositionX={`${(widthValue * arrowPositionXValue) / 100}rem`}
@@ -52,7 +60,15 @@ storiesOf('Tooltip', module)
   .add('controlled', () => {
     const topValue = boolean('Top', false, 'State');
     const activeValue = boolean('Show', false, 'State');
-    const invertColorValue = boolean('InvertColor', false, 'State');
+    const appearance = select(
+      'Appearance',
+      {
+        dark: 'dark',
+        light: 'light',
+      },
+      'dark',
+      'State',
+    );
 
     const widthValue = number(
       'Width',
@@ -80,7 +96,7 @@ storiesOf('Tooltip', module)
     return (
       <Tooltip
         active={activeValue}
-        invertColor={invertColorValue}
+        appearance={appearance}
         top={topValue}
         width={`${widthValue}rem`}
         arrowPositionX={`${(widthValue * arrowPositionXValue) / 100}rem`}

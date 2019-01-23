@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { getAppearance } from './helpers';
+
 export const Wrapper = styled.div`
   position: relative;
   display: inline-block;
@@ -15,13 +17,9 @@ export const Container = styled.div`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
   font-size: 1.4rem;
-  color: ${({ invertColor, theme: { palette } }) =>
-    invertColor ? palette.darkBlue : palette.white};
 
-  background: ${({ invertColor, theme: { palette } }) =>
-    invertColor ? palette.white : palette.darkBlue};
-  box-shadow: ${({ invertColor, theme: { palette } }) =>
-    invertColor ? `0 0 0 1px ${palette.lightGrey}, 0 2px 16px 0 rgba(0, 0, 0, 0.1);` : `none`};
+  /* Button Appearance: [default, primary, secondary...] */
+  ${({ theme, appearance }) => getAppearance(theme, appearance)};
 
   top: 100%;
   left: 50%;
@@ -45,8 +43,6 @@ export const Container = styled.div`
     height: 0.7rem;
     width: 0.7rem;
 
-    background: ${({ invertColor, theme: { palette } }) =>
-      invertColor ? palette.white : palette.darkBlue};
     transform: translate3d(0, -50%, 0) rotate(135deg);
     ${({ top }) =>
       top &&

@@ -1,5 +1,6 @@
 import React from 'react';
 import { fireEvent } from 'react-testing-library';
+import { Theme } from '../..';
 
 import Tooltip from '..';
 
@@ -16,17 +17,24 @@ describe('<Tooltip />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render without a problem with inverted color', () => {
-    const { container } = render(
+  test('should render without a problem with light appearance', () => {
+    const { getByTestId } = render(
       <Tooltip
-        invertColor
+        active
+        appearance="light"
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
       >
         <button type="button">Show Tooltip</button>
       </Tooltip>,
     );
-    expect(container.firstChild).toMatchSnapshot();
+    const tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toHaveStyleRule({
+      color: Theme.palette.darkBlue,
+      background: Theme.palette.white,
+      boxShadow: 'none',
+    });
   });
 
   test('should render open a tooltip without a problem', () => {
