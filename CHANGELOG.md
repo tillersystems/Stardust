@@ -1,3 +1,9 @@
+## [1.19.2](https://github.com/tillersystems/Stardust/compare/v1.19.1...v1.19.2) (2019-01-24)
+
+### Features
+
+- **Tooltip:** Add a props to switch tooltip's appearance ([#360](https://github.com/tillersystems/Stardust/issues/360)) ([390f245](https://github.com/tillersystems/Stardust/commit/390f245))
+
 ## [1.19.1](https://github.com/tillersystems/Stardust/compare/v1.19.0...v1.19.1) (2019-01-22)
 
 ### Bug Fixes
