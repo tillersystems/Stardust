@@ -12,7 +12,7 @@ import { Tooltip } from '@tillersystems/stardust';
 
 - `active` - Boolean set if the Tooltip is showed or not.
 - `hover` - Boolean set to use click or hover to show the Tooltip.
-- `appearance` - Appearance is used in to set the color of the tooltip which can be dark or light.
+- `appearance` - Appearance is used to set the color of the tooltip which can be dark or light.
 - `top` - Boolean set to positionate the tooltip above or below the element.
 - `arrowPositionX` - Set position of the Tooltip's arrow.
 - `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.

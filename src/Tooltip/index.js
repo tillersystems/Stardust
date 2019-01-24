@@ -16,7 +16,7 @@ import { Container, Wrapper } from './elements';
  * @param {string} arrowPositionX // Set position of the Tooltip's arrow.
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
  * @param {string} width // Tooltip width.
- * @param {string} appearance // Appearance is used in to set the color of the tooltip which can be dark or light.
+ * @param {string} appearance // Appearance is used to set the color of the tooltip which can be dark or light.
  * @param {string} title // Tooltip main text.
  *
  * @return {jsx}

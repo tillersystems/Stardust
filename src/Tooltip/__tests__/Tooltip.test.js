@@ -41,7 +41,7 @@ describe('<Tooltip />', () => {
     });
   });
 
-  test('should render open a tooltip without a problem', () => {
+  test('should render an active tooltip without a problem', () => {
     const { getByTestId } = render(
       <Tooltip
         active
