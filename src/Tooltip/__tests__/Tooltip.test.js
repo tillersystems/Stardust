@@ -30,10 +30,14 @@ describe('<Tooltip />', () => {
     );
     const tooltipNode = getByTestId('tooltip');
 
-    expect(tooltipNode).toHaveStyleRule({
-      color: Theme.palette.darkBlue,
-      background: Theme.palette.white,
-      boxShadow: '0 0 0 1px ${palette.lightGrey}, 0 2px 16px 0 rgba(0, 0, 0, 0.1)',
+    expect(tooltipNode).toHaveStyleRule('color', Theme.palette.darkBlue);
+    expect(tooltipNode).toHaveStyleRule('background', Theme.palette.white);
+    expect(tooltipNode).toHaveStyleRule(
+      'box-shadow',
+      `0 0 0 1px ${Theme.palette.lightGrey},0 2px 16px 0 rgba(0,0,0,0.1)`,
+    );
+    expect(tooltipNode).toHaveStyleRule('background', Theme.palette.white, {
+      modifier: '::before',
     });
   });
 
