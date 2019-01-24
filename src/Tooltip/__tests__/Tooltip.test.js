@@ -1,10 +1,11 @@
 import React from 'react';
 import { fireEvent } from 'react-testing-library';
+import { Theme } from '../..';
 
 import Tooltip from '..';
 
 describe('<Tooltip />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(
       <Tooltip
         title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
@@ -16,7 +17,31 @@ describe('<Tooltip />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render open a tooltip withouth a problem', () => {
+  test('should render without a problem with light appearance', () => {
+    const { getByTestId } = render(
+      <Tooltip
+        active
+        appearance="light"
+        title="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+        sur la période séléctionnée."
+      >
+        <button type="button">Show Tooltip</button>
+      </Tooltip>,
+    );
+    const tooltipNode = getByTestId('tooltip');
+
+    expect(tooltipNode).toHaveStyleRule('color', Theme.palette.darkBlue);
+    expect(tooltipNode).toHaveStyleRule('background', Theme.palette.white);
+    expect(tooltipNode).toHaveStyleRule(
+      'box-shadow',
+      `0 0 0 1px ${Theme.palette.lightGrey},0 2px 16px 0 rgba(0,0,0,0.1)`,
+    );
+    expect(tooltipNode).toHaveStyleRule('background', Theme.palette.white, {
+      modifier: '::before',
+    });
+  });
+
+  test('should render an active tooltip without a problem', () => {
     const { getByTestId } = render(
       <Tooltip
         active

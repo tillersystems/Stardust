@@ -16,6 +16,7 @@ import { Container, Wrapper } from './elements';
  * @param {string} arrowPositionX // Set position of the Tooltip's arrow.
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
  * @param {string} width // Tooltip width.
+ * @param {string} appearance // Appearance is used to set the color of the tooltip which can be dark or light.
  * @param {string} title // Tooltip main text.
  *
  * @return {jsx}
@@ -30,6 +31,7 @@ class Tooltip extends React.Component {
     arrowPositionX: PropTypes.string,
     children: PropTypes.node,
     width: PropTypes.string,
+    appearance: PropTypes.oneOf(['dark', 'light']),
     title: PropTypes.string.isRequired,
   };
 
@@ -41,6 +43,7 @@ class Tooltip extends React.Component {
     arrowPositionX: '50%',
     children: null,
     width: 'auto',
+    appearance: 'dark',
   };
 
   state = {
@@ -81,7 +84,7 @@ class Tooltip extends React.Component {
   };
 
   render() {
-    const { top, hover, arrowPositionX, children, width, title } = this.props;
+    const { appearance, top, hover, arrowPositionX, children, width, title } = this.props;
     const { active } = this.state;
     const childrenWithProps = React.Children.map(children, child =>
       React.cloneElement(child, {
@@ -101,6 +104,7 @@ class Tooltip extends React.Component {
               arrowPositionX={arrowPositionX}
               key="ContainerAnimation"
               data-testid="tooltip"
+              appearance={appearance}
             >
               {title}
             </ToolTipAnimation>

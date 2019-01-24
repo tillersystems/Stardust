@@ -5,9 +5,9 @@ import { darken } from 'polished';
  * getAppearance
  *
  * Helper function to render the right css
- * compared to the appearance given to him.
+ * compared to the appearance given to it.
  *
- * @param {object} palette // The pallet color theme.
+ * @param {object} palette // The color's pallete of the theme.
  * @param {string} appearance // The button appearance.
  */
 

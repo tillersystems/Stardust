@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tooltip /> should render withouth a problem 1`] = `
+exports[`<Tooltip /> should render without a problem 1`] = `
 .c0 {
   position: relative;
   display: inline-block;

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { getAppearance } from './helpers';
+
 export const Wrapper = styled.div`
   position: relative;
   display: inline-block;
@@ -7,16 +9,17 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   position: absolute;
-
+  z-index: 10;
   width: ${({ width }) => width};
 
   padding: 0.6rem 1rem;
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  color: ${({ theme: { palette } }) => palette.white};
+  font-size: 1.4rem;
 
-  background: ${({ theme: { palette } }) => palette.darkBlue};
+  /* Tooltip Appearance: [dark, light] */
+  ${({ theme, appearance }) => getAppearance(theme, appearance)};
 
   top: 100%;
   left: 50%;
@@ -40,7 +43,6 @@ export const Container = styled.div`
     height: 0.7rem;
     width: 0.7rem;
 
-    background: ${({ theme: { palette } }) => palette.darkBlue};
     transform: translate3d(0, -50%, 0) rotate(135deg);
     ${({ top }) =>
       top &&
