@@ -18,7 +18,7 @@ export const Container = styled.div`
 
   font-size: 1.4rem;
 
-  /* Button Appearance: [default, primary, secondary...] */
+  /* Tooltip Appearance: [dark, light] */
   ${({ theme, appearance }) => getAppearance(theme, appearance)};
 
   top: 100%;
