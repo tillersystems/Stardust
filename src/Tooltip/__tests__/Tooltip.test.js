@@ -33,7 +33,7 @@ describe('<Tooltip />', () => {
     expect(tooltipNode).toHaveStyleRule({
       color: Theme.palette.darkBlue,
       background: Theme.palette.white,
-      boxShadow: 'none',
+      boxShadow: '0 0 0 1px ${palette.lightGrey}, 0 2px 16px 0 rgba(0, 0, 0, 0.1)',
     });
   });
 
