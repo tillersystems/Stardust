@@ -30,26 +30,52 @@ export const Container = styled.div`
     css`
       bottom: 100%;
       top: auto;
-    `} &::before {
+    `}
+
+  &::before,
+  &::after {
     content: '';
 
     display: block;
 
     position: absolute;
-    top: 0;
+    bottom: 100%;
+    top: auto;
     left: ${({ arrowPositionX }) => arrowPositionX};
     z-index: -1;
 
-    height: 0.7rem;
-    width: 0.7rem;
+    width: 0;
+    height: 0;
 
-    transform: translate3d(0, -50%, 0) rotate(135deg);
+    border-style: solid;
+    background-color: transparent;
     ${({ top }) =>
       top &&
       css`
-        bottom: 0;
-        top: auto;
-        transform: translate3d(0, 50%, 0) rotate(135deg);
+        bottom: auto;
+        top: 100%;
+        border-width: 5px 5px 0 5px;
+      `};
+  }
+
+  &::before {
+    z-index: 1;
+    border-width: 0 5px 5px 5px;
+    ${({ top }) =>
+      top &&
+      css`
+        border-width: 5px 5px 0 5px;
+      `};
+  }
+
+  &::after {
+    z-index: -1;
+    border-width: 0 6px 6px 6px;
+    transform: translateX(-1px);
+    ${({ top }) =>
+      top &&
+      css`
+        border-width: 6px 6px 0 6px;
       `};
   }
 `;
