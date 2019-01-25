@@ -16,8 +16,9 @@ export const getAppearance = ({ palette }, appearance) => {
       color: ${palette.white};
       background: ${palette.darkBlue};
       box-shadow: none;
-      &::before {
-        background: ${palette.darkBlue};
+      &::before,
+      &::after {
+        border-color: ${palette.darkBlue} transparent ${palette.darkBlue} transparent;
       }
     `,
     light: css`
@@ -25,7 +26,11 @@ export const getAppearance = ({ palette }, appearance) => {
       background: ${palette.white};
       box-shadow: 0 0 0 1px ${palette.lightGrey}, 0 2px 16px 0 rgba(0, 0, 0, 0.1);
       &::before {
-        background: ${palette.white};
+        border-color: ${palette.white} transparent ${palette.white} transparent;
+      }
+
+      &::after {
+        border-color: ${palette.lightGrey} transparent ${palette.lightGrey} transparent;
       }
     `,
   }[appearance];

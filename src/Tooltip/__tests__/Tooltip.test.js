@@ -36,9 +36,20 @@ describe('<Tooltip />', () => {
       'box-shadow',
       `0 0 0 1px ${Theme.palette.lightGrey},0 2px 16px 0 rgba(0,0,0,0.1)`,
     );
-    expect(tooltipNode).toHaveStyleRule('background', Theme.palette.white, {
-      modifier: '::before',
-    });
+    expect(tooltipNode).toHaveStyleRule(
+      'border-color',
+      `${Theme.palette.white} transparent ${Theme.palette.white} transparent`,
+      {
+        modifier: '::before',
+      },
+    );
+    expect(tooltipNode).toHaveStyleRule(
+      'border-color',
+      `${Theme.palette.lightGrey} transparent ${Theme.palette.lightGrey} transparent`,
+      {
+        modifier: '::after',
+      },
+    );
   });
 
   test('should render an active tooltip without a problem', () => {
