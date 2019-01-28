@@ -139,7 +139,9 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internal/tools/mocks/fileMock.js"
     },
-    "setupTestFrameworkScriptFile": "./internal/jest/index.js",
+    "setupFilesAfterEnv": [
+      "./internal/jest/index.js"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
