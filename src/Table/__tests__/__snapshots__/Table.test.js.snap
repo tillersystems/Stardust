@@ -22855,7 +22855,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
           ],
           "results": Array [
             Object {
-              "isThrow": false,
+              "type": "return",
               "value": undefined,
             },
           ],
@@ -24781,7 +24781,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
           ],
           "results": Array [
             Object {
-              "isThrow": false,
+              "type": "return",
               "value": undefined,
             },
           ],
