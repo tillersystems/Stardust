@@ -8,10 +8,10 @@ describe('<Select />', () => {
     const props = { placeholder: 'placeholder' };
     const { container } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -22,10 +22,10 @@ describe('<Select />', () => {
     const props = { placeholder: 'placeholder', disabled: true };
     const { container } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -36,10 +36,10 @@ describe('<Select />', () => {
     const props = { placeholder: 'placeholder' };
     const { queryAllByText, getByText } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -81,10 +81,10 @@ describe('<Select />', () => {
     const props = { placeholder: 'placeholder', onToggle: spy };
     const { getByText } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -108,10 +108,10 @@ describe('<Select />', () => {
     const props = { placeholder: 'placeholder', onChange: spy };
     const { queryAllByText, getByText } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -126,17 +126,17 @@ describe('<Select />', () => {
     fireEvent.click(ItemNode[0]);
 
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy).toHaveBeenCalledWith('Item');
+    expect(spy).toHaveBeenCalledWith('1');
   });
 
   test('should call getDerivedStateFromProps', () => {
     const props = { placeholder: 'placeholder', resetValue: false };
     const { container, rerender } = render(
       <Select {...props}>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
@@ -144,10 +144,10 @@ describe('<Select />', () => {
 
     rerender(
       <Select {...props} resetValue>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
-        <Select.Option>Item</Select.Option>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
       </Select>,
     );
 
