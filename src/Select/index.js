@@ -36,6 +36,9 @@ class Select extends PureComponent {
     onToggle: func,
     placeholder: string,
     resetValue: bool,
+    // https://github.com/yannickcr/eslint-plugin-react/issues/1520
+    // eslint-disable-next-line react/no-unused-prop-types
+    width: string,
   };
 
   /** Default props. */
@@ -47,6 +50,7 @@ class Select extends PureComponent {
     onToggle: () => {},
     resetValue: false,
     placeholder: null,
+    width: '100%',
   };
 
   /**
@@ -194,6 +198,7 @@ const MenuAnimation = posed(Menu)({
 export default styled(Select)`
   position: relative;
   user-select: none;
+  width: ${({ width }) => (/^\d+(rem|px)$/.test(width) ? width : 'auto')};
 
   /* Disabled */
   ${({ disabled }) =>
