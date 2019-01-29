@@ -13,12 +13,14 @@ import { Flag } from '@tillersystems/stardust';
 - `name` - name of the flag.
 - `width` - width of the flag.
 - `height` - height of the flag.
+- `rounded` - add rounded corners to the flag.
 
-| propName | propType | defaultValue | isRequired |
-| -------- | :------: | :----------: | :--------: |
-| `name`   | `string` |              |     \*     |
-| `width`  | `number` |     `20`     |     -      |
-| `height` | `number` |     `20`     |     -      |
+| propName  | propType | defaultValue | isRequired |
+| --------- | :------: | :----------: | :--------: |
+| `name`    | `string` |              |     \*     |
+| `width`   | `number` |     `20`     |     -      |
+| `height`  | `number` |     `20`     |     -      |
+| `rounded` |  `bool`  |   `false`    |     -      |
 
 ### Example
 

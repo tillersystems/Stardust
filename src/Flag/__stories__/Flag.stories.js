@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number } from '@storybook/addon-knobs';
+import { boolean, number, withKnobs } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import Flag from '..';
@@ -24,13 +24,31 @@ storiesOf('Flag', module)
   })
   .add('with size', () => {
     const sizeOptions = { range: true, min: 50, max: 150, step: 10 };
-    const sizeValue = number('Size', 100, sizeOptions, 'Size');
+    const sizeValue = number('Size', 30, sizeOptions, 'State');
     return (
       <Grid>
         {Object.keys(Data).map(flagName => (
           <Container key={flagName}>
             <Body>
               <Flag size={sizeValue.toString()} name={flagName} />
+            </Body>
+            <Footer>{flagName}</Footer>
+          </Container>
+        ))}
+      </Grid>
+    );
+  })
+  .add('with rounded corners', () => {
+    const sizeOptions = { range: true, min: 50, max: 150, step: 10 };
+    const sizeValue = number('Size', 100, sizeOptions, 'State');
+    const rounded = boolean('Rounded', true, 'State');
+
+    return (
+      <Grid>
+        {Object.keys(Data).map(flagName => (
+          <Container key={flagName}>
+            <Body>
+              <Flag size={sizeValue.toString()} name={flagName} rounded={rounded} />
             </Body>
             <Footer>{flagName}</Footer>
           </Container>

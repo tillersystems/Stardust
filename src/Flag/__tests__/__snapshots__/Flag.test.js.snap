@@ -19,6 +19,14 @@ exports[`<Flag /> should render without a problem 1`] = `
     width="20"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <clippath
+      id="rounded-corners"
+    >
+      <rect
+        rx="90"
+        ry="90"
+      />
+    </clippath>
     <g
       fill="none"
       fill-rule="evenodd"
