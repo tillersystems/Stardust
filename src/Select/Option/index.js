@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Option = ({ children, className }) => <div className={className}>{children}</div>;
 
@@ -8,6 +9,8 @@ const Option = ({ children, className }) => <div className={className}>{children
  */
 const { node, string } = PropTypes;
 Option.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
+  value: string.isRequired,
   children: node,
   className: string,
 };
@@ -20,4 +23,8 @@ Option.defaultProps = {
   className: '',
 };
 
-export default Option;
+const StyledOption = styled(Option)`
+  display: flex;
+`;
+
+export default StyledOption;

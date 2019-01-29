@@ -34,7 +34,7 @@ class Select extends PureComponent {
     disabled: bool,
     onChange: func,
     onToggle: func,
-    placeholder: string.isRequired,
+    placeholder: string,
     resetValue: bool,
   };
 
@@ -46,6 +46,7 @@ class Select extends PureComponent {
     onChange: () => {},
     onToggle: () => {},
     resetValue: false,
+    placeholder: null,
   };
 
   /**
@@ -74,6 +75,22 @@ class Select extends PureComponent {
     resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
   };
 
+  componentDidMount() {
+    const { placeholder } = this.props;
+
+    if (!placeholder) {
+      const {
+        children: [
+          {
+            props: { value },
+          },
+        ],
+      } = this.props;
+
+      this.setState({ value });
+    }
+  }
+
   /**
    * Toogle Menu
    */
@@ -95,12 +112,11 @@ class Select extends PureComponent {
   /**
    * Handle Selected
    *
-   * @param {object} currentTarget
+   * @param {string} value
    *
    */
-  handleSelected({ currentTarget }) {
+  handleSelected(value) {
     const { onChange } = this.props;
-    const value = currentTarget.textContent;
 
     this.setState(
       prevState => ({
@@ -131,14 +147,20 @@ class Select extends PureComponent {
           aria-haspopup="true"
           aria-expanded={displayMenu}
         >
-          {/* if value is defined use them instead show the placeholder */}
-          {value ? value : placeholder}
+          {/* if placeholder is defined display it, otherwise use the value of the first option */}
+          {placeholder && !value
+            ? placeholder
+            : Children.map(children, child => (child.props.value === value ? child : null))}
         </Header>
         <PoseGroup>
           {displayMenu && (
             <MenuAnimation key="Menu" role="menu">
               {Children.map(children, child => (
-                <MenuItem key={child} role="menuitem" onClick={event => this.handleSelected(event)}>
+                <MenuItem
+                  key={child}
+                  role="menuitem"
+                  onClick={() => this.handleSelected(child.props.value)}
+                >
                   {child}
                 </MenuItem>
               ))}

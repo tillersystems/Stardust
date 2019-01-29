@@ -23,7 +23,7 @@ import { Select } from '@tillersystems/stardust';
 | `className`   | `string`  |     `''`     |     -      |
 | `onChange`    |  `func`   |  `() => {}`  |     -      |
 | `onToggle`    |  `func`   |  `() => {}`  |     -      |
-| `placeholder` | `string`  |              |     \*     |
+| `placeholder` | `string`  |    `null`    |     -      |
 | `resetValue`  | `boolean` |   'false'    |     -      |
 
 ### Example
