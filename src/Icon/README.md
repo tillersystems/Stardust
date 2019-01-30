@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Icon from 'components/Icon';
-
-// or
-
-import { Icon } from 'components';
+import { Icon } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->

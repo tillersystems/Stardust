@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import { KpiChart } from 'components/KpiChart';
-
-// or
-
-import KpiChart from 'components';
+import { KpiChart } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->

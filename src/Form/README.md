@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Form from 'components/Form';
-
-// or
-
-import { Form } from 'components';
+import { Form } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->

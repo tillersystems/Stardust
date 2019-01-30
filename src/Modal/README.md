@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Modal from 'components/Modal';
-
-// or
-
-import { Modal } from 'components';
+import { Modal } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
