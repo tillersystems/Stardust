@@ -11,7 +11,7 @@ export const Container = styled.div`
   ${({ row }) =>
     row &&
     css`
-      margin-top: 1.6rem;
+      margin-top: ${({ theme: { dimensions } }) => dimensions.medium};
       flex-direction: row;
       &:first-child {
         margin-top: 0;

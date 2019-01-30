@@ -974,7 +974,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   flex-direction: column;
   width: 100%;
   margin-top: 0;
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1421,7 +1421,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
   flex-direction: column;
   width: 100%;
   margin-top: 0;
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
