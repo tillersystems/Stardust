@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import { Popover } from 'components/Popover';
-
-// or
-
-import Popover from 'components';
+import { Popover } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->

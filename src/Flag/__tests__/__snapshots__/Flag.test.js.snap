@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flag /> should render with rounded corners 1`] = `
+.c0 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+}
+
+<div
+  class="c0"
+>
+  <svg
+    data-testid="flagSvg"
+    height="20"
+    style="display: block;"
+    viewBox="0 0 512 512"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <clippath
+      id="rounded-corners"
+    >
+      <rect
+        height="336"
+        rx="90"
+        ry="90"
+        width="450"
+        x="31"
+        y="88"
+      />
+    </clippath>
+    <g
+      clip-path="url(#rounded-corners)"
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <path
+        d="M32 88h448v336H32z"
+        fill="#fff"
+      />
+      <path
+        d="M32.332 88h149.336v336H32.332z"
+        fill="#00267f"
+      />
+      <path
+        d="M330.663 88H480v336H330.663z"
+        fill="#f31830"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`<Flag /> should render without a problem 1`] = `
+.c0 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+}
+
+<div
+  class="c0"
+>
+  <svg
+    data-testid="flagSvg"
+    height="20"
+    style="display: block;"
+    viewBox="0 0 512 512"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <clippath
+      id="rounded-corners"
+    >
+      <rect
+        rx="90"
+        ry="90"
+      />
+    </clippath>
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <path
+        d="M32 88h448v336H32z"
+        fill="#fff"
+      />
+      <path
+        d="M32.332 88h149.336v336H32.332z"
+        fill="#00267f"
+      />
+      <path
+        d="M330.663 88H480v336H330.663z"
+        fill="#f31830"
+      />
+    </g>
+  </svg>
+</div>
+`;

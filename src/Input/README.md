@@ -3,11 +3,7 @@
 ### Usage
 
 ```jsx
-import Input from 'components/Input';
-
-// or
-
-import { Input } from 'components';
+import { Input } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
