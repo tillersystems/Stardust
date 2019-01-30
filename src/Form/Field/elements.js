@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   ${({ isRow }) =>
     isRow &&
     css`
-      margin-left: ${({ theme: { dimensions } }) => dimensions.small};
+      margin-left: ${({ theme: { dimensions } }) => dimensions.big};
       margin-top: 0;
     `};
 

@@ -6,9 +6,15 @@ export const Container = styled.div`
 
   width: 100%;
 
+  margin-top: 0;
+
   ${({ row }) =>
     row &&
     css`
+      margin-top: 1.6rem;
       flex-direction: row;
+      &:first-child {
+        margin-top: 0;
+      }
     `};
 `;
