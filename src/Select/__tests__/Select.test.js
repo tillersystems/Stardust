@@ -153,4 +153,18 @@ describe('<Select />', () => {
 
     expect(container.firstChild).toBeInTheDocument();
   });
+
+  test('should have a custom width', () => {
+    const props = { width: '200px' };
+    const { container } = render(
+      <Select {...props}>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
+      </Select>,
+    );
+
+    expect(container.firstChild).toHaveStyleRule('width', props.width);
+  });
 });

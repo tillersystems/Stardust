@@ -12,10 +12,11 @@ import { Select } from '@tillersystems/stardust';
 
 - `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
 - `className` - className needed by styled components.
-- `onChange` - Function fired when an element of the <Select /> is selected.
-- `onToggle` - Function fired when the <Select /> is toggled.
-- `placeholder` - placeholder of the <Select /> component.
-- `resetValue` - Reset the <Select /> value.
+- `onChange` - Function fired when an element of the `<Select />` is selected.
+- `onToggle` - Function fired when the `<Select />` is toggled.
+- `placeholder` - placeholder of the `<Select />` component.
+- `resetValue` - Reset the `<Select />` value.
+- `width` - Width of the `<Select />`.
 
 | propName      | propType  | defaultValue | isRequired |
 | ------------- | :-------: | :----------: | :--------: |
@@ -24,7 +25,8 @@ import { Select } from '@tillersystems/stardust';
 | `onChange`    |  `func`   |  `() => {}`  |     -      |
 | `onToggle`    |  `func`   |  `() => {}`  |     -      |
 | `placeholder` | `string`  |    `null`    |     -      |
-| `resetValue`  | `boolean` |   'false'    |     -      |
+| `resetValue`  | `boolean` |   `false`    |     -      |
+| `width`       | `string`  |    `100%`    |     -      |
 
 ### Example
 
