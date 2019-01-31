@@ -11,10 +11,9 @@ export const Container = styled.div`
   ${({ row }) =>
     row &&
     css`
-      margin-top: ${({ theme: { dimensions } }) => dimensions.medium};
-      flex-direction: row;
-      &:first-child {
-        margin-top: 0;
+      &:not(:first-child) {
+        margin-top: ${({ theme: { dimensions } }) => dimensions.medium};
       }
+      flex-direction: row;
     `};
 `;
