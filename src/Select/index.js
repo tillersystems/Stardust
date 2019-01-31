@@ -39,6 +39,7 @@ class Select extends PureComponent {
     // https://github.com/yannickcr/eslint-plugin-react/issues/1520
     // eslint-disable-next-line react/no-unused-prop-types
     width: string,
+    initialValue: string,
   };
 
   /** Default props. */
@@ -51,6 +52,7 @@ class Select extends PureComponent {
     resetValue: false,
     placeholder: null,
     width: '100%',
+    initialValue: null,
   };
 
   /**
@@ -79,21 +81,46 @@ class Select extends PureComponent {
     resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
   };
 
+  /**
+   * Component lifecycle method
+   * Once the component is mounted, checks if a value is provided
+   * to the component to initialize the displayed value on the Select.
+   * Otherwise, if a placeholder is provided, no value is initialized to display
+   * the placeholder at the render.
+   */
   componentDidMount() {
-    const { placeholder } = this.props;
+    const { children, initialValue, placeholder } = this.props;
 
-    if (!placeholder) {
-      const {
-        children: [
-          {
-            props: { value },
-          },
-        ],
-      } = this.props;
+    if (initialValue) {
+      const isMatchingOption =
+        children.filter(option => option.props.value === initialValue).length === 1;
 
-      this.setState({ value });
+      if (isMatchingOption) {
+        this.setState({ value: initialValue });
+      } else {
+        this.initializeValue();
+      }
+    } else if (!placeholder) {
+      this.initializeValue();
     }
   }
+
+  /**
+   * Initialize in the state the value displayed on the select
+   * Takes the first option available in the children props
+   *
+   */
+  initializeValue = () => {
+    const {
+      children: [
+        {
+          props: { value: firstValue },
+        },
+      ],
+    } = this.props;
+
+    this.setState({ value: firstValue });
+  };
 
   /**
    * Toogle Menu
