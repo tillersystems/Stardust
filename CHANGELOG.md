@@ -1,3 +1,15 @@
+# [1.20.0](https://github.com/tillersystems/Stardust/compare/v1.19.2...v1.20.0) (2019-01-31)
+
+### Bug Fixes
+
+- **Select:** add width prop to Select component ([#376](https://github.com/tillersystems/Stardust/issues/376)) ([6454964](https://github.com/tillersystems/Stardust/commit/6454964))
+- **Tooltip:** Add a border to the pseudo-element ::before ([#368](https://github.com/tillersystems/Stardust/issues/368)) ([907570c](https://github.com/tillersystems/Stardust/commit/907570c))
+
+### Features
+
+- **Flag:** add new Flag component ([#374](https://github.com/tillersystems/Stardust/issues/374)) ([eab3593](https://github.com/tillersystems/Stardust/commit/eab3593))
+- **Select:** add possibility to render other than string in option ([#373](https://github.com/tillersystems/Stardust/issues/373)) ([f791f11](https://github.com/tillersystems/Stardust/commit/f791f11))
+
 ## [1.19.2](https://github.com/tillersystems/Stardust/compare/v1.19.1...v1.19.2) (2019-01-24)
 
 ### Features
