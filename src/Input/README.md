@@ -16,7 +16,7 @@ import { Input } from '@tillersystems/stardust';
 - `type` - the type of input (`text` or `password`).
 - `value` - the value of the input.
 - `tabIndex` - index of the input in a parent form.
-- `placeHolder` - placeholder text.
+- `placeholder` - placeholder text.
 - `disabled` - whether the input is disabled or not.
 - `onChange` - handler of input value change.
 - `onFocus` - handler of input gains focus.
@@ -38,7 +38,7 @@ import { Input } from '@tillersystems/stardust';
 | `id`            | `string` |     `''`     |     -      |
 | `value`         | `string` |     `''`     |     -      |
 | `tabIndex`      | `string` |     `0`      |     -      |
-| `placeHolder`   | `string` |     `''`     |     -      |
+| `placeholder`   | `string` |     `''`     |     -      |
 | `disabled`      |  `bool`  |   `false`    |     -      |
 | `onChange`      |  `func`  |    `null`    |     -      |
 | `onFocus`       |  `func`  |  `() => {}`  |     -      |
@@ -66,7 +66,7 @@ render() {
     <Input
       value={myValue}
       onChange={(newValue) => handleChange(newValue)}
-      placeHolder="Write something..."
+      placeholder="Write something..."
     />
   );
 }

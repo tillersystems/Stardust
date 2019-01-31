@@ -7,7 +7,7 @@ import TextInput from '..';
 describe('<TextInput />', () => {
   test('should render withouth a problem', () => {
     const { container } = render(
-      <TextInput placeHolder="default input" id="test" tabIndex="0" value="" />,
+      <TextInput placeholder="default input" id="test" tabIndex="0" value="" />,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

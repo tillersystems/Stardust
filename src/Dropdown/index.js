@@ -141,7 +141,7 @@ class Dropdown extends PureComponent {
               {searchable && (
                 <SearchInputContainer>
                   <SearchBar
-                    placeHolder={searchBarPlaceholder}
+                    placeholder={searchBarPlaceholder}
                     onChange={this.handleSearch}
                     value={searchKeyword}
                   />

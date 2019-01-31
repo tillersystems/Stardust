@@ -15,7 +15,7 @@ import { Dropdown } from '@tillersystems/stardust';
 - `noResultLabel` - Label to display when no result found.
 - `onToggle` - Callback called when Dropdown is toggled.
 - `searchable` - A Dropdown may be searchable.
-- `searchBarPlacholder` - SearchBar input placholder.
+- `searchBarPlacholder` - SearchBar input placeholder.
 - `title` - Dropdown title.
 
 | propName              |  propType  | defaultValue | isRequired |

@@ -33,7 +33,7 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * @param {boolean} fluid - Whether the component is fluid or not.
  * @param {string} id - The ID of the input in the DOM.
  * @param {string} tabIndex - The tabulation index of the input in its parent form.
- * @param {string} placeHolder - The string to display as a placeholder.
+ * @param {string} placeholder - The string to display as a placeholder.
  * @param {boolean} disabled - Whether the input is disabled or not.
  * @param {string} label - The name of the icon to display as a label (if left undefined, not label
  * will be rendered).
@@ -72,7 +72,7 @@ class TextInput extends PureComponent {
     id: PropTypes.string,
     value: PropTypes.string,
     tabIndex: PropTypes.string,
-    placeHolder: PropTypes.string,
+    placeholder: PropTypes.string,
     disabled: PropTypes.bool,
     password: PropTypes.bool,
     onChange: PropTypes.func,
@@ -110,7 +110,7 @@ class TextInput extends PureComponent {
     id: '',
     value: null,
     tabIndex: '0',
-    placeHolder: '',
+    placeholder: '',
     disabled: false,
     password: false,
     onChange: () => {},
@@ -221,7 +221,7 @@ class TextInput extends PureComponent {
       fluid,
       id,
       tabIndex,
-      placeHolder,
+      placeholder,
       disabled,
       label,
       labelPosition,
@@ -259,7 +259,7 @@ class TextInput extends PureComponent {
           id={id}
           tabIndex={tabIndex}
           value={value || ''}
-          placeholder={placeHolder}
+          placeholder={placeholder}
           disabled={disabled}
           onChange={this.handleChange}
           onFocus={this.handleFocus}
