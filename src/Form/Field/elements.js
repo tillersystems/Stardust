@@ -30,6 +30,13 @@ export const Wrapper = styled.div`
       margin-top: 0;
     `};
 
+  ${({ inlineLabel }) =>
+    inlineLabel &&
+    css`
+      margin-left: 0;
+      margin-top: 0;
+    `};
+
   &:first-child {
     margin-left: 0;
     margin-top: 0;
