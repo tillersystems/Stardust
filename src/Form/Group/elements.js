@@ -6,9 +6,14 @@ export const Container = styled.div`
 
   width: 100%;
 
+  margin-top: 0;
+
   ${({ row }) =>
     row &&
     css`
+      &:not(:first-child) {
+        margin-top: ${({ theme: { dimensions } }) => dimensions.medium};
+      }
       flex-direction: row;
     `};
 `;

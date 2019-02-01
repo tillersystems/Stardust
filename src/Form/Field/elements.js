@@ -26,7 +26,18 @@ export const Wrapper = styled.div`
   ${({ isRow }) =>
     isRow &&
     css`
-      margin-left: ${({ theme: { dimensions } }) => dimensions.small};
+      margin-left: ${({ theme: { dimensions } }) => dimensions.big};
+    `};
+
+  ${({ inlineLabel }) =>
+    inlineLabel &&
+    css`
+      margin-left: 0;
+    `};
+
+  ${({ isRow, inlineLabel }) =>
+    (isRow || inlineLabel) &&
+    css`
       margin-top: 0;
     `};
 
