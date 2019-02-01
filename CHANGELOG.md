@@ -1,3 +1,13 @@
+## [1.20.1](https://github.com/tillersystems/Stardust/compare/v1.20.0...v1.20.1) (2019-02-01)
+
+### Bug Fixes
+
+- **Form/Field:** fix className prop ([#380](https://github.com/tillersystems/Stardust/issues/380)) ([32d3679](https://github.com/tillersystems/Stardust/commit/32d3679))
+
+### Features
+
+- **Icon:** add new shopping-bag icon ([#381](https://github.com/tillersystems/Stardust/issues/381)) ([6cd5199](https://github.com/tillersystems/Stardust/commit/6cd5199))
+
 # [1.20.0](https://github.com/tillersystems/Stardust/compare/v1.19.2...v1.20.0) (2019-01-31)
 
 ### Bug Fixes
