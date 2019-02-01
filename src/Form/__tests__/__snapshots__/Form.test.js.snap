@@ -903,7 +903,6 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   margin-left: 0;
   margin-top: 0.7rem;
   margin-left: 3.1rem;
-  margin-top: 0;
   margin-left: 0;
   margin-top: 0;
 }
