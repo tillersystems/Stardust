@@ -10,6 +10,7 @@ import { Tooltip } from '@tillersystems/stardust';
 
 ### Properties
 
+- `className` - className needed by styled components.
 - `active` - Boolean set if the Tooltip is showed or not.
 - `hover` - Boolean set to use click or hover to show the Tooltip.
 - `appearance` - Appearance is used to set the color of the tooltip which can be dark or light.
@@ -21,6 +22,7 @@ import { Tooltip } from '@tillersystems/stardust';
 
 | propName         |          propType          | defaultValue | isRequired |
 | ---------------- | :------------------------: | :----------: | :--------: |
+| `className`      |          `string`          |     `''`     |     -      |
 | `active`         |           `bool`           |   `false`    |     -      |
 | `hover`          |           `bool`           |   `false`    |     -      |
 | `appearance`     | `oneOf(['dark', 'light'])` |    `dark`    |     -      |
