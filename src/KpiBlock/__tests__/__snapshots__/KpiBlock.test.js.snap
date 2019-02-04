@@ -11,34 +11,43 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 }
 
 .c3 {
+  color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 600;
-  color: hsl(213,17%,20%);
-}
-
-.c4 {
-  font-size: 1.4rem;
-  color: hsl(206,23%,69%);
 }
 
 .c1 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   color: hsl(6,79%,65%);
 }
 
+.c4 {
+  color: hsl(207,13%,45%);
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
 .c0 {
-  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
+  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,15 +55,9 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 6.6rem;
   padding: 3rem 1rem;
-  height: 100%;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background: hsl(0,100%,100%);
+  position: relative;
 }
 
 <div
@@ -112,34 +115,43 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 }
 
 .c3 {
+  color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 600;
-  color: hsl(213,17%,20%);
-}
-
-.c4 {
-  font-size: 1.4rem;
-  color: hsl(206,23%,69%);
 }
 
 .c1 {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   color: hsl(89,53%,52%);
 }
 
+.c4 {
+  color: hsl(207,13%,45%);
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
 .c0 {
-  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
+  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -147,15 +159,9 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 6.6rem;
   padding: 3rem 1rem;
-  height: 100%;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background: hsl(0,100%,100%);
+  position: relative;
 }
 
 <div
@@ -205,18 +211,27 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 
 exports[`<KpiBlock /> should render withouth a problem 1`] = `
 .c1 {
+  color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 600;
-  color: hsl(213,17%,20%);
 }
 
 .c2 {
+  color: hsl(207,13%,45%);
   font-size: 1.4rem;
-  color: hsl(206,23%,69%);
+  margin-top: 0.5rem;
 }
 
 .c0 {
-  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: hsl(0,100%,100%);
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
+  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,15 +239,9 @@ exports[`<KpiBlock /> should render withouth a problem 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 6.6rem;
   padding: 3rem 1rem;
-  height: 100%;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background: hsl(0,100%,100%);
+  position: relative;
 }
 
 <div
