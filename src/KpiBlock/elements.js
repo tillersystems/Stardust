@@ -1,27 +1,18 @@
 import styled, { css } from 'styled-components';
 
 export const Value = styled.div`
+  color: ${({ theme: { palette } }) => palette.darkBlue};
   font-size: ${({ theme: { fonts } }) => fonts.size.h2};
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
-
-  color: ${({ theme: { palette } }) => palette.darkBlue};
-`;
-
-export const Title = styled.div`
-  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
-
-  color: ${({ theme: { palette } }) => palette.mediumGrey};
 `;
 
 export const Variation = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-
-  display: flex;
   align-items: center;
-
+  display: flex;
   font-size: ${({ theme: { fonts } }) => fonts.size.default};
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 
   /* Negative */
   ${({ negative }) =>
@@ -36,4 +27,10 @@ export const Variation = styled.div`
     css`
       color: ${({ theme: { palette } }) => palette.success.default};
     `};
+`;
+
+export const Title = styled.div`
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
+  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
+  margin-top: 0.5rem;
 `;
