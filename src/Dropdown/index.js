@@ -191,6 +191,7 @@ const MenuAnimation = posed(Menu)({
 });
 
 export default styled(onClickOutside(Dropdown))`
-  position: relative
-  user-select: none
+  position: relative;
+  user-select: none;
+  height: 100%;
 `;

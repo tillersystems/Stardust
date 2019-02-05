@@ -20,7 +20,6 @@ export const Header = styled.button`
     ${({ theme: { palette } }) => palette.white} 0%,
     ${({ theme: { palette } }) => palette.mysticGrey} 100%
   );
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   &::after {
