@@ -20,30 +20,12 @@ export const Wrapper = styled.div`
   flex: ${({ size }) => getWrapperFlex(size)};
   width: ${({ size }) => getWrapperWidth(size)};
 
-  margin-left: 0;
-  margin-top: ${({ theme: { dimensions } }) => dimensions.small};
+  &:not(:last-child) {
+    margin-bottom: ${({ theme: { dimensions } }) => dimensions.small};
+  }
 
-  ${({ isRow }) =>
-    isRow &&
-    css`
-      margin-left: ${({ theme: { dimensions } }) => dimensions.big};
-    `};
-
-  ${({ inlineLabel }) =>
-    inlineLabel &&
-    css`
-      margin-left: 0;
-    `};
-
-  ${({ isRow, inlineLabel }) =>
-    (isRow || inlineLabel) &&
-    css`
-      margin-top: 0;
-    `};
-
-  &:first-child {
-    margin-left: 0;
-    margin-top: 0;
+  &:not(:first-child) {
+    margin-left: ${({ isRow, theme: { dimensions } }) => (isRow ? dimensions.big : 0)};
   }
 `;
 

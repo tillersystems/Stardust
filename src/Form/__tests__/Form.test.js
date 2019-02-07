@@ -5,8 +5,8 @@ import Form from '..';
 import { Button, TextInput } from '../..';
 
 describe('<Form />', () => {
-  it('should render without a problem', () => {
-    const render = mountWithTheme(
+  test('should render without a problem', () => {
+    const { container } = render(
       <Form onSubmit={() => {}} name="form">
         <Form.Group>
           <Form.Field label="my label">
@@ -19,28 +19,11 @@ describe('<Form />', () => {
       </Form>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render form block without a problem', () => {
-    const render = mountWithTheme(
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group>
-          <Form.Field label="my label 1">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-          <Form.Field hasLabel labelContent="my label 2">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-        </Form.Group>
-      </Form>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render form without label without a problem', () => {
-    const render = mountWithTheme(
+  test('should render form without label without a problem', () => {
+    const { container } = render(
       <Form onSubmit={() => {}} name="form">
         <Form.Group>
           <Form.Field>
@@ -53,11 +36,11 @@ describe('<Form />', () => {
       </Form>,
     );
 
-    expect(render).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render form row without a problem', () => {
-    const render = mountWithTheme(
+  test('should render row form without a problem', () => {
+    const { getByTestId } = render(
       <Form onSubmit={() => {}} name="form">
         <Form.Group row>
           <Form.Field label="my label 1">
@@ -70,98 +53,101 @@ describe('<Form />', () => {
       </Form>,
     );
 
-    expect(render).toMatchSnapshot();
+    const groupNode = getByTestId('form-group');
+    expect(groupNode).toHaveStyleRule('flex-direction', 'row');
   });
 
-  it('should render form label inline without a problem', () => {
-    const render = mountWithTheme(
+  test('should render form with inline labels without a problem', () => {
+    const { getByText } = render(
+      <Form onSubmit={() => {}} name="form">
+        <Form.Group inlineLabels>
+          <Form.Field label="my label 1">
+            <TextInput />
+          </Form.Field>
+          <Form.Field label="my label 2">
+            <TextInput />
+          </Form.Field>
+        </Form.Group>
+      </Form>,
+    );
+
+    const labelNode = getByText('my label 1');
+    expect(labelNode).toHaveStyleRule('margin-right', '0.5rem');
+    expect(labelNode).toHaveStyleRule('margin-left', '0');
+  });
+
+  test('should render row form with inline labels without a problem', () => {
+    const { container } = render(
+      <Form onSubmit={() => {}} name="form">
+        <Form.Group row inlineLabels>
+          <Form.Field label="my label 1">
+            <TextInput />
+          </Form.Field>
+          <Form.Field label="my label 2">
+            <TextInput />
+          </Form.Field>
+        </Form.Group>
+      </Form>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('should render form with labelsWidth value', () => {
+    const { queryAllByText } = render(
+      <Form onSubmit={() => {}} name="form">
+        <Form.Group inlineLabels labelsWidth="10rem">
+          <Form.Field label="my label">
+            <TextInput placeholder="tape inside me" />
+          </Form.Field>
+          <Form.Field label="my label">
+            <TextInput placeholder="tape inside me" />
+          </Form.Field>
+        </Form.Group>
+      </Form>,
+    );
+
+    const fieldNodes = queryAllByText('my label');
+    expect(fieldNodes[0]).toHaveStyleRule('width', '10rem');
+    expect(fieldNodes[1]).toHaveStyleRule('width', '10rem');
+  });
+
+  test('should render form with highlighted label when has focus', () => {
+    const { container, getByTestId } = render(
       <Form onSubmit={() => {}} name="form">
         <Form.Group inlineLabels>
           <Form.Field label="my label 1">
             <TextInput placeholder="tape inside me" />
           </Form.Field>
-          <Form.Field hasLabel labelContent="my label 2">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
         </Form.Group>
       </Form>,
     );
 
-    expect(render).toMatchSnapshot();
+    const fieldNode = getByTestId('input');
+    fireEvent.focus(fieldNode);
+    expect(container.firstChild).toMatchSnapshot();
+
+    fireEvent.blur(fieldNode);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should render form row label inline without a problem', () => {
-    const render = mountWithTheme(
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group row inlineLabels>
-          <Form.Field label="my label 1">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-          <Form.Field label="my label 2">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-        </Form.Group>
-      </Form>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render form with labelWidth value', () => {
-    const render = mountWithTheme(
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group inlineLabels labelsWidth="10rem">
-          <Form.Field label="my label 1">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-          <Form.Field label="my label 2">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-        </Form.Group>
-      </Form>,
-    );
-
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render form with highlighted label when has focus', () => {
-    const render = mountWithTheme(
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group inlineLabels labelsWidth="10rem">
-          <Form.Field label="my label 1">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-        </Form.Group>
-      </Form>,
-    );
-
-    expect(render).toMatchSnapshot();
-
-    render.find('input').simulate('focus');
-
-    expect(render.find('input').exists()).toBeTruthy();
-
-    expect(render).toMatchSnapshot();
-
-    render.find('input').simulate('blur');
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render form with size value', () => {
-    const render = mountWithTheme(
+  test('should render form with size value', () => {
+    const { queryAllByTestId } = render(
       <Form onSubmit={() => {}} name="form">
         <Form.Group inlineLabels labelsWidth="10rem">
           <Form.Field label="my label 1" size="3">
-            <TextInput placeholder="tape inside me" />
+            <TextInput />
           </Form.Field>
           <Form.Field label="my label 2" size="2">
-            <TextInput placeholder="tape inside me" />
+            <TextInput />
           </Form.Field>
         </Form.Group>
       </Form>,
     );
 
-    expect(render).toMatchSnapshot();
+    const fieldNodes = queryAllByTestId('form-field');
+
+    expect(fieldNodes[0]).toHaveStyleRule('flex', '3');
+    expect(fieldNodes[1]).toHaveStyleRule('flex', '2');
   });
 
   test('should render form with custom width on field level', () => {

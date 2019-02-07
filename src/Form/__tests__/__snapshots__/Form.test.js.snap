@@ -1,1800 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Form /> should render form block without a problem 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={false}
-        labelsWidth="10rem"
-        row={false}
-      >
-        <styled.div
-          className=""
-          row={false}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={false}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              hasLabel={true}
-              inlineLabel={false}
-              isRow={false}
-              key=".1"
-              label=""
-              labelContent="my label 2"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form label inline without a problem 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
-      >
-        <styled.div
-          className=""
-          row={false}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              hasLabel={true}
-              inlineLabel={true}
-              isRow={false}
-              key=".1"
-              label=""
-              labelContent="my label 2"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        />
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form row label inline without a problem 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 3.1rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c1:not(:first-child) {
-  margin-top: 1.5rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={true}
-      >
-        <styled.div
-          className=""
-          row={true}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={true}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={true}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={true}
-              key=".1"
-              label="my label 2"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={true}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 2
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form row without a problem 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 3.1rem;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c1:not(:first-child) {
-  margin-top: 1.5rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={false}
-        labelsWidth="10rem"
-        row={true}
-      >
-        <styled.div
-          className=""
-          row={true}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={true}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={true}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={false}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              hasLabel={true}
-              inlineLabel={false}
-              isRow={true}
-              key=".1"
-              label=""
-              labelContent="my label 2"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={true}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={false}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        />
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
 exports[`<Form /> should render form with highlighted label when has focus 1`] = `
 .c0 {
   width: 100%;
@@ -1817,15 +22,14 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   -ms-flex: 1;
   flex: 1;
   width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
 }
 
-.c2:first-child {
+.c2:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.c2:not(:first-child) {
   margin-left: 0;
-  margin-top: 0;
 }
 
 .c3 {
@@ -1867,332 +71,8 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
-      >
-        <styled.div
-          className=""
-          row={false}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form with highlighted label when has focus 2`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
+  margin-right: 0.5rem;
   margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
 }
 
 .c5 {
@@ -2286,1416 +166,105 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   outline: none;
 }
 
-<Form
-  className=""
+<form
+  class="c0"
   name="form"
-  onSubmit={[Function]}
 >
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
+  <div
+    class="c1"
+    data-testid="form-group"
   >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
     >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
+      <div
+        class="c3"
       >
-        <styled.div
-          className=""
-          row={false}
+        <label
+          class="c4"
+          width="10rem"
+        >
+          my label 1
+        </label>
+        <div
+          class="c5"
         >
           <div
-            className="c1"
+            class="c6"
           >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
+            <div
+              class="c7"
+              width="25rem"
             >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={true}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={true}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
+              <input
+                class="c8"
+                data-testid="input"
+                id=""
+                placeholder="tape inside me"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
           </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 `;
 
-exports[`<Form /> should render form with highlighted label when has focus 3`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
+exports[`<Form /> should render form with highlighted label when has focus 2`] = `
+<form
+  class="sc-bdVaJa fMLCLO"
   name="form"
-  onSubmit={[Function]}
 >
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
+  <div
+    class="sc-bZQynM elfGJt"
+    data-testid="form-group"
   >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
+    <div
+      class="sc-bwzfXH eYrDQH"
+      data-testid="form-field"
+      size="1"
     >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
+      <div
+        class="sc-htpNat ddBMvJ"
       >
-        <styled.div
-          className=""
-          row={false}
+        <label
+          class="sc-bxivhb iiFPKV"
+          width="10rem"
+        >
+          my label 1
+        </label>
+        <div
+          class="sc-ifAKCX futPH"
         >
           <div
-            className="c1"
+            class="sc-EHOje dYYwli"
           >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
+            <div
+              class="sc-hSdWYo iWCXfO"
+              width="25rem"
             >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
+              <input
+                class="sc-eHgmQL gGHbTY"
+                data-testid="input"
+                id=""
+                placeholder="tape inside me"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
           </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form with labelWidth value 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
-      >
-        <styled.div
-          className=""
-          row={false}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".1"
-              label="my label 2"
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 2
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
-`;
-
-exports[`<Form /> should render form with size value 1`] = `
-.c0 {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c2:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-  width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c9:first-child {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.c3 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0;
-}
-
-.c4 {
-  width: 10rem;
-  min-height: 1.4rem;
-  color: hsl(213,17%,20%);
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.3rem;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c6 {
-  height: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-}
-
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c8:focus,
-.c8:active {
-  outline: none;
-}
-
-<Form
-  className=""
-  name="form"
-  onSubmit={[Function]}
->
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
-  >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
-    >
-      <Group
-        className=""
-        inlineLabels={true}
-        labelsWidth="10rem"
-        row={false}
-      >
-        <styled.div
-          className=""
-          row={false}
-        >
-          <div
-            className="c1"
-          >
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".0"
-              label="my label 1"
-              labelWidth="10rem"
-              size="3"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="3"
-              >
-                <div
-                  className="c2"
-                  size="3"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 1
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              inlineLabel={true}
-              isRow={false}
-              key=".1"
-              label="my label 2"
-              labelWidth="10rem"
-              size="2"
-            >
-              <styled.div
-                className=""
-                inlineLabel={true}
-                isRow={false}
-                size="2"
-              >
-                <div
-                  className="c9"
-                  size="2"
-                >
-                  <styled.div
-                    inlineLabel={true}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={true}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label 2
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-          </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 `;
 
 exports[`<Form /> should render form without label without a problem 1`] = `
@@ -3720,13 +289,14 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
 }
 
-.c2:first-child {
+.c2:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.c2:not(:first-child) {
   margin-left: 0;
-  margin-top: 0;
 }
 
 .c3 {
@@ -3838,271 +408,83 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   outline: none;
 }
 
-<Form
-  className=""
+<form
+  class="c0"
   name="form"
-  onSubmit={[Function]}
 >
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
+  <div
+    class="c1"
+    data-testid="form-group"
   >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
     >
-      <Group
-        className=""
-        inlineLabels={false}
-        labelsWidth="10rem"
-        row={false}
+      <div
+        class="c3"
       >
-        <styled.div
-          className=""
-          row={false}
+        <div
+          class="c4"
         >
           <div
-            className="c1"
+            class="c5"
           >
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={false}
-              key=".0"
-              label=""
-              labelWidth="10rem"
-              size="1"
+            <div
+              class="c6"
+              width="25rem"
             >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.div>
-                        <div
-                          className="c4"
-                        >
-                          <styled.div>
-                            <div
-                              className="c5"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c6"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c7"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={false}
-              key=".1"
-              label=""
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.div>
-                        <div
-                          className="c4"
-                        >
-                          <styled.div>
-                            <div
-                              className="c5"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c6"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c7"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
+              <input
+                class="c7"
+                data-testid="input"
+                id=""
+                placeholder="tape inside me"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
           </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <div
+            class="c5"
+          >
+            <div
+              class="c6"
+              width="25rem"
+            >
+              <input
+                class="c7"
+                data-testid="input"
+                id=""
+                placeholder="tape inside me"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 `;
 
-exports[`<Form /> should render withouth a problem 1`] = `
+exports[`<Form /> should render row form with inline labels without a problem 1`] = `
 .c0 {
   width: 100%;
   height: auto;
@@ -4124,13 +506,274 @@ exports[`<Form /> should render withouth a problem 1`] = `
   -ms-flex: 1;
   flex: 1;
   width: auto;
-  margin-left: 0;
-  margin-top: 0.7rem;
 }
 
-.c2:first-child {
+.c2:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.c2:not(:first-child) {
+  margin-left: 3.1rem;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 0;
+}
+
+.c4 {
+  width: 10rem;
+  min-height: 1.4rem;
+  color: hsl(213,17%,20%);
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  height: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
   margin-top: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(207,22%,90%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c8::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8:focus,
+.c8:active {
+  outline: none;
+}
+
+<form
+  class="c0"
+  name="form"
+>
+  <div
+    class="c1"
+    data-testid="form-group"
+  >
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
+    >
+      <div
+        class="c3"
+      >
+        <label
+          class="c4"
+          width="10rem"
+        >
+          my label 1
+        </label>
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <div
+              class="c7"
+              width="25rem"
+            >
+              <input
+                class="c8"
+                data-testid="input"
+                id=""
+                placeholder=""
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
+    >
+      <div
+        class="c3"
+      >
+        <label
+          class="c4"
+          width="10rem"
+        >
+          my label 2
+        </label>
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <div
+              class="c7"
+              width="25rem"
+            >
+              <input
+                class="c8"
+                data-testid="input"
+                id=""
+                placeholder=""
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`<Form /> should render without a problem 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+}
+
+.c2:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.c2:not(:first-child) {
+  margin-left: 0;
 }
 
 .c3 {
@@ -4297,254 +940,76 @@ exports[`<Form /> should render withouth a problem 1`] = `
   outline: none;
 }
 
-<Form
-  className=""
+<form
+  class="c0"
   name="form"
-  onSubmit={[Function]}
 >
-  <styled.form
-    className=""
-    name="form"
-    onSubmit={[Function]}
+  <div
+    class="c1"
+    data-testid="form-group"
   >
-    <form
-      className="c0"
-      name="form"
-      onSubmit={[Function]}
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
     >
-      <Group
-        className=""
-        inlineLabels={false}
-        labelsWidth="10rem"
-        row={false}
+      <div
+        class="c3"
       >
-        <styled.div
-          className=""
-          row={false}
+        <label
+          class="c4"
+          width="10rem"
+        >
+          my label
+        </label>
+        <div
+          class="c5"
         >
           <div
-            className="c1"
+            class="c6"
           >
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={false}
-              key=".0"
-              label="my label"
-              labelWidth="10rem"
-              size="1"
+            <div
+              class="c7"
+              width="25rem"
             >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.label
-                        hasFocus={false}
-                        labelInline={false}
-                        width="10rem"
-                      >
-                        <label
-                          className="c4"
-                          width="10rem"
-                        >
-                          my label
-                        </label>
-                      </styled.label>
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <TextInput
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                className=""
-                                disabled={false}
-                                error={false}
-                                fluid={false}
-                                ghost={false}
-                                id=""
-                                info={false}
-                                key=".0"
-                                label={null}
-                                labelPosition="left"
-                                loading={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                placeholder="tape inside me"
-                                search={false}
-                                success={false}
-                                tabIndex="0"
-                                type="text"
-                                value={null}
-                                warning={false}
-                                width="25rem"
-                              >
-                                <styled.div
-                                  className=""
-                                  disabled={false}
-                                  error={false}
-                                  ghost={false}
-                                  hasFocus={false}
-                                  info={false}
-                                  success={false}
-                                  warning={false}
-                                  width="25rem"
-                                >
-                                  <div
-                                    className="c7"
-                                    disabled={false}
-                                    width="25rem"
-                                  >
-                                    <styled.input
-                                      data-testid="input"
-                                      disabled={false}
-                                      id=""
-                                      innerRef={[Function]}
-                                      onBlur={[Function]}
-                                      onChange={[Function]}
-                                      onFocus={[Function]}
-                                      placeholder="tape inside me"
-                                      tabIndex="0"
-                                      type="text"
-                                      value=""
-                                    >
-                                      <input
-                                        className="c8"
-                                        data-testid="input"
-                                        disabled={false}
-                                        id=""
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        placeholder="tape inside me"
-                                        tabIndex="0"
-                                        type="text"
-                                        value=""
-                                      />
-                                    </styled.input>
-                                  </div>
-                                </styled.div>
-                              </TextInput>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
-            <Form.Field
-              className=""
-              inlineLabel={false}
-              isRow={false}
-              key=".1"
-              label=""
-              labelWidth="10rem"
-              size="1"
-            >
-              <styled.div
-                className=""
-                inlineLabel={false}
-                isRow={false}
-                size="1"
-              >
-                <div
-                  className="c2"
-                  size="1"
-                >
-                  <styled.div
-                    inlineLabel={false}
-                  >
-                    <div
-                      className="c3"
-                    >
-                      <styled.div>
-                        <div
-                          className="c5"
-                        >
-                          <styled.div>
-                            <div
-                              className="c6"
-                            >
-                              <Button
-                                _onBlur={[Function]}
-                                _onFocus={[Function]}
-                                key=".0"
-                                primary={true}
-                                type="submit"
-                              >
-                                <Button
-                                  _onBlur={[Function]}
-                                  _onFocus={[Function]}
-                                  appearance="default"
-                                  className=""
-                                  disabled={false}
-                                  fluid={false}
-                                  icon={null}
-                                  iconPosition="left"
-                                  onClick={[Function]}
-                                  primary={true}
-                                  size="default"
-                                  type="submit"
-                                >
-                                  <styled.button
-                                    _onBlur={[Function]}
-                                    _onFocus={[Function]}
-                                    appearance="default"
-                                    className=""
-                                    disabled={false}
-                                    fluid={false}
-                                    icon={null}
-                                    iconPosition="left"
-                                    onClick={[Function]}
-                                    primary={true}
-                                    size="default"
-                                    type="submit"
-                                  >
-                                    <button
-                                      className="c9"
-                                      disabled={false}
-                                      icon={null}
-                                      onClick={[Function]}
-                                      size="default"
-                                      type="submit"
-                                    >
-                                      Hello
-                                    </button>
-                                  </styled.button>
-                                </Button>
-                              </Button>
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
-              </styled.div>
-            </Form.Field>
+              <input
+                class="c8"
+                data-testid="input"
+                id=""
+                placeholder="tape inside me"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
           </div>
-        </styled.div>
-      </Group>
-    </form>
-  </styled.form>
-</Form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c2"
+      data-testid="form-field"
+      size="1"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <button
+              class="c9"
+              type="submit"
+            >
+              Hello
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 `;
