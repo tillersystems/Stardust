@@ -77,9 +77,14 @@ exports[`<Form /> should render form block without a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -94,7 +99,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +119,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -128,24 +133,24 @@ exports[`<Form /> should render form block without a problem 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -220,7 +225,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -260,7 +265,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -278,7 +283,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -336,7 +341,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -376,7 +381,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -394,7 +399,7 @@ exports[`<Form /> should render form block without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -514,9 +519,14 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -531,7 +541,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -551,7 +561,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -565,24 +575,24 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -657,7 +667,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -697,7 +707,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -715,7 +725,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -783,7 +793,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -823,7 +833,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -841,7 +851,7 @@ exports[`<Form /> should render form label inline without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -962,9 +972,14 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -986,7 +1001,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   margin-top: 1.5rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1006,7 +1021,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1020,24 +1035,24 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -1112,7 +1127,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -1152,7 +1167,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -1170,7 +1185,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -1238,7 +1253,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -1278,7 +1293,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -1296,7 +1311,7 @@ exports[`<Form /> should render form row label inline without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -1408,9 +1423,14 @@ exports[`<Form /> should render form row without a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -1432,7 +1452,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
   margin-top: 1.5rem;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1452,7 +1472,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1466,24 +1486,24 @@ exports[`<Form /> should render form row without a problem 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -1558,7 +1578,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -1598,7 +1618,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -1616,7 +1636,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -1684,7 +1704,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -1724,7 +1744,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -1742,7 +1762,7 @@ exports[`<Form /> should render form row without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -1862,9 +1882,14 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -1879,7 +1904,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1899,7 +1924,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1913,24 +1938,24 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -2005,7 +2030,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -2045,7 +2070,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -2063,7 +2088,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -2183,9 +2208,14 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -2200,7 +2230,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2221,7 +2251,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   border-color: hsl(200,74%,46%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2235,24 +2265,24 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -2327,7 +2357,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -2367,7 +2397,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -2385,7 +2415,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -2505,9 +2535,14 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -2522,7 +2557,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2542,7 +2577,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2556,24 +2591,24 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -2648,7 +2683,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -2688,7 +2723,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -2706,7 +2741,7 @@ exports[`<Form /> should render form with highlighted label when has focus 3`] =
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -2826,9 +2861,14 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -2843,7 +2883,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2863,7 +2903,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2877,24 +2917,24 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -2969,7 +3009,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -3009,7 +3049,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -3027,7 +3067,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -3095,7 +3135,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -3135,7 +3175,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -3153,7 +3193,7 @@ exports[`<Form /> should render form with labelWidth value 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -3219,7 +3259,7 @@ exports[`<Form /> should render form with size value 1`] = `
   margin-top: 0;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3234,7 +3274,7 @@ exports[`<Form /> should render form with size value 1`] = `
   margin-top: 0;
 }
 
-.c8:first-child {
+.c9:first-child {
   margin-left: 0;
   margin-top: 0;
 }
@@ -3293,9 +3333,14 @@ exports[`<Form /> should render form with size value 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -3310,7 +3355,7 @@ exports[`<Form /> should render form with size value 1`] = `
   margin-top: 0;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3330,7 +3375,7 @@ exports[`<Form /> should render form with size value 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3344,24 +3389,24 @@ exports[`<Form /> should render form with size value 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -3436,7 +3481,7 @@ exports[`<Form /> should render form with size value 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -3476,7 +3521,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -3494,7 +3539,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -3535,7 +3580,7 @@ exports[`<Form /> should render form with size value 1`] = `
                 size="2"
               >
                 <div
-                  className="c8"
+                  className="c9"
                   size="2"
                 >
                   <styled.div
@@ -3562,7 +3607,7 @@ exports[`<Form /> should render form with size value 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -3602,7 +3647,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -3620,7 +3665,7 @@ exports[`<Form /> should render form with size value 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -3716,9 +3761,14 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c5 {
+  height: 100%;
 }
 
 .c1 {
@@ -3733,7 +3783,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   margin-top: 0;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3753,7 +3803,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c6 {
+.c7 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3767,24 +3817,24 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   text-align: left;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c6:-moz-placeholder {
+.c7:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c6:focus,
-.c6:active {
+.c7:focus,
+.c7:active {
   outline: none;
 }
 
@@ -3847,7 +3897,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c5"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -3887,7 +3937,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c5"
+                                    className="c6"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -3905,7 +3955,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c6"
+                                        className="c7"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -3961,7 +4011,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c5"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -4001,7 +4051,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c5"
+                                    className="c6"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -4019,7 +4069,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c6"
+                                        className="c7"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -4129,9 +4179,14 @@ exports[`<Form /> should render withouth a problem 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.c6 {
+  height: 100%;
 }
 
 .c1 {
@@ -4146,7 +4201,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   margin-top: 0;
 }
 
-.c8 {
+.c9 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4179,15 +4234,15 @@ exports[`<Form /> should render withouth a problem 1`] = `
   padding: 0.75rem 2.2rem;
 }
 
-.c8 svg > path {
+.c9 svg > path {
   fill: hsl(0,100%,100%);
 }
 
-.c8 svg > path {
+.c9 svg > path {
   fill: hsl(213,17%,20%);
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4207,7 +4262,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
   background-color: hsl(0,100%,100%);
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4221,24 +4276,24 @@ exports[`<Form /> should render withouth a problem 1`] = `
   text-align: left;
 }
 
-.c7::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
+.c8:-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7::-moz-placeholder {
+.c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 
-.c7:focus,
-.c7:active {
+.c8:focus,
+.c8:active {
   outline: none;
 }
 
@@ -4313,7 +4368,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <TextInput
                                 _onBlur={[Function]}
@@ -4353,7 +4408,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                   width="25rem"
                                 >
                                   <div
-                                    className="c6"
+                                    className="c7"
                                     disabled={false}
                                     width="25rem"
                                   >
@@ -4371,7 +4426,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                       value=""
                                     >
                                       <input
-                                        className="c7"
+                                        className="c8"
                                         data-testid="input"
                                         disabled={false}
                                         id=""
@@ -4427,7 +4482,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                         >
                           <styled.div>
                             <div
-                              className=""
+                              className="c6"
                             >
                               <Button
                                 _onBlur={[Function]}
@@ -4465,7 +4520,7 @@ exports[`<Form /> should render withouth a problem 1`] = `
                                     type="submit"
                                   >
                                     <button
-                                      className="c8"
+                                      className="c9"
                                       disabled={false}
                                       icon={null}
                                       onClick={[Function]}

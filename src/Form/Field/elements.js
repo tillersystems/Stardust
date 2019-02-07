@@ -109,7 +109,10 @@ export const ElementContainer = styled.div`
   justify-content: center;
 
   width: 100%;
+  height: 100%;
   flex: 1;
 `;
 
-export const ElementWrapper = styled.div``;
+export const ElementWrapper = styled.div`
+  height: 100%;
+`;
