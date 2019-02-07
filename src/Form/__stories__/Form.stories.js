@@ -32,6 +32,17 @@ storiesOf('Form', module)
       },
       'Sizes',
     );
+    const labelWidth = number(
+      'Label width',
+      10,
+      {
+        range: true,
+        min: 5,
+        max: 15,
+        step: 0.5,
+      },
+      'Sizes',
+    );
     const nameSizeValue = number(
       'Name size',
       1,
@@ -62,7 +73,7 @@ storiesOf('Form', module)
           inlineLabels={inlineLabelsValue}
           labelsWidth={`${labelsWidth}rem`}
         >
-          <Form.Field label="Name" size={nameSizeValue.toString()}>
+          <Form.Field label="Name" size={nameSizeValue.toString()} labelWidth={`${labelWidth}rem`}>
             <TextInput fluid placeholder="Name" />
           </Form.Field>
           <Form.Field label="Surname" size={surnameSizeValue.toString()}>

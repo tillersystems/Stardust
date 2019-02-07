@@ -1,5 +1,5 @@
 import React from 'react';
-import 'jest-styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Form from '..';
 import { Button, TextInput } from '../..';
@@ -162,5 +162,25 @@ describe('<Form />', () => {
     );
 
     expect(render).toMatchSnapshot();
+  });
+
+  test('should render form with custom width on field level', () => {
+    const { getByText } = render(
+      <Form onSubmit={() => {}} name="form">
+        <Form.Group inlineLabels labelsWidth="10rem">
+          <Form.Field label="I am customized" size="3" labelWidth="15rem">
+            <TextInput />
+          </Form.Field>
+          <Form.Field label="I am not" size="2">
+            <TextInput />
+          </Form.Field>
+        </Form.Group>
+      </Form>,
+    );
+
+    const customFieldNode = getByText('I am customized');
+    const nonCustomFieldNode = getByText('I am not');
+    expect(customFieldNode).toHaveStyleRule('width', '15rem');
+    expect(nonCustomFieldNode).toHaveStyleRule('width', '10rem');
   });
 });

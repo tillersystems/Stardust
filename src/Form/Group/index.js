@@ -13,7 +13,7 @@ const Group = ({ row, inlineLabels, labelsWidth, className, children }) => (
       React.cloneElement(child, {
         isRow: row,
         inlineLabel: inlineLabels,
-        labelWidth: labelsWidth,
+        labelWidth: child.props.labelWidth || labelsWidth,
       }),
     )}
   </Container>
