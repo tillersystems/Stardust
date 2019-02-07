@@ -18,9 +18,9 @@ export const Header = styled.button`
   background: linear-gradient(
     180deg,
     ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+    ${({ theme: { palette } }) => palette.paleGrey} 100%
   );
-  color: ${({ theme: { palette } }) => palette.spaceGrey};
+  color: ${({ theme: { palette } }) => palette.darkBlue};
 
   &::after {
     content: '';
@@ -71,7 +71,7 @@ export const Menu = styled.ul`
   background: linear-gradient(
     180deg,
     ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+    ${({ theme: { palette } }) => palette.paleGrey} 100%
   );
 
   color: ${({ theme: { palette } }) => palette.spaceGrey};
@@ -86,12 +86,15 @@ export const MenuItem = styled.li`
   padding: 0.9rem 1.2rem;
 
   &:first-child {
-    padding-top: 1.8rem;
+    padding-top: 1.1rem;
   }
 
   &:last-child {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.1rem;
   }
 
   cursor: pointer;
+  :hover {
+    background: ${({ theme: { palette } }) => palette.veryLightBlue} 0%;
+  }
 `;
