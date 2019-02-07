@@ -209,7 +209,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 </div>
 `;
 
-exports[`<KpiBlock /> should render withouth a problem 1`] = `
+exports[`<KpiBlock /> should render without a problem 1`] = `
 .c1 {
   color: hsl(213,17%,20%);
   font-size: 3rem;

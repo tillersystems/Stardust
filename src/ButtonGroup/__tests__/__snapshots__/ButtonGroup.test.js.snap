@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonGroup /> should render withouth a problem 1`] = `
+exports[`<ButtonGroup /> should render without a problem 1`] = `
 .c2 {
   position: relative;
   display: -webkit-inline-box;

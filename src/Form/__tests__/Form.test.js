@@ -5,7 +5,7 @@ import Form from '..';
 import { Button, TextInput } from '../..';
 
 describe('<Form />', () => {
-  it('should render withouth a problem', () => {
+  it('should render without a problem', () => {
     const render = mountWithTheme(
       <Form onSubmit={() => {}} name="form">
         <Form.Group>

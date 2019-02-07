@@ -480,7 +480,7 @@ exports[`<TextInput /> should render search status input without problem when fo
 </div>
 `;
 
-exports[`<TextInput /> should render withouth a problem 1`] = `
+exports[`<TextInput /> should render without a problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -552,6 +552,6 @@ exports[`<TextInput /> should render withouth a problem 1`] = `
 </div>
 `;
 
-exports[`<TextInput /> should render withouth a problem when focused and unfocused 1`] = `[Function]`;
+exports[`<TextInput /> should render without a problem when focused and unfocused 1`] = `[Function]`;
 
-exports[`<TextInput /> should render withouth a problem when focused and unfocused 2`] = `[Function]`;
+exports[`<TextInput /> should render without a problem when focused and unfocused 2`] = `[Function]`;

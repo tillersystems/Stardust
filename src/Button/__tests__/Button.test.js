@@ -6,7 +6,7 @@ import Icon from '../../Icon';
 import Theme from '../../Theme';
 
 describe('<Button />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Button>Text</Button>);
 
     expect(container.firstChild).toMatchSnapshot();

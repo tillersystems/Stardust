@@ -26,7 +26,7 @@ exports[`<Value /> should render as postive 1`] = `
 </div>
 `;
 
-exports[`<Value /> should render withouth a problem 1`] = `
+exports[`<Value /> should render without a problem 1`] = `
 .c0 {
   color: hsl(213,17%,20%);
 }

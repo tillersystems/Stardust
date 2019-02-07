@@ -39,7 +39,7 @@ exports[`<Avatar /> should render with a custom user image 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> should render withouth a custom size 1`] = `
+exports[`<Avatar /> should render without a custom size 1`] = `
 .c1 {
   border-radius: 50%;
 }
@@ -78,7 +78,7 @@ exports[`<Avatar /> should render withouth a custom size 1`] = `
 </div>
 `;
 
-exports[`<Avatar /> should render withouth a problem 1`] = `
+exports[`<Avatar /> should render without a problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;

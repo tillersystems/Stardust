@@ -4,7 +4,7 @@ import Status from '..';
 import Theme from '../../../Theme';
 
 describe('<Status />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Status status="info" />);
 
     expect(container.firstChild).toMatchSnapshot();

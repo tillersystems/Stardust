@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Logo /> should render withouth a problem 1`] = `
+exports[`<Logo /> should render without a problem 1`] = `
 <svg
   data-testid="logo"
   height="59"

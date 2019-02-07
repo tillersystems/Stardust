@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Weeks /> should render withouth a problem 1`] = `
+exports[`<Weeks /> should render without a problem 1`] = `
 .c1 {
   font-size: 1.4rem;
   line-height: 3rem;

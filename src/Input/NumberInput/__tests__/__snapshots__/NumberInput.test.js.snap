@@ -350,7 +350,7 @@ exports[`<NumberInput /> should have an icon label 1`] = `
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem 1`] = `
+exports[`<NumberInput /> should render without a problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -422,7 +422,7 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem when focused and unfocused 1`] = `
+exports[`<NumberInput /> should render without a problem when focused and unfocused 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -495,7 +495,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem when focused and unfocused 2`] = `
+exports[`<NumberInput /> should render without a problem when focused and unfocused 2`] = `
 <div
   class="sc-ckVGcZ gHnlnX"
   width="25rem"

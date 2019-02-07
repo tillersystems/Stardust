@@ -4,7 +4,7 @@ import 'jest-styled-components';
 import Tag from '..';
 
 describe('<Tag />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Tag />);
 
     expect(container.firstChild).toMatchSnapshot();

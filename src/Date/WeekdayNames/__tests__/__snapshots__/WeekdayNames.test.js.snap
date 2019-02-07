@@ -60,7 +60,7 @@ exports[`<WeekdayNames /> should render with a different locale 1`] = `
 </div>
 `;
 
-exports[`<WeekdayNames /> should render withouth a problem 1`] = `
+exports[`<WeekdayNames /> should render without a problem 1`] = `
 .c1 {
   font-size: 1.4rem;
 }

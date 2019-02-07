@@ -3,7 +3,7 @@ import React from 'react';
 import KpiBlock from '..';
 
 describe('<KpiBlock />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<KpiBlock title="title" value="value" />);
 
     expect(container.firstChild).toMatchSnapshot();

@@ -4,7 +4,7 @@ import { fireEvent } from 'react-testing-library';
 import Modal from '..';
 
 describe('<Modal />', () => {
-  test('should render open modal withouth a problem', () => {
+  test('should render open modal without a problem', () => {
     const Header = 'My title';
     const Body = 'body';
     const Footer = 'footer';
