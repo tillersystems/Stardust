@@ -69,7 +69,7 @@ describe('<TextInput />', () => {
   });
 
   test('should have a different type', () => {
-    const { getByTestId } = render(<TextInput password value="" />);
+    const { getByTestId } = render(<TextInput type="password" value="" />);
     const inputeNode = getByTestId('input');
 
     expect(inputeNode.type).toMatchSnapshot();

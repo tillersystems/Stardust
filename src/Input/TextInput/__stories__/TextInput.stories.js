@@ -31,7 +31,6 @@ storiesOf('Input - TextInput', module)
     const fluidValue = boolean('Fluid', false, 'Size');
 
     const disabledValue = boolean('Disabled', false, 'General');
-    const isPasswordValue = boolean('Is password', false, 'General');
 
     const loadingValue = boolean('Loading', false, 'Status');
     const infoValue = boolean('Info', false, 'Status');
@@ -43,7 +42,6 @@ storiesOf('Input - TextInput', module)
     return (
       <TextInput
         width={`${widthValue}rem`}
-        password={isPasswordValue}
         fluid={fluidValue}
         placeholder="Write some stuff"
         disabled={disabledValue}

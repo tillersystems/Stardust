@@ -169,7 +169,7 @@ class NumberInput extends PureComponent {
       parsedValue = max;
     }
 
-    this.setState({ ...this.state, parsedValue }, () => {
+    this.setState({ parsedValue }, () => {
       onChange(parsedValue);
     });
   };
@@ -183,12 +183,9 @@ class NumberInput extends PureComponent {
     const { rawValue, parsedValue } = this.state;
     const { decimals, separator } = this.props;
 
-    return (parsedValue
-      ? parsedValue.toFixed(decimals)
-      : rawValue
-      ? rawValue
-      : (0).toFixed(decimals)
-    ).replace('.', separator);
+    return rawValue
+      ? (parsedValue ? parsedValue.toFixed(decimals) : rawValue).replace('.', separator)
+      : rawValue;
   };
 
   /**
@@ -206,7 +203,7 @@ class NumberInput extends PureComponent {
     if (value && this.isNumber(rawValue)) {
       onChange(parsedValue);
     } else {
-      this.setState({ ...this.state, rawValue }, () => {
+      this.setState({ rawValue }, () => {
         this.updateValue(parsedValue);
       });
     }
@@ -217,7 +214,7 @@ class NumberInput extends PureComponent {
    */
   handleFocus = () => {
     const { onFocus, _onFocus } = this.props;
-    this.setState({ ...this.state, hasFocus: true }, () => {
+    this.setState({ hasFocus: true }, () => {
       onFocus();
       _onFocus();
     });
@@ -228,7 +225,7 @@ class NumberInput extends PureComponent {
    */
   handleBlur = () => {
     const { onBlur, _onBlur } = this.props;
-    this.setState({ ...this.state, hasFocus: false }, () => {
+    this.setState({ hasFocus: false }, () => {
       onBlur();
       _onBlur();
     });
