@@ -226,7 +226,7 @@ export default styled(Select)`
   position: relative;
   user-select: none;
   width: ${({ width }) => (/^\d+(rem|px)$/.test(width) ? width : 'auto')};
-  height: 100%;
+  height: 4rem;
 
   /* Disabled */
   ${({ disabled }) =>

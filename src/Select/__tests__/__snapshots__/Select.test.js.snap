@@ -51,7 +51,7 @@ exports[`<Select /> should render without a problem 1`] = `
   -ms-user-select: none;
   user-select: none;
   width: auto;
-  height: 100%;
+  height: 4rem;
 }
 
 <div
@@ -118,7 +118,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   -ms-user-select: none;
   user-select: none;
   width: auto;
-  height: 100%;
+  height: 4rem;
 }
 
 .c0 .c1 {
