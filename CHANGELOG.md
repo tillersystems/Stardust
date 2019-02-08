@@ -1,3 +1,9 @@
+## [1.20.3](https://github.com/tillersystems/Stardust/compare/v1.20.2...v1.20.3) (2019-02-08)
+
+### Bug Fixes
+
+- Form and Select styles ([#395](https://github.com/tillersystems/Stardust/issues/395)) ([bcadfb3](https://github.com/tillersystems/Stardust/commit/bcadfb3))
+
 ## [1.20.2](https://github.com/tillersystems/Stardust/compare/v1.20.1...v1.20.2) (2019-02-08)
 
 ### Bug Fixes
