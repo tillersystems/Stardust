@@ -1,3 +1,9 @@
+## [1.20.2](https://github.com/tillersystems/Stardust/compare/v1.20.1...v1.20.2) (2019-02-08)
+
+### Bug Fixes
+
+- style update or fix of several components ([#386](https://github.com/tillersystems/Stardust/issues/386)) ([3e9dad8](https://github.com/tillersystems/Stardust/commit/3e9dad8))
+
 ## [1.20.1](https://github.com/tillersystems/Stardust/compare/v1.20.0...v1.20.1) (2019-02-01)
 
 ### Bug Fixes
