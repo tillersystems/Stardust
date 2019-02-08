@@ -79,6 +79,18 @@ storiesOf('Form', module)
           <Form.Field label="Surname" size={surnameSizeValue.toString()}>
             <TextInput fluid placeholder="Surname" />
           </Form.Field>
+        </Form.Group>
+        <Form.Group
+          row={rowValue}
+          inlineLabels={inlineLabelsValue}
+          labelsWidth={`${labelsWidth}rem`}
+        >
+          <Form.Field label="Name" size={nameSizeValue.toString()} labelWidth={`${labelWidth}rem`}>
+            <TextInput fluid placeholder="Name" />
+          </Form.Field>
+          <Form.Field label="Surname" size={surnameSizeValue.toString()}>
+            <TextInput fluid placeholder="Surname" />
+          </Form.Field>
           <Form.Field size="20rem">
             <Button fluid appearance="primary">
               Validate

@@ -26,10 +26,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
 
 .c2:not(:last-child) {
   margin-bottom: 0.7rem;
-}
-
-.c2:not(:first-child) {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .c3 {
@@ -57,6 +54,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   -ms-flex-align: center;
   align-items: center;
   margin-left: 0;
+  margin-bottom: 0.7rem;
 }
 
 .c4 {
@@ -107,7 +105,10 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  margin-top: 0;
+}
+
+.c1:not(:first-child) {
+  margin-top: 0.7rem;
 }
 
 .c7 {
@@ -222,16 +223,16 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
   name="form"
 >
   <div
-    class="sc-bZQynM elfGJt"
+    class="sc-bZQynM uJaUG"
     data-testid="form-group"
   >
     <div
-      class="sc-bwzfXH eYrDQH"
+      class="sc-bwzfXH btkNfP"
       data-testid="form-field"
       size="1"
     >
       <div
-        class="sc-htpNat ddBMvJ"
+        class="sc-htpNat bnmNtp"
       >
         <label
           class="sc-bxivhb iiFPKV"
@@ -293,10 +294,7 @@ exports[`<Form /> should render form without label without a problem 1`] = `
 
 .c2:not(:last-child) {
   margin-bottom: 0.7rem;
-}
-
-.c2:not(:first-child) {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .c3 {
@@ -350,7 +348,10 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  margin-top: 0;
+}
+
+.c1:not(:first-child) {
+  margin-top: 0.7rem;
 }
 
 .c6 {
@@ -509,11 +510,8 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
 }
 
 .c2:not(:last-child) {
-  margin-bottom: 0.7rem;
-}
-
-.c2:not(:first-child) {
-  margin-left: 3.1rem;
+  margin-bottom: 0;
+  margin-right: 3.1rem;
 }
 
 .c3 {
@@ -541,6 +539,7 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   -ms-flex-align: center;
   align-items: center;
   margin-left: 0;
+  margin-bottom: 0.7rem;
 }
 
 .c4 {
@@ -591,14 +590,13 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  margin-top: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .c1:not(:first-child) {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .c7 {
@@ -770,10 +768,7 @@ exports[`<Form /> should render without a problem 1`] = `
 
 .c2:not(:last-child) {
   margin-bottom: 0.7rem;
-}
-
-.c2:not(:first-child) {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .c3 {
@@ -841,7 +836,10 @@ exports[`<Form /> should render without a problem 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  margin-top: 0;
+}
+
+.c1:not(:first-child) {
+  margin-top: 0.7rem;
 }
 
 .c9 {
