@@ -21,11 +21,8 @@ export const Wrapper = styled.div`
   width: ${({ size }) => getWrapperWidth(size)};
 
   &:not(:last-child) {
-    margin-bottom: ${({ theme: { dimensions } }) => dimensions.small};
-  }
-
-  &:not(:first-child) {
-    margin-left: ${({ isRow, theme: { dimensions } }) => (isRow ? dimensions.big : 0)};
+    margin-bottom: ${({ isRow, theme: { dimensions } }) => (isRow ? 0 : dimensions.small)};
+    margin-right: ${({ isRow, theme: { dimensions } }) => (isRow ? dimensions.big : 0)};
   }
 `;
 
@@ -42,6 +39,7 @@ export const Container = styled.div`
       flex-direction: row;
       align-items: center;
       margin-left: 0;
+      margin-bottom: ${({ theme: { dimensions } }) => dimensions.small};
     `};
 `;
 

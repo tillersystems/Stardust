@@ -1,19 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100%;
 
-  margin-top: 0;
+  &:not(:first-child) {
+    ${({ row }) => (row ? `margin-top: 1rem;` : `margin-top: 0.7rem;`)}
+  }
 
-  ${({ row }) =>
-    row &&
-    css`
-      &:not(:first-child) {
-        margin-top: ${({ theme: { dimensions } }) => dimensions.medium};
-      }
-      flex-direction: row;
-    `};
+  ${({ row }) => row && `flex-direction: row;`};
 `;
