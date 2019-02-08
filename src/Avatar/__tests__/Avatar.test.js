@@ -3,7 +3,7 @@ import React from 'react';
 import Avatar from '..';
 
 describe('<Avatar />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Avatar name="James Bond" />);
 
     expect(container.firstChild).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('<Avatar />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render withouth a custom size', () => {
+  test('should render without a custom size', () => {
     const { container } = render(
       <Avatar name="James Bond" size={4.1} src="http://urlofmyimage.com" />,
     );

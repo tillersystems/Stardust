@@ -4,7 +4,7 @@ import { fireEvent } from 'react-testing-library';
 import { Button, ButtonGroup } from '../..';
 
 describe('<ButtonGroup />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(
       <ButtonGroup>
         <Button name="ON" appearance="secondary">

@@ -78,10 +78,10 @@ class Field extends PureComponent {
     });
 
     return (
-      <Wrapper isRow={isRow} inlineLabel={inlineLabel} size={size} className={className}>
+      <Wrapper isRow={isRow} size={size} className={className} data-testid="form-field">
         <Container inlineLabel={inlineLabel}>
           {label !== null && !(isRow == inlineLabel && label === '') && (
-            <Label labelInline={inlineLabel} width={labelWidth} hasFocus={hasFocus}>
+            <Label inlineLabel={inlineLabel} width={labelWidth} hasFocus={hasFocus}>
               {label}
             </Label>
           )}

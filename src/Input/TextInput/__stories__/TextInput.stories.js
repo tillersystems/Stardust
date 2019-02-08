@@ -31,7 +31,6 @@ storiesOf('Input - TextInput', module)
     const fluidValue = boolean('Fluid', false, 'Size');
 
     const disabledValue = boolean('Disabled', false, 'General');
-    const isPasswordValue = boolean('Is password', false, 'General');
 
     const loadingValue = boolean('Loading', false, 'Status');
     const infoValue = boolean('Info', false, 'Status');
@@ -43,9 +42,8 @@ storiesOf('Input - TextInput', module)
     return (
       <TextInput
         width={`${widthValue}rem`}
-        password={isPasswordValue}
         fluid={fluidValue}
-        placeHolder="Write some stuff"
+        placeholder="Write some stuff"
         disabled={disabledValue}
         onFocus={onFocusAction}
         onBlur={onBlurAction}
@@ -67,7 +65,7 @@ storiesOf('Input - TextInput', module)
       <TextInput
         value={valueValue}
         onChange={onChangeAction}
-        placeHolder="Write some stuff"
+        placeholder="Write some stuff"
         disabled={disabledValue}
         onFocus={onFocusAction}
         onBlur={onBlurAction}
@@ -87,7 +85,7 @@ storiesOf('Input - TextInput', module)
             storeWithState.set({ value });
             onChangeAction(value);
           }}
-          placeHolder="Write some stuff"
+          placeholder="Write some stuff"
           disabled={disabledValue}
           onFocus={onFocusAction}
           onBlur={onBlurAction}
@@ -104,7 +102,7 @@ storiesOf('Input - TextInput', module)
 
     return (
       <TextInput
-        placeHolder="Write some stuff"
+        placeholder="Write some stuff"
         disabled={disabledValue}
         label={{ text: labelValue }}
         labelPosition={labelPositionValue}
@@ -120,7 +118,7 @@ storiesOf('Input - TextInput', module)
 
     return (
       <TextInput
-        placeHolder="Write some stuff"
+        placeholder="Write some stuff"
         disabled={disabledValue}
         label={{ icon: labelValue }}
         labelPosition={labelPositionValue}

@@ -15,7 +15,7 @@ import { TextInput } from '@tillersystems/stardust';
 - `fluid` - whether the input takes all available space or not.
 - `value` - the value of the input.
 - `tabIndex` - index of the input in a parent form.
-- `placeHolder` - placeholder text.
+- `placeholder` - placeholder text.
 - `disabled` - whether the input is disabled or not.
 - `password` - whether the input is a password input or not.
 - `onChange` - handler of input value change.
@@ -39,7 +39,7 @@ import { TextInput } from '@tillersystems/stardust';
 | `id`            | `string` |     `''`     |     -      |
 | `value`         | `string` |     `''`     |     -      |
 | `tabIndex`      | `string` |     `0`      |     -      |
-| `placeHolder`   | `string` |     `''`     |     -      |
+| `placeholder`   | `string` |     `''`     |     -      |
 | `disabled`      |  `bool`  |   `false`    |     -      |
 | `password`      |  `bool`  |   `false`    |     -      |
 | `onChange`      |  `func`  |    `null`    |     -      |
@@ -69,7 +69,7 @@ render() {
     <TextInput
       value={myValue}
       onChange={(newValue) => handleChange(newValue)}
-      placeHolder="Write something..."
+      placeholder="Write something..."
     />
   );
 }

@@ -32,8 +32,9 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * @param {string} width - The width of the input as a string (includes either 'px' or 'rem').
  * @param {boolean} fluid - Whether the component is fluid or not.
  * @param {string} id - The ID of the input in the DOM.
+ * @param {string} type - The type of the input (either 'password' or 'text')
  * @param {string} tabIndex - The tabulation index of the input in its parent form.
- * @param {string} placeHolder - The string to display as a placeholder.
+ * @param {string} placeholder - The string to display as a placeholder.
  * @param {boolean} disabled - Whether the input is disabled or not.
  * @param {string} label - The name of the icon to display as a label (if left undefined, not label
  * will be rendered).
@@ -45,7 +46,6 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * @param {boolean} ghost - Whether to display an input with no border.
  * @param {boolean} search - Whether to display an input that meant for search or not.
  * @param {string} value - The value of the input. If provided, switches to controlled mode.
- * @param {boolean} password - Whether the input is a password input or not.
  * @param {func} onChange - The callback to call when the value of the input is changed.
  * @param {func} onFocus - The callback to call when the input gains focus.
  * @param {func} onBlur - The callback to call when the input looses focus.
@@ -70,11 +70,11 @@ class TextInput extends PureComponent {
 
     // Element related props.
     id: PropTypes.string,
+    type: PropTypes.oneOf(['password', 'text']),
     value: PropTypes.string,
     tabIndex: PropTypes.string,
-    placeHolder: PropTypes.string,
+    placeholder: PropTypes.string,
     disabled: PropTypes.bool,
-    password: PropTypes.bool,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
@@ -108,11 +108,11 @@ class TextInput extends PureComponent {
     fluid: false,
 
     id: '',
+    type: 'text',
     value: null,
     tabIndex: '0',
-    placeHolder: '',
+    placeholder: '',
     disabled: false,
-    password: false,
     onChange: () => {},
     onFocus: () => {},
     onBlur: () => {},
@@ -157,7 +157,7 @@ class TextInput extends PureComponent {
   componentDidUpdate(prevProps) {
     const { value } = this.props;
     if (value !== prevProps.value) {
-      this.setState({ ...this.state, value }, () => {
+      this.setState({ value }, () => {
         const { cursorPosition } = this.state;
 
         this.inputRef.selectionStart = cursorPosition;
@@ -179,7 +179,7 @@ class TextInput extends PureComponent {
       // We constrained to check for nullity since its the only mean to actually ensure that no
       // value was given via prop.
       const value = propValue == null ? eventValue : propValue;
-      this.setState({ ...this.state, value, cursorPosition }, () => {
+      this.setState({ value, cursorPosition }, () => {
         onChange(eventValue);
       });
     }
@@ -221,7 +221,7 @@ class TextInput extends PureComponent {
       fluid,
       id,
       tabIndex,
-      placeHolder,
+      placeholder,
       disabled,
       label,
       labelPosition,
@@ -232,7 +232,7 @@ class TextInput extends PureComponent {
       warning,
       error,
       search,
-      password,
+      type,
     } = this.props;
 
     // We want to display loading status whether the input is disabled or not.
@@ -255,11 +255,11 @@ class TextInput extends PureComponent {
         <InputElement
           data-testid="input"
           innerRef={ref => (this.inputRef = ref)}
-          type={password ? 'password' : 'text'}
+          type={type}
           id={id}
           tabIndex={tabIndex}
           value={value || ''}
-          placeholder={placeHolder}
+          placeholder={placeholder}
           disabled={disabled}
           onChange={this.handleChange}
           onFocus={this.handleFocus}

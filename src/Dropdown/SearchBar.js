@@ -15,7 +15,7 @@ const { func, string } = PropTypes;
  * @param {string} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className // Add a text aside in the select next the selected value.
  * @param {function} onChange // Callback function called when text input change.
- * @param {string} placeHolder // Input placeHolder.
+ * @param {string} placeholder // Input placeholder.
  * @param {string} value // Input value.
  *
  * @return {jsx}
@@ -26,14 +26,14 @@ class SearchBar extends PureComponent {
   static propTypes = {
     className: string,
     onChange: func.isRequired,
-    placeHolder: string,
+    placeholder: string,
     value: string,
   };
 
   /** Default props. */
   static defaultProps = {
     className: '',
-    placeHolder: '',
+    placeholder: '',
     value: '',
   };
 
@@ -52,7 +52,7 @@ class SearchBar extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { className, placeHolder, value } = this.props;
+    const { className, placeholder, value } = this.props;
 
     return (
       <div className={className}>
@@ -61,7 +61,7 @@ class SearchBar extends PureComponent {
           data-test="search-input"
           value={value}
           onChange={this.handleChange}
-          placeHolder={placeHolder}
+          placeholder={placeholder}
           fluid
           search
         />

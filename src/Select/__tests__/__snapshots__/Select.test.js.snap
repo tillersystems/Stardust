@@ -14,8 +14,8 @@ exports[`<Select /> should render without a problem 1`] = `
   font-size: 1.4rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
-  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(240,33%,99%) 100% );
+  color: hsl(213,17%,20%);
 }
 
 .c1::after {
@@ -51,6 +51,7 @@ exports[`<Select /> should render without a problem 1`] = `
   -ms-user-select: none;
   user-select: none;
   width: auto;
+  height: 100%;
 }
 
 <div
@@ -80,8 +81,8 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   font-size: 1.4rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
-  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(216,45%,98%) 100% );
-  color: hsl(207,13%,45%);
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(240,33%,99%) 100% );
+  color: hsl(213,17%,20%);
 }
 
 .c2::after {
@@ -117,6 +118,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   -ms-user-select: none;
   user-select: none;
   width: auto;
+  height: 100%;
 }
 
 .c0 .c1 {

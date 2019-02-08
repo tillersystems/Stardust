@@ -93,7 +93,7 @@ exports[`<NumberInput /> should have a text label 1`] = `
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
 </div>
 `;
@@ -193,7 +193,7 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
   <div
     class="c2"
@@ -345,12 +345,12 @@ exports[`<NumberInput /> should have an icon label 1`] = `
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem 1`] = `
+exports[`<NumberInput /> should render without a problem 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -417,12 +417,12 @@ exports[`<NumberInput /> should render withouth a problem 1`] = `
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem when focused and unfocused 1`] = `
+exports[`<NumberInput /> should render without a problem when focused and unfocused 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -490,12 +490,12 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
 </div>
 `;
 
-exports[`<NumberInput /> should render withouth a problem when focused and unfocused 2`] = `
+exports[`<NumberInput /> should render without a problem when focused and unfocused 2`] = `
 <div
   class="sc-ckVGcZ gHnlnX"
   width="25rem"
@@ -507,7 +507,7 @@ exports[`<NumberInput /> should render withouth a problem when focused and unfoc
     placeholder=""
     tabindex="0"
     type="text"
-    value="0"
+    value=""
   />
 </div>
 `;

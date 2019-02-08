@@ -141,7 +141,7 @@ class Dropdown extends PureComponent {
               {searchable && (
                 <SearchInputContainer>
                   <SearchBar
-                    placeHolder={searchBarPlaceholder}
+                    placeholder={searchBarPlaceholder}
                     onChange={this.handleSearch}
                     value={searchKeyword}
                   />
@@ -191,6 +191,7 @@ const MenuAnimation = posed(Menu)({
 });
 
 export default styled(onClickOutside(Dropdown))`
-  position: relative
-  user-select: none
+  position: relative;
+  user-select: none;
+  height: 100%;
 `;

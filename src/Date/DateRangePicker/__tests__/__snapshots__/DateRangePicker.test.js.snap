@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> should handle previous month 1`] = `[Function]`;
 
-exports[`<DatePicker /> should render withouth a problem 1`] = `
+exports[`<DatePicker /> should render without a problem 1`] = `
 .c19 {
   position: relative;
   display: -webkit-inline-box;

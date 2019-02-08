@@ -31,7 +31,7 @@ const getCommonKnobs = () => {
     successValue: boolean('Success', false, 'Appearance'),
     warningValue: boolean('Warning', false, 'Appearance'),
     errorValue: boolean('Error', false, 'Appearance'),
-    validateValue: boolean('Validate', true, 'Appearance'),
+    validateValue: boolean('Validate', false, 'Appearance'),
 
     // - - - Value knobs - - -
     hasMinValue: boolean('Has minimum', false, 'Value'),

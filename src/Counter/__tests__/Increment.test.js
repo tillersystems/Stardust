@@ -4,7 +4,7 @@ import { fireEvent } from 'react-testing-library';
 import Counter from '..';
 
 describe('<Counter />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Counter />);
 
     expect(container.firstChild).toMatchSnapshot();

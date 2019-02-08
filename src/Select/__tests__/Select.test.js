@@ -167,4 +167,33 @@ describe('<Select />', () => {
 
     expect(container.firstChild).toHaveStyleRule('width', props.width);
   });
+
+  test('should display the first option when no placeholder nor initial value is provided', () => {
+    const { getByText } = render(
+      <Select>
+        <Select.Option value="1">Item 1</Select.Option>
+        <Select.Option value="2">Item 2</Select.Option>
+        <Select.Option value="3">Item 3</Select.Option>
+        <Select.Option value="4">Item 4</Select.Option>
+      </Select>,
+    );
+
+    const displayedOption = getByText('Item 1');
+    expect(displayedOption).toBeInTheDocument();
+  });
+
+  test('should have an initial value', () => {
+    const props = { initialValue: '3' };
+    const { getByText } = render(
+      <Select {...props}>
+        <Select.Option value="1">Item 1</Select.Option>
+        <Select.Option value="2">Item 2</Select.Option>
+        <Select.Option value="3">Item 3</Select.Option>
+        <Select.Option value="4">Item 4</Select.Option>
+      </Select>,
+    );
+
+    const displayedOption = getByText('Item 3');
+    expect(displayedOption).toBeInTheDocument();
+  });
 });

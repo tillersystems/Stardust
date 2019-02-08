@@ -15,7 +15,7 @@ describe('<Weeks />', () => {
     zone: 'Europe/Paris',
   });
 
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(
       <Week
         currentMonth={dateValue}

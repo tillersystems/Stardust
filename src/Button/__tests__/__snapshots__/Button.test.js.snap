@@ -254,7 +254,7 @@ exports[`<Button /> should render with another appearance 1`] = `
 </button>
 `;
 
-exports[`<Button /> should render withouth a problem 1`] = `
+exports[`<Button /> should render without a problem 1`] = `
 .c0 {
   position: relative;
   display: -webkit-inline-box;

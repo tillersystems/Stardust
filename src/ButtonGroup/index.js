@@ -140,7 +140,7 @@ export default styled(ButtonGroup)`
 
     &[data-isactive='false'][data-appearance='secondary'],
     &[data-isactive='false'][data-appearance='default'] {
-      color: ${({ theme: { palette } }) => transparentize(0.3, palette.spaceGrey)};
+      color: ${({ theme: { palette } }) => transparentize(0.1, palette.spaceGrey)};
       svg > path {
         fill: ${({ theme: { palette } }) => transparentize(0.3, palette.spaceGrey)};
       }

@@ -4,7 +4,7 @@ import 'jest-styled-components';
 import Logo from '..';
 
 describe('<Logo />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Logo />);
     expect(container.firstChild).toMatchSnapshot();
   });

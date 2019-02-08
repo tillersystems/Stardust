@@ -8,12 +8,12 @@ import { Container } from './elements';
  * It will decide the organization of all fields
  */
 const Group = ({ row, inlineLabels, labelsWidth, className, children }) => (
-  <Container row={row} className={className}>
+  <Container row={row} className={className} data-testid="form-group">
     {React.Children.map(children, child =>
       React.cloneElement(child, {
         isRow: row,
         inlineLabel: inlineLabels,
-        labelWidth: labelsWidth,
+        labelWidth: child.props.labelWidth || labelsWidth,
       }),
     )}
   </Container>

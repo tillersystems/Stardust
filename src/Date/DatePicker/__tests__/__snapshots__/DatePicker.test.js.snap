@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DatePicker /> should render withouth a problem 1`] = `
+exports[`<DatePicker /> should render without a problem 1`] = `
 .c2 {
   position: relative;
   display: -webkit-inline-box;

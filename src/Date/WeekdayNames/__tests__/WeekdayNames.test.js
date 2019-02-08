@@ -3,7 +3,7 @@ import React from 'react';
 import WeekdayNames from '..';
 
 describe('<WeekdayNames />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<WeekdayNames />);
 
     expect(container.firstChild).toMatchSnapshot();

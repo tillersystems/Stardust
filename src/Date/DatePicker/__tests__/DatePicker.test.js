@@ -19,7 +19,7 @@ describe('<DatePicker />', () => {
     Luxon.DateTime.local = jest.fn().mockImplementation(() => mockLocalDateTime);
   });
 
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(
       <DatePicker minDate={mockLocalDateTime} defaultValue={mockLocalDateTime} />,
     );

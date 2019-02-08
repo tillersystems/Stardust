@@ -15,13 +15,13 @@ describe('<NumberInput />', () => {
     document.addEventListener = addEventListener;
   });
 
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<NumberInput />);
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render withouth a problem when focused and unfocused', () => {
+  test('should render without a problem when focused and unfocused', () => {
     const { container, getByTestId } = render(<NumberInput />);
     const inputeNode = getByTestId('input');
 

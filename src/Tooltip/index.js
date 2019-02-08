@@ -10,6 +10,7 @@ import { Container, Wrapper } from './elements';
  * This component is in charge of displaying
  * a tooltip
  *
+ * @param {string} className // className needed by styled component.
  * @param {bool} active // Boolean set if the Tooltip is showed or not.
  * @param {bool} hover // Boolean set to use click or hover to show the Tooltip.
  * @param {bool} top // Boolean set to positionate the tooltip above or below the element.
@@ -25,6 +26,7 @@ import { Container, Wrapper } from './elements';
 class Tooltip extends React.Component {
   /** Prop types. */
   static propTypes = {
+    className: PropTypes.string,
     active: PropTypes.bool,
     hover: PropTypes.bool,
     top: PropTypes.bool,
@@ -37,6 +39,7 @@ class Tooltip extends React.Component {
 
   /** Default props. */
   static defaultProps = {
+    className: '',
     active: false,
     hover: false,
     top: false,
@@ -84,7 +87,16 @@ class Tooltip extends React.Component {
   };
 
   render() {
-    const { appearance, top, hover, arrowPositionX, children, width, title } = this.props;
+    const {
+      appearance,
+      arrowPositionX,
+      children,
+      className,
+      hover,
+      title,
+      top,
+      width,
+    } = this.props;
     const { active } = this.state;
     const childrenWithProps = React.Children.map(children, child =>
       React.cloneElement(child, {
@@ -94,7 +106,7 @@ class Tooltip extends React.Component {
       }),
     );
     return (
-      <Wrapper>
+      <Wrapper className={className}>
         {childrenWithProps}
         <PoseGroup>
           {active && (

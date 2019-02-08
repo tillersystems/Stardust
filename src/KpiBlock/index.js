@@ -57,19 +57,15 @@ KpiBlock.defaultProps = {
 };
 
 export default styled(KpiBlock)`
-  position: relative;
-
+  align-items: center;
+  background: ${({ theme: { palette } }) => palette.white};
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  height: 6.6rem;
   padding: 3rem 1rem;
-
-  height: 100%;
-
-  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-
-  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-
-  background: ${({ theme: { palette } }) => palette.white};
+  position: relative;
 `;

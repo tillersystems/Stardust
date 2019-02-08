@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> should render withouth a problem 1`] = `
+exports[`<Tag /> should render without a problem 1`] = `
 .c0 {
   position: relative;
   display: inline-block;

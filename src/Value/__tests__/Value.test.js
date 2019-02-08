@@ -2,7 +2,7 @@ import React from 'react';
 import Value from '..';
 
 describe('<Value />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(<Value>0</Value>);
     expect(container.firstChild).toMatchSnapshot();
   });

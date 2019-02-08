@@ -16,7 +16,7 @@ import { Container, ContainerIcon } from './elements';
  * @param {bool} fluid // Whether the button is fluid or not.
  * @param {bool} disabled // Whether the button is disabled or not.
  * @param {node} icon // Add icon node here to illustrate the text aside.
- * @param {enum} icon // Set the icon position compared to the text. It will be set to the left side by default.
+ * @param {enum} iconPosition // Set the icon position compared to the text. It will be set to the left side by default.
  * @param {function} onClick // Handler of click on the button.
  * @param {enum} size // Whether the button size is small, default or large. It will be set to default by default.
  * @param {enum} type // Whether it is a button or a form submission.

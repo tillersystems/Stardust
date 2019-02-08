@@ -5,14 +5,14 @@ import Theme from '../../../Theme';
 import TextInput from '..';
 
 describe('<TextInput />', () => {
-  test('should render withouth a problem', () => {
+  test('should render without a problem', () => {
     const { container } = render(
-      <TextInput placeHolder="default input" id="test" tabIndex="0" value="" />,
+      <TextInput placeholder="default input" id="test" tabIndex="0" value="" />,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render withouth a problem when focused and unfocused', () => {
+  test('should render without a problem when focused and unfocused', () => {
     const { getByTestId } = render(<TextInput />);
     const inputeNode = getByTestId('input');
 
@@ -69,7 +69,7 @@ describe('<TextInput />', () => {
   });
 
   test('should have a different type', () => {
-    const { getByTestId } = render(<TextInput password value="" />);
+    const { getByTestId } = render(<TextInput type="password" value="" />);
     const inputeNode = getByTestId('input');
 
     expect(inputeNode.type).toMatchSnapshot();
