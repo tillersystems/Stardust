@@ -9094,9 +9094,9 @@ react-test-renderer@^16.0.0-0:
     prop-types "^15.6.0"
     react-is "^16.4.1"
 
-react-testing-library@5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.6.0.tgz#1a964e50750695426da69eaa9caafbdd414965ed"
+react-testing-library@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.8.0.tgz#b5163758b1ddfd2e15c3cd2790562a527a1bb0a5"
   dependencies:
     "@babel/runtime" "^7.3.1"
     dom-testing-library "^3.13.1"
