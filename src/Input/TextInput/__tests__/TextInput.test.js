@@ -146,7 +146,7 @@ describe('<TextInput />', () => {
   test('should render ghost input without problem', () => {
     const { container } = render(<TextInput ghost value="" />);
 
-    expect(container.firstChild).toHaveStyleRule('border', '0');
+    expect(container.firstChild).toHaveStyleRule('border-color', 'transparent');
   });
 
   test('should have a search status', () => {

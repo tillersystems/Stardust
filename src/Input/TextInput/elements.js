@@ -17,7 +17,13 @@ export const Container = styled.div`
   ${({ ghost }) =>
     ghost &&
     css`
-      border: 0;
+      border-color: transparent;
+    `};
+
+  ${({ hasFocus }) =>
+    hasFocus &&
+    css`
+      border-color: ${({ theme: { palette } }) => palette.primary.default};
     `};
 
   ${({ error }) =>
@@ -40,12 +46,6 @@ export const Container = styled.div`
 
   ${({ info }) =>
     info &&
-    css`
-      border-color: ${({ theme: { palette } }) => palette.primary.default};
-    `};
-
-  ${({ hasFocus }) =>
-    hasFocus &&
     css`
       border-color: ${({ theme: { palette } }) => palette.primary.default};
     `};
