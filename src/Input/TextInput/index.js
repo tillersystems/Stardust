@@ -42,6 +42,7 @@ const getStatus = (loading, info, success, warning, error, search) => {
  * @param {boolean} loading - Whether to display an input that is loading or not.
  * @param {boolean} success - Whether to display an input that is successful or not.
  * @param {boolean} warning - Whether to display an input that is warning or not.
+ * @param {boolean} info - Whether to display an input that is an info or not.
  * @param {boolean} error - Whether to display an input that has failed or not.
  * @param {boolean} ghost - Whether to display an input with no border.
  * @param {boolean} search - Whether to display an input that meant for search or not.
