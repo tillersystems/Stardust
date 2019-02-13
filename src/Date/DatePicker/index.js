@@ -57,6 +57,33 @@ class DatePicker extends PureComponent {
   };
 
   /**
+   * Component lifecycle method
+   * Update current month to keep track of the date if provided
+   *
+   */
+  componentDidMount() {
+    const { value } = this.props;
+
+    if (value) {
+      this.setState({ currentMonth: value });
+    }
+  }
+
+  /**
+   * Component lifecycle method
+   * Update current month to keep track of the date change
+   *
+   */
+  componentDidUpdate(prevProps) {
+    const { value: prevValue } = prevProps;
+    const { value } = this.props;
+
+    if (value !== prevValue) {
+      this.setState({ currentMonth: value });
+    }
+  }
+
+  /**
    * Handles date click.
    *
    * @param {luxon.DateTime} date - The date that was clicked.
