@@ -61,6 +61,7 @@ export const Container = styled.div`
 export const InputElement = styled.input`
   flex: 1;
   height: 100%;
+  width: 100%;
   background-color: ${({ theme: { palette } }) => palette.white};
 
   margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
