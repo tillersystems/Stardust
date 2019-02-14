@@ -10,7 +10,7 @@ export { default as Dropdown } from './Dropdown';
 export { default as Flag } from './Flag';
 export { default as Form } from './Form';
 export { default as Icon } from './Icon';
-export { NumberInput, TextInput } from './Input';
+export { DatePickerInput, NumberInput, TextInput } from './Input';
 export { default as KpiBlock } from './KpiBlock';
 export { default as KpiChart } from './KpiChart';
 export { default as Loader } from './Loader';

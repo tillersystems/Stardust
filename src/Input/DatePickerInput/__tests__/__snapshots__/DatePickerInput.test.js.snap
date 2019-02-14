@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DatePickerInput /> should render without a problem 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(207,22%,90%);
+  background-color: hsl(0,100%,100%);
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  background-color: hsl(0,100%,100%);
+  margin: 0 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.c2::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2:-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2:focus,
+.c2:active {
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+}
+
+.c3 {
+  position: absolute;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    width="25rem"
+  >
+    <input
+      class="c2"
+      data-testid="input"
+      id=""
+      placeholder=""
+      tabindex="0"
+      type="text"
+      value="7/15/2018"
+    />
+  </div>
+  <div
+    class="c3"
+  />
+</div>
+`;

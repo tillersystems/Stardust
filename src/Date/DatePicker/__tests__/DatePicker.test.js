@@ -38,6 +38,32 @@ describe('<DatePicker />', () => {
     expect(daySelected).toBeInTheDocument();
   });
 
+  test('should display the new provided date', () => {
+    const { rerender, getByText } = render(<DatePicker value={mockLocalDateTime} />);
+    const daySelected = getByText('15');
+
+    expect(daySelected).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    expect(daySelected).toHaveStyleRule('border-top-right-radius', '0.4rem');
+    expect(daySelected).toBeInTheDocument();
+
+    const newDate = Luxon.DateTime.fromObject({
+      year: 2018,
+      month: 9,
+      day: 20,
+      hour: 0,
+      minute: 0,
+      second: 0,
+      zone: 'Europe/Paris',
+    });
+    rerender(<DatePicker value={newDate} />);
+
+    const newDaySelected = getByText('20');
+
+    expect(newDaySelected).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    expect(newDaySelected).toHaveStyleRule('border-top-right-radius', '0.4rem');
+    expect(newDaySelected).toBeInTheDocument();
+  });
+
   test('should handle previous month', () => {
     const { getByTestId, getByText } = render(<DatePicker defaultValue={mockLocalDateTime} />);
 

@@ -57,13 +57,40 @@ class DatePicker extends PureComponent {
   };
 
   /**
+   * Component lifecycle method
+   * Update current month to keep track of the date if provided
+   *
+   */
+  componentDidMount() {
+    const { value } = this.props;
+
+    if (value) {
+      this.setState({ currentMonth: value });
+    }
+  }
+
+  /**
+   * Component lifecycle method
+   * Update current month to keep track of the date change
+   *
+   */
+  componentDidUpdate(prevProps) {
+    const { value: prevValue } = prevProps;
+    const { value } = this.props;
+
+    if (value !== prevValue) {
+      this.setState({ currentMonth: value });
+    }
+  }
+
+  /**
    * Handles date click.
    *
    * @param {luxon.DateTime} date - The date that was clicked.
    */
   handleDateClick = date => {
     const { onChange } = this.props;
-    this.setState({ ...this.state, selectedDate: date, currentMonth: date }, () => {
+    this.setState({ selectedDate: date, currentMonth: date }, () => {
       onChange(date);
     });
   };
@@ -74,7 +101,7 @@ class DatePicker extends PureComponent {
    * @param {luxon.DateTime} date - The date the mouse is over.
    */
   handleDateOver = date => {
-    this.setState({ ...this.state, highlightedDate: date });
+    this.setState({ highlightedDate: date });
   };
 
   /**
@@ -82,7 +109,7 @@ class DatePicker extends PureComponent {
    */
   handlePrevMonthClick = () => {
     const { currentMonth } = this.state;
-    this.setState({ ...this.state, currentMonth: currentMonth.minus({ months: 1 }) });
+    this.setState({ currentMonth: currentMonth.minus({ months: 1 }) });
   };
 
   /**
@@ -90,7 +117,7 @@ class DatePicker extends PureComponent {
    */
   handleNextMonthClick = () => {
     const { currentMonth } = this.state;
-    this.setState({ ...this.state, currentMonth: currentMonth.plus({ months: 1 }) });
+    this.setState({ currentMonth: currentMonth.plus({ months: 1 }) });
   };
 
   render() {
