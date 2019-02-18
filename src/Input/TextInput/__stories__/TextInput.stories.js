@@ -33,6 +33,7 @@ storiesOf('Input - TextInput', module)
     const disabledValue = boolean('Disabled', false, 'General');
 
     const loadingValue = boolean('Loading', false, 'Status');
+    const ghostValue = boolean('Ghost', false, 'Status');
     const infoValue = boolean('Info', false, 'Status');
     const successValue = boolean('Success', false, 'Status');
     const warningValue = boolean('Warning', false, 'Status');
@@ -49,6 +50,7 @@ storiesOf('Input - TextInput', module)
         onBlur={onBlurAction}
         loading={loadingValue}
         info={infoValue}
+        ghost={ghostValue}
         success={successValue}
         warning={warningValue}
         error={errorValue}

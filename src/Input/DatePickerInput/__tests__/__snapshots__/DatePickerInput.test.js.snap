@@ -26,6 +26,7 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
   -ms-flex: 1;
   flex: 1;
   height: 100%;
+  width: 100%;
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
