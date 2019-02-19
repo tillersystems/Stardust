@@ -151,15 +151,15 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   font-size: 1.4rem;
 }
 
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c8:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8::placeholder {
   font-size: 1.4rem;
 }
 
@@ -252,7 +252,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
               width="25rem"
             >
               <input
-                class="sc-eHgmQL bEMfzu"
+                class="sc-eHgmQL ekoJZv"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"
@@ -394,15 +394,15 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c7:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c7::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c7:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c7::placeholder {
   font-size: 1.4rem;
 }
 
@@ -640,15 +640,15 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   font-size: 1.4rem;
 }
 
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c8:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8::placeholder {
   font-size: 1.4rem;
 }
 
@@ -925,15 +925,15 @@ exports[`<Form /> should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c8:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c8::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c8:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c8::placeholder {
   font-size: 1.4rem;
 }
 

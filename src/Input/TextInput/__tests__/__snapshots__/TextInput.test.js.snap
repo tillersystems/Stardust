@@ -61,15 +61,15 @@ exports[`<TextInput /> should have a text label 1`] = `
   font-size: 1.4rem;
 }
 
-.c2:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c2::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c2:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2::placeholder {
   font-size: 1.4rem;
 }
 
@@ -169,15 +169,15 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
@@ -296,15 +296,15 @@ exports[`<TextInput /> should have an icon label 1`] = `
   font-size: 1.4rem;
 }
 
-.c3:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c3::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c3:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3::placeholder {
   font-size: 1.4rem;
 }
 
@@ -424,15 +424,15 @@ exports[`<TextInput /> should render search status input without problem when fo
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
@@ -524,15 +524,15 @@ exports[`<TextInput /> should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
