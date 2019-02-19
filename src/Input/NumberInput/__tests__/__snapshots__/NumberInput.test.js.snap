@@ -59,15 +59,15 @@ exports[`<NumberInput /> should have a text label 1`] = `
   font-size: 1.4rem;
 }
 
-.c2:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c2::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c2:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c2::placeholder {
   font-size: 1.4rem;
 }
 
@@ -158,15 +158,15 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
@@ -285,15 +285,15 @@ exports[`<NumberInput /> should have an icon label 1`] = `
   font-size: 1.4rem;
 }
 
-.c3:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c3::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c3:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3::placeholder {
   font-size: 1.4rem;
 }
 
@@ -393,15 +393,15 @@ exports[`<NumberInput /> should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
@@ -467,15 +467,15 @@ exports[`<NumberInput /> should render without a problem when focused and unfocu
   font-size: 1.4rem;
 }
 
-.c1:-moz-placeholder {
-  font-size: 1.4rem;
-}
-
 .c1::-moz-placeholder {
   font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c1::placeholder {
   font-size: 1.4rem;
 }
 
@@ -506,7 +506,7 @@ exports[`<NumberInput /> should render without a problem when focused and unfocu
   width="25rem"
 >
   <input
-    class="sc-jKJlTe cWhkTx"
+    class="sc-jKJlTe jQmZNI"
     data-testid="input"
     id=""
     placeholder=""
