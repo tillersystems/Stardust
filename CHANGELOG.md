@@ -1,3 +1,9 @@
+## [1.21.1](https://github.com/tillersystems/Stardust/compare/v1.21.0...v1.21.1) (2019-02-19)
+
+### Bug Fixes
+
+- **Input:** fix placeholder style ([#415](https://github.com/tillersystems/Stardust/issues/415)) ([d3abc9b](https://github.com/tillersystems/Stardust/commit/d3abc9b))
+
 ## [1.20.3](https://github.com/tillersystems/Stardust/compare/v1.20.2...v1.20.3) (2019-02-08)
 
 ### Bug Fixes
