@@ -1,3 +1,9 @@
+# [1.22.0](https://github.com/tillersystems/Stardust/compare/v1.21.1...v1.22.0) (2019-02-21)
+
+### Features
+
+- **Variation:** create Variation component ([#416](https://github.com/tillersystems/Stardust/issues/416)) ([84f8ee1](https://github.com/tillersystems/Stardust/commit/84f8ee1))
+
 ## [1.21.1](https://github.com/tillersystems/Stardust/compare/v1.21.0...v1.21.1) (2019-02-19)
 
 ### Bug Fixes
