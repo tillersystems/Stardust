@@ -177,22 +177,22 @@ exports[`<DatePicker /> should render without a problem 1`] = `
   font-size: 1.4rem;
   line-height: 3rem;
   cursor: pointer;
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 }
 
 .c23 {
   font-size: 1.4rem;
   line-height: 3rem;
   cursor: pointer;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
 }
 
 .c24 {
   font-size: 1.4rem;
   line-height: 3rem;
   cursor: pointer;
-  border-top-right-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
 }
 
 .c25 {
@@ -1099,8 +1099,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c15"
-          disabled=""
+          class="c22"
         >
           <div
             class="c9 c16"
@@ -1113,7 +1112,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
         class="c7"
       >
         <div
-          class="c22"
+          class="c23"
         >
           <div
             class="c9 c10"
@@ -1122,7 +1121,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1131,7 +1130,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1140,7 +1139,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1149,7 +1148,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1158,7 +1157,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1167,7 +1166,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c24"
+          class="c22"
         >
           <div
             class="c9 c16"
@@ -1180,7 +1179,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
         class="c7"
       >
         <div
-          class="c22"
+          class="c23"
         >
           <div
             class="c9 c10"
@@ -1189,7 +1188,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1198,7 +1197,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1207,7 +1206,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1216,7 +1215,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1225,7 +1224,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c23"
+          class="c24"
         >
           <div
             class="c9 c12"
@@ -1234,7 +1233,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c24"
+          class="c22"
         >
           <div
             class="c9 c16"
@@ -1247,7 +1246,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
         class="c7"
       >
         <div
-          class="c22"
+          class="c23"
         >
           <div
             class="c9 c10"
@@ -1256,7 +1255,7 @@ exports[`<DatePicker /> should render without a problem 1`] = `
           </div>
         </div>
         <div
-          class="c24"
+          class="c22"
         >
           <div
             class="c9 c16"

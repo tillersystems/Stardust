@@ -45,13 +45,17 @@ class DatePickerInput extends PureComponent {
   /**
    * Component lifecycle method
    * Handles error value according to what the parent component passes down
+   * only if the update comes from prop change and not state change
+   * since state change comes from inner state update in handleInputChange and handleDateChange
    *
    * @param {Object} prevProps - The component's previous props.
+   * @param {Object} prevState - The component's previous state.
    */
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { error: currentErrorProp } = this.props;
+    const { error } = this.state;
 
-    if (prevProps.error !== currentErrorProp) {
+    if (prevState.error === error && prevProps.error !== currentErrorProp) {
       this.setState({ error: currentErrorProp });
     }
   }
@@ -102,17 +106,25 @@ class DatePickerInput extends PureComponent {
    * @param {Object} textValue - text updated on TextInput
    */
   handleInputChange = textValue => {
-    const { onChange } = this.props;
+    const { minDate, maxDate, onChange } = this.props;
+    onChange(newValue);
+
     this.setState({ textValue });
 
     const [day, month, year] = textValue.split('/').map(v => parseInt(v, 10));
     const newValue = DateTime.fromObject({ year, month, day });
-    if (day && month && year && newValue.isValid) {
+    if (
+      day &&
+      month &&
+      year &&
+      newValue.isValid &&
+      (!maxDate || newValue <= maxDate) &&
+      (!minDate || newValue >= minDate)
+    ) {
       this.setState({ dateValue: newValue, error: false });
     } else {
       this.setState({ dateValue: DateTime.local(), error: true });
     }
-    onChange(newValue);
   };
 
   /**

@@ -86,4 +86,33 @@ describe('<DatePickerInput />', () => {
     const errorStatusNode = getByTestId('status');
     expect(errorStatusNode).toHaveStyleRule('background', 'hsl(6,79%,65%)');
   });
+
+  test('should display input with error when input value is out of range', async () => {
+    const props = {
+      value: mockLocalDateTime,
+      minDate: Luxon.DateTime.fromObject({
+        year: 2018,
+        month: 8,
+        day: 20,
+        zone: 'Europe/Paris',
+      }),
+      maxDate: Luxon.DateTime.fromObject({
+        year: 2018,
+        month: 9,
+        day: 20,
+        zone: 'Europe/Paris',
+      }),
+    };
+    const { getByTestId, queryByTestId } = render(<DatePickerInput {...props} />);
+    const inputNode = getByTestId('input');
+
+    const statusNode = queryByTestId('status');
+    expect(statusNode).not.toBeInTheDocument();
+
+    const inputValue = '10/07/2018';
+    fireEvent.change(inputNode, { target: { value: inputValue } });
+
+    const errorStatusNode = getByTestId('status');
+    expect(errorStatusNode).toHaveStyleRule('background', 'hsl(6,79%,65%)');
+  });
 });

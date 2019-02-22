@@ -50,7 +50,7 @@ const Weeks = ({
       const endOfDay = date.endOf('day');
 
       const isInMonth = monthStart.hasSame(date, 'month');
-      const isInRange = (!minDate || date > minDate) && (!maxDate || date < maxDate);
+      const isInRange = (!minDate || date >= minDate) && (!maxDate || date <= maxDate);
 
       const isInSelectedRange =
         isInMonth &&
