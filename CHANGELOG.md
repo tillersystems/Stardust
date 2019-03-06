@@ -1,3 +1,14 @@
+# [1.23.0](https://github.com/tillersystems/Stardust/compare/v1.22.0...v1.23.0) (2019-03-06)
+
+### Bug Fixes
+
+- **Date:** update error state in DatePickerInput and date range limits in Weeks ([#418](https://github.com/tillersystems/Stardust/issues/418)) ([608fd3f](https://github.com/tillersystems/Stardust/commit/608fd3f))
+- **KpiChart:** update Title style ([#428](https://github.com/tillersystems/Stardust/issues/428)) ([205d216](https://github.com/tillersystems/Stardust/commit/205d216))
+
+### Features
+
+- **Icon:** add speech icon ([#429](https://github.com/tillersystems/Stardust/issues/429)) ([ed43233](https://github.com/tillersystems/Stardust/commit/ed43233))
+
 # [1.22.0](https://github.com/tillersystems/Stardust/compare/v1.21.1...v1.22.0) (2019-02-21)
 
 ### Features
