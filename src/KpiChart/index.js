@@ -47,7 +47,7 @@ export default styled(KpiChart)`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 2.4rem 2rem;
+  padding: 2.4rem 3rem;
   height: 100%;
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
