@@ -1,3 +1,9 @@
+## [1.23.1](https://github.com/tillersystems/Stardust/compare/v1.23.0...v1.23.1) (2019-03-08)
+
+### Bug Fixes
+
+- **Modal:** fix modal centering in safari ([#430](https://github.com/tillersystems/Stardust/issues/430)) ([d8ce780](https://github.com/tillersystems/Stardust/commit/d8ce780))
+
 # [1.23.0](https://github.com/tillersystems/Stardust/compare/v1.22.0...v1.23.0) (2019-03-06)
 
 ### Bug Fixes
