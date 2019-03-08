@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
 `;
 
@@ -24,6 +25,8 @@ export const Overlay = styled.div`
 `;
 
 export const Dialog = styled.dialog`
+  position: absolute;
+
   z-index: 999;
   display: flex;
   flex-direction: column;
