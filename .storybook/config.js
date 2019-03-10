@@ -2,21 +2,28 @@ import '@babel/polyfill';
 
 import React from 'react';
 import styled from 'styled-components';
-import { configure, addDecorator } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import { create } from '@storybook/theming';
 import { ThemeProvider } from 'styled-components';
 import { withDocs } from 'storybook-readme';
-import { withOptions } from '@storybook/addon-options';
 
 import styles from './styles';
 import { Theme } from '../src';
 
 // Option defaults:
-addDecorator(
-  withOptions({
-    name: 'Stardust',
-    addonPanelInRight: true,
-  }),
-);
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: 'Stardust',
+      brandUrl: 'http://stardust.tillersystems.com',
+    }),
+    isFullscreen: false,
+    panelPosition: 'right',
+    showNav: true,
+    showPanel: true,
+  },
+});
 
 addDecorator((story, context) => {
   const componentPath = context.kind.replace(' - ', '/');
