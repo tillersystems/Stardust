@@ -20,7 +20,7 @@ exports[`<ButtonGroup /> should render without a problem 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   width: auto;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.57;
@@ -32,7 +32,7 @@ exports[`<ButtonGroup /> should render without a problem 1`] = `
   color: hsl(207,13%,45%);
   background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
   border: 1px solid hsl(207,22%,90%);
-  padding: 0.75rem 2.2rem;
+  padding: 0.75rem 1.6rem;
 }
 
 .c2 svg > path {

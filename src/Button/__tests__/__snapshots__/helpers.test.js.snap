@@ -156,7 +156,7 @@ exports[`<Button /> -- helpers getSize should return default css size 1`] = `
 Array [
   "
       padding: ",
-  "0.75rem 2.2rem",
+  "0.75rem 1.6rem",
   ";
     ",
 ]
@@ -166,7 +166,7 @@ exports[`<Button /> -- helpers getSize should return large css size 1`] = `
 Array [
   "
       padding: ",
-  "0.7rem 2.4rem",
+  "0.7rem 2rem",
   ";
       font-size: ",
   "1.6rem",

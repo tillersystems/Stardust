@@ -20,7 +20,7 @@ exports[`<Button /> should render a left icon 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   width: auto;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.57;
@@ -31,7 +31,7 @@ exports[`<Button /> should render a left icon 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  padding: 0.75rem 2.4rem 0.75rem 1.4rem;
+  padding: 0.75rem 1.4rem;
 }
 
 .c0 svg > path {
@@ -118,7 +118,7 @@ exports[`<Button /> should render a right icon 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   width: auto;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.57;
@@ -129,7 +129,7 @@ exports[`<Button /> should render a right icon 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  padding: 0.75rem 2.4rem 0.75rem 1.4rem;
+  padding: 0.75rem 1.4rem;
 }
 
 .c0 svg > path {
@@ -216,7 +216,7 @@ exports[`<Button /> should render with another appearance 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   width: auto;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.57;
@@ -228,7 +228,7 @@ exports[`<Button /> should render with another appearance 1`] = `
   background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
   border: 1px solid #1873a0;
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-  padding: 0.75rem 2.2rem;
+  padding: 0.75rem 1.6rem;
 }
 
 .c0 svg > path {
@@ -274,7 +274,7 @@ exports[`<Button /> should render without a problem 1`] = `
   flex-wrap: nowrap;
   max-width: 100%;
   width: auto;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
   font-size: 1.4rem;
   line-height: 1.57;
@@ -285,7 +285,7 @@ exports[`<Button /> should render without a problem 1`] = `
   transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(213,17%,20%);
   background: none;
-  padding: 0.75rem 2.2rem;
+  padding: 0.75rem 1.6rem;
 }
 
 .c0 svg > path {

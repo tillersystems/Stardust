@@ -115,13 +115,13 @@ export const getAppearance = ({ palette }, appearance) => {
 export const getSize = ({ fonts }, size, icon) => {
   return {
     small: css`
-      padding: ${!icon ? '0.35rem 1.4rem' : '0.35rem 1.6rem 0.35rem 0.9rem'};
+      padding: ${!icon ? '0.35rem 1.4rem' : '0.35rem 1.3rem'};
     `,
     default: css`
-      padding: ${!icon ? '0.75rem 2.2rem' : '0.75rem 2.4rem 0.75rem 1.4rem'};
+      padding: ${!icon ? '0.75rem 1.6rem' : '0.75rem 1.4rem'};
     `,
     large: css`
-      padding: ${!icon ? '0.7rem 2.4rem' : '0.7rem 2.4rem 0.7rem 1.8rem'};
+      padding: ${!icon ? '0.7rem 2rem' : '0.7rem 1.8rem'};
       font-size: ${fonts.size.big};
       line-height: 1.5;
     `,
