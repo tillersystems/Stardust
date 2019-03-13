@@ -107,7 +107,7 @@
     "jest-dom": "3.1.2",
     "jest-styled-components": "6.3.1",
     "json": "9.0.6",
-    "popmotion": "8.6.3",
+    "popmotion": "8.6.4",
     "prettier": "1.16.4",
     "pretty-quick": "1.10.0",
     "prop-types": "15.7.2",
