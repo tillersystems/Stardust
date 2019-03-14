@@ -3,15 +3,12 @@
 
 version: 2
 
-
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # REFERENCES
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 references:
-
-  workspace_root: &workspace_root
-    /home/circleci/tiller-workspace
+  workspace_root: &workspace_root /home/circleci/tiller-workspace
 
   attach_workspace: &attach_workspace
     attach_workspace:
@@ -29,7 +26,6 @@ references:
       paths:
         - node_modules
 
-
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # DEFAULTS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -38,7 +34,6 @@ defaults: &defaults
   working_directory: *workspace_root
   docker:
     - image: circleci/node:11.10.1
-
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # JOBS
@@ -89,7 +84,6 @@ jobs:
           name: Build project
           command: yarn build
 
-
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # WORKFLOWS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -122,7 +116,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "50 0 * * *"
+          cron: '50 0 * * *'
           filters:
             branches:
               only:
