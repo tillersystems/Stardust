@@ -2,7 +2,8 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Icon, Theme } from '../../..';
+import Icon from '../../Icon';
+import Theme from '../../Theme';
 import { Title, HeaderButton } from './elements';
 
 /**

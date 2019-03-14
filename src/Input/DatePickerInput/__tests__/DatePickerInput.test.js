@@ -3,6 +3,7 @@ import * as Luxon from 'luxon';
 import { fireEvent, wait, cleanup } from 'react-testing-library';
 
 import DatePickerInput from '..';
+import Theme from '../../../Theme';
 
 describe('<DatePickerInput />', () => {
   const mockLocalDateTime = Luxon.DateTime.fromObject({
@@ -36,8 +37,8 @@ describe('<DatePickerInput />', () => {
     await wait();
     const selectedDay = getByText('15');
 
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
-    expect(selectedDay).toHaveStyleRule('border-top-right-radius', '0.4rem');
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
   });
 
   test('should update the selected day in date picker according to input value', async () => {
@@ -47,14 +48,19 @@ describe('<DatePickerInput />', () => {
     await wait();
 
     const selectedDay = getByText('15');
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
 
     const inputValue = '10/01/2018';
     fireEvent.change(inputNode, { target: { value: inputValue } });
 
     const newSelectedDay = getByText('10');
-    expect(selectedDay).not.toHaveStyleRule('border-top-left-radius', '0.4rem');
-    expect(newSelectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    const previouSelectedDay = getByText('15');
+
+    expect(previouSelectedDay).not.toHaveStyleRule('color', Theme.palette.white);
+    expect(previouSelectedDay).not.toHaveStyleRule('background', Theme.palette.primary.default);
+    expect(newSelectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(newSelectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
   });
 
   test('should update the input value according to selected date in date picker', async () => {
@@ -64,7 +70,9 @@ describe('<DatePickerInput />', () => {
     await wait();
 
     const selectedDay = getByText('15');
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
 
     const newSelectedDay = getByText('21');
     fireEvent.click(newSelectedDay);

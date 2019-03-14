@@ -63,7 +63,7 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
@@ -236,7 +236,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
         class="sc-htpNat bnmNtp"
       >
         <label
-          class="sc-bxivhb iiFPKV"
+          class="sc-bxivhb bEmEGS"
           width="10rem"
         >
           my label 1
@@ -248,11 +248,11 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
             class="sc-EHOje dYYwli"
           >
             <div
-              class="sc-hSdWYo iWCXfO"
+              class="sc-cvbbAY jIVDhY"
               width="25rem"
             >
               <input
-                class="sc-eHgmQL ekoJZv"
+                class="sc-jWBwVP kgmPjO"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"
@@ -550,7 +550,7 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;
@@ -799,7 +799,7 @@ exports[`<Form /> should render without a problem 1`] = `
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 0.7rem;

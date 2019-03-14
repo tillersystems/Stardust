@@ -145,6 +145,15 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   margin: 1.6rem 0 0.8rem;
 }
 
+.c5 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
 .c4 {
   position: relative;
   display: -webkit-inline-box;
@@ -186,15 +195,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   fill: hsl(213,17%,20%);
 }
 
-.c5 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
 .c6 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -203,7 +203,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
 }
 
@@ -238,7 +238,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 
 .c0 {
   width: 24.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 <div
@@ -887,6 +887,15 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   margin: 1.6rem 0 0.8rem;
 }
 
+.c5 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
 .c4 {
   position: relative;
   display: -webkit-inline-box;
@@ -928,15 +937,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   fill: hsl(213,17%,20%);
 }
 
-.c5 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
 .c6 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -945,7 +945,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
 }
 
@@ -980,7 +980,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 
 .c0 {
   width: 24.4rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 <div

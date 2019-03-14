@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button } from '../../..';
+import Button from '../../Button';
 
 export const Title = styled.div`
   flex: 1;

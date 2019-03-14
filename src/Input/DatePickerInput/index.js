@@ -153,7 +153,7 @@ class DatePickerInput extends PureComponent {
                 minDate={minDate}
                 maxDate={maxDate}
                 value={dateValue}
-                onChange={this.handleDateChange}
+                onDateChanged={this.handleDateChange}
               />
             </DatePickerWrapper>
           </Popover>

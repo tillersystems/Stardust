@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render without a problem 1`] = `
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
 .c2 {
   position: relative;
   display: -webkit-inline-box;
@@ -42,15 +51,6 @@ exports[`Header should render without a problem 1`] = `
   fill: hsl(213,17%,20%);
 }
 
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
-}
-
 .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -59,7 +59,7 @@ exports[`Header should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.4rem;
 }
 

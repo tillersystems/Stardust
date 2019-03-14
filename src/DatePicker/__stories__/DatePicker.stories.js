@@ -20,8 +20,8 @@ storiesOf('DatePicker', module)
     const localeValue = select(
       'Locale',
       {
-        en: 'English',
-        fr: 'French',
+        English: 'en',
+        French: 'fr',
       },
       'English',
       'Locale',

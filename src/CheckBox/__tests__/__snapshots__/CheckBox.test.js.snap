@@ -123,7 +123,7 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
   position: relative;
   color: hsl(207,13%,45%);
   color: hsl(200,74%,46%);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c0 {

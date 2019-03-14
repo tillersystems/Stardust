@@ -9,7 +9,7 @@ describe('<Weekdays />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render with a different locale', () => {
+  test.skip('should render with a different locale', () => {
     const { container } = render(<Weekdays locale="fr" />);
 
     expect(container.firstChild).toMatchSnapshot();
