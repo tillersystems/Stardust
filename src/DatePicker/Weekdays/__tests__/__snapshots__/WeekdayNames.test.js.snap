@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Weekdays /> should render with a different locale 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.1rem;
+  width: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: calc(1.2rem - 0.2rem);
+  text-transform: uppercase;
+  color: hsl(207,13%,45%);
+}
+
+.c1:not(:nth-child(7n)) {
+  margin-right: 0.8rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 1.6rem 0 0.8rem;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    Mon
+  </div>
+  <div
+    class="c1"
+  >
+    Tue
+  </div>
+  <div
+    class="c1"
+  >
+    Wed
+  </div>
+  <div
+    class="c1"
+  >
+    Thu
+  </div>
+  <div
+    class="c1"
+  >
+    Fri
+  </div>
+  <div
+    class="c1"
+  >
+    Sat
+  </div>
+  <div
+    class="c1"
+  >
+    Sun
+  </div>
+</div>
+`;
+
+exports[`<Weekdays /> should render without a problem 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.1rem;
+  width: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: calc(1.2rem - 0.2rem);
+  text-transform: uppercase;
+  color: hsl(207,13%,45%);
+}
+
+.c1:not(:nth-child(7n)) {
+  margin-right: 0.8rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 1.6rem 0 0.8rem;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    Mon
+  </div>
+  <div
+    class="c1"
+  >
+    Tue
+  </div>
+  <div
+    class="c1"
+  >
+    Wed
+  </div>
+  <div
+    class="c1"
+  >
+    Thu
+  </div>
+  <div
+    class="c1"
+  >
+    Fri
+  </div>
+  <div
+    class="c1"
+  >
+    Sat
+  </div>
+  <div
+    class="c1"
+  >
+    Sun
+  </div>
+</div>
+`;

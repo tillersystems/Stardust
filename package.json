@@ -109,6 +109,7 @@
     "jest-dom": "3.1.2",
     "jest-styled-components": "6.3.1",
     "json": "9.0.6",
+    "mockdate": "^2.0.2",
     "popmotion": "8.6.4",
     "prettier": "1.16.4",
     "pretty-quick": "1.10.0",
