@@ -54,7 +54,7 @@ export const fonts = {
   weight: {
     thin: 200,
     normal: 400,
-    thick: 600,
+    thick: 500,
   },
 
   family: '"Open Sans", Helvetica, Arial, sans-serif',
