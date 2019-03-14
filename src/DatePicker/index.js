@@ -79,7 +79,6 @@ class DatePicker extends PureComponent {
   componentDidMount() {
     const { value } = this.props;
 
-    // Set selected & currentDate in componentDidMount if is relies on props
     if (value) {
       this.setState({ selected: value, currentDate: value });
     }
@@ -94,7 +93,7 @@ class DatePicker extends PureComponent {
     const { value } = this.props;
 
     if (value !== prevValue) {
-      this.setState({ selected: value, currentDate: value });
+      this.setState({ currentDate: value });
     }
   }
 
