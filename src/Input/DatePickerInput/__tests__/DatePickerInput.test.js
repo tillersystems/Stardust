@@ -1,25 +1,33 @@
 import React from 'react';
-import * as Luxon from 'luxon';
-import { fireEvent, wait, cleanup } from 'react-testing-library';
+import { DateTime, Settings } from 'luxon';
+import { fireEvent, wait } from 'react-testing-library';
+import Mockdate from 'mockdate';
 
 import DatePickerInput from '..';
+import Theme from '../../../Theme';
+
+Settings.defaultZoneName = 'utc';
 
 describe('<DatePickerInput />', () => {
-  const mockLocalDateTime = Luxon.DateTime.fromObject({
+  const dateValue = DateTime.fromObject({
     year: 2018,
     month: 7,
     day: 15,
     hour: 0,
     minute: 0,
     second: 0,
-    zone: 'Europe/Paris',
   });
 
   beforeEach(() => {
-    Luxon.DateTime.local = jest.fn().mockImplementation(() => mockLocalDateTime);
+    // Mock date https://www.npmjs.com/package/mockdate
+    // Mockdate.set(date, [timezoneOffset]);
+    Mockdate.set(dateValue, 120);
   });
 
-  afterEach(cleanup);
+  afterEach(() => {
+    // Reset mockdate
+    Mockdate.reset();
+  });
 
   test('should render without a problem', () => {
     const { container } = render(<DatePickerInput />);
@@ -28,7 +36,7 @@ describe('<DatePickerInput />', () => {
   });
 
   test('should select the provided date value', async () => {
-    const { getByTestId, getByText } = render(<DatePickerInput value={mockLocalDateTime} />);
+    const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
 
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
@@ -36,35 +44,42 @@ describe('<DatePickerInput />', () => {
     await wait();
     const selectedDay = getByText('15');
 
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
-    expect(selectedDay).toHaveStyleRule('border-top-right-radius', '0.4rem');
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
   });
 
   test('should update the selected day in date picker according to input value', async () => {
-    const { getByTestId, getByText } = render(<DatePickerInput value={mockLocalDateTime} />);
+    const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
     await wait();
 
     const selectedDay = getByText('15');
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
 
     const inputValue = '10/01/2018';
     fireEvent.change(inputNode, { target: { value: inputValue } });
 
     const newSelectedDay = getByText('10');
-    expect(selectedDay).not.toHaveStyleRule('border-top-left-radius', '0.4rem');
-    expect(newSelectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+    const previouSelectedDay = getByText('15');
+
+    expect(previouSelectedDay).not.toHaveStyleRule('color', Theme.palette.white);
+    expect(previouSelectedDay).not.toHaveStyleRule('background', Theme.palette.primary.default);
+    expect(newSelectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(newSelectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
   });
 
   test('should update the input value according to selected date in date picker', async () => {
-    const { getByTestId, getByText } = render(<DatePickerInput value={mockLocalDateTime} />);
+    const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
     await wait();
 
     const selectedDay = getByText('15');
-    expect(selectedDay).toHaveStyleRule('border-top-left-radius', '0.4rem');
+
+    expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
+    expect(selectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
 
     const newSelectedDay = getByText('21');
     fireEvent.click(newSelectedDay);
@@ -74,7 +89,7 @@ describe('<DatePickerInput />', () => {
   });
 
   test('should display input with error when input value is invalid', async () => {
-    const { getByTestId, queryByTestId } = render(<DatePickerInput value={mockLocalDateTime} />);
+    const { getByTestId, queryByTestId } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
 
     const statusNode = queryByTestId('status');
@@ -89,14 +104,14 @@ describe('<DatePickerInput />', () => {
 
   test('should display input with error when input value is out of range', async () => {
     const props = {
-      value: mockLocalDateTime,
-      minDate: Luxon.DateTime.fromObject({
+      value: dateValue,
+      minDate: DateTime.fromObject({
         year: 2018,
         month: 8,
         day: 20,
         zone: 'Europe/Paris',
       }),
-      maxDate: Luxon.DateTime.fromObject({
+      maxDate: DateTime.fromObject({
         year: 2018,
         month: 9,
         day: 20,

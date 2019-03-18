@@ -1,0 +1,492 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Weeks /> should render without a problem 1`] = `
+.c1 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  cursor: pointer;
+}
+
+.c1:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: hsl(206,23%,69%);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      25
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      26
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      27
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      28
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      29
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      30
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      1
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      2
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      3
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      4
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      5
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      6
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      7
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      8
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      9
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      10
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      11
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      12
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      13
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      14
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c4"
+    >
+      15
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      16
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      17
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      18
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      19
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      20
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      21
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      22
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      23
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      24
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      25
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      26
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      27
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      28
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      29
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      30
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c3"
+    >
+      31
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      1
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      2
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      3
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      4
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      5
+    </div>
+  </div>
+</div>
+`;

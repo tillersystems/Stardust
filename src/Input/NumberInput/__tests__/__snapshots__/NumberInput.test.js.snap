@@ -100,6 +100,15 @@ exports[`<NumberInput /> should have a text label 1`] = `
 `;
 
 exports[`<NumberInput /> should have an icon icon label and label position 1`] = `
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -175,15 +184,6 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
   outline: none;
 }
 
-.c3 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-}
-
 <div
   class="c0"
   width="25rem"
@@ -227,6 +227,15 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
 `;
 
 exports[`<NumberInput /> should have an icon label 1`] = `
+.c2 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -300,15 +309,6 @@ exports[`<NumberInput /> should have an icon label 1`] = `
 .c3:focus,
 .c3:active {
   outline: none;
-}
-
-.c2 {
-  display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
 }
 
 <div
@@ -502,11 +502,11 @@ exports[`<NumberInput /> should render without a problem when focused and unfocu
 
 exports[`<NumberInput /> should render without a problem when focused and unfocused 2`] = `
 <div
-  class="sc-ckVGcZ gHnlnX"
+  class="sc-jKJlTe hYMjoK"
   width="25rem"
 >
   <input
-    class="sc-jKJlTe jQmZNI"
+    class="sc-eNQAEJ epiHHR"
     data-testid="input"
     id=""
     placeholder=""

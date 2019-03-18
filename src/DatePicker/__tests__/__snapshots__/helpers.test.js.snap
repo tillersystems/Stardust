@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Helpers should return an array of the calendar dates) 1`] = `
+Array [
+  Object {
+    "day": 26,
+    "month": 4,
+    "year": 1982,
+  },
+  Object {
+    "day": 27,
+    "month": 4,
+    "year": 1982,
+  },
+  Object {
+    "day": 28,
+    "month": 4,
+    "year": 1982,
+  },
+  Object {
+    "day": 29,
+    "month": 4,
+    "year": 1982,
+  },
+  Object {
+    "day": 30,
+    "month": 4,
+    "year": 1982,
+  },
+  Object {
+    "day": 1,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 2,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 3,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 4,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 5,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 6,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 7,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 8,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 9,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 10,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 11,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 12,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 13,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 14,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 15,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 16,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 17,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 18,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 19,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 20,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 21,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 22,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 23,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 24,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 25,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 26,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 27,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 28,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 29,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 30,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 31,
+    "month": 5,
+    "year": 1982,
+  },
+  Object {
+    "day": 1,
+    "month": 6,
+    "year": 1982,
+  },
+  Object {
+    "day": 2,
+    "month": 6,
+    "year": 1982,
+  },
+  Object {
+    "day": 3,
+    "month": 6,
+    "year": 1982,
+  },
+  Object {
+    "day": 4,
+    "month": 6,
+    "year": 1982,
+  },
+  Object {
+    "day": 5,
+    "month": 6,
+    "year": 1982,
+  },
+  Object {
+    "day": 6,
+    "month": 6,
+    "year": 1982,
+  },
+]
+`;

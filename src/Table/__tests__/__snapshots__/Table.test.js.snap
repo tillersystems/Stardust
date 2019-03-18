@@ -186,7 +186,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -274,7 +274,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 1`] =
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -2077,7 +2077,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -2165,7 +2165,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 2`] =
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -3968,7 +3968,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -4056,7 +4056,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 3`] =
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -5859,7 +5859,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -5947,7 +5947,7 @@ exports[`<Table /> should render differently when clicked on sorting (asc) 4`] =
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -7750,7 +7750,7 @@ exports[`<Table /> should render without a problem 1`] = `
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -7838,7 +7838,7 @@ exports[`<Table /> should render without a problem 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -9641,7 +9641,7 @@ exports[`<Table /> should render without a problem when given a compressed rows 
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -9730,7 +9730,7 @@ exports[`<Table /> should render without a problem when given a compressed rows 
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -11533,7 +11533,7 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -11617,7 +11617,7 @@ exports[`<Table /> should render without a problem when given a no zebraValue 1`
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -13420,7 +13420,7 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -13508,7 +13508,7 @@ exports[`<Table /> should render without a problem when given a width 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -15311,7 +15311,7 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
 }
 
 .c14 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c3 {
@@ -15399,7 +15399,7 @@ exports[`<Table /> should render without a problem when header at bottom 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -17202,7 +17202,7 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -17290,7 +17290,7 @@ exports[`<Table /> should render without a problem when header on top 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -19113,7 +19113,7 @@ exports[`<Table /> should render without a problem when no header 1`] = `
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -20702,7 +20702,7 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -20788,7 +20788,7 @@ exports[`<Table /> should render without a problem when rows are selectable 1`] 
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -22591,7 +22591,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -22696,7 +22696,7 @@ exports[`<Table /> should render without a problem when rows are selectable 2`] 
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },
@@ -24517,7 +24517,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
 }
 
 .c8 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c2 {
@@ -24622,7 +24622,7 @@ exports[`<Table /> should render without a problem when rows are selectable 3`] 
         },
         "weight": Object {
           "normal": 400,
-          "thick": 600,
+          "thick": 500,
           "thin": 200,
         },
       },

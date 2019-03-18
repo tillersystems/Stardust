@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render without a problem 1`] = `
+.c3 {
+  display: inline-block;
+  border-image-source: none;
+  border-image-width: 0;
+  padding: 0;
+  font-size: 20;
+  line-height: 20;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: auto;
+  padding: 0.75rem 1.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 1.57;
+  color: hsl(0,100%,100%);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background 200ms ease,box-shadow 200ms ease;
+  transition: background 200ms ease,box-shadow 200ms ease;
+  color: hsl(213,17%,20%);
+  background: none;
+  padding: 0.35rem 1.4rem;
+}
+
+.c2 svg > path {
+  fill: hsl(0,100%,100%);
+}
+
+.c2 svg > path {
+  fill: hsl(213,17%,20%);
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.c1 {
+  padding: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: hsl(213,17%,20%);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+<div
+  class="c0"
+>
+  <button
+    class="c1 c2"
+    data-testid="previous-month-button"
+    type="button"
+  >
+    <div
+      class="c3"
+      data-testid="iconContainer"
+      height="20"
+      width="20"
+    >
+      <svg
+        data-testid="iconSvg"
+        height="20"
+        style="display: block;"
+        viewBox="0 0 512 512"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M335.085 368.915c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-128-128c-8.331-8.331-8.331-21.839 0-30.17l128-128c8.331-8.331 21.839-8.331 30.17 0 8.331 8.331 8.331 21.839 0 30.17L222.17 256l112.915 112.915z"
+          data-testid="iconSvgPath"
+          fill="hsl(207,13%,45%)"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </button>
+  <div
+    class="c4"
+  />
+  <button
+    class="c1 c2"
+    data-testid="next-month-button"
+    type="button"
+  >
+    <div
+      class="c3"
+      data-testid="iconContainer"
+      height="20"
+      width="20"
+    >
+      <svg
+        data-testid="iconSvg"
+        height="20"
+        style="display: block;"
+        viewBox="0 0 512 512"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M176.915 143.085c-8.331-8.331-8.331-21.839 0-30.17 8.331-8.331 21.839-8.331 30.17 0l128 128c8.331 8.331 8.331 21.839 0 30.17l-128 128c-8.331 8.331-21.839 8.331-30.17 0-8.331-8.331-8.331-21.839 0-30.17L289.83 256 176.915 143.085z"
+          data-testid="iconSvgPath"
+          fill="hsl(207,13%,45%)"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;

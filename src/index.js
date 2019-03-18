@@ -5,7 +5,7 @@ export { default as Button } from './Button';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as CheckBox } from './CheckBox';
 export { default as Counter } from './Counter';
-export { DatePicker, DateRangePicker } from './Date';
+export { default as DatePicker } from './DatePicker';
 export { default as Dropdown } from './Dropdown';
 export { default as Flag } from './Flag';
 export { default as Form } from './Form';
