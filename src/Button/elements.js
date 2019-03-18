@@ -14,7 +14,7 @@ export const Container = styled.button`
   max-width: 100%;
   width: ${({ fluid }) => (fluid ? '100%' : 'auto')};
 
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.6rem;
 
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
