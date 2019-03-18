@@ -248,11 +248,11 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
             class="sc-EHOje dYYwli"
           >
             <div
-              class="sc-cvbbAY jIVDhY"
+              class="sc-eHgmQL iVDjmP"
               width="25rem"
             >
               <input
-                class="sc-jWBwVP kgmPjO"
+                class="sc-cvbbAY eLqhzC"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"

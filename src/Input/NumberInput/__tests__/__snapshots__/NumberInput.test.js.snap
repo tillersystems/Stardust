@@ -502,11 +502,11 @@ exports[`<NumberInput /> should render without a problem when focused and unfocu
 
 exports[`<NumberInput /> should render without a problem when focused and unfocused 2`] = `
 <div
-  class="sc-eNQAEJ eSTtBM"
+  class="sc-jKJlTe hYMjoK"
   width="25rem"
 >
   <input
-    class="sc-hMqMXs irkUcR"
+    class="sc-eNQAEJ epiHHR"
     data-testid="input"
     id=""
     placeholder=""

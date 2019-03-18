@@ -152,6 +152,7 @@ class DatePickerInput extends PureComponent {
               <DatePicker
                 minDate={minDate}
                 maxDate={maxDate}
+                defaultValue={dateValue}
                 value={dateValue}
                 onDateChanged={this.handleDateChange}
               />

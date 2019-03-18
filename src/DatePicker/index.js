@@ -9,6 +9,8 @@ import Header from './Header';
 import { Container } from './elements';
 import { getPreviousMonth, getNextMonth, isSameDay, isInNextMonth, isInLastMonth } from './helpers';
 
+/* eslint-disable react/destructuring-assignment */
+
 const { bool, func, number, object, string } = PropTypes;
 const localDateTime = DateTime.local();
 
@@ -35,8 +37,8 @@ class DatePicker extends PureComponent {
   /** Validation prop types. */
   static propTypes = {
     className: string,
+    defaultValue: object,
     locale: string,
-    value: object,
     minDate: object,
     maxDate: object,
     numberOfMonthsToDisplay: number,
@@ -47,8 +49,8 @@ class DatePicker extends PureComponent {
   /** Default props. */
   static defaultProps = {
     className: '',
+    defaultValue: localDateTime,
     locale: 'en',
-    value: null,
     minDate: null,
     maxDate: null,
     numberOfMonthsToDisplay: 1,
@@ -62,7 +64,7 @@ class DatePicker extends PureComponent {
     currentDate: localDateTime,
 
     /** Selected Calendar date */
-    selected: localDateTime,
+    selected: this.props.defaultValue,
 
     /** Start date value */
     startDate: null,
@@ -73,14 +75,15 @@ class DatePicker extends PureComponent {
 
   /**
    * Component lifecycle method
-   * Update current month to keep track of the date if provided
+   * Update selected date & current date to keep track
+   * of the date if provided
    *
    */
   componentDidMount() {
-    const { value } = this.props;
+    const { defaultValue } = this.props;
 
-    if (value) {
-      this.setState({ selected: value, currentDate: value });
+    if (defaultValue) {
+      this.setState({ selected: defaultValue, currentDate: defaultValue });
     }
   }
 
@@ -89,11 +92,11 @@ class DatePicker extends PureComponent {
    *
    */
   componentDidUpdate(prevProps) {
-    const { value: prevValue } = prevProps;
-    const { value } = this.props;
+    const { defaultValue: prevDefaultValue } = prevProps;
+    const { defaultValue } = this.props;
 
-    if (value !== prevValue) {
-      this.setState({ currentDate: value });
+    if (defaultValue !== prevDefaultValue) {
+      this.setState({ selected: defaultValue, currentDate: defaultValue });
     }
   }
 

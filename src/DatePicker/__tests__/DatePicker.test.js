@@ -45,7 +45,7 @@ describe('<DatePicker />', () => {
         minute: 0,
         second: 0,
       });
-      const { getByText } = render(<DatePicker value={dateValue} maxDate={maxDate} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} maxDate={maxDate} />);
 
       const disabledDay = getByText('18');
 
@@ -62,7 +62,7 @@ describe('<DatePicker />', () => {
         minute: 0,
         second: 0,
       });
-      const { getByText } = render(<DatePicker value={dateValue} maxDate={maxDate} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} maxDate={maxDate} />);
 
       const disabledDay = getByText('19');
 
@@ -82,7 +82,7 @@ describe('<DatePicker />', () => {
         minute: 0,
         second: 0,
       });
-      const { getByText } = render(<DatePicker value={dateValue} minDate={minDate} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} minDate={minDate} />);
 
       const disabledDay = getByText('15');
 
@@ -99,7 +99,7 @@ describe('<DatePicker />', () => {
         minute: 0,
         second: 0,
       });
-      const { getByText } = render(<DatePicker value={dateValue} minDate={minDate} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} minDate={minDate} />);
 
       const disabledDay = getByText('14');
 
@@ -111,7 +111,9 @@ describe('<DatePicker />', () => {
     });
 
     test('should display 2 consecutives months', () => {
-      const { getByText } = render(<DatePicker value={dateValue} numberOfMonthsToDisplay={2} />);
+      const { getByText } = render(
+        <DatePicker defaultValue={dateValue} numberOfMonthsToDisplay={2} />,
+      );
 
       const excpectedFirstMonth = getByText(/July/);
       const excpectedSecondMonth = getByText(/August/);
@@ -121,7 +123,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should select a date', () => {
-      const { getByText } = render(<DatePicker value={dateValue} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} />);
 
       const daySelected = getByText('20');
 
@@ -134,7 +136,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should go to the next month if a shadowed day is selected', () => {
-      const { getByText, getAllByText } = render(<DatePicker value={dateValue} />);
+      const { getByText, getAllByText } = render(<DatePicker defaultValue={dateValue} />);
 
       let monthNode = getByText(/July/);
 
@@ -150,7 +152,7 @@ describe('<DatePicker />', () => {
 
     test('should call onDateChanged when a date is selected', () => {
       const spy = jest.fn();
-      const { getByText } = render(<DatePicker value={dateValue} onDateChanged={spy} />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} onDateChanged={spy} />);
 
       const daySelected = getByText('14');
 
@@ -161,7 +163,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should handle previous month', () => {
-      const { getByTestId, getByText } = render(<DatePicker value={dateValue} />);
+      const { getByTestId, getByText } = render(<DatePicker defaultValue={dateValue} />);
 
       const previousMonthButton = getByTestId('previous-month-button');
 
@@ -174,7 +176,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should handle next month', () => {
-      const { getByTestId, getByText } = render(<DatePicker value={dateValue} />);
+      const { getByTestId, getByText } = render(<DatePicker defaultValue={dateValue} />);
 
       const nextMonthButton = getByTestId('next-month-button');
 
@@ -195,7 +197,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should select a date range', () => {
-      const { getByText } = render(<DatePicker value={dateValue} rangePicker />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} rangePicker />);
 
       let firstDayNode = getByText('14');
 
@@ -237,7 +239,7 @@ describe('<DatePicker />', () => {
     });
 
     test('should select a date range where the first date is after the second', () => {
-      const { getByText } = render(<DatePicker value={dateValue} rangePicker />);
+      const { getByText } = render(<DatePicker defaultValue={dateValue} rangePicker />);
 
       let firstDayNode = getByText('14');
 
@@ -260,7 +262,9 @@ describe('<DatePicker />', () => {
     });
 
     test('should handle previous month', () => {
-      const { getByTestId, getByText } = render(<DatePicker value={dateValue} rangePicker />);
+      const { getByTestId, getByText } = render(
+        <DatePicker defaultValue={dateValue} rangePicker />,
+      );
 
       const previousMonthButton = getByTestId('previous-month-button');
 
@@ -273,7 +277,9 @@ describe('<DatePicker />', () => {
     });
 
     test('should handle next month', () => {
-      const { getByTestId, getByText } = render(<DatePicker value={dateValue} rangePicker />);
+      const { getByTestId, getByText } = render(
+        <DatePicker defaultValue={dateValue} rangePicker />,
+      );
 
       const nextMonthButton = getByTestId('next-month-button');
 
@@ -288,7 +294,7 @@ describe('<DatePicker />', () => {
     describe('with 2 consecutives months displayed', () => {
       test('should render without a problem', () => {
         const { getByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         let firstDayNode = getByText('14');
@@ -313,7 +319,7 @@ describe('<DatePicker />', () => {
 
       test('should select a date range', () => {
         const { getAllByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         let firstDayNode = getAllByText('18')[0];
@@ -357,7 +363,7 @@ describe('<DatePicker />', () => {
 
       test('should go to the next month if a shadowed day is selected in the second calendar', () => {
         const { getByText, getAllByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         const monthNodes = [getByText(/July/), getByText(/August/)];
@@ -378,7 +384,7 @@ describe('<DatePicker />', () => {
 
       test('should select a date range where the first date is after the second', () => {
         const { getAllByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         let firstDayNode = getAllByText('18')[1];
@@ -403,7 +409,7 @@ describe('<DatePicker />', () => {
 
       test('should handle previous month', () => {
         const { getByTestId, getByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         const previousMonthButton = getByTestId('previous-month-button');
@@ -419,7 +425,7 @@ describe('<DatePicker />', () => {
 
       test('should handle next month', () => {
         const { getByTestId, getByText } = render(
-          <DatePicker value={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
+          <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
         const nextMonthButton = getByTestId('next-month-button');

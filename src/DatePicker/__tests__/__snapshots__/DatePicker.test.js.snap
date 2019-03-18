@@ -314,427 +314,423 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class=""
+      class="c7"
     >
       <div
-        class="c7"
+        class="c8"
+      >
+        Mon
+      </div>
+      <div
+        class="c8"
+      >
+        Tue
+      </div>
+      <div
+        class="c8"
+      >
+        Wed
+      </div>
+      <div
+        class="c8"
+      >
+        Thu
+      </div>
+      <div
+        class="c8"
+      >
+        Fri
+      </div>
+      <div
+        class="c8"
+      >
+        Sat
+      </div>
+      <div
+        class="c8"
+      >
+        Sun
+      </div>
+    </div>
+    <div
+      class="c9"
+    >
+      <div
+        class="c10"
       >
         <div
-          class="c8"
+          class="c11"
         >
-          Mon
-        </div>
-        <div
-          class="c8"
-        >
-          Tue
-        </div>
-        <div
-          class="c8"
-        >
-          Wed
-        </div>
-        <div
-          class="c8"
-        >
-          Thu
-        </div>
-        <div
-          class="c8"
-        >
-          Fri
-        </div>
-        <div
-          class="c8"
-        >
-          Sat
-        </div>
-        <div
-          class="c8"
-        >
-          Sun
+          25
         </div>
       </div>
       <div
-        class="c9"
+        class="c10"
       >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            25
-          </div>
+          26
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            26
-          </div>
+          27
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            27
-          </div>
+          28
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c11"
-          >
-            28
-          </div>
+          1
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            1
-          </div>
+          2
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            2
-          </div>
+          3
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            3
-          </div>
+          4
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            4
-          </div>
+          5
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            5
-          </div>
+          6
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            6
-          </div>
+          7
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            7
-          </div>
+          8
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            8
-          </div>
+          9
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            9
-          </div>
+          10
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            10
-          </div>
+          11
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            11
-          </div>
+          12
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            12
-          </div>
+          13
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            13
-          </div>
+          14
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c13"
-          >
-            14
-          </div>
+          15
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            15
-          </div>
+          16
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            16
-          </div>
+          17
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c13"
         >
-          <div
-            class="c12"
-          >
-            17
-          </div>
+          18
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            18
-          </div>
+          19
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            19
-          </div>
+          20
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            20
-          </div>
+          21
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            21
-          </div>
+          22
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            22
-          </div>
+          23
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            23
-          </div>
+          24
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            24
-          </div>
+          25
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            25
-          </div>
+          26
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            26
-          </div>
+          27
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            27
-          </div>
+          28
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            28
-          </div>
+          29
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            29
-          </div>
+          30
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            30
-          </div>
+          31
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c12"
-          >
-            31
-          </div>
+          1
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            1
-          </div>
+          2
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            2
-          </div>
+          3
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            3
-          </div>
+          4
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            4
-          </div>
+          5
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            5
-          </div>
+          6
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            6
-          </div>
-        </div>
-        <div
-          class="c10"
-        >
-          <div
-            class="c11"
-          >
-            7
-          </div>
+          7
         </div>
       </div>
     </div>
@@ -1056,427 +1052,423 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class=""
+      class="c7"
     >
       <div
-        class="c7"
+        class="c8"
+      >
+        Mon
+      </div>
+      <div
+        class="c8"
+      >
+        Tue
+      </div>
+      <div
+        class="c8"
+      >
+        Wed
+      </div>
+      <div
+        class="c8"
+      >
+        Thu
+      </div>
+      <div
+        class="c8"
+      >
+        Fri
+      </div>
+      <div
+        class="c8"
+      >
+        Sat
+      </div>
+      <div
+        class="c8"
+      >
+        Sun
+      </div>
+    </div>
+    <div
+      class="c9"
+    >
+      <div
+        class="c10"
       >
         <div
-          class="c8"
+          class="c11"
         >
-          Mon
-        </div>
-        <div
-          class="c8"
-        >
-          Tue
-        </div>
-        <div
-          class="c8"
-        >
-          Wed
-        </div>
-        <div
-          class="c8"
-        >
-          Thu
-        </div>
-        <div
-          class="c8"
-        >
-          Fri
-        </div>
-        <div
-          class="c8"
-        >
-          Sat
-        </div>
-        <div
-          class="c8"
-        >
-          Sun
+          25
         </div>
       </div>
       <div
-        class="c9"
+        class="c10"
       >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            25
-          </div>
+          26
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            26
-          </div>
+          27
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            27
-          </div>
+          28
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c11"
-          >
-            28
-          </div>
+          1
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            1
-          </div>
+          2
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            2
-          </div>
+          3
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            3
-          </div>
+          4
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            4
-          </div>
+          5
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            5
-          </div>
+          6
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            6
-          </div>
+          7
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            7
-          </div>
+          8
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            8
-          </div>
+          9
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            9
-          </div>
+          10
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            10
-          </div>
+          11
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            11
-          </div>
+          12
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            12
-          </div>
+          13
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            13
-          </div>
+          14
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c13"
-          >
-            14
-          </div>
+          15
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            15
-          </div>
+          16
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            16
-          </div>
+          17
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c13"
         >
-          <div
-            class="c12"
-          >
-            17
-          </div>
+          18
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            18
-          </div>
+          19
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            19
-          </div>
+          20
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            20
-          </div>
+          21
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            21
-          </div>
+          22
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            22
-          </div>
+          23
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            23
-          </div>
+          24
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            24
-          </div>
+          25
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            25
-          </div>
+          26
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            26
-          </div>
+          27
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            27
-          </div>
+          28
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            28
-          </div>
+          29
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            29
-          </div>
+          30
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c12"
         >
-          <div
-            class="c12"
-          >
-            30
-          </div>
+          31
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c12"
-          >
-            31
-          </div>
+          1
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            1
-          </div>
+          2
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            2
-          </div>
+          3
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            3
-          </div>
+          4
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            4
-          </div>
+          5
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            5
-          </div>
+          6
         </div>
+      </div>
+      <div
+        class="c10"
+      >
         <div
-          class="c10"
+          class="c11"
         >
-          <div
-            class="c11"
-          >
-            6
-          </div>
-        </div>
-        <div
-          class="c10"
-        >
-          <div
-            class="c11"
-          >
-            7
-          </div>
+          7
         </div>
       </div>
     </div>

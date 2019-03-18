@@ -87,7 +87,7 @@ storiesOf('DatePicker', module)
               numberOfMonthsToDisplay={numberOfMonthsToDisplay}
               rangePicker={isRange}
               locale={localeValue}
-              value={state.currentDate}
+              defaultValue={state.currentDate}
               minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
               maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
               onDateChanged={date => onChangeAction(date)}
