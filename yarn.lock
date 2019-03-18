@@ -1559,14 +1559,14 @@
     hey-listen "^1.0.5"
     style-value-types "^3.0.7"
 
-"@popmotion/popcorn@^0.3.0":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@popmotion/popcorn/-/popcorn-0.3.1.tgz#f0f33fbf7ff66f2cd0bf28be24bee0b1d46b65e8"
+"@popmotion/popcorn@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@popmotion/popcorn/-/popcorn-0.3.2.tgz#ba3045909002e84f86137f980978c80008846fad"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^4.0.1"
     hey-listen "^1.0.5"
-    style-value-types "^3.0.7"
+    style-value-types "^3.1.0"
 
 "@reach/router@^1.2.1":
   version "1.2.1"
@@ -8841,16 +8841,16 @@ popmotion-pose@^3.4.0:
     style-value-types "^3.0.6"
     tslib "^1.9.1"
 
-popmotion@8.6.3:
-  version "8.6.3"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.6.3.tgz#4fcf47a92e53c4daf80d4973493f8636cc6dd74a"
+popmotion@8.6.4:
+  version "8.6.4"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.6.4.tgz#84596dca14dfa982b0e6fda9e1d1bc45ba1f1f33"
   dependencies:
     "@popmotion/easing" "^1.0.1"
-    "@popmotion/popcorn" "^0.3.0"
+    "@popmotion/popcorn" "^0.3.2"
     framesync "^4.0.0"
     hey-listen "^1.0.5"
-    style-value-types "^3.0.6"
-    stylefire "^2.3.4"
+    style-value-types "^3.1.0"
+    stylefire "2.4.3"
     tslib "^1.9.1"
 
 popmotion@^8.5.0:
@@ -10683,6 +10683,10 @@ style-value-types@^3.0.6, style-value-types@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.7.tgz#6e7a22cc8b1a4465193268ed66ad5f2a82579054"
 
+style-value-types@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.0.tgz#07e06090e7581adff4c7955d544c1029d0663795"
+
 styled-components-breakpoint@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/styled-components-breakpoint/-/styled-components-breakpoint-2.1.0.tgz#839370362c1e084a23d1155286c9a8a1f2af853f"
@@ -10701,6 +10705,14 @@ styled-components@3.4.10:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
+stylefire@2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.4.3.tgz#1b39847251000bda86ebf82fa2bb4be7dafe6bc4"
+  dependencies:
+    framesync "^4.0.0"
+    hey-listen "^1.0.4"
+    style-value-types "^3.0.6"
+
 stylefire@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
@@ -10709,14 +10721,6 @@ stylefire@^2.0.7:
     hey-listen "^1.0.4"
     style-value-types "^3.0.6"
     tslib "^1.9.1"
-
-stylefire@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.3.4.tgz#261957f18683d8e44c89310ff902bec08a83d26a"
-  dependencies:
-    framesync "^4.0.0"
-    hey-listen "^1.0.4"
-    style-value-types "^3.0.6"
 
 stylis-rule-sheet@^0.0.10:
   version "0.0.10"
