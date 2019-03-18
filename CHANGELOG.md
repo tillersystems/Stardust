@@ -1,3 +1,14 @@
+# [2.0.0](https://github.com/tillersystems/Stardust/compare/v1.23.1...v2.0.0) (2019-03-18)
+
+### Bug Fixes
+
+- **Button:** udpate padding values ([#433](https://github.com/tillersystems/Stardust/issues/433)) ([80ae2b3](https://github.com/tillersystems/Stardust/commit/80ae2b3))
+- security vulnerabilities in dependencies ([#431](https://github.com/tillersystems/Stardust/issues/431)) ([0a87493](https://github.com/tillersystems/Stardust/commit/0a87493))
+
+### Features
+
+- **DatePicker:** create a new datePicker ([#440](https://github.com/tillersystems/Stardust/issues/440)) ([9030118](https://github.com/tillersystems/Stardust/commit/9030118))
+
 ## [1.23.1](https://github.com/tillersystems/Stardust/compare/v1.23.0...v1.23.1) (2019-03-08)
 
 ### Bug Fixes
