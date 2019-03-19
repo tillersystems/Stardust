@@ -62,10 +62,10 @@ describe('<DatePickerInput />', () => {
     fireEvent.change(inputNode, { target: { value: inputValue } });
 
     const newSelectedDay = getByText('10');
-    const previouSelectedDay = getByText('15');
+    const previousSelectedDay = selectedDay;
 
-    expect(previouSelectedDay).not.toHaveStyleRule('color', Theme.palette.white);
-    expect(previouSelectedDay).not.toHaveStyleRule('background', Theme.palette.primary.default);
+    expect(previousSelectedDay).not.toHaveStyleRule('color');
+    expect(previousSelectedDay).not.toHaveStyleRule('background');
     expect(newSelectedDay).toHaveStyleRule('color', Theme.palette.white);
     expect(newSelectedDay).toHaveStyleRule('background', Theme.palette.primary.default);
   });
