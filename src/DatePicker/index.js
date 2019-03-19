@@ -7,7 +7,14 @@ import Weeks from './Weeks';
 import Weekdays from './Weekdays';
 import Header from './Header';
 import { Container } from './elements';
-import { getPreviousMonth, getNextMonth, isSameDay, isInNextMonth, isInLastMonth } from './helpers';
+import {
+  getPreviousMonth,
+  getNextMonth,
+  isSameDay,
+  isInNextMonth,
+  isInLastMonth,
+  isInterval,
+} from './helpers';
 
 /* eslint-disable react/destructuring-assignment */
 
@@ -71,18 +78,30 @@ class DatePicker extends PureComponent {
 
     /** End date value */
     endDate: null,
+
+    isInterval: isInterval(this.props.defaultValue),
   };
 
   /**
    * Component lifecycle method
-   * Update selected date & current date to keep track
-   * of the date if provided
+   * Set initial sates
+   * We need to check if the default value is an interval or not
+   * to set initial state correctly.
    *
    */
   componentDidMount() {
     const { defaultValue } = this.props;
+    const { isInterval } = this.state;
 
-    if (defaultValue) {
+    if (isInterval) {
+      // Always set the current date to the start of the interval.
+      this.setState({
+        selected: defaultValue,
+        currentDate: defaultValue.start,
+        startDate: defaultValue.start,
+        endDate: defaultValue.end,
+      });
+    } else {
       this.setState({ selected: defaultValue, currentDate: defaultValue });
     }
   }
@@ -91,12 +110,18 @@ class DatePicker extends PureComponent {
    * Component lifecycle method
    *
    */
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { defaultValue: prevDefaultValue } = prevProps;
     const { defaultValue } = this.props;
 
     if (defaultValue !== prevDefaultValue) {
-      this.setState({ selected: defaultValue, currentDate: defaultValue });
+      !prevState.isInterval &&
+        this.setState({
+          selected: defaultValue,
+          currentDate: defaultValue,
+        });
+      prevState.isInterval &&
+        this.setState({ selected: defaultValue, currentDate: defaultValue.start });
     }
   }
 
@@ -110,9 +135,9 @@ class DatePicker extends PureComponent {
   getSelectedRange() {
     const { startDate, endDate } = this.state;
     const { onDateChanged } = this.props;
-    const selectedRange = !!startDate && !!endDate;
+    const isSelectedRange = !!startDate && !!endDate;
 
-    if (!selectedRange) {
+    if (!isSelectedRange) {
       return;
     }
 
@@ -188,11 +213,14 @@ class DatePicker extends PureComponent {
           isInNextMonth(value, currentDate, numberOfMonthsToDisplay) ||
           isInLastMonth(value, currentDate)
         ) {
-          this.setState({ selected: value, currentDate: value }, () => {
-            this.getSelected();
-          });
+          this.setState(
+            { selected: value, currentDate: value, startDate: null, endDate: null },
+            () => {
+              this.getSelected();
+            },
+          );
         } else {
-          this.setState({ selected: value }, () => {
+          this.setState({ selected: value, startDate: null, endDate: null }, () => {
             this.getSelected();
           });
         }
@@ -226,7 +254,7 @@ class DatePicker extends PureComponent {
     const isBeforeMaxDate = !maxDate || currentDate.endOf('month') < maxDate.endOf('month');
 
     return (
-      <div className={className} style={{ display: 'flex' }}>
+      <div className={className}>
         {[...Array(numberOfMonthsToDisplay).keys()].map(monthIndex => {
           const stringifiedDate = currentDate
             .plus({ month: monthIndex })
@@ -262,6 +290,7 @@ class DatePicker extends PureComponent {
 }
 
 export default styled(DatePicker)`
+  display: flex;
   width: ${({ numberOfMonthsToDisplay }) =>
     numberOfMonthsToDisplay === 2 ? 'calc((24.4rem * 2) + 2.4rem)' : '24.4rem'};
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};

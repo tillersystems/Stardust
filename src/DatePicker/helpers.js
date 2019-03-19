@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon';
+import { DateTime, Interval } from 'luxon';
 
 const CALENDAR_WEEKS = 6; // Weeks displayed on calendar
 
@@ -72,6 +72,16 @@ export const isInLastMonth = (date, currentDate) => {
   const monthEnd = date.endOf('month');
   return monthEnd.hasSame(currentDate.minus({ month: 1 }), 'month');
 };
+
+/**
+ * Is interval
+ * Check if an object is an Interval
+ *
+ * @param {object} value
+ *
+ * @return {boolean}
+ */
+export const isInterval = value => Interval.isInterval(value);
 
 /**
  * Calendar builder for a month in the specified year
