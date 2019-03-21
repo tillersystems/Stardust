@@ -95,6 +95,7 @@ const styledHeader = styled(Header)`
   align-items: center;
 
   color: ${({ theme: { palette } }) => palette.darkBlue};
+  text-align: center;
   font-size: ${({
     theme: {
       fonts: { size },

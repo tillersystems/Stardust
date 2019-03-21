@@ -1,4 +1,4 @@
-import { DateTime, Settings } from 'luxon';
+import { DateTime, Settings, Interval } from 'luxon';
 import Mockdate from 'mockdate';
 
 import {
@@ -8,6 +8,7 @@ import {
   isSameMonth,
   isInNextMonth,
   isInLastMonth,
+  isInterval,
   getCalendarDates,
 } from '../helpers';
 
@@ -82,9 +83,19 @@ describe('Helpers', () => {
     expect(isInLastMonth(anotherSelectedDate, date)).toBeFalsy();
   });
 
-  test('should return an array of the calendar dates)', () => {
+  test('should return an array of the calendar dates', () => {
     const date = DateTime.fromObject({ year: 1982, month: 5, day: 1 });
 
     expect(getCalendarDates(date)).toMatchSnapshot();
+  });
+
+  test('should check if an object is an Interval', () => {
+    const from = DateTime.fromObject({ year: 1982, month: 5, day: 1 });
+    const to = DateTime.fromObject({ year: 1982, month: 5, day: 3 });
+    const notAnIntervalObject = from;
+    const intervalObject = Interval.fromDateTimes(from, to);
+
+    expect(isInterval(notAnIntervalObject)).toMatchSnapshot();
+    expect(isInterval(intervalObject)).toMatchSnapshot();
   });
 });

@@ -228,6 +228,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: hsl(213,17%,20%);
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
@@ -237,13 +238,16 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 24.4rem;
   font-weight: 500;
 }
 
 <div
   class="c0"
-  style="display: flex;"
 >
   <div
     class="c1"
@@ -548,7 +552,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           18
         </div>
@@ -575,7 +579,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>
@@ -966,6 +970,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: hsl(213,17%,20%);
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
@@ -975,13 +980,16 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 24.4rem;
   font-weight: 500;
 }
 
 <div
   class="c0"
-  style="display: flex;"
 >
   <div
     class="c1"
@@ -1286,7 +1294,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           18
         </div>
@@ -1313,7 +1321,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>

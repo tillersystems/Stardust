@@ -47,7 +47,6 @@ const Weeks = ({
           (!minDate || dateNormalized >= minDate.startOf('day')) &&
           (!maxDate || dateNormalized <= maxDate.startOf('day'));
 
-        // Check if calendar date is same day as selected
         const isSelected = isInMonth && isInRange && isSameDay(dateNormalized, selected);
 
         const startOfDay = dateNormalized.startOf('day');

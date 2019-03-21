@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Helpers should return an array of the calendar dates) 1`] = `
+exports[`Helpers should check if an object is an Interval 1`] = `false`;
+
+exports[`Helpers should check if an object is an Interval 2`] = `true`;
+
+exports[`Helpers should return an array of the calendar dates 1`] = `
 Array [
   Object {
     "day": 26,
