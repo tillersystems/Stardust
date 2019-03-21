@@ -228,6 +228,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: hsl(213,17%,20%);
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
@@ -566,7 +567,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           20
         </div>
@@ -575,7 +576,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>
@@ -966,6 +967,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: hsl(213,17%,20%);
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.4rem;
 }
@@ -1304,7 +1306,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           20
         </div>
@@ -1313,7 +1315,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>
