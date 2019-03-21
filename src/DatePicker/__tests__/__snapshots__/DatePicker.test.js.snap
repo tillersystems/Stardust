@@ -238,13 +238,16 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 24.4rem;
   font-weight: 500;
 }
 
 <div
   class="c0"
-  style="display: flex;"
 >
   <div
     class="c1"
@@ -977,13 +980,16 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 24.4rem;
   font-weight: 500;
 }
 
 <div
   class="c0"
-  style="display: flex;"
 >
   <div
     class="c1"
