@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/tillersystems/Stardust/compare/v2.0.0...v2.0.1) (2019-03-21)
+
+### Bug Fixes
+
+- **DatePicker:** allow interval in defaultValue ([#441](https://github.com/tillersystems/Stardust/issues/441)) ([af76012](https://github.com/tillersystems/Stardust/commit/af76012))
+
 # [2.0.0](https://github.com/tillersystems/Stardust/compare/v1.23.1...v2.0.0) (2019-03-18)
 
 ### Bug Fixes
