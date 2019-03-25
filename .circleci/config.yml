@@ -33,7 +33,7 @@ references:
 defaults: &defaults
   working_directory: *workspace_root
   docker:
-    - image: circleci/node:11.10.1
+    - image: circleci/node:11.12.0
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # JOBS
