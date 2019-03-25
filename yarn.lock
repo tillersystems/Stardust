@@ -1422,7 +1422,6 @@
 "@jest/fake-timers@^24.5.0":
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-24.5.0.tgz#4a29678b91fd0876144a58f8d46e6c62de0266f0"
-  integrity sha512-i59KVt3QBz9d+4Qr4QxsKgsIg+NjfuCjSOWj3RQhjF5JNy+eVJDhANQ4WzulzNCHd72srMAykwtRn5NYDGVraw==
   dependencies:
     "@jest/types" "^24.5.0"
     "@types/node" "*"
@@ -1473,7 +1472,6 @@
 "@jest/test-result@^24.5.0":
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-24.5.0.tgz#ab66fb7741a04af3363443084e72ea84861a53f2"
-  integrity sha512-u66j2vBfa8Bli1+o3rCaVnVYa9O8CAFZeqiqLVhnarXtreSXG33YQ6vNYBogT7+nYiFNOohTU21BKiHlgmxD5A==
   dependencies:
     "@jest/console" "^24.3.0"
     "@jest/types" "^24.5.0"
@@ -1502,7 +1500,6 @@
 "@jest/transform@^24.5.0":
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-24.5.0.tgz#6709fc26db918e6af63a985f2cc3c464b4cf99d9"
-  integrity sha512-XSsDz1gdR/QMmB8UCKlweAReQsZrD/DK7FuDlNo/pE8EcKMrfi2kqLRk8h8Gy/PDzgqJj64jNEzOce9pR8oj1w==
   dependencies:
     "@babel/core" "^7.1.0"
     "@jest/types" "^24.5.0"
@@ -1530,7 +1527,6 @@
 "@jest/types@^24.5.0":
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/@jest/types/-/types-24.5.0.tgz#feee214a4d0167b0ca447284e95a57aa10b3ee95"
-  integrity sha512-kN7RFzNMf2R8UDadPOl6ReyI+MT8xfqRuAnuVL+i4gwjv/zubdDK+EDeLHYwq1j0CSSR2W/MmgaRlMZJzXdmVA==
   dependencies:
     "@types/istanbul-lib-coverage" "^1.1.0"
     "@types/yargs" "^12.0.9"
@@ -1542,33 +1538,33 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nivo/axes@0.52.1":
-  version "0.52.1"
-  resolved "https://registry.yarnpkg.com/@nivo/axes/-/axes-0.52.1.tgz#ebd5f961d633dbf19ca80a219436c09c1a603c44"
+"@nivo/axes@0.54.0":
+  version "0.54.0"
+  resolved "https://registry.yarnpkg.com/@nivo/axes/-/axes-0.54.0.tgz#b91ba8728fa22b153fb17fe9d3fa0a189cbf2970"
   dependencies:
-    "@nivo/core" "0.52.1"
+    "@nivo/core" "0.54.0"
     d3-format "^1.3.2"
     d3-time-format "^2.1.3"
     lodash "^4.17.4"
     react-motion "^0.5.2"
-    recompose "^0.26.0"
+    recompose "^0.30.0"
 
-"@nivo/bar@0.52.1":
-  version "0.52.1"
-  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.52.1.tgz#8a6d05c38fa1b52c62c21a74676d916390fab21d"
+"@nivo/bar@0.54.0":
+  version "0.54.0"
+  resolved "https://registry.yarnpkg.com/@nivo/bar/-/bar-0.54.0.tgz#48798f65936902cd3a6d9d857108d1bbb2af547b"
   dependencies:
-    "@nivo/axes" "0.52.1"
-    "@nivo/core" "0.52.1"
-    "@nivo/legends" "0.52.1"
+    "@nivo/axes" "0.54.0"
+    "@nivo/core" "0.54.0"
+    "@nivo/legends" "0.54.0"
     d3-scale "^2.1.2"
     d3-shape "^1.2.2"
     lodash "^4.17.4"
     react-motion "^0.5.2"
-    recompose "^0.26.0"
+    recompose "^0.30.0"
 
-"@nivo/core@0.52.1":
-  version "0.52.1"
-  resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.52.1.tgz#b86533b7274ecf413ae8743e69f87acbb7a98e12"
+"@nivo/core@0.54.0":
+  version "0.54.0"
+  resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.54.0.tgz#09f6fae199f7802ca15579c7ebba28b639c42f48"
   dependencies:
     d3-color "^1.0.3"
     d3-format "^1.3.2"
@@ -1576,19 +1572,19 @@
     d3-interpolate "^1.3.2"
     d3-scale "^2.1.2"
     d3-scale-chromatic "^1.3.3"
-    d3-shape "^1.2.2"
+    d3-shape "^1.3.5"
     d3-time-format "^2.1.3"
     lodash "^4.17.4"
-    react-measure "^2.0.2"
+    react-measure "^2.2.4"
     react-motion "^0.5.2"
-    recompose "^0.26.0"
+    recompose "^0.30.0"
 
-"@nivo/legends@0.52.1":
-  version "0.52.1"
-  resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.52.1.tgz#caa2016b06edc628059ec434f1c47f8da74010b8"
+"@nivo/legends@0.54.0":
+  version "0.54.0"
+  resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.54.0.tgz#e5b47a7d7d7c81dc0b93b9e29a04e6240adcb6ae"
   dependencies:
     lodash "^4.17.4"
-    recompose "^0.26.0"
+    recompose "^0.30.0"
 
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.3"
@@ -2806,7 +2802,6 @@ babel-helper-to-multiple-sequence-expressions@^0.5.0:
 babel-jest@24.5.0:
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-24.5.0.tgz#0ea042789810c2bec9065f7c8ab4dc18e1d28559"
-  integrity sha512-0fKCXyRwxFTJL0UXDJiT2xYxO9Lu2vBd9n+cC+eDjESzcVG3s2DRGAxbzJX21fceB1WYoBjAh8pQ83dKcl003g==
   dependencies:
     "@jest/transform" "^24.5.0"
     "@jest/types" "^24.5.0"
@@ -4648,6 +4643,12 @@ d3-shape@^1.2.2:
   dependencies:
     d3-path "1"
 
+d3-shape@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/d3-shape/-/d3-shape-1.3.5.tgz#e81aea5940f59f0a79cfccac012232a8987c6033"
+  dependencies:
+    d3-path "1"
+
 d3-time-format@2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/d3-time-format/-/d3-time-format-2.1.1.tgz#85b7cdfbc9ffca187f14d3c456ffda268081bb31"
@@ -5957,7 +5958,7 @@ get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
 
-get-node-dimensions@^1.2.0:
+get-node-dimensions@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/get-node-dimensions/-/get-node-dimensions-1.2.1.tgz#fb7b4bb57060fb4247dd51c9d690dfbec56b0823"
 
@@ -7075,7 +7076,6 @@ jest-docblock@^24.3.0:
 jest-dom@3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-3.1.2.tgz#45be8831108abfbcc2c6a9fe315a6b9e234a1a24"
-  integrity sha512-QpyhZxgx8SkFefBaTD426RDT90dSmoB4nBXIHbQQ/MdrpFl9V2HRmhBYe7p82T22TkHQHbSAmis+il4c1R4cBg==
   dependencies:
     chalk "^2.4.1"
     css "^2.2.3"
@@ -7142,7 +7142,6 @@ jest-haste-map@^24.3.1:
 jest-haste-map@^24.5.0:
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-24.5.0.tgz#3f17d0c548b99c0c96ed2893f9c0ccecb2eb9066"
-  integrity sha512-mb4Yrcjw9vBgSvobDwH8QUovxApdimGcOkp+V1ucGGw4Uvr3VzZQBJhNm1UY3dXYm4XXyTW2G7IBEZ9pM2ggRQ==
   dependencies:
     "@jest/types" "^24.5.0"
     fb-watchman "^2.0.0"
@@ -7215,7 +7214,6 @@ jest-message-util@^24.3.0:
 jest-message-util@^24.5.0:
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-24.5.0.tgz#181420a65a7ef2e8b5c2f8e14882c453c6d41d07"
-  integrity sha512-6ZYgdOojowCGiV0D8WdgctZEAe+EcFU+KrVds+0ZjvpZurUW2/oKJGltJ6FWY2joZwYXN5VL36GPV6pNVRqRnQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@jest/test-result" "^24.5.0"
@@ -7235,7 +7233,6 @@ jest-mock@^24.3.0:
 jest-mock@^24.5.0:
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-24.5.0.tgz#976912c99a93f2a1c67497a9414aa4d9da4c7b76"
-  integrity sha512-ZnAtkWrKf48eERgAOiUxVoFavVBziO2pAi2MfZ1+bGXVkDfxWLxU0//oJBkgwbsv6OAmuLBz4XFFqvCFMqnGUw==
   dependencies:
     "@jest/types" "^24.5.0"
 
@@ -7319,7 +7316,6 @@ jest-serializer@^24.3.0:
 jest-serializer@^24.4.0:
   version "24.4.0"
   resolved "https://registry.yarnpkg.com/jest-serializer/-/jest-serializer-24.4.0.tgz#f70c5918c8ea9235ccb1276d232e459080588db3"
-  integrity sha512-k//0DtglVstc1fv+GY/VHDIjrtNjdYvYjMlbLUed4kxrE92sIUewOi5Hj3vrpB8CXfkJntRPDRjCrCvUhBdL8Q==
 
 jest-snapshot@^24.3.1:
   version "24.3.1"
@@ -7365,7 +7361,6 @@ jest-util@^24.3.0:
 jest-util@^24.5.0:
   version "24.5.0"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-24.5.0.tgz#9d9cb06d9dcccc8e7cc76df91b1635025d7baa84"
-  integrity sha512-Xy8JsD0jvBz85K7VsTIQDuY44s+hYJyppAhcsHsOsGisVtdhar6fajf2UOf2mEVEgh15ZSdA0zkCuheN8cbr1Q==
   dependencies:
     "@jest/console" "^24.3.0"
     "@jest/fake-timers" "^24.5.0"
@@ -7416,7 +7411,6 @@ jest-worker@^24.3.1:
 jest-worker@^24.4.0:
   version "24.4.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.4.0.tgz#fbc452b0120bb5c2a70cdc88fa132b48eeb11dd0"
-  integrity sha512-BH9X/klG9vxwoO99ZBUbZFfV8qO0XNZ5SIiCyYK2zOuJBl6YJVAeNIQjcoOVNu4HGEHeYEKsUWws8kSlSbZ9YQ==
   dependencies:
     "@types/node" "*"
     merge-stream "^1.0.1"
@@ -7849,7 +7843,6 @@ lru-cache@^4.1.3, lru-cache@^4.1.5:
 luxon@^1.11.4:
   version "1.11.4"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.11.4.tgz#c5d8c1f795cee26c162e95a4686632abcec50442"
-  integrity sha512-zTQ1DCShOGHIdNpa56yjDpUCowKDsBqeFVuEG2XBcrAM2udxN0g3N5RTZzbw94OkDiBgECsuDgLNnQTo73yghw==
 
 make-dir@^1.0.0, make-dir@^1.3.0:
   version "1.3.0"
@@ -8179,7 +8172,6 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
 mockdate@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-2.0.2.tgz#5ae0c0eaf8fe23e009cd01f9889b42c4f634af12"
-  integrity sha1-WuDA6vj+I+AJzQH5iJtCxPY0rxI=
 
 modify-values@^1.0.0:
   version "1.0.1"
@@ -9557,13 +9549,14 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-measure@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-measure/-/react-measure-2.0.2.tgz#072a9a5fafc01dfbadc1fa5fb09fc351037f636c"
+react-measure@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-measure/-/react-measure-2.2.4.tgz#cec3d96d3c39e22660e958e26d5498e4a342b9e4"
   dependencies:
-    get-node-dimensions "^1.2.0"
-    prop-types "^15.5.10"
-    resize-observer-polyfill "^1.4.2"
+    "@babel/runtime" "^7.2.0"
+    get-node-dimensions "^1.2.1"
+    prop-types "^15.6.2"
+    resize-observer-polyfill "^1.5.0"
 
 react-modal@^3.8.1:
   version "3.8.1"
@@ -9830,15 +9823,6 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
-  dependencies:
-    change-emitter "^0.1.2"
-    fbjs "^0.8.1"
-    hoist-non-react-statics "^2.3.1"
-    symbol-observable "^1.0.4"
-
 recompose@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.30.0.tgz#82773641b3927e8c7d24a0d87d65aeeba18aabd0"
@@ -10083,11 +10067,7 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
-resize-observer-polyfill@^1.4.2:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz#660ff1d9712a2382baa2cad450a4716209f9ca69"
-
-resize-observer-polyfill@^1.5.1:
+resize-observer-polyfill@^1.5.0, resize-observer-polyfill@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
 
