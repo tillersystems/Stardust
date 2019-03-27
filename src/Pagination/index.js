@@ -103,9 +103,7 @@ const Pagination = ({
     } else {
       let left = pageRangeDisplayed / 2;
       let right = pageRangeDisplayed - left;
-      let pageItem = index => getPaginationItem(index);
       let index;
-      let page;
       let paginationBreak;
 
       if (currentPage > pageCount - left) {
@@ -117,20 +115,18 @@ const Pagination = ({
       }
 
       for (index = 1; index <= pageCount; index++) {
-        page = index;
-
-        if (page <= marginPageDisplayed) {
-          items.push(pageItem(index));
+        if (index <= marginPageDisplayed) {
+          items.push(getPaginationItem(index));
           continue;
         }
 
-        if (page > pageCount - marginPageDisplayed) {
-          items.push(pageItem(index));
+        if (index > pageCount - marginPageDisplayed) {
+          items.push(getPaginationItem(index));
           continue;
         }
 
         if (index >= currentPage - left && index <= currentPage + right) {
-          items.push(pageItem(index));
+          items.push(getPaginationItem(index));
           continue;
         }
 
