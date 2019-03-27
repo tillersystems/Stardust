@@ -86,4 +86,16 @@ describe('<Pagination />', () => {
 
     expect(firstPage).toHaveStyleRule('background-color', Theme.palette.primary.default);
   });
+
+  test('should call callback function', () => {
+    const spy = jest.fn();
+
+    const { getByTestId } = render(<Pagination pageCount={10} getRequestedPageNumber={spy} />);
+
+    const arrowRight = getByTestId('arrow-right');
+
+    fireEvent.click(arrowRight);
+
+    expect(spy).toHaveBeenCalled();
+  });
 });
