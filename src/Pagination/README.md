@@ -8,12 +8,6 @@ import { Pagination } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
-,
-,
-marginPageDisplayed,
-breakLabel,
-getRequestedPageNumber,
-
 ### Properties
 
 - `pageCount` - total number of page in the pagination.

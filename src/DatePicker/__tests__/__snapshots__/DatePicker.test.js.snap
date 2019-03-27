@@ -588,7 +588,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           22
         </div>
@@ -633,7 +633,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           27
         </div>
@@ -1330,7 +1330,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           22
         </div>
@@ -1375,7 +1375,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           27
         </div>
