@@ -17,6 +17,7 @@ export { default as Loader } from './Loader';
 export { default as Logo } from './Logo';
 export { default as Message } from './Message';
 export { default as Modal } from './Modal';
+export { default as Pagination } from './Pagination';
 export { default as Pin } from './Pin';
 export { default as Popover } from './Popover';
 export { default as RadioButton } from './RadioButton';
