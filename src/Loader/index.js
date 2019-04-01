@@ -50,8 +50,8 @@ Loader.propTypes = {
 Loader.defaultProps = {
   className: '',
   color: Theme.palette.primary.default,
-  height: '2rem',
-  width: '2rem',
+  height: '20px',
+  width: '20px',
 };
 
 export default styled(Loader)`

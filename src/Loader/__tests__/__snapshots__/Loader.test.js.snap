@@ -16,9 +16,9 @@ exports[`<Loader /> should render without a problem  1`] = `
 <svg
   aria-hidden="true"
   class="c0"
-  height="2rem"
+  height="20px"
   viewBox="0 0 50 50"
-  width="2rem"
+  width="20px"
 >
   <circle
     class="path"
