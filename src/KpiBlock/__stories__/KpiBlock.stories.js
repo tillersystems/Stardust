@@ -12,16 +12,18 @@ storiesOf('KpiBlock', module)
       max: 100,
       step: 10,
     };
-    const Variation = number('Variation', 50, options, 'Variation');
-    const Title = text('Title', 'Commandes', 'Title');
-    const Value = text('Value', '621', 'Value');
-    const hasVariation = boolean('HasVariation', true, 'Variation');
-    const withCustomValue = boolean('withCustomValue', false, 'Value');
+    const Variation = number('Variation', 50, options, 'ALL');
+    const Title = text('Title', 'Commandes', 'ALL');
+    const Value = text('Value', '621', 'ALL');
+    const hasVariation = boolean('HasVariation', true, 'ALL');
+    const withCustomValue = boolean('withCustomValue', false, 'ALL');
+    const isCompactedValue = boolean('isCompactedValue', false, 'ALL');
     return (
       <KpiBlock
         value={withCustomValue ? <div>19</div> : Value}
         title={Title}
         variation={hasVariation ? Variation : false}
+        isCompacted={isCompactedValue}
       />
     );
   });

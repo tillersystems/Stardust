@@ -15,12 +15,12 @@ import { KpiBlock } from '@tillersystems/stardust';
 - `value` - KpiBlock value.
 - `variation` - KpiBlock variation (negative or positive).
 
-| propName    |        propType         | defaultValue | isRequired |
-| ----------- | :---------------------: | :----------: | :--------: |
-| `className` |        `string`         |     `''`     |     -      |
-| `title`     |        `string`         |              |     \*     |
-| `value`     | `string` / `node | | \* |
-| `variation` |    `number` / `bool`    |              |     -      |
+| propName    |     propType      | defaultValue | isRequired |
+| ----------- | :---------------: | :----------: | :--------: |
+| `className` |     `string`      |     `''`     |     -      |
+| `title`     |     `string`      |              |     \*     |
+| `value`     | `string` / `node` |              |     \*     |
+| `variation` | `number` / `bool` |              |     -      |
 
 ### Example
 
