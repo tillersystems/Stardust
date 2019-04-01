@@ -63,9 +63,10 @@ export default styled(KpiBlock)`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
   box-sizing: content-box;
-  display: flex;
-  flex-direction: column;
-  height: 6.6rem;
-  padding: 3rem 1rem;
+  display: grid;
+  grid-template-areas: 'variation' 'value' 'title';
+  grid-template-rows: max-content max-content max-content;
+  height: 10rem;
+  padding: 1rem;
   position: relative;
 `;
