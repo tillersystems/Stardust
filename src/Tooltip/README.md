@@ -10,27 +10,29 @@ import { Tooltip } from '@tillersystems/stardust';
 
 ### Properties
 
-- `className` - className needed by styled components.
-- `active` - Boolean set if the Tooltip is showed or not.
-- `hover` - Boolean set to use click or hover to show the Tooltip.
 - `appearance` - Appearance is used to set the color of the tooltip which can be dark or light.
-- `top` - Boolean set to positionate the tooltip above or below the element.
-- `arrowPositionX` - Set position of the Tooltip's arrow.
+- `arrow` - Determines if an arrow should be added to the tooltip pointing toward the reference element.
+- `boundary` - The boundary preventOverflow modifier. Possible values: "scrollParent", "window", "viewport", or an HTMLElement.
 - `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
-- `width` - Tooltip width.
-- `title` - Tooltip main text.
+- `className` - Class needed by styled components.
+- `content` - The content of the tooltip. Along with a string or element, you can use a function that takes the reference element as an argument and returns content.
+- `maxWidth` - Determines the maximum width of the tooltip.
+- `placement` - Positions the tooltip relative to its reference element.
+- `trigger` - The events (each separated by a space) which cause a tooltip to show. Possible values: "mouseenter", "focus", "click", "manual". Use "manual" to only trigger the tippy programmatically.
 
-| propName         |          propType          | defaultValue | isRequired |
-| ---------------- | :------------------------: | :----------: | :--------: |
-| `className`      |          `string`          |     `''`     |     -      |
-| `active`         |           `bool`           |   `false`    |     -      |
-| `hover`          |           `bool`           |   `false`    |     -      |
-| `appearance`     | `oneOf(['dark', 'light'])` |    `dark`    |     -      |
-| `top`            |           `bool`           |   `false`    |     -      |
-| `arrowPositionX` |          `string`          |    `50%`     |     -      |
-| `children`       |           `node`           |    `null`    |     -      |
-| `width`          |          `string`          |    `auto`    |     -      |
-| `title`          |          `string`          |    `null`    |     \*     |
+All of the native [Tippy.js](https://atomiks.github.io/tippyjs/) options can be passed as props. Visit [All Options](https://atomiks.github.io/tippyjs/all-options/) to view the complete table.
+
+| propName     |     propType     |    defaultValue    | isRequired |
+| ------------ | :--------------: | :----------------: | :--------: |
+| `appearance` |     `string`     |       `dark`       |     -      |
+| `arrow`      |      `bool`      |      `false`       |     -      |
+| `boundary`   |     `string`     |   `scrollParent`   |     -      |
+| `children`   |      `node`      |       `null`       |     -      |
+| `className`  |     `string`     |        `''`        |     -      |
+| `content`    |     `string`     |        `''`        |     -      |
+| `maxWidth`   | `string, number` |       `350`        |     -      |
+| `placement`  |     `string`     |       `top`        |     -      |
+| `trigger`    |     `string`     | `mouseenter focus` |     -      |
 
 ### Example
 
@@ -40,10 +42,12 @@ import { Tooltip } from '@tillersystems/stardust';
 render() {
   return (
     <Tooltip
-        top
-        width='28rem'
-        title='Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-        sur la période séléctionnée.'
+      appearance="light"
+      arrow
+      content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur la période séléctionnée."
+      maxWidth={400}
+      placement="bottom"
+      trigger="click"
       >
         <button>
           Show Tooltip
