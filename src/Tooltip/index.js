@@ -1,153 +1,154 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import posed, { PoseGroup } from 'react-pose';
-
-import { Container, Wrapper } from './elements';
+import styled from 'styled-components';
+import Tippy from '@tippy.js/react';
 
 /**
  * Tooltip
  *
- * This component is in charge of displaying
- * a tooltip
+ * This component is in charge of displaying a tooltip.
+ * We use Tippy.js, a highly customizable tooltip and popover library
+ * powered by Popper.js
+ * https://atomiks.github.io/tippyjs/
  *
- * @param {string} className // className needed by styled component.
- * @param {bool} active // Boolean set if the Tooltip is showed or not.
- * @param {bool} hover // Boolean set to use click or hover to show the Tooltip.
- * @param {bool} top // Boolean set to positionate the tooltip above or below the element.
- * @param {string} arrowPositionX // Set position of the Tooltip's arrow.
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
- * @param {string} width // Tooltip width.
+ * To see all props you can use: https://atomiks.github.io/tippyjs/all-options/
+ *
  * @param {string} appearance // Appearance is used to set the color of the tooltip which can be dark or light.
- * @param {string} title // Tooltip main text.
+ * @param {boolean} arrow // Determines if an arrow should be added to the tooltip pointing toward the reference element.
+ * @param {string} boundary // The boundary preventOverflow modifier. Possible values:  "scrollParent",  "window", "viewport", or an HTMLElement.
+ * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
+ * @param {string} className // Class needed by styled components.
+ * @param {node, string, function} content // The content of the tooltip. Along with a string or element, you can use a function that takes the reference element as an argument and returns content.
+ * @param {string, number} maxWidth // Determines the maximum width of the tooltip.
+ * @param {string} placement // Positions the tooltip relative to its reference element.
+ * @param {string} trigger // The events (each separated by a space) which cause a tooltip to show. Possible values:  "mouseenter", "focus",  "click", "manual". Use  "manual" to only trigger the tippy programmatically.
  *
  * @return {jsx}
  */
 
-class Tooltip extends React.Component {
-  /** Prop types. */
-  static propTypes = {
-    className: PropTypes.string,
-    active: PropTypes.bool,
-    hover: PropTypes.bool,
-    top: PropTypes.bool,
-    arrowPositionX: PropTypes.string,
-    children: PropTypes.node,
-    width: PropTypes.string,
-    appearance: PropTypes.oneOf(['dark', 'light']),
-    title: PropTypes.string.isRequired,
-  };
+const Tooltip = ({
+  appearance,
+  arrow,
+  boundary,
+  children,
+  className,
+  content,
+  maxWidth,
+  placement,
+  trigger,
+  ...rest
+}) => {
+  return (
+    <Tippy
+      arrow={arrow}
+      className={`${className} ${appearance}`}
+      content={content}
+      maxWidth={maxWidth}
+      placement={placement}
+      trigger={trigger}
+      boundary={boundary}
+      {...rest}
+    >
+      {/*
+        To use a component element as a child we need to wrap element with a div
+        https://github.com/atomiks/tippy.js-react#component-children
+      */}
+      <div style={{ display: 'inline-block' }}>{children}</div>
+    </Tippy>
+  );
+};
 
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-    active: false,
-    hover: false,
-    top: false,
-    arrowPositionX: '50%',
-    children: null,
-    width: 'auto',
-    appearance: 'dark',
-  };
+const { node, string } = PropTypes;
+Tooltip.propTypes = {
+  ...Tippy.propTypes,
+  children: node,
+  className: string,
+};
 
-  state = {
-    active: false,
-  };
+Tooltip.defaultProps = {
+  ...Tippy.defaultProps,
+  arrow: true,
+  boundary: 'window',
+  children: null,
+  placement: 'top',
+  trigger: 'click',
+};
 
-  /**
-   * Handles mounting in component's lifecycle.
-   */
-  componentDidMount() {
-    const { active } = this.props;
-    this.setState({ active });
+export default styled(Tooltip)`
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+  padding: 0.6rem 1rem;
+  font-size: 1.4rem;
+
+  /* Styling the arrow to match specifications */
+  &[x-placement^='top'] {
+    .tippy-arrow {
+      border-width: 6px 6px 0 6px;
+      bottom: -6px;
+    }
   }
-
-  /**
-   * Handles update in component's lifecycle.
-   *
-   * @param {Object} prevProps - The component's previous props.
-   */
-  componentDidUpdate(prevProps) {
-    const { active } = this.props;
-    if (active !== prevProps.active) {
-      this.setState({ active });
+  &[x-placement^='bottom'] {
+    .tippy-arrow {
+      border-width: 0 6px 6px 6px;
+      top: -6px;
     }
   }
 
-  handleClick = () => {
-    const { active } = this.state;
-    this.setState({ active: !active });
-  };
-
-  handleMouveEnter = () => {
-    this.setState({ active: true });
-  };
-
-  handleMouseLeave = () => {
-    this.setState({ active: false });
-  };
-
-  render() {
-    const {
-      appearance,
-      arrowPositionX,
-      children,
-      className,
-      hover,
-      title,
-      top,
-      width,
-    } = this.props;
-    const { active } = this.state;
-    const childrenWithProps = React.Children.map(children, child =>
-      React.cloneElement(child, {
-        onClick: hover ? null : this.handleClick,
-        onMouseEnter: hover ? this.handleMouveEnter : null,
-        onMouseLeave: hover ? this.handleMouseLeave : null,
-      }),
-    );
-    return (
-      <Wrapper className={className}>
-        {childrenWithProps}
-        <PoseGroup>
-          {active && (
-            <ToolTipAnimation
-              top={top}
-              width={width}
-              arrowPositionX={arrowPositionX}
-              key="ContainerAnimation"
-              data-testid="tooltip"
-              appearance={appearance}
-            >
-              {title}
-            </ToolTipAnimation>
-          )}
-        </PoseGroup>
-      </Wrapper>
-    );
+  &[x-placement^='left'] {
+    .tippy-arrow {
+      border-width: 6px 0px 6px 6px;
+      right: -6px;
+    }
   }
-}
 
-/**
- * Animation
- */
-const ToolTipAnimation = posed(Container)({
-  enter: {
-    opacity: 1,
-    scale: 1,
-    x: '-50%',
-    y: ({ top }) => (top ? '-15px' : '15px'),
-    transition: {
-      scale: { type: 'spring', stiffness: 600, damping: 30 },
-      default: { duration: 100 },
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.9,
-    x: '-50%',
-    y: ({ top }) => (top ? '-15px' : '15px'),
-    transition: { duration: 100 },
-  },
-});
+  &[x-placement^='right'] {
+    .tippy-arrow {
+      border-width: 6px 6px 6px 0px;
+      left: -6px;
+    }
+  }
 
-export default Tooltip;
+  /* Styling the dark theme arrow */
+  &.dark {
+    color: ${({ theme: { palette } }) => palette.white};
+    background: ${({ theme: { palette } }) => palette.darkBlue};
+
+    &[x-placement^='top'],
+    &[x-placement^='bottom'] {
+      .tippy-arrow {
+        border-color: ${({ theme: { palette } }) => palette.darkBlue} transparent
+          ${({ theme: { palette } }) => palette.darkBlue} transparent;
+      }
+    }
+    &[x-placement^='left'],
+    &[x-placement^='right'] {
+      .tippy-arrow {
+        border-color: transparent ${({ theme: { palette } }) => palette.darkBlue} transparent
+          ${({ theme: { palette } }) => palette.darkBlue};
+      }
+    }
+  }
+
+  /* Styling the light theme arrow */
+  &.light {
+    color: ${({ theme: { palette } }) => palette.darkBlue};
+    background: ${({ theme: { palette } }) => palette.white};
+    box-shadow: 0 0 0 1px ${({ theme: { palette } }) => palette.lightGrey},
+      0 2px 16px 0 rgba(0, 0, 0, 0.1);
+
+    &[x-placement^='top'],
+    &[x-placement^='bottom'] {
+      .tippy-arrow {
+        border-color: ${({ theme: { palette } }) => palette.white} transparent
+          ${({ theme: { palette } }) => palette.white} transparent;
+      }
+    }
+
+    &[x-placement^='left'],
+    &[x-placement^='right'] {
+      .tippy-arrow {
+        border-color: transparent ${({ theme: { palette } }) => palette.white} transparent
+          ${({ theme: { palette } }) => palette.white};
+      }
+    }
+  }
+`;

@@ -22,17 +22,17 @@ import { Tooltip } from '@tillersystems/stardust';
 
 All of the native [Tippy.js](https://atomiks.github.io/tippyjs/) options can be passed as props. Visit [All Options](https://atomiks.github.io/tippyjs/all-options/) to view the complete table.
 
-| propName     |     propType     |    defaultValue    | isRequired |
-| ------------ | :--------------: | :----------------: | :--------: |
-| `appearance` |     `string`     |       `dark`       |     -      |
-| `arrow`      |      `bool`      |      `false`       |     -      |
-| `boundary`   |     `string`     |   `scrollParent`   |     -      |
-| `children`   |      `node`      |       `null`       |     -      |
-| `className`  |     `string`     |        `''`        |     -      |
-| `content`    |     `string`     |        `''`        |     -      |
-| `maxWidth`   | `string, number` |       `350`        |     -      |
-| `placement`  |     `string`     |       `top`        |     -      |
-| `trigger`    |     `string`     | `mouseenter focus` |     -      |
+| propName     |         propType         |    defaultValue    | isRequired |
+| ------------ | :----------------------: | :----------------: | :--------: |
+| `appearance` |         `string`         |       `dark`       |     -      |
+| `arrow`      |          `bool`          |      `false`       |     -      |
+| `boundary`   |         `string`         |   `scrollParent`   |     -      |
+| `children`   |          `node`          |       `null`       |     -      |
+| `className`  |         `string`         |        `''`        |     -      |
+| `content`    | `node, string, function` |        `''`        |     -      |
+| `maxWidth`   |     `string, number`     |       `350`        |     -      |
+| `placement`  |         `string`         |       `top`        |     -      |
+| `trigger`    |         `string`         | `mouseenter focus` |     -      |
 
 ### Example
 

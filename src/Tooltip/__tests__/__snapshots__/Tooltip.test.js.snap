@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tooltip /> should render without a problem 1`] = `
-.c0 {
-  position: relative;
-  display: inline-block;
-}
-
+exports[`<Tooltip /> should render only the child element 1`] = `
 <div
-  class="c0"
+  style="display: inline-block;"
+  tabindex="0"
 >
   <button
     type="button"
