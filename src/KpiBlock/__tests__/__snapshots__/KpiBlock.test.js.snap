@@ -10,13 +10,22 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   line-height: 20;
 }
 
+.c4 {
+  grid-area: title;
+  color: hsl(207,13%,45%);
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+}
+
 .c3 {
+  grid-area: value;
   color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 500;
 }
 
 .c1 {
+  grid-area: variation;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -26,16 +35,10 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-size: 1.2rem;
-  position: absolute;
   right: 1rem;
   top: 1rem;
+  justify-self: end;
   color: hsl(6,79%,65%);
-}
-
-.c4 {
-  color: hsl(207,13%,45%);
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
 }
 
 .c0 {
@@ -48,15 +51,11 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   border-radius: 0.4rem;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
   box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 6.6rem;
-  padding: 3rem 1rem;
+  display: grid;
+  grid-template-areas: 'variation' 'value' 'title';
+  height: 10rem;
+  grid-template-rows: max-content max-content max-content;
+  padding: 1rem;
   position: relative;
 }
 
@@ -114,13 +113,22 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   line-height: 20;
 }
 
+.c4 {
+  grid-area: title;
+  color: hsl(207,13%,45%);
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+}
+
 .c3 {
+  grid-area: value;
   color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 500;
 }
 
 .c1 {
+  grid-area: variation;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -130,16 +138,10 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   display: -ms-flexbox;
   display: flex;
   font-size: 1.2rem;
-  position: absolute;
   right: 1rem;
   top: 1rem;
+  justify-self: end;
   color: hsl(89,53%,52%);
-}
-
-.c4 {
-  color: hsl(207,13%,45%);
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
 }
 
 .c0 {
@@ -152,15 +154,11 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   border-radius: 0.4rem;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
   box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 6.6rem;
-  padding: 3rem 1rem;
+  display: grid;
+  grid-template-areas: 'variation' 'value' 'title';
+  height: 10rem;
+  grid-template-rows: max-content max-content max-content;
+  padding: 1rem;
   position: relative;
 }
 
@@ -210,16 +208,18 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 `;
 
 exports[`<KpiBlock /> should render without a problem 1`] = `
+.c2 {
+  grid-area: title;
+  color: hsl(207,13%,45%);
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+}
+
 .c1 {
+  grid-area: value;
   color: hsl(213,17%,20%);
   font-size: 3rem;
   font-weight: 500;
-}
-
-.c2 {
-  color: hsl(207,13%,45%);
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
 }
 
 .c0 {
@@ -232,15 +232,11 @@ exports[`<KpiBlock /> should render without a problem 1`] = `
   border-radius: 0.4rem;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
   box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 6.6rem;
-  padding: 3rem 1rem;
+  display: grid;
+  grid-template-areas: 'variation' 'value' 'title';
+  height: 10rem;
+  grid-template-rows: max-content max-content max-content;
+  padding: 1rem;
   position: relative;
 }
 
