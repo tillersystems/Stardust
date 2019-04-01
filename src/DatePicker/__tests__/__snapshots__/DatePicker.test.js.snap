@@ -12,33 +12,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   padding-right: 0.8rem;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: hsl(206,23%,69%);
-}
-
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -67,6 +40,33 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 
 .c12:hover {
   background: rgba(30,146,204,0.14);
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: hsl(206,23%,69%);
 }
 
 .c13 {
@@ -286,7 +286,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
       <div
         class="c6"
       >
-        March 2019
+        July 2018
       </div>
       <button
         class="c3 c4"
@@ -393,6 +393,24 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
           class="c11"
         >
           28
+        </div>
+      </div>
+      <div
+        class="c10"
+      >
+        <div
+          class="c11"
+        >
+          29
+        </div>
+      </div>
+      <div
+        class="c10"
+      >
+        <div
+          class="c11"
+        >
+          30
         </div>
       </div>
       <div
@@ -525,7 +543,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           15
         </div>
@@ -579,7 +597,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           21
         </div>
@@ -717,24 +735,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
           class="c11"
         >
           5
-        </div>
-      </div>
-      <div
-        class="c10"
-      >
-        <div
-          class="c11"
-        >
-          6
-        </div>
-      </div>
-      <div
-        class="c10"
-      >
-        <div
-          class="c11"
-        >
-          7
         </div>
       </div>
     </div>
@@ -754,33 +754,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   padding-right: 0.8rem;
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: hsl(206,23%,69%);
-}
-
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -809,6 +782,33 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 
 .c12:hover {
   background: rgba(30,146,204,0.14);
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: hsl(206,23%,69%);
 }
 
 .c13 {
@@ -1028,7 +1028,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
       <div
         class="c6"
       >
-        March 2019
+        July 2018
       </div>
       <button
         class="c3 c4"
@@ -1135,6 +1135,24 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
           class="c11"
         >
           28
+        </div>
+      </div>
+      <div
+        class="c10"
+      >
+        <div
+          class="c11"
+        >
+          29
+        </div>
+      </div>
+      <div
+        class="c10"
+      >
+        <div
+          class="c11"
+        >
+          30
         </div>
       </div>
       <div
@@ -1267,7 +1285,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c12"
+          class="c13"
         >
           15
         </div>
@@ -1321,7 +1339,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           21
         </div>
@@ -1459,24 +1477,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
           class="c11"
         >
           5
-        </div>
-      </div>
-      <div
-        class="c10"
-      >
-        <div
-          class="c11"
-        >
-          6
-        </div>
-      </div>
-      <div
-        class="c10"
-      >
-        <div
-          class="c11"
-        >
-          7
         </div>
       </div>
     </div>
