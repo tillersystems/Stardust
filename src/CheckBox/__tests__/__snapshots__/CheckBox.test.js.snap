@@ -1,79 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckBox /> should not be checked with change when disabled 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.7rem;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 0.4rem;
-  background: hsl(0,100%,100%);
-  -webkit-transition: background-color ease 0.25s;
-  transition: background-color ease 0.25s;
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  color: hsl(207,13%,45%);
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.c0 {
-  width: 100%;
-}
-
-<div
-  class="c0"
-  data-testid="checkBox"
->
-  <label
-    class="c1"
-    disabled=""
-  >
-    <div
-      class="c2"
-      data-testid="checkBoxContainer"
-      disabled=""
-    >
-      <input
-        data-testid="checkBoxInput"
-        disabled=""
-        tabindex="-1"
-        type="checkbox"
-        value=""
-      />
-    </div>
-    label
-  </label>
-</div>
-`;
-
-exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
-.c3 {
+exports[`<CheckBox /> should render without a problem 1`] = `
+.c6 {
   display: inline-block;
   border-image-source: none;
   border-image-width: 0;
@@ -82,7 +10,22 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
   line-height: 1rem;
 }
 
-.c2 {
+.c3 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,16 +41,20 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
   width: 1.6rem;
   height: 1.6rem;
   margin-right: 0.7rem;
+  background: hsl(0,100%,100%);
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
-  background: hsl(0,100%,100%);
-  -webkit-transition: background-color ease 0.25s;
-  transition: background-color ease 0.25s;
-  border: 1px solid #1873a0;
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
-  -webkit-transition: border ease 0.25s;
-  transition: border ease 0.25s;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+.c2:focus + .c4 {
+  box-shadow: 0 0 0 2px rgba(30,146,204,0.4);
+}
+
+.c4 .c5 {
+  visibility: hidden;
 }
 
 .c1 {
@@ -122,8 +69,6 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
   cursor: pointer;
   position: relative;
   color: hsl(207,13%,45%);
-  color: hsl(200,74%,46%);
-  font-weight: 500;
 }
 
 .c0 {
@@ -136,13 +81,21 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
 >
   <label
     class="c1"
+    data-testid="checkBox-label"
   >
+    <input
+      class="c2 c3"
+      data-testid="hidden-checkBox"
+      tabindex="0"
+      type="checkbox"
+      value=""
+    />
     <div
-      class="c2"
-      data-testid="checkBoxContainer"
+      class="c4"
+      data-testid="styled-checkBox"
     >
       <div
-        class="c3"
+        class="c5 c6"
         data-testid="iconContainer"
         height="1rem"
         width="1rem"
@@ -163,98 +116,8 @@ exports[`<CheckBox /> should render an initial selected checkbox 1`] = `
           />
         </svg>
       </div>
-      <input
-        checked=""
-        data-testid="checkBoxInput"
-        tabindex="0"
-        type="checkbox"
-        value=""
-      />
     </div>
     label
   </label>
 </div>
-`;
-
-exports[`<CheckBox /> should render without a problem 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.7rem;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 0.4rem;
-  background: hsl(0,100%,100%);
-  -webkit-transition: background-color ease 0.25s;
-  transition: background-color ease 0.25s;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  color: hsl(207,13%,45%);
-}
-
-.c0 {
-  width: 100%;
-}
-
-<div
-  class="c0"
-  data-testid="checkBox"
->
-  <label
-    class="c1"
-  >
-    <div
-      class="c2"
-      data-testid="checkBoxContainer"
-    >
-      <input
-        data-testid="checkBoxInput"
-        tabindex="0"
-        type="checkbox"
-        value=""
-      />
-    </div>
-    label
-  </label>
-</div>
-`;
-
-exports[`<CheckBox /> should toggle 1`] = `
-<input
-  data-testid="checkBoxInput"
-  tabindex="0"
-  type="checkbox"
-  value=""
-/>
-`;
-
-exports[`<CheckBox /> should toggle 2`] = `
-<input
-  data-testid="checkBoxInput"
-  tabindex="0"
-  type="checkbox"
-  value=""
-/>
 `;

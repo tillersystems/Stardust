@@ -1,11 +1,14 @@
 import styled, { css } from 'styled-components';
+import { hideVisually, transparentize } from 'polished';
+import Icon from '../Icon';
 
-/**
- * Container of the actual check box.
- *
- * @return {jsx}
- */
-export const BoxContainer = styled.div`
+// Hide checkbox visually but remain accessible to screen readers.
+// See: https://polished.js.org/docs/#hidevisually
+export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
+  ${hideVisually()}
+`;
+
+export const StyledCheckbox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,42 +16,35 @@ export const BoxContainer = styled.div`
   width: 1.6rem;
   height: 1.6rem;
 
-  margin-right: ${({ theme: { dimensions } }) => dimensions.small};
+  margin-right: 0.7rem;
 
-  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
-
-  background: ${({ theme: { palette } }) => palette.white};
-
-  transition: background-color ease 0.25s;
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      opacity: 0.4;
-      cursor: not-allowed;
-    `};
-
-  ${({ checked }) =>
-    checked &&
-    css`
-      border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
-      background: ${({ theme: { palette } }) => palette.primary.default}
+  background: ${({ theme: { palette }, checked }) =>
+    checked
+      ? `${palette.primary.default}
         linear-gradient(
           0deg,
-          ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
-          ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
-        );
-      box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
-      transition: border ease 0.25s;
-    `};
+          ${palette.whiteOpacity(0)} 0%,
+          ${palette.whiteOpacity(0.1)} 100%
+        )`
+      : palette.white};
+  border: 1px solid
+    ${({ theme: { palette }, checked }) => (checked ? palette.primary.dark : palette.lightGrey)};
+  border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
+
+  box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
+
+  transition: all 150ms;
+
+  ${HiddenCheckbox}:focus + & {
+    box-shadow: 0 0 0 2px
+      ${({ theme: { palette } }) => transparentize(0.6, palette.primary.default)};
+  }
+
+  ${Icon} {
+    visibility: ${({ checked }) => (checked ? 'visible' : 'hidden')};
+  }
 `;
 
-/**
- * Label of the check box.
- *
- * @return {jsx}
- */
 export const Label = styled.label`
   display: flex;
   align-items: center;
