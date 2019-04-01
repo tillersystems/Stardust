@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Icon } from '..';
+import Icon from '../Icon';
 import Theme from '../Theme';
-import { BoxContainer, Label } from './elements';
+import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
 
 /**
  * CheckBox
@@ -91,25 +91,18 @@ class CheckBox extends PureComponent {
 
     return (
       <div className={className} {...rest} data-testid="checkBox">
-        <Label disabled={disabled} checked={checked}>
-          <BoxContainer checked={checked} disabled={disabled} data-testid="checkBoxContainer">
-            {checked && (
-              <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
-            )}
-            <input
-              type="checkbox"
-              data-testid="checkBoxInput"
-              onClick={
-                // prevents clicking on the label trigging the event twice
-                event => event.stopPropagation()
-              }
-              tabIndex={disabled ? -1 : 0}
-              checked={checked}
-              disabled={disabled}
-              onChange={this.handleChange}
-              value={value}
-            />
-          </BoxContainer>
+        <Label disabled={disabled} checked={checked} data-testid="checkBox-label">
+          <HiddenCheckbox
+            data-testid="hidden-checkBox"
+            checked={checked}
+            disabled={disabled}
+            onChange={this.handleChange}
+            tabIndex={disabled ? -1 : 0}
+            value={value}
+          />
+          <StyledCheckbox checked={checked} data-testid="styled-checkBox">
+            <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
+          </StyledCheckbox>
           {children}
         </Label>
       </div>

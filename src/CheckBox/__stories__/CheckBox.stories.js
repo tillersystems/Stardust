@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
+import { action } from '@storybook/addon-actions';
 
 import { CheckBox } from '../..';
 
@@ -13,14 +14,19 @@ storiesOf('CheckBox', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const enabledValue = boolean('Enabled', true, 'state');
+    const onChangeAction = action('onChange');
 
     return (
       <>
-        <CheckBox checked disabled={!enabledValue}>
+        <CheckBox checked disabled={!enabledValue} onChange={() => onChangeAction()}>
           A really cool choice
         </CheckBox>
-        <CheckBox disabled={!enabledValue}>A really cool choice</CheckBox>
-        <CheckBox disabled={!enabledValue}>A really cool choice</CheckBox>
+        <CheckBox disabled={!enabledValue} onChange={() => onChangeAction()}>
+          A really cool choice
+        </CheckBox>
+        <CheckBox disabled={!enabledValue} onChange={() => onChangeAction()}>
+          A really cool choice
+        </CheckBox>
       </>
     );
   })

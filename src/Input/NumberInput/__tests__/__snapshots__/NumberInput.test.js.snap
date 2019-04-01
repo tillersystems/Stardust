@@ -78,6 +78,7 @@ exports[`<NumberInput /> should have a text label 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <div
@@ -186,6 +187,7 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <input
@@ -313,6 +315,7 @@ exports[`<NumberInput /> should have an icon label 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <div
@@ -412,101 +415,11 @@ exports[`<NumberInput /> should render without a problem 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <input
     class="c1"
-    data-testid="input"
-    id=""
-    placeholder=""
-    tabindex="0"
-    type="text"
-    value=""
-  />
-</div>
-`;
-
-exports[`<NumberInput /> should render without a problem when focused and unfocused 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 25rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  background-color: hsl(0,100%,100%);
-  border-color: hsl(200,74%,46%);
-}
-
-.c1 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 100%;
-  width: 100%;
-  background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  border: none;
-  padding: 0;
-  text-align: left;
-}
-
-.c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c1::-moz-placeholder {
-  font-size: 1.4rem;
-}
-
-.c1:-ms-input-placeholder {
-  font-size: 1.4rem;
-}
-
-.c1::placeholder {
-  font-size: 1.4rem;
-}
-
-.c1:focus,
-.c1:active {
-  outline: none;
-}
-
-<div
-  class="c0"
-  width="25rem"
->
-  <input
-    class="c1"
-    data-testid="input"
-    id=""
-    placeholder=""
-    tabindex="0"
-    type="text"
-    value=""
-  />
-</div>
-`;
-
-exports[`<NumberInput /> should render without a problem when focused and unfocused 2`] = `
-<div
-  class="sc-jKJlTe hYMjoK"
-  width="25rem"
->
-  <input
-    class="sc-eNQAEJ epiHHR"
     data-testid="input"
     id=""
     placeholder=""

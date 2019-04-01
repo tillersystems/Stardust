@@ -23,13 +23,15 @@ describe('<NumberInput />', () => {
 
   test('should render without a problem when focused and unfocused', () => {
     const { container, getByTestId } = render(<NumberInput />);
-    const inputeNode = getByTestId('input');
+    const inputNode = getByTestId('input');
+    const inputNodeContainer = getByTestId('input-container');
 
-    fireEvent.focus(inputeNode);
-    expect(container.firstChild).toMatchSnapshot();
+    fireEvent.focus(inputNode);
+    expect(inputNodeContainer).toHaveStyleRule('border-color', Theme.palette.primary.default);
 
-    fireEvent.blur(inputeNode);
-    expect(container.firstChild).toMatchSnapshot();
+    fireEvent.blur(inputNode);
+    expect(container.firstChild).not.toHaveStyleRule('border-color');
+    expect(container.firstChild).toHaveStyleRule('border', `1px solid ${Theme.palette.lightGrey}`);
   });
 
   test('allow the user to type numbers', () => {

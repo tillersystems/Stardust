@@ -31,7 +31,7 @@ describe('<DatePicker />', () => {
 
   describe('Simple', () => {
     test('should render without a problem', () => {
-      const { container } = render(<DatePicker />);
+      const { container } = render(<DatePicker defaultValue={dateValue} />);
 
       expect(container.firstChild).toMatchSnapshot();
     });
@@ -191,7 +191,7 @@ describe('<DatePicker />', () => {
 
   describe('Range', () => {
     test('should render without a problem', () => {
-      const { container } = render(<DatePicker rangePicker />);
+      const { container } = render(<DatePicker rangePicker defaultValue={dateValue} />);
 
       expect(container.firstChild).toMatchSnapshot();
     });

@@ -251,6 +251,7 @@ class TextInput extends PureComponent {
         warning={warning}
         error={error}
         ghost={ghost}
+        data-testid="input-container"
       >
         {label && labelPosition === 'left' && <Label label={label} position="left" />}
         <InputElement
