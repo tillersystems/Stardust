@@ -80,6 +80,7 @@ exports[`<TextInput /> should have a text label 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <div
@@ -188,6 +189,7 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <input
@@ -315,6 +317,7 @@ exports[`<TextInput /> should have an icon label 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <div
@@ -443,6 +446,7 @@ exports[`<TextInput /> should render search status input without problem when fo
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <input
@@ -543,6 +547,7 @@ exports[`<TextInput /> should render without a problem 1`] = `
 
 <div
   class="c0"
+  data-testid="input-container"
   width="25rem"
 >
   <input

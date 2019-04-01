@@ -70,6 +70,7 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
 >
   <div
     class="c1"
+    data-testid="input-container"
     width="25rem"
   >
     <input
