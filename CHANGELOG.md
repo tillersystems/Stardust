@@ -1,3 +1,11 @@
+## [2.0.2](https://github.com/tillersystems/Stardust/compare/v2.0.1...v2.0.2) (2019-04-01)
+
+### Bug Fixes
+
+- **Checkbox:** remove shadow on mobile device ([#456](https://github.com/tillersystems/Stardust/issues/456)) ([6e42c44](https://github.com/tillersystems/Stardust/commit/6e42c44))
+- **Loader:** use px instead of rem for Firefox support ([#442](https://github.com/tillersystems/Stardust/issues/442)) ([39bafc6](https://github.com/tillersystems/Stardust/commit/39bafc6))
+- **Modal:** fix size and mobile version of the component ([#321](https://github.com/tillersystems/Stardust/issues/321)) ([d9ece6c](https://github.com/tillersystems/Stardust/commit/d9ece6c))
+
 ## [2.0.1](https://github.com/tillersystems/Stardust/compare/v2.0.0...v2.0.1) (2019-03-21)
 
 ### Bug Fixes
