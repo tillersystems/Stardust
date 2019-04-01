@@ -66,16 +66,16 @@ class Modal extends PureComponent {
     const { active, width, height, padding, onOverlayClick, children } = this.props;
     return (
       <Portal>
-        <Container>
-          <PoseGroup>
-            {active && [
-              <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-testid="overlay" />,
+        <PoseGroup>
+          {active && (
+            <ContainerAnimation key="Container">
+              <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-testid="overlay" />
               <DialogAnimation width={width} height={height} padding={padding} key="Dialog">
                 {children}
-              </DialogAnimation>,
-            ]}
-          </PoseGroup>
-        </Container>
+              </DialogAnimation>
+            </ContainerAnimation>
+          )}
+        </PoseGroup>
       </Portal>
     );
   }
@@ -84,6 +84,14 @@ class Modal extends PureComponent {
 /**
  * Animation
  */
+const ContainerAnimation = posed(Container)({
+  enter: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+});
 const OverlayAnimation = posed(Overlay)({
   enter: {
     opacity: 1,

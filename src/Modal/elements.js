@@ -1,43 +1,40 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { stripUnit } from 'polished';
 
 export const Container = styled.div`
-  display: flex;
+  position: absolute;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 
   width: 100%;
+
+  /* For small mobile devices */
+  ${breakpoint('xs', 'sm')`
+    display: flex;
+    align-items: flex-end;
+  `};
 `;
 
 export const Overlay = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
   min-width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const Dialog = styled.dialog`
-  position: absolute;
+  position: relative;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
 
   z-index: 999;
   display: flex;
   flex-direction: column;
-
-  height: ${({ height }) => height};
-  width: ${({ width }) => width};
-
-  ${({ width, height }) => `
-    left: calc(50% - ${stripUnit(width) / 2}rem);
-    top: calc(50% - ${stripUnit(height) / 2}rem);
-  `}
 
   padding: ${({ padding }) => padding};
 
@@ -51,10 +48,10 @@ export const Dialog = styled.dialog`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   background: ${({ theme: { palette } }) => palette.white};
 
-  /* For small devices */
+  /* For small mobile devices */
   ${breakpoint('xs', 'sm')`
-    width:90%;
-    margin-left: calc(-90% / 2)};
+    width: 100%;
+    margin: 0.4rem;
   `};
 `;
 
