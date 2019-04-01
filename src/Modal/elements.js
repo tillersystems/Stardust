@@ -48,10 +48,10 @@ export const Dialog = styled.dialog`
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   background: ${({ theme: { palette } }) => palette.white};
 
-  /* For small devices */
+  /* For small mobile devices */
   ${breakpoint('xs', 'sm')`
-    width:90%;
-    margin-left: calc(-90% / 2)};
+    width: 100%;
+    margin: 0.4rem;
   `};
 `;
 
