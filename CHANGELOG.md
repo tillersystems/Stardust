@@ -1,3 +1,10 @@
+# [3.0.0](https://github.com/tillersystems/Stardust/compare/v2.0.2...v3.0.0) (2019-04-02)
+
+### Features
+
+- **KpiBlock:** update component design for mobile ([#457](https://github.com/tillersystems/Stardust/issues/457)) ([78b92ce](https://github.com/tillersystems/Stardust/commit/78b92ce))
+- **Tooltip:** Change Tooltip to use the tippy library ([#455](https://github.com/tillersystems/Stardust/issues/455)) ([4ebf59d](https://github.com/tillersystems/Stardust/commit/4ebf59d))
+
 ## [2.0.2](https://github.com/tillersystems/Stardust/compare/v2.0.1...v2.0.2) (2019-04-01)
 
 ### Bug Fixes
