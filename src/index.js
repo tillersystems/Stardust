@@ -23,6 +23,7 @@ export { default as RadioButton } from './RadioButton';
 export { default as RadioGroup } from './RadioGroup';
 export { default as Select } from './Select';
 export { default as Table } from './Table';
+export { default as TabSwitcher } from './TabSwitcher';
 export { default as Tag } from './Tag';
 export { default as Theme } from './Theme';
 export { default as ToggleButton } from './ToggleButton';
