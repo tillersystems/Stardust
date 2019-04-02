@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/tillersystems/Stardust/compare/v3.0.0...v3.0.1) (2019-04-02)
+
+### Bug Fixes
+
+- **KpiBlock:** update style when there is no variation ([#459](https://github.com/tillersystems/Stardust/issues/459)) ([6916641](https://github.com/tillersystems/Stardust/commit/6916641))
+- **KpiChart:** add possible design for mobile devices ([#458](https://github.com/tillersystems/Stardust/issues/458)) ([b512cca](https://github.com/tillersystems/Stardust/commit/b512cca))
+
 # [3.0.0](https://github.com/tillersystems/Stardust/compare/v2.0.2...v3.0.0) (2019-04-02)
 
 ### Features
