@@ -23,7 +23,7 @@ describe('<KpiChart />', () => {
     expect(FooterNode).toBeInTheDocument();
   });
 
-  test('should render kpi chart with a title without a problem', () => {
+  test('should render kpi chart with a title', () => {
     const Title = 'My title';
     const { getByText } = render(
       <KpiChart>
@@ -36,5 +36,22 @@ describe('<KpiChart />', () => {
     );
     const TitleNode = getByText(Title);
     expect(TitleNode).toBeInTheDocument();
+  });
+
+  test('should render kpi chart with compacted design', () => {
+    const Title = 'My title';
+    const { container, getByText } = render(
+      <KpiChart isCompacted>
+        <KpiChart.Header>
+          <KpiChart.Title isCompacted>{Title}</KpiChart.Title>
+        </KpiChart.Header>
+        <KpiChart.Body>Body</KpiChart.Body>
+        <KpiChart.Footer>Footer</KpiChart.Footer>
+      </KpiChart>,
+    );
+    const TitleNode = getByText(Title);
+    expect(TitleNode).toHaveStyleRule('font-size', '1.4rem');
+    expect(TitleNode).toHaveStyleRule('padding-bottom', '1.2rem');
+    expect(container.firstChild).toHaveStyleRule('padding', '1.2rem 1.6rem');
   });
 });

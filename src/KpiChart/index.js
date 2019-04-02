@@ -29,12 +29,15 @@ class KpiChart extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    // eslint-disable-next-line react/no-unused-prop-types
+    isCompacted: PropTypes.bool,
   };
 
   /** Default props. */
   static defaultProps = {
     children: null,
     className: '',
+    isCompacted: false,
   };
 
   render() {
@@ -47,7 +50,7 @@ export default styled(KpiChart)`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 2.4rem 3rem;
+  padding: ${({ isCompacted }) => (isCompacted ? '1.2rem 1.6rem' : '2.4rem 3rem')};
   height: 100%;
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
