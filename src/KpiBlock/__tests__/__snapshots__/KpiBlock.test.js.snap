@@ -42,10 +42,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 }
 
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  text-align: center;
   background: hsl(0,100%,100%);
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
@@ -145,10 +142,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 }
 
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  text-align: center;
   background: hsl(0,100%,100%);
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
@@ -223,10 +217,7 @@ exports[`<KpiBlock /> should render without a problem 1`] = `
 }
 
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  text-align: center;
   background: hsl(0,100%,100%);
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
@@ -235,7 +226,7 @@ exports[`<KpiBlock /> should render without a problem 1`] = `
   display: grid;
   grid-template-areas: 'variation' 'value' 'title';
   height: 10rem;
-  grid-template-rows: max-content max-content max-content;
+  grid-template-rows: auto max-content;
   padding: 1rem;
   position: relative;
 }

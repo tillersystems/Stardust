@@ -60,7 +60,7 @@ KpiBlock.defaultProps = {
 };
 
 export default styled(KpiBlock)`
-  align-items: center;
+  text-align: center;
   background: ${({ theme: { palette } }) => palette.white};
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
@@ -75,7 +75,8 @@ export default styled(KpiBlock)`
   ${({ isCompacted }) =>
     !isCompacted &&
     css`
-      grid-template-rows: max-content max-content max-content;
+      grid-template-rows: ${({ variation }) =>
+        variation ? 'max-content max-content max-content' : 'auto max-content'};
     `};
 
   padding: ${({ isCompacted }) => (isCompacted ? '1.2rem' : '1rem')};
