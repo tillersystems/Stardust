@@ -12,6 +12,11 @@ const { bool, func, node, number } = PropTypes;
  * A TabSwitcher wraps all the logic between tabs (elements allowing to display content)
  * and panes (content displayable when its tab is clicked)
  *
+ * @param {number} activeIndex - index of the active tab
+ * @param {node} children - tabs and panes to be displayed
+ * @param {boolean} isCompacted - if it should reduce its size by reducing padding and font-size
+ * @param {function} onActiveTabChange - callback triggered when the active tab changes
+ *
  * @return {jsx}
  */
 class TabSwitcher extends PureComponent {
@@ -23,7 +28,7 @@ class TabSwitcher extends PureComponent {
   /** Prop types. */
   static propTypes = {
     activeIndex: number,
-    children: node,
+    children: node.isRequired,
     isCompacted: bool,
     onActiveTabChange: func,
   };
@@ -31,7 +36,6 @@ class TabSwitcher extends PureComponent {
   /** Default props. */
   static defaultProps = {
     activeIndex: null,
-    children: null,
     isCompacted: false,
     onActiveTabChange: () => {},
   };
