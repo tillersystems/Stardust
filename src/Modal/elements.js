@@ -25,6 +25,7 @@ export const Overlay = styled.div`
   min-width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
 `;
 
 export const Dialog = styled.dialog`
