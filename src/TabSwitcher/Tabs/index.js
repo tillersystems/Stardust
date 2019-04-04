@@ -19,6 +19,7 @@ const Tabs = ({ activeIndex, children, className, isCompacted, onActiveTab }) =>
   <Container className={className} isCompacted={isCompacted}>
     {Children.map(children, (child, index) =>
       cloneElement(child, {
+        isCompacted,
         isActive: index === activeIndex,
         onActivate: () => {
           onActiveTab(index);

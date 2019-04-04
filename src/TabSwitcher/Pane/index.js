@@ -7,7 +7,7 @@ const { node, string } = PropTypes;
  * A pane wraps the content displayable by a tab
  *
  * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className /// className needed by styled components
+ * @param {string} className // className needed by styled components
  *
  * @return {jsx}
  */

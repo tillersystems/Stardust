@@ -52,6 +52,27 @@ describe('<TabSwitcher />', () => {
     expect(availableTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
   });
 
+  test('should render the compacted version', () => {
+    const { getByText } = render(
+      <TabSwitcher isCompacted>
+        <TabSwitcher.Tabs>
+          {panes.map(({ name }) => (
+            <TabSwitcher.Tab key={name}>{name}</TabSwitcher.Tab>
+          ))}
+        </TabSwitcher.Tabs>
+        <TabSwitcher.Panes>
+          {panes.map(({ name, content }) => (
+            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
+          ))}
+        </TabSwitcher.Panes>
+      </TabSwitcher>,
+    );
+
+    const activeTabNode = getByText('I am active');
+
+    expect(activeTabNode).toHaveStyleRule('padding-bottom', '1.2rem');
+  });
+
   test('should correctly display disabled tabs', () => {
     const { getAllByText } = render(
       <TabSwitcher>
@@ -77,8 +98,10 @@ describe('<TabSwitcher />', () => {
   });
 
   test('should update tab on click', () => {
+    const spy = jest.fn();
+
     const { getByText } = render(
-      <TabSwitcher>
+      <TabSwitcher onActiveTabChange={spy}>
         <TabSwitcher.Tabs>
           {panes.map(({ name, isDisabled }) => (
             <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
@@ -102,6 +125,7 @@ describe('<TabSwitcher />', () => {
 
     fireEvent.click(availableTabNode);
 
+    expect(spy).toHaveBeenCalledTimes(1);
     expect(availableTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
     expect(activeTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
   });

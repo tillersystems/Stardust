@@ -13,6 +13,8 @@ storiesOf('TabSwitcher', module)
     const isDisabledValueTab3 = boolean('isDisabledTab3', false, 'ALL');
     const isDisabledValueTab4 = boolean('isDisabledTab4', false, 'ALL');
 
+    const isCompactedValue = boolean('isCompactedValue', false, 'ALL');
+
     const panes = [
       {
         name: 'Tab 1',
@@ -49,7 +51,7 @@ storiesOf('TabSwitcher', module)
     );
 
     return (
-      <TabSwitcher activeIndex={activeIndexValue}>
+      <TabSwitcher activeIndex={activeIndexValue} isCompacted={isCompactedValue}>
         <TabSwitcher.Tabs>
           {panes.map(({ isDisabled, name }) => (
             <TabSwitcher.Tab key={name} isDisabled={isDisabled}>

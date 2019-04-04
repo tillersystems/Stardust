@@ -6,7 +6,7 @@ import Panes from './Panes';
 import Tab from './Tab';
 import Tabs from './Tabs';
 
-const { func, node, number } = PropTypes;
+const { bool, func, node, number } = PropTypes;
 
 /**
  * A TabSwitcher wraps all the logic between tabs (elements allowing to display content)
@@ -24,6 +24,7 @@ class TabSwitcher extends PureComponent {
   static propTypes = {
     activeIndex: number,
     children: node,
+    isCompacted: bool,
     onActiveTabChange: func,
   };
 
@@ -31,6 +32,7 @@ class TabSwitcher extends PureComponent {
   static defaultProps = {
     activeIndex: null,
     children: null,
+    isCompacted: false,
     onActiveTabChange: () => {},
   };
 
@@ -63,18 +65,20 @@ class TabSwitcher extends PureComponent {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, isCompacted } = this.props;
     const { activeIndex } = this.state;
 
     const content = Children.map(children, child => {
       if (child.type.displayName === 'Panes') {
         return cloneElement(child, {
           activeIndex: activeIndex,
+          isCompacted: isCompacted,
         });
       } else if (child.type.displayName === 'Tabs') {
         return cloneElement(child, {
           activeIndex: activeIndex,
           onActiveTab: this.onActiveTab,
+          isCompacted: isCompacted,
         });
       } else {
         return child;

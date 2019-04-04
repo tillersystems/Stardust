@@ -10,11 +10,17 @@ import { TabSwitcher } from '@tillersystems/stardust';
 
 ### Properties
 
-- `children` - Class needed by styled components.
+- `activeIndex` - index of the active tab
+- `children` - tabs and panes to be displayed
+- `isCompacted` - if it should reduce its size by reducing padding and font-size
+- `onActiveTabChange` - onActiveTabChange - callback triggered when the active tab changes
 
-| `propName` | propType | defaultValue | isRequired |
-| ---------- | :------: | :----------: | :--------: |
-| `children` |  `node`  |    `null`    |     -      |
+| propName            | propType  | defaultValue | isRequired |
+| ------------------- | :-------: | :----------: | :--------: |
+| `activeIndex`       | `number`  |     `0`      |     -      |
+| `children`          |  `node`   |    `null`    |     -      |
+| `isCompacted`       | `boolean` |   `false`    |     -      |
+| `onActiveTabChange` |  `func`   |  `() => {}`  |     -      |
 
 ### Example
 
