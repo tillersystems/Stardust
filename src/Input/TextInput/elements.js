@@ -79,4 +79,9 @@ export const InputElement = styled.input`
   &:active {
     outline: none;
   }
+
+  /* Set size to 16px for iOS devices to avoid auto-zoom */
+  @supports (-webkit-overflow-scrolling: touch) {
+    font-size: ${({ theme: { fonts } }) => fonts.size.big};
+  }
 `;

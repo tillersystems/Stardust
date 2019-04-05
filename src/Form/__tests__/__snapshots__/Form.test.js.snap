@@ -168,6 +168,12 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   outline: none;
 }
 
+@supports (-webkit-overflow-scrolling:touch) {
+  .c8 {
+    font-size: 1.6rem;
+  }
+}
+
 <form
   class="c0"
   name="form"
@@ -254,7 +260,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
               width="25rem"
             >
               <input
-                class="sc-jWBwVP kgmPjO"
+                class="sc-jWBwVP RhccY"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"
@@ -411,6 +417,12 @@ exports[`<Form /> should render form without label without a problem 1`] = `
 .c7:focus,
 .c7:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c7 {
+    font-size: 1.6rem;
+  }
 }
 
 <form
@@ -659,6 +671,12 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
 .c8:focus,
 .c8:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c8 {
+    font-size: 1.6rem;
+  }
 }
 
 <form
@@ -946,6 +964,12 @@ exports[`<Form /> should render without a problem 1`] = `
 .c8:focus,
 .c8:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c8 {
+    font-size: 1.6rem;
+  }
 }
 
 <form
