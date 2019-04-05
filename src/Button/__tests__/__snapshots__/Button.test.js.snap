@@ -34,14 +34,6 @@ exports[`<Button /> should render a left icon 1`] = `
   padding: 0.75rem 1.4rem;
 }
 
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0 svg > path {
-  fill: hsl(213,17%,20%);
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -130,14 +122,6 @@ exports[`<Button /> should render a right icon 1`] = `
   color: hsl(213,17%,20%);
   background: none;
   padding: 0.75rem 1.4rem;
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0 svg > path {
-  fill: hsl(213,17%,20%);
 }
 
 .c1 {
@@ -231,10 +215,6 @@ exports[`<Button /> should render with another appearance 1`] = `
   padding: 0.75rem 1.6rem;
 }
 
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
 .c0:hover:not([disabled]):not(:active) {
   background: hsl(200,74%,46%);
   box-shadow: none;
@@ -286,14 +266,6 @@ exports[`<Button /> should render without a problem 1`] = `
   color: hsl(213,17%,20%);
   background: none;
   padding: 0.75rem 1.6rem;
-}
-
-.c0 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c0 svg > path {
-  fill: hsl(213,17%,20%);
 }
 
 <button

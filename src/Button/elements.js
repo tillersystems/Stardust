@@ -28,10 +28,6 @@ export const Container = styled.button`
 
   transition: background 200ms ease, box-shadow 200ms ease;
 
-  svg > path {
-    fill: ${({ theme: { palette } }) => palette.white};
-  }
-
   /* Button Appearance: [default, primary, secondary...] */
   ${({ theme, appearance }) => getAppearance(theme, appearance)};
 

@@ -36,10 +36,6 @@ exports[`<Counter /> should render without a problem 1`] = `
 }
 
 .c2 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c2 svg > path {
   fill: hsl(207,13%,45%);
 }
 

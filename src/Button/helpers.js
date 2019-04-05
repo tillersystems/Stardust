@@ -16,9 +16,6 @@ export const getAppearance = ({ palette }, appearance) => {
     default: css`
       color: ${palette.darkBlue};
       background: none;
-      svg > path {
-        fill: ${palette.darkBlue};
-      }
     `,
     primary: css`
       background: ${palette.primary.default}
@@ -47,9 +44,6 @@ export const getAppearance = ({ palette }, appearance) => {
       color: ${palette.spaceGrey};
       background: linear-gradient(180deg, ${palette.white} 0%, ${palette.mysticGrey} 100%);
       border: 1px solid ${palette.lightGrey};
-      svg > path {
-        fill: ${palette.spaceGrey};
-      }
     `,
     success: css`
       background: ${palette.success.default}

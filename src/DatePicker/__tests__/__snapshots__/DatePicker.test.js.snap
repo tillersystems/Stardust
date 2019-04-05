@@ -187,14 +187,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   padding: 0.35rem 1.4rem;
 }
 
-.c4 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c4 svg > path {
-  fill: hsl(213,17%,20%);
-}
-
 .c6 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -927,14 +919,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   color: hsl(213,17%,20%);
   background: none;
   padding: 0.35rem 1.4rem;
-}
-
-.c4 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c4 svg > path {
-  fill: hsl(213,17%,20%);
 }
 
 .c6 {

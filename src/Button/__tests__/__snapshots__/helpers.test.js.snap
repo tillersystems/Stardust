@@ -9,11 +9,6 @@ Array [
   "hsl(213,17%,20%)",
   ";
       background: none;
-      svg > path {
-        fill: ",
-  "hsl(213,17%,20%)",
-  ";
-      }
     ",
 ]
 `;
