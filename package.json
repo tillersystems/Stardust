@@ -59,7 +59,7 @@
     "@tippy.js/react": "^2.1.2",
     "initials": "^3.0.0",
     "luxon": "^1.11.4",
-    "polished": "3.0.3",
+    "polished": "3.2.0",
     "react-onclickoutside": "^6.7.1",
     "react-portal": "^4.1.5",
     "styled-components-breakpoint": "^2.1.0"
