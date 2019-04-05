@@ -65,6 +65,12 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
   position: absolute;
 }
 
+@supports (-webkit-overflow-scrolling:touch) {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
 <div
   class="c0"
 >

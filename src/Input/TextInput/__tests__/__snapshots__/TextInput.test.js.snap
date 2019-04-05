@@ -78,6 +78,12 @@ exports[`<TextInput /> should have a text label 1`] = `
   outline: none;
 }
 
+@supports (-webkit-overflow-scrolling:touch) {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
 <div
   class="c0"
   data-testid="input-container"
@@ -185,6 +191,12 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c1 {
+    font-size: 1.6rem;
+  }
 }
 
 <div
@@ -313,6 +325,12 @@ exports[`<TextInput /> should have an icon label 1`] = `
 .c3:focus,
 .c3:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c3 {
+    font-size: 1.6rem;
+  }
 }
 
 <div
@@ -444,6 +462,12 @@ exports[`<TextInput /> should render search status input without problem when fo
   outline: none;
 }
 
+@supports (-webkit-overflow-scrolling:touch) {
+  .c1 {
+    font-size: 1.6rem;
+  }
+}
+
 <div
   class="c0"
   data-testid="input-container"
@@ -543,6 +567,12 @@ exports[`<TextInput /> should render without a problem 1`] = `
 .c1:focus,
 .c1:active {
   outline: none;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  .c1 {
+    font-size: 1.6rem;
+  }
 }
 
 <div
