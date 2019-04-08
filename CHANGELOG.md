@@ -1,3 +1,16 @@
+# [3.1.0](https://github.com/tillersystems/Stardust/compare/v3.0.1...v3.1.0) (2019-04-08)
+
+### Bug Fixes
+
+- **Button:** remove default svg color on button ([#464](https://github.com/tillersystems/Stardust/issues/464)) ([a513c80](https://github.com/tillersystems/Stardust/commit/a513c80))
+- **Input:** add bigger font-size for iOS mobile devices ([#463](https://github.com/tillersystems/Stardust/issues/463)) ([85847eb](https://github.com/tillersystems/Stardust/commit/85847eb))
+- **Modal:** add z-index to overlay to avoid elements overlapping it ([#461](https://github.com/tillersystems/Stardust/issues/461)) ([94f0e87](https://github.com/tillersystems/Stardust/commit/94f0e87))
+- **Storybook:** install @storybook/theming to fix Error: Cannot find module "@emotion/core/package.json" ([#476](https://github.com/tillersystems/Stardust/issues/476)) ([81ad1cf](https://github.com/tillersystems/Stardust/commit/81ad1cf))
+
+### Features
+
+- **TabSwitcher:** add new TabSwitcher component ([#460](https://github.com/tillersystems/Stardust/issues/460)) ([7b83d09](https://github.com/tillersystems/Stardust/commit/7b83d09))
+
 ## [3.0.1](https://github.com/tillersystems/Stardust/compare/v3.0.0...v3.0.1) (2019-04-02)
 
 ### Bug Fixes
