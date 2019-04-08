@@ -97,36 +97,65 @@ describe('<TabSwitcher />', () => {
     expect(disabledTabNodes[1]).toHaveStyleRule('color', 'hsl(206,23%,69%)');
   });
 
-  test('should update tab on click', () => {
-    const spy = jest.fn();
+  describe('Uncontrolled mode: ', () => {
+    test('should update tab on click', () => {
+      const { getByText } = render(
+        <TabSwitcher>
+          <TabSwitcher.Tabs>
+            {panes.map(({ name, isDisabled }) => (
+              <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
+                {name}
+              </TabSwitcher.Tab>
+            ))}
+          </TabSwitcher.Tabs>
+          <TabSwitcher.Panes>
+            {panes.map(({ name, content }) => (
+              <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
+            ))}
+          </TabSwitcher.Panes>
+        </TabSwitcher>,
+      );
 
-    const { getByText } = render(
-      <TabSwitcher onActiveTabChange={spy}>
-        <TabSwitcher.Tabs>
-          {panes.map(({ name, isDisabled }) => (
-            <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-              {name}
-            </TabSwitcher.Tab>
-          ))}
-        </TabSwitcher.Tabs>
-        <TabSwitcher.Panes>
-          {panes.map(({ name, content }) => (
-            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-          ))}
-        </TabSwitcher.Panes>
-      </TabSwitcher>,
-    );
+      const activeTabNode = getByText('I am active');
+      const availableTabNode = getByText('I am available');
 
-    const activeTabNode = getByText('I am active');
-    const availableTabNode = getByText('I am available');
+      expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
+      expect(availableTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
 
-    expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
-    expect(availableTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      fireEvent.click(availableTabNode);
 
-    fireEvent.click(availableTabNode);
+      expect(availableTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
+      expect(activeTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+    });
+  });
 
-    expect(spy).toHaveBeenCalledTimes(1);
-    expect(availableTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
-    expect(activeTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+  describe('Controlled mode: ', () => {
+    test('should call onChange callback', () => {
+      const spy = jest.fn();
+
+      const { getByText } = render(
+        <TabSwitcher onChange={spy} index={0}>
+          <TabSwitcher.Tabs>
+            {panes.map(({ name, isDisabled }) => (
+              <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
+                {name}
+              </TabSwitcher.Tab>
+            ))}
+          </TabSwitcher.Tabs>
+          <TabSwitcher.Panes>
+            {panes.map(({ name, content }) => (
+              <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
+            ))}
+          </TabSwitcher.Panes>
+        </TabSwitcher>,
+      );
+
+      const availableTabNode = getByText('I am available');
+
+      fireEvent.click(availableTabNode);
+
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy).toHaveBeenLastCalledWith(3);
+    });
   });
 });

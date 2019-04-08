@@ -10,17 +10,19 @@ import { TabSwitcher } from '@tillersystems/stardust';
 
 ### Properties
 
-- `activeIndex` - index of the active tab
-- `children` - tabs and panes to be displayed
-- `isCompacted` - if it should reduce its size by reducing padding and font-size
-- `onActiveTabChange` - onActiveTabChange - callback triggered when the active tab changes
+- `children` - Tabs and Panes to be displayed.
+- `defaultIndex` - Starts the tab at a specific index.
+- `index` - Like form inputs, a tab's state can be controlled by the owner.
+- `isCompacted` - If it is true, should reduce its size by reducing padding and font-size.
+- `onChange` - Callback with the tab index triggered when the user changes tabs allowing your app to synchronize with it.
 
-| propName            | propType  | defaultValue | isRequired |
-| ------------------- | :-------: | :----------: | :--------: |
-| `activeIndex`       | `number`  |     `0`      |     -      |
-| `children`          |  `node`   |    `null`    |     -      |
-| `isCompacted`       | `boolean` |   `false`    |     -      |
-| `onActiveTabChange` |  `func`   |  `() => {}`  |     -      |
+| propName       |  propType  | defaultValue | isRequired |
+| -------------- | :--------: | :----------: | :--------: |
+| `children`     |   `node`   |              |     \*     |
+| `defaultIndex` |  `number`  |     `0`      |     -      |
+| `index`        |  `number`  |     `0`      |     -      |
+| `isCompacted`  | `boolean`  |   `false`    |     -      |
+| `onChange`     | `function` | `undefined`  |     -      |
 
 ### Example
 
