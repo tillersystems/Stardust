@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -24,37 +24,45 @@ import { Container, ContainerIcon } from './elements';
  * @return {jsx}
  */
 
-const Button = ({
-  appearance,
-  children,
-  className,
-  disabled,
-  fluid,
-  icon,
-  iconPosition,
-  onClick,
-  size,
-  type,
-  ...rest
-}) => {
-  return (
-    <Container
-      appearance={appearance}
-      className={className}
-      disabled={disabled}
-      fluid={fluid}
-      icon={icon}
-      iconPosition={iconPosition}
-      onClick={onClick}
-      size={size}
-      type={type}
-      {...rest}
-    >
-      {displayIcon(iconPosition, icon)}
-      {children}
-    </Container>
-  );
-};
+const Button = forwardRef(
+  (
+    {
+      appearance,
+      children,
+      className,
+      disabled,
+      fluid,
+      icon,
+      iconPosition,
+      onClick,
+      size,
+      type,
+      ...rest
+    },
+    ref,
+  ) => {
+    return (
+      <Container
+        innerRef={ref}
+        appearance={appearance}
+        className={className}
+        disabled={disabled}
+        fluid={fluid}
+        icon={icon}
+        iconPosition={iconPosition}
+        onClick={onClick}
+        size={size}
+        type={type}
+        {...rest}
+      >
+        {displayIcon(iconPosition, icon)}
+        {children}
+      </Container>
+    );
+  },
+);
+
+Button.displayName = 'Button';
 
 /**
  * displayIcon
