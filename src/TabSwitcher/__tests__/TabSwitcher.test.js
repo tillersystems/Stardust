@@ -70,7 +70,7 @@ describe('<TabSwitcher />', () => {
 
     const activeTabNode = getByText('I am active');
 
-    expect(activeTabNode).toHaveStyleRule('padding-bottom', '1.2rem');
+    expect(activeTabNode).toHaveStyleRule('padding-bottom', '1.4rem');
   });
 
   test('should correctly display disabled tabs', () => {
