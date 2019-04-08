@@ -58,6 +58,7 @@ export const Menu = styled.ul`
   position: absolute;
   top: calc(100% + 0.4rem);
   left: 0;
+  z-index: 1;
 
   width: 100%;
   max-height: 28rem;
