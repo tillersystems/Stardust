@@ -15,8 +15,8 @@ const { bool, func, node, number } = PropTypes;
  * @param {node} children - Tabs and Panes to be displayed.
  * @param {number} defaultIndex - Starts the tab at a specific index.
  * @param {number} index - Like form inputs, a tab's state can be controlled by the owner.
- * @param {boolean} isCompacted - If it true should reduce its size by reducing padding and font-size.
- * @param {function} onActiveTabChange - Callback with the tab index triggered when tthe user changes tabs allowing your app to synchronize with it.
+ * @param {boolean} isCompacted - If it is true, should reduce its size by reducing padding and font-size.
+ * @param {function} onChange - Callback with the tab index triggered when the user changes tabs allowing your app to synchronize with it.
  *
  *
  * @return {jsx}
@@ -53,18 +53,18 @@ TabSwitcher.Tabs = Tabs;
 
 TabSwitcher.propTypes = {
   children: node.isRequired,
+  defaultIndex: number,
   isCompacted: bool,
   onChange: func,
   index: (props, name, compName, ...rest) => {
     if (props.index > -1 && props.onChange == null) {
       return new Error(
-        'You provided a `index` prop to `TabSwitcher` without an `onChange` handler. This will render a read-only tabs element. If the tabs should be mutable use `defaultIndex`. Otherwise, set `onChange`.',
+        'You provided an `index` prop to `TabSwitcher` without an `onChange` handler. This will render a read-only tabs element. If the tabs should be mutable use `defaultIndex`. Otherwise, set `onChange`.',
       );
     } else {
       return number(name, props, compName, ...rest);
     }
   },
-  defaultIndex: number,
 };
 
 TabSwitcher.defaultProps = {

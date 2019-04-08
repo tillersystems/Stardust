@@ -40,7 +40,7 @@ storiesOf('TabSwitcher', module)
       },
     ];
 
-    const degaultIndexValue = number(
+    const defaultIndexValue = number(
       'default index',
       0,
       {
@@ -53,7 +53,7 @@ storiesOf('TabSwitcher', module)
     );
 
     return (
-      <TabSwitcher defaultIndex={degaultIndexValue} isCompacted={isCompactedValue}>
+      <TabSwitcher defaultIndex={defaultIndexValue} isCompacted={isCompactedValue}>
         <TabSwitcher.Tabs>
           {panes.map(({ isDisabled, name }) => (
             <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
