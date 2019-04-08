@@ -37,19 +37,19 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
 }
 
 .c2::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2:focus,
@@ -63,12 +63,6 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
 
 .c3 {
   position: absolute;
-}
-
-@supports (-webkit-overflow-scrolling:touch) {
-  .c2 {
-    font-size: 1.6rem;
-  }
 }
 
 <div

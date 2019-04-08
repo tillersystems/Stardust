@@ -66,9 +66,10 @@ export const InputElement = styled.input`
   margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
+  /* Set size to 16px for iOS devices to avoid auto-zoom */
   &::placeholder {
     color: ${({ theme: { palette } }) => palette.darGrey};
-    font-size: ${({ theme: { fonts } }) => fonts.size.medium};
+    font-size: ${({ theme: { fonts } }) => fonts.size.big};
   }
 
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
@@ -78,10 +79,5 @@ export const InputElement = styled.input`
   &:focus,
   &:active {
     outline: none;
-  }
-
-  /* Set size to 16px for iOS devices to avoid auto-zoom */
-  @supports (-webkit-overflow-scrolling: touch) {
-    font-size: ${({ theme: { fonts } }) => fonts.size.big};
   }
 `;

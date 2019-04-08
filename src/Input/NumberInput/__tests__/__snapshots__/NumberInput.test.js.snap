@@ -56,30 +56,24 @@ exports[`<NumberInput /> should have a text label 1`] = `
 }
 
 .c2::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c2:focus,
 .c2:active {
   outline: none;
-}
-
-@supports (-webkit-overflow-scrolling:touch) {
-  .c2 {
-    font-size: 1.6rem;
-  }
 }
 
 <div
@@ -171,30 +165,24 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1:focus,
 .c1:active {
   outline: none;
-}
-
-@supports (-webkit-overflow-scrolling:touch) {
-  .c1 {
-    font-size: 1.6rem;
-  }
 }
 
 <div
@@ -305,30 +293,24 @@ exports[`<NumberInput /> should have an icon label 1`] = `
 }
 
 .c3::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c3::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c3:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c3::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c3:focus,
 .c3:active {
   outline: none;
-}
-
-@supports (-webkit-overflow-scrolling:touch) {
-  .c3 {
-    font-size: 1.6rem;
-  }
 }
 
 <div
@@ -411,30 +393,24 @@ exports[`<NumberInput /> should render without a problem 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .c1:focus,
 .c1:active {
   outline: none;
-}
-
-@supports (-webkit-overflow-scrolling:touch) {
-  .c1 {
-    font-size: 1.6rem;
-  }
 }
 
 <div
