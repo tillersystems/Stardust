@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { Container } from './elements';
 
 const { node, string } = PropTypes;
 
@@ -12,7 +13,7 @@ const { node, string } = PropTypes;
  * @return {jsx}
  */
 
-const Pane = ({ children, className }) => <div className={className}>{children}</div>;
+const Pane = ({ children, className }) => <Container className={className}>{children}</Container>;
 
 /** Prop types. */
 Pane.propTypes = {
