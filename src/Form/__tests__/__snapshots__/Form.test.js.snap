@@ -902,14 +902,6 @@ exports[`<Form /> should render without a problem 1`] = `
   padding: 0.75rem 1.6rem;
 }
 
-.c9 svg > path {
-  fill: hsl(0,100%,100%);
-}
-
-.c9 svg > path {
-  fill: hsl(213,17%,20%);
-}
-
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;

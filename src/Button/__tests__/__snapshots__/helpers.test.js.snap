@@ -9,11 +9,6 @@ Array [
   "hsl(213,17%,20%)",
   ";
       background: none;
-      svg > path {
-        fill: ",
-  "hsl(213,17%,20%)",
-  ";
-      }
     ",
 ]
 `;
@@ -101,11 +96,6 @@ Array [
       border: 1px solid ",
   "hsl(207,22%,90%)",
   ";
-      svg > path {
-        fill: ",
-  "hsl(207,13%,45%)",
-  ";
-      }
     ",
 ]
 `;

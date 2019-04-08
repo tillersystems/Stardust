@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, boolean, color, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Icon, Theme } from '../..';
@@ -49,13 +49,14 @@ storiesOf('Button', module)
     const iconName = select('Icon Name', getIconName, 'calendar', 'Layout');
     const disabled = boolean('Disabled', false, 'State');
     const withIcon = boolean('With Icon', false, 'Layout');
+    const colorValue = color('Icon Color', Theme.palette.darkBlue, 'Layout');
 
     return (
       <Button
         appearance={appearance}
         disabled={disabled}
         fluid={fluid}
-        icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
+        icon={withIcon ? <Icon color={colorValue} name={iconName} /> : undefined}
         iconPosition={withIcon ? iconPosition : undefined}
         onClick={() => onClickAction(appearance)}
         size={size}
