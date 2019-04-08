@@ -35,10 +35,6 @@ exports[`<Counter /> should render without a problem 1`] = `
   padding: 0.75rem 1.6rem;
 }
 
-.c2 svg > path {
-  fill: hsl(207,13%,45%);
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;

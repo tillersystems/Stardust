@@ -7,15 +7,26 @@ import Theme from '../../Theme';
 
 describe('<Button />', () => {
   test('should render without a problem', () => {
-    const { container } = render(<Button>Text</Button>);
+    const { getByText } = render(<Button>Text</Button>);
 
-    expect(container.firstChild).toMatchSnapshot();
+    // Button Node
+    const buttonNode = getByText('Text');
+
+    expect(buttonNode).toBeInTheDocument();
   });
 
   test('should render with another appearance', () => {
-    const { container } = render(<Button appearance="primary">Text</Button>);
+    const { getByText } = render(<Button appearance="primary">Text</Button>);
 
-    expect(container.firstChild).toMatchSnapshot();
+    // Button Node
+    const buttonNode = getByText('Text');
+
+    expect(buttonNode).toHaveStyleRule(
+      'background',
+      'hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% )',
+    );
+    expect(buttonNode).toHaveStyleRule('border', `1px solid ${Theme.palette.primary.dark}`);
+    expect(buttonNode).toHaveStyleRule('box-shadow', 'inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1)');
   });
 
   test('should render with a different size', () => {
