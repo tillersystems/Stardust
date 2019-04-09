@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   display: grid;
   justify-content: center;
   align-content: center;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   width: 100%;
 
