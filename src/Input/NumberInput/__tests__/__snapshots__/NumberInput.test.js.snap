@@ -49,26 +49,26 @@ exports[`<NumberInput /> should have a text label 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
 .c2::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c2::-moz-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c2:-ms-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c2::placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c2:focus,
@@ -158,26 +158,26 @@ exports[`<NumberInput /> should have an icon icon label and label position 1`] =
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1::placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1:focus,
@@ -286,26 +286,26 @@ exports[`<NumberInput /> should have an icon label 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
 .c3::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c3::-moz-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c3:-ms-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c3::placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c3:focus,
@@ -386,26 +386,26 @@ exports[`<NumberInput /> should render without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   margin: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: none;
   padding: 0;
   text-align: left;
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1::placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .c1:focus,

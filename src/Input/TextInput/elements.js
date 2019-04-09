@@ -66,13 +66,13 @@ export const InputElement = styled.input`
   margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  /* Set size to 16px for iOS devices to avoid auto-zoom */
   &::placeholder {
     color: ${({ theme: { palette } }) => palette.darGrey};
-    font-size: ${({ theme: { fonts } }) => fonts.size.big};
+    font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   }
 
-  font-size: ${({ theme: { fonts } }) => fonts.size.medium};
+  /* Set size to 16px for iOS devices to avoid auto-zoom */
+  font-size: ${({ theme: { fonts } }) => fonts.size.big};
   border: none;
   padding: 0;
   text-align: left;
