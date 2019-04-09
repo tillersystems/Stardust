@@ -1,3 +1,12 @@
+## [3.1.1](https://github.com/tillersystems/Stardust/compare/v3.1.0...v3.1.1) (2019-04-09)
+
+### Bug Fixes
+
+- **Dropdown:** add z-index to menu ([#479](https://github.com/tillersystems/Stardust/issues/479)) ([3d27fba](https://github.com/tillersystems/Stardust/commit/3d27fba))
+- **input:** remove non handled [@supports](https://github.com/supports) in jsdom and put 16px font-size ([#483](https://github.com/tillersystems/Stardust/issues/483)) ([9ff9765](https://github.com/tillersystems/Stardust/commit/9ff9765))
+- **TabSwitcher:** update CSS ([#481](https://github.com/tillersystems/Stardust/issues/481)) ([d609898](https://github.com/tillersystems/Stardust/commit/d609898))
+- **TabSwitcher:** wrap pane in styled component ([#480](https://github.com/tillersystems/Stardust/issues/480)) ([fde1f58](https://github.com/tillersystems/Stardust/commit/fde1f58))
+
 # [3.1.0](https://github.com/tillersystems/Stardust/compare/v3.0.1...v3.1.0) (2019-04-08)
 
 ### Bug Fixes
