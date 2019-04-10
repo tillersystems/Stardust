@@ -1,3 +1,9 @@
+## [3.1.4](https://github.com/tillersystems/Stardust/compare/v3.1.3...v3.1.4) (2019-04-10)
+
+### Bug Fixes
+
+- **Tooltip:** replace inline-block by inline-flex ([#487](https://github.com/tillersystems/Stardust/issues/487)) ([cfce906](https://github.com/tillersystems/Stardust/commit/cfce906))
+
 ## [3.1.3](https://github.com/tillersystems/Stardust/compare/v3.1.2...v3.1.3) (2019-04-10)
 
 ### Bug Fixes
