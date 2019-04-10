@@ -53,7 +53,7 @@ const Tooltip = ({
         To use a component element as a child we need to wrap element with a div
         https://github.com/atomiks/tippy.js-react#component-children
       */}
-      <div style={{ display: 'inline-block' }}>{children}</div>
+      <div style={{ display: 'inline-flex' }}>{children}</div>
     </Tippy>
   );
 };
