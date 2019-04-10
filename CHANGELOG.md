@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/tillersystems/Stardust/compare/v3.1.2...v3.1.3) (2019-04-10)
+
+### Bug Fixes
+
+- **Input:** put font-size at 16px ([#485](https://github.com/tillersystems/Stardust/issues/485)) ([331b506](https://github.com/tillersystems/Stardust/commit/331b506))
+- **Modal:** use fixed position on modal container to avoid scrolling bug on mobile ([#486](https://github.com/tillersystems/Stardust/issues/486)) ([8bdf606](https://github.com/tillersystems/Stardust/commit/8bdf606))
+
 ## [3.1.2](https://github.com/tillersystems/Stardust/compare/v3.1.1...v3.1.2) (2019-04-09)
 
 ### Bug Fixes
