@@ -1,7 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import 'jest-styled-components';
-import { ThemeProvider } from 'styled-components';
+import { fireEvent } from 'react-testing-library';
 
 import Table from '..';
 import Theme from '../../Theme';
@@ -10,193 +8,150 @@ import Theme from '../../Theme';
 const StubComponent = ({ value }) => <div>{value}</div>;
 StubComponent.displayName = 'StubComponent';
 
-const colsDef = [
+const getColsDef = () => [
   {
-    title: 'X',
-    value: d => d.x,
-    width: 1,
+    title: 'DISH',
+    value: d => d.code,
+    sortable: true,
+    align: 'left',
+  },
+  {
+    title: 'PRICE',
+    value: d => d.value,
+    format: v => `${v.toFixed(2)} €`,
+    align: 'right',
     sortable: true,
   },
   {
-    title: <StubComponent value="Y" />,
-    value: d => d.y,
-    width: 2,
-  },
-  {
-    title: 'Z',
-    value: d => d.z,
-    format: v => `z = ${v}`,
-    width: '15rem',
-  },
-  {
-    title: 'T',
-    value: d => d.t,
-    /* eslint-disable react/display-name */
-    format: v => <StubComponent value={`t = ${v}`} />,
+    title: 'TAX',
+    value: d => d.tax,
+    format: v => `${v.toFixed(2)} %`,
+    align: 'right',
+    sortable: true,
   },
 ];
 
 const data = [
   {
-    x: 11,
-    y: 12,
-    z: 13,
-    t: 14,
+    code: 'Tartare de boeuf',
+    value: 15.0,
+    tax: 11.0,
   },
   {
-    x: 21,
-    y: 22,
-    z: 23,
-    t: 24,
+    code: 'Oeuf cocotte',
+    value: 13.0,
+    tax: 12.0,
   },
   {
-    x: 31,
-    y: 32,
-    z: 33,
-    t: 34,
-  },
-  {
-    x: 41,
-    y: 42,
-    z: 43,
-    t: 44,
-  },
-  {
-    x: 51,
-    y: 52,
-    z: 53,
-    t: 54,
-  },
-  {
-    x: 61,
-    y: 62,
-    z: 63,
-    t: 64,
-  },
-  {
-    x: 71,
-    y: 72,
-    z: 73,
-    t: 74,
-  },
-  {
-    x: 81,
-    y: 82,
-    z: 83,
-    t: 84,
-  },
-  {
-    x: 91,
-    y: 92,
-    z: 93,
-    t: 94,
+    code: 'Salade caesar',
+    value: 16.0,
+    tax: 10.0,
   },
 ];
 
 describe('<Table />', () => {
-  it('should render without a problem', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
+  test('should render without a problem', () => {
+    const { getByText, getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} />);
+
+    const firstRowTitle = getByText(data[0].code);
+    const secondRowTitle = getByText(data[1].code);
+    const thirdRowTitle = getByText(data[2].code);
+
+    expect(firstRowTitle).toBeInTheDocument();
+    expect(secondRowTitle).toBeInTheDocument();
+    expect(thirdRowTitle).toBeInTheDocument();
+
+    const firstRowValue = getByText('15.00 €');
+    const secondRowValue = getByText('13.00 €');
+    const thirdRowValue = getByText('16.00 €');
+
+    expect(firstRowValue).toBeInTheDocument();
+    expect(secondRowValue).toBeInTheDocument();
+    expect(thirdRowValue).toBeInTheDocument();
+
+    const firstRowTax = getByText('11.00 %');
+    const secondRowTax = getByText('12.00 %');
+    const thirdRowTax = getByText('10.00 %');
+
+    expect(firstRowTax).toBeInTheDocument();
+    expect(secondRowTax).toBeInTheDocument();
+    expect(thirdRowTax).toBeInTheDocument();
+
+    const bodyRows = getAllByTestId('body-row');
+
+    expect(bodyRows.length).toBe(3);
   });
 
-  it('should render without a problem when header on top', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} header="top" />
-      </ThemeProvider>,
+  test('should alternate rows of content with a darker color to increase contrast.', () => {
+    const { getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} striped />);
+
+    const bodyRows = getAllByTestId('body-row');
+
+    expect(bodyRows[0]).not.toHaveStyleRule('background', { modifier: ':nth-child(even)' });
+    expect(bodyRows[1]).not.toHaveStyleRule(
+      'background',
+      JSON.stringify(Theme.palette.mysticGrey),
+      {
+        modifier: ':nth-child(even)',
+      },
     );
-    expect(render).toMatchSnapshot();
+    expect(bodyRows[2]).not.toHaveStyleRule('background', { modifier: ':nth-child(even)' });
   });
 
-  it('should render without a problem when header at bottom', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} header="bottom" />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
+  test('should not have selectable row', () => {
+    const { getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} />);
+
+    const bodyRows = getAllByTestId('body-row');
+
+    expect(bodyRows[0]).not.toHaveStyleRule('cursor');
+
+    // Click on the first body row
+    fireEvent.click(bodyRows[0]);
+
+    expect(bodyRows[0]).not.toHaveStyleRule('box-shadow');
   });
 
-  it('should render without a problem when no header', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} header="none" />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render without a problem when given a width', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} width="80rem" />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render differently when clicked on sorting (asc)', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} width="80rem" />
-      </ThemeProvider>,
-    );
-
-    expect(render).toMatchSnapshot();
-
-    render.find('div[data="header-cell-0"] div[data="sorting"]').simulate('click');
-    expect(render).toMatchSnapshot();
-
-    render.find('div[data="header-cell-0"] div[data="sorting"]').simulate('click');
-    expect(render).toMatchSnapshot();
-
-    render.find('div[data="header-cell-0"] div[data="sorting"]').simulate('click');
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render without a problem when given a compressed rows', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} width="80rem" compressedRows />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render without a problem when given a no zebraValue', () => {
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} data={data} width="80rem" noZebra />
-      </ThemeProvider>,
-    );
-    expect(render).toMatchSnapshot();
-  });
-
-  it('should render without a problem when rows are selectable', () => {
+  test('should have selectable row', () => {
     const spy = jest.fn();
     const rowsDef = {
       selectable: true,
       onSelect: spy,
     };
-
-    const render = mount(
-      <ThemeProvider theme={Theme}>
-        <Table colsDef={colsDef} rowsDef={rowsDef} data={data} width="80rem" noZebra />
-      </ThemeProvider>,
+    const { getAllByTestId } = render(
+      <Table colsDef={getColsDef()} rowsDef={rowsDef} data={data} />,
     );
 
-    expect(render).toMatchSnapshot();
+    const bodyRows = getAllByTestId('body-row');
 
-    // Check selected row is highlighted
-    render.find('div[data="body-row-2"]').simulate('click');
-    expect(render).toMatchSnapshot();
-    expect(spy).toHaveBeenCalled();
+    expect(bodyRows[0]).toHaveStyleRule('cursor', 'pointer');
 
-    render.find('div[data="header-cell-0"] div[data="sorting"]').simulate('click');
-    expect(render).toMatchSnapshot();
+    // Click on the first body row
+    fireEvent.click(bodyRows[0]);
+
+    expect(bodyRows[0]).toHaveStyleRule(
+      'box-shadow',
+      `inset 3px 0px 0 0px ${Theme.palette.primary.default}`,
+    );
+
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  test('should render differently when clicked on sorting', () => {
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} striped />,
+    );
+
+    const dishNode = getByText(/dish/i);
+
+    const initialBodyRows = getAllByTestId('body-row');
+
+    expect(initialBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
+
+    // Click on the the dish node
+    fireEvent.click(dishNode);
+
+    const sortedBodyRows = getAllByTestId('body-row');
+
+    expect(sortedBodyRows[0]).toHaveTextContent(/oeuf cocotte/i);
   });
 });
