@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/tillersystems/Stardust/compare/v3.1.4...v3.2.0) (2019-04-18)
+
+### Features
+
+- **Table:** update table component to suit our new design ([#495](https://github.com/tillersystems/Stardust/issues/495)) ([a77b628](https://github.com/tillersystems/Stardust/commit/a77b628))
+
 ## [3.1.4](https://github.com/tillersystems/Stardust/compare/v3.1.3...v3.1.4) (2019-04-10)
 
 ### Bug Fixes
