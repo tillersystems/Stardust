@@ -13,20 +13,16 @@ import { Table } from '@tillersystems/stardust';
 - `colsDef` - columns definition.
 - `rowsDef` - rows definition.
 - `data` - data to display.
-- `header` - position of the header.
 - `width` - width of the table.
-- `compressedRows` - whether rows should be compressed (tighter display) or not.
-- `noZebra` - whether rows should not alternate color or not.
+- `striped` - whether rows should alternate color or not.
 
-| propName         | propType | defaultValue | isRequired |
-| ---------------- | :------: | :----------: | :--------: |
-| `colsDef`        | `array`  |      -       |     \*     |
-| `rowsDef`        | `object` |     `{}`     |     -      |
-| `data`           | `array`  |      -       |     \*     |
-| `header`         | `string` |    `top`     |     -      |
-| `width`          | `string` |    `100%`    |     -      |
-| `compressedRows` |  `bool`  |   `false`    |     -      |
-| `noZebra`        |  `bool`  |   `false`    |     -      |
+| propName  | propType | defaultValue | isRequired |
+| --------- | :------: | :----------: | :--------: |
+| `colsDef` | `array`  |      -       |     \*     |
+| `rowsDef` | `object` |     `{}`     |     -      |
+| `data`    | `array`  |      -       |     \*     |
+| `width`   | `string` |    `100%`    |     -      |
+| `striped` |  `bool`  |   `false`    |     -      |
 
 #### Columns definition
 

@@ -1,34 +1,46 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import { Table } from '../..';
 
 storiesOf('Table', module)
   .addDecorator(withKnobs)
   .add('default', () => {
+    const striped = boolean('Striped', false, 'State');
+    const selectableRow = boolean('Selectable row', false, 'State');
+
     const getColsDef = () => [
       {
         title: 'DISH',
         value: d => d.code,
-        align: 'left',
         sortable: true,
+        align: 'left',
       },
       {
         title: 'PRICE',
         value: d => d.value,
         format: v => `${v.toFixed(2)} €`,
-        width: '10rem',
+        align: 'right',
         sortable: true,
       },
       {
         title: 'TAX',
         value: d => d.tax,
         format: v => `${v.toFixed(2)} %`,
-        width: '10rem',
+        align: 'right',
         sortable: true,
       },
     ];
+
+    const onClickAction = action('onClick');
+
+    const rowsDef = {
+      selectable: selectableRow,
+      onSelect: (item, key) => onClickAction(JSON.stringify(item), key),
+    };
+
     const data = [
       {
         code: 'Tartare de boeuf',
@@ -47,21 +59,5 @@ storiesOf('Table', module)
       },
     ];
 
-    const compressedRows = boolean('compressedRows', false, 'State');
-    const noZebra = boolean('No Zebra', false, 'State');
-    const options = {
-      top: 'top',
-      bottom: 'bottom',
-    };
-    const headerPosition = select('Header position', options, 'top', 'State');
-
-    return (
-      <Table
-        data={data}
-        colsDef={getColsDef()}
-        compressedRows={compressedRows}
-        header={headerPosition}
-        noZebra={noZebra}
-      />
-    );
+    return <Table data={data} colsDef={getColsDef()} rowsDef={rowsDef} striped={striped} />;
   });

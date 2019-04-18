@@ -4,17 +4,14 @@ import PropTypes from 'prop-types';
 import { Icon, Theme } from '..';
 import compare from '../helpers/compare';
 import {
-  Container,
-  Header,
-  HeaderRow,
-  HeaderCell,
+  HeaderSortingContainer,
+  HeaderLabel,
   Body,
   BodyRow,
-  BodyCell,
-  HeaderCellTitle,
-  HeaderSortingContainer,
-  HeaderSortingGhost,
-  HeaderLabel,
+  Row,
+  TableElement,
+  TableHeader,
+  TableHeaderCell,
 } from './elements';
 
 /** Lookup object for next sorting direction. */
@@ -56,10 +53,8 @@ class Table extends PureComponent {
       onSelect: func,
     }),
     data: array.isRequired,
-    header: oneOf(['top', 'bottom', 'none']),
     width: string,
-    compressedRows: bool,
-    noZebra: bool,
+    striped: bool,
   };
 
   /** Default props. */
@@ -69,9 +64,7 @@ class Table extends PureComponent {
       onSelect: () => {},
     },
     width: '100%',
-    header: 'top',
-    compressedRows: false,
-    noZebra: false,
+    striped: false,
   };
 
   /** Internal state. */
@@ -135,33 +128,29 @@ class Table extends PureComponent {
     } = this.state;
 
     return (
-      <Header>
-        <HeaderRow>
-          {/* eslint-disable no-unused-vars */ colsDef.map(
-            ({ title, format, value, sortable, align, ...rest }, j) => (
-              <HeaderCell j={j} key={j} align={align} {...rest}>
-                <HeaderCellTitle>
-                  {sortable && (
-                    <HeaderSortingContainer
-                      align={align}
-                      onClick={() => this.handleSortingClick(j)}
-                    >
-                      <Icon
-                        name={sortingDirectionToIconName[j == index ? direction : 'none']}
-                        color={Theme.palette.mediumGrey}
-                        width="1.5rem"
-                        height="1.5rem"
-                      />
-                    </HeaderSortingContainer>
-                  )}
-                  <HeaderLabel>{title}</HeaderLabel>
-                  {sortable && <HeaderSortingGhost align={align} />}
-                </HeaderCellTitle>
-              </HeaderCell>
-            ),
-          )}
-        </HeaderRow>
-      </Header>
+      <TableHeader>
+        <Row>
+          {colsDef.map(({ title, sortable, align }, columnIndex) => (
+            <TableHeaderCell
+              key={`${title}-${columnIndex}`}
+              align={align}
+              onClick={() => this.handleSortingClick(columnIndex)}
+            >
+              <HeaderSortingContainer align={align}>
+                <HeaderLabel>{title}</HeaderLabel>
+                {sortable && (
+                  <Icon
+                    name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
+                    color={Theme.palette.mediumGrey}
+                    width="1rem"
+                    height="1rem"
+                  />
+                )}
+              </HeaderSortingContainer>
+            </TableHeaderCell>
+          ))}
+        </Row>
+      </TableHeader>
     );
   }
 
@@ -175,8 +164,7 @@ class Table extends PureComponent {
       colsDef,
       rowsDef: { selectable },
       data,
-      compressedRows,
-      noZebra,
+      striped,
     } = this.props;
     const {
       sort: { index, direction },
@@ -202,20 +190,19 @@ class Table extends PureComponent {
 
     return (
       <Body>
-        {sortedData.map(({ key, item }, i) => (
+        {sortedData.map(({ key, item }, index) => (
           <BodyRow
-            i={i}
-            key={i}
+            key={key}
+            data-testid="body-row"
             selectable={selectable}
             selected={selected === key}
-            compressed={compressedRows}
-            noZebra={noZebra}
+            striped={striped}
             onClick={() => this.handleRowSelect(item, key)}
           >
-            {colsDef.map(({ value, format, ...rest }, j) => (
-              <BodyCell j={j} key={j} {...rest}>
-                {format ? format(value(item, i), i) : value(item, i)}
-              </BodyCell>
+            {colsDef.map(({ value, format, align }, columnIndex) => (
+              <td key={`column-${columnIndex}`} align={align}>
+                {format ? format(value(item, index), index) : value(item, index)}
+              </td>
             ))}
           </BodyRow>
         ))}
@@ -229,14 +216,13 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { width, header } = this.props;
+    const { width } = this.props;
 
     return (
-      <Container {...{ width }}>
-        {header === 'top' && this.renderHeader()}
+      <TableElement width={width}>
+        {this.renderHeader()}
         {this.renderBody()}
-        {header === 'bottom' && this.renderHeader()}
-      </Container>
+      </TableElement>
     );
   }
 }
