@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/tillersystems/Stardust/compare/v3.2.0...v3.2.1) (2019-04-24)
+
+### Bug Fixes
+
+- update color and KpiChart height ([#497](https://github.com/tillersystems/Stardust/issues/497)) ([4728853](https://github.com/tillersystems/Stardust/commit/4728853))
+- **TextInput:** replace margin by padding inside input ([#496](https://github.com/tillersystems/Stardust/issues/496)) ([1dd709b](https://github.com/tillersystems/Stardust/commit/1dd709b))
+
 # [3.2.0](https://github.com/tillersystems/Stardust/compare/v3.1.4...v3.2.0) (2019-04-18)
 
 ### Features
