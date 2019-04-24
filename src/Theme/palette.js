@@ -18,7 +18,7 @@ const turquoise = 'hsl(168,76%,42%)';
 const googleBrandRed = 'hsl(5,81%,56%)';
 
 // Shades of grey
-const mysticGrey = 'hsl(216,45%,98%)';
+const mysticGrey = 'hsl(218, 29%, 95%)';
 const lightGrey = 'hsl(207,22%,90%)';
 const mediumGrey = 'hsl(206,23%,69%)';
 const darkGrey = 'hsl(206,16%,60%)';
