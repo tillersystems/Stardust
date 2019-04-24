@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 import { ResponsiveBar } from '@nivo/bar';
 
 import { Button, KpiChart } from '../..';
@@ -69,13 +69,24 @@ storiesOf('KpiChart', module)
   .add('default', () => {
     const Title = text('Title', "Chiffre d'affaires de la journée", 'ALL');
     const label = text('Label', 'Afficher le rapport', 'ALL');
+    const height = number(
+      'Height (px)',
+      375,
+      {
+        range: true,
+        min: 200,
+        max: 600,
+        step: 10,
+      },
+      'ALL',
+    );
     const isCompactedValue = boolean('isCompacted', false, 'ALL');
     return (
       <KpiChart isCompacted={isCompactedValue}>
         <KpiChart.Header>
           <KpiChart.Title isCompacted={isCompactedValue}>{Title}</KpiChart.Title>
         </KpiChart.Header>
-        <KpiChart.Body>
+        <KpiChart.Body height={`${height}px`}>
           <ResponsiveBar
             data={data}
             keys={['25 juil. 2017', '25 juil. 2018']}
