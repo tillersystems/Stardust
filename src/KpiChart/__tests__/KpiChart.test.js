@@ -54,4 +54,20 @@ describe('<KpiChart />', () => {
     expect(TitleNode).toHaveStyleRule('padding-bottom', '1.2rem');
     expect(container.firstChild).toHaveStyleRule('padding', '1.2rem 1.6rem');
   });
+
+  test('should render kpi chart with a defined height', () => {
+    const Title = 'My title';
+    const height = '300px';
+    const { getByTestId } = render(
+      <KpiChart isCompacted>
+        <KpiChart.Header>
+          <KpiChart.Title isCompacted>{Title}</KpiChart.Title>
+        </KpiChart.Header>
+        <KpiChart.Body height={height}>Body</KpiChart.Body>
+        <KpiChart.Footer>Footer</KpiChart.Footer>
+      </KpiChart>,
+    );
+    const KpiChartBody = getByTestId('kpichart-body');
+    expect(KpiChartBody).toHaveStyleRule('height', height);
+  });
 });

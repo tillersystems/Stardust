@@ -38,11 +38,11 @@ export const Container = styled.div`
 
   background: linear-gradient(
     0deg,
-    ${({ theme: { palette } }) => palette.mysticGrey} 0%,
+    ${({ theme: { palette } }) => palette.paleGrey} 0%,
     ${({ theme: { palette } }) => palette.white} 100%
   );
   box-shadow: inset 0 2px 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.05)},
-    0 1px 1px 0 ${({ theme: { palette } }) => palette.mysticGrey};
+    0 1px 1px 0 ${({ theme: { palette } }) => palette.paleGrey};
 
   transition: background-color ease 0.25s;
 

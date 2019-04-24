@@ -13,7 +13,11 @@ import styled from 'styled-components';
  *
  * @return {jsx}
  */
-const KpiChartBody = ({ children, className }) => <div className={className}>{children}</div>;
+const KpiChartBody = ({ children, className }) => (
+  <div className={className} data-testid="kpichart-body">
+    {children}
+  </div>
+);
 
 /**
  * PropTypes Validation
@@ -22,6 +26,8 @@ const { node, string } = PropTypes;
 KpiChartBody.propTypes = {
   children: node,
   className: string,
+  // eslint-disable-next-line react/no-unused-prop-types
+  height: string,
 };
 
 /**
@@ -30,8 +36,9 @@ KpiChartBody.propTypes = {
 KpiChartBody.defaultProps = {
   children: null,
   className: '',
+  height: '37.3rem',
 };
 
 export default styled(KpiChartBody)`
-  height: 37.3rem;
+  height: ${({ height }) => (/^\d+(rem|px)$/.test(height) ? height : '37.3rem')};
 `;

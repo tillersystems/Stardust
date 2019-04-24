@@ -105,7 +105,7 @@ export const BodyRow = styled(Row)`
     striped &&
     css`
       &:nth-child(even) {
-        background: ${({ theme: { palette } }) => palette.mysticGrey};
+        background: ${({ theme: { palette } }) => palette.paleGrey};
       }
     `};
 `;

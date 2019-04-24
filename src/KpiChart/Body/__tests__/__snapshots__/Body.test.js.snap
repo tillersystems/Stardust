@@ -7,6 +7,7 @@ exports[`<KpiChart.Body /> should render without a problem 1`] = `
 
 <div
   class="c0"
+  data-testid="kpichart-body"
 >
   Body
 </div>
