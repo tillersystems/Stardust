@@ -139,11 +139,10 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -254,7 +253,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
               width="25rem"
             >
               <input
-                class="sc-jWBwVP kCOVHR"
+                class="sc-jWBwVP jEwqHC"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"
@@ -384,11 +383,10 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -632,11 +630,10 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -911,11 +908,10 @@ exports[`<Form /> should render without a problem 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 

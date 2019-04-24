@@ -63,7 +63,7 @@ export const InputElement = styled.input`
   width: 100%;
   background-color: ${({ theme: { palette } }) => palette.white};
 
-  margin: 0 ${({ theme: { dimensions } }) => dimensions.small};
+  padding: 0 ${({ theme: { dimensions } }) => dimensions.small};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
   &::placeholder {
@@ -74,7 +74,6 @@ export const InputElement = styled.input`
   /* Set size to 16px for iOS devices to avoid auto-zoom */
   font-size: ${({ theme: { fonts } }) => fonts.size.big};
   border: none;
-  padding: 0;
   text-align: left;
   &:focus,
   &:active {
