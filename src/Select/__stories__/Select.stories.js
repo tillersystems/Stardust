@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text, number } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text, number, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 
@@ -88,8 +88,19 @@ storiesOf('Select', module)
   .add('with default value', () => {
     const onToggle = action('onToggle');
     const onChange = action('onChange');
-    const disabled = boolean('Disabled', false, 'State');
-    const resetValue = boolean('Reset value', false, 'State');
+    const disabled = boolean('Disabled', false, 'Props');
+    const resetValue = boolean('Reset value', false, 'Props');
+    const value = select(
+      'Value',
+      {
+        home: 'home',
+        calendar: 'calendar',
+        settings: 'settings',
+        user: 'user',
+      },
+      'home',
+      'Props',
+    );
 
     const StyledIcon = styled(Icon)`
       vertical-align: middle;
@@ -102,7 +113,7 @@ storiesOf('Select', module)
         onChange={onChange}
         disabled={disabled}
         resetValue={resetValue}
-        initialValue="user"
+        value={value}
       >
         <Select.Option value="home">
           <StyledIcon name="home" width="1.5rem" height="1.5rem" color={Theme.palette.darkBlue} />
