@@ -18,7 +18,7 @@ export const Header = styled.button`
   background: linear-gradient(
     180deg,
     ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+    ${({ theme: { palette } }) => palette.paleGrey} 100%
   );
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
@@ -72,7 +72,7 @@ export const Menu = styled.ul`
   background: linear-gradient(
     180deg,
     ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.mysticGrey} 100%
+    ${({ theme: { palette } }) => palette.paleGrey} 100%
   );
 
   color: ${({ theme: { palette } }) => palette.spaceGrey};

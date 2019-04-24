@@ -42,7 +42,7 @@ export const getAppearance = ({ palette }, appearance) => {
     `,
     secondary: css`
       color: ${palette.spaceGrey};
-      background: linear-gradient(180deg, ${palette.white} 0%, ${palette.mysticGrey} 100%);
+      background: linear-gradient(180deg, ${palette.white} 0%, ${palette.paleGrey} 100%);
       border: 1px solid ${palette.lightGrey};
     `,
     success: css`

@@ -45,7 +45,7 @@ export default styled(Label)`
   padding: 1.1rem;
 
   color: ${({ theme: { palette } }) => palette.darkGrey};
-  background: ${({ theme: { palette } }) => palette.mysticGrey};
+  background: ${({ theme: { palette } }) => palette.paleGrey};
 
   ${({ position }) =>
     position === 'left' &&

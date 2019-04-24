@@ -18,7 +18,7 @@ exports[`<TextInput /> should have a text label 1`] = `
   justify-content: center;
   padding: 1.1rem;
   color: hsl(206,16%,60%);
-  background: hsl(216,45%,98%);
+  background: hsl(240,33%,99%);
   border-right: 1px solid hsl(207,22%,90%);
 }
 
@@ -127,7 +127,7 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
   justify-content: center;
   padding: 1.1rem;
   color: hsl(206,16%,60%);
-  background: hsl(216,45%,98%);
+  background: hsl(240,33%,99%);
   border-left: 1px solid hsl(207,22%,90%);
 }
 
@@ -255,7 +255,7 @@ exports[`<TextInput /> should have an icon label 1`] = `
   justify-content: center;
   padding: 1.1rem;
   color: hsl(206,16%,60%);
-  background: hsl(216,45%,98%);
+  background: hsl(240,33%,99%);
   border-right: 1px solid hsl(207,22%,90%);
 }
 

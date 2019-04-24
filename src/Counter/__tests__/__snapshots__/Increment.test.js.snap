@@ -30,7 +30,7 @@ exports[`<Counter /> should render without a problem 1`] = `
   -webkit-transition: background 200ms ease,box-shadow 200ms ease;
   transition: background 200ms ease,box-shadow 200ms ease;
   color: hsl(207,13%,45%);
-  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(216,45%,98%) 100%);
+  background: linear-gradient(180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100%);
   border: 1px solid hsl(207,22%,90%);
   padding: 0.75rem 1.6rem;
 }

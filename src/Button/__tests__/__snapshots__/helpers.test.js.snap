@@ -91,7 +91,7 @@ Array [
       background: linear-gradient(180deg, ",
   "hsl(0,100%,100%)",
   " 0%, ",
-  "hsl(216,45%,98%)",
+  "hsl(240,33%,99%)",
   " 100%);
       border: 1px solid ",
   "hsl(207,22%,90%)",
