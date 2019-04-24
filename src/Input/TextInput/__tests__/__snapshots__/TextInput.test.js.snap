@@ -49,11 +49,10 @@ exports[`<TextInput /> should have a text label 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -158,11 +157,10 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -286,11 +284,10 @@ exports[`<TextInput /> should have an icon label 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -415,11 +412,10 @@ exports[`<TextInput /> should render search status input without problem when fo
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
@@ -516,11 +512,10 @@ exports[`<TextInput /> should render without a problem 1`] = `
   height: 100%;
   width: 100%;
   background-color: hsl(0,100%,100%);
-  margin: 0 0.7rem;
+  padding: 0 0.7rem;
   border-radius: 0.4rem;
   font-size: 1.6rem;
   border: none;
-  padding: 0;
   text-align: left;
 }
 
