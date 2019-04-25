@@ -36,10 +36,10 @@ class Select extends PureComponent {
     onToggle: func,
     placeholder: string,
     resetValue: bool,
+    value: string,
     // https://github.com/yannickcr/eslint-plugin-react/issues/1520
     // eslint-disable-next-line react/no-unused-prop-types
     width: string,
-    initialValue: string,
   };
 
   /** Default props. */
@@ -51,8 +51,8 @@ class Select extends PureComponent {
     onToggle: () => {},
     resetValue: false,
     placeholder: null,
+    value: null,
     width: '100%',
-    initialValue: null,
   };
 
   /**
@@ -66,7 +66,8 @@ class Select extends PureComponent {
   static getDerivedStateFromProps(props, state) {
     if (props.resetValue !== state.resetValue) {
       return {
-        value: null,
+        resetValue: props.resetValue,
+        ...(props.resetValue ? { value: null } : {}),
       };
     }
 
@@ -89,19 +90,30 @@ class Select extends PureComponent {
    * the placeholder at the render.
    */
   componentDidMount() {
-    const { children, initialValue, placeholder } = this.props;
+    const { children, value, placeholder } = this.props;
 
-    if (initialValue) {
-      const isMatchingOption =
-        children.filter(option => option.props.value === initialValue).length === 1;
+    if (value) {
+      const isMatchingOption = children.filter(option => option.props.value === value).length === 1;
 
       if (isMatchingOption) {
-        this.setState({ value: initialValue });
+        this.setState({ value });
       } else {
         this.initializeValue();
       }
     } else if (!placeholder) {
       this.initializeValue();
+    }
+  }
+
+  /**
+   * Handles value update from parent.
+   *
+   * @param {Object} prevProps - The previous component's props.
+   */
+  componentDidUpdate(prevProps) {
+    const { value } = this.props;
+    if (value !== prevProps.value) {
+      this.setState({ value });
     }
   }
 
@@ -150,10 +162,9 @@ class Select extends PureComponent {
     const { onChange } = this.props;
 
     this.setState(
-      prevState => ({
-        ...prevState,
+      {
         value,
-      }),
+      },
       () => {
         onChange && onChange(value);
         this.toggleMenu();

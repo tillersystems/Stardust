@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent } from 'react-testing-library';
+import { fireEvent, wait } from 'react-testing-library';
 
 import Select from '..';
 
@@ -168,7 +168,7 @@ describe('<Select />', () => {
     expect(container.firstChild).toHaveStyleRule('width', props.width);
   });
 
-  test('should display the first option when no placeholder nor initial value is provided', () => {
+  test('should display the first option when no placeholder nor value is provided', () => {
     const { getByText } = render(
       <Select>
         <Select.Option value="1">Item 1</Select.Option>
@@ -182,8 +182,8 @@ describe('<Select />', () => {
     expect(displayedOption).toBeInTheDocument();
   });
 
-  test('should have an initial value', () => {
-    const props = { initialValue: '3' };
+  test('should have a value set by parent', () => {
+    const props = { value: '3' };
     const { getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item 1</Select.Option>
@@ -195,5 +195,54 @@ describe('<Select />', () => {
 
     const displayedOption = getByText('Item 3');
     expect(displayedOption).toBeInTheDocument();
+  });
+
+  test('should update its value accordingly', async () => {
+    const { container, queryByText, getByText, rerender } = render(
+      <Select>
+        <Select.Option value="1">Item 1</Select.Option>
+        <Select.Option value="2">Item 2</Select.Option>
+        <Select.Option value="3">Item 3</Select.Option>
+        <Select.Option value="4">Item 4</Select.Option>
+      </Select>,
+    );
+
+    const buttonNode = container.querySelector('button');
+    expect(buttonNode).toHaveAttribute('aria-expanded', 'false');
+
+    let firstOption = getByText('Item 1');
+    let thirdOption = queryByText('Item 3');
+    expect(firstOption).toBeInTheDocument();
+    expect(thirdOption).not.toBeInTheDocument();
+
+    // open select and pick another option
+    fireEvent.click(buttonNode);
+    thirdOption = getByText('Item 3');
+    fireEvent.click(thirdOption);
+
+    await wait(() => {
+      firstOption = queryByText('Item 1');
+      expect(firstOption).not.toBeInTheDocument();
+      // get current option displayed in the button
+      thirdOption = getByText('Item 3');
+      expect(thirdOption).toBeInTheDocument();
+
+      const props = { value: '2' };
+      rerender(
+        <Select {...props}>
+          <Select.Option value="1">Item 1</Select.Option>
+          <Select.Option value="2">Item 2</Select.Option>
+          <Select.Option value="3">Item 3</Select.Option>
+          <Select.Option value="4">Item 4</Select.Option>
+        </Select>,
+      );
+
+      const secondOption = getByText('Item 2');
+      expect(secondOption).toBeInTheDocument();
+      firstOption = queryByText('Item 1');
+      expect(firstOption).not.toBeInTheDocument();
+      thirdOption = queryByText('Item 3');
+      expect(thirdOption).not.toBeInTheDocument();
+    });
   });
 });
