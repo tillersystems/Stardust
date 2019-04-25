@@ -17,7 +17,7 @@ const { bool, node, number, string } = PropTypes;
  */
 const Panes = ({ activeIndex, children, className, isCompacted }) => (
   <Container className={className} isCompacted={isCompacted}>
-    {children[activeIndex]}
+    {children[activeIndex] ? children[activeIndex] : children}
   </Container>
 );
 
