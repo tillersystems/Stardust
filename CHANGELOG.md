@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/tillersystems/Stardust/compare/v3.2.1...v3.2.2) (2019-04-25)
+
+### Bug Fixes
+
+- **Select:** update value passed by parent and update resetValue ([#499](https://github.com/tillersystems/Stardust/issues/499)) ([a6092c9](https://github.com/tillersystems/Stardust/commit/a6092c9))
+- **TabSwitcher:** display single Pane when there is only one ([#502](https://github.com/tillersystems/Stardust/issues/502)) ([7800cb2](https://github.com/tillersystems/Stardust/commit/7800cb2))
+
 ## [3.2.1](https://github.com/tillersystems/Stardust/compare/v3.2.0...v3.2.1) (2019-04-24)
 
 ### Bug Fixes
