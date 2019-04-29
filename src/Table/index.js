@@ -134,7 +134,7 @@ class Table extends PureComponent {
             <TableHeaderCell
               key={`${title}-${columnIndex}`}
               align={align}
-              onClick={() => this.handleSortingClick(columnIndex)}
+              onClick={() => (sortable ? this.handleSortingClick(columnIndex) : undefined)}
             >
               <HeaderSortingContainer align={align}>
                 <HeaderLabel>{title}</HeaderLabel>
