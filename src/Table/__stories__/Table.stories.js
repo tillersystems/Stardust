@@ -10,12 +10,15 @@ storiesOf('Table', module)
   .add('default', () => {
     const striped = boolean('Striped', false, 'State');
     const selectableRow = boolean('Selectable row', false, 'State');
+    const dishRowSortable = boolean('Dish row is sortable', true, 'State');
+    const priceRowSortable = boolean('Price row is sortable', true, 'State');
+    const titleRowSortable = boolean('Title row is sortable', true, 'State');
 
     const getColsDef = () => [
       {
         title: 'DISH',
         value: d => d.code,
-        sortable: true,
+        sortable: dishRowSortable,
         align: 'left',
       },
       {
@@ -23,14 +26,14 @@ storiesOf('Table', module)
         value: d => d.value,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        sortable: true,
+        sortable: priceRowSortable,
       },
       {
         title: 'TAX',
         value: d => d.tax,
         format: v => `${v.toFixed(2)} %`,
         align: 'right',
-        sortable: true,
+        sortable: titleRowSortable,
       },
     ];
 

@@ -20,7 +20,7 @@ const getColsDef = () => [
     value: d => d.value,
     format: v => `${v.toFixed(2)} €`,
     align: 'right',
-    sortable: true,
+    sortable: false,
   },
   {
     title: 'TAX',
@@ -153,5 +153,24 @@ describe('<Table />', () => {
     const sortedBodyRows = getAllByTestId('body-row');
 
     expect(sortedBodyRows[0]).toHaveTextContent(/oeuf cocotte/i);
+  });
+
+  test('should not render differently when clicked on sorting', () => {
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} striped />,
+    );
+
+    const priceNode = getByText(/price/i);
+
+    const initialBodyRows = getAllByTestId('body-row');
+
+    expect(initialBodyRows[0]).toHaveTextContent('15.00 €');
+
+    // Click on the the dish node
+    fireEvent.click(priceNode);
+
+    const sortedBodyRows = getAllByTestId('body-row');
+
+    expect(sortedBodyRows[0]).toHaveTextContent('15.00 €');
   });
 });
