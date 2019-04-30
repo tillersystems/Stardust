@@ -1,3 +1,9 @@
+## [3.2.3](https://github.com/tillersystems/Stardust/compare/v3.2.2...v3.2.3) (2019-04-30)
+
+### Bug Fixes
+
+- **Table:** never call handleSortingClick function if selected column is not sortable ([#507](https://github.com/tillersystems/Stardust/issues/507)) ([2854aae](https://github.com/tillersystems/Stardust/commit/2854aae))
+
 ## [3.2.2](https://github.com/tillersystems/Stardust/compare/v3.2.1...v3.2.2) (2019-04-25)
 
 ### Bug Fixes
