@@ -256,7 +256,7 @@ class TextInput extends PureComponent {
         {label && labelPosition === 'left' && <Label label={label} position="left" />}
         <InputElement
           data-testid="input"
-          innerRef={ref => (this.inputRef = ref)}
+          ref={ref => (this.inputRef = ref)}
           type={type}
           id={id}
           tabIndex={tabIndex}

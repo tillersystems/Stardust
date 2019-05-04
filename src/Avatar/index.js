@@ -78,15 +78,13 @@ class Avatar extends PureComponent {
   }
 }
 
-export default styled(Avatar).attrs({
-  colors: ({ name }) => defaultColors[sumChars(name) % defaultColors.length],
-})`
+export default styled(Avatar)`
   display: flex;
   justify-content: center;
   align-items: center;
   width: ${({ size }) => size || Theme.dimensions.bigInt}rem;
   height: ${({ size }) => size || Theme.dimensions.bigInt}rem;
   border-radius: 50%;
-  background: ${({ colors }) => colors};
+  background: ${({ name }) => defaultColors[sumChars(name) % defaultColors.length]};
   color: white;
 `;

@@ -137,7 +137,7 @@ class DatePickerInput extends PureComponent {
     const { isDatePickerOpen, error, textValue, dateValue } = this.state;
 
     return (
-      <Container innerRef={node => (this.ref = node)}>
+      <Container ref={node => (this.ref = node)}>
         <TextInput
           fluid={fluid}
           value={textValue ? textValue.toLocaleString(DateTime.DATE_SHORT) : ''}

@@ -135,7 +135,7 @@ class Dropdown extends PureComponent {
         >
           {title}
         </Header>
-        <PoseGroup>
+        <PoseGroup flipMove={false}>
           {displayMenu && (
             <MenuAnimation key="Menu" role="menu">
               {searchable && (

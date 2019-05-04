@@ -7,7 +7,7 @@ import { create } from '@storybook/theming';
 import { ThemeProvider } from 'styled-components';
 import { withDocs } from 'storybook-readme';
 
-import styles from './styles';
+import GlobalStyles from './styles';
 import { Theme } from '../src';
 
 // Option defaults:
@@ -41,6 +41,7 @@ addDecorator((story, context) => {
 
 addDecorator(story => (
   <div style={{ padding: '5rem 5rem 0 5rem' }}>
+    <GlobalStyles />
     <ThemeProvider theme={Theme}>{story()}</ThemeProvider>
   </div>
 ));
@@ -48,7 +49,6 @@ addDecorator(story => (
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/);
 function loadStories() {
-  styles();
   req.keys().forEach(filename => req(filename));
 }
 
