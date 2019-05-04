@@ -106,7 +106,7 @@ describe('<RadioGroup />', () => {
   });
 
   test('should render as row', () => {
-    const render = shallowWithTheme(
+    const { container } = render(
       <RadioGroup groupName="vegetable" isRow>
         <RadioButton value="artichoke" id="artichoke">
           artichoke
@@ -119,7 +119,7 @@ describe('<RadioGroup />', () => {
         </RadioButton>
       </RadioGroup>,
     );
-    expect(render.dive()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('should call componentDidUpdate when props are updated', () => {

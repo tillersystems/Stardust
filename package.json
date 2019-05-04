@@ -94,9 +94,6 @@
     "babel-preset-react": "6.24.1",
     "conventional-changelog-cli": "2.0.17",
     "cross-env": "5.2.0",
-    "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.12.1",
-    "enzyme-to-json": "3.3.5",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "4.2.0",
@@ -127,6 +124,7 @@
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
+      "/internal/",
       ".*.test\\.js$",
       ".*.stories\\.js$"
     ],
@@ -144,9 +142,6 @@
     },
     "setupFilesAfterEnv": [
       "./internal/jest/index.js"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
     ],
     "testRegex": ".*.test\\.js$",
     "testPathIgnorePatterns": [
