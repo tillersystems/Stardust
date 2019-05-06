@@ -1,3 +1,9 @@
+## [3.3.2](https://github.com/tillersystems/Stardust/compare/v3.3.1...v3.3.2) (2019-05-06)
+
+### Bug Fixes
+
+- **TabSwitcher:** check that child is not null ([#519](https://github.com/tillersystems/Stardust/issues/519)) ([0f07300](https://github.com/tillersystems/Stardust/commit/0f07300))
+
 ## [3.3.1](https://github.com/tillersystems/Stardust/compare/v3.3.0...v3.3.1) (2019-05-06)
 
 ### Bug Fixes
