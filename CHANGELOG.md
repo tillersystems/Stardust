@@ -1,3 +1,5 @@
+# [3.3.0](https://github.com/tillersystems/Stardust/compare/v3.2.3...v3.3.0) (2019-05-06)
+
 ## [3.2.3](https://github.com/tillersystems/Stardust/compare/v3.2.2...v3.2.3) (2019-04-30)
 
 ### Bug Fixes
