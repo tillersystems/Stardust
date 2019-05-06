@@ -27,10 +27,10 @@ storiesOf('Avatar', module)
       'image',
     );
     const options = {
-      '1.5': 'medium',
-      '3.1': 'big',
-      '4.1': 'huge',
+      medium: 1.5,
+      big: 3.1,
+      huge: 4.1,
     };
-    const size = select('Size', options, '3.1', 'size');
+    const size = select('Size', options, 3.1, 'size');
     return <Avatar name={name} src={imageUrl} size={size} />;
   });

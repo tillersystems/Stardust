@@ -18,7 +18,7 @@ import { PopOver } from './elements';
  */
 
 const Popover = ({ active, arrowPositionX, children, width }) => (
-  <PoseGroup>
+  <PoseGroup flipMove={false}>
     {active && (
       <PopOverAnimation
         width={width}
