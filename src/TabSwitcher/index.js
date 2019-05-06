@@ -27,12 +27,15 @@ const TabSwitcher = ({ children, defaultIndex, index, isCompacted, onChange }) =
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
 
   const content = Children.map(children, child => {
-    // ignore random <div/>s etc.
-    if (child) {
-      if (typeof child.type === 'string') return child;
+    if (child.type.displayName === 'Panes') {
       return cloneElement(child, {
         activeIndex: isControlled ? index : activeIndex,
-        isCompacted,
+        isCompacted: isCompacted,
+      });
+    } else if (child.type.displayName === 'Tabs') {
+      return cloneElement(child, {
+        activeIndex: isControlled ? index : activeIndex,
+        isCompacted: isCompacted,
         onActiveTab: index => {
           onChange && onChange(index);
           if (!isControlled) {
@@ -40,6 +43,8 @@ const TabSwitcher = ({ children, defaultIndex, index, isCompacted, onChange }) =
           }
         },
       });
+    } else {
+      return child;
     }
   });
 
