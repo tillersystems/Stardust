@@ -1,3 +1,9 @@
+## [3.3.1](https://github.com/tillersystems/Stardust/compare/v3.3.0...v3.3.1) (2019-05-06)
+
+### Bug Fixes
+
+- **TabSwitcher:** check for child displayName ([#518](https://github.com/tillersystems/Stardust/issues/518)) ([ff36178](https://github.com/tillersystems/Stardust/commit/ff36178))
+
 # [3.3.0](https://github.com/tillersystems/Stardust/compare/v3.2.3...v3.3.0) (2019-05-06)
 
 ## [3.2.3](https://github.com/tillersystems/Stardust/compare/v3.2.2...v3.2.3) (2019-04-30)
