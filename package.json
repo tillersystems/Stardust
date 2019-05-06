@@ -92,7 +92,7 @@
     "babel-plugin-styled-components": "1.10.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
-    "conventional-changelog-cli": "2.0.17",
+    "conventional-changelog-cli": "2.0.21",
     "cross-env": "5.2.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
