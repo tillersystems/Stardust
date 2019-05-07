@@ -142,8 +142,8 @@ class Table extends PureComponent {
                   <Icon
                     name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
                     color={Theme.palette.mediumGrey}
-                    width="1rem"
-                    height="1rem"
+                    width="10px"
+                    height="10px"
                   />
                 )}
               </HeaderSortingContainer>
