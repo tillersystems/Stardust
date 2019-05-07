@@ -1,3 +1,9 @@
+## [3.3.3](https://github.com/tillersystems/Stardust/compare/v3.3.2...v3.3.3) (2019-05-07)
+
+### Bug Fixes
+
+- **Table:** specify pix instead of rm for Firefox support ([#521](https://github.com/tillersystems/Stardust/issues/521)) ([d38c967](https://github.com/tillersystems/Stardust/commit/d38c967))
+
 ## [3.3.2](https://github.com/tillersystems/Stardust/compare/v3.3.1...v3.3.2) (2019-05-06)
 
 ### Bug Fixes
