@@ -105,7 +105,7 @@ jobs:
           command: yarn build-storybook
       - run:
           name: Sync to S3
-          command: aws s3 sync ./_site s3://stardust.tillersystems.com/ --acl public-read
+          command: aws s3 sync ./storybook-static/ s3://stardust.tillersystems.com/ --acl public-read
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # WORKFLOWS
