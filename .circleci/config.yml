@@ -93,7 +93,7 @@ jobs:
       - run:
           name: Build project
           command: yarn build
-
+  # Build storybook and upload to S3
   deploy:
     <<: *defaults
     steps:
@@ -135,11 +135,10 @@ workflows:
               only: master
       - deploy:
           requires:
-            - lint
-            - unit-test
+            - build
           filters:
             branches:
-              only: chore/circleci
+              only: master
 
   # Triggered every night.
   # Tests, formats and lints the source code, builds the artifact and deploys it to staging.
