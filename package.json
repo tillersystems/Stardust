@@ -21,7 +21,7 @@
     "test": "BABEL_ENV=test jest",
     "test:cov": "yarn test --coverage",
     "test:ci": "BABEL_ENV=test jest --ci --maxWorkers=2",
-    "lint": "eslint .",
+    "lint": "eslint src/**/*.js",
     "format": "prettier --config .prettierrc --color --write \"src/**/*.js\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
