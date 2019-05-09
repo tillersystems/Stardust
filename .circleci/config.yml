@@ -1,7 +1,12 @@
 # Tiller - Stardust
 # This configuration file is part of Tiller Stardust
 
-version: 2
+version: 2.1
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# ORBS
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # REFERENCES
@@ -25,6 +30,16 @@ references:
       key: dependencies-{{ checksum "package.json" }}
       paths:
         - node_modules
+
+  install_pip: &install_pip
+    run:
+      name: Installing pip
+      command: sudo apt-get install python-pip
+
+  install_awscli: &install_awscli
+    run:
+      name: Install AWS CLI
+      command: sudo pip install awscli
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # DEFAULTS
@@ -84,6 +99,19 @@ jobs:
           name: Build project
           command: yarn build
 
+  deploy:
+    <<: *defaults
+    steps:
+      - *attach_workspace
+      - *install_pip
+      - *install_awscli
+      - run:
+          name: Build storybook
+          command: yarn build-storybook
+      - run:
+          name: Sync to S3
+          command: aws s3 sync ./_site s3://stardust.tillersystems.com/ --acl public-read
+
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # WORKFLOWS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -133,3 +161,9 @@ workflows:
           requires:
             - lint
             - unit-test
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: chore/circleci
