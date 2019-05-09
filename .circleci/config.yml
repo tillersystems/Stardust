@@ -1,12 +1,7 @@
 # Tiller - Stardust
 # This configuration file is part of Tiller Stardust
 
-version: 2.1
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# ORBS
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-orbs:
-  aws-cli: circleci/aws-cli@0.1.13
+version: 2
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # REFERENCES
