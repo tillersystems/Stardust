@@ -133,6 +133,13 @@ workflows:
           filters:
             branches:
               only: master
+       - deploy:
+          requires:
+            - lint
+            - unit-test
+          filters:
+            branches:
+              only: chore/circleci
 
   # Triggered every night.
   # Tests, formats and lints the source code, builds the artifact and deploys it to staging.
@@ -156,9 +163,3 @@ workflows:
           requires:
             - lint
             - unit-test
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: chore/circleci
