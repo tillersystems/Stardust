@@ -1,51 +1,63 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Container } from './elements';
-
-const { bool, func, node, string } = PropTypes;
+import { context } from '..';
 
 /**
  * Tab are a link displaying the content of a pane
  *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className // className needed by styled components
- * @param {boolean} isActive // if the tab is the current displayed content
- * @param {boolean} isCompacted // if it should reduce its size by reducing padding and font-size
- * @param {boolean} isDisabled // if this tab should be interactive or not
- * @param {function} onActivate - callback triggered when the tab is clicked
+ * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {string} className - className needed by styled components.
+ * @param {string} id - Id of the tab.
+ * @param {boolean} isDisabled - if this tab should be interactive or not.
  *
  * @return {jsx}
  */
-const Tab = ({ children, className, isActive, isCompacted, isDisabled, onActivate }) => (
-  <Container
-    className={className}
-    onClick={isDisabled ? null : () => onActivate()}
-    isActive={isActive}
-    isDisabled={isDisabled}
-    isCompacted={isCompacted}
-  >
-    {children}
-  </Container>
-);
+const Tab = ({ children, className, id, isDisabled }) => {
+  const { activeTabId, onTabChange } = useContext(context);
 
-/** Prop types. */
+  const isActive = activeTabId === id;
+  const onClick = isDisabled ? null : () => onTabChange(id);
+  const tabIndex = isActive ? 0 : -1;
+
+  return (
+    <Container
+      className={className}
+      onClick={onClick}
+      isActive={isActive}
+      isDisabled={isDisabled}
+      data-isactive={isActive}
+      data-isdisabled={isDisabled}
+      aria-selected={isActive}
+      aria-controls={`panel:${id}`}
+      tabIndex={tabIndex}
+      role="tab"
+    >
+      {children}
+    </Container>
+  );
+};
+
+/**
+ * PropTypes Validation
+ */
+
+const { bool, node, string } = PropTypes;
+
 Tab.propTypes = {
-  children: node,
-  onActivate: func,
-  isActive: bool,
-  isCompacted: bool,
+  children: node.isRequired,
+  id: string,
   isDisabled: bool,
   className: string,
 };
 
-/** Default props. */
+/**
+ * Default props.
+ */
 Tab.defaultProps = {
-  children: null,
-  onActivate: () => {},
-  isActive: false,
-  isCompacted: false,
+  id: undefined,
   isDisabled: false,
-  className: '',
+  className: undefined,
 };
 
 export default memo(Tab);

@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Pane from './Pane';
@@ -6,51 +6,41 @@ import Panes from './Panes';
 import Tab from './Tab';
 import Tabs from './Tabs';
 
-const { bool, func, node, number } = PropTypes;
+export const context = createContext({});
+const { Provider } = context;
 
 /**
  * A TabSwitcher wraps all the logic between tabs (elements allowing to display content)
  * and panes (content displayable when its tab is clicked)
  *
  * @param {node} children - Tabs and Panes to be displayed.
- * @param {number} defaultIndex - Starts the tab at a specific index.
- * @param {number} index - Like form inputs, a tab's state can be controlled by the owner.
- * @param {boolean} isCompacted - If it is true, should reduce its size by reducing padding and font-size.
- * @param {function} onChange - Callback with the tab index triggered when the user changes tabs allowing your app to synchronize with it.
+ * @param {number} defaultTabId - Starts the tab at a specific id.
+ * @param {number} tabId - Like form inputs, a tab's state can be controlled by the owner.
+ * @param {function} onChange - Callback with the tab id triggered when the user changes tabs allowing your app to synchronize with it.
  *
  *
  * @return {jsx}
  */
-const TabSwitcher = ({ children, defaultIndex, index, isCompacted, onChange }) => {
-  const isControlled = index != null;
+const TabSwitcher = ({ children, defaultTabId, tabId, onChange }) => {
+  const isControlled = tabId != null;
 
-  const [activeIndex, setActiveIndex] = useState(defaultIndex);
+  const [activeTabId, setActiveTabId] = useState(defaultTabId);
 
-  const content = Children.map(children, child => {
-    if (child) {
-      if (child.type.displayName === 'Panes') {
-        return cloneElement(child, {
-          activeIndex: isControlled ? index : activeIndex,
-          isCompacted: isCompacted,
-        });
-      } else if (child.type.displayName === 'Tabs') {
-        return cloneElement(child, {
-          activeIndex: isControlled ? index : activeIndex,
-          isCompacted: isCompacted,
-          onActiveTab: index => {
-            onChange && onChange(index);
-            if (!isControlled) {
-              setActiveIndex(index);
-            }
-          },
-        });
-      } else {
-        return child;
-      }
-    }
-  });
-
-  return <div>{content}</div>;
+  return (
+    <Provider
+      value={{
+        activeTabId: isControlled ? tabId : activeTabId,
+        onTabChange: id => {
+          onChange && onChange(id);
+          if (!isControlled) {
+            setActiveTabId(id);
+          }
+        },
+      }}
+    >
+      {children}
+    </Provider>
+  );
 };
 
 TabSwitcher.displayName = 'TabSwitcher';
@@ -60,26 +50,33 @@ TabSwitcher.Panes = Panes;
 TabSwitcher.Tab = Tab;
 TabSwitcher.Tabs = Tabs;
 
+/**
+ * PropTypes Validation
+ */
+
+const { func, node, string } = PropTypes;
+
 TabSwitcher.propTypes = {
   children: node.isRequired,
-  defaultIndex: number,
-  isCompacted: bool,
+  defaultTabId: string,
   onChange: func,
-  index: (props, name, compName, ...rest) => {
-    if (props.index > -1 && props.onChange == null) {
+  tabId: (props, name, compName, ...rest) => {
+    if (props.tabId != null && props.onChange == null) {
       return new Error(
-        'You provided an `index` prop to `TabSwitcher` without an `onChange` handler. This will render a read-only tabs element. If the tabs should be mutable use `defaultIndex`. Otherwise, set `onChange`.',
+        'You provided an `tabId` prop to `TabSwitcher` without an `onChange` handler. This will render a read-only tabs element. If the tabs should be mutable use `defaultTabId`. Otherwise, set `onChange`.',
       );
     } else {
-      return number(name, props, compName, ...rest);
+      return string(name, props, compName, ...rest);
     }
   },
 };
 
+/**
+ * Default props.
+ */
 TabSwitcher.defaultProps = {
-  defaultIndex: 0,
-  index: undefined,
-  isCompacted: false,
+  defaultTabId: undefined,
+  tabId: undefined,
   onChange: undefined,
 };
 

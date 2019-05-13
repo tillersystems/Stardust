@@ -1,42 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Container } from './elements';
-
-const { bool, node, number, string } = PropTypes;
+import styled from 'styled-components';
 
 /**
  * Panes hold the content of interactive tabs
  *
- * @param {number} activeIndex // index of the active tab
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className // className needed by styled components
- * @param {boolean} isCompacted // if it should reduce its size by reducing padding and font-size
+ * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+ * @param {string} className - className needed by styled components
  *
  * @return {jsx}
  */
-const Panes = ({ activeIndex, children, className, isCompacted }) => (
-  <Container className={className} isCompacted={isCompacted}>
-    {children[activeIndex] ? children[activeIndex] : children}
-  </Container>
-);
+const Panes = ({ children, className }) => <div className={className}>{children}</div>;
 
-Panes.displayName = 'Panes';
+/**
+ * PropTypes Validation
+ */
 
-/** Prop types. */
+const { node, string } = PropTypes;
+
 Panes.propTypes = {
-  activeIndex: number,
-  children: node,
+  children: node.isRequired,
   className: string,
-  isCompacted: bool,
 };
 
-/** Default props. */
+/**
+ * Default props.
+ */
 Panes.defaultProps = {
-  activeIndex: 0,
-  children: null,
-  className: '',
-  isCompacted: false,
+  className: undefined,
 };
 
-export default Panes;
+const StyledPanes = styled(Panes)`
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+`;
+
+StyledPanes.displayName = 'Panes';
+
+export default StyledPanes;
