@@ -1,52 +1,45 @@
-import React, { Children, cloneElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './elements';
-
-const { bool, func, node, number, string } = PropTypes;
+import styled from 'styled-components';
 
 /**
  * Tabs are links displaying the content of a pane
  *
- * @param {number} activeIndex // index of the active tab
- * @param {Array} children // interactive links displaying tabs on click
- * @param {string} className // className needed by styled components
- * @param {boolean} isCompacted // if it should reduce its size by reducing padding and font-size
- * @param {function} onActiveTab // callback triggered when the tab is clicked
+ * @param {Array} children - Interactive links displaying tabs on click
+ * @param {string} className - className needed by styled components
  *
  * @return {jsx}
  */
-const Tabs = ({ activeIndex, children, className, isCompacted, onActiveTab }) => (
-  <Container className={className} isCompacted={isCompacted}>
-    {Children.map(children, (child, index) =>
-      cloneElement(child, {
-        isCompacted,
-        isActive: index === activeIndex,
-        onActivate: () => {
-          onActiveTab(index);
-        },
-      }),
-    )}
-  </Container>
+const Tabs = ({ children, className }) => (
+  <div className={className} role="tablist">
+    {children}
+  </div>
 );
 
-Tabs.displayName = 'Tabs';
+/**
+ * PropTypes Validation
+ */
 
-/** Prop types. */
+const { node, string } = PropTypes;
+
 Tabs.propTypes = {
-  activeIndex: number,
-  children: node,
+  children: node.isRequired,
   className: string,
-  isCompacted: bool,
-  onActiveTab: func,
 };
 
-/** Default props. */
+/**
+ * Default props.
+ */
 Tabs.defaultProps = {
-  activeIndex: 0,
-  children: null,
-  className: '',
-  isCompacted: false,
-  onActiveTab: () => {},
+  className: undefined,
 };
 
-export default Tabs;
+const StyledTabs = styled(Tabs)`
+  display: flex;
+
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+`;
+
+StyledTabs.displayName = 'Tabs';
+
+export default StyledTabs;

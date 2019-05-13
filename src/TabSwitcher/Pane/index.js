@@ -1,30 +1,63 @@
-import React, { memo } from 'react';
+import React, { memo, forwardRef, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Container } from './elements';
+import styled from 'styled-components';
 
-const { node, string } = PropTypes;
+import { context } from '..';
 
 /**
  * A pane wraps the content displayable by a tab
  *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className // className needed by styled components
+ * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+ * @param {string} className - className needed by styled components
+ * @param {string} tabId - Tab id
  *
  * @return {jsx}
  */
 
-const Pane = ({ children, className }) => <Container className={className}>{children}</Container>;
+const Pane = forwardRef(({ children, className, tabId }, ref) => {
+  const { activeTabId } = useContext(context);
 
-/** Prop types. */
+  return tabId !== activeTabId ? null : (
+    <div
+      className={className}
+      ref={ref}
+      aria-labelledby={tabId}
+      id={`panel:${tabId}`}
+      tabIndex="0"
+      role="tabpanel"
+    >
+      {children}
+    </div>
+  );
+});
+
+/**
+ * PropTypes Validation
+ */
+
+const { node, string } = PropTypes;
+
 Pane.propTypes = {
   children: node,
   className: string,
+  tabId: string.isRequired,
 };
 
-/** Default props. */
+/**
+ * Default props.
+ */
 Pane.defaultProps = {
   children: null,
-  className: '',
+  className: undefined,
 };
 
-export default memo(Pane);
+Pane.displayName = 'Pane';
+
+const StyledPane = styled(memo(Pane))`
+  width: 100%;
+  height: 100%;
+`;
+
+StyledPane.displayName = 'Pane';
+
+export default StyledPane;

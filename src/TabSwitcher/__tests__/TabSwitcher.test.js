@@ -3,129 +3,140 @@ import { fireEvent } from 'react-testing-library';
 
 import TabSwitcher from '..';
 
-const panes = [
-  {
-    name: 'I am active',
-    content: 'Content 1',
-    isDisabled: false,
-  },
-  {
-    name: 'I am disabled',
-    content: 'Content 2',
-    isDisabled: true,
-  },
-  {
-    name: 'I am disabled too',
-    content: 'Content 3',
-    isDisabled: true,
-  },
-  {
-    name: 'I am available',
-    content: 'Content 4',
-    isDisabled: false,
-  },
-];
-
 describe('<TabSwitcher />', () => {
   test('should render without a problem', () => {
-    const { getByText, queryAllByText } = render(
-      <TabSwitcher>
+    const { getByText, getAllByText } = render(
+      <TabSwitcher defaultTabId="tab-1">
         <TabSwitcher.Tabs>
-          {panes.map(({ name }) => (
-            <TabSwitcher.Tab key={name}>{name}</TabSwitcher.Tab>
-          ))}
+          <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+          <TabSwitcher.Tab id="tab-2">I am tab</TabSwitcher.Tab>
+          <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
         </TabSwitcher.Tabs>
         <TabSwitcher.Panes>
-          {panes.map(({ name, content }) => (
-            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-          ))}
+          <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
         </TabSwitcher.Panes>
       </TabSwitcher>,
     );
 
-    const tabs = queryAllByText(/I am/);
-    const activeTabNode = getByText('I am active');
-    const availableTabNode = getByText('I am available');
+    const tabs = getAllByText(/I am/);
+    const activeTabNode = getByText(/I am active/i);
 
-    expect(tabs).toHaveLength(4);
+    expect(tabs).toHaveLength(3);
     expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
-    expect(availableTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
-  });
+    expect(activeTabNode).toHaveStyleRule('color', 'hsl(213,17%,20%)');
 
-  test('should render the compacted version', () => {
-    const { getByText } = render(
-      <TabSwitcher isCompacted>
-        <TabSwitcher.Tabs>
-          {panes.map(({ name }) => (
-            <TabSwitcher.Tab key={name}>{name}</TabSwitcher.Tab>
-          ))}
-        </TabSwitcher.Tabs>
-        <TabSwitcher.Panes>
-          {panes.map(({ name, content }) => (
-            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-          ))}
-        </TabSwitcher.Panes>
-      </TabSwitcher>,
-    );
+    const Panes = getAllByText(/content/);
+    const activePane = getByText(/content 1/);
 
-    const activeTabNode = getByText('I am active');
-
-    expect(activeTabNode).toHaveStyleRule('padding-bottom', '1.4rem');
+    expect(Panes).toHaveLength(1);
+    expect(activePane).toBeInTheDocument();
   });
 
   test('should correctly display disabled tabs', () => {
-    const { getAllByText } = render(
-      <TabSwitcher>
+    const { getByText } = render(
+      <TabSwitcher defaultTabId="tab-1">
         <TabSwitcher.Tabs>
-          {panes.map(({ name, isDisabled }) => (
-            <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-              {name}
-            </TabSwitcher.Tab>
-          ))}
+          <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+          <TabSwitcher.Tab id="tab-2" isDisabled>
+            I am disabled tab
+          </TabSwitcher.Tab>
+          <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
         </TabSwitcher.Tabs>
         <TabSwitcher.Panes>
-          {panes.map(({ name, content }) => (
-            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-          ))}
+          <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
         </TabSwitcher.Panes>
       </TabSwitcher>,
     );
 
-    const disabledTabNodes = getAllByText(/I am disabled/);
+    const disabledTab = getByText(/I am disabled/);
 
-    expect(disabledTabNodes[0]).toHaveStyleRule('color', 'hsl(206,23%,69%)');
-    expect(disabledTabNodes[1]).toHaveStyleRule('color', 'hsl(206,23%,69%)');
+    expect(disabledTab).toHaveStyleRule('color', 'hsl(206,23%,69%)');
   });
 
   describe('Uncontrolled mode: ', () => {
-    test('should update tab on click', () => {
-      const { getByText } = render(
-        <TabSwitcher>
+    test('should swicth tab on click', () => {
+      const { getByText, getAllByText, queryByText } = render(
+        <TabSwitcher defaultTabId="tab-1">
           <TabSwitcher.Tabs>
-            {panes.map(({ name, isDisabled }) => (
-              <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-                {name}
-              </TabSwitcher.Tab>
-            ))}
+            <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-2">I am tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
           </TabSwitcher.Tabs>
           <TabSwitcher.Panes>
-            {panes.map(({ name, content }) => (
-              <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-            ))}
+            <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
           </TabSwitcher.Panes>
         </TabSwitcher>,
       );
 
-      const activeTabNode = getByText('I am active');
-      const availableTabNode = getByText('I am available');
+      const activeTabNode = getByText(/I am active/i);
+      const availableTabNodes = getAllByText(/I am tab/i);
+      const activePane = getByText(/content 1/);
+      const inactivePane = queryByText(/content 2/);
 
       expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
-      expect(availableTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(activeTabNode).toHaveStyleRule('color', 'hsl(213,17%,20%)');
+      expect(availableTabNodes[0]).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(availableTabNodes[1]).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(activePane).toBeInTheDocument();
+      expect(inactivePane).not.toBeInTheDocument();
 
-      fireEvent.click(availableTabNode);
+      fireEvent.click(availableTabNodes[0]);
 
-      expect(availableTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
-      expect(activeTabNode).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      const oldActiveTab = activeTabNode;
+      const newActiveTab = availableTabNodes[0];
+      const oldActivePane = activePane;
+      const newActivePane = getByText(/content 2/);
+
+      expect(newActiveTab).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
+      expect(oldActiveTab).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(newActivePane).toBeInTheDocument();
+      expect(oldActivePane).not.toBeInTheDocument();
+    });
+
+    test('should not swicth tab if disabled', () => {
+      const { getByText, getAllByText, queryByText } = render(
+        <TabSwitcher defaultTabId="tab-1">
+          <TabSwitcher.Tabs>
+            <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-2" isDisabled>
+              I am tab
+            </TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
+          </TabSwitcher.Tabs>
+          <TabSwitcher.Panes>
+            <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
+          </TabSwitcher.Panes>
+        </TabSwitcher>,
+      );
+
+      const activeTabNode = getByText(/I am active/i);
+      const availableTabNodes = getAllByText(/I am tab/i);
+      const activePane = getByText(/content 1/);
+      const inactivePane = queryByText(/content 2/);
+
+      expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
+      expect(activeTabNode).toHaveStyleRule('color', 'hsl(213,17%,20%)');
+      expect(availableTabNodes[0]).toHaveStyleRule('color', 'hsl(206,23%,69%)');
+      expect(availableTabNodes[1]).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(activePane).toBeInTheDocument();
+      expect(inactivePane).not.toBeInTheDocument();
+
+      fireEvent.click(availableTabNodes[0]);
+
+      expect(activeTabNode).toHaveStyleRule('border-bottom', '3px solid hsl(200,74%,46%)');
+      expect(activeTabNode).toHaveStyleRule('color', 'hsl(213,17%,20%)');
+      expect(availableTabNodes[0]).toHaveStyleRule('color', 'hsl(206,23%,69%)');
+      expect(availableTabNodes[1]).toHaveStyleRule('color', 'hsl(207,13%,45%)');
+      expect(activePane).toBeInTheDocument();
+      expect(inactivePane).not.toBeInTheDocument();
     });
   });
 
@@ -133,29 +144,52 @@ describe('<TabSwitcher />', () => {
     test('should call onChange callback', () => {
       const spy = jest.fn();
 
-      const { getByText } = render(
-        <TabSwitcher onChange={spy} index={0}>
+      const { getAllByText } = render(
+        <TabSwitcher tabId="tab-1" onChange={spy}>
           <TabSwitcher.Tabs>
-            {panes.map(({ name, isDisabled }) => (
-              <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-                {name}
-              </TabSwitcher.Tab>
-            ))}
+            <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-2">I am tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
           </TabSwitcher.Tabs>
           <TabSwitcher.Panes>
-            {panes.map(({ name, content }) => (
-              <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-            ))}
+            <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
           </TabSwitcher.Panes>
         </TabSwitcher>,
       );
+      const availableTabNodes = getAllByText(/I am tab/i);
 
-      const availableTabNode = getByText('I am available');
-
-      fireEvent.click(availableTabNode);
+      fireEvent.click(availableTabNodes[0]);
 
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(spy).toHaveBeenLastCalledWith(3);
+      expect(spy).toHaveBeenLastCalledWith('tab-2');
+    });
+
+    test('should not call onChange callback if tab is disabled ', () => {
+      const spy = jest.fn();
+
+      const { getAllByText } = render(
+        <TabSwitcher tabId="tab-1" onChange={spy}>
+          <TabSwitcher.Tabs>
+            <TabSwitcher.Tab id="tab-1">I am active tab</TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-2" isDisabled>
+              I am tab
+            </TabSwitcher.Tab>
+            <TabSwitcher.Tab id="tab-3">I am tab</TabSwitcher.Tab>
+          </TabSwitcher.Tabs>
+          <TabSwitcher.Panes>
+            <TabSwitcher.Pane tabId="tab-1">content 1</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-2">content 2</TabSwitcher.Pane>
+            <TabSwitcher.Pane tabId="tab-3">content 3</TabSwitcher.Pane>
+          </TabSwitcher.Panes>
+        </TabSwitcher>,
+      );
+      const availableTabNodes = getAllByText(/I am tab/i);
+
+      fireEvent.click(availableTabNodes[0]);
+
+      expect(spy).toHaveBeenCalledTimes(0);
     });
   });
 });

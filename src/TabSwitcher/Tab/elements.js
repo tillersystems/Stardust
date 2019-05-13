@@ -14,8 +14,7 @@ export const Container = styled.div`
     css`
       cursor: pointer;
     `}
-  font-size: ${({ isCompacted, theme: { fonts } }) =>
-    isCompacted ? fonts.size.medium : fonts.size.h6};
+  font-size: ${({ theme: { fonts } }) => fonts.size.h6};
   font-weight: ${({
     isActive,
     theme: {
@@ -23,5 +22,4 @@ export const Container = styled.div`
     },
   }) => (isActive ? weight.thick : weight.normal)};
   margin-right: 1.5rem;
-  padding-bottom: ${({ isCompacted }) => (isCompacted ? '1.4rem' : '2.4rem')};
 `;

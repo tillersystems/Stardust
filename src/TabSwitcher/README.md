@@ -11,17 +11,15 @@ import { TabSwitcher } from '@tillersystems/stardust';
 ### Properties
 
 - `children` - Tabs and Panes to be displayed.
-- `defaultIndex` - Starts the tab at a specific index.
-- `index` - Like form inputs, a tab's state can be controlled by the owner.
-- `isCompacted` - If it is true, should reduce its size by reducing padding and font-size.
-- `onChange` - Callback with the tab index triggered when the user changes tabs allowing your app to synchronize with it.
+- `defaultTabId` - Starts the tab at a specific id.
+- `tabId` - Like form inputs, a tab's state can be controlled by the owner.
+- `onChange` - Callback with the tab id triggered when the user changes tabs allowing your app to synchronize with it.
 
 | propName       |  propType  | defaultValue | isRequired |
 | -------------- | :--------: | :----------: | :--------: |
 | `children`     |   `node`   |              |     \*     |
-| `defaultIndex` |  `number`  |     `0`      |     -      |
-| `index`        |  `number`  |     `0`      |     -      |
-| `isCompacted`  | `boolean`  |   `false`    |     -      |
+| `defaultTabId` |  `string`  | `undefined`  |     -      |
+| `tabId`        |  `string`  | `undefined`  |     -      |
 | `onChange`     | `function` | `undefined`  |     -      |
 
 ### Example
@@ -29,36 +27,23 @@ import { TabSwitcher } from '@tillersystems/stardust';
 ```jsx
 import { TabSwitcher } from '@tillersystems/stardust';
 
-const panes = [
-  {
-    name: 'Tab 1',
-    content: 'Content 1',
-  },
-  {
-    name: 'Tab 2',
-    content: 'Content 2',
-  },
-  {
-    name: 'Tab 3',
-    content: 'Content 3',
-  },
-  {
-    name: 'Tab 4',
-    content: 'Content 4',
-  },
-];
-
 render() {
-  <TabSwitcher>
+  <TabSwitcher defaultTabId="tab-1">
     <TabSwitcher.Tabs>
-      {panes.map(({ name }) => (
-        <TabSwitcher.Tab key={name}>{name}</TabSwitcher.Tab>
-      ))}
+      <TabSwitcher.Tab id="tab-1">
+        Tab 1
+      </TabSwitcher.Tab>
+      <TabSwitcher.Tab isDisabled id="tab-2">
+        Tab 2
+      </TabSwitcher.Tab>
+      <TabSwitcher.Tab id="tab-3">
+        Tab 3
+      </TabSwitcher.Tab>
     </TabSwitcher.Tabs>
     <TabSwitcher.Panes>
-      {panes.map(({ name, content }) => (
-        <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-      ))}
+      <TabSwitcher.Pane tabId="tab-1">Content 1</TabSwitcher.Pane>
+      <TabSwitcher.Pane tabId="tab-2">Content 2</TabSwitcher.Pane>
+      <TabSwitcher.Pane tabId="tab-3">Content 3</TabSwitcher.Pane>
     </TabSwitcher.Panes>
   </TabSwitcher>
 }

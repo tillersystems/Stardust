@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
@@ -13,58 +13,24 @@ storiesOf('TabSwitcher', module)
     const isDisabledValueTab1 = boolean('isDisabledTab1', false, 'ALL');
     const isDisabledValueTab2 = boolean('isDisabledTab2', false, 'ALL');
     const isDisabledValueTab3 = boolean('isDisabledTab3', false, 'ALL');
-    const isDisabledValueTab4 = boolean('isDisabledTab4', false, 'ALL');
-
-    const isCompactedValue = boolean('isCompactedValue', false, 'ALL');
-
-    const panes = [
-      {
-        name: 'Tab 1',
-        content: 'Content 1',
-        isDisabled: isDisabledValueTab1,
-      },
-      {
-        name: 'Tab 2',
-        content: 'Content 2',
-        isDisabled: isDisabledValueTab2,
-      },
-      {
-        name: 'Tab 3',
-        content: 'Content 3',
-        isDisabled: isDisabledValueTab3,
-      },
-      {
-        name: 'Tab 4',
-        content: 'Content 4',
-        isDisabled: isDisabledValueTab4,
-      },
-    ];
-
-    const defaultIndexValue = number(
-      'default index',
-      0,
-      {
-        range: true,
-        min: 0,
-        max: 3,
-        step: 1,
-      },
-      'ALL',
-    );
 
     return (
-      <TabSwitcher defaultIndex={defaultIndexValue} isCompacted={isCompactedValue}>
+      <TabSwitcher defaultTabId="tab-1">
         <TabSwitcher.Tabs>
-          {panes.map(({ isDisabled, name }) => (
-            <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-              {name}
-            </TabSwitcher.Tab>
-          ))}
+          <TabSwitcher.Tab isDisabled={isDisabledValueTab1} id="tab-1">
+            Tab 1
+          </TabSwitcher.Tab>
+          <TabSwitcher.Tab isDisabled={isDisabledValueTab2} id="tab-2">
+            Tab 2
+          </TabSwitcher.Tab>
+          <TabSwitcher.Tab isDisabled={isDisabledValueTab3} id="tab-3">
+            Tab 3
+          </TabSwitcher.Tab>
         </TabSwitcher.Tabs>
         <TabSwitcher.Panes>
-          {panes.map(({ name, content }) => (
-            <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-          ))}
+          <TabSwitcher.Pane tabId="tab-1">Content 1</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-2">Content 2</TabSwitcher.Pane>
+          <TabSwitcher.Pane tabId="tab-3">Content 3</TabSwitcher.Pane>
         </TabSwitcher.Panes>
       </TabSwitcher>
     );
@@ -73,61 +39,38 @@ storiesOf('TabSwitcher', module)
     const isDisabledValueTab1 = boolean('isDisabledTab1', false, 'ALL');
     const isDisabledValueTab2 = boolean('isDisabledTab2', false, 'ALL');
     const isDisabledValueTab3 = boolean('isDisabledTab3', false, 'ALL');
-    const isDisabledValueTab4 = boolean('isDisabledTab4', false, 'ALL');
-
-    const isCompactedValue = boolean('isCompactedValue', false, 'ALL');
-
-    const panes = [
-      {
-        name: 'Tab 1',
-        content: 'Content 1',
-        isDisabled: isDisabledValueTab1,
-      },
-      {
-        name: 'Tab 2',
-        content: 'Content 2',
-        isDisabled: isDisabledValueTab2,
-      },
-      {
-        name: 'Tab 3',
-        content: 'Content 3',
-        isDisabled: isDisabledValueTab3,
-      },
-      {
-        name: 'Tab 4',
-        content: 'Content 4',
-        isDisabled: isDisabledValueTab4,
-      },
-    ];
 
     const onChangeAction = action('onChange');
 
     const store = new Store({
-      activeTabIndex: 0,
+      activeTabId: 'tab-1',
     });
 
     return (
       <State store={store}>
         {state => (
           <TabSwitcher
-            index={state.activeTabIndex}
-            isCompacted={isCompactedValue}
-            onChange={index => {
-              store.set({ activeTabIndex: index });
-              onChangeAction('Active Tab Index: ', index);
+            tabId={state.activeTabId}
+            onChange={id => {
+              store.set({ activeTabId: id });
+              onChangeAction('Active Tab Index: ', id);
             }}
           >
             <TabSwitcher.Tabs>
-              {panes.map(({ isDisabled, name }) => (
-                <TabSwitcher.Tab key={name} isDisabled={isDisabled}>
-                  {name}
-                </TabSwitcher.Tab>
-              ))}
+              <TabSwitcher.Tab isDisabled={isDisabledValueTab1} id="tab-1">
+                Tab 1
+              </TabSwitcher.Tab>
+              <TabSwitcher.Tab isDisabled={isDisabledValueTab2} id="tab-2">
+                Tab 2
+              </TabSwitcher.Tab>
+              <TabSwitcher.Tab isDisabled={isDisabledValueTab3} id="tab-3">
+                Tab 3
+              </TabSwitcher.Tab>
             </TabSwitcher.Tabs>
             <TabSwitcher.Panes>
-              {panes.map(({ name, content }) => (
-                <TabSwitcher.Pane key={name}>{content}</TabSwitcher.Pane>
-              ))}
+              <TabSwitcher.Pane tabId="tab-1">Content 1</TabSwitcher.Pane>
+              <TabSwitcher.Pane tabId="tab-2">Content 2</TabSwitcher.Pane>
+              <TabSwitcher.Pane tabId="tab-3">Content 3</TabSwitcher.Pane>
             </TabSwitcher.Panes>
           </TabSwitcher>
         )}
