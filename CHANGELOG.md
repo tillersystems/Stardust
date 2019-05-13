@@ -1,3 +1,9 @@
+# [4.0.0](https://github.com/tillersystems/Stardust/compare/v3.3.3...v4.0.0) (2019-05-13)
+
+### Features
+
+- **TabSwicther:** use context instead of react children map ([#528](https://github.com/tillersystems/Stardust/issues/528)) ([b6c9de4](https://github.com/tillersystems/Stardust/commit/b6c9de4))
+
 ## [3.3.3](https://github.com/tillersystems/Stardust/compare/v3.3.2...v3.3.3) (2019-05-07)
 
 ### Bug Fixes
