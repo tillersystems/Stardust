@@ -9285,9 +9285,9 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-polished@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-3.3.0.tgz#59158368b29466e19f16f5ed38007397fb66f51d"
+polished@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.3.2.tgz#b0e0dfa2abaf6a5f378b674af829c747e6dcd763"
   dependencies:
     "@babel/runtime" "^7.4.4"
 
