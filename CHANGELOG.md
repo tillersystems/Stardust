@@ -1,3 +1,9 @@
+# [4.1.0](https://github.com/tillersystems/Stardust/compare/v4.0.0...v4.1.0) (2019-05-22)
+
+### Features
+
+- **Icon:** add new icons ([#536](https://github.com/tillersystems/Stardust/issues/536)) ([f0d3365](https://github.com/tillersystems/Stardust/commit/f0d3365))
+
 # [4.0.0](https://github.com/tillersystems/Stardust/compare/v3.3.3...v4.0.0) (2019-05-13)
 
 ### Features
