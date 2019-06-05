@@ -101,7 +101,7 @@ class CheckBox extends PureComponent {
             value={value}
           />
           <StyledCheckbox checked={checked} data-testid="styled-checkBox">
-            <Icon name="check-mark" color={Theme.palette.white} width="1rem" height="1rem" />
+            <Icon name="check-mark" color={Theme.palette.white} width="10px" height="10px" />
           </StyledCheckbox>
           {children}
         </Label>

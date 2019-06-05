@@ -361,8 +361,8 @@ exports[`<TextInput /> should render search status input without problem when fo
   border-image-source: none;
   border-image-width: 0;
   padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
+  font-size: 11px;
+  line-height: 11px;
 }
 
 .c2 {
@@ -461,15 +461,15 @@ exports[`<TextInput /> should render search status input without problem when fo
     <div
       class="c3"
       data-testid="iconContainer"
-      height="1.1rem"
-      width="1.1rem"
+      height="11px"
+      width="11px"
     >
       <svg
         data-testid="iconSvg"
-        height="1.1rem"
+        height="11px"
         style="display: block;"
         viewBox="0 0 512 512"
-        width="1.1rem"
+        width="11px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

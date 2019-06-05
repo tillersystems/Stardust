@@ -6,8 +6,8 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   border-image-source: none;
   border-image-width: 0;
   padding: 0;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 10px;
+  line-height: 10px;
 }
 
 .c3 {
@@ -97,15 +97,15 @@ exports[`<CheckBox /> should render without a problem 1`] = `
       <div
         class="c5 c6"
         data-testid="iconContainer"
-        height="1rem"
-        width="1rem"
+        height="10px"
+        width="10px"
       >
         <svg
           data-testid="iconSvg"
-          height="1rem"
+          height="10px"
           style="display: block;"
           viewBox="0 0 512 512"
-          width="1rem"
+          width="10px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
