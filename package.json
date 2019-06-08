@@ -55,13 +55,13 @@
     "styled-components": "^4.x"
   },
   "dependencies": {
-    "@tippy.js/react": "^2.1.2",
-    "initials": "^3.0.0",
+    "@tippy.js/react": "2.1.2",
+    "initials": "3.0.0",
     "luxon": "^1.11.4",
     "polished": "3.4.0",
-    "react-onclickoutside": "^6.7.1",
-    "react-portal": "^4.1.5",
-    "styled-components-breakpoint": "^2.1.0"
+    "react-onclickoutside": "6.7.1",
+    "react-portal": "4.1.5",
+    "styled-components-breakpoint": "2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "7.4.4",
