@@ -48,12 +48,11 @@
     }
   },
   "peerDependencies": {
-    "popmotion": "^8.x",
     "prop-types": "^15.x",
     "react": "^16.x",
     "react-dom": "^16.x",
-    "react-pose": "^2.x || ^3.0.0",
-    "styled-components": "^3.x || ^4.0.0"
+    "react-pose": "^4.x",
+    "styled-components": "^4.x"
   },
   "dependencies": {
     "@tippy.js/react": "^2.1.2",
