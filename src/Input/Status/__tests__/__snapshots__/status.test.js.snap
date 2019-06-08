@@ -6,8 +6,8 @@ exports[`<Status /> should have different color on icon 1`] = `
   border-image-source: none;
   border-image-width: 0;
   padding: 0;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 20px;
   -webkit-animation: iVXCSc 3s linear infinite;
   animation: iVXCSc 3s linear infinite;
 }
@@ -39,15 +39,15 @@ exports[`<Status /> should have different color on icon 1`] = `
   <div
     class="c1"
     data-testid="iconContainer"
-    height="2rem"
-    width="2rem"
+    height="20px"
+    width="20px"
   >
     <svg
       data-testid="iconSvg"
-      height="2rem"
+      height="20px"
       style="display: block;"
       viewBox="0 0 512 512"
-      width="2rem"
+      width="20px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -67,8 +67,8 @@ exports[`<Status /> should have different width and height on icon 1`] = `
   border-image-source: none;
   border-image-width: 0;
   padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
+  font-size: 11px;
+  line-height: 11px;
 }
 
 .c0 {
@@ -98,15 +98,15 @@ exports[`<Status /> should have different width and height on icon 1`] = `
   <div
     class="c1"
     data-testid="iconContainer"
-    height="1.1rem"
-    width="1.1rem"
+    height="11px"
+    width="11px"
   >
     <svg
       data-testid="iconSvg"
-      height="1.1rem"
+      height="11px"
       style="display: block;"
       viewBox="0 0 512 512"
-      width="1.1rem"
+      width="11px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -126,8 +126,8 @@ exports[`<Status /> should render without a problem 1`] = `
   border-image-source: none;
   border-image-width: 0;
   padding: 0;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .c0 {
@@ -157,15 +157,15 @@ exports[`<Status /> should render without a problem 1`] = `
   <div
     class="c1"
     data-testid="iconContainer"
-    height="2rem"
-    width="2rem"
+    height="20px"
+    width="20px"
   >
     <svg
       data-testid="iconSvg"
-      height="2rem"
+      height="20px"
       style="display: block;"
       viewBox="0 0 512 512"
-      width="2rem"
+      width="20px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
