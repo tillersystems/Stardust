@@ -1,3 +1,9 @@
+## [4.1.1](https://github.com/tillersystems/Stardust/compare/v4.1.0...v4.1.1) (2019-06-10)
+
+### Bug Fixes
+
+- replace rem by px for Safari and Firefox support ([#544](https://github.com/tillersystems/Stardust/issues/544)) ([365dd2d](https://github.com/tillersystems/Stardust/commit/365dd2d))
+
 # [4.1.0](https://github.com/tillersystems/Stardust/compare/v4.0.0...v4.1.0) (2019-05-22)
 
 ### Features
