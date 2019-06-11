@@ -13,7 +13,7 @@ export const StyledCheckbox = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 1.6rem;
+  min-width: 1.6rem;
   height: 1.6rem;
 
   margin-right: 0.7rem;

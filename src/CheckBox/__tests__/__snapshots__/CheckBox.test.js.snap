@@ -38,7 +38,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1.6rem;
+  min-width: 1.6rem;
   height: 1.6rem;
   margin-right: 0.7rem;
   background: hsl(0,100%,100%);
