@@ -115,7 +115,7 @@
     "react-dom": "16.8.6",
     "react-pose": "4.0.8",
     "react-testing-library": "6.1.2",
-    "storybook-readme": "4.0.5",
+    "storybook-readme": "5.0.3",
     "styled-components": "4.2.1"
   },
   "jest": {
