@@ -6999,10 +6999,10 @@ ini@^1.3.2, ini@^1.3.5, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
-initials@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/initials/-/initials-3.0.0.tgz#f7fecf44e7ab2fc0d6b591cd98828855924c4776"
-  integrity sha512-yUmhaPDhOBzQQ3P+Fx6o/oHLmbKtbMQsXkaF8vEMtKk8EEaGYwza6NAl+hwUGufmVqTGfxNLS3tsCygKXxpdmQ==
+initials@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/initials/-/initials-3.0.1.tgz#42a3bff5c6b4ab4581c15ee0e451f5f63239fc49"
+  integrity sha512-jZHGpuCnASob7wrbdq7/m9VFv5eJJR8pHpB2e46M0Q4A86ym9m2GK3oxH4ai0HQNQlGGWPQQapZoO+qgxw5X8Q==
 
 inquirer@6.2.2, inquirer@^6.2.2:
   version "6.2.2"
