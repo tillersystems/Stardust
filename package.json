@@ -115,7 +115,7 @@
     "react-pose": "4.0.8",
     "react-testing-library": "6.1.2",
     "storybook-readme": "5.0.3",
-    "styled-components": "4.2.1"
+    "styled-components": "4.3.1"
   },
   "jest": {
     "collectCoverageFrom": [
