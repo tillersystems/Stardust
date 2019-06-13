@@ -2464,13 +2464,13 @@
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.8.tgz#d65afd9f64a4a24b12536882ca263e8092cbd02c"
 
-"@tippy.js/react@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.1.2.tgz#2f51a206d3b90ee2423574bf256c76e1cf2b3e53"
-  integrity sha512-5napcBju8l285PiNoNHlVj0rqVHevlwBV2ndXAzbvzUfFgtb3NxoMWUWT9vCBwx6hzK3ljAw8qqTtmkImYvVEg==
+"@tippy.js/react@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.0.tgz#6b3af3b7f34bc436abf38fa374eadf60f3f7ca62"
+  integrity sha512-+IXvYRhroKB/3op1rR2EUZegEDQ0mH/jMxmDS7sD8RJzcj2wPoQQqy0cmua53qurlEEEaGk6/KAIw17XYJCUZQ==
   dependencies:
     prop-types "^15.6.2"
-    tippy.js "^4.2.1"
+    tippy.js "^4.3.0"
 
 "@types/babel__core@^7.1.0":
   version "7.1.0"
@@ -11479,9 +11479,10 @@ tinycolor2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
-tippy.js@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.2.1.tgz#9e4939d976465f77229b05a3cb233b5dc28cf850"
+tippy.js@^4.3.0:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.4.tgz#9a91fd5ce8c401f181b7adaa6b2c27f3d105f3ba"
+  integrity sha512-O2ukxHOJTLVYZ/TfHjNd8WgAWoefX9uk5QiWRdHfX2PR2lBpUU4BJQLl7U2Ykc8K7o16gTeHEElpuRfgD5b0aA==
   dependencies:
     popper.js "^1.14.7"
 
