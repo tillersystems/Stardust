@@ -1,6 +1,6 @@
 import React from 'react';
 import { DateTime, Settings } from 'luxon';
-import { fireEvent, wait } from 'react-testing-library';
+import { fireEvent, wait } from '@testing-library/react';
 import Mockdate from 'mockdate';
 
 import DatePickerInput from '..';
@@ -49,7 +49,7 @@ describe('<DatePickerInput />', () => {
   });
 
   test('should update the selected day in date picker according to input value', async () => {
-    const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
+    const { getByTestId, getByText, getAllByText } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
     await wait();
@@ -61,7 +61,7 @@ describe('<DatePickerInput />', () => {
     const inputValue = '10/01/2018';
     fireEvent.change(inputNode, { target: { value: inputValue } });
 
-    const newSelectedDay = getByText('10');
+    const newSelectedDay = getAllByText('10')[0];
     const previousSelectedDay = selectedDay;
 
     expect(previousSelectedDay).not.toHaveStyleRule('color');

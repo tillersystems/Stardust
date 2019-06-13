@@ -1,7 +1,7 @@
 import React from 'react';
 import { DateTime, Settings } from 'luxon';
 import Mockdate from 'mockdate';
-import { fireEvent } from 'react-testing-library';
+import { fireEvent } from '@testing-library/react';
 
 import DatePicker from '..';
 import Theme from '../../Theme';
@@ -293,22 +293,22 @@ describe('<DatePicker />', () => {
 
     describe('with 2 consecutives months displayed', () => {
       test('should render without a problem', () => {
-        const { getByText } = render(
+        const { getAllByText } = render(
           <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
 
-        let firstDayNode = getByText('14');
+        let firstDayNode = getAllByText('14')[0];
 
         // Click on a day
         fireEvent.click(firstDayNode);
 
-        let lastDayNode = getByText('16');
+        let lastDayNode = getAllByText('16')[0];
 
         // Click on a day
         fireEvent.click(lastDayNode);
 
-        firstDayNode = getByText('14');
-        lastDayNode = getByText('16');
+        firstDayNode = getAllByText('14')[0];
+        lastDayNode = getAllByText('16')[0];
 
         expect(firstDayNode).toHaveStyleRule('color', Theme.palette.white);
         expect(firstDayNode).toHaveStyleRule('background', Theme.palette.primary.default);

@@ -83,6 +83,7 @@
     "@storybook/addons": "5.1.4",
     "@storybook/react": "5.1.4",
     "@storybook/theming": "5.1.8",
+    "@testing-library/react": "8.0.1",
     "@tillersystems/eslint-config": "1.1.8",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
@@ -114,7 +115,6 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-pose": "4.0.8",
-    "react-testing-library": "6.1.2",
     "storybook-readme": "5.0.3",
     "styled-components": "4.3.1"
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import Mockdate from 'mockdate';
 import { DateTime, Settings } from 'luxon';
-import { fireEvent } from 'react-testing-library';
+import { fireEvent } from '@testing-library/react';
 import { transparentize } from 'polished';
 
 import Week from '..';
