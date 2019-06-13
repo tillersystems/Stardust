@@ -59,7 +59,7 @@
     "initials": "3.0.1",
     "luxon": "^1.11.4",
     "polished": "3.4.0",
-    "react-onclickoutside": "6.7.1",
+    "react-onclickoutside": "6.8.0",
     "react-portal": "4.2.0",
     "styled-components-breakpoint": "2.1.0"
   },
