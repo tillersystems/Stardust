@@ -3,9 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 
 import { Avatar } from '../..';
+import AvatarReadme from '../README.md';
 
 storiesOf('Avatar', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: AvatarReadme,
+    },
+  })
   .add('default', () => {
     const name1 = text('Name 1', 'Thomas Roux', 'name');
     const name2 = text('Name 2', 'Léopold Houdin', 'name');

@@ -4,6 +4,7 @@ import { withKnobs, number, select } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 
 import { Counter } from '../..';
+import CounterReadme from '../README.md';
 
 const store = new Store({
   count: 0,
@@ -11,6 +12,12 @@ const store = new Store({
 
 storiesOf('Counter', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: CounterReadme,
+    },
+  })
   .add('default', () => {
     const step = number(
       'Step',

@@ -5,12 +5,19 @@ import { action } from '@storybook/addon-actions';
 import { DateTime } from 'luxon';
 
 import DatePickerInput from '..';
+import DatePickerInputReadme from '../README.md';
 
 const onChangeAction = action('onChange');
 const value = new Date(2019, 10, 1);
 
 storiesOf('Input - DatePickerInput', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: DatePickerInputReadme,
+    },
+  })
   .add('default', () => {
     return <DatePickerInput onDateChange={value => onChangeAction(value)} />;
   })

@@ -4,9 +4,16 @@ import { withKnobs, number, color } from '@storybook/addon-knobs';
 
 import { Loader } from '../..';
 import Theme from '../../Theme';
+import LoaderReadme from '../README.md';
 
 storiesOf('Loader', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: LoaderReadme,
+    },
+  })
   .add('Default', () => {
     const widthValue = number(
       'Width',

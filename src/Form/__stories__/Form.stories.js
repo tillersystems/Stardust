@@ -3,9 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number } from '@storybook/addon-knobs';
 
 import { Button, Form, TextInput } from '../..';
+import FormReadme from '../README.md';
 
 storiesOf('Form', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: FormReadme,
+    },
+  })
   .add('default', () => {
     return (
       <Form onSubmit={() => {}} name="form">

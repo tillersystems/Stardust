@@ -107,12 +107,12 @@ class DatePickerInput extends PureComponent {
    */
   handleInputChange = textValue => {
     const { minDate, maxDate, onChange } = this.props;
-    onChange(newValue);
 
     this.setState({ textValue });
 
-    const [day, month, year] = textValue.split('/').map(v => parseInt(v, 10));
+    const [day, month, year] = textValue.split('/').map(v => Number(v, 10));
     const newValue = DateTime.fromObject({ year, month, day });
+    onChange(newValue);
     if (
       day &&
       month &&

@@ -6,9 +6,16 @@ import styled from 'styled-components';
 
 import { Icon, Theme } from '../..';
 import { Data } from '../data';
+import IconReadme from '../README.md';
 
 storiesOf('Icon', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: IconReadme,
+    },
+  })
   .add('default', () => {
     const colorValue = color('Color', Theme.palette.darkBlue, 'Color');
     const sizeOptions = { range: true, min: 10, max: 100, step: 10 };
@@ -37,6 +44,7 @@ const Grid = styled.div`
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fill, 10rem);
+  text-align: center;
 `;
 const Container = styled.div`
   display: flex;

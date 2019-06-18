@@ -4,6 +4,7 @@ import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 import { ResponsiveBar } from '@nivo/bar';
 
 import { Button, KpiChart } from '../..';
+import KpiChartReadme from '../README.md';
 
 const data = [
   {
@@ -66,6 +67,12 @@ const data = [
 
 storiesOf('KpiChart', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: KpiChartReadme,
+    },
+  })
   .add('default', () => {
     const Title = text('Title', "Chiffre d'affaires de la journée", 'ALL');
     const label = text('Label', 'Afficher le rapport', 'ALL');

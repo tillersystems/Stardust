@@ -5,6 +5,7 @@ import { withKnobs, select, number, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Modal, Button, Icon } from '../..';
+import ModalReadme from '../README.md';
 
 const range = count => {
   const array = [];
@@ -22,6 +23,12 @@ const store = new Store({
 
 storiesOf('Modal', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: ModalReadme,
+    },
+  })
   .add('default', () => {
     const widthValue = number(
       'Width',

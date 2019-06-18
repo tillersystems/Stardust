@@ -5,6 +5,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
 import { Dropdown, CheckBox } from '../..';
+import DropdownReadme from '../README.md';
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -22,6 +23,12 @@ const store = new Store({
 
 storiesOf('Dropdown', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: DropdownReadme,
+    },
+  })
   .add('default', () => {
     const onClickAction = action('onChange');
     const Searchable = boolean('Searchable', false, 'State');

@@ -5,6 +5,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
 import { ToggleButton } from '../..';
+import ToggleButtonReadme from '../README.md';
 
 const onToggleAction = action('onToggle');
 
@@ -14,6 +15,12 @@ const store = new Store({
 
 storiesOf('ToggleButton', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: ToggleButtonReadme,
+    },
+  })
   .add('with properties', () => {
     const disabledValue = boolean('Disabled', false, 'state');
     return (

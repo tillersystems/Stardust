@@ -4,6 +4,7 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 
 import { RadioGroup, RadioButton } from '../..';
+import RadioGroupReadme from '../README.md';
 
 const store = new Store({
   checked: false,
@@ -11,6 +12,12 @@ const store = new Store({
 
 storiesOf('RadioGroup', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: RadioGroupReadme,
+    },
+  })
   .add('default', () => {
     const enabledValue = boolean('Enabled', true, 'state');
     const enabledRow = boolean('Is row ?', false, 'state');

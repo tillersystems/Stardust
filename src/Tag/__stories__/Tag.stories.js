@@ -3,9 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import { Tag, Theme } from '../..';
+import TagReadme from '../README.md';
 
 storiesOf('Tag', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: TagReadme,
+    },
+  })
   .add('default', () => {
     return (
       <>
