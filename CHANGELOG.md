@@ -1,3 +1,9 @@
+## [4.1.2](https://github.com/tillersystems/Stardust/compare/v4.1.1...v4.1.2) (2019-06-18)
+
+### Bug Fixes
+
+- **CheckBox:** avoid width of checkbox being less than the width specified ([#552](https://github.com/tillersystems/Stardust/issues/552)) ([d51d594](https://github.com/tillersystems/Stardust/commit/d51d594))
+
 ## [4.1.1](https://github.com/tillersystems/Stardust/compare/v4.1.0...v4.1.1) (2019-06-10)
 
 ### Bug Fixes
