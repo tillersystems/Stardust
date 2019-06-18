@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
 import { withKnobs, select, boolean, text, button } from '@storybook/addon-knobs';
+import MessageReadme from '../README.md';
 
 import { Message } from '../..';
 
@@ -11,6 +12,12 @@ const store = new Store({
 
 storiesOf('Message', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: MessageReadme,
+    },
+  })
   .add('default', () => {
     const options = {
       Success: 'success',

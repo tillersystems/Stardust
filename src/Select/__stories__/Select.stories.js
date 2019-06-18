@@ -5,9 +5,16 @@ import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 
 import { Icon, Select, Theme } from '../..';
+import SelectReadme from '../README.md';
 
 storiesOf('Select', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: SelectReadme,
+    },
+  })
   .add('default', () => {
     const placeholder = text('Placeholder', 'Choose your menu', 'State');
     const onToggle = action('onToggle');

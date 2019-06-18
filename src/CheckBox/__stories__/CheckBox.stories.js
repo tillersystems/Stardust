@@ -5,6 +5,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
 import { CheckBox } from '../..';
+import CheckBoxReadme from '../README.md';
 
 const store = new Store({
   checked: true,
@@ -12,6 +13,12 @@ const store = new Store({
 
 storiesOf('CheckBox', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: CheckBoxReadme,
+    },
+  })
   .add('default', () => {
     const enabledValue = boolean('Enabled', true, 'state');
     const onChangeAction = action('onChange');

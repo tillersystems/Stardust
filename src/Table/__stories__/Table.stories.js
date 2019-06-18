@@ -4,9 +4,16 @@ import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Table } from '../..';
+import TableReadme from '../README.md';
 
 storiesOf('Table', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: TableReadme,
+    },
+  })
   .add('default', () => {
     const striped = boolean('Striped', false, 'State');
     const selectableRow = boolean('Selectable row', false, 'State');

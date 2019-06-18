@@ -3,9 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 
 import { Button, Tooltip } from '../..';
+import TooltipReadme from '../README.md';
 
 storiesOf('Tooltip', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: TooltipReadme,
+    },
+  })
   .add('default', () => {
     const arrow = boolean('Arrow', true, 'State');
     const appearance = select(

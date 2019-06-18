@@ -5,9 +5,16 @@ import { withKnobs } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import { Theme } from '../..';
+import ThemeReadme from '../README.md';
 
 storiesOf('Theme', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: ThemeReadme,
+    },
+  })
   .add('Palette', () => {
     return (
       <Grid>

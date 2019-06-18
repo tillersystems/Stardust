@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { DateTime, Interval } from 'luxon';
 
 import DatePicker from '..';
+import DatePickerReadme from '../README.md';
 
 const onChangeAction = action('onChange');
 const today = new Date();
@@ -16,6 +17,12 @@ const store = new Store({
 
 storiesOf('DatePicker', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: DatePickerReadme,
+    },
+  })
   .add('default', () => {
     const localeValue = select(
       'Locale',

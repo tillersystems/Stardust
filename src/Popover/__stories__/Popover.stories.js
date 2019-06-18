@@ -4,6 +4,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { withKnobs, boolean, number } from '@storybook/addon-knobs';
 
 import { Button, Popover } from '../..';
+import PopoverReadme from '../README.md';
 
 const store = new Store({
   active: false,
@@ -11,6 +12,12 @@ const store = new Store({
 
 storiesOf('Popover', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: PopoverReadme,
+    },
+  })
   .add('default', () => {
     const widthValue = number(
       'Width',

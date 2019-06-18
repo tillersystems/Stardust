@@ -1,10 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
+
 import { KpiBlock } from '../..';
+import KpiBlockReadme from '../README.md';
 
 storiesOf('KpiBlock', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: KpiBlockReadme,
+    },
+  })
   .add('default', () => {
     const options = {
       range: true,

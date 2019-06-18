@@ -6,11 +6,18 @@ import { action } from '@storybook/addon-actions';
 import { Button, Icon, Theme } from '../..';
 import ButtonGroup from '..';
 import { Data as IconName } from '../../Icon/data';
+import ButtonGroupReadme from '../README.md';
 
 const getIconName = Object.keys(IconName).map(name => name);
 
 storiesOf('ButtonGroup', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: ButtonGroupReadme,
+    },
+  })
   .add('with properties', () => {
     const onClickAction = action('onClick');
     const appearance = select(

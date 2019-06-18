@@ -6,9 +6,16 @@ import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
 import TabSwitcher from '..';
+import TabSwitcherReadme from '../README.md';
 
 storiesOf('TabSwitcher', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: TabSwitcherReadme,
+    },
+  })
   .add('default', () => {
     const isDisabledValueTab1 = boolean('isDisabledTab1', false, 'ALL');
     const isDisabledValueTab2 = boolean('isDisabledTab2', false, 'ALL');

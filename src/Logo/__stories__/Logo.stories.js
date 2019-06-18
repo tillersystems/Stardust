@@ -3,9 +3,16 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, color, number } from '@storybook/addon-knobs';
 
 import { Logo } from '../..';
+import LogoReadme from '../README.md';
 
 storiesOf('Logo', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: LogoReadme,
+    },
+  })
   .add('default', () => (
     <div
       style={{

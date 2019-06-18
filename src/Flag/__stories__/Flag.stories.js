@@ -5,9 +5,16 @@ import styled from 'styled-components';
 
 import Flag from '..';
 import Data from '../data';
+import FlagReadme from '../README.md';
 
 storiesOf('Flag', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: FlagReadme,
+    },
+  })
   .add('default', () => {
     return (
       <Grid>

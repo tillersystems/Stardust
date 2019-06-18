@@ -4,9 +4,16 @@ import { withKnobs, color, number } from '@storybook/addon-knobs';
 
 import Theme from '../../Theme';
 import Pin from '..';
+import PinReadme from '../README.md';
 
 storiesOf('Pin', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: PinReadme,
+    },
+  })
   .add('default', () => {
     const widthValue = number(
       'Width',

@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 // import { State, Store } from '@sambego/storybook-state';
 import { NumberInput } from '../..';
 import { Data as IconNames } from '../../../Icon/data';
+import NumberInputReadme from '../README.md';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
@@ -89,7 +90,12 @@ const getCommonKnobs = () => {
 
 storiesOf('Input - NumberInput', module)
   .addDecorator(withKnobs)
-
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: NumberInputReadme,
+    },
+  })
   .add('default', () => {
     const {
       widthValue,

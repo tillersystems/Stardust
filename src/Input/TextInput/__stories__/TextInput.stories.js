@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
 import { TextInput } from '../..';
 import { Data as IconNames } from '../../../Icon/data';
+import TextInputReadme from '../README.md';
 
 const onChangeAction = action('onChange');
 const onFocusAction = action('onFocus');
@@ -16,6 +17,12 @@ const storeWithState = new Store({
 
 storiesOf('Input - TextInput', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    readme: {
+      // Show readme before story
+      content: TextInputReadme,
+    },
+  })
   .add('default', () => {
     const widthValue = number(
       'Width',
