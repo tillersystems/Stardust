@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent } from 'react-testing-library';
+import { fireEvent } from '@testing-library/react';
 import Theme from '../../../Theme';
 
 import TextInput from '..';
