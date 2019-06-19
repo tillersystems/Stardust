@@ -111,26 +111,6 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
-"@babel/generator@^7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.1.5.tgz#615f064d13d95f8f9157c7261f68eddf32ec15b3"
-  dependencies:
-    "@babel/types" "^7.1.5"
-    jsesc "^2.5.1"
-    lodash "^4.17.10"
-    source-map "^0.5.0"
-    trim-right "^1.0.1"
-
-"@babel/generator@^7.1.6":
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.1.6.tgz#001303cf87a5b9d093494a4bf251d7b5d03d3999"
-  dependencies:
-    "@babel/types" "^7.1.6"
-    jsesc "^2.5.1"
-    lodash "^4.17.10"
-    source-map "^0.5.0"
-    trim-right "^1.0.1"
-
 "@babel/generator@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.2.0.tgz#eaf3821fa0301d9d4aef88e63d4bcc19b73ba16c"
@@ -255,14 +235,6 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-explode-assignable-expression/-/helper-explode-assignable-expression-7.1.0.tgz#537fa13f6f1674df745b0c00ec8fe4e99681c8f6"
   dependencies:
     "@babel/traverse" "^7.1.0"
-    "@babel/types" "^7.0.0"
-
-"@babel/helper-function-name@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.0.0.tgz#a68cc8d04420ccc663dd258f9cc41b8261efa2d4"
-  dependencies:
-    "@babel/helper-get-function-arity" "^7.0.0"
-    "@babel/template" "^7.0.0"
     "@babel/types" "^7.0.0"
 
 "@babel/helper-function-name@^7.1.0":
@@ -465,45 +437,9 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.0.0.tgz#697655183394facffb063437ddf52c0277698775"
-
-"@babel/parser@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.0.tgz#a7cd42cb3c12aec52e24375189a47b39759b783e"
-
-"@babel/parser@^7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.2.tgz#85c5c47af6d244fab77bce6b9bd830e38c978409"
-
-"@babel/parser@^7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.5.tgz#20b7d5e7e1811ba996f8a868962ea7dd2bfcd2fc"
-
-"@babel/parser@^7.1.6":
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.6.tgz#16e97aca1ec1062324a01c5a6a7d0df8dd189854"
-
-"@babel/parser@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.2.0.tgz#02d01dbc330b6cbf36b76ac93c50752c69027065"
-
-"@babel/parser@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.2.2.tgz#37ebdbc88a2e1ebc6c8dd3d35ea9436e3e39e477"
-
-"@babel/parser@^7.4.0":
-  version "7.4.2"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.4.2.tgz#b4521a400cb5a871eab3890787b4bc1326d38d91"
-
-"@babel/parser@^7.4.3", "@babel/parser@^7.4.5":
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.2", "@babel/parser@^7.2.0", "@babel/parser@^7.2.2", "@babel/parser@^7.4.3", "@babel/parser@^7.4.4", "@babel/parser@^7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.4.5.tgz#04af8d5d5a2b044a2a1bffacc1e5e6673544e872"
-
-"@babel/parser@^7.4.4":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.4.4.tgz#5977129431b8fe33471730d255ce8654ae1250b6"
 
 "@babel/plugin-external-helpers@7.2.0":
   version "7.2.0"
@@ -1424,91 +1360,7 @@
     "@babel/parser" "^7.4.4"
     "@babel/types" "^7.4.4"
 
-"@babel/traverse@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.0.0.tgz#b1fe9b6567fdf3ab542cfad6f3b31f854d799a61"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.0.0"
-    "@babel/helper-function-name" "^7.0.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.0.0"
-    "@babel/types" "^7.0.0"
-    debug "^3.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
-
-"@babel/traverse@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.1.0.tgz#503ec6669387efd182c3888c4eec07bcc45d91b2"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.0.0"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.1.0"
-    "@babel/types" "^7.0.0"
-    debug "^3.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
-
-"@babel/traverse@^7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.1.5.tgz#5aafca2039aa058c104cf2bfeb9fc4a857ccbca9"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.1.5"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.1.5"
-    "@babel/types" "^7.1.5"
-    debug "^3.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
-
-"@babel/traverse@^7.1.6":
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.1.6.tgz#c8db9963ab4ce5b894222435482bd8ea854b7b5c"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.1.6"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.1.6"
-    "@babel/types" "^7.1.6"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
-
-"@babel/traverse@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.2.2.tgz#961039de1f9bcb946d807efe2dba9c92e859d188"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.2.2"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.0.0"
-    "@babel/parser" "^7.2.2"
-    "@babel/types" "^7.2.2"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.10"
-
-"@babel/traverse@^7.4.0":
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.4.0.tgz#14006967dd1d2b3494cdd650c686db9daf0ddada"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.4.0"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.4.0"
-    "@babel/parser" "^7.4.0"
-    "@babel/types" "^7.4.0"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.11"
-
-"@babel/traverse@^7.4.3", "@babel/traverse@^7.4.5":
+"@babel/traverse@^7.0.0", "@babel/traverse@^7.1.0", "@babel/traverse@^7.1.5", "@babel/traverse@^7.1.6", "@babel/traverse@^7.2.2", "@babel/traverse@^7.4.0", "@babel/traverse@^7.4.3", "@babel/traverse@^7.4.4", "@babel/traverse@^7.4.5":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.4.5.tgz#4e92d1728fd2f1897dafdd321efbff92156c3216"
   dependencies:
@@ -1522,85 +1374,7 @@
     globals "^11.1.0"
     lodash "^4.17.11"
 
-"@babel/traverse@^7.4.4":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.4.4.tgz#0776f038f6d78361860b6823887d4f3937133fe8"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/generator" "^7.4.4"
-    "@babel/helper-function-name" "^7.1.0"
-    "@babel/helper-split-export-declaration" "^7.4.4"
-    "@babel/parser" "^7.4.4"
-    "@babel/types" "^7.4.4"
-    debug "^4.1.0"
-    globals "^11.1.0"
-    lodash "^4.17.11"
-
-"@babel/types@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0.tgz#6e191793d3c854d19c6749989e3bc55f0e962118"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.2.tgz#183e7952cf6691628afdc2e2b90d03240bac80c0"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.5.tgz#12fe64e91a431234b7017b4227a78cc0eec4e081"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.1.6":
-  version "7.1.6"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.6.tgz#0adb330c3a281348a190263aceb540e10f04bcce"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.2.0.tgz#7941c5b2d8060e06f9601d6be7c223eef906d5d8"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.2.2.tgz#44e10fc24e33af524488b716cdaee5360ea8ed1e"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.10"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.3.0":
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.3.4.tgz#bf482eaeaffb367a28abbf9357a94963235d90ed"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.11"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.4.0":
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.4.0.tgz#670724f77d24cce6cc7d8cf64599d511d164894c"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.11"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.4.4":
+"@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.6", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.4.4.tgz#8db9e9a629bb7c29370009b4b779ed93fe57d5f0"
   dependencies:
@@ -3256,9 +3030,10 @@ babel-core@7.0.0-bridge.0:
   version "7.0.0-bridge.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
 
-babel-eslint@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
+babel-eslint@10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.2.tgz#182d5ac204579ff0881684b040560fdcc1558456"
+  integrity sha512-UdsurWPtgiPgpJ06ryUnuaSXC2s0WoSZnQmEpbAH65XZSdwowgN5MvyP7e88nW07FYXv72erVtpBkxyDVKhH1Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.0.0"
@@ -5404,12 +5179,6 @@ debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  dependencies:
-    ms "2.0.0"
-
 debug@^3.2.5:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
@@ -5945,14 +5714,7 @@ eslint-scope@3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-scope@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
-
-eslint-scope@^4.0.3:
+eslint-scope@^4.0.0, eslint-scope@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
   dependencies:
