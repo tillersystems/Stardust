@@ -1845,12 +1845,12 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
-"@storybook/addon-options@5.1.8":
-  version "5.1.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.8.tgz#1cbd261f2fcae9f2ddc2765587adc7c984e3879c"
-  integrity sha512-9gzU03ZP9D4fBZjPZHK1WCpR6N/u9YB7DqWVG5XFmyHae7W8TfSSv45eOQInwsNt9lx7MgqyaP+MAhNyDyo2pQ==
+"@storybook/addon-options@5.1.9":
+  version "5.1.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.9.tgz#dc326b94c52a7ee27bf948fb7ca63a6ea3c9736d"
+  integrity sha512-wQIUw5Uc/5iREtI9eh2wPMlNG0O7jxaTaxGS8Bs6zDzkwiLHcLJCrfk1lPXU6O8ExEzWHpaCmxth8GyfKj8Qtw==
   dependencies:
-    "@storybook/addons" "5.1.8"
+    "@storybook/addons" "5.1.9"
     core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
