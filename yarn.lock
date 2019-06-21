@@ -2299,7 +2299,7 @@
     pretty-format "^24.8.0"
     wait-for-expect "^1.2.0"
 
-"@testing-library/react@8.0.1", "@testing-library/react@^8.0.1":
+"@testing-library/react@8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-8.0.1.tgz#91c254adf855b13de50020613cb5d3915f9f7875"
   integrity sha512-N/1pJfhEnNYkGyxuw4xbp03evaS0z/CT8o0QgTfJqGlukAcU15xf9uU1w03NHKZJcU69nOCBAoAkXHtHzYwMbg==
@@ -2311,14 +2311,13 @@
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.8.tgz#d65afd9f64a4a24b12536882ca263e8092cbd02c"
 
-"@tippy.js/react@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.1.tgz#3826ecb318b4045a09d4cd1385a77d0538f4ac0e"
-  integrity sha512-aFjw/ZEtZaoV0jSWdT+FdFYKGkBWJ4VgbXXd9UoE8GbNwlU05VLA505xWLAiJeSz3qeUkR7ERCn/bS6PZaJ8JQ==
+"@tippy.js/react@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.2.tgz#a0fbc646958cdb002d7d227f7b18dca346c76f2e"
+  integrity sha512-ex6IEy1cFC1a1MqbRaNZqo/MRK/GQOfa/VO5jydYeBrxnxJ3I/3gCX098dUHRLZmB6aFKVY39TwgnQRCbLUG4Q==
   dependencies:
-    "@testing-library/react" "^8.0.1"
     prop-types "^15.6.2"
-    tippy.js "^4.3.0"
+    tippy.js "^4.3.4"
 
 "@types/babel__core@^7.1.0":
   version "7.1.0"
@@ -11322,7 +11321,7 @@ tinycolor2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
-tippy.js@^4.3.0:
+tippy.js@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.4.tgz#9a91fd5ce8c401f181b7adaa6b2c27f3d105f3ba"
   integrity sha512-O2ukxHOJTLVYZ/TfHjNd8WgAWoefX9uk5QiWRdHfX2PR2lBpUU4BJQLl7U2Ykc8K7o16gTeHEElpuRfgD5b0aA==
