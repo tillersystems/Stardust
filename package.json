@@ -55,7 +55,7 @@
     "styled-components": "^4.x"
   },
   "dependencies": {
-    "@tippy.js/react": "2.2.1",
+    "@tippy.js/react": "2.2.2",
     "initials": "3.0.1",
     "luxon": "^1.11.4",
     "polished": "3.4.1",
