@@ -43,6 +43,7 @@ class Table extends PureComponent {
         title: node.isRequired,
         value: func.isRequired,
         format: func,
+        filteredBy: func,
         width: oneOfType([string, number]),
         align: oneOf(['left', 'center', 'right']),
         sortable: bool,
@@ -181,11 +182,26 @@ class Table extends PureComponent {
       };
     });
     if (index >= 0) {
-      sortedData = sortedData.sort(
-        (a, b) =>
-          (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) *
-          compare(colsDef[index].value(a.item), colsDef[index].value(b.item)),
-      );
+      sortedData = sortedData.sort((a, b) => {
+        const isSortableObject =
+          typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
+
+        /**
+         * Check if the value should be sorted by an object key or directly by the value itself.
+         *
+         * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
+         *
+         * @return {string|number}
+         */
+        const sortBy = comparisonElement =>
+          isSortableObject
+            ? colsDef[index].filteredBy(colsDef[index].value(comparisonElement.item))
+            : colsDef[index].value(comparisonElement.item);
+
+        return (
+          (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) * compare(sortBy(a), sortBy(b))
+        );
+      });
     }
 
     return (
