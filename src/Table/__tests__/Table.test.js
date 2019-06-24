@@ -8,7 +8,7 @@ import Theme from '../../Theme';
 const StubComponent = ({ value }) => <div>{value}</div>;
 StubComponent.displayName = 'StubComponent';
 
-const getColsDef = () => [
+const getColsDef = (taxCountryCode = 'fr') => [
   {
     title: 'DISH',
     value: d => d.code,
@@ -25,7 +25,8 @@ const getColsDef = () => [
   {
     title: 'TAX',
     value: d => d.tax,
-    format: v => `${v.toFixed(2)} %`,
+    format: v => `${v[taxCountryCode].toFixed(2)} %`,
+    filteredBy: v => v[taxCountryCode],
     align: 'right',
     sortable: true,
   },
@@ -35,17 +36,26 @@ const data = [
   {
     code: 'Tartare de boeuf',
     value: 15.0,
-    tax: 11.0,
+    tax: {
+      fr: 9.0,
+      en: 10.0,
+    },
   },
   {
     code: 'Oeuf cocotte',
     value: 13.0,
-    tax: 12.0,
+    tax: {
+      fr: 7.0,
+      en: 6.0,
+    },
   },
   {
     code: 'Salade caesar',
     value: 16.0,
-    tax: 10.0,
+    tax: {
+      fr: 10.0,
+      en: 3.0,
+    },
   },
 ];
 
@@ -69,8 +79,8 @@ describe('<Table />', () => {
     expect(secondRowValue).toBeInTheDocument();
     expect(thirdRowValue).toBeInTheDocument();
 
-    const firstRowTax = getByText('11.00 %');
-    const secondRowTax = getByText('12.00 %');
+    const firstRowTax = getByText('9.00 %');
+    const secondRowTax = getByText('7.00 %');
     const thirdRowTax = getByText('10.00 %');
 
     expect(firstRowTax).toBeInTheDocument();
@@ -172,5 +182,36 @@ describe('<Table />', () => {
     const sortedBodyRows = getAllByTestId('body-row');
 
     expect(sortedBodyRows[0]).toHaveTextContent('15.00 €');
+  });
+
+  test('should render correctly when taxes are english', () => {
+    const { getByText } = render(<Table colsDef={getColsDef('en')} data={data} striped />);
+
+    const firstRowTax = getByText('10.00 %');
+    const secondRowTax = getByText('6.00 %');
+    const thirdRowTax = getByText('3.00 %');
+
+    expect(firstRowTax).toBeInTheDocument();
+    expect(secondRowTax).toBeInTheDocument();
+    expect(thirdRowTax).toBeInTheDocument();
+  });
+
+  test('should sort correctly the column when it is hydrated with object', () => {
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} striped />,
+    );
+
+    const taxNode = getByText(/tax/i);
+
+    const initialBodyRows = getAllByTestId('body-row');
+
+    expect(initialBodyRows[0]).toHaveTextContent('9.00 %');
+
+    // Click on the the tax node
+    fireEvent.click(taxNode);
+
+    const sortedBodyRows = getAllByTestId('body-row');
+
+    expect(sortedBodyRows[0]).toHaveTextContent('7.00 %');
   });
 });
