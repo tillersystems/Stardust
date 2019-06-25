@@ -1,3 +1,9 @@
+## [4.1.3](https://github.com/tillersystems/Stardust/compare/v4.1.2...v4.1.3) (2019-06-25)
+
+### Bug Fixes
+
+- **Select:** use prevent default method to cancel default action that belongs to the event ([#603](https://github.com/tillersystems/Stardust/issues/603)) ([c0ba89a](https://github.com/tillersystems/Stardust/commit/c0ba89a))
+
 ## [4.1.2](https://github.com/tillersystems/Stardust/compare/v4.1.1...v4.1.2) (2019-06-18)
 
 ### Bug Fixes
