@@ -137,7 +137,8 @@ class Select extends PureComponent {
   /**
    * Toogle Menu
    */
-  toggleMenu = () => {
+  toggleMenu = event => {
+    event.preventDefault();
     const { displayMenu } = this.state;
     const { onToggle } = this.props;
 
@@ -158,7 +159,8 @@ class Select extends PureComponent {
    * @param {string} value
    *
    */
-  handleSelected(value) {
+  handleSelected(event, value) {
+    event.persist();
     const { onChange } = this.props;
 
     this.setState(
@@ -167,7 +169,7 @@ class Select extends PureComponent {
       },
       () => {
         onChange && onChange(value);
-        this.toggleMenu();
+        this.toggleMenu(event);
       },
     );
   }
@@ -201,7 +203,7 @@ class Select extends PureComponent {
                 <MenuItem
                   key={child}
                   role="menuitem"
-                  onClick={() => this.handleSelected(child.props.value)}
+                  onClick={event => this.handleSelected(event, child.props.value)}
                 >
                   {child}
                 </MenuItem>
