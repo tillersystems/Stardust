@@ -1,3 +1,9 @@
+## [4.1.4](https://github.com/tillersystems/Stardust/compare/v4.1.3...v4.1.4) (2019-06-26)
+
+### Features
+
+- **Table:** Add object support to hydrate row field ([#596](https://github.com/tillersystems/Stardust/issues/596)) ([fdece4f](https://github.com/tillersystems/Stardust/commit/fdece4f))
+
 ## [4.1.3](https://github.com/tillersystems/Stardust/compare/v4.1.2...v4.1.3) (2019-06-25)
 
 ### Bug Fixes
