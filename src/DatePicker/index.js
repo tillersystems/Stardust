@@ -90,20 +90,9 @@ class DatePicker extends PureComponent {
    *
    */
   componentDidMount() {
-    const { defaultValue } = this.props;
     const { isInterval } = this.state;
 
-    if (isInterval) {
-      // Always set the current date to the start of the interval.
-      this.setState({
-        selected: defaultValue,
-        currentDate: defaultValue.start,
-        startDate: defaultValue.start,
-        endDate: defaultValue.end,
-      });
-    } else {
-      this.setState({ selected: defaultValue, currentDate: defaultValue });
-    }
+    this.setInternalState(isInterval);
   }
 
   /**
@@ -115,13 +104,36 @@ class DatePicker extends PureComponent {
     const { defaultValue } = this.props;
 
     if (defaultValue !== prevDefaultValue) {
-      !prevState.isInterval &&
-        this.setState({
-          selected: defaultValue,
-          currentDate: defaultValue,
-        });
-      prevState.isInterval &&
-        this.setState({ selected: defaultValue, currentDate: defaultValue.start });
+      this.setInternalState(prevState.isInterval);
+    }
+  }
+
+  /**
+   * Set values for date depending on if this is an interval or not.
+   * If value is an interval, it checks if it does not go beyond boundaries set by minDate and maxDate
+   * props. If the whole interval is outside the boundaries, the interval is set as is and
+   * will no be visible since the interval will be in the disabled dates
+   *
+   * @param {boolean} isInterval if the selected date of the date picker is an interval
+   *
+   */
+  setInternalState(isInterval) {
+    const { defaultValue, minDate, maxDate } = this.props;
+
+    if (isInterval) {
+      // Always set the current date to the start of the interval.
+      this.setState({
+        selected: defaultValue,
+        currentDate: defaultValue.start,
+        startDate:
+          defaultValue.start < minDate && defaultValue.end >= minDate
+            ? minDate
+            : defaultValue.start,
+        endDate:
+          defaultValue.end > maxDate && defaultValue.start <= maxDate ? maxDate : defaultValue.end,
+      });
+    } else {
+      this.setState({ selected: defaultValue, currentDate: defaultValue });
     }
   }
 
