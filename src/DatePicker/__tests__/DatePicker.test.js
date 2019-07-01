@@ -1,5 +1,5 @@
 import React from 'react';
-import { DateTime, Settings } from 'luxon';
+import { DateTime, Interval, Settings } from 'luxon';
 import Mockdate from 'mockdate';
 import { fireEvent } from '@testing-library/react';
 
@@ -115,11 +115,11 @@ describe('<DatePicker />', () => {
         <DatePicker defaultValue={dateValue} numberOfMonthsToDisplay={2} />,
       );
 
-      const excpectedFirstMonth = getByText(/July/);
-      const excpectedSecondMonth = getByText(/August/);
+      const expectedFirstMonth = getByText(/July/);
+      const expectedSecondMonth = getByText(/August/);
 
-      expect(excpectedFirstMonth).toBeInTheDocument();
-      expect(excpectedSecondMonth).toBeInTheDocument();
+      expect(expectedFirstMonth).toBeInTheDocument();
+      expect(expectedSecondMonth).toBeInTheDocument();
     });
 
     test('should select a date', () => {
@@ -170,9 +170,9 @@ describe('<DatePicker />', () => {
       // Click on previous month button
       fireEvent.click(previousMonthButton);
 
-      const excpectedMonth = getByText(/June/);
+      const expectedMonth = getByText(/June/);
 
-      expect(excpectedMonth).toBeInTheDocument();
+      expect(expectedMonth).toBeInTheDocument();
     });
 
     test('should handle next month', () => {
@@ -183,9 +183,9 @@ describe('<DatePicker />', () => {
       // Click on previous month button
       fireEvent.click(nextMonthButton);
 
-      const excpectedMonth = getByText(/August/);
+      const expectedMonth = getByText(/August/);
 
-      expect(excpectedMonth).toBeInTheDocument();
+      expect(expectedMonth).toBeInTheDocument();
     });
   });
 
@@ -271,9 +271,9 @@ describe('<DatePicker />', () => {
       // Click on previous month button
       fireEvent.click(previousMonthButton);
 
-      const excpectedMonth = getByText(/June/);
+      const expectedMonth = getByText(/June/);
 
-      expect(excpectedMonth).toBeInTheDocument();
+      expect(expectedMonth).toBeInTheDocument();
     });
 
     test('should handle next month', () => {
@@ -286,9 +286,47 @@ describe('<DatePicker />', () => {
       // Click on previous month button
       fireEvent.click(nextMonthButton);
 
-      const excpectedMonth = getByText(/August/);
+      const expectedMonth = getByText(/August/);
 
-      expect(excpectedMonth).toBeInTheDocument();
+      expect(expectedMonth).toBeInTheDocument();
+    });
+
+    test('should update edges of range depending on min and max boundaries', () => {
+      const minDate = DateTime.fromObject({
+        year: 2018,
+        month: 7,
+        day: 17,
+        hour: 0,
+        minute: 0,
+        second: 0,
+      });
+
+      const maxDate = DateTime.fromObject({
+        year: 2018,
+        month: 7,
+        day: 20,
+        hour: 0,
+        minute: 0,
+        second: 0,
+      });
+
+      const interval = Interval.fromDateTimes(
+        DateTime.fromObject({ year: 2018, month: 7, day: 14 }),
+        DateTime.fromObject({ year: 2018, month: 7, day: 23 }),
+      );
+
+      const { getByText } = render(
+        <DatePicker defaultValue={interval} minDate={minDate} maxDate={maxDate} rangePicker />,
+      );
+
+      const startIntervalNode = getByText('17');
+      const endIntervalNode = getByText('20');
+
+      expect(startIntervalNode).toHaveStyleRule('color', Theme.palette.white);
+      expect(startIntervalNode).toHaveStyleRule('background', Theme.palette.primary.default);
+
+      expect(endIntervalNode).toHaveStyleRule('color', Theme.palette.white);
+      expect(endIntervalNode).toHaveStyleRule('background', Theme.palette.primary.default);
     });
 
     describe('with 2 consecutives months displayed', () => {
@@ -417,10 +455,10 @@ describe('<DatePicker />', () => {
         // Click on previous month button
         fireEvent.click(previousMonthButton);
 
-        const excpectedMonth = [getByText(/June/), getByText(/July/)];
+        const expectedMonth = [getByText(/June/), getByText(/July/)];
 
-        expect(excpectedMonth[0]).toBeInTheDocument();
-        expect(excpectedMonth[1]).toBeInTheDocument();
+        expect(expectedMonth[0]).toBeInTheDocument();
+        expect(expectedMonth[1]).toBeInTheDocument();
       });
 
       test('should handle next month', () => {
@@ -433,10 +471,10 @@ describe('<DatePicker />', () => {
         // Click on previous month button
         fireEvent.click(nextMonthButton);
 
-        const excpectedMonth = [getByText(/August/), getByText(/September/)];
+        const expectedMonth = [getByText(/August/), getByText(/September/)];
 
-        expect(excpectedMonth[0]).toBeInTheDocument();
-        expect(excpectedMonth[1]).toBeInTheDocument();
+        expect(expectedMonth[0]).toBeInTheDocument();
+        expect(expectedMonth[1]).toBeInTheDocument();
       });
     });
   });

@@ -10,6 +10,7 @@ import DatePickerReadme from '../README.md';
 
 const onChangeAction = action('onChange');
 const today = new Date();
+const beginningOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 0, 0, 0);
 
 const store = new Store({
   currentDate: DateTime.local(),
@@ -35,9 +36,9 @@ storiesOf('DatePicker', module)
     );
 
     const withMinDate = boolean('With minimum date', false, 'Bounds');
-    const minDateValue = date('Minimum date', today, 'Bounds');
+    const minDateValue = date('Minimum date', beginningOfToday, 'Bounds');
     const withMaxDate = boolean('With maximum date', false, 'Bounds');
-    const maxDateValue = date('Maximum date', today, 'Bounds');
+    const maxDateValue = date('Maximum date', beginningOfToday, 'Bounds');
 
     const numberOfMonthsToDisplay = number(
       'Number of month to display',
@@ -73,9 +74,9 @@ storiesOf('DatePicker', module)
     );
 
     const withMinDate = boolean('With minimum date', false, 'Bounds');
-    const minDateValue = date('Minimum date', today, 'Bounds');
+    const minDateValue = date('Minimum date', beginningOfToday, 'Bounds');
     const withMaxDate = boolean('With maximum date', false, 'Bounds');
-    const maxDateValue = date('Maximum date', today, 'Bounds');
+    const maxDateValue = date('Maximum date', beginningOfToday, 'Bounds');
 
     const numberOfMonthsToDisplay = number(
       'Number of month to display',
@@ -116,9 +117,9 @@ storiesOf('DatePicker', module)
     );
 
     const withMinDate = boolean('With minimum date', false, 'Bounds');
-    const minDateValue = date('Minimum date', today, 'Bounds');
+    const minDateValue = date('Minimum date', beginningOfToday, 'Bounds');
     const withMaxDate = boolean('With maximum date', false, 'Bounds');
-    const maxDateValue = date('Maximum date', today, 'Bounds');
+    const maxDateValue = date('Maximum date', beginningOfToday, 'Bounds');
 
     const numberOfMonthsToDisplay = number(
       'Number of month to display',
