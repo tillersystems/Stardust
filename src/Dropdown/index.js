@@ -1,4 +1,5 @@
-import React, { Children, PureComponent } from 'react';
+import React, { Children, PureComponent, createRef } from 'react';
+import { Portal } from 'react-portal';
 import PropTypes from 'prop-types';
 import posed, { PoseGroup } from 'react-pose';
 import styled from 'styled-components';
@@ -51,10 +52,27 @@ class Dropdown extends PureComponent {
   state = {
     displayMenu: false,
     searchKeyword: '',
+    menuPosition: {
+      width: 100,
+      top: 0,
+      left: 0,
+    },
   };
+
+  /** Create a ref for the dropdown header. */
+  dropdownHeaderRef = createRef();
 
   /** preserve the initial state in a new object. */
   baseState = this.state;
+
+  /**
+   * Handle Click
+   */
+  handleClick = () => {
+    this.toggleMenu();
+    this.setMenuPosition();
+  };
+
   /**
    * Toogle Menu
    */
@@ -75,6 +93,28 @@ class Dropdown extends PureComponent {
         onToggle && onToggle(!displayMenu);
       },
     );
+  };
+
+  /**
+   * Get header position and fill state with menu positions values
+   */
+  setMenuPosition = () => {
+    const { width, height, top, left } = this.dropdownHeaderRef.current.getBoundingClientRect();
+
+    const marginTop = 4;
+    const outerHeight = height + marginTop;
+    const topWithScroll = top + pageYOffset;
+    const menuPositionTop = topWithScroll + outerHeight;
+
+    const menuPositionleft = left + pageXOffset;
+
+    const menuPosition = {
+      width,
+      top: menuPositionTop,
+      left: menuPositionleft,
+    };
+
+    this.setState({ menuPosition });
   };
 
   /**
@@ -116,7 +156,7 @@ class Dropdown extends PureComponent {
       searchable,
       searchBarPlaceholder,
     } = this.props;
-    const { displayMenu, searchKeyword } = this.state;
+    const { displayMenu, searchKeyword, menuPosition } = this.state;
 
     // Filter items based on search key word
     // TODO: when need to refactor this later, children may have some children
@@ -128,44 +168,52 @@ class Dropdown extends PureComponent {
     return (
       <div className={className} data-testid="dropdown">
         <Header
-          onClick={this.toggleMenu}
+          onClick={this.handleClick}
           aria-haspopup="true"
           aria-expanded={displayMenu}
           data-testid="dropdown-button"
+          ref={this.dropdownHeaderRef}
         >
           {title}
         </Header>
-        <PoseGroup flipMove={false}>
-          {displayMenu && (
-            <MenuAnimation key="Menu" role="menu">
-              {searchable && (
-                <SearchInputContainer>
-                  <SearchBar
-                    placeholder={searchBarPlaceholder}
-                    onChange={this.handleSearch}
-                    value={searchKeyword}
-                  />
-                </SearchInputContainer>
-              )}
+        <Portal>
+          <PoseGroup flipMove={false}>
+            {displayMenu && (
+              <MenuAnimation
+                key="Menu"
+                role="menu"
+                position={menuPosition}
+                className="ignore-react-onclickoutside"
+              >
+                {searchable && (
+                  <SearchInputContainer>
+                    <SearchBar
+                      placeholder={searchBarPlaceholder}
+                      onChange={this.handleSearch}
+                      value={searchKeyword}
+                    />
+                  </SearchInputContainer>
+                )}
 
-              {searchable &&
-                (FiltredItem.length !== 0
-                  ? FiltredItem.map(child => (
-                      <MenuItem key={child.key} searchable={searchable} role="menuitem">
-                        {child}
-                      </MenuItem>
-                    ))
-                  : noResultLabel && <MenuItem role="menuitem">{noResultLabel}</MenuItem>)}
+                {searchable &&
+                  (FiltredItem.length !== 0
+                    ? FiltredItem.map(child => (
+                        <MenuItem key={child.key} searchable={searchable} role="menuitem">
+                          {child}
+                        </MenuItem>
+                      ))
+                    : noResultLabel && <MenuItem role="menuitem">{noResultLabel}</MenuItem>)}
 
-              {!searchable &&
-                Children.map(children, child => (
-                  <MenuItem key={child} role="menuitem">
-                    {child}
-                  </MenuItem>
-                ))}
-            </MenuAnimation>
-          )}
-        </PoseGroup>
+                {!searchable &&
+                  Children.map(children, child => (
+                    <MenuItem key={child} role="menuitem">
+                      {child}
+                    </MenuItem>
+                  ))}
+              </MenuAnimation>
+            )}
+          </PoseGroup>
+        </Portal>
       </div>
     );
   }
