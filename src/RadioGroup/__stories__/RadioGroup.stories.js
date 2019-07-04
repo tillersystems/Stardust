@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
 
 import { RadioGroup, RadioButton } from '../..';
@@ -21,10 +22,11 @@ storiesOf('RadioGroup', module)
   .add('default', () => {
     const enabledValue = boolean('Enabled', true, 'state');
     const enabledRow = boolean('Is row ?', false, 'state');
+    const onChange = action('onChange');
 
     return (
       <State store={store}>
-        <RadioGroup groupName="vegetable" isRow={enabledRow}>
+        <RadioGroup groupName="vegetable" isRow={enabledRow} onChange={onChange}>
           <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
             artichoke
           </RadioButton>
@@ -47,10 +49,16 @@ storiesOf('RadioGroup', module)
     const selectedValue = select('Selected value', options, 'artichoke', 'state');
     const enabledValue = boolean('Enabled', true, 'state');
     const enabledRow = boolean('Is row ?', false, 'state');
+    const onChange = action('onChange');
 
     return (
       <State store={store}>
-        <RadioGroup groupName="vegetable" isRow={enabledRow} selectedValue={selectedValue}>
+        <RadioGroup
+          groupName="vegetable"
+          isRow={enabledRow}
+          selectedValue={selectedValue}
+          onChange={onChange}
+        >
           <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
             artichoke
           </RadioButton>
