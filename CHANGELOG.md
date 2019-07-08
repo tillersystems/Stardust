@@ -1,3 +1,9 @@
+# [4.2.0](https://github.com/tillersystems/Stardust/compare/v4.1.4...v4.2.0) (2019-07-08)
+
+### Features
+
+- **Dropdown:** Add portal to Dropdown component ([#615](https://github.com/tillersystems/Stardust/issues/615)) ([ff5ab76](https://github.com/tillersystems/Stardust/commit/ff5ab76))
+
 ## [4.1.4](https://github.com/tillersystems/Stardust/compare/v4.1.3...v4.1.4) (2019-06-26)
 
 ### Features
