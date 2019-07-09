@@ -2,7 +2,7 @@ import '@babel/polyfill';
 
 import { render } from './utils';
 
-import 'jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect';
 import '@testing-library/react/cleanup-after-each';
 import 'jest-styled-components';
 
