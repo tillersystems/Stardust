@@ -161,9 +161,11 @@ class Dropdown extends PureComponent {
     // Filter items based on search key word
     // TODO: when need to refactor this later, children may have some children
     // we need to filter recursively. - @Thomas -
-    const FiltredItem = Children.toArray(children).filter(({ props: { children } }) =>
-      children.toLowerCase().includes(searchKeyword.toLowerCase()),
-    );
+    const FilteredItems = searchable
+      ? Children.toArray(children).filter(({ props: { children } }) =>
+          children.toLowerCase().includes(searchKeyword.toLowerCase()),
+        )
+      : [];
 
     return (
       <div className={className} data-testid="dropdown">
@@ -196,8 +198,8 @@ class Dropdown extends PureComponent {
                 )}
 
                 {searchable &&
-                  (FiltredItem.length !== 0
-                    ? FiltredItem.map(child => (
+                  (FilteredItems.length !== 0
+                    ? FilteredItems.map(child => (
                         <MenuItem key={child.key} searchable={searchable} role="menuitem">
                           {child}
                         </MenuItem>
