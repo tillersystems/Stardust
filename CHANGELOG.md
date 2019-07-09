@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/tillersystems/Stardust/compare/v4.2.0...v4.2.1) (2019-07-09)
+
+### Bug Fixes
+
+- **Dropdown:** put empty array to filtered items when searchable is false ([#628](https://github.com/tillersystems/Stardust/issues/628)) ([2708d77](https://github.com/tillersystems/Stardust/commit/2708d77))
+- **RadioGroup:** add callback on value update ([#618](https://github.com/tillersystems/Stardust/issues/618)) ([9de45f0](https://github.com/tillersystems/Stardust/commit/9de45f0))
+
 # [4.2.0](https://github.com/tillersystems/Stardust/compare/v4.1.4...v4.2.0) (2019-07-08)
 
 ### Features
