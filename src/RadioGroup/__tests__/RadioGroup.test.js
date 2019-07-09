@@ -168,4 +168,29 @@ describe('<RadioGroup />', () => {
     expect(beetrootNode).toHaveAttribute('checked');
     expect(pumpkinNode).not.toHaveAttribute('checked');
   });
+
+  test('should call onChange when another radio button is selected', () => {
+    const spy = jest.fn();
+
+    const { getByLabelText } = render(
+      <RadioGroup groupName="vegetable" selectedValue="artichoke" onChange={spy}>
+        <RadioButton value="artichoke" id="artichoke">
+          artichoke
+        </RadioButton>
+        <RadioButton value="beetroot" id="beetroot">
+          beetroot
+        </RadioButton>
+        <RadioButton value="pumpkin" id="pumpkin">
+          pumpkin
+        </RadioButton>
+      </RadioGroup>,
+    );
+
+    let pumpkinNode = getByLabelText('pumpkin');
+
+    fireEvent.click(pumpkinNode);
+
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalledWith('pumpkin');
+  });
 });

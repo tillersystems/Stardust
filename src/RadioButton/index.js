@@ -15,14 +15,13 @@ function RadioButton(props) {
   const { children, id, value, selectedValue, name, onChange, disabled } = props;
   const checked = selectedValue === value;
   return (
-    <Wrapper disabled={disabled}>
-      <Container onClick={() => onChange(value)} checked={checked} disabled={disabled}>
+    <Wrapper disabled={disabled} onClick={() => onChange(value)}>
+      <Container checked={checked} disabled={disabled}>
         <input
           defaultChecked={checked}
           type="radio"
           name={name}
           value={value}
-          onChange={() => onChange(value)}
           id={id}
           disabled={disabled}
         />

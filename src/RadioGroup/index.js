@@ -24,7 +24,7 @@ class RadioGroup extends PureComponent {
     children: null,
     groupName: null,
     isRow: false,
-    onChange: () => {},
+    onChange: null,
     selectedValue: null,
   };
 
