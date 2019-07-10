@@ -23,7 +23,7 @@ describe('<Button />', () => {
 
     expect(buttonNode).toHaveStyleRule(
       'background',
-      'hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% )',
+      'hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% )',
     );
     expect(buttonNode).toHaveStyleRule('border', `1px solid ${Theme.palette.primary.dark}`);
     expect(buttonNode).toHaveStyleRule('box-shadow', 'inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1)');

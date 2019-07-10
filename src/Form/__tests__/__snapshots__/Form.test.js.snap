@@ -220,40 +220,40 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
 
 exports[`<Form /> should render form with highlighted label when has focus 2`] = `
 <form
-  class="sc-bdVaJa fMLCLO"
+  class="elements__Container-sc-19h58b9-0 bNVsOg"
   name="form"
 >
   <div
-    class="sc-bZQynM uJaUG"
+    class="elements__Container-eszpcu-0 fBQVkp"
     data-testid="form-group"
   >
     <div
-      class="sc-bwzfXH btkNfP"
+      class="elements__Wrapper-cp6xjm-0 eQvbgo"
       data-testid="form-field"
       size="1"
     >
       <div
-        class="sc-htpNat bnmNtp"
+        class="elements__Container-cp6xjm-1 bmrPGn"
       >
         <label
-          class="sc-bxivhb bEmEGS"
+          class="elements__Label-cp6xjm-2 cvJBua"
           width="10rem"
         >
           my label 1
         </label>
         <div
-          class="sc-ifAKCX futPH"
+          class="elements__ElementContainer-cp6xjm-3 iWMhRT"
         >
           <div
-            class="sc-EHOje dYYwli"
+            class="elements__ElementWrapper-cp6xjm-4 ShWHh"
           >
             <div
-              class="sc-cvbbAY jIVDhY"
+              class="elements__Container-x1mgn-0 dZCkhA"
               data-testid="input-container"
               width="25rem"
             >
               <input
-                class="sc-jWBwVP jEwqHC"
+                class="elements__InputElement-x1mgn-1 kDpBgJ"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"

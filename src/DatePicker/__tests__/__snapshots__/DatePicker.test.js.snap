@@ -1,15 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DatePicker /> Range should render without a problem 1`] = `
-.c10 {
+.c11 {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
 
-.c10:not(:nth-child(7n)) {
+.c11:not(:nth-child(7n)) {
   padding-right: 0.8rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c13:hover {
+  background: rgba(30,146,204,0.14);
 }
 
 .c12 {
@@ -36,40 +66,10 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.c12:hover {
-  background: rgba(30,146,204,0.14);
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: hsl(206,23%,69%);
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,7 +97,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   background: hsl(200,74%,46%);
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,7 +107,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   flex-wrap: wrap;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,11 +130,11 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c8:not(:nth-child(7n)) {
+.c9:not(:nth-child(7n)) {
   margin-right: 0.8rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,6 +200,12 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 }
 
 .c3 {
+  padding: 0;
+  padding: 0;
+}
+
+.c7 {
+  padding: 0;
   padding: 0;
 }
 
@@ -281,7 +287,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c3 c4"
+        class="c7 c4"
         data-testid="next-month-button"
         type="button"
       >
@@ -310,421 +316,421 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         Mon
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Tue
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Wed
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Thu
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Fri
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Sat
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Sun
       </div>
     </div>
     <div
-      class="c9"
+      class="c10"
     >
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           25
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           26
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           27
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           28
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           29
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           30
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           1
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           2
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           3
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           4
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           5
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           6
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           7
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           8
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           9
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           10
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           11
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           12
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           13
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           14
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c13"
+          class="c14"
         >
           15
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           16
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           17
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           18
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           19
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           20
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           22
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           23
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           24
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           25
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           26
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           27
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           28
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           29
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           30
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           31
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           1
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           2
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           3
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           4
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           5
         </div>
@@ -735,15 +741,45 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 `;
 
 exports[`<DatePicker /> Simple should render without a problem 1`] = `
-.c10 {
+.c11 {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
 
-.c10:not(:nth-child(7n)) {
+.c11:not(:nth-child(7n)) {
   padding-right: 0.8rem;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c13:hover {
+  background: rgba(30,146,204,0.14);
 }
 
 .c12 {
@@ -770,40 +806,10 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.c12:hover {
-  background: rgba(30,146,204,0.14);
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: hsl(206,23%,69%);
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,7 +837,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   background: hsl(200,74%,46%);
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -841,7 +847,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   flex-wrap: wrap;
 }
 
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -864,11 +870,11 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c8:not(:nth-child(7n)) {
+.c9:not(:nth-child(7n)) {
   margin-right: 0.8rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -934,6 +940,12 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 }
 
 .c3 {
+  padding: 0;
+  padding: 0;
+}
+
+.c7 {
+  padding: 0;
   padding: 0;
 }
 
@@ -1015,7 +1027,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c3 c4"
+        class="c7 c4"
         data-testid="next-month-button"
         type="button"
       >
@@ -1044,421 +1056,421 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         Mon
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Tue
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Wed
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Thu
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Fri
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Sat
       </div>
       <div
-        class="c8"
+        class="c9"
       >
         Sun
       </div>
     </div>
     <div
-      class="c9"
+      class="c10"
     >
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           25
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           26
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           27
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           28
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           29
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           30
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           1
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           2
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           3
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           4
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           5
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           6
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           7
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           8
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           9
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           10
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           11
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           12
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           13
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           14
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c13"
+          class="c14"
         >
           15
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           16
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           17
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           18
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           19
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           20
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           21
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           22
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           23
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           24
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           25
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           26
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           27
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           28
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           29
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           30
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c12"
+          class="c13"
         >
           31
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           1
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           2
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           3
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           4
         </div>
       </div>
       <div
-        class="c10"
+        class="c11"
       >
         <div
-          class="c11"
+          class="c12"
         >
           5
         </div>
