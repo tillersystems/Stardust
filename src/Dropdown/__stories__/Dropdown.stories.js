@@ -3,12 +3,30 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
 import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
+import { css } from 'styled-components';
 
 import { Dropdown, CheckBox } from '../..';
 import DropdownReadme from '../README.md';
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+
+const itemCss = css`
+  padding: 0.9rem 1.2rem;
+  &:first-child {
+    padding-top: 1.8rem;
+  }
+  ${({ searchable }) =>
+    searchable &&
+    css`
+      &:nth-child(2) {
+        padding-top: 1.8rem;
+      }
+    `}
+  &:last-child {
+    padding-bottom: 1.8rem;
+  }
+`;
 
 const store = new Store({
   streetBangkokBastille: false,
@@ -45,6 +63,7 @@ storiesOf('Dropdown', module)
               searchable={Searchable}
               noResultLabel={NoresultLabel}
               searchBarPlacholder={SearchBarPlacholder}
+              itemCss={itemCss}
             >
               <CheckBox
                 defaultChecked={state.streetBangkokBastille}

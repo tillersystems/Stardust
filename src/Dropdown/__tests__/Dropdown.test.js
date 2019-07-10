@@ -1,5 +1,6 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
+import { css } from 'styled-components';
 
 import Dropdown from '..';
 
@@ -174,5 +175,33 @@ describe('<Dropdown />', () => {
     expect(ItemNode[0]).toBeUndefined();
     expect(ItemNode[1]).toBeUndefined();
     expect(ItemNode[2]).toBeUndefined();
+  });
+
+  test('should have expected custom style on each item', () => {
+    const props = {
+      title: 'title',
+      itemCss: css`
+        padding: 0.9rem 1.2rem;
+        &:first-child {
+          padding-top: 1.8rem;
+        }
+        &:last-child {
+          padding-bottom: 1.8rem;
+        }
+      `,
+    };
+    const { getAllByRole, getByText } = render(
+      <Dropdown {...props}>
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+      </Dropdown>,
+    );
+    const button = getByText(props.title);
+    fireEvent.click(button);
+
+    const [itemNode] = getAllByRole('menuitem');
+
+    expect(itemNode).toHaveStyleRule('padding', '0.9rem 1.2rem');
   });
 });

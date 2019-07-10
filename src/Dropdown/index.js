@@ -8,7 +8,7 @@ import onClickOutside from 'react-onclickoutside';
 import SearchBar from './SearchBar';
 import { Header, Menu, MenuItem, SearchInputContainer } from './elements';
 
-const { bool, func, node, string } = PropTypes;
+const { array, bool, func, node, string } = PropTypes;
 
 /**
  * Dropdown
@@ -32,6 +32,7 @@ class Dropdown extends PureComponent {
   static propTypes = {
     children: node.isRequired,
     className: string,
+    itemCss: array,
     noResultLabel: string,
     onToggle: func,
     searchable: bool,
@@ -42,6 +43,7 @@ class Dropdown extends PureComponent {
   /** Default props. */
   static defaultProps = {
     className: '',
+    itemCss: null,
     noResultLabel: null,
     onToggle: () => {},
     searchable: false,
@@ -51,12 +53,12 @@ class Dropdown extends PureComponent {
   /** Internal state. */
   state = {
     displayMenu: false,
-    searchKeyword: '',
     menuPosition: {
       width: 100,
       top: 0,
       left: 0,
     },
+    searchKeyword: '',
   };
 
   /** Create a ref for the dropdown header. */
@@ -151,10 +153,11 @@ class Dropdown extends PureComponent {
     const {
       children,
       className,
+      itemCss,
       noResultLabel,
-      title,
       searchable,
       searchBarPlaceholder,
+      title,
     } = this.props;
     const { displayMenu, searchKeyword, menuPosition } = this.state;
 
@@ -200,15 +203,14 @@ class Dropdown extends PureComponent {
                 {searchable &&
                   (FilteredItems.length !== 0
                     ? FilteredItems.map(child => (
-                        <MenuItem key={child.key} searchable={searchable} role="menuitem">
+                        <MenuItem key={child.key} role="menuitem" css={itemCss}>
                           {child}
                         </MenuItem>
                       ))
                     : noResultLabel && <MenuItem role="menuitem">{noResultLabel}</MenuItem>)}
-
                 {!searchable &&
                   Children.map(children, child => (
-                    <MenuItem key={child} role="menuitem">
+                    <MenuItem key={child} role="menuitem" css={itemCss}>
                       {child}
                     </MenuItem>
                   ))}
