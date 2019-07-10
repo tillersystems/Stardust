@@ -64,6 +64,7 @@ exports[`<Select /> should render without a problem 1`] = `
   >
     placeholder
   </button>
+  <div />
 </div>
 `;
 
@@ -137,5 +138,6 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   >
     placeholder
   </button>
+  <div />
 </div>
 `;

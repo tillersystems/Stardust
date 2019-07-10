@@ -34,6 +34,11 @@ describe('<Select />', () => {
 
   test('should toggle the Select', done => {
     const props = { placeholder: 'placeholder' };
+    let mouseDownListener;
+    document.addEventListener = jest.fn((event, listener) => {
+      if (event === 'mousedown') mouseDownListener = listener;
+    });
+
     const { queryAllByText, getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
@@ -48,8 +53,9 @@ describe('<Select />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
+    if (!mouseDownListener) throw new Error('Expected mouseDownListener not to be undefined.');
     // Open Select
-    fireEvent.click(button);
+    mouseDownListener({ preventDefault: () => {}, target: button });
 
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -63,7 +69,7 @@ describe('<Select />', () => {
     expect(ItemNode[2]).toBeInTheDocument();
 
     // Close Select
-    fireEvent.click(button);
+    mouseDownListener({ preventDefault: () => {}, target: button });
 
     setTimeout(() => {
       ItemNode = queryAllByText(/Item/);
@@ -79,6 +85,11 @@ describe('<Select />', () => {
   test('should call onToggle when Select is toggled', () => {
     const spy = jest.fn();
     const props = { placeholder: 'placeholder', onToggle: spy };
+    let mouseDownListener;
+    document.addEventListener = jest.fn((event, listener) => {
+      if (event === 'mousedown') mouseDownListener = listener;
+    });
+
     const { getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
@@ -91,13 +102,13 @@ describe('<Select />', () => {
     const button = getByText(props.placeholder);
 
     // Open Select
-    fireEvent.click(button);
+    mouseDownListener({ preventDefault: () => {}, target: button });
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith(true);
 
     // Close Select
-    fireEvent.click(button);
+    mouseDownListener({ preventDefault: () => {}, target: button });
 
     expect(spy).toHaveBeenCalledTimes(2);
     expect(spy).toHaveBeenCalledWith(false);
@@ -106,7 +117,12 @@ describe('<Select />', () => {
   test('should call onChange when an item option is selected', () => {
     const spy = jest.fn();
     const props = { placeholder: 'placeholder', onChange: spy };
-    const { queryAllByText, getByText } = render(
+    let mouseDownListener;
+    document.addEventListener = jest.fn((event, listener) => {
+      if (event === 'mousedown') mouseDownListener = listener;
+    });
+
+    const { debug, queryAllByText, getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
         <Select.Option value="2">Item</Select.Option>
@@ -118,7 +134,7 @@ describe('<Select />', () => {
     const button = getByText(props.placeholder);
 
     // Open Select
-    fireEvent.click(button);
+    mouseDownListener({ preventDefault: () => {}, target: button });
 
     const ItemNode = queryAllByText(/Item/);
 
@@ -198,6 +214,10 @@ describe('<Select />', () => {
   });
 
   test('should update its value accordingly', async () => {
+    let mouseDownListener;
+    document.addEventListener = jest.fn((event, listener) => {
+      if (event === 'mousedown') mouseDownListener = listener;
+    });
     const { container, queryByText, getByText, rerender } = render(
       <Select>
         <Select.Option value="1">Item 1</Select.Option>
@@ -216,7 +236,7 @@ describe('<Select />', () => {
     expect(thirdOption).not.toBeInTheDocument();
 
     // open select and pick another option
-    fireEvent.click(buttonNode);
+    mouseDownListener({ preventDefault: () => {}, target: buttonNode });
     thirdOption = getByText('Item 3');
     fireEvent.click(thirdOption);
 

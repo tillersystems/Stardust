@@ -56,11 +56,9 @@ export const Header = styled.button`
 
 export const Menu = styled.ul`
   position: absolute;
-  top: calc(100% + 0.1rem);
-  left: 0;
-  z-index: 1;
+  top: ${({ position: { top } }) => `${top}px`};
 
-  width: 100%;
+  width: ${({ position: { width } }) => `${width}px`};
   max-height: 28rem;
 
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};

@@ -1,7 +1,8 @@
-import React, { Children, PureComponent } from 'react';
+import React, { Children, PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import posed, { PoseGroup } from 'react-pose';
+import { Portal } from 'react-portal';
 
 import { Header, Menu, MenuItem } from './elements';
 import Option from './Option';
@@ -26,6 +27,10 @@ const { bool, func, node, string } = PropTypes;
 
 class Select extends PureComponent {
   static Option = Option;
+
+  /** Create ref for the header and the portal */
+  headerRef = createRef();
+  portalRef = createRef();
 
   /** Prop types. */
   static propTypes = {
@@ -80,6 +85,10 @@ class Select extends PureComponent {
     placeholder: this.props.placeholder, // eslint-disable-line react/destructuring-assignment
     value: null,
     resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
+    menuPosition: {
+      width: '100%',
+      top: 0,
+    },
   };
 
   /**
@@ -103,6 +112,8 @@ class Select extends PureComponent {
     } else if (!placeholder) {
       this.initializeValue();
     }
+
+    document.addEventListener('mousedown', this.handleClick);
   }
 
   /**
@@ -115,6 +126,13 @@ class Select extends PureComponent {
     if (value !== prevProps.value) {
       this.setState({ value });
     }
+  }
+
+  /**
+   * Remove touch event listener
+   */
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick);
   }
 
   /**
@@ -135,41 +153,93 @@ class Select extends PureComponent {
   };
 
   /**
-   * Toogle Menu
+   * Callback triggered when menu display needs to be updated
+   *
    */
   toggleMenu = event => {
     event.preventDefault();
-    const { displayMenu } = this.state;
     const { onToggle } = this.props;
 
+    // click is inside the menu, we let handleSelected take over the handling
+    if (this.portalRef.current.contains(event.target)) {
+      return;
+    }
+
+    // click is inside the header
+    if (this.headerRef.current.contains(event.target)) {
+      const { displayMenu } = this.state;
+
+      this.setState(
+        prevState => ({
+          displayMenu: !prevState.displayMenu,
+        }),
+        () => {
+          onToggle && onToggle(!displayMenu);
+          this.setMenuPosition();
+        },
+      );
+      return;
+    }
+
+    // click is outside this component, we close the menu
     this.setState(
-      prevState => ({
-        ...prevState,
-        displayMenu: !prevState.displayMenu,
+      () => ({
+        displayMenu: false,
       }),
       () => {
-        onToggle && onToggle(!displayMenu);
+        onToggle && onToggle(false);
       },
     );
   };
 
   /**
-   * Handle Selected
+   * Handle click on the
+   * Trigger callback only if component is not disabled
+   *
+   */
+  handleClick = event => {
+    const { disabled } = this.props;
+
+    if (!disabled) {
+      this.toggleMenu(event);
+    }
+  };
+
+  /**
+   * Compute position of portal menu
+   *
+   */
+  setMenuPosition = () => {
+    const { width, height } = this.headerRef.current.getBoundingClientRect();
+
+    const marginTop = 4;
+
+    const menuPosition = {
+      width,
+      top: height + marginTop,
+    };
+
+    this.setState({ menuPosition });
+  };
+
+  /**
+   * Handle selected item on the menu
    *
    * @param {string} value
    *
    */
   handleSelected(event, value) {
     event.persist();
-    const { onChange } = this.props;
+    const { onChange, onToggle } = this.props;
 
     this.setState(
       {
+        displayMenu: false,
         value,
       },
       () => {
         onChange && onChange(value);
-        this.toggleMenu(event);
+        onToggle && onToggle(false);
       },
     );
   }
@@ -181,36 +251,39 @@ class Select extends PureComponent {
    */
   render() {
     const { children, className, disabled } = this.props;
-    const { displayMenu, placeholder, value } = this.state;
+    const { displayMenu, menuPosition, placeholder, value } = this.state;
 
     return (
       <div className={className}>
         <Header
-          onClick={!disabled ? this.toggleMenu : null}
           disabled={disabled}
           aria-haspopup="true"
           aria-expanded={displayMenu}
+          ref={this.headerRef}
         >
           {/* if placeholder is defined display it, otherwise use the value of the first option */}
           {placeholder && !value
             ? placeholder
             : Children.map(children, child => (child.props.value === value ? child : null))}
         </Header>
-        <PoseGroup>
-          {displayMenu && (
-            <MenuAnimation key="Menu" role="menu">
-              {Children.map(children, child => (
-                <MenuItem
-                  key={child}
-                  role="menuitem"
-                  onClick={event => this.handleSelected(event, child.props.value)}
-                >
-                  {child}
-                </MenuItem>
-              ))}
-            </MenuAnimation>
-          )}
-        </PoseGroup>
+        <div ref={this.portalRef} />
+        <Portal node={this.portalRef.current}>
+          <PoseGroup flipMove={false}>
+            {displayMenu && (
+              <MenuAnimation key="Menu" role="menu" position={menuPosition}>
+                {Children.map(children, child => (
+                  <MenuItem
+                    key={child}
+                    role="menuitem"
+                    onClick={event => this.handleSelected(event, child.props.value)}
+                  >
+                    {child}
+                  </MenuItem>
+                ))}
+              </MenuAnimation>
+            )}
+          </PoseGroup>
+        </Portal>
       </div>
     );
   }
