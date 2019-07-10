@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationProvider /> should handle ADD_NOTIFICATION 1`] = `
+Object {
+  "component": [MockFunction],
+  "isActive": true,
+  "options": Object {
+    "autoDismiss": true,
+    "autoDismissTimeout": 5000,
+    "pauseOnHover": true,
+  },
+}
+`;
+
+exports[`<NotificationProvider /> should handle REMOVE_NOTIFICATION 1`] = `
+Object {
+  "component": null,
+  "isActive": false,
+  "options": Object {
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
+  },
+}
+`;
