@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Header = styled.button`
   display: flex;
@@ -82,25 +82,6 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
   display: flex;
   align-items: center;
-
-  padding: 0.9rem 1.2rem;
-
-  &:first-child {
-    padding-top: 1.8rem;
-  }
-
-  ${({ searchable }) =>
-    searchable &&
-    css`
-      &:nth-child(2) {
-        padding-top: 1.8rem;
-      }
-    `}
-
-  &:last-child {
-    padding-bottom: 1.8rem;
-  }
-
   cursor: pointer;
 `;
 

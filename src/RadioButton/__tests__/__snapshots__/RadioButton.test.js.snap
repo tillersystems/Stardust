@@ -31,8 +31,8 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   height: 1.6rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
-  background: linear-gradient( 0deg, hsl(240,33%,99%) 0%, hsl(0,100%,100%) 100% );
-  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(240,33%,99%);
+  background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
 }
@@ -100,8 +100,8 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   height: 1.6rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
-  background: linear-gradient( 0deg, hsl(240,33%,99%) 0%, hsl(0,100%,100%) 100% );
-  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(240,33%,99%);
+  background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
   opacity: 0.4;
@@ -173,8 +173,8 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   height: 1.6rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
-  background: linear-gradient( 0deg, hsl(240,33%,99%) 0%, hsl(0,100%,100%) 100% );
-  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(240,33%,99%);
+  background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
 }
@@ -240,13 +240,13 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   height: 1.6rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
-  background: linear-gradient( 0deg, hsl(240,33%,99%) 0%, hsl(0,100%,100%) 100% );
-  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(240,33%,99%);
+  background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
   opacity: 0.4;
   border: 1px solid #1873a0;
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
   -webkit-transition: border ease 0.25s;
   transition: border ease 0.25s;
@@ -335,12 +335,12 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   height: 1.6rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
-  background: linear-gradient( 0deg, hsl(240,33%,99%) 0%, hsl(0,100%,100%) 100% );
-  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05), 0 1px 1px 0 hsl(240,33%,99%);
+  background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
+  box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
   border: 1px solid #1873a0;
-  background: hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% );
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
   -webkit-transition: border ease 0.25s;
   transition: border ease 0.25s;

@@ -9,27 +9,47 @@
     "@babel/react"
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    [
+      "babel-plugin-styled-components",
+      {
+        "displayName": true
+      }
+    ]
   ],
   "env": {
     "es": {
-      "ignore": [
-        "src/**/*.stories.js",
-        "src/**/*.test.js"
+      "ignore": ["src/**/*.stories.js", "src/**/*.test.js"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "displayName": true
+          }
+        ]
       ]
     },
     "commonjs": {
-      "ignore": [
-        "src/**/*.stories.js",
-        "src/**/*.test.js"
-      ],
+      "ignore": ["src/**/*.stories.js", "src/**/*.test.js"],
       "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs",
+        [
+          "babel-plugin-styled-components",
+          {
+            "displayName": true
+          }
+        ]
       ]
     },
     "test": {
       "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs",
+        [
+          "babel-plugin-styled-components",
+          {
+            "displayName": true
+          }
+        ]
       ]
     }
   }
