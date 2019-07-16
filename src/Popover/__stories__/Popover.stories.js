@@ -16,10 +16,11 @@ storiesOf('Popover', module)
     readme: {
       // Show readme before story
       content: PopoverReadme,
+      includePropTables: [Popover],
     },
   })
   .add('controlled', () => {
-    const hasArrowValue = boolean('hasArrow', false, 'State');
+    const hasArrowValue = boolean('hasArrow', false, 'Props');
     const placement = select(
       'Placement',
       {
@@ -29,9 +30,9 @@ storiesOf('Popover', module)
         left: 'left',
       },
       'bottom',
-      'State',
+      'Props',
     );
-    const isOverflowingContainer = boolean('isOverflowingContainer', false, 'State');
+    const isOverflowingContainer = boolean('isOverflowingContainer', false, 'Props');
 
     const widthValue = number(
       'Width',
@@ -42,7 +43,7 @@ storiesOf('Popover', module)
         max: 60,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
 
     return (

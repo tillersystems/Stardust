@@ -10,23 +10,7 @@ import { Arrow, PopoverContentWrapper, PopoverTriggerWrapper } from './elements'
 /**
  * Popover using popperjs and portal
  *
- * A popover displays a content in a Portal according to a boolean prop `isOpen`. Value of this prop
- * is left to be handled by the parent (controlled state). Component may be updated in the near future
- * to handle uncontrolled state too.
- *
- * @param {bool} hasArrow - if popover content should display with an arrow or not
- * @param {HTMLElement|node|string} children - must be a single element that will be the trigger of the popover
- * @param {node|string} content - displayed in a portal according to `isOpen` value
- * @param {boolean} isOpen - boolean set to display or hide the popover
- * @param {Object} modifiers - Popper option. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
- * @param {function} onClickOutside - Pass this prop on click outside event (for example close the popover by updating `isOpen` prop value)
- * @param {string} placement - Popper option. Placement applied to popper. See https://popper.js.org/popper-documentation.html
- * @param {boolean} positionFixed - Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
- * @param {function} triggerRef - Callback ref of trigger element
- * @param {Array} triggerWrapperCss - css provided to the trigger wrapper. Must use `css` method from styled-components.
- * @param {string} width - Popover width
- *
- * @return {jsx}
+ * See README, run storybook or see propTypes below for documentation
  */
 class Popover extends PureComponent {
   popoverContent = null;
@@ -179,16 +163,59 @@ class Popover extends PureComponent {
  */
 const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 Popover.propTypes = {
+  /**
+   * If popover content should display with an arrow or not
+   */
   hasArrow: bool,
+
+  /**
+   * Must be a single element that will be the trigger of the popover
+   */
   children: node.isRequired,
+
+  /**
+   * Displayed in a portal according to `isOpen` value
+   */
   content: oneOfType([string, node]).isRequired,
+
+  /**
+   * Boolean set to display or hide the popover
+   */
   isOpen: bool,
+
+  /**
+   * Popper option. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
+   */
   modifiers: object,
+
+  /**
+   * Pass this prop on click outside event (for example close the popover by updating `isOpen` prop value)
+   */
   onClickOutside: func,
+
+  /**
+   * Popper option. Placement applied to popper. See https://popper.js.org/popper-documentation.html
+   */
   placement: string,
+
+  /**
+   * Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
+   */
   positionFixed: bool,
+
+  /**
+   * Callback ref of trigger element
+   */
   triggerRef: func,
+
+  /**
+   * css provided to the trigger wrapper. Must use `css` method from styled-components.
+   */
   triggerWrapperCss: array,
+
+  /**
+   * Popover width
+   */
   width: string,
 };
 
