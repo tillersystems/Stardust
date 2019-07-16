@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Popover /> should render without a problem 1`] = `null`;
+exports[`<Popover /> should render without a problem 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+<span
+  class="c0"
+>
+  Children
+</span>
+`;
