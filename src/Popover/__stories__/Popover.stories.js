@@ -18,7 +18,7 @@ storiesOf('Popover', module)
       content: PopoverReadme,
     },
   })
-  .add('default', () => {
+  .add('controlled', () => {
     const hasArrowValue = boolean('hasArrow', false, 'State');
     const placement = select(
       'Placement',
@@ -63,6 +63,7 @@ storiesOf('Popover', module)
                 : {}
             }
             placement={placement}
+            onClickOutside={() => store.set({ isOpen: false })}
             width={`${widthValue}rem`}
           >
             <Button
@@ -73,31 +74,6 @@ storiesOf('Popover', module)
             </Button>
           </Popover>
         </State>
-      </div>
-    );
-  })
-  .add('controlled', () => {
-    const isOpenValue = boolean('isOpen', false, 'State');
-
-    const widthValue = number(
-      'Width',
-      60,
-      {
-        range: true,
-        min: 10,
-        max: 60,
-        step: 2,
-      },
-      'Dimensions',
-    );
-
-    return (
-      <div>
-        <span>Control modal from knobs!</span>
-        <Popover width={`${widthValue}rem`} isOpen={isOpenValue}>
-          Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur
-          la période séléctionnée.
-        </Popover>
       </div>
     );
   });
