@@ -1,34 +1,50 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const PopOver = styled.div`
-position: relative;
+export const ARROW_SIZE = '8px';
 
-width: ${({ width }) => width};
+export const PopoverContentWrapper = styled.div`
+  background: ${({ theme: { palette } }) => palette.white};
+  border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-padding: 1.8rem;
+  box-shadow: 0 0.2rem 1.6rem 0 hsla(0, 0%, 0%, 0.1), 0 0.2rem 1.6rem 0 hsla(206, 23%, 69%, 0.1),
+    0 0 0 0.1rem hsl(207, 22%, 90%);
+  padding: 1.8rem;
+  position: relative;
 
-border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
+  width: ${({ width }) => width};
 
-box-shadow: 0 0.2rem 1.6rem 0 hsla(0, 0%, 0%, 0.1), 0 0.2rem 1.6rem 0 hsla(206, 23%, 69%, 0.1),
-  0 0 0 0.1rem hsl(207, 22%, 90%);
+  ${props =>
+    props['data-placement'] === 'top' &&
+    css`
+      margin-bottom: ${ARROW_SIZE};
+    `}
 
-background: ${({ theme: { palette } }) => palette.white};
+  ${props =>
+    props['data-placement'] === 'bottom' &&
+    css`
+      margin-top: ${ARROW_SIZE};
+    `}
 
-&::before {
-  content: "";
+  ${props =>
+    props['data-placement'] === 'left' &&
+    css`
+      margin-right: ${ARROW_SIZE};
+    `}
 
-  display:block;
+  ${props =>
+    props['data-placement'] === 'right' &&
+    css`
+      margin-left: ${ARROW_SIZE};
+    `}
 
-  position:absolute;
-  top: -0.7rem;
-  left: ${({ arrowPositionX }) => arrowPositionX};
-  z-index:-1;
+  ${props =>
+    props['data-out-of-boundaries'] &&
+    css`
+      visibility: hidden;
+    `}
+`;
 
-  height:14.14px;
-  width:14.14px;
-
-  transform: rotate(135deg);
-
-  background:white;
-  box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
+export const PopoverTriggerWrapper = styled.span`
+  cursor: ${({ cursor }) => cursor};
+  display: inline-block;
 `;
