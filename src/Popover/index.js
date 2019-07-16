@@ -4,23 +4,26 @@ import posed, { PoseGroup } from 'react-pose';
 import { Portal } from 'react-portal';
 import { Manager, Popper, Reference } from 'react-popper';
 
+import EventListener from '../EventListener';
 import { PopoverContentWrapper, PopoverTriggerWrapper } from './elements';
 
 /**
  * Popover using popperjs and portal
  *
  * A popover displays a content in a Portal according to a boolean prop `isOpen`. Value of this prop
- * is left to be handled by the parent (uncontrolled state). Component may be updated in the near future
- * to handle controlled state too.
+ * is left to be handled by the parent (controlled state). Component may be updated in the near future
+ * to handle uncontrolled state too.
  *
  * @param {bool} hasArrow - if popover content should display with an arrow or not
  * @param {HTMLElement|node|string} children - must be a single element that will be the trigger of the popover
  * @param {node|string} content - displayed in a portal according to `isOpen` value
  * @param {boolean} isOpen - boolean set to display or hide the popover
  * @param {Object} modifiers - Popper option. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
+ * @param {function} onClickOutside - Pass this prop on click outside event (for example close the popover by updating `isOpen` prop value)
  * @param {string} placement - Popper option. Placement applied to popper. See https://popper.js.org/popper-documentation.html
  * @param {boolean} positionFixed - Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
- * @param {Array} triggerWrapperCss // css provided to the trigger wrapper. Must use `css` method from styled-components.
+ * @param {function} triggerRef - Callback ref of trigger element
+ * @param {Array} triggerWrapperCss - css provided to the trigger wrapper. Must use `css` method from styled-components.
  * @param {string} width - Popover width
  *
  * @return {jsx}
@@ -69,13 +72,33 @@ class Popover extends PureComponent {
   };
 
   /**
+   * Callback on document click to close the popover when click is outside the component
+   * Triggers callback passed by the parent that must handles the prop value (controlled component)
+   *
+   * @param {Event} event - triggered by the user action
+   *
+   */
+  handleDocumentClick = event => {
+    if (
+      event.target &&
+      event.target instanceof HTMLElement &&
+      this.popoverContent &&
+      !this.popoverContent.contains(event.target) &&
+      this.popoverTrigger &&
+      !this.popoverTrigger.contains(event.target)
+    ) {
+      const { onClickOutside } = this.props;
+      onClickOutside && onClickOutside(event);
+    }
+  };
+
+  /**
    * Renders the component.
    *
    * @return {jsx}
    */
   render() {
     const {
-      children,
       content,
       hasArrow,
       isOpen,
@@ -130,6 +153,16 @@ class Popover extends PureComponent {
                 );
               }}
             </Popper>
+            <EventListener
+              listeners={[
+                {
+                  target: 'document',
+                  event: 'click',
+                  handler: this.handleDocumentClick,
+                  options: true,
+                },
+              ]}
+            />
           </Portal>
         )}
       </Manager>
@@ -140,15 +173,17 @@ class Popover extends PureComponent {
 /**
  * PropTypes Validation
  */
-const { array, bool, node, object, oneOfType, string } = PropTypes;
+const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 Popover.propTypes = {
   hasArrow: bool,
   children: node.isRequired,
   content: oneOfType([string, node]).isRequired,
   isOpen: bool,
   modifiers: object,
+  onClickOutside: func,
   placement: string,
   positionFixed: bool,
+  triggerRef: func,
   triggerWrapperCss: array,
   width: string,
 };
@@ -160,8 +195,10 @@ Popover.defaultProps = {
   hasArrow: false,
   isOpen: false,
   modifiers: {},
+  onClickOutside: null,
   placement: 'bottom',
   positionFixed: false,
+  triggerRef: null,
   triggerWrapperCss: null,
   width: 'auto',
 };

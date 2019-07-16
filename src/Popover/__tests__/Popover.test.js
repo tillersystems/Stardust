@@ -1,8 +1,11 @@
 import React from 'react';
+import { cleanup, fireEvent } from '@testing-library/react';
 
 import Popover from '..';
 
 describe('<Popover />', () => {
+  afterEach(cleanup);
+
   test('should render without a problem', () => {
     const { container } = render(<Popover content="content">Children</Popover>);
 
@@ -12,7 +15,7 @@ describe('<Popover />', () => {
   test('should render open popover without a problem', () => {
     const { getByTestId } = render(
       <Popover content="content" isOpen>
-        Children
+        Trigger
       </Popover>,
     );
     const popoverNode = getByTestId('popover');
@@ -24,11 +27,30 @@ describe('<Popover />', () => {
     const width = '10rem';
     const { getByTestId } = render(
       <Popover isOpen content="content" width={width}>
-        Children
+        Trigger
       </Popover>,
     );
     const popoverNode = getByTestId('popover');
 
     expect(popoverNode).toHaveStyleRule('width', width);
+  });
+
+  test('should trigger callback on click outside', () => {
+    const wrapper = document.createElement('div');
+    const externalElement = document.createTextNode('I am outside the popover');
+    wrapper.appendChild(externalElement);
+    document.body.appendChild(wrapper);
+
+    const spy = jest.fn();
+    const { getByText } = render(
+      <Popover content="content" isOpen onClickOutside={spy}>
+        Trigger
+      </Popover>,
+    );
+    const outsideNode = getByText(/outside the popover/);
+
+    fireEvent.click(outsideNode);
+
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
