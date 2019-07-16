@@ -5,7 +5,7 @@ import { Portal } from 'react-portal';
 import { Manager, Popper, Reference } from 'react-popper';
 
 import EventListener from '../EventListener';
-import { PopoverContentWrapper, PopoverTriggerWrapper } from './elements';
+import { Arrow, PopoverContentWrapper, PopoverTriggerWrapper } from './elements';
 
 /**
  * Popover using popperjs and portal
@@ -147,7 +147,11 @@ class Popover extends PureComponent {
                       width={width}
                     >
                       {content}
-                      {/* {hasArrow && <PopoverArrow {...popoverArrowProps} />} */}
+                      {hasArrow && placement && (
+                        <Arrow placement={placement} {...arrowProps}>
+                          ▲
+                        </Arrow>
+                      )}
                     </PopoverContentWrapperAnimation>
                   </PoseGroup>
                 );
