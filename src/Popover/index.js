@@ -112,12 +112,12 @@ class Popover extends PureComponent {
             );
           }}
         </Reference>
-        {isOpen && (
-          <Portal>
-            <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
-              {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => {
-                return (
-                  <PoseGroup flipMove={false}>
+        <Portal>
+          <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
+            {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => {
+              return (
+                <PoseGroup flipMove={false}>
+                  {isOpen && (
                     <PopoverContentWrapperAnimation
                       key="popover"
                       data-testid="popover"
@@ -137,22 +137,22 @@ class Popover extends PureComponent {
                         </Arrow>
                       )}
                     </PopoverContentWrapperAnimation>
-                  </PoseGroup>
-                );
-              }}
-            </Popper>
-            <EventListener
-              listeners={[
-                {
-                  target: 'document',
-                  event: 'click',
-                  handler: this.handleDocumentClick,
-                  options: true,
-                },
-              ]}
-            />
-          </Portal>
-        )}
+                  )}
+                </PoseGroup>
+              );
+            }}
+          </Popper>
+          <EventListener
+            listeners={[
+              {
+                target: 'document',
+                event: 'click',
+                handler: this.handleDocumentClick,
+                options: true,
+              },
+            ]}
+          />
+        </Portal>
       </Manager>
     );
   }
@@ -239,7 +239,6 @@ Popover.defaultProps = {
  */
 const PopoverContentWrapperAnimation = posed(PopoverContentWrapper)({
   enter: {
-    y: 15,
     opacity: 1,
     transition: {
       y: { type: 'spring', stiffness: 900, damping: 30 },
@@ -247,7 +246,6 @@ const PopoverContentWrapperAnimation = posed(PopoverContentWrapper)({
     },
   },
   exit: {
-    y: 30,
     opacity: 0,
     transition: { duration: 150 },
   },
