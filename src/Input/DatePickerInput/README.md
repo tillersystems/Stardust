@@ -2,29 +2,18 @@
 
 ### Usage
 
+The DatePickerInput component is a text input that toggles a popover with a date picker.
+The date can be updated either on the input or on the date picker displayed through a Popover
+component. Date picker will close on selected date or on outside click if the date picker
+was open.
+
 ```jsx
 import { DatePickerInput } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
 
-### Properties
-
-- `fluid` - Whether the input takes all available space or not.
-- `value` - The value of the selected date (controlled mode).
-- `onChange` - Handler on date changed.
-- `error` - Whether the input has a status error.
-- `minDate` - The minimum selectable date.
-- `maxDate` - The maximum selectable date.
-
-| `propName` |     propType     | defaultValue | isRequired |
-| ---------- | :--------------: | :----------: | :--------: |
-| `fluid`    |      `bool`      |   `false`    |     -      |
-| `value`    | `luxon.DateTime` |    `null`    |     -      |
-| `onChange` |    `function`    |  `() => {}`  |     -      |
-| `error`    |      `bool`      |   `false`    |     -      |
-| `minDate`  | `luxon.DateTime` |    `null`    |     -      |
-| `maxDate`  | `luxon.DateTime` |    `null`    |     -      |
+<!-- PROPS -->
 
 ### Examples
 

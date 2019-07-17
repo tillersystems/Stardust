@@ -2,16 +2,13 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { DateTime } from 'luxon';
 
-import { DatePicker, Popover, TextInput } from '../..';
+import { DatePicker, EventListener, Popover, TextInput } from '../..';
 import { Container, DatePickerWrapper, PopoverContainer } from './elements';
 
 /**
  * The DatePickerInput component is an input that toggles a popover with a date picker
  *
- * @param {luxon.DateTime} value - The currently selected date.
- * @param {Function} onChange - The callback to notify that the date changed.
- * @param {luxon.DateTime} minDate - Minimum allowed date.
- * @param {luxon.DateTime} maxDate - Maximum allowed date.
+ * See README.md and stories from Storybook for more documentation
  *
  * @returns {jsx}
  */
@@ -29,11 +26,10 @@ class DatePickerInput extends PureComponent {
 
   /**
    * Component lifecycle method
-   * Adds the listener allowing DatePicker display
+   * Sets initial values if provided by the parent otherwise take today
    *
    */
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleClick, false);
     const { value, error } = this.props;
     this.setState({
       dateValue: value || DateTime.local(),
@@ -59,32 +55,20 @@ class DatePickerInput extends PureComponent {
       this.setState({ error: currentErrorProp });
     }
   }
-
   /**
-   * Component lifecycle method
-   * Removes the listener allowing DatePicker display
-   *
-   */
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClick, false);
-  }
-
-  /**
-   * Toggles visibility of the date picker.
+   * Toggles visibility of the date picker
    * Closes the date picker if the user has clicked outside this component
    *
-   * @param {Object} event - event on click
    */
-  handleClick = event => {
-    if (!event || (event && !this.ref.contains(event.target))) {
-      this.setState({
-        isDatePickerOpen: false,
-      });
-    }
+  handleOutsideClick = () => {
+    this.setState({
+      isDatePickerOpen: false,
+    });
   };
 
   /**
-   * Handles change of date from DatePicker.
+   * Handles change of date from DatePicker
+   * Updates value displayed in text input and closes date picker
    *
    * @param {Object} dateValue - clicked date on date picker component
    */
@@ -138,25 +122,30 @@ class DatePickerInput extends PureComponent {
 
     return (
       <Container ref={node => (this.ref = node)}>
-        <TextInput
-          fluid={fluid}
-          value={textValue ? textValue.toLocaleString(DateTime.DATE_SHORT) : ''}
-          type="text"
-          onFocus={() => this.setState({ isDatePickerOpen: true })}
-          onChange={this.handleInputChange}
-          error={error}
-        />
         <PopoverContainer>
-          <Popover active={isDatePickerOpen} arrowPositionX="6rem">
-            <DatePickerWrapper>
-              <DatePicker
-                minDate={minDate}
-                maxDate={maxDate}
-                defaultValue={dateValue}
-                value={dateValue}
-                onDateChanged={this.handleDateChange}
-              />
-            </DatePickerWrapper>
+          <Popover
+            isOpen={isDatePickerOpen}
+            content={
+              <DatePickerWrapper>
+                <DatePicker
+                  minDate={minDate}
+                  maxDate={maxDate}
+                  defaultValue={dateValue}
+                  value={dateValue}
+                  onDateChanged={this.handleDateChange}
+                />
+              </DatePickerWrapper>
+            }
+            onClickOutside={this.handleOutsideClick}
+          >
+            <TextInput
+              fluid={fluid}
+              value={textValue ? textValue.toLocaleString(DateTime.DATE_SHORT) : ''}
+              type="text"
+              onFocus={() => this.setState({ isDatePickerOpen: true })}
+              onChange={this.handleInputChange}
+              error={error}
+            />
           </Popover>
         </PopoverContainer>
       </Container>
@@ -167,12 +156,35 @@ class DatePickerInput extends PureComponent {
 const { bool, func, object } = PropTypes;
 /** Prop types validation. */
 DatePickerInput.propTypes = {
-  fluid: bool,
-  value: object,
-  onChange: func,
+  /*
+   * Whether the input has a status error
+   */
   error: bool,
+
+  /*
+   * Whether the input takes all available space or not
+   */
+  fluid: bool,
+
+  /*
+   * The maximum selectable date
+   */
   maxDate: object,
+
+  /*
+   * The minimum selectable date
+   */
   minDate: object,
+
+  /*
+   * Handler on date changed
+   */
+  onChange: func,
+
+  /*
+   * The current value of the selected date (controlled mode)
+   */
+  value: object,
 };
 
 /** Default props. */
