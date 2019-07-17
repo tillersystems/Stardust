@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
 import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 
-import { Button, Popover } from '../..';
+import { Button, Popover, ScrollBox } from '../..';
 import PopoverReadme from '../README.md';
 
 const store = new Store({
@@ -47,7 +47,7 @@ storiesOf('Popover', module)
     );
 
     return (
-      <div style={{ position: 'relative' }}>
+      <ScrollBox>
         <State store={store}>
           <Popover
             isOpen={store.get('isOpen')}
@@ -75,6 +75,6 @@ storiesOf('Popover', module)
             </Button>
           </Popover>
         </State>
-      </div>
+      </ScrollBox>
     );
   });

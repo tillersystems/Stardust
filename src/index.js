@@ -22,6 +22,7 @@ export { default as Pin } from './Pin';
 export { default as Popover } from './Popover';
 export { default as RadioButton } from './RadioButton';
 export { default as RadioGroup } from './RadioGroup';
+export { default as ScrollBox } from './ScrollBox';
 export { default as Select } from './Select';
 export { default as Table } from './Table';
 export { default as TabSwitcher } from './TabSwitcher';
