@@ -9,7 +9,7 @@ import { Data } from './data';
 const { palette } = Theme;
 
 /**
- * Predifinded sizes
+ * Predefined sizes
  */
 const SIZE = {
   small: 10,
@@ -28,16 +28,15 @@ const Icon = ({ className, color, name, size, title, ...restProps }) => {
   const generatedId = useMemo(() => cuid(), [title]);
   const titleElementId = `icon-title-${generatedId}`;
 
-  const rootProps = {
-    'aria-hidden': title ? undefined : true,
-    'aria-labelledby': title && titleElementId,
-    focusable: 'false',
-    height: getIconSize,
-    role: 'img',
-    viewBox: '0 0 512 512',
-    width: size,
-    ...restProps,
-  };
+  /**
+   * Get icon size
+   *
+   * @return {string}
+   */
+  const getIconSize = useMemo(() => {
+    if (SIZE.hasOwnProperty(size)) return SIZE[size];
+    return size;
+  }, [size]);
 
   /**
    * Get color
@@ -54,17 +53,18 @@ const Icon = ({ className, color, name, size, title, ...restProps }) => {
    *
    * @return {string}
    */
-  const getIconSize = useMemo(() => {
-    if (SIZE.hasOwnProperty(size)) return SIZE[size];
-    return size;
-  }, [size]);
-
-  /**
-   * Get icon path
-   *
-   * @return {string}
-   */
   const getIconPath = useMemo(() => Data[name], [name]);
+
+  const rootProps = {
+    'aria-hidden': title ? undefined : true,
+    'aria-labelledby': title && titleElementId,
+    focusable: 'false',
+    height: getIconSize,
+    role: 'img',
+    viewBox: '0 0 512 512',
+    width: getIconSize,
+    ...restProps,
+  };
 
   return (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" {...rootProps}>

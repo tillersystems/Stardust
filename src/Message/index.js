@@ -23,7 +23,7 @@ import { getStatusBackgroundColor } from './helpers';
 
 const Message = ({ className, description, onClose, type }) => (
   <div className={className} type={type}>
-    <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} aria-hidden="true" />
+    <Icon name={STATUS_ICON_NAMES[type]} color={Theme.palette.white} />
     <Description>{description}</Description>
     {onClose && (
       <Icon
@@ -31,9 +31,9 @@ const Message = ({ className, description, onClose, type }) => (
         role="button"
         name="cross"
         color={Theme.palette.white}
-        width="1.8rem"
-        height="1.8rem"
+        size="18px"
         onClick={onClose}
+        data-testid="close-button"
       />
     )}
   </div>
