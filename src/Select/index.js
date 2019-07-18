@@ -3,57 +3,20 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import posed, { PoseGroup } from 'react-pose';
 
+import { Popover } from '..';
 import { Header, Menu, MenuItem } from './elements';
 import Option from './Option';
 
-const { bool, func, node, string } = PropTypes;
-
 /**
- * Select
+ * Select component displays a button as header holding one value at a time amongst
+ * a list of values (children)
  *
- * This component is in charge of displaying
- * a select
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className /// className needed by styled components.
- * @param {function} onChange // Function fired when an element of the <Select /> is selected.
- * @param {function} onToggle // Function fired when the <Select /> is toggled.
- * @param {string} placeholder // placeholder of the <Select /> component.
- * @param {boolean} resetValue // Title of the <Select /> component.
+ * See README.md and its stories from Storybook for documentation and examples
  *
  * @return {jsx}
  */
-
 class Select extends PureComponent {
   static Option = Option;
-
-  /** Prop types. */
-  static propTypes = {
-    children: node,
-    className: string,
-    disabled: bool,
-    onChange: func,
-    onToggle: func,
-    placeholder: string,
-    resetValue: bool,
-    value: string,
-    // https://github.com/yannickcr/eslint-plugin-react/issues/1520
-    // eslint-disable-next-line react/no-unused-prop-types
-    width: string,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    className: '',
-    disabled: false,
-    onChange: () => {},
-    onToggle: () => {},
-    resetValue: false,
-    placeholder: null,
-    value: null,
-    width: '100%',
-  };
 
   /**
    * getDerivedStateFromProps
@@ -84,15 +47,17 @@ class Select extends PureComponent {
 
   /**
    * Component lifecycle method
-   * Once the component is mounted, checks if a value is provided
-   * to the component to initialize the displayed value on the Select.
+   *
+   * Once the component is mounted, checks if the component is controlled i.e. a value is provided
+   * to the component to initialize the displayed value on the Select
    * Otherwise, if a placeholder is provided, no value is initialized to display
    * the placeholder at the render.
    */
   componentDidMount() {
-    const { children, value, placeholder } = this.props;
+    const { children } = this.props;
 
-    if (value) {
+    if (this.isControlled('value')) {
+      const value = this.getControllableValue('value');
       const isMatchingOption = children.filter(option => option.props.value === value).length === 1;
 
       if (isMatchingOption) {
@@ -100,7 +65,7 @@ class Select extends PureComponent {
       } else {
         this.initializeValue();
       }
-    } else if (!placeholder) {
+    } else if (!this.isControlled('placeholder')) {
       this.initializeValue();
     }
   }
@@ -118,6 +83,8 @@ class Select extends PureComponent {
   }
 
   /**
+   * Uncontrolled case
+   *
    * Initialize in the state the value displayed on the select
    * Takes the first option available in the children props
    *
@@ -135,7 +102,8 @@ class Select extends PureComponent {
   };
 
   /**
-   * Toogle Menu
+   * Toggles the menu by updating the boolean to its opposite value
+   *
    */
   toggleMenu = event => {
     event.preventDefault();
@@ -144,7 +112,6 @@ class Select extends PureComponent {
 
     this.setState(
       prevState => ({
-        ...prevState,
         displayMenu: !prevState.displayMenu,
       }),
       () => {
@@ -154,25 +121,59 @@ class Select extends PureComponent {
   };
 
   /**
-   * Handle Selected
+   * Callback triggered on item selection
+   * Triggers callback if provided and updates state if is uncontrolled
    *
+   * @param {Event} event
    * @param {string} value
    *
    */
-  handleSelected(event, value) {
+  handleSelected(event, item) {
     event.persist();
-    const { onChange } = this.props;
+    const prevValue = this.getControllableValue('value');
 
-    this.setState(
-      {
-        value,
-      },
-      () => {
-        onChange && onChange(value);
-        this.toggleMenu(event);
-      },
-    );
+    if (this.isControlled('value')) {
+      this.onSelectActions(item, prevValue, event);
+    } else {
+      this.setState({ value: item }, () => {
+        this.onSelectActions(item, prevValue, event);
+      });
+    }
   }
+
+  /**
+   * Triggers callback (if provided) on value change by click
+   *
+   * @param {Event} event
+   * @param {string} value
+   *
+   */
+  onSelectActions = (value, prevValue, event) => {
+    if (prevValue !== value) {
+      const { onChange } = this.props;
+      onChange && onChange(value);
+    }
+
+    this.toggleMenu(event);
+  };
+
+  /**
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
+   */
+  isControlled = prop => this.props.hasOwnProperty(prop);
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => (this.isControlled(key) ? this.props[key] : this.state[key]);
 
   /**
    * Renders the component.
@@ -181,7 +182,9 @@ class Select extends PureComponent {
    */
   render() {
     const { children, className, disabled } = this.props;
-    const { displayMenu, placeholder, value } = this.state;
+    const { displayMenu } = this.state;
+    const hasPlaceholder = this.isControlled('placeholder');
+    const value = this.getControllableValue('value');
 
     return (
       <div className={className}>
@@ -192,8 +195,8 @@ class Select extends PureComponent {
           aria-expanded={displayMenu}
         >
           {/* if placeholder is defined display it, otherwise use the value of the first option */}
-          {placeholder && !value
-            ? placeholder
+          {hasPlaceholder && !value
+            ? this.getControllableValue('placeholder')
             : Children.map(children, child => (child.props.value === value ? child : null))}
         </Header>
         <PoseGroup>
@@ -234,6 +237,70 @@ const MenuAnimation = posed(Menu)({
     transition: { duration: 150 },
   },
 });
+
+/**
+ * PropTypes Validation
+ */
+const { bool, func, node, string } = PropTypes;
+Select.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: node,
+
+  /**
+   * Prop needed by styled components
+   */
+  className: string,
+
+  /**
+   * If the select should be disabled or not
+   */
+  disabled: bool,
+
+  /**
+   * Callback fired when an element of the <Select /> is selected
+   */
+  onChange: func,
+
+  /**
+   * Callback fired when the <Select /> is toggled (becomes closed or open)
+   */
+  onToggle: func,
+
+  /**
+   * Placeholder of the <Select /> component in the header
+   */
+  placeholder: string,
+
+  /**
+   * If select value should be reset to null
+   */
+  resetValue: bool,
+
+  /**
+   * Selected value identifier
+   */
+  value: string,
+
+  /**
+   * CSS width of the component
+   */
+  // https://github.com/yannickcr/eslint-plugin-react/issues/1520
+  // eslint-disable-next-line react/no-unused-prop-types
+  width: string,
+};
+
+/**
+ * Default props
+ */
+Select.defaultProps = {
+  children: null,
+  className: '',
+  disabled: false,
+  resetValue: false,
+  width: '100%',
+};
 
 export default styled(Select)`
   position: relative;
