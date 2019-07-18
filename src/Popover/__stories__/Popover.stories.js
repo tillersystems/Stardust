@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
-import { withKnobs, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 
-import { Button, Popover } from '../..';
+import { Button, Popover, ScrollBox } from '../..';
 import PopoverReadme from '../README.md';
 
 const store = new Store({
-  active: false,
+  isOpen: false,
 });
 
 storiesOf('Popover', module)
@@ -16,9 +16,24 @@ storiesOf('Popover', module)
     readme: {
       // Show readme before story
       content: PopoverReadme,
+      includePropTables: [Popover],
     },
   })
-  .add('default', () => {
+  .add('controlled', () => {
+    const hasArrowValue = boolean('hasArrow', false, 'Props');
+    const placement = select(
+      'Placement',
+      {
+        bottom: 'bottom',
+        top: 'top',
+        right: 'right',
+        left: 'left',
+      },
+      'bottom',
+      'Props',
+    );
+    const isOverflowingContainer = boolean('isOverflowingContainer', false, 'Props');
+
     const widthValue = number(
       'Width',
       28,
@@ -28,63 +43,38 @@ storiesOf('Popover', module)
         max: 60,
         step: 2,
       },
-      'Dimensions',
-    );
-
-    const arrowPositionXValue = number(
-      'arrowPositionX',
-      50,
-      {
-        range: true,
-        min: 5,
-        max: 90,
-        step: 1,
-      },
-      'Dimensions',
+      'Props',
     );
 
     return (
-      <div style={{ position: 'relative' }}>
-        <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
-          Show Popover
-        </Button>
-        <div style={{ position: 'absolute', top: '100%', left: '-78px' }}>
-          <State store={store}>
-            <Popover
-              width={`${widthValue}rem`}
-              arrowPositionX={`${(widthValue * arrowPositionXValue) / 100}rem`}
-              active={store.get('active')}
+      <ScrollBox>
+        <State store={store}>
+          <Popover
+            isOpen={store.get('isOpen')}
+            content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur
+          la période sélectionnée."
+            hasArrow={hasArrowValue}
+            modifiers={
+              isOverflowingContainer
+                ? {
+                    preventOverflow: {
+                      escapeWithReference: true,
+                    },
+                  }
+                : {}
+            }
+            placement={placement}
+            onClickOutside={() => store.set({ isOpen: false })}
+            width={`${widthValue}rem`}
+          >
+            <Button
+              appearance="primary"
+              onClick={() => store.set({ isOpen: !store.get('isOpen') })}
             >
-              Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
-              sur la période séléctionnée.
-            </Popover>
-          </State>
-        </div>
-      </div>
-    );
-  })
-  .add('controlled', () => {
-    const activeValue = boolean('Active', false, 'State');
-
-    const widthValue = number(
-      'Width',
-      60,
-      {
-        range: true,
-        min: 10,
-        max: 60,
-        step: 2,
-      },
-      'Dimensions',
-    );
-
-    return (
-      <div>
-        <span>Control modal from knobs!</span>
-        <Popover width={`${widthValue}rem`} active={activeValue}>
-          Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur
-          la période séléctionnée.
-        </Popover>
-      </div>
+              Show Popover
+            </Button>
+          </Popover>
+        </State>
+      </ScrollBox>
     );
   });

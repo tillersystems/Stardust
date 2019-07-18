@@ -1,45 +1,221 @@
-import React from 'react';
+import React, { Children, cloneElement, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import posed, { PoseGroup } from 'react-pose';
+import { Portal } from 'react-portal';
+import { Manager, Popper, Reference } from 'react-popper';
 
-import { PopOver } from './elements';
+import EventListener from '../EventListener';
+import { Arrow, PopoverContentWrapper, PopoverTriggerWrapper } from './elements';
 
 /**
- * Popover
+ * Popover using popperjs and portal
  *
- * This component is in charge of displaying
- * a popover
- *
- * @param {bool} active // Boolean set to display or hide the popover.
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} width // Popover width.
- *
- * @return {jsx}
+ * See README, run storybook or see propTypes below for documentation
  */
+class Popover extends PureComponent {
+  popoverContent = null;
+  popoverTrigger = null;
 
-const Popover = ({ active, arrowPositionX, children, width }) => (
-  <PoseGroup flipMove={false}>
-    {active && (
-      <PopOverAnimation
-        width={width}
-        arrowPositionX={arrowPositionX}
-        key="popover"
-        data-testid="popover"
-      >
-        {children}
-      </PopOverAnimation>
-    )}
-  </PoseGroup>
-);
+  /**
+   * Saves the reference to the content of the popover. Allows us to keep the reference
+   * somewhere when needed (check if click is inside the element)
+   *
+   * @param {HTMLElement} node - node of content element
+   */
+  setContentRef = node => {
+    this.popoverContent = node;
+  };
+
+  /**
+   * Saves the reference to the trigger of the popover. Allows us to keep the reference
+   * somewhere when needed (check if click is inside the element)
+   * Also call a callback if provided by the parent to move up the reference, allowing the parent
+   * to have the reference too
+   *
+   * @param {HTMLElement} node - node of content element
+   */
+  setTriggerRef = node => {
+    const { triggerRef } = this.props;
+
+    this.popoverTrigger = node;
+    triggerRef && triggerRef(node);
+  };
+
+  /**
+   * Renders trigger element according to its type
+   *
+   */
+  renderTrigger = () => {
+    const { children } = this.props;
+
+    if (children instanceof HTMLElement || typeof children === 'string') {
+      return children;
+    }
+
+    return cloneElement(Children.only(children), children.props);
+  };
+
+  /**
+   * Callback on document click to close the popover when click is outside the component
+   * Triggers callback passed by the parent that must handles the prop value (controlled component)
+   *
+   * @param {Event} event - triggered by the user action
+   *
+   */
+  handleDocumentClick = event => {
+    if (
+      event.target &&
+      event.target instanceof HTMLElement &&
+      this.popoverContent &&
+      !this.popoverContent.contains(event.target) &&
+      this.popoverTrigger &&
+      !this.popoverTrigger.contains(event.target)
+    ) {
+      const { onClickOutside } = this.props;
+      onClickOutside && onClickOutside(event);
+    }
+  };
+
+  /**
+   * Renders the component.
+   *
+   * @return {jsx}
+   */
+  render() {
+    const {
+      content,
+      hasArrow,
+      isOpen,
+      modifiers,
+      placement,
+      positionFixed,
+      triggerWrapperCss,
+      width,
+    } = this.props;
+
+    return (
+      <Manager>
+        <Reference>
+          {({ ref: popperRef }) => {
+            return (
+              <PopoverTriggerWrapper
+                css={triggerWrapperCss}
+                ref={node => {
+                  if (node !== null) {
+                    this.setTriggerRef(node);
+                    popperRef(node);
+                  }
+                }}
+              >
+                {this.renderTrigger()}
+              </PopoverTriggerWrapper>
+            );
+          }}
+        </Reference>
+        <Portal>
+          <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
+            {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => {
+              return (
+                <PoseGroup flipMove={false}>
+                  {isOpen && (
+                    <PopoverContentWrapperAnimation
+                      key="popover"
+                      data-testid="popover"
+                      data-out-of-boundaries={outOfBoundaries || undefined}
+                      data-placement={placement}
+                      ref={node => {
+                        this.setContentRef(node);
+                        popperRef(node);
+                      }}
+                      style={style}
+                      width={width}
+                    >
+                      {content}
+                      {hasArrow && placement && (
+                        <Arrow placement={placement} {...arrowProps}>
+                          ▲
+                        </Arrow>
+                      )}
+                    </PopoverContentWrapperAnimation>
+                  )}
+                </PoseGroup>
+              );
+            }}
+          </Popper>
+          <EventListener
+            listeners={[
+              {
+                target: 'document',
+                event: 'click',
+                handler: this.handleDocumentClick,
+                options: true,
+              },
+            ]}
+          />
+        </Portal>
+      </Manager>
+    );
+  }
+}
 
 /**
  * PropTypes Validation
  */
-const { bool, node, string } = PropTypes;
+const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 Popover.propTypes = {
-  active: bool,
-  arrowPositionX: string,
-  children: node,
+  /**
+   * If popover content should display with an arrow or not
+   */
+  hasArrow: bool,
+
+  /**
+   * Must be a single element that will be the trigger of the popover
+   */
+  children: node.isRequired,
+
+  /**
+   * Displayed in a portal according to `isOpen` value
+   */
+  content: oneOfType([string, node]).isRequired,
+
+  /**
+   * Boolean set to display or hide the popover
+   */
+  isOpen: bool,
+
+  /**
+   * Popper option. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
+   */
+  modifiers: object,
+
+  /**
+   * Pass this prop on click outside event (for example close the popover by updating `isOpen` prop value)
+   */
+  onClickOutside: func,
+
+  /**
+   * Popper option. Placement applied to popper. See https://popper.js.org/popper-documentation.html
+   */
+  placement: string,
+
+  /**
+   * Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
+   */
+  positionFixed: bool,
+
+  /**
+   * Callback ref of trigger element
+   */
+  triggerRef: func,
+
+  /**
+   * css provided to the trigger wrapper. Must use `css` method from styled-components.
+   */
+  triggerWrapperCss: array,
+
+  /**
+   * Popover width
+   */
   width: string,
 };
 
@@ -47,18 +223,22 @@ Popover.propTypes = {
  * Default props
  */
 Popover.defaultProps = {
-  active: false,
-  arrowPositionX: '50%',
-  children: null,
+  hasArrow: false,
+  isOpen: false,
+  modifiers: {},
+  onClickOutside: null,
+  placement: 'bottom',
+  positionFixed: false,
+  triggerRef: null,
+  triggerWrapperCss: null,
   width: 'auto',
 };
 
 /**
  * Animation
  */
-const PopOverAnimation = posed(PopOver)({
+const PopoverContentWrapperAnimation = posed(PopoverContentWrapper)({
   enter: {
-    y: 15,
     opacity: 1,
     transition: {
       y: { type: 'spring', stiffness: 900, damping: 30 },
@@ -66,7 +246,6 @@ const PopOverAnimation = posed(PopOver)({
     },
   },
   exit: {
-    y: 30,
     opacity: 0,
     transition: { duration: 150 },
   },

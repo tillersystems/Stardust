@@ -8,6 +8,8 @@ import Theme from '../../../Theme';
 
 Settings.defaultZoneName = 'utc';
 
+jest.mock('popper.js');
+
 describe('<DatePickerInput />', () => {
   const dateValue = DateTime.fromObject({
     year: 2018,
@@ -35,13 +37,12 @@ describe('<DatePickerInput />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should select the provided date value', async () => {
+  test('should select the provided date value', () => {
     const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
 
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
 
-    await wait();
     const selectedDay = getByText('15');
 
     expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
@@ -52,7 +53,6 @@ describe('<DatePickerInput />', () => {
     const { getByTestId, getByText, getAllByText } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
-    await wait();
 
     const selectedDay = getByText('15');
     expect(selectedDay).toHaveStyleRule('color', Theme.palette.white);
@@ -74,7 +74,6 @@ describe('<DatePickerInput />', () => {
     const { getByTestId, getByText } = render(<DatePickerInput value={dateValue} />);
     const inputNode = getByTestId('input');
     fireEvent.focus(inputNode);
-    await wait();
 
     const selectedDay = getByText('15');
 

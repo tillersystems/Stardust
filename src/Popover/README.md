@@ -2,30 +2,16 @@
 
 ### Usage
 
-```jsx
-import { Popover } from '@tillersystems/stardust';
-```
-
-<!-- STORY -->
-
-### Properties
-
-- `active` - Boolean set to display or hide the popover.
-- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `width` - Popover width.
-
-| propName   | propType | defaultValue | isRequired |
-| ---------- | :------: | :----------: | :--------: |
-| `active`   |  `bool`  |   `false`    |     -      |
-| `children` |  `node`  |    `null`    |     -      |
-| `width`    | `string` |   `28rem`    |     -      |
-
-### Example
+A popover displays a content in a Portal according to a boolean prop `isOpen`. Value of this prop is left to be handled by the parent (controlled state). Component may be updated in the near future to handle uncontrolled state too.
 
 ```jsx
 import { Popover } from 'components/Popover';
 
 render() {
-  return <Popover width='28rem' />
+  return <Popover width='28rem' isOpen />
 }
 ```
+
+<!-- STORY -->
+
+<!-- PROPS -->
