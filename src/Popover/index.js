@@ -83,7 +83,9 @@ class Popover extends PureComponent {
    */
   render() {
     const {
+      animationProps,
       content,
+      contentWrapperStyle,
       hasArrow,
       isOpen,
       modifiers,
@@ -123,11 +125,12 @@ class Popover extends PureComponent {
                       data-testid="popover"
                       data-out-of-boundaries={outOfBoundaries || undefined}
                       data-placement={placement}
+                      animationProps={animationProps}
                       ref={node => {
                         this.setContentRef(node);
                         popperRef(node);
                       }}
-                      style={style}
+                      style={{ ...style, ...contentWrapperStyle }}
                       width={width}
                     >
                       {content}
@@ -164,9 +167,9 @@ class Popover extends PureComponent {
 const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 Popover.propTypes = {
   /**
-   * If popover content should display with an arrow or not
+   * Custom animation options to pass to PopoverContentWrapperAnimation
    */
-  hasArrow: bool,
+  animationProps: object,
 
   /**
    * Must be a single element that will be the trigger of the popover
@@ -177,6 +180,16 @@ Popover.propTypes = {
    * Displayed in a portal according to `isOpen` value
    */
   content: oneOfType([string, node]).isRequired,
+
+  /**
+   * Custom style for content wrapper
+   */
+  contentWrapperStyle: object,
+
+  /**
+   * If popover content should display with an arrow or not
+   */
+  hasArrow: bool,
 
   /**
    * Boolean set to display or hide the popover
@@ -223,6 +236,8 @@ Popover.propTypes = {
  * Default props
  */
 Popover.defaultProps = {
+  animationProps: null,
+  contentWrapperStyle: null,
   hasArrow: false,
   isOpen: false,
   modifiers: {},

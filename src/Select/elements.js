@@ -1,12 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { transparentize } from 'polished';
 
 export const Header = styled.button`
   display: flex;
 
   height: 100%;
   width: 100%;
+  position: relative;
 
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.6rem;
 
   cursor: pointer;
   text-align: left;
@@ -42,7 +44,7 @@ export const Header = styled.button`
 
     position: absolute;
     right: 1.4rem;
-    bottom: 37%;
+    bottom: 33%;
 
     width: 0;
     height: 0;
@@ -54,12 +56,14 @@ export const Header = styled.button`
   }
 `;
 
-export const Menu = styled.ul`
-  position: absolute;
-  top: calc(100% + 0.1rem);
-  left: 0;
-  z-index: 1;
+export const HeaderContent = styled.div`
+  align-items: center;
+  display: flex;
+  height: 2.2rem;
+  padding-right: 2rem;
+`;
 
+export const Menu = styled.ul`
   width: 100%;
   max-height: 28rem;
 
@@ -95,7 +99,15 @@ export const MenuItem = styled.li`
   }
 
   cursor: pointer;
-  :hover {
-    background: ${({ theme: { palette } }) => palette.veryLightBlue} 0%;
-  }
+
+  ${({ isSelected }) =>
+    isSelected
+      ? css`
+          background: ${({ theme: { palette } }) => palette.veryLightBlue};
+        `
+      : css`
+          :hover {
+            background: ${({ theme: { palette } }) => transparentize(0.5, palette.veryLightBlue)};
+          }
+        `};
 `;

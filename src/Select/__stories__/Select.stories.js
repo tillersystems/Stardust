@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
 import styled from 'styled-components';
 
-import { Icon, Select, Theme } from '../..';
+import { Icon, ScrollBox, Select, Theme } from '../..';
 import SelectReadme from '../README.md';
 
 storiesOf('Select', module)
@@ -24,18 +24,25 @@ storiesOf('Select', module)
     const resetValue = boolean('Reset value', false, 'State');
 
     return (
-      <Select
-        placeholder={placeholder}
-        onToggle={onToggle}
-        onChange={onChange}
-        disabled={disabled}
-        resetValue={resetValue}
-      >
-        <Select.Option value="home">Home</Select.Option>
-        <Select.Option value="calendar">Calendar</Select.Option>
-        <Select.Option value="settings">Settings</Select.Option>
-        <Select.Option value="user">User</Select.Option>
-      </Select>
+      <ScrollBox>
+        <Select
+          disabled={disabled}
+          modifiers={{
+            preventOverflow: {
+              escapeWithReference: true,
+            },
+          }}
+          placeholder={placeholder}
+          onChange={onChange}
+          onToggle={onToggle}
+          resetValue={resetValue}
+        >
+          <Select.Option value="home">Home</Select.Option>
+          <Select.Option value="calendar">Calendar</Select.Option>
+          <Select.Option value="settings">Settings</Select.Option>
+          <Select.Option value="user">User</Select.Option>
+        </Select>
+      </ScrollBox>
     );
   })
   .add('without placeholder', () => {
@@ -50,15 +57,17 @@ storiesOf('Select', module)
     `;
 
     return (
-      <Select onToggle={onToggle} onChange={onChange} disabled={disabled} resetValue={resetValue}>
-        <Select.Option value="home">
-          <StyledIcon name="home" width="1.5rem" height="1.5rem" color={Theme.palette.darkBlue} />
-          <div>Home</div>
-        </Select.Option>
-        <Select.Option value="calendar">Calendar</Select.Option>
-        <Select.Option value="settings">Settings</Select.Option>
-        <Select.Option value="user">User</Select.Option>
-      </Select>
+      <ScrollBox>
+        <Select onToggle={onToggle} onChange={onChange} disabled={disabled} resetValue={resetValue}>
+          <Select.Option value="home">
+            <StyledIcon name="home" width="1.5rem" height="1.5rem" color={Theme.palette.darkBlue} />
+            <div>Home</div>
+          </Select.Option>
+          <Select.Option value="calendar">Calendar</Select.Option>
+          <Select.Option value="settings">Settings</Select.Option>
+          <Select.Option value="user">User</Select.Option>
+        </Select>
+      </ScrollBox>
     );
   })
   .add('with width', () => {
@@ -79,18 +88,20 @@ storiesOf('Select', module)
     );
 
     return (
-      <Select
-        onToggle={onToggle}
-        onChange={onChange}
-        disabled={disabled}
-        resetValue={resetValue}
-        width={`${widthValue.toString()}px`}
-      >
-        <Select.Option value="home">Home</Select.Option>
-        <Select.Option value="calendar">Calendar</Select.Option>
-        <Select.Option value="settings">Settings</Select.Option>
-        <Select.Option value="user">User</Select.Option>
-      </Select>
+      <ScrollBox>
+        <Select
+          onToggle={onToggle}
+          onChange={onChange}
+          disabled={disabled}
+          resetValue={resetValue}
+          width={`${widthValue.toString()}px`}
+        >
+          <Select.Option value="home">Home</Select.Option>
+          <Select.Option value="calendar">Calendar</Select.Option>
+          <Select.Option value="settings">Settings</Select.Option>
+          <Select.Option value="user">User</Select.Option>
+        </Select>
+      </ScrollBox>
     );
   })
   .add('controlled state', () => {
@@ -109,32 +120,34 @@ storiesOf('Select', module)
     `;
 
     return (
-      <State store={store}>
-        {state => (
-          <Select
-            onToggle={onToggle}
-            onChange={value => {
-              onChangeAction(value);
-              store.set({ value });
-            }}
-            disabled={disabled}
-            resetValue={resetValue}
-            value={state.value}
-          >
-            <Select.Option value="home">
-              <StyledIcon
-                name="home"
-                width="1.5rem"
-                height="1.5rem"
-                color={Theme.palette.darkBlue}
-              />
-              <div>Home</div>
-            </Select.Option>
-            <Select.Option value="calendar">Calendar</Select.Option>
-            <Select.Option value="settings">Settings</Select.Option>
-            <Select.Option value="user">User</Select.Option>
-          </Select>
-        )}
-      </State>
+      <ScrollBox>
+        <State store={store}>
+          {state => (
+            <Select
+              onToggle={onToggle}
+              onChange={value => {
+                onChangeAction(value);
+                store.set({ value });
+              }}
+              disabled={disabled}
+              resetValue={resetValue}
+              value={state.value}
+            >
+              <Select.Option value="home">
+                <StyledIcon
+                  name="home"
+                  width="1.5rem"
+                  height="1.5rem"
+                  color={Theme.palette.darkBlue}
+                />
+                <div>Home</div>
+              </Select.Option>
+              <Select.Option value="calendar">Calendar</Select.Option>
+              <Select.Option value="settings">Settings</Select.Option>
+              <Select.Option value="user">User</Select.Option>
+            </Select>
+          )}
+        </State>
+      </ScrollBox>
     );
   });
