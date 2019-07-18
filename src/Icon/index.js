@@ -1,52 +1,128 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import cuid from 'cuid';
 
 import Theme from '../Theme';
-import { Container } from './elements';
 import { Data } from './data';
 
 const { palette } = Theme;
-const getColor = color => {
-  if (palette.hasOwnProperty(color)) return palette[color];
-  return color;
-};
-
-const Icon = ({ name, color, height, width, spin, ...rest }) => (
-  <Container {...{ spin, width, height, ...rest }} data-testid="iconContainer">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: 'block' }}
-      width={width}
-      height={height}
-      viewBox="0 0 512 512"
-      data-testid="iconSvg"
-    >
-      <path data-testid="iconSvgPath" fill={getColor(color)} fillRule="evenodd" d={Data[name]} />
-    </svg>
-  </Container>
-);
 
 /**
- * PropTypes Validation.
+ * Predifinded sizes
  */
-const { string, bool } = PropTypes;
+const SIZE = {
+  small: 10,
+  medium: 20,
+  large: 30,
+};
+
+/**
+ * Icon comnponent
+ *
+ * See README, run storybook or see propTypes below for documentation
+ *
+ * @return {jsx}
+ */
+const Icon = ({ className, color, name, size, title, ...restProps }) => {
+  const generatedId = useMemo(() => cuid(), [title]);
+  const titleElementId = `icon-title-${generatedId}`;
+
+  const rootProps = {
+    'aria-hidden': title ? undefined : true,
+    'aria-labelledby': title && titleElementId,
+    focusable: 'false',
+    height: getIconSize,
+    role: 'img',
+    viewBox: '0 0 512 512',
+    width: size,
+    ...restProps,
+  };
+
+  /**
+   * Get color
+   *
+   * @return {string}
+   */
+  const getColor = useMemo(() => {
+    if (palette.hasOwnProperty(color)) return palette[color];
+    return color;
+  }, [color]);
+
+  /**
+   * Get icon path
+   *
+   * @return {string}
+   */
+  const getIconSize = useMemo(() => {
+    if (SIZE.hasOwnProperty(size)) return SIZE[size];
+    return size;
+  }, [size]);
+
+  /**
+   * Get icon path
+   *
+   * @return {string}
+   */
+  const getIconPath = useMemo(() => Data[name], [name]);
+
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" {...rootProps}>
+      {title && <title id={titleElementId}>{title}</title>}
+      <g>
+        <path data-testid="icon-svg-path" fill={getColor} fillRule="evenodd" d={getIconPath} />
+      </g>
+    </svg>
+  );
+};
+
+/**
+ * PropTypes Validation
+ */
+const { number, oneOfType, string } = PropTypes;
+
 Icon.propTypes = {
-  name: string.isRequired,
+  /**
+   * className needed by styled component
+   */
+  className: string,
+
+  /**
+   * Fill color
+   */
   color: string,
-  height: string,
-  width: string,
-  spin: bool,
+
+  /**
+   * Icon name
+   */
+  name: string.isRequired,
+
+  /**
+   * Available sizes, including custom - e.g. '20px'
+   */
+  size: oneOfType([number, string]),
+
+  /**
+   * Alternative text
+   */
+  title: string,
 };
 
 /**
  * Default props.
  */
 Icon.defaultProps = {
+  className: undefined,
   color: 'white',
-  height: '20',
-  width: '20',
-  spin: false,
+  size: SIZE.medium,
+  title: null,
 };
 
-export default styled(Icon)``;
+/**
+ * Display name
+ */
+Icon.displayName = 'Icon';
+
+export default styled(Icon)`
+  display: inline-block;
+`;
