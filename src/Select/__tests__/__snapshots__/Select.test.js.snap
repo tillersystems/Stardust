@@ -3,7 +3,7 @@
 exports[`<Select /> should render without a problem 1`] = `
 .c1 {
   display: inline-block;
-  width: auto;
+  width: inherit;
 }
 
 .c2 {
@@ -97,7 +97,7 @@ exports[`<Select /> should render without a problem 1`] = `
 exports[`<Select /> should render without a problem when disabled 1`] = `
 .c1 {
   display: inline-block;
-  width: auto;
+  width: inherit;
 }
 
 .c3 {

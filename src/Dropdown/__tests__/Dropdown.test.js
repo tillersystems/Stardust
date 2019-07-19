@@ -4,6 +4,8 @@ import { css } from 'styled-components';
 
 import Dropdown from '..';
 
+jest.mock('popper.js');
+
 describe('<Dropdown />', () => {
   test('should render without a problem', () => {
     const props = { title: 'title' };
@@ -20,14 +22,14 @@ describe('<Dropdown />', () => {
 
   test('should toggle the dropdown', done => {
     const props = { title: 'title' };
-    const { queryAllByText, getByText } = render(
+    const { container, queryAllByText } = render(
       <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
-    const button = getByText(props.title);
+    const button = container.querySelector('button');
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -60,55 +62,9 @@ describe('<Dropdown />', () => {
     }, 500);
   });
 
-  test('should close the dropdown when clicking outside of the component', done => {
-    const props = { title: 'title' };
-    const { queryAllByText, getByText } = render(
-      <Dropdown {...props}>
-        <div>Item1</div>
-        <div>Item2</div>
-        <div>Item3</div>
-      </Dropdown>,
-    );
-
-    const button = getByText(props.title);
-
-    expect(button).toHaveAttribute('aria-expanded', 'false');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    // Open Dropdown
-    fireEvent.click(button);
-
-    expect(button).toHaveAttribute('aria-expanded', 'true');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    let ItemNode;
-    ItemNode = queryAllByText(/Item/);
-
-    expect(ItemNode).toHaveLength(3);
-    expect(ItemNode[0]).toBeInTheDocument();
-    expect(ItemNode[1]).toBeInTheDocument();
-    expect(ItemNode[2]).toBeInTheDocument();
-
-    // Clicking outside of the conponent
-    // we need to dispatch a mousedown event: react-onclickoutside library
-    // explicitly listening for mousedown events.
-    // See: https://github.com/Pomax/react-onclickoutside/issues/104
-    document.dispatchEvent(new MouseEvent('mousedown'));
-
-    setTimeout(() => {
-      ItemNode = queryAllByText(/Item/);
-      expect(button).toHaveAttribute('aria-expanded', 'false');
-      expect(button).toHaveAttribute('aria-haspopup', 'true');
-      expect(ItemNode[0]).toBeUndefined();
-      expect(ItemNode[1]).toBeUndefined();
-      expect(ItemNode[2]).toBeUndefined();
-      done();
-    }, 500);
-  });
-
   test('should filter items', () => {
     const props = { title: 'title', searchable: true, searchBarPlaceholder: 'search' };
-    const { queryAllByText, getByText, getByPlaceholderText } = render(
+    const { container, queryAllByText, getByText, getByPlaceholderText } = render(
       <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
@@ -116,7 +72,7 @@ describe('<Dropdown />', () => {
       </Dropdown>,
     );
 
-    const button = getByText(props.title);
+    const button = container.querySelector('button');
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -144,7 +100,7 @@ describe('<Dropdown />', () => {
       searchBarPlaceholder: 'search',
       noResultLabel: 'Not Found',
     };
-    const { queryAllByText, getByText, getByPlaceholderText } = render(
+    const { container, queryAllByText, getByText, getByPlaceholderText } = render(
       <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
@@ -152,7 +108,7 @@ describe('<Dropdown />', () => {
       </Dropdown>,
     );
 
-    const button = getByText(props.title);
+    const button = container.querySelector('button');
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -190,14 +146,14 @@ describe('<Dropdown />', () => {
         }
       `,
     };
-    const { getAllByRole, getByText } = render(
+    const { container, getAllByRole, getByText } = render(
       <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
         <div>Item3</div>
       </Dropdown>,
     );
-    const button = getByText(props.title);
+    const button = container.querySelector('button');
     fireEvent.click(button);
 
     const [itemNode] = getAllByRole('menuitem');
