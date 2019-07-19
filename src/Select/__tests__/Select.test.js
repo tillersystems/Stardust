@@ -3,6 +3,8 @@ import { fireEvent, wait } from '@testing-library/react';
 
 import Select from '..';
 
+jest.mock('popper.js');
+
 describe('<Select />', () => {
   test('should render without a problem', () => {
     const props = { placeholder: 'placeholder' };
@@ -34,7 +36,7 @@ describe('<Select />', () => {
 
   test('should toggle the Select', done => {
     const props = { placeholder: 'placeholder' };
-    const { queryAllByText, getByText } = render(
+    const { container, queryAllByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
         <Select.Option value="2">Item</Select.Option>
@@ -43,7 +45,7 @@ describe('<Select />', () => {
       </Select>,
     );
 
-    const button = getByText(props.placeholder);
+    const button = container.querySelector('button');
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
