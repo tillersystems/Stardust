@@ -244,6 +244,7 @@ class Select extends PureComponent {
                   key={child}
                   role="menuitem"
                   onClick={event => this.handleSelected(event, child.props.value)}
+                  isSelected={child.props.value === value}
                 >
                   {child}
                 </MenuItem>
