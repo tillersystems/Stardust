@@ -1,59 +1,23 @@
+/* eslint-disable react/require-default-props */
+
 import React, { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import posed, { PoseGroup } from 'react-pose';
 
-import { Header, Menu, MenuItem } from './elements';
+import { Popover } from '..';
+import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
 
-const { bool, func, node, string } = PropTypes;
-
 /**
- * Select
+ * Select component displays a button as header holding one value at a time amongst
+ * a list of values (children)
  *
- * This component is in charge of displaying
- * a select
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className /// className needed by styled components.
- * @param {function} onChange // Function fired when an element of the <Select /> is selected.
- * @param {function} onToggle // Function fired when the <Select /> is toggled.
- * @param {string} placeholder // placeholder of the <Select /> component.
- * @param {boolean} resetValue // Title of the <Select /> component.
+ * See README.md and its stories from Storybook for documentation and examples
  *
  * @return {jsx}
  */
-
 class Select extends PureComponent {
   static Option = Option;
-
-  /** Prop types. */
-  static propTypes = {
-    children: node,
-    className: string,
-    disabled: bool,
-    onChange: func,
-    onToggle: func,
-    placeholder: string,
-    resetValue: bool,
-    value: string,
-    // https://github.com/yannickcr/eslint-plugin-react/issues/1520
-    // eslint-disable-next-line react/no-unused-prop-types
-    width: string,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    className: '',
-    disabled: false,
-    onChange: () => {},
-    onToggle: () => {},
-    resetValue: false,
-    placeholder: null,
-    value: null,
-    width: '100%',
-  };
 
   /**
    * getDerivedStateFromProps
@@ -84,15 +48,17 @@ class Select extends PureComponent {
 
   /**
    * Component lifecycle method
-   * Once the component is mounted, checks if a value is provided
-   * to the component to initialize the displayed value on the Select.
+   *
+   * Once the component is mounted, checks if the component is controlled i.e. a value is provided
+   * to the component to initialize the displayed value on the Select
    * Otherwise, if a placeholder is provided, no value is initialized to display
    * the placeholder at the render.
    */
   componentDidMount() {
-    const { children, value, placeholder } = this.props;
+    const { children } = this.props;
 
-    if (value) {
+    if (this.isControlled('value')) {
+      const value = this.getControllableValue('value');
       const isMatchingOption = children.filter(option => option.props.value === value).length === 1;
 
       if (isMatchingOption) {
@@ -100,7 +66,7 @@ class Select extends PureComponent {
       } else {
         this.initializeValue();
       }
-    } else if (!placeholder) {
+    } else if (!this.isControlled('placeholder')) {
       this.initializeValue();
     }
   }
@@ -118,6 +84,8 @@ class Select extends PureComponent {
   }
 
   /**
+   * Uncontrolled case
+   *
    * Initialize in the state the value displayed on the select
    * Takes the first option available in the children props
    *
@@ -135,7 +103,89 @@ class Select extends PureComponent {
   };
 
   /**
-   * Toogle Menu
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
+   */
+  isControlled = prop => {
+    const props = this.props;
+
+    return props.hasOwnProperty(prop);
+  };
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => {
+    const props = this.props;
+    const state = this.state;
+
+    return this.isControlled(key) ? props[key] : state[key];
+  };
+
+  /**
+   * Callback triggered on item selection
+   * Triggers callback if provided and updates state if is uncontrolled
+   *
+   * @param {Event} event
+   * @param {string} value
+   *
+   */
+  handleSelected = (event, item) => {
+    event.persist();
+    const prevValue = this.getControllableValue('value');
+
+    if (this.isControlled('value')) {
+      this.onSelectActions(item, prevValue, event);
+    } else {
+      this.setState({ value: item }, () => {
+        this.onSelectActions(item, prevValue, event);
+      });
+    }
+  };
+
+  /**
+   * Closes the select on outside click and triggers callback of parent
+   *
+   */
+  onClickOutside = () => {
+    const { onToggle } = this.props;
+
+    this.setState(
+      {
+        displayMenu: false,
+      },
+      () => {
+        onToggle && onToggle(false);
+      },
+    );
+  };
+
+  /**
+   * Triggers callback (if provided) on value change by click
+   *
+   * @param {Event} event
+   * @param {string} value
+   *
+   */
+  onSelectActions = (value, prevValue, event) => {
+    if (prevValue !== value) {
+      const { onChange } = this.props;
+      onChange && onChange(value);
+    }
+
+    this.toggleMenu(event);
+  };
+
+  /**
+   * Toggles the menu by updating the boolean to its opposite value
+   *
    */
   toggleMenu = event => {
     event.preventDefault();
@@ -144,7 +194,6 @@ class Select extends PureComponent {
 
     this.setState(
       prevState => ({
-        ...prevState,
         displayMenu: !prevState.displayMenu,
       }),
       () => {
@@ -153,26 +202,11 @@ class Select extends PureComponent {
     );
   };
 
-  /**
-   * Handle Selected
-   *
-   * @param {string} value
-   *
-   */
-  handleSelected(event, value) {
-    event.persist();
-    const { onChange } = this.props;
+  triggerRef = ref => {
+    const contentWidth = ref && ref.children[0].offsetWidth;
 
-    this.setState(
-      {
-        value,
-      },
-      () => {
-        onChange && onChange(value);
-        this.toggleMenu(event);
-      },
-    );
-  }
+    this.setState({ contentWidth: `${contentWidth}px` });
+  };
 
   /**
    * Renders the component.
@@ -180,60 +214,139 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className, disabled } = this.props;
-    const { displayMenu, placeholder, value } = this.state;
+    const { children, className, disabled, modifiers } = this.props;
+    const { contentWidth, displayMenu } = this.state;
+    const hasPlaceholder = this.isControlled('placeholder');
+    const value = this.getControllableValue('value');
 
     return (
       <div className={className}>
-        <Header
-          onClick={!disabled ? this.toggleMenu : null}
-          disabled={disabled}
-          aria-haspopup="true"
-          aria-expanded={displayMenu}
-        >
-          {/* if placeholder is defined display it, otherwise use the value of the first option */}
-          {placeholder && !value
-            ? placeholder
-            : Children.map(children, child => (child.props.value === value ? child : null))}
-        </Header>
-        <PoseGroup>
-          {displayMenu && (
-            <MenuAnimation key="Menu" role="menu">
+        <Popover
+          animationProps={{
+            enter: {
+              opacity: 1,
+              scaleY: 1,
+              transition: {
+                scaleY: { ease: 'anticipate', duration: 150 },
+                default: { duration: 150 },
+              },
+            },
+            exit: {
+              opacity: 0,
+              scaleY: 0,
+              transition: { duration: 150 },
+            },
+          }}
+          content={
+            <Menu>
               {Children.map(children, child => (
                 <MenuItem
                   key={child}
                   role="menuitem"
                   onClick={event => this.handleSelected(event, child.props.value)}
+                  isSelected={child.props.value === value}
                 >
                   {child}
                 </MenuItem>
               ))}
-            </MenuAnimation>
-          )}
-        </PoseGroup>
+            </Menu>
+          }
+          contentWrapperStyle={{
+            marginTop: '0.4rem',
+          }}
+          isOpen={displayMenu}
+          modifiers={modifiers}
+          onClickOutside={this.onClickOutside}
+          triggerRef={this.triggerRef}
+          width={contentWidth}
+        >
+          <Header
+            onClick={!disabled ? this.toggleMenu : null}
+            disabled={disabled}
+            aria-haspopup="true"
+            aria-expanded={displayMenu}
+          >
+            <HeaderContent>
+              {/* if placeholder is defined display it, otherwise use the value of the first option */}
+              {hasPlaceholder && !value
+                ? this.getControllableValue('placeholder')
+                : Children.map(children, child => (child.props.value === value ? child : null))}
+            </HeaderContent>
+          </Header>
+        </Popover>
       </div>
     );
   }
 }
 
 /**
- * Animation
+ * PropTypes Validation
  */
-const MenuAnimation = posed(Menu)({
-  enter: {
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      scaleY: { ease: 'anticipate', duration: 150 },
-      default: { duration: 150 },
-    },
-  },
-  exit: {
-    opacity: 0,
-    scaleY: 0,
-    transition: { duration: 150 },
-  },
-});
+const { bool, func, node, object, string } = PropTypes;
+Select.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: node,
+
+  /**
+   * Prop needed by styled components
+   */
+  className: string,
+
+  /**
+   * If the select should be disabled or not
+   */
+  disabled: bool,
+
+  /**
+   * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
+   */
+  modifiers: object,
+
+  /**
+   * Callback fired when an element of the <Select /> is selected
+   */
+  onChange: func,
+
+  /**
+   * Callback fired when the <Select /> is toggled (becomes closed or open)
+   */
+  onToggle: func,
+
+  /**
+   * Placeholder of the <Select /> component in the header
+   */
+  placeholder: string,
+
+  /**
+   * If select value should be reset to null
+   */
+  resetValue: bool,
+
+  /**
+   * Selected value identifier
+   */
+  value: string,
+
+  /**
+   * CSS width of the component
+   */
+  // https://github.com/yannickcr/eslint-plugin-react/issues/1520
+  // eslint-disable-next-line react/no-unused-prop-types
+  width: string,
+};
+
+/**
+ * Default props
+ */
+Select.defaultProps = {
+  children: null,
+  className: '',
+  disabled: false,
+  resetValue: false,
+  width: '100%',
+};
 
 export default styled(Select)`
   position: relative;

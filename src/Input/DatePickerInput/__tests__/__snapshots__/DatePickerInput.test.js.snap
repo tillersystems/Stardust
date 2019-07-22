@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DatePickerInput /> should render without a problem 1`] = `
+.c2 {
+  display: inline-block;
+  width: inherit;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,10 +59,6 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
 .c4:focus,
 .c4:active {
   outline: none;
-}
-
-.c2 {
-  display: inline-block;
 }
 
 .c0 {

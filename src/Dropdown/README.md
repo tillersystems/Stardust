@@ -13,22 +13,24 @@ import { Dropdown } from '@tillersystems/stardust';
 - `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
 - `className` - Add a text aside in the select next the selected value.
 - `itemCss` - Css provided to each item of the dropdown. Must use `css` method from styled-components.
+- `modifiers` - Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
 - `noResultLabel` - Label to display when no result found.
 - `onToggle` - Callback called when Dropdown is toggled.
-- `searchable` - A Dropdown may be searchable.
-- `searchBarPlacholder` - SearchBar input placeholder.
+- `searchable` - Whether the dropdown is searchable.
+- `searchBarPlaceholder` - SearchBar input placeholder.
 - `title` - Dropdown title.
 
-| propName              |  propType  | defaultValue | isRequired |
-| --------------------- | :--------: | :----------: | :--------: |
-| `children`            |   `node`   |              |     \*     |
-| `className`           |  `string`  |    `null`    |     -      |
-| `itemCss`             |  `array`   |    `null`    |     -      |
-| `noResultLabel`       |   `node`   |    `null`    |     -      |
-| `onToggle`            | `function` |  `() => {}`  |     -      |
-| `searchable`          |   `bool`   |   `false`    |     -      |
-| `searchBarPlacholder` |  `string`  |     `''`     |     -      |
-| `title`               |   `node`   |              |     \*     |
+| propName               |  propType  | defaultValue | isRequired |
+| ---------------------- | :--------: | :----------: | :--------: |
+| `children`             |   `node`   |              |     \*     |
+| `className`            |  `string`  |    `null`    |     -      |
+| `itemCss`              |  `array`   |    `null`    |     -      |
+| `modifiers`            |  `object`  |    `null`    |     -      |
+| `noResultLabel`        |   `node`   |    `null`    |     -      |
+| `onToggle`             | `function` |  `() => {}`  |     -      |
+| `searchable`           |   `bool`   |   `false`    |     -      |
+| `searchBarPlaceholder` |  `string`  |     `''`     |     -      |
+| `title`                |   `node`   |              |     \*     |
 
 ### Example
 

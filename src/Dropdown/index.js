@@ -1,83 +1,67 @@
-import React, { Children, PureComponent, createRef } from 'react';
-import { Portal } from 'react-portal';
+import React, { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import posed, { PoseGroup } from 'react-pose';
 import styled from 'styled-components';
-import onClickOutside from 'react-onclickoutside';
 
+import Popover from '../Popover';
 import SearchBar from './SearchBar';
-import { Header, Menu, MenuItem, SearchInputContainer } from './elements';
-
-const { array, bool, func, node, string } = PropTypes;
+import { Header, HeaderContent, MenuItem, SearchInputContainer } from './elements';
 
 /**
- * Dropdown
+ * A Dropdown displays content through its children prop that must be components wrapping text.
+ * The trigger is a button displaying text provided by the prop `title`
  *
- * This component is in charge of displaying
- * a dropdown
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // Add a text aside in the select next the selected value.
- * @param {array} itemCss // css provided to each item of the dropdown. Must use `css` method from styled-components.
- * @param {node} noResultLabel // Label to display when no result found.
- * @param {function} onToggle // Callback called when Dropdown is toggled.
- * @param {bool} searchable // Whether the dropdown is searchable.
- * @param {string} searchBarPlaceholder // SearchBar input placeholder.
- * @param {node} title // Dropdown title.
+ * See README.md and storybook for more documentation
  *
  * @return {jsx}
  */
 
 class Dropdown extends PureComponent {
-  /** Prop types. */
-  static propTypes = {
-    children: node.isRequired,
-    className: string,
-    itemCss: array,
-    noResultLabel: string,
-    onToggle: func,
-    searchable: bool,
-    searchBarPlaceholder: string,
-    title: node.isRequired,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-    itemCss: null,
-    noResultLabel: null,
-    onToggle: () => {},
-    searchable: false,
-    searchBarPlaceholder: '',
-  };
-
   /** Internal state. */
   state = {
     displayMenu: false,
-    menuPosition: {
-      width: 100,
-      top: 0,
-      left: 0,
-    },
     searchKeyword: '',
   };
-
-  /** Create a ref for the dropdown header. */
-  dropdownHeaderRef = createRef();
 
   /** preserve the initial state in a new object. */
   baseState = this.state;
 
   /**
-   * Handle Click
+   * Handle Search
    */
-  handleClick = () => {
-    this.toggleMenu();
-    this.setMenuPosition();
+  handleSearch = searchTerm => {
+    this.setState({ ...this.state, searchKeyword: searchTerm });
   };
 
   /**
-   * Toogle Menu
+   * Closes the select on outside click and triggers callback of parent
+   *
+   */
+  onClickOutside = () => {
+    const { onToggle } = this.props;
+
+    this.setState(
+      {
+        displayMenu: false,
+      },
+      () => {
+        onToggle && onToggle(false);
+      },
+    );
+  };
+
+  /**
+   * Reset Search Input
+   * Clear search input value
+   *
+   */
+  resetSearchInput = () => {
+    this.setState(this.baseState);
+  };
+
+  /**
+   * Toggle Menu display and clear search input.
+   * Triggers callback if parent provided it
+   *
    */
   toggleMenu = () => {
     const { displayMenu } = this.state;
@@ -85,7 +69,6 @@ class Dropdown extends PureComponent {
 
     this.setState(
       prevState => ({
-        ...prevState,
         displayMenu: !prevState.displayMenu,
       }),
       () => {
@@ -99,51 +82,15 @@ class Dropdown extends PureComponent {
   };
 
   /**
-   * Get header position and fill state with menu positions values
+   * Triggered when ref to the trigger has been set.
+   * Allows us to retrieve the width of the trigger to set it to the content wrapper
+   *
    */
-  setMenuPosition = () => {
-    const { width, height, top, left } = this.dropdownHeaderRef.current.getBoundingClientRect();
+  triggerRef = ref => {
+    const contentWidth = ref && ref.offsetWidth;
 
-    const marginTop = 4;
-    const outerHeight = height + marginTop;
-    const topWithScroll = top + pageYOffset;
-    const menuPositionTop = topWithScroll + outerHeight;
-
-    const menuPositionleft = left + pageXOffset;
-
-    const menuPosition = {
-      width,
-      top: menuPositionTop,
-      left: menuPositionleft,
-    };
-
-    this.setState({ menuPosition });
+    this.setState({ contentWidth: `${contentWidth}px` });
   };
-
-  /**
-   * Handle Click Outside
-   */
-  handleClickOutside = () => {
-    this.toggleMenu(false);
-
-    // Clear input value
-    this.resetSearchInput();
-  };
-
-  /**
-   * Handle Search
-   */
-  handleSearch = searchTerm => {
-    this.setState({ ...this.state, searchKeyword: searchTerm });
-  };
-
-  /**
-   * Reset Search Input
-   * Clear input value
-   */
-  resetSearchInput() {
-    this.setState(this.baseState);
-  }
 
   /**
    * Renders the component.
@@ -154,13 +101,15 @@ class Dropdown extends PureComponent {
     const {
       children,
       className,
+      headerStyle,
       itemCss,
+      modifiers,
       noResultLabel,
       searchable,
       searchBarPlaceholder,
       title,
     } = this.props;
-    const { displayMenu, searchKeyword, menuPosition } = this.state;
+    const { contentWidth, displayMenu, searchKeyword } = this.state;
 
     // Filter items based on search key word
     // TODO: when need to refactor this later, children may have some children
@@ -173,77 +122,141 @@ class Dropdown extends PureComponent {
 
     return (
       <div className={className} data-testid="dropdown">
-        <Header
-          onClick={this.handleClick}
-          aria-haspopup="true"
-          aria-expanded={displayMenu}
-          data-testid="dropdown-button"
-          ref={this.dropdownHeaderRef}
-        >
-          {title}
-        </Header>
-        <Portal>
-          <PoseGroup flipMove={false}>
-            {displayMenu && (
-              <MenuAnimation
-                key="Menu"
-                role="menu"
-                position={menuPosition}
-                className="ignore-react-onclickoutside"
-              >
-                {searchable && (
-                  <SearchInputContainer>
-                    <SearchBar
-                      placeholder={searchBarPlaceholder}
-                      onChange={this.handleSearch}
-                      value={searchKeyword}
-                    />
-                  </SearchInputContainer>
-                )}
+        <Popover
+          content={
+            <>
+              {searchable && (
+                <SearchInputContainer>
+                  <SearchBar
+                    placeholder={searchBarPlaceholder}
+                    onChange={this.handleSearch}
+                    value={searchKeyword}
+                  />
+                </SearchInputContainer>
+              )}
 
-                {searchable &&
-                  (FilteredItems.length !== 0
-                    ? FilteredItems.map(child => (
-                        <MenuItem key={child.key} role="menuitem" css={itemCss}>
-                          {child}
-                        </MenuItem>
-                      ))
-                    : noResultLabel && <MenuItem role="menuitem">{noResultLabel}</MenuItem>)}
-                {!searchable &&
-                  Children.map(children, child => (
-                    <MenuItem key={child} role="menuitem" css={itemCss}>
-                      {child}
-                    </MenuItem>
-                  ))}
-              </MenuAnimation>
-            )}
-          </PoseGroup>
-        </Portal>
+              {searchable &&
+                (FilteredItems.length !== 0
+                  ? FilteredItems.map(child => (
+                      <MenuItem
+                        key={child.key}
+                        role="menuitem"
+                        css={itemCss}
+                        searchable={searchable}
+                      >
+                        {child}
+                      </MenuItem>
+                    ))
+                  : noResultLabel && (
+                      <MenuItem role="menuitem" css={itemCss}>
+                        {noResultLabel}
+                      </MenuItem>
+                    ))}
+              {!searchable &&
+                Children.map(children, child => (
+                  <MenuItem key={child} role="menuitem" css={itemCss}>
+                    {child}
+                  </MenuItem>
+                ))}
+            </>
+          }
+          contentWrapperStyle={{
+            marginTop: '0.4rem',
+          }}
+          isOpen={displayMenu}
+          modifiers={modifiers}
+          onClickOutside={this.onClickOutside}
+          triggerRef={this.triggerRef}
+          width={contentWidth}
+        >
+          <Header
+            onClick={this.toggleMenu}
+            aria-haspopup="true"
+            aria-expanded={displayMenu}
+            data-testid="dropdown-button"
+            style={headerStyle}
+          >
+            <HeaderContent>{title}</HeaderContent>
+          </Header>
+        </Popover>
       </div>
     );
   }
 }
 
-/**
- * Animation
- */
-const MenuAnimation = posed(Menu)({
-  enter: {
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      scaleY: { ease: 'anticipate', duration: 150 },
-      default: { duration: 150 },
-    },
-  },
-  exit: {
-    opacity: 0,
-    scaleY: 0,
-    transition: { duration: 150 },
-  },
-});
+const { array, bool, func, object, node, string } = PropTypes;
 
-export default styled(onClickOutside(Dropdown))`
+/**
+ *
+ * PropTypes validation
+ */
+Dropdown.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: node.isRequired,
+
+  /**
+   * Style for header component
+   */
+  headerStyle: object,
+
+  /**
+   * Adds a text aside in the select next the selected value
+   */
+  className: string,
+
+  /**
+   * CSS provided to each item of the dropdown. Must use `css` method from styled-components
+   */
+  itemCss: array,
+
+  /**
+   * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
+   */
+  modifiers: object,
+
+  /**
+   * Label to display when no result found
+   */
+  noResultLabel: string,
+
+  /**
+   * Callback called when Dropdown is toggled
+   */
+  onToggle: func,
+
+  /**
+   * Whether the dropdown is searchable.
+   */
+  searchable: bool,
+
+  /**
+   * SearchBar input placeholder.
+   */
+  searchBarPlaceholder: string,
+
+  /**
+   * Dropdown title
+   */
+  title: node.isRequired,
+};
+
+/**
+ * Default props
+ */
+Dropdown.defaultProps = {
+  className: '',
+  headerStyle: null,
+  itemCss: null,
+  modifiers: null,
+  noResultLabel: null,
+  onToggle: () => {},
+  searchable: false,
+  searchBarPlaceholder: '',
+};
+
+export default styled(Dropdown)`
   position: relative;
   user-select: none;
   height: 100%;

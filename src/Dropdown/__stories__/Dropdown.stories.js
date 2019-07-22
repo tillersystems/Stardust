@@ -5,7 +5,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 import { css } from 'styled-components';
 
-import { Dropdown, CheckBox } from '../..';
+import { Dropdown, CheckBox, ScrollBox } from '../..';
 import DropdownReadme from '../README.md';
 
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -51,22 +51,28 @@ storiesOf('Dropdown', module)
     const onClickAction = action('onChange');
     const Searchable = boolean('Searchable', false, 'State');
     const NoresultLabel = text('No Result Label', 'No stores found ...', 'State');
-    const SearchBarPlacholder = text('Search Bar Placholder', 'Search ...', 'State');
+    const SearchBarPlaceholder = text('Search Bar Placholder', 'Search ...', 'State');
     const Title = text('Title', 'All stores', 'State');
 
     return (
-      <State store={store}>
-        {state => (
-          <div style={{ width: '25rem' }}>
+      <ScrollBox>
+        <State store={store}>
+          {state => (
             <Dropdown
+              headerStyle={{ width: '25rem' }}
+              itemCss={itemCss}
+              modifiers={{
+                preventOverflow: {
+                  escapeWithReference: true,
+                },
+              }}
+              noResultLabel={NoresultLabel}
               title={Title}
               searchable={Searchable}
-              noResultLabel={NoresultLabel}
-              searchBarPlacholder={SearchBarPlacholder}
-              itemCss={itemCss}
+              searchBarPlaceholder={SearchBarPlaceholder}
             >
               <CheckBox
-                defaultChecked={state.streetBangkokBastille}
+                checked={state.streetBangkokBastille}
                 value="Street Bangkok Bastille"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -76,7 +82,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok Bastille
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokMarais}
+                checked={state.streetBangkokMarais}
                 value="Street Bangkok Marais"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -86,7 +92,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok Marais
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokCanal}
+                checked={state.streetBangkokCanal}
                 value="Street Bangkok Canal"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -96,7 +102,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok Canal
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokMontorgeuil}
+                checked={state.streetBangkokMontorgeuil}
                 value="Street Bangkok Montorgeuil"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -106,7 +112,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok Montorgeuil
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokSentier}
+                checked={state.streetBangkokSentier}
                 value="Street Bangkok Sentier"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -116,7 +122,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok Sentier
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokStlouis}
+                checked={state.streetBangkokStlouis}
                 value="Street Bangkok St louis"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -126,7 +132,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok St louis
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokStMichel}
+                checked={state.streetBangkokStMichel}
                 value="Street Bangkok St Michel"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -136,7 +142,7 @@ storiesOf('Dropdown', module)
                 Street Bangkok St Michel
               </CheckBox>
               <CheckBox
-                defaultChecked={state.streetBangkokOberkampf}
+                checked={state.streetBangkokOberkampf}
                 value="Street Bangkok Oberkampf"
                 onChange={event =>
                   onClickAction(event.target.value, event.target.checked) ||
@@ -146,8 +152,8 @@ storiesOf('Dropdown', module)
                 Street Bangkok Oberkampf
               </CheckBox>
             </Dropdown>
-          </div>
-        )}
-      </State>
+          )}
+        </State>
+      </ScrollBox>
     );
   });

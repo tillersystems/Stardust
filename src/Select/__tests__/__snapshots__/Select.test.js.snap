@@ -2,72 +2,10 @@
 
 exports[`<Select /> should render without a problem 1`] = `
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  padding: 0.8rem 1.2rem;
-  cursor: pointer;
-  text-align: left;
-  font-size: 1.4rem;
-  border: 1px solid hsl(207,22%,90%);
-  border-radius: 0.4rem;
-  background: linear-gradient( 180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100% );
-  color: hsl(213,17%,20%);
+  display: inline-block;
+  width: inherit;
 }
 
-.c1::after {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  top: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 3px;
-  border-left-width: 3px;
-  border-bottom: 3px solid hsl(207,13%,45%);
-}
-
-.c1::before {
-  content: '';
-  position: absolute;
-  right: 1.4rem;
-  bottom: 37%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 3px;
-  border-right-width: 3px;
-  border-top: 3px solid hsl(207,13%,45%);
-}
-
-.c0 {
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: auto;
-  height: 4rem;
-}
-
-<div
-  class="c0"
->
-  <button
-    aria-expanded="false"
-    aria-haspopup="true"
-    class="c1"
-  >
-    placeholder
-  </button>
-</div>
-`;
-
-exports[`<Select /> should render without a problem when disabled 1`] = `
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,7 +13,8 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   display: flex;
   height: 100%;
   width: 100%;
-  padding: 0.8rem 1.2rem;
+  position: relative;
+  padding: 0.8rem 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: 1.4rem;
@@ -102,13 +41,26 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   content: '';
   position: absolute;
   right: 1.4rem;
-  bottom: 37%;
+  bottom: 33%;
   width: 0;
   height: 0;
   border: 0 solid transparent;
   border-left-width: 3px;
   border-right-width: 3px;
   border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.2rem;
+  padding-right: 2rem;
 }
 
 .c0 {
@@ -121,7 +73,101 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   height: 4rem;
 }
 
-.c0 .c1 {
+<div
+  class="c0"
+>
+  <span
+    class="c1"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        placeholder
+      </div>
+    </button>
+  </span>
+</div>
+`;
+
+exports[`<Select /> should render without a problem when disabled 1`] = `
+.c1 {
+  display: inline-block;
+  width: inherit;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.4rem;
+  border: 1px solid hsl(207,22%,90%);
+  border-radius: 0.4rem;
+  background: linear-gradient( 180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100% );
+  color: hsl(213,17%,20%);
+}
+
+.c3::after {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  top: 37%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 3px;
+  border-left-width: 3px;
+  border-bottom: 3px solid hsl(207,13%,45%);
+}
+
+.c3::before {
+  content: '';
+  position: absolute;
+  right: 1.4rem;
+  bottom: 33%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.2rem;
+  padding-right: 2rem;
+}
+
+.c0 {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  height: 4rem;
+}
+
+.c0 .c2 {
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -129,13 +175,21 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
 <div
   class="c0"
 >
-  <button
-    aria-expanded="false"
-    aria-haspopup="true"
-    class="c1 c2"
-    disabled=""
+  <span
+    class="c1"
   >
-    placeholder
-  </button>
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="c2 c3"
+      disabled=""
+    >
+      <div
+        class="c4"
+      >
+        placeholder
+      </div>
+    </button>
+  </span>
 </div>
 `;

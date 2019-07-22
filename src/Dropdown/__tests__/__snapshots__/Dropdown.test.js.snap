@@ -2,12 +2,18 @@
 
 exports[`<Dropdown /> should render without a problem 1`] = `
 .c1 {
+  display: inline-block;
+  width: inherit;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
   width: 100%;
+  position: relative;
   padding: 0.8rem 1.2rem;
   cursor: pointer;
   text-align: left;
@@ -18,7 +24,7 @@ exports[`<Dropdown /> should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c1::after {
+.c2::after {
   content: '';
   position: absolute;
   right: 1.4rem;
@@ -31,17 +37,30 @@ exports[`<Dropdown /> should render without a problem 1`] = `
   border-bottom: 3px solid hsl(207,13%,45%);
 }
 
-.c1::before {
+.c2::before {
   content: '';
   position: absolute;
   right: 1.4rem;
-  bottom: 37%;
+  bottom: 33%;
   width: 0;
   height: 0;
   border: 0 solid transparent;
   border-left-width: 3px;
   border-right-width: 3px;
   border-top: 3px solid hsl(207,13%,45%);
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2.2rem;
+  padding-right: 2rem;
 }
 
 .c0 {
@@ -57,13 +76,21 @@ exports[`<Dropdown /> should render without a problem 1`] = `
   class="c0"
   data-testid="dropdown"
 >
-  <button
-    aria-expanded="false"
-    aria-haspopup="true"
+  <span
     class="c1"
-    data-testid="dropdown-button"
   >
-    title
-  </button>
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="c2"
+      data-testid="dropdown-button"
+    >
+      <div
+        class="c3"
+      >
+        title
+      </div>
+    </button>
+  </span>
 </div>
 `;

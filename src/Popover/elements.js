@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { transparentize } from 'polished';
 
 export const ARROW_SIZE = 8;
 export const CONTENT_PADDING = 1.8;
@@ -18,7 +19,7 @@ export const Arrow = styled.span`
       left: calc(50% - ${ARROW_SIZE}px);
       margin-bottom: 0;
       margin-top: 0;
-      text-shadow: 1px -5px 5px hsla(0, 0%, 0%, 0.1);
+      text-shadow: 1px -5px 5px ${({ theme: { palette } }) => transparentize(0.9, palette.black)};
       transform: rotate(180deg);
     `}
 
@@ -29,7 +30,7 @@ export const Arrow = styled.span`
       left: calc(50% - ${ARROW_SIZE}px);
       margin-bottom: 0;
       margin-top: 0;
-      text-shadow: 1px -4px 6px hsla(0, 0%, 0%, 0.1);
+      text-shadow: 1px -4px 6px ${({ theme: { palette } }) => transparentize(0.9, palette.black)};
       transform: rotate(0deg);
     `}
 
@@ -40,7 +41,7 @@ export const Arrow = styled.span`
       top: calc(50% - ${ARROW_SIZE}px);
       margin-left: 0;
       margin-right: 0;
-      text-shadow: 1px -5px 5px hsla(0, 0%, 0%, 0.1);
+      text-shadow: 1px -5px 5px ${({ theme: { palette } }) => transparentize(0.9, palette.black)};
       transform: rotate(90deg);
     `}
 
@@ -51,7 +52,7 @@ export const Arrow = styled.span`
       top: calc(50% - ${ARROW_SIZE}px);
       margin-left: 0;
       margin-right: 0;
-      text-shadow: 1px -5px 5px hsla(0, 0%, 0%, 0.1);
+      text-shadow: 1px -5px 5px ${({ theme: { palette } }) => transparentize(0.9, palette.black)};
       transform: rotate(-90deg);
     `}
 `;
@@ -60,9 +61,10 @@ export const PopoverContentWrapper = styled.div`
   background: ${({ theme: { palette } }) => palette.white};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 
-  box-shadow: 0 0.2rem 0.6rem 0 hsla(0, 0%, 0%, 0.1), 0 0.2rem 0.6rem 0 hsla(206, 23%, 69%, 0.1),
+  box-shadow: 0 0.2rem 0.6rem 0 ${({ theme: { palette } }) =>
+    transparentize(0.9, palette.black)}, 0 0.2rem 0.6rem 0 ${({ theme: { palette } }) =>
+  transparentize(0.9, palette.mediumGrey)},
     0 0 0 0.05rem ${({ theme: { palette } }) => palette.lightGrey};
-  padding: ${CONTENT_PADDING}rem;
   position: relative;
 
   width: ${({ width }) => width};
@@ -100,4 +102,5 @@ export const PopoverContentWrapper = styled.div`
 
 export const PopoverTriggerWrapper = styled.span`
   display: inline-block;
+  width: inherit;
 `;

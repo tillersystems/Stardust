@@ -5,6 +5,7 @@ export const Header = styled.button`
 
   height: 100%;
   width: 100%;
+  position: relative;
 
   padding: 0.8rem 1.2rem;
 
@@ -42,7 +43,7 @@ export const Header = styled.button`
 
     position: absolute;
     right: 1.4rem;
-    bottom: 37%;
+    bottom: 33%;
 
     width: 0;
     height: 0;
@@ -52,6 +53,13 @@ export const Header = styled.button`
     border-right-width: 3px;
     border-top: 3px solid ${({ theme: { palette } }) => palette.spaceGrey};
   }
+`;
+
+export const HeaderContent = styled.div`
+  align-items: center;
+  display: flex;
+  height: 2.2rem;
+  padding-right: 2rem;
 `;
 
 export const Menu = styled.ul`

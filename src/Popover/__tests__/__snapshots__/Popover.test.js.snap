@@ -3,6 +3,7 @@
 exports[`<Popover /> should render without a problem 1`] = `
 .c0 {
   display: inline-block;
+  width: inherit;
 }
 
 <span

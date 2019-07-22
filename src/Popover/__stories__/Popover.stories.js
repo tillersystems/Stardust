@@ -51,8 +51,12 @@ storiesOf('Popover', module)
         <State store={store}>
           <Popover
             isOpen={store.get('isOpen')}
-            content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes sur
-          la période sélectionnée."
+            content={
+              <div style={{ padding: '1.8rem' }}>
+                Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+                sur la période sélectionnée
+              </div>
+            }
             hasArrow={hasArrowValue}
             modifiers={
               isOverflowingContainer
