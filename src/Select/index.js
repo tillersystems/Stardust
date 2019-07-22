@@ -214,7 +214,7 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className, disabled, modifiers } = this.props;
+    const { children, className, disabled, modifiers, triggerWrapperCss } = this.props;
     const { contentWidth, displayMenu } = this.state;
     const hasPlaceholder = this.isControlled('placeholder');
     const value = this.getControllableValue('value');
@@ -252,12 +252,14 @@ class Select extends PureComponent {
             </Menu>
           }
           contentWrapperStyle={{
+            marginBottom: '0.4rem',
             marginTop: '0.4rem',
           }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
+          triggerWrapperCss={triggerWrapperCss}
           width={contentWidth}
         >
           <Header
@@ -282,7 +284,7 @@ class Select extends PureComponent {
 /**
  * PropTypes Validation
  */
-const { bool, func, node, object, string } = PropTypes;
+const { array, bool, func, node, object, string } = PropTypes;
 Select.propTypes = {
   /**
    * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
@@ -325,6 +327,11 @@ Select.propTypes = {
   resetValue: bool,
 
   /**
+   * css provided to the trigger wrapper. Must use `css` method from styled-components.
+   */
+  triggerWrapperCss: array,
+
+  /**
    * Selected value identifier
    */
   value: string,
@@ -345,6 +352,7 @@ Select.defaultProps = {
   className: '',
   disabled: false,
   resetValue: false,
+  triggerWrapperCss: null,
   width: '100%',
 };
 
