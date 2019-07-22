@@ -24,3 +24,13 @@ console.error = message => {
 
 // Sets the globals for easier access.
 global.render = render;
+
+// Mock document.createRange, createTange actually won't work inside JSDOM
+global.document.createRange = () => ({
+  setStart: () => {},
+  setEnd: () => {},
+  commonAncestorContainer: {
+    nodeName: 'BODY',
+    ownerDocument: document,
+  },
+});
