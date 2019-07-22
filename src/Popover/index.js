@@ -19,11 +19,16 @@ class Popover extends PureComponent {
   /**
    * Saves the reference to the content of the popover. Allows us to keep the reference
    * somewhere when needed (check if click is inside the element)
+   * Also call a callback if provided by the parent to move up the reference, allowing the parent
+   * to have the reference too
    *
    * @param {HTMLElement} node - node of content element
    */
   setContentRef = node => {
+    const { contentRef } = this.props;
+
     this.popoverContent = node;
+    contentRef && contentRef(node);
   };
 
   /**
@@ -180,6 +185,11 @@ Popover.propTypes = {
    * Displayed in a portal according to `isOpen` value
    */
   content: oneOfType([string, node]).isRequired,
+
+  /**
+   * Callback ref of content element
+   */
+  contentRef: func,
 
   /**
    * Custom style for content wrapper
