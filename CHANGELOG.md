@@ -1,3 +1,9 @@
+# [4.3.0](https://github.com/tillersystems/Stardust/compare/v4.2.1...v4.3.0) (2019-07-22)
+
+### Features
+
+- **Notification:** create notification component ([#641](https://github.com/tillersystems/Stardust/issues/641)) ([98f5627](https://github.com/tillersystems/Stardust/commit/98f5627))
+
 ## [4.2.1](https://github.com/tillersystems/Stardust/compare/v4.2.0...v4.2.1) (2019-07-09)
 
 ### Bug Fixes
