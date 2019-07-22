@@ -214,7 +214,7 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className, disabled, modifiers, triggerWrapperCss } = this.props;
+    const { children, className, contentRef, disabled, modifiers, triggerWrapperCss } = this.props;
     const { contentWidth, displayMenu } = this.state;
     const hasPlaceholder = this.isControlled('placeholder');
     const value = this.getControllableValue('value');
@@ -251,6 +251,7 @@ class Select extends PureComponent {
               ))}
             </Menu>
           }
+          contentRef={contentRef}
           contentWrapperStyle={{
             marginBottom: '0.4rem',
             marginTop: '0.4rem',
@@ -295,6 +296,11 @@ Select.propTypes = {
    * Prop needed by styled components
    */
   className: string,
+
+  /**
+   * Callback ref of content element
+   */
+  contentRef: func,
 
   /**
    * If the select should be disabled or not
