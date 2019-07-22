@@ -146,6 +146,7 @@ class Dropdown extends PureComponent {
       searchable,
       searchBarPlaceholder,
       title,
+      usePortal,
     } = this.props;
     const { contentWidth, searchKeyword } = this.state;
     const displayMenu = this.getControllableValue('displayMenu');
@@ -208,6 +209,7 @@ class Dropdown extends PureComponent {
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
+          usePortal={usePortal}
           width={contentWidth}
         >
           <Header
@@ -293,6 +295,11 @@ Dropdown.propTypes = {
    * Dropdown title
    */
   title: node.isRequired,
+
+  /**
+   * Display the content on a portal
+   */
+  usePortal: bool,
 };
 
 /**
@@ -307,6 +314,7 @@ Dropdown.defaultProps = {
   onToggle: () => {},
   searchable: false,
   searchBarPlaceholder: '',
+  usePortal: false,
 };
 
 export default styled(Dropdown)`

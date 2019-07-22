@@ -82,11 +82,10 @@ class Popover extends PureComponent {
   };
 
   /**
-   * Renders the component.
+   * Render content of Popover which is a Popper component
    *
-   * @return {jsx}
    */
-  render() {
+  renderContent = () => {
     const {
       animationProps,
       content,
@@ -96,9 +95,59 @@ class Popover extends PureComponent {
       modifiers,
       placement,
       positionFixed,
-      triggerWrapperCss,
+      usePortal,
       width,
     } = this.props;
+
+    let popoverContent;
+
+    const popper = (
+      <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
+        {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => (
+          <PoseGroup flipMove={false}>
+            {isOpen && (
+              <PopoverContentWrapperAnimation
+                key="popover"
+                data-testid="popover"
+                data-out-of-boundaries={outOfBoundaries || undefined}
+                data-placement={placement}
+                animationProps={animationProps}
+                ref={node => {
+                  this.setContentRef(node);
+                  popperRef(node);
+                }}
+                style={{ ...style, ...contentWrapperStyle }}
+                width={width}
+              >
+                {content}
+                {hasArrow && placement && (
+                  <Arrow placement={placement} {...arrowProps}>
+                    ▲
+                  </Arrow>
+                )}
+              </PopoverContentWrapperAnimation>
+            )}
+          </PoseGroup>
+        )}
+      </Popper>
+    );
+
+    if (usePortal) {
+      popoverContent = <Portal>{popper}</Portal>;
+    } else {
+      popoverContent = popper;
+    }
+
+    return popoverContent;
+  };
+
+  /**
+   * Renders the component.
+   *
+   * @return {jsx}
+   */
+  render() {
+    const { triggerWrapperCss } = this.props;
 
     return (
       <Manager>
@@ -119,48 +168,17 @@ class Popover extends PureComponent {
             );
           }}
         </Reference>
-        <Portal>
-          <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
-            {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => {
-              return (
-                <PoseGroup flipMove={false}>
-                  {isOpen && (
-                    <PopoverContentWrapperAnimation
-                      key="popover"
-                      data-testid="popover"
-                      data-out-of-boundaries={outOfBoundaries || undefined}
-                      data-placement={placement}
-                      animationProps={animationProps}
-                      ref={node => {
-                        this.setContentRef(node);
-                        popperRef(node);
-                      }}
-                      style={{ ...style, ...contentWrapperStyle }}
-                      width={width}
-                    >
-                      {content}
-                      {hasArrow && placement && (
-                        <Arrow placement={placement} {...arrowProps}>
-                          ▲
-                        </Arrow>
-                      )}
-                    </PopoverContentWrapperAnimation>
-                  )}
-                </PoseGroup>
-              );
-            }}
-          </Popper>
-          <EventListener
-            listeners={[
-              {
-                target: 'document',
-                event: 'click',
-                handler: this.handleDocumentClick,
-                options: true,
-              },
-            ]}
-          />
-        </Portal>
+        {this.renderContent()}
+        <EventListener
+          listeners={[
+            {
+              target: 'document',
+              event: 'click',
+              handler: this.handleDocumentClick,
+              options: true,
+            },
+          ]}
+        />
       </Manager>
     );
   }
@@ -227,6 +245,11 @@ Popover.propTypes = {
   positionFixed: bool,
 
   /**
+   * Display the content on a portal
+   */
+  usePortal: bool,
+
+  /**
    * Callback ref of trigger element
    */
   triggerRef: func,
@@ -248,6 +271,7 @@ Popover.propTypes = {
 Popover.defaultProps = {
   animationProps: null,
   contentWrapperStyle: null,
+  contentRef: null,
   hasArrow: false,
   isOpen: false,
   modifiers: {},
@@ -256,6 +280,7 @@ Popover.defaultProps = {
   positionFixed: false,
   triggerRef: null,
   triggerWrapperCss: null,
+  usePortal: false,
   width: 'auto',
 };
 

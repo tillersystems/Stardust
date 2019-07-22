@@ -214,7 +214,15 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className, contentRef, disabled, modifiers, triggerWrapperCss } = this.props;
+    const {
+      children,
+      className,
+      contentRef,
+      disabled,
+      modifiers,
+      triggerWrapperCss,
+      usePortal,
+    } = this.props;
     const { contentWidth, displayMenu } = this.state;
     const hasPlaceholder = this.isControlled('placeholder');
     const value = this.getControllableValue('value');
@@ -261,6 +269,7 @@ class Select extends PureComponent {
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
           triggerWrapperCss={triggerWrapperCss}
+          usePortal={usePortal}
           width={contentWidth}
         >
           <Header
@@ -338,6 +347,11 @@ Select.propTypes = {
   triggerWrapperCss: array,
 
   /**
+   * Display the content on a portal
+   */
+  usePortal: bool,
+
+  /**
    * Selected value identifier
    */
   value: string,
@@ -359,6 +373,7 @@ Select.defaultProps = {
   disabled: false,
   resetValue: false,
   triggerWrapperCss: null,
+  usePortal: false,
   width: '100%',
 };
 
