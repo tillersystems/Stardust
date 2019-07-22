@@ -27,9 +27,7 @@ const Status = ({ className, status }) => (
     <Icon
       color={status === 'loading' ? Theme.palette.primary.default : Theme.palette.white}
       name={statusToIconName[status]}
-      width={['loading', 'info', 'warning'].includes(status) ? '20px' : '11px'}
-      height={['loading', 'info', 'warning'].includes(status) ? '20px' : '11px'}
-      spin={status === 'loading'}
+      size={['loading', 'info', 'warning'].includes(status) ? '20px' : '11px'}
     />
   </div>
 );

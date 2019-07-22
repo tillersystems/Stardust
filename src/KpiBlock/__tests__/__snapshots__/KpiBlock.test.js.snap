@@ -3,11 +3,6 @@
 exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 .c2 {
   display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
 }
 
 .c4 {
@@ -64,28 +59,25 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   >
     -100.00
      % 
-    <div
+    <svg
+      aria-hidden="true"
       class="c2"
-      data-testid="iconContainer"
+      focusable="false"
       height="20"
+      role="img"
+      viewBox="0 0 512 512"
       width="20"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        data-testid="iconSvg"
-        height="20"
-        style="display: block;"
-        viewBox="0 0 512 512"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <g>
         <path
           d="M256 333L103 180h306z"
-          data-testid="iconSvgPath"
+          data-testid="icon-svg-path"
           fill="hsl(6,79%,65%)"
           fill-rule="evenodd"
         />
-      </svg>
-    </div>
+      </g>
+    </svg>
   </div>
   <div
     class="c3"
@@ -103,11 +95,6 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 .c2 {
   display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
 }
 
 .c4 {
@@ -165,28 +152,25 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
     +
     100.00
      % 
-    <div
+    <svg
+      aria-hidden="true"
       class="c2"
-      data-testid="iconContainer"
+      focusable="false"
       height="20"
+      role="img"
+      viewBox="0 0 512 512"
       width="20"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        data-testid="iconSvg"
-        height="20"
-        style="display: block;"
-        viewBox="0 0 512 512"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <g>
         <path
           d="M256 180l153 153H103z"
-          data-testid="iconSvgPath"
+          data-testid="icon-svg-path"
           fill="hsl(89,53%,52%)"
           fill-rule="evenodd"
         />
-      </svg>
-    </div>
+      </g>
+    </svg>
   </div>
   <div
     class="c3"

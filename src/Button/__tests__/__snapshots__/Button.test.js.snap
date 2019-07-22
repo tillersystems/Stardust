@@ -48,11 +48,6 @@ exports[`<Button /> should render a left icon 1`] = `
 
 .c2 {
   display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
 }
 
 <button
@@ -62,28 +57,25 @@ exports[`<Button /> should render a left icon 1`] = `
   <span
     class="c1"
   >
-    <div
+    <svg
+      aria-hidden="true"
       class="c2"
-      data-testid="iconContainer"
+      focusable="false"
       height="20"
+      role="img"
+      viewBox="0 0 512 512"
       width="20"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        data-testid="iconSvg"
-        height="20"
-        style="display: block;"
-        viewBox="0 0 512 512"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <g>
         <path
           d="M426.667 192v-64c0-11.782-9.552-21.333-21.334-21.333h-42.666V128c0 11.782-9.552 21.333-21.334 21.333S320 139.783 320 128v-21.333H192V128c0 11.782-9.551 21.333-21.333 21.333-11.782 0-21.334-9.55-21.334-21.333v-21.333h-42.666c-11.782 0-21.334 9.55-21.334 21.333v64h341.334zm0 42.667H85.333v192c0 11.782 9.552 21.333 21.334 21.333h298.666c11.782 0 21.334-9.551 21.334-21.333v-192zM192 64h128V42.667c0-11.782 9.551-21.334 21.333-21.334 11.782 0 21.334 9.552 21.334 21.334V64h42.666c35.347 0 64 28.654 64 64v298.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V128c0-35.346 28.653-64 64-64h42.666V42.667c0-11.782 9.552-21.334 21.334-21.334S192 30.885 192 42.667V64z"
-          data-testid="iconSvgPath"
+          data-testid="icon-svg-path"
           fill="hsl(0,100%,100%)"
           fill-rule="evenodd"
         />
-      </svg>
-    </div>
+      </g>
+    </svg>
   </span>
   Text
 </button>
@@ -137,11 +129,6 @@ exports[`<Button /> should render a right icon 1`] = `
 
 .c2 {
   display: inline-block;
-  border-image-source: none;
-  border-image-width: 0;
-  padding: 0;
-  font-size: 20;
-  line-height: 20;
 }
 
 <button
@@ -151,28 +138,25 @@ exports[`<Button /> should render a right icon 1`] = `
   <span
     class="c1"
   >
-    <div
+    <svg
+      aria-hidden="true"
       class="c2"
-      data-testid="iconContainer"
+      focusable="false"
       height="20"
+      role="img"
+      viewBox="0 0 512 512"
       width="20"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        data-testid="iconSvg"
-        height="20"
-        style="display: block;"
-        viewBox="0 0 512 512"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <g>
         <path
           d="M426.667 192v-64c0-11.782-9.552-21.333-21.334-21.333h-42.666V128c0 11.782-9.552 21.333-21.334 21.333S320 139.783 320 128v-21.333H192V128c0 11.782-9.551 21.333-21.333 21.333-11.782 0-21.334-9.55-21.334-21.333v-21.333h-42.666c-11.782 0-21.334 9.55-21.334 21.333v64h341.334zm0 42.667H85.333v192c0 11.782 9.552 21.333 21.334 21.333h298.666c11.782 0 21.334-9.551 21.334-21.333v-192zM192 64h128V42.667c0-11.782 9.551-21.334 21.333-21.334 11.782 0 21.334 9.552 21.334 21.334V64h42.666c35.347 0 64 28.654 64 64v298.667c0 35.346-28.653 64-64 64H106.667c-35.347 0-64-28.654-64-64V128c0-35.346 28.653-64 64-64h42.666V42.667c0-11.782 9.552-21.334 21.334-21.334S192 30.885 192 42.667V64z"
-          data-testid="iconSvgPath"
+          data-testid="icon-svg-path"
           fill="hsl(0,100%,100%)"
           fill-rule="evenodd"
         />
-      </svg>
-    </div>
+      </g>
+    </svg>
   </span>
   Text
 </button>

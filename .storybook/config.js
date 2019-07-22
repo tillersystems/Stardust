@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import { ThemeProvider } from 'styled-components';
-import { addReadme } from 'storybook-readme';
+import { addReadme, configureReadme } from 'storybook-readme';
 
 import GlobalStyles from './styles';
 import { Theme } from '../src';
@@ -23,22 +23,17 @@ addParameters({
     showNav: true,
     showPanel: true,
   },
+  readme: {
+    /**
+     * Prism code theme
+     * Full list of theme https://github.com/PrismJS/prism-themes
+     * To be used with storybook-readme, naming of the code theme should be used in one of these styles. https://github.com/tuchk4/storybook-readme/tree/master/packages/storybook-readme/src/styles/prismCodeThemes
+     */
+    codeTheme: 'xonokai',
+  },
 });
 
 addDecorator(addReadme);
-// addDecorator((story, context) => {
-//   const componentPath = context.kind.replace(' - ', '/');
-//   const readme = require(`../src/${componentPath}/README.md`);
-//   return addReadme({
-//     PreviewComponent: styled.div`
-//       text-align: center;
-//       padding: 2.5rem;
-//       box-shadow: 0 0 0.2rem hsla(0, 0%, 0%, 0.1);
-//       background: hsl(220, 19%, 96%);
-//       margin: 5rem 0;
-//     `,
-//   })(readme)(story, context);
-// });
 
 addDecorator(story => (
   <div style={{ padding: '5rem 5rem 0 5rem' }}>

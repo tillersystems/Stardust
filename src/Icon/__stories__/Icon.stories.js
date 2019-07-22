@@ -12,7 +12,9 @@ storiesOf('Icon', module)
   .addDecorator(withKnobs)
   .addParameters({
     readme: {
-      // Show readme before story
+      /**
+       * Show readme before story
+       */
       content: IconReadme,
     },
   })
@@ -30,10 +32,10 @@ storiesOf('Icon', module)
   });
 
 // Component
-const IconCard = ({ name, color, size }) => (
+const IconCard = ({ color, name, size, title }) => (
   <Container>
     <Body>
-      <Icon name={name} color={color} height={size.toString()} width={size.toString()} />
+      <Icon name={name} color={color} size={size.toString()} title={title} />
     </Body>
     <Footer>{name}</Footer>
   </Container>
@@ -62,9 +64,10 @@ const Footer = styled.div`
  */
 const { number: numberProp, string } = PropTypes;
 IconCard.propTypes = {
-  name: string.isRequired,
   color: string,
+  name: string.isRequired,
   size: numberProp,
+  title: string,
 };
 
 /**
@@ -73,4 +76,5 @@ IconCard.propTypes = {
 IconCard.defaultProps = {
   color: 'white',
   size: '20',
+  title: null,
 };

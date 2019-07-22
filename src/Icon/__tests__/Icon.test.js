@@ -11,42 +11,38 @@ describe('<Icon />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render with different name', () => {
+  test('should display icon with a different name', () => {
     const { container } = render(<Icon name="check" />);
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should render with different size', () => {
-    const customSize = '2rem';
-    const { getByTestId } = render(<Icon name="calendar" width={customSize} height={customSize} />);
-    const iconSvgNode = getByTestId('iconSvg');
-    const iconNode = getByTestId('iconContainer');
+  test('should display icon with a different size', () => {
+    const customSize = '50px';
+    const { container } = render(<Icon name="calendar" size={customSize} />);
 
-    expect(iconSvgNode).toHaveAttribute('width', customSize);
-    expect(iconSvgNode).toHaveAttribute('height', customSize);
-    expect(iconNode).toHaveStyleRule('font-size', customSize);
-    expect(iconNode).toHaveStyleRule('line-height', customSize);
+    expect(container.firstChild).toHaveAttribute('width', customSize);
+    expect(container.firstChild).toHaveAttribute('height', customSize);
   });
 
-  test('should render with predifined color', () => {
+  test('should display icon with a predifined color', () => {
     const { getByTestId } = render(<Icon name="calendar" color="darkBlue" />);
-    const iconSvgPathNode = getByTestId('iconSvgPath');
 
-    expect(iconSvgPathNode).toHaveAttribute('fill', Theme.palette.darkBlue);
+    expect(getByTestId('icon-svg-path')).toHaveAttribute('fill', Theme.palette.darkBlue);
   });
 
-  test('should render with different color', () => {
+  test('should should display icon with a different color', () => {
     const customColor = 'hsl(120, 80%, 20%)';
     const { getByTestId } = render(<Icon name="calendar" color={customColor} />);
-    const iconSvgPathNode = getByTestId('iconSvgPath');
 
-    expect(iconSvgPathNode).toHaveAttribute('fill', customColor);
+    expect(getByTestId('icon-svg-path')).toHaveAttribute('fill', customColor);
   });
 
-  test('should render with a spin loader', () => {
-    const { container } = render(<Icon name="calendar" spin />);
+  test('should render a title for standalone icon', () => {
+    const title = 'brand logo';
+    const { getByText } = render(<Icon name="tiller" title={title} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(getByText(title)).toBeInTheDocument();
+    expect(getByText(title)).toHaveAttribute('id');
   });
 });
