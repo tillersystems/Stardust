@@ -3,31 +3,11 @@ import PropTypes from 'prop-types';
 
 import { Wrapper } from './elements';
 
-const { bool, func, node, string } = PropTypes;
-
 /**
  * A RadioGroup component groups radio buttons.
  *
  */
 class RadioGroup extends PureComponent {
-  /** Prop types. */
-  static propTypes = {
-    children: node,
-    groupName: string,
-    isRow: bool,
-    onChange: func,
-    selectedValue: string,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    groupName: null,
-    isRow: false,
-    onChange: null,
-    selectedValue: null,
-  };
-
   /** Internal state. */
   constructor() {
     super();
@@ -81,7 +61,7 @@ class RadioGroup extends PureComponent {
    */
   render() {
     const { selectedValue } = this.state;
-    const { children, groupName, isRow } = this.props;
+    const { children, className, groupName, isRow } = this.props;
 
     const radios = React.Children.map(children, radio =>
       React.cloneElement(radio, {
@@ -90,8 +70,34 @@ class RadioGroup extends PureComponent {
         name: groupName,
       }),
     );
-    return <Wrapper isRow={isRow}>{radios}</Wrapper>;
+    return (
+      <Wrapper isRow={isRow} className={className}>
+        {radios}
+      </Wrapper>
+    );
   }
 }
+
+const { bool, func, node, string } = PropTypes;
+
+/** Prop types. */
+RadioGroup.propTypes = {
+  children: node,
+  className: string,
+  groupName: string,
+  isRow: bool,
+  onChange: func,
+  selectedValue: string,
+};
+
+/** Default props. */
+RadioGroup.defaultProps = {
+  children: null,
+  className: '',
+  groupName: null,
+  isRow: false,
+  onChange: null,
+  selectedValue: null,
+};
 
 export default RadioGroup;

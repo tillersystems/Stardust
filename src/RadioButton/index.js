@@ -4,18 +4,23 @@ import PropTypes from 'prop-types';
 import { Wrapper, Container, Label } from './elements';
 
 /**
- * Defines a checkbox component.
+ * Defines a radio button component.
+ *
+ * @return {jsx}
  */
-function RadioButton(props) {
-  /**
-   * Renders the component.
-   *
-   * @return {jsx}
-   */
-  const { children, id, value, selectedValue, name, onChange, disabled } = props;
+const RadioButton = ({
+  children,
+  className,
+  disabled,
+  id,
+  name,
+  onChange,
+  selectedValue,
+  value,
+}) => {
   const checked = selectedValue === value;
   return (
-    <Wrapper disabled={disabled} onClick={() => onChange(value)}>
+    <Wrapper disabled={disabled} onClick={() => onChange(value)} className={className}>
       <Container checked={checked} disabled={disabled}>
         <input
           defaultChecked={checked}
@@ -31,28 +36,32 @@ function RadioButton(props) {
       </Label>
     </Wrapper>
   );
-}
+};
+
+const { bool, func, node, string } = PropTypes;
 
 /** Prop types. */
 RadioButton.propTypes = {
-  children: PropTypes.node,
-  id: PropTypes.string,
-  value: PropTypes.string,
-  selectedValue: PropTypes.string,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  disabled: PropTypes.bool,
+  children: node,
+  className: string,
+  disabled: bool,
+  id: string,
+  name: string,
+  onChange: func,
+  selectedValue: string,
+  value: string,
 };
 
 /** Default props. */
 RadioButton.defaultProps = {
   children: null,
+  className: '',
+  disabled: false,
   id: null,
-  value: '',
-  selectedValue: null,
   name: null,
   onChange: () => {},
-  disabled: false,
+  selectedValue: null,
+  value: '',
 };
 
 export default RadioButton;
