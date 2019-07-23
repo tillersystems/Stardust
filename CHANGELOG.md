@@ -1,3 +1,14 @@
+## [4.3.1](https://github.com/tillersystems/Stardust/compare/v4.3.0...v4.3.1) (2019-07-23)
+
+### Bug Fixes
+
+- **Popover:** make Portal optional, adjust style, raise refs to parents ([#653](https://github.com/tillersystems/Stardust/issues/653)) ([dedc6d5](https://github.com/tillersystems/Stardust/commit/dedc6d5))
+
+### Features
+
+- **Icon:** optimize component for better accessibility ([#642](https://github.com/tillersystems/Stardust/issues/642)) ([2e8b3a5](https://github.com/tillersystems/Stardust/commit/2e8b3a5))
+- **Logo:** optimize component for better accessibility ([#652](https://github.com/tillersystems/Stardust/issues/652)) ([26a335d](https://github.com/tillersystems/Stardust/commit/26a335d))
+
 # [4.3.0](https://github.com/tillersystems/Stardust/compare/v4.2.1...v4.3.0) (2019-07-22)
 
 ### Features
