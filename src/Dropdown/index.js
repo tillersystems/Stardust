@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+
 import React, { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -33,20 +35,51 @@ class Dropdown extends PureComponent {
   };
 
   /**
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
+   */
+  isControlled = prop => {
+    const props = this.props;
+
+    return props.hasOwnProperty(prop);
+  };
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => {
+    const props = this.props;
+    const state = this.state;
+
+    return this.isControlled(key) ? props[key] : state[key];
+  };
+
+  /**
    * Closes the select on outside click and triggers callback of parent
    *
    */
-  onClickOutside = () => {
+  onClickOutside = event => {
     const { onToggle } = this.props;
 
-    this.setState(
-      {
-        displayMenu: false,
-      },
-      () => {
-        onToggle && onToggle(false);
-      },
-    );
+    if (this.isControlled('displayMenu')) {
+      onToggle && onToggle(event);
+    } else {
+      this.setState(
+        {
+          displayMenu: false,
+        },
+        () => {
+          onToggle && onToggle(false);
+        },
+      );
+    }
   };
 
   /**
@@ -64,21 +97,25 @@ class Dropdown extends PureComponent {
    *
    */
   toggleMenu = () => {
-    const { displayMenu } = this.state;
+    const displayMenu = this.getControllableValue('displayMenu');
     const { onToggle } = this.props;
 
-    this.setState(
-      prevState => ({
-        displayMenu: !prevState.displayMenu,
-      }),
-      () => {
-        // Clear input value if menu is open
-        if (displayMenu) {
-          this.resetSearchInput();
-        }
-        onToggle && onToggle(!displayMenu);
-      },
-    );
+    if (this.isControlled('displayMenu')) {
+      onToggle && onToggle(event);
+    } else {
+      this.setState(
+        prevState => ({
+          displayMenu: !prevState.displayMenu,
+        }),
+        () => {
+          // Clear input value if menu is open
+          if (displayMenu) {
+            this.resetSearchInput();
+          }
+          onToggle && onToggle(!displayMenu);
+        },
+      );
+    }
   };
 
   /**
@@ -101,6 +138,7 @@ class Dropdown extends PureComponent {
     const {
       children,
       className,
+      contentRef,
       headerStyle,
       itemCss,
       modifiers,
@@ -108,8 +146,10 @@ class Dropdown extends PureComponent {
       searchable,
       searchBarPlaceholder,
       title,
+      usePortal,
     } = this.props;
-    const { contentWidth, displayMenu, searchKeyword } = this.state;
+    const { contentWidth, searchKeyword } = this.state;
+    const displayMenu = this.getControllableValue('displayMenu');
 
     // Filter items based on search key word
     // TODO: when need to refactor this later, children may have some children
@@ -160,13 +200,16 @@ class Dropdown extends PureComponent {
                 ))}
             </>
           }
+          contentRef={contentRef}
           contentWrapperStyle={{
+            marginBottom: '0.4rem',
             marginTop: '0.4rem',
           }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
+          usePortal={usePortal}
           width={contentWidth}
         >
           <Header
@@ -195,6 +238,18 @@ Dropdown.propTypes = {
    * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
    */
   children: node.isRequired,
+
+  /**
+   * Callback ref of content element
+   */
+  contentRef: func,
+
+  /**
+   * If the dropdown is open or not. If it is in a controlled state, this prop should be passed
+   * otherwise it will rely on internal state
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  displayMenu: bool,
 
   /**
    * Style for header component
@@ -240,6 +295,11 @@ Dropdown.propTypes = {
    * Dropdown title
    */
   title: node.isRequired,
+
+  /**
+   * Display the content on a portal
+   */
+  usePortal: bool,
 };
 
 /**
@@ -254,6 +314,7 @@ Dropdown.defaultProps = {
   onToggle: () => {},
   searchable: false,
   searchBarPlaceholder: '',
+  usePortal: false,
 };
 
 export default styled(Dropdown)`

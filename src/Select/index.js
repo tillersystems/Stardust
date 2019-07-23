@@ -214,7 +214,15 @@ class Select extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className, disabled, modifiers } = this.props;
+    const {
+      children,
+      className,
+      contentRef,
+      disabled,
+      modifiers,
+      triggerWrapperCss,
+      usePortal,
+    } = this.props;
     const { contentWidth, displayMenu } = this.state;
     const hasPlaceholder = this.isControlled('placeholder');
     const value = this.getControllableValue('value');
@@ -251,13 +259,17 @@ class Select extends PureComponent {
               ))}
             </Menu>
           }
+          contentRef={contentRef}
           contentWrapperStyle={{
+            marginBottom: '0.4rem',
             marginTop: '0.4rem',
           }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
+          triggerWrapperCss={triggerWrapperCss}
+          usePortal={usePortal}
           width={contentWidth}
         >
           <Header
@@ -282,7 +294,7 @@ class Select extends PureComponent {
 /**
  * PropTypes Validation
  */
-const { bool, func, node, object, string } = PropTypes;
+const { array, bool, func, node, object, string } = PropTypes;
 Select.propTypes = {
   /**
    * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
@@ -293,6 +305,11 @@ Select.propTypes = {
    * Prop needed by styled components
    */
   className: string,
+
+  /**
+   * Callback ref of content element
+   */
+  contentRef: func,
 
   /**
    * If the select should be disabled or not
@@ -325,6 +342,16 @@ Select.propTypes = {
   resetValue: bool,
 
   /**
+   * css provided to the trigger wrapper. Must use `css` method from styled-components.
+   */
+  triggerWrapperCss: array,
+
+  /**
+   * Display the content on a portal
+   */
+  usePortal: bool,
+
+  /**
    * Selected value identifier
    */
   value: string,
@@ -345,6 +372,8 @@ Select.defaultProps = {
   className: '',
   disabled: false,
   resetValue: false,
+  triggerWrapperCss: null,
+  usePortal: false,
   width: '100%',
 };
 
