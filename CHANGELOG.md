@@ -1,3 +1,9 @@
+## [4.3.2](https://github.com/tillersystems/Stardust/compare/v4.3.1...v4.3.2) (2019-07-23)
+
+### Bug Fixes
+
+- **Radios:** add className to custom with styled-components ([#655](https://github.com/tillersystems/Stardust/issues/655)) ([f3b9b77](https://github.com/tillersystems/Stardust/commit/f3b9b77))
+
 ## [4.3.1](https://github.com/tillersystems/Stardust/compare/v4.3.0...v4.3.1) (2019-07-23)
 
 ### Bug Fixes
