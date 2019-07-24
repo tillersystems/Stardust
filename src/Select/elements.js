@@ -73,12 +73,6 @@ export const Menu = styled.ul`
   list-style: none;
   overflow-y: auto;
 
-  background: linear-gradient(
-    180deg,
-    ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.paleGrey} 100%
-  );
-
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   transform-origin: 50% 0%;
