@@ -70,7 +70,6 @@ class Popover extends PureComponent {
   handleDocumentClick = event => {
     if (
       event.target &&
-      event.target instanceof HTMLElement &&
       this.popoverContent &&
       !this.popoverContent.contains(event.target) &&
       this.popoverTrigger &&
