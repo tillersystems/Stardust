@@ -63,11 +63,7 @@ export const HeaderContent = styled.div`
 `;
 
 export const Menu = styled.ul`
-  position: absolute;
-  top: ${({ position: { top } }) => `${top}px`};
-  left: ${({ position: { left } }) => `${left}px`};
-
-  width: ${({ position: { width } }) => `${width}px`};
+  width: 100%;
   max-height: 28rem;
 
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
@@ -75,12 +71,6 @@ export const Menu = styled.ul`
 
   list-style: none;
   overflow-y: auto;
-
-  background: linear-gradient(
-    180deg,
-    ${({ theme: { palette } }) => palette.white} 0%,
-    ${({ theme: { palette } }) => palette.paleGrey} 100%
-  );
 
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
