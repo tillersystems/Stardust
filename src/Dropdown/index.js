@@ -148,8 +148,9 @@ class Dropdown extends PureComponent {
       title,
       usePortal,
     } = this.props;
-    const { contentWidth, searchKeyword } = this.state;
-    const displayMenu = this.getControllableValue('displayMenu');
+    const { contentWidth, displayMenu: displayMenuState, searchKeyword } = this.state;
+    const { displayMenu: displayMenuProp } = this.props;
+    const displayMenu = this.isControlled('displayMenu') ? displayMenuProp : displayMenuState;
 
     // Filter items based on search key word
     // TODO: when need to refactor this later, children may have some children
