@@ -1,3 +1,9 @@
+## [4.3.5](https://github.com/tillersystems/Stardust/compare/v4.3.4...v4.3.5) (2019-07-29)
+
+### Bug Fixes
+
+- **Select:** allow percentage values for width ([#661](https://github.com/tillersystems/Stardust/issues/661)) ([040219c](https://github.com/tillersystems/Stardust/commit/040219c))
+
 ## [4.3.4](https://github.com/tillersystems/Stardust/compare/v4.3.3...v4.3.4) (2019-07-29)
 
 ### Bug Fixes
