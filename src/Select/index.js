@@ -380,7 +380,7 @@ Select.defaultProps = {
 export default styled(Select)`
   position: relative;
   user-select: none;
-  width: ${({ width }) => (/^\d+(rem|px)$/.test(width) ? width : 'auto')};
+  width: ${({ width }) => (/^\d+(rem|px|%)$/.test(width) ? width : 'auto')};
   height: 4rem;
 
   /* Disabled */
