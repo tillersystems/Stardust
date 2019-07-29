@@ -1,3 +1,9 @@
+## [4.3.3](https://github.com/tillersystems/Stardust/compare/v4.3.2...v4.3.3) (2019-07-29)
+
+### Bug Fixes
+
+- update outside click trigger on Popover and update style of Popover and Select ([#658](https://github.com/tillersystems/Stardust/issues/658)) ([9d083fd](https://github.com/tillersystems/Stardust/commit/9d083fd))
+
 ## [4.3.2](https://github.com/tillersystems/Stardust/compare/v4.3.1...v4.3.2) (2019-07-23)
 
 ### Bug Fixes
