@@ -1,3 +1,9 @@
+## [4.3.4](https://github.com/tillersystems/Stardust/compare/v4.3.3...v4.3.4) (2019-07-29)
+
+### Bug Fixes
+
+- **Dropdown:** retrieve both state and props for displayMenu to trigger rerender ([#660](https://github.com/tillersystems/Stardust/issues/660)) ([5606ad3](https://github.com/tillersystems/Stardust/commit/5606ad3))
+
 ## [4.3.3](https://github.com/tillersystems/Stardust/compare/v4.3.2...v4.3.3) (2019-07-29)
 
 ### Bug Fixes
