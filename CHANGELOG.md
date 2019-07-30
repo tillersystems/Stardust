@@ -1,3 +1,10 @@
+## [4.3.6](https://github.com/tillersystems/Stardust/compare/v4.3.5...v4.3.6) (2019-07-30)
+
+### Bug Fixes
+
+- remove border and radius of menu that are now in the parent ([#665](https://github.com/tillersystems/Stardust/issues/665)) ([130bc74](https://github.com/tillersystems/Stardust/commit/130bc74))
+- **Popover:** retrieve isOpen to trigger rerender ([#664](https://github.com/tillersystems/Stardust/issues/664)) ([7365a4f](https://github.com/tillersystems/Stardust/commit/7365a4f))
+
 ## [4.3.5](https://github.com/tillersystems/Stardust/compare/v4.3.4...v4.3.5) (2019-07-29)
 
 ### Bug Fixes
