@@ -146,7 +146,7 @@ class Popover extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { triggerWrapperCss } = this.props;
+    const { isOpen, triggerWrapperCss } = this.props;
 
     return (
       <Manager>
@@ -168,16 +168,18 @@ class Popover extends PureComponent {
           }}
         </Reference>
         {this.renderContent()}
-        <EventListener
-          listeners={[
-            {
-              target: 'document',
-              event: 'click',
-              handler: this.handleDocumentClick,
-              options: true,
-            },
-          ]}
-        />
+        {isOpen && (
+          <EventListener
+            listeners={[
+              {
+                target: 'document',
+                event: 'click',
+                handler: this.handleDocumentClick,
+                options: true,
+              },
+            ]}
+          />
+        )}
       </Manager>
     );
   }
