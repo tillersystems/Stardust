@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render without a problem 1`] = `
+.c0 {
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.04);
+  border: solid 1px hsl(220,27%,94%);
+  background-color: hsl(0,100%,100%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+<div
+  class="c0"
+  height="auto"
+  width="auto"
+/>
+`;
