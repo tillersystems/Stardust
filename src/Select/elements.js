@@ -22,7 +22,7 @@ export const Header = styled.button`
     ${({ theme: { palette } }) => palette.white} 0%,
     ${({ theme: { palette } }) => palette.paleGrey} 100%
   );
-  color: ${({ theme: { palette } }) => palette.darkBlue};
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   &::after {
     content: '';
