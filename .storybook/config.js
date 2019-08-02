@@ -13,15 +13,16 @@ import { Theme } from '../src';
 // Option defaults:
 addParameters({
   options: {
+    isFullscreen: false,
+    panelPosition: 'right',
+    showNav: true,
+    showPanel: true,
+    sidebarAnimations: true,
     theme: create({
       base: 'light',
       brandTitle: 'Stardust',
       brandUrl: 'http://stardust.tillersystems.com',
     }),
-    isFullscreen: false,
-    panelPosition: 'right',
-    showNav: true,
-    showPanel: true,
   },
   readme: {
     /**
