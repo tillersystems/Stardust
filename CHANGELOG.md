@@ -1,3 +1,13 @@
+# [4.4.0](https://github.com/tillersystems/Stardust/compare/v4.3.6...v4.4.0) (2019-08-05)
+
+### Bug Fixes
+
+- **Select:** update color of text ([#675](https://github.com/tillersystems/Stardust/issues/675)) ([518b249](https://github.com/tillersystems/Stardust/commit/518b249))
+
+### Features
+
+- **Card:** Add Card component to storybook ([#676](https://github.com/tillersystems/Stardust/issues/676)) ([c85e2ad](https://github.com/tillersystems/Stardust/commit/c85e2ad))
+
 ## [4.3.6](https://github.com/tillersystems/Stardust/compare/v4.3.5...v4.3.6) (2019-07-30)
 
 ### Bug Fixes
