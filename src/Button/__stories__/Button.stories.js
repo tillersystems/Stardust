@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, color, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import withDocs from 'storybook-readme/with-docs';
 
 import { Icon, Theme } from '../..';
 import Button from '..';
@@ -12,13 +13,13 @@ const getIconName = Object.keys(IconName).map(name => name);
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonReadme)) // Show readme around story
   .addParameters({
     readme: {
-      // Show readme before story
-      content: ButtonReadme,
+      includePropTables: [Button], // won't work right now because of wrapped styled-comp https://github.com/tuchk4/storybook-readme/issues/177
     },
   })
-  .add('with properties', () => {
+  .add('with customizable properties', () => {
     const onClickAction = action('onClick');
     const appearance = select(
       'Appearance',
@@ -30,8 +31,8 @@ storiesOf('Button', module)
         failure: 'failure',
         google: 'google',
       },
-      'default',
-      'State',
+      'secondary',
+      'Props',
     );
     const size = select(
       'Size',
@@ -41,9 +42,9 @@ storiesOf('Button', module)
         large: 'large',
       },
       'default',
-      'Layout',
+      'Props',
     );
-    const fluid = boolean('Fluid', false, 'Layout');
+    const fluid = boolean('Fluid', false, 'Props');
     const iconPosition = select(
       'Icon Position',
       {
@@ -51,10 +52,19 @@ storiesOf('Button', module)
         right: 'right',
       },
       'left',
-      'Layout',
+      'Props',
     );
-    const iconName = select('Icon Name', getIconName, 'calendar', 'Layout');
-    const disabled = boolean('Disabled', false, 'State');
+    const iconName = select('Icon Name', getIconName, 'calendar', 'Props');
+    const disabled = boolean('Disabled', false, 'Props');
+    const type = select(
+      'Type',
+      {
+        button: 'button',
+        submit: 'submit',
+      },
+      'button',
+      'Props',
+    );
     const withIcon = boolean('With Icon', false, 'Layout');
     const colorValue = color('Icon Color', Theme.palette.darkBlue, 'Layout');
 
@@ -67,6 +77,7 @@ storiesOf('Button', module)
         iconPosition={withIcon ? iconPosition : undefined}
         onClick={() => onClickAction(appearance)}
         size={size}
+        type={type}
       >
         Default
       </Button>
