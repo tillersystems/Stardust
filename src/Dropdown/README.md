@@ -8,29 +8,28 @@ import { Dropdown } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
+### Description
+
+A Dropdown displays content through its children prop that must be components wrapping text.  
+The trigger is a button displaying text provided by the prop `title`.
+
 ### Properties
 
-- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `className` - Add a text aside in the select next the selected value.
-- `itemCss` - Css provided to each item of the dropdown. Must use `css` method from styled-components.
-- `modifiers` - Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
-- `noResultLabel` - Label to display when no result found.
-- `onToggle` - Callback called when Dropdown is toggled.
-- `searchable` - Whether the dropdown is searchable.
-- `searchBarPlaceholder` - SearchBar input placeholder.
-- `title` - Dropdown title.
-
-| propName               |  propType  | defaultValue | isRequired |
-| ---------------------- | :--------: | :----------: | :--------: |
-| `children`             |   `node`   |              |     \*     |
-| `className`            |  `string`  |    `null`    |     -      |
-| `itemCss`              |  `array`   |    `null`    |     -      |
-| `modifiers`            |  `object`  |    `null`    |     -      |
-| `noResultLabel`        |   `node`   |    `null`    |     -      |
-| `onToggle`             | `function` |  `() => {}`  |     -      |
-| `searchable`           |   `bool`   |   `false`    |     -      |
-| `searchBarPlaceholder` |  `string`  |     `''`     |     -      |
-| `title`                |   `node`   |              |     \*     |
+| Name                   | Required |    Type    | DefaultValue |                                                             Description                                                              |
+| ---------------------- | :------: | :--------: | :----------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+| `children`             |    \*    |   `node`   |              |                         Anything that can be rendered: numbers, strings, elements or an array (or fragment)                          |
+| `className`            |    -     |  `string`  |    `null`    |                                       Adds a text aside in the select next the selected value                                        |
+| `contentRef`           |    -     | `function` | `undefined`  |                                                   Callback ref of content element                                                    |
+| `displayMenu`          |    -     |   `bool`   | `undefined`  | If the dropdown is open or not. If it is in a controlled state, this prop should be passed, otherwise it will rely on internal state |
+| `headerStyle`          |    -     |  `Object`  |    `null`    |                                                      Style for header component                                                      |
+| `itemCss`              |    -     |  `array`   |    `null`    |                       CSS provided to each item of the dropdown. Must use `css` method from styled-components                        |
+| `modifiers`            |    -     |  `object`  |    `null`    |    Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html     |
+| `noResultLabel`        |    -     |   `node`   |    `null`    |                                               Label to display when no result is found                                               |
+| `onToggle`             |    -     | `function` |  `() => {}`  |                                               Callback called when Dropdown is toggled                                               |
+| `searchable`           |    -     |   `bool`   |   `false`    |                                                  Whether the dropdown is searchable                                                  |
+| `searchBarPlaceholder` |    -     |  `string`  |     `''`     |                                                     SearchBar input placeholder                                                      |
+| `title`                |    \*    |   `node`   |              |                                                            Dropdown title                                                            |
+| `usePortal`            |    -     |   `bool`   |   `false`    |                                                   Display the content on a portal                                                    |
 
 ### Example
 

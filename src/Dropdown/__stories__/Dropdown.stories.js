@@ -45,14 +45,16 @@ storiesOf('Dropdown', module)
     readme: {
       // Show readme before story
       content: DropdownReadme,
+      includePropTables: [Dropdown], // won't work right now because of wrapped styled-comp https://github.com/tuchk4/storybook-readme/issues/177
     },
   })
-  .add('default', () => {
+  .add('uncontrolled displayMenu', () => {
     const onClickAction = action('onChange');
-    const Searchable = boolean('Searchable', false, 'State');
-    const NoresultLabel = text('No Result Label', 'No stores found ...', 'State');
-    const SearchBarPlaceholder = text('Search Bar Placholder', 'Search ...', 'State');
-    const Title = text('Title', 'All stores', 'State');
+    const Searchable = boolean('Searchable', false, 'Props');
+    const NoResultLabel = text('No Result Label', 'No stores found ...', 'Props');
+    const SearchBarPlaceholder = text('Search Bar Placholder', 'Search ...', 'Props');
+    const Title = text('Title', 'All stores', 'Props');
+    const usePortal = boolean('UsePortal', false, 'Props');
 
     return (
       <ScrollBox>
@@ -66,10 +68,117 @@ storiesOf('Dropdown', module)
                   escapeWithReference: true,
                 },
               }}
-              noResultLabel={NoresultLabel}
+              noResultLabel={NoResultLabel}
               title={Title}
               searchable={Searchable}
               searchBarPlaceholder={SearchBarPlaceholder}
+              usePortal={usePortal}
+            >
+              <CheckBox
+                checked={state.streetBangkokBastille}
+                value="Street Bangkok Bastille"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokBastille: !store.get('streetBangkokBastille') })
+                }
+              >
+                Street Bangkok Bastille
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokMarais}
+                value="Street Bangkok Marais"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokMarais: !store.get('streetBangkokMarais') })
+                }
+              >
+                Street Bangkok Marais
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokCanal}
+                value="Street Bangkok Canal"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokCanal: !store.get('streetBangkokCanal') })
+                }
+              >
+                Street Bangkok Canal
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokMontorgeuil}
+                value="Street Bangkok Montorgeuil"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokMontorgeuil: !store.get('streetBangkokMontorgeuil') })
+                }
+              >
+                Street Bangkok Montorgeuil
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokSentier}
+                value="Street Bangkok Sentier"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokSentier: !store.get('streetBangkokSentier') })
+                }
+              >
+                Street Bangkok Sentier
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokStlouis}
+                value="Street Bangkok St louis"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokStlouis: !store.get('streetBangkokStlouis') })
+                }
+              >
+                Street Bangkok St louis
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokStMichel}
+                value="Street Bangkok St Michel"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokStMichel: !store.get('streetBangkokStMichel') })
+                }
+              >
+                Street Bangkok St Michel
+              </CheckBox>
+              <CheckBox
+                checked={state.streetBangkokOberkampf}
+                value="Street Bangkok Oberkampf"
+                onChange={event =>
+                  onClickAction(event.target.value, event.target.checked) ||
+                  store.set({ streetBangkokOberkampf: !store.get('streetBangkokOberkampf') })
+                }
+              >
+                Street Bangkok Oberkampf
+              </CheckBox>
+            </Dropdown>
+          )}
+        </State>
+      </ScrollBox>
+    );
+  })
+  .add('controlled displayMenu', () => {
+    const onClickAction = action('onChange');
+    const Title = text('Title', 'All stores', 'Props');
+    const displayMenu = boolean('displayMenu', true, 'Props');
+
+    return (
+      <ScrollBox>
+        <State store={store}>
+          {state => (
+            <Dropdown
+              displayMenu={displayMenu}
+              headerStyle={{ width: '25rem' }}
+              itemCss={itemCss}
+              modifiers={{
+                preventOverflow: {
+                  escapeWithReference: true,
+                },
+              }}
+              title={Title}
             >
               <CheckBox
                 checked={state.streetBangkokBastille}

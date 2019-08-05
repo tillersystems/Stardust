@@ -241,6 +241,11 @@ Dropdown.propTypes = {
   children: node.isRequired,
 
   /**
+   * ClassName needed by styled components
+   */
+  className: string,
+
+  /**
    * Callback ref of content element
    */
   contentRef: func,
@@ -258,11 +263,6 @@ Dropdown.propTypes = {
   headerStyle: object,
 
   /**
-   * Adds a text aside in the select next the selected value
-   */
-  className: string,
-
-  /**
    * CSS provided to each item of the dropdown. Must use `css` method from styled-components
    */
   itemCss: array,
@@ -273,7 +273,7 @@ Dropdown.propTypes = {
   modifiers: object,
 
   /**
-   * Label to display when no result found
+   * Label to display when no result is found
    */
   noResultLabel: string,
 
@@ -283,12 +283,12 @@ Dropdown.propTypes = {
   onToggle: func,
 
   /**
-   * Whether the dropdown is searchable.
+   * Whether the dropdown is searchable
    */
   searchable: bool,
 
   /**
-   * SearchBar input placeholder.
+   * SearchBar input placeholder
    */
   searchBarPlaceholder: string,
 
