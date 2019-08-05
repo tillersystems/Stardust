@@ -8,19 +8,21 @@ import { Avatar } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
+### Description
+
+An Avatar depicts an user with an image if its path is provided.  
+It fallbacks to the initials of the person.
+
+<!-- PROPS -->
+
 ### Properties
 
-- `className` - className needed by styled component.
-- `name` - user name.
-- `size` - size of the avatar.
-- `src` - source image of a user.
-
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `className` | `string` |     `''`     |     -      |
-| `name`      | `string` |              |     \*     |
-| `size`      | `number` |    `3.1`     |     -      |
-| `src`       | `string` |    `null`    |     -      |
+| Name        | Required |   Type   | DefaultValue |                Description                 |
+| ----------- | :------: | :------: | :----------: | :----------------------------------------: |
+| `className` |    -     | `string` |     `''`     |    className needed by styled component    |
+| `name`      |    \*    | `string` |              | name that will form the displayed initials |
+| `size`      |    -     | `number` |    `3.1`     |             size of the avatar             |
+| `src`       |    -     | `string` |    `null`    |           source image of a user           |
 
 ### Example
 

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import initials from 'initials';
@@ -19,7 +19,7 @@ const defaultColors = [
 /**
  * Sum Chars
  *
- * Do the sums of the carcatere of a string
+ * Do the sums of the caracteres of a string
  *
  * @return {jsx}
  */
@@ -33,50 +33,57 @@ function sumChars(str) {
 }
 
 /**
- * Avatar
- *
- * This component is in charge of displaying
- * an avatar of a user
+ * An Avatar depicts an user with an image if its path is provided.
+ * It fallbacks to the initials of the person.
  *
  * @return {jsx}
  */
 
-class Avatar extends PureComponent {
+const Avatar = ({ className, name, size, src }) => {
+  const abbr = initials(name);
+  const normalizeSize = size * 10;
+
+  return (
+    <div aria-label={name} className={className}>
+      {src && <Image src={src} width={normalizeSize} height={normalizeSize} alt={name} />}
+      {!src && <span>{abbr}</span>}
+    </div>
+  );
+};
+
+/**
+ * PropTypes validation
+ */
+Avatar.propTypes = {
   /**
-   * PropTypes validation
+   * className needed by styled component
    */
-  static propTypes = {
-    className: PropTypes.string, // className needed by styled component.
-    name: PropTypes.string.isRequired, // user name.
-    size: PropTypes.number, // size of the avatar.
-    src: PropTypes.string, // source image of a user.
-  };
+  className: PropTypes.string,
 
   /**
-   * Default propTypes
+   * name that will form the displayed initials
    */
-  static defaultProps = {
-    className: '',
-    size: Theme.dimensions.bigInt,
-    src: null,
-  };
+  name: PropTypes.string.isRequired,
 
   /**
-   * Render function
+   * size of the avatar
    */
-  render() {
-    const { className, name, size, src } = this.props;
-    const abbr = initials(name);
-    const normalizeSize = size * 10;
+  size: PropTypes.number,
 
-    return (
-      <div aria-label={name} className={className}>
-        {src && <Image src={src} width={normalizeSize} height={normalizeSize} alt={name} />}
-        {!src && <span>{abbr}</span>}
-      </div>
-    );
-  }
-}
+  /**
+   * source image of a user
+   */
+  src: PropTypes.string,
+};
+
+/**
+ * Default propTypes
+ */
+Avatar.defaultProps = {
+  className: '',
+  size: Theme.dimensions.bigInt,
+  src: null,
+};
 
 export default styled(Avatar)`
   display: flex;
