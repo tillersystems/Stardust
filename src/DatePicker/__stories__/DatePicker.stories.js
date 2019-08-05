@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, date, boolean, number } from '@storybook/addon-knobs';
-import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 import { DateTime, Interval } from 'luxon';
 
@@ -11,10 +10,6 @@ import DatePickerReadme from '../README.md';
 const onChangeAction = action('onChange');
 const today = new Date();
 
-const store = new Store({
-  currentDate: DateTime.local(),
-});
-
 storiesOf('DatePicker', module)
   .addDecorator(withKnobs)
   .addParameters({
@@ -23,7 +18,7 @@ storiesOf('DatePicker', module)
       content: DatePickerReadme,
     },
   })
-  .add('default', () => {
+  .add('uncontrolled state', () => {
     const localeValue = select(
       'Locale',
       {
@@ -31,22 +26,22 @@ storiesOf('DatePicker', module)
         French: 'fr',
       },
       'English',
-      'Locale',
+      'Props',
     );
 
-    const withMinDate = boolean('With minimum date', false, 'Bounds');
-    const minDateValue = date('Minimum date', today, 'Bounds');
-    const withMaxDate = boolean('With maximum date', false, 'Bounds');
-    const maxDateValue = date('Maximum date', today, 'Bounds');
+    const withMinDate = boolean('With minimum date', false, 'Props');
+    const minDateValue = date('Minimum date', today, 'Props');
+    const withMaxDate = boolean('With maximum date', false, 'Props');
+    const maxDateValue = date('Maximum date', today, 'Props');
 
     const numberOfMonthsToDisplay = number(
-      'Number of month to display',
+      'Number of months to display',
       1,
       { range: true, min: 1, max: 2, step: 1 },
-      'Bounds',
+      'Props',
     );
 
-    const isRange = boolean('Range date picker', false, 'Type');
+    const isRange = boolean('Range date picker', false, 'Props');
 
     return (
       <div style={{ background: 'white', padding: '16px', borderRadius: '4px' }}>
@@ -61,7 +56,7 @@ storiesOf('DatePicker', module)
       </div>
     );
   })
-  .add('controlled', () => {
+  .add('controlled state', () => {
     const localeValue = select(
       'Locale',
       {
@@ -69,42 +64,39 @@ storiesOf('DatePicker', module)
         French: 'fr',
       },
       'English',
-      'Locale',
+      'Props',
     );
 
-    const withMinDate = boolean('With minimum date', false, 'Bounds');
-    const minDateValue = date('Minimum date', today, 'Bounds');
-    const withMaxDate = boolean('With maximum date', false, 'Bounds');
-    const maxDateValue = date('Maximum date', today, 'Bounds');
+    const defaultValue = date('Default date', today, 'Props');
+    const withMinDate = boolean('With minimum date', false, 'Props');
+    const minDateValue = date('Minimum date', today, 'Props');
+    const withMaxDate = boolean('With maximum date', false, 'Props');
+    const maxDateValue = date('Maximum date', today, 'Props');
 
     const numberOfMonthsToDisplay = number(
-      'Number of month to display',
+      'Number of months to display',
       1,
       { range: true, min: 1, max: 2, step: 1 },
-      'Bounds',
+      'Props',
     );
 
-    const isRange = boolean('Range date picker', false, 'Type');
+    const isRange = boolean('Range date picker', false, 'Props');
 
     return (
       <div style={{ background: 'white', padding: '16px', borderRadius: '4px' }}>
-        <State store={store}>
-          {state => (
-            <DatePicker
-              numberOfMonthsToDisplay={numberOfMonthsToDisplay}
-              rangePicker={isRange}
-              locale={localeValue}
-              defaultValue={state.currentDate}
-              minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
-              maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
-              onDateChanged={date => onChangeAction(date)}
-            />
-          )}
-        </State>
+        <DatePicker
+          numberOfMonthsToDisplay={numberOfMonthsToDisplay}
+          rangePicker={isRange}
+          locale={localeValue}
+          defaultValue={DateTime.fromMillis(defaultValue)}
+          minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
+          maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
+          onDateChanged={date => onChangeAction(date)}
+        />
       </div>
     );
   })
-  .add('controlled with an interval', () => {
+  .add('controlled state of an interval', () => {
     const localeValue = select(
       'Locale',
       {

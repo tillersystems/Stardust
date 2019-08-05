@@ -18,59 +18,29 @@ import {
 
 /* eslint-disable react/destructuring-assignment */
 
-const { bool, func, number, object, string } = PropTypes;
 const localDateTime = DateTime.local();
 
 /**
- * Date Picker
- *
- * This component is in charge of displaying a date picker.
- *
- * @param {string} className - Styled component class name.
- * @param {string} locale - Local to use to display the weekday names.
- * @param {luxon.DateTime} value - Controlled value (the selected date).
- * @param {luxon.DateTime} minDate - Minimum allowed date.
- * @param {luxon.DateTime} maxDate - Maximum allowed date.
- * @param {number} numberOfMonthsToDisplay - The number of month to display (1 or 2).
- * @param {function} onDateChanged - Handler of date change.
- * @param {bool} rangePicker - Whether it is a date picker or a date range picker.
+ * A DatePicker can display one or two months. It takes a value (`defaultValue` prop) to set its internal
+ * selected value state, or takes the date of today by default.
+ * The selected value can either be a date or an interval of Luxon.
  *
  * @return {jsx}
  */
 class DatePicker extends PureComponent {
-  /** Display name. */
-  static displayName = 'DatePicker';
-
-  /** Validation prop types. */
-  static propTypes = {
-    className: string,
-    defaultValue: object,
-    locale: string,
-    minDate: object,
-    maxDate: object,
-    numberOfMonthsToDisplay: number,
-    onDateChanged: func,
-    rangePicker: bool,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-    defaultValue: localDateTime,
-    locale: 'en',
-    minDate: null,
-    maxDate: null,
-    numberOfMonthsToDisplay: 1,
-    onDateChanged: () => {},
-    rangePicker: false,
-  };
-
   /** Internal state. */
   state = {
-    /** Initial Calendar date */
+    /**
+     * Initial Calendar date
+     * DatePicker month(s) display is based upon currentDate and will start
+     * from this to iterate through the months it has to display
+     */
     currentDate: localDateTime,
 
-    /** Selected Calendar date */
+    /**
+     * Selected Calendar date
+     * Value of selected date of the DatePicker
+     */
     selected: this.props.defaultValue,
 
     /** Start date value */
@@ -288,6 +258,66 @@ class DatePicker extends PureComponent {
     );
   }
 }
+
+/** Display name. */
+DatePicker.displayName = 'DatePicker';
+
+const { bool, func, number, object, string } = PropTypes;
+
+/** Validation prop types. */
+DatePicker.propTypes = {
+  /**
+   * Styled component class name
+   */
+  className: string,
+
+  /**
+   * Controlled selected date value
+   */
+  defaultValue: object,
+
+  /**
+   * Locale used to display the weekday names
+   */
+  locale: string,
+
+  /**
+   * Minimum allowed date
+   */
+  minDate: object,
+
+  /**
+   * Maximum allowed date
+   */
+  maxDate: object,
+
+  /**
+   * The number of months to display (1 or 2)
+   */
+  numberOfMonthsToDisplay: number,
+
+  /**
+   * Handler of date change
+   */
+  onDateChanged: func,
+
+  /**
+   * Whether it is a date picker or a date range picker
+   */
+  rangePicker: bool,
+};
+
+/** Default props. */
+DatePicker.defaultProps = {
+  className: '',
+  defaultValue: localDateTime,
+  locale: 'en',
+  minDate: null,
+  maxDate: null,
+  numberOfMonthsToDisplay: 1,
+  onDateChanged: () => {},
+  rangePicker: false,
+};
 
 export default styled(DatePicker)`
   display: flex;
