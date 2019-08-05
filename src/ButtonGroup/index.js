@@ -5,43 +5,14 @@ import { transparentize } from 'polished';
 
 import Button from '../Button';
 
-const { func, node, string } = PropTypes;
-
 /**
- * Button Group
- *
- * This component is in charge of displaying
- * a button group
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // Add a text aside in the select next the selected value.
- * @param {function} onChange // Callback function called when a button is clicked.
- * @param {string} defaultActiveButton // Specifies the initial state: witch button is selected.
+ * A ButtonGroup wraps as much Buttons as it is given as children.
+ * Only one Button is active at a time. Each Button is cloned as is, meaning
+ * you could provide Buttons with different styles.
  *
  * @return {jsx}
  */
-
 class ButtonGroup extends PureComponent {
-  /**
-   * PropTypes Validation.
-   */
-  static propTypes = {
-    children: node,
-    className: string,
-    onChange: func,
-    defaultActiveButtonName: string,
-  };
-
-  /**
-   * Default props.
-   */
-  static defaultProps = {
-    children: null,
-    className: '',
-    onChange: () => {},
-    defaultActiveButtonName: '',
-  };
-
   /** Internal state. */
   state = {
     activeButton: this.props.defaultActiveButtonName, // eslint-disable-line react/destructuring-assignment
@@ -96,6 +67,43 @@ class ButtonGroup extends PureComponent {
     );
   }
 }
+
+const { func, node, string } = PropTypes;
+
+/**
+ * PropTypes Validation.
+ */
+ButtonGroup.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: node,
+
+  /**
+   * ClassName needed by styled components
+   */
+  className: string,
+
+  /**
+   * Specifies which button is initially selected
+   */
+  defaultActiveButtonName: string,
+
+  /**
+   * Callback function called when a button is clicked
+   */
+  onChange: func,
+};
+
+/**
+ * Default props.
+ */
+ButtonGroup.defaultProps = {
+  children: null,
+  className: '',
+  defaultActiveButtonName: '',
+  onChange: () => {},
+};
 
 export default styled(ButtonGroup)`
   display: flex;

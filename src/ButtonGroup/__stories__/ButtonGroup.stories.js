@@ -14,12 +14,25 @@ storiesOf('ButtonGroup', module)
   .addDecorator(withKnobs)
   .addParameters({
     readme: {
-      // Show readme before story
+      // Show readme around story
       content: ButtonGroupReadme,
+      includePropTables: [ButtonGroup], // won't work right now because of wrapped styled-comp https://github.com/tuchk4/storybook-readme/issues/177
     },
   })
-  .add('with properties', () => {
-    const onClickAction = action('onClick');
+  .add('with customizable properties', () => {
+    const buttonGroupProps = {
+      onChange: action('onClick'),
+      defaultActiveButtonName: select(
+        'defaultActiveButtonName',
+        {
+          ON: 'ON',
+          OFF: 'OFF',
+        },
+        'ON',
+        'Props',
+      ),
+    };
+
     const appearance = select(
       'Appearance',
       {
@@ -30,8 +43,8 @@ storiesOf('ButtonGroup', module)
         failure: 'failure',
         google: 'google',
       },
-      'default',
-      'State',
+      'secondary',
+      'Button Props',
     );
     const iconPosition = select(
       'Icon Position',
@@ -40,30 +53,29 @@ storiesOf('ButtonGroup', module)
         right: 'right',
       },
       'left',
-      'Layout',
+      'Button Props',
     );
-    const withIcon = boolean('With Icon', false, 'Layout');
-    const iconName = select('Icon Name', getIconName, 'calendar', 'Layout');
+    const withIcon = boolean('With Icon', false, 'Button Props');
+    const iconName = select('Icon Name', getIconName, 'calendar', 'Button Props');
+
     return (
-      <div>
-        <ButtonGroup defaultActiveButtonName="ON" onChange={name => onClickAction(name)}>
-          <Button
-            name="ON"
-            appearance={appearance}
-            icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
-            iconPosition={withIcon ? iconPosition : undefined}
-          >
-            ON
-          </Button>
-          <Button
-            name="OFF"
-            appearance={appearance}
-            icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
-            iconPosition={withIcon ? iconPosition : undefined}
-          >
-            OFF
-          </Button>
-        </ButtonGroup>
-      </div>
+      <ButtonGroup {...buttonGroupProps}>
+        <Button
+          name="ON"
+          appearance={appearance}
+          icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
+          iconPosition={withIcon ? iconPosition : undefined}
+        >
+          ON
+        </Button>
+        <Button
+          name="OFF"
+          appearance={appearance}
+          icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
+          iconPosition={withIcon ? iconPosition : undefined}
+        >
+          OFF
+        </Button>
+      </ButtonGroup>
     );
   });
