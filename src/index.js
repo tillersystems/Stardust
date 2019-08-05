@@ -4,6 +4,7 @@ export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as CheckBox } from './CheckBox';
+export { default as Card } from './Card';
 export { default as Counter } from './Counter';
 export { default as DatePicker } from './DatePicker';
 export { default as Dropdown } from './Dropdown';
