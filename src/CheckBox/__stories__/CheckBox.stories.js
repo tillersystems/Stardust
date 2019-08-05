@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 import { action } from '@storybook/addon-actions';
 
@@ -19,33 +19,35 @@ storiesOf('CheckBox', module)
       content: CheckBoxReadme,
     },
   })
-  .add('default', () => {
-    const enabledValue = boolean('Enabled', true, 'state');
+  .add('uncontrolled state', () => {
+    const disabledValue = boolean('Disabled', false, 'Props');
+    const value = text('Value', 'I am a value', 'Props');
+
     const onChangeAction = action('onChange');
 
     return (
       <>
-        <CheckBox checked disabled={!enabledValue} onChange={() => onChangeAction()}>
+        <CheckBox checked disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
           A really cool choice
         </CheckBox>
-        <CheckBox disabled={!enabledValue} onChange={() => onChangeAction()}>
+        <CheckBox disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
           A really cool choice
         </CheckBox>
-        <CheckBox disabled={!enabledValue} onChange={() => onChangeAction()}>
+        <CheckBox disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
           A really cool choice
         </CheckBox>
       </>
     );
   })
-  .add('controlled', () => {
-    const enabledValue = boolean('Enabled', true, 'state');
+  .add('controlled state', () => {
+    const disabledValue = boolean('Disabled', false, 'Props');
 
     return (
       <State store={store}>
         {state => (
           <CheckBox
             checked={state.checked}
-            disabled={!enabledValue}
+            disabled={disabledValue}
             onChange={() => store.set({ checked: !store.get('checked') })}
           >
             What?
