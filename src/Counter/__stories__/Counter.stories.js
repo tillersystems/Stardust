@@ -14,11 +14,11 @@ storiesOf('Counter', module)
   .addDecorator(withKnobs)
   .addParameters({
     readme: {
-      // Show readme before story
+      // Show readme around story
       content: CounterReadme,
     },
   })
-  .add('default', () => {
+  .add('Uncontrolled state', () => {
     const step = number(
       'Step',
       1,
@@ -28,7 +28,7 @@ storiesOf('Counter', module)
         max: 100,
         step: 1,
       },
-      'step',
+      'Props',
     );
     const max = number(
       'Max value',
@@ -39,7 +39,7 @@ storiesOf('Counter', module)
         max: 100,
         step: 1,
       },
-      'max',
+      'Props',
     );
     const min = number(
       'Min value',
@@ -50,7 +50,7 @@ storiesOf('Counter', module)
         max: 100,
         step: 1,
       },
-      'min',
+      'Props',
     );
     const appearance = select(
       'Appearance',
@@ -63,7 +63,7 @@ storiesOf('Counter', module)
         google: 'google',
       },
       'secondary',
-      'State',
+      'Props',
     );
     const widthValue = number(
       'Width',
@@ -74,7 +74,7 @@ storiesOf('Counter', module)
         max: 50,
         step: 1,
       },
-      'Size',
+      'Props',
     );
     const OnIncrement = () => store.set({ count: store.get('count') + 1 });
     const OnDecrement = () => store.set({ count: store.get('count') - 1 });

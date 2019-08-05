@@ -8,29 +8,25 @@ import { Counter } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
+<!-- PROPS -->
+
+### Description
+
+A Counter is a number value that can be updated by two Buttons surrounding the displayed value.
+
 ### Properties
 
-- `appearance` - Button appareance.
-- `className` - className needed by styled component.
-- `max` - Maximum value allowed.
-- `min` - Minimum value allowed.
-- `onIncrement` - Callback function called on increment.
-- `onDecrement` - Callback function called on decrement.
-- `step` - step for increment/decrement value.
-- `value` - incremented/decremented value. The value is set to 0 if no value provided.
-- `width` - the width of the input.
-
-| propName      | propType | defaultValue | isRequired |
-| ------------- | :------: | :----------: | :--------: |
-| `appareance`  | `string` | `secondary`  |     -      |
-| `className`   | `string` |     `''`     |     -      |
-| `max`         | `number` |    `100`     |     -      |
-| `min`         | `number` |     `0`      |     -      |
-| `onIncrement` |  `func`  |  `() => {}`  |     -      |
-| `onDecrement` |  `func`  |  `() => {}`  |     -      |
-| `step`        | `number` |     `1`      |     -      |
-| `value`       | `number` |     `0`      |     -      |
-| `width`       | `string` |    `5rem`    |     -      |
+| Name          | Required |   Type   | DefaultValue |                               Description                               |
+| ------------- | :------: | :------: | :----------: | :---------------------------------------------------------------------: |
+| `appareance`  |    -     | `string` | `secondary`  |              Buttons appearance prop customizing the style              |
+| `className`   |    -     | `string` |     `''`     |                  ClassName needed by styled components                  |
+| `max`         |    -     | `number` |    `100`     |                          Maximum value allowed                          |
+| `min`         |    -     | `number` |     `0`      |                          Minimum value allowed                          |
+| `onIncrement` |    -     |  `func`  |  `() => {}`  |                  Callback function called on increment                  |
+| `onDecrement` |    -     |  `func`  |  `() => {}`  |                  Callback function called on decrement                  |
+| `step`        |    -     | `number` |     `1`      |                Step for incrementing/decrementing value                 |
+| `value`       |    -     | `number` |     `0`      | Value of counter. The value is set to 0 if no value is provided by prop |
+| `width`       |    -     | `string` |    `5rem`    |                         The width of the input                          |
 
 ### Example
 
