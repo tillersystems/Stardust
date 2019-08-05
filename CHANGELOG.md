@@ -1,3 +1,9 @@
+## [4.4.1](https://github.com/tillersystems/Stardust/compare/v4.4.0...v4.4.1) (2019-08-05)
+
+### Bug Fixes
+
+- **Card:** Add export to Card ([#678](https://github.com/tillersystems/Stardust/issues/678)) ([2dc4b10](https://github.com/tillersystems/Stardust/commit/2dc4b10))
+
 # [4.4.0](https://github.com/tillersystems/Stardust/compare/v4.3.6...v4.4.0) (2019-08-05)
 
 ### Bug Fixes
