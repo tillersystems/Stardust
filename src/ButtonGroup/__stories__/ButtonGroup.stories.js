@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
+import Wrapper from '../../Wrapper';
 import { Button, Icon, Theme } from '../..';
 import ButtonGroup from '..';
 import { Data as IconName } from '../../Icon/data';
@@ -59,23 +60,25 @@ storiesOf('ButtonGroup', module)
     const iconName = select('Icon Name', getIconName, 'calendar', 'Button Props');
 
     return (
-      <ButtonGroup {...buttonGroupProps}>
-        <Button
-          name="ON"
-          appearance={appearance}
-          icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
-          iconPosition={withIcon ? iconPosition : undefined}
-        >
-          ON
-        </Button>
-        <Button
-          name="OFF"
-          appearance={appearance}
-          icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
-          iconPosition={withIcon ? iconPosition : undefined}
-        >
-          OFF
-        </Button>
-      </ButtonGroup>
+      <Wrapper>
+        <ButtonGroup {...buttonGroupProps}>
+          <Button
+            name="ON"
+            appearance={appearance}
+            icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
+            iconPosition={withIcon ? iconPosition : undefined}
+          >
+            ON
+          </Button>
+          <Button
+            name="OFF"
+            appearance={appearance}
+            icon={withIcon ? <Icon color={Theme.palette.white} name={iconName} /> : undefined}
+            iconPosition={withIcon ? iconPosition : undefined}
+          >
+            OFF
+          </Button>
+        </ButtonGroup>
+      </Wrapper>
     );
   });

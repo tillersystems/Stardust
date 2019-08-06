@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 
+import Wrapper from '../../Wrapper';
 import { Counter } from '../..';
 import CounterReadme from '../README.md';
 
@@ -80,19 +81,21 @@ storiesOf('Counter', module)
     const OnDecrement = () => store.set({ count: store.get('count') - 1 });
 
     return (
-      <State store={store}>
-        {state => (
-          <Counter
-            step={step}
-            max={max}
-            min={min}
-            onIncrement={() => OnIncrement()}
-            onDecrement={() => OnDecrement()}
-            countValue={state.count}
-            appearance={appearance}
-            width={`${widthValue}rem`}
-          />
-        )}
-      </State>
+      <Wrapper>
+        <State store={store}>
+          {state => (
+            <Counter
+              step={step}
+              max={max}
+              min={min}
+              onIncrement={() => OnIncrement()}
+              onDecrement={() => OnDecrement()}
+              countValue={state.count}
+              appearance={appearance}
+              width={`${widthValue}rem`}
+            />
+          )}
+        </State>
+      </Wrapper>
     );
   });

@@ -4,6 +4,7 @@ import { withKnobs, boolean, color, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import withDocs from 'storybook-readme/with-docs';
 
+import Wrapper from '../../Wrapper';
 import { Icon, Theme } from '../..';
 import Button from '..';
 import { Data as IconName } from '../../Icon/data';
@@ -69,17 +70,19 @@ storiesOf('Button', module)
     const colorValue = color('Icon Color', Theme.palette.darkBlue, 'Layout');
 
     return (
-      <Button
-        appearance={appearance}
-        disabled={disabled}
-        fluid={fluid}
-        icon={withIcon ? <Icon color={colorValue} name={iconName} /> : undefined}
-        iconPosition={withIcon ? iconPosition : undefined}
-        onClick={() => onClickAction(appearance)}
-        size={size}
-        type={type}
-      >
-        Default
-      </Button>
+      <Wrapper>
+        <Button
+          appearance={appearance}
+          disabled={disabled}
+          fluid={fluid}
+          icon={withIcon ? <Icon color={colorValue} name={iconName} /> : undefined}
+          iconPosition={withIcon ? iconPosition : undefined}
+          onClick={() => onClickAction(appearance)}
+          size={size}
+          type={type}
+        >
+          Default
+        </Button>
+      </Wrapper>
     );
   });

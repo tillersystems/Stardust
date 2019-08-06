@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { number, text, withKnobs } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Avatar } from '../..';
 import AvatarReadme from '../README.md';
 
@@ -32,11 +33,11 @@ storiesOf('Avatar', module)
     );
 
     return (
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 120px)' }}>
+      <Wrapper style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 120px)' }}>
         <Avatar name={name1} size={size} />
         <Avatar name={name2} size={size} />
         <Avatar name={name3} size={size} />
-      </div>
+      </Wrapper>
     );
   })
   .add('with an user image', () => {
@@ -59,5 +60,9 @@ storiesOf('Avatar', module)
       'Props',
     );
 
-    return <Avatar name={name} src={imageUrl} size={size} />;
+    return (
+      <Wrapper>
+        <Avatar name={name} src={imageUrl} size={size} />
+      </Wrapper>
+    );
   });

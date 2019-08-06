@@ -4,6 +4,7 @@ import { withKnobs, select, date, boolean, number } from '@storybook/addon-knobs
 import { action } from '@storybook/addon-actions';
 import { DateTime, Interval } from 'luxon';
 
+import Wrapper from '../../Wrapper';
 import DatePicker from '..';
 import DatePickerReadme from '../README.md';
 
@@ -44,7 +45,7 @@ storiesOf('DatePicker', module)
     const isRange = boolean('Range date picker', false, 'Props');
 
     return (
-      <div style={{ background: 'white', padding: '16px', borderRadius: '4px' }}>
+      <Wrapper style={{ background: 'white' }}>
         <DatePicker
           numberOfMonthsToDisplay={numberOfMonthsToDisplay}
           rangePicker={isRange}
@@ -53,7 +54,7 @@ storiesOf('DatePicker', module)
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
         />
-      </div>
+      </Wrapper>
     );
   })
   .add('controlled state', () => {
@@ -83,7 +84,7 @@ storiesOf('DatePicker', module)
     const isRange = boolean('Range date picker', false, 'Props');
 
     return (
-      <div style={{ background: 'white', padding: '16px', borderRadius: '4px' }}>
+      <Wrapper style={{ background: 'white' }}>
         <DatePicker
           numberOfMonthsToDisplay={numberOfMonthsToDisplay}
           rangePicker={isRange}
@@ -93,7 +94,7 @@ storiesOf('DatePicker', module)
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
         />
-      </div>
+      </Wrapper>
     );
   })
   .add('controlled state of an interval', () => {
@@ -127,7 +128,7 @@ storiesOf('DatePicker', module)
     );
 
     return (
-      <div style={{ background: 'white', padding: '16px', borderRadius: '4px' }}>
+      <Wrapper style={{ background: 'white' }}>
         <DatePicker
           numberOfMonthsToDisplay={numberOfMonthsToDisplay}
           rangePicker={isRange}
@@ -137,6 +138,6 @@ storiesOf('DatePicker', module)
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
         />
-      </div>
+      </Wrapper>
     );
   });
