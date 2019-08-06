@@ -6,16 +6,8 @@ import { Icon, Theme } from '..';
 import { Title, Value, Variation } from './elements';
 
 /**
- * Kpi Block
- *
- * This component is in charge of displaying
- * a Kpi Block
- *
- * @param {string} className // Class needed by styled component.
- * @param {string} title // KpiBlock title.
- * @param {string} value // KpiBlock value.
- * @param {number} variation // KpiBlock variation (negative or positive).
- * @param {boolean} isCompacted // Display or not mobile version of the component
+ * A Kpi Block provides useful data pieces of information that should help users identity
+ * the most important things about their data.
  *
  * @return {jsx}
  */
@@ -43,10 +35,29 @@ const KpiBlock = ({ className, title, value, variation, isCompacted }) => (
  */
 const { bool, number, node, oneOfType, string } = PropTypes;
 KpiBlock.propTypes = {
+  /**
+   * Class needed by styled component
+   */
   className: string,
+
+  /**
+   * If compacted, the block will have a smaller height and title, value and variation will stack in this order
+   */
   isCompacted: bool,
+
+  /**
+   * Title displayed below the value
+   */
   title: string.isRequired,
+
+  /**
+   * Value displayed at the center of the block
+   */
   value: oneOfType([string, node]).isRequired,
+
+  /**
+   * Variation, positive or negative, displayed at the top right corner of the block
+   */
   variation: oneOfType([bool, number]),
 };
 

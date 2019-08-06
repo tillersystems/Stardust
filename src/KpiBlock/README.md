@@ -6,21 +6,19 @@
 import { KpiBlock } from '@tillersystems/stardust';
 ```
 
+A Kpi Block provides useful data pieces of information that should help users identity
+the most important things about their data.
+
 <!-- STORY -->
 
 ### Properties
 
-- `className` - Class needed by styled component.
-- `title` - KpiBlock title.
-- `value` - KpiBlock value.
-- `variation` - KpiBlock variation (negative or positive).
-
-| propName    |     propType      | defaultValue | isRequired |
-| ----------- | :---------------: | :----------: | :--------: |
-| `className` |     `string`      |     `''`     |     -      |
-| `title`     |     `string`      |              |     \*     |
-| `value`     | `string` / `node` |              |     \*     |
-| `variation` | `number` / `bool` |              |     -      |
+| propName    | Required |     propType      | defaultValue |                                   Description                                   |
+| ----------- | :------: | :---------------: | :----------: | :-----------------------------------------------------------------------------: |
+| `className` |    -     |     `string`      |     `''`     |                        Class needed by styled component                         |
+| `title`     |    \*    |     `string`      |              |                         Title displayed below the value                         |
+| `value`     |    \*    | `string` / `node` |              |                   Value displayed at the center of the block                    |
+| `variation` |    -     | `number` / `bool` |              | Variation, positive or negative, displayed at the top right corner of the block |
 
 ### Example
 
