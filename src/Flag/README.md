@@ -8,19 +8,11 @@ import { Flag } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
-### Properties
+### Description
 
-- `name` - name of the flag.
-- `width` - width of the flag.
-- `height` - height of the flag.
-- `rounded` - add rounded corners to the flag.
+A Flag displays a country flag from the list in `data.js`. It is drawed with a svg so added data should be kept as light as possible.
 
-| propName  | propType | defaultValue | isRequired |
-| --------- | :------: | :----------: | :--------: |
-| `name`    | `string` |              |     \*     |
-| `width`   | `number` |     `20`     |     -      |
-| `height`  | `number` |     `20`     |     -      |
-| `rounded` |  `bool`  |   `false`    |     -      |
+<!-- PROPS -->
 
 ### Example
 
