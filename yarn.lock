@@ -1967,9 +1967,10 @@
     "@babel/runtime" "^7.5.4"
     "@testing-library/dom" "^5.5.4"
 
-"@tillersystems/eslint-config@1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.8.tgz#d65afd9f64a4a24b12536882ca263e8092cbd02c"
+"@tillersystems/eslint-config@1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.9.tgz#e87274d108c28c2b6b23c8cf7591ed023813ae91"
+  integrity sha512-Qt0UtHemj7FmQ+Qr4reqTFFBfuCtbDixTtVooVNtd6GZZdo4ECt4qVum89bky2DjHoJ2jyGxugc44HKfjCJdPw==
 
 "@tippy.js/react@2.2.2":
   version "2.2.2"
