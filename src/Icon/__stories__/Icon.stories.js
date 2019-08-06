@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, color, number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
+import Wrapper from '../../Wrapper';
 import { Icon, Theme } from '../..';
 import { Data } from '../data';
 import IconReadme from '../README.md';
@@ -19,15 +20,18 @@ storiesOf('Icon', module)
     },
   })
   .add('default', () => {
-    const colorValue = color('Color', Theme.palette.darkBlue, 'Color');
+    const colorValue = color('Color', Theme.palette.darkBlue, 'Props');
     const sizeOptions = { range: true, min: 10, max: 100, step: 10 };
-    const sizeValue = number('Size', 20, sizeOptions, 'Size');
+    const sizeValue = number('Size', 20, sizeOptions, 'Props');
+
     return (
-      <Grid>
-        {Object.keys(Data).map(iconName => (
-          <IconCard key={iconName} name={iconName} color={colorValue} size={sizeValue} />
-        ))}
-      </Grid>
+      <Wrapper>
+        <Grid>
+          {Object.keys(Data).map(iconName => (
+            <IconCard key={iconName} name={iconName} color={colorValue} size={sizeValue} />
+          ))}
+        </Grid>
+      </Wrapper>
     );
   });
 
