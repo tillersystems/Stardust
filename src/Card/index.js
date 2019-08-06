@@ -7,13 +7,8 @@ import Body from './Body';
 import Footer from './Footer';
 
 /**
- * Card
- *
- * This component is in charge of display
- * the Card component
- *
- * @param {string} [width=auto] - define the width of the card, that can be any size units (ex: "100px", "10rem", "100%" ...)
- * @param {string} [height=auto] - define the height of the card, that can be any size units (ex: "100px", "10rem", "100%" ...)
+ * A Card is a simple rectangular container that can be used to display content through its children.
+ * It can have a Header and a Footer. The Header can be smaller through a boolean prop.
  *
  * @return {jsx}
  */
@@ -38,7 +33,14 @@ Card.Footer = Footer;
  */
 const { string } = PropTypes;
 Card.propTypes = {
+  /**
+   * Defines the card height that can be any size units (ex: "100px", "10rem", "100%" ...)
+   */
   height: string,
+
+  /**
+   * Defines the card width that can be any size units (ex: "100px", "10rem", "100%" ...)
+   */
   width: string,
 };
 

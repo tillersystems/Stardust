@@ -2,12 +2,8 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 /**
- * Header
- *
- * This component is in charge of display
- * the header of Card component
- *
- * @param {boolean} small - change header size
+ * The Header of the Card is displayed at the top of the Card, before content.
+ * Height can have two possible values through the `small` prop.
  *
  * @return {jsx}
  */
@@ -34,6 +30,9 @@ const Header = styled.div`
  */
 const { bool } = PropTypes;
 Header.propTypes = {
+  /**
+   * change header size
+   */
   small: bool,
 };
 

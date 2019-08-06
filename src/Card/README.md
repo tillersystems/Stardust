@@ -6,25 +6,14 @@
 import { Card } from '@tillersystems/stardust';
 ```
 
+### Description
+
+A Card is a simple rectangular container that can be used to display content through its children.  
+It can have a Header and a Footer. The Header can be smaller through a boolean prop.
+
 <!-- STORY -->
 
-### Card properties
-
-- `width` - define the width of the card, that can be any size units (ex: "100px", "10rem", "100%" ...)
-- `height` - define the height of the card, that can be any size units (ex: "100px", "10rem", "100%" ...)
-
-| propName | propType | defaultValue | isRequired |
-| -------- | :------: | :----------: | :--------: |
-| `width`  | `string` |    `auto`    |     -      |
-| `height` | `string` |    `auto`    |     -      |
-
-### Card.Header properties
-
-- `small` - change header size
-
-| propName | propType  | defaultValue | isRequired |
-| -------- | :-------: | :----------: | :--------: |
-| `small`  | `boolean` |   `false`    |     -      |
+<!-- PROPS -->
 
 ### Example
 
