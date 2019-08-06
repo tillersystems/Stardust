@@ -17,87 +17,6 @@ function escapeSeparator(separator) {
 }
 
 class NumberInput extends PureComponent {
-  /** Display name. */
-  static displayName = 'NumberInput';
-
-  /** Prop types validation. */
-  static propTypes = {
-    // - - - Size related props - - -
-    width: PropTypes.string,
-    fluid: PropTypes.bool,
-
-    // - - - DOM element related props - - -
-    id: PropTypes.string,
-    tabIndex: PropTypes.string,
-
-    // - - - Input related props - - -
-    disabled: PropTypes.bool,
-    value: PropTypes.number,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-
-    // - - - Appearance related props - - -
-    label: PropTypes.shape({
-      text: PropTypes.string,
-      icon: PropTypes.string,
-    }),
-    labelPosition: PropTypes.oneOf(['left', 'right']),
-    validate: PropTypes.bool,
-
-    // - - - Status related props - - -
-    info: PropTypes.bool,
-    success: PropTypes.bool,
-    warning: PropTypes.bool,
-    error: PropTypes.bool,
-
-    // - - - Number input related props - - -
-    min: PropTypes.number,
-    max: PropTypes.number,
-    step: PropTypes.number,
-
-    // - - - Number format related props - - -
-    decimals: PropTypes.number,
-    separator: PropTypes.string,
-
-    // - - - Internal event handlers - - -
-    _onFocus: PropTypes.func,
-    _onBlur: PropTypes.func,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    width: '25rem',
-    fluid: false,
-
-    id: '',
-    tabIndex: '0',
-
-    disabled: false,
-    value: null,
-    onChange: () => {},
-    onFocus: () => {},
-    onBlur: () => {},
-
-    label: null,
-    labelPosition: 'left',
-    validate: false,
-
-    info: false,
-    success: false,
-    warning: false,
-    error: false,
-
-    min: null,
-    max: null,
-    step: 1,
-    decimals: 0,
-    separator: getLocaleSeparator(),
-
-    _onFocus: () => {},
-    _onBlur: () => {},
-  };
-
   /** Internal state. */
   state = {
     // Raw value: This is the string used to control the inner input.
@@ -297,5 +216,159 @@ class NumberInput extends PureComponent {
     );
   }
 }
+
+const { bool, func, number, oneOf, shape, string } = PropTypes;
+
+/** Display name. */
+NumberInput.displayName = 'NumberInput';
+
+/** Prop types validation. */
+NumberInput.propTypes = {
+  /**
+   * Numbers of decimals the input value has to display.
+   */
+  decimals: number,
+
+  /**
+   *  Whether the input is disabled or not
+   */
+  disabled: bool,
+
+  /**
+   * whether the input has error status
+   */
+  error: bool,
+
+  /**
+   * Whether the input takes all available space or not
+   */
+  fluid: bool,
+
+  /**
+   * The ID of the input
+   */
+  id: string,
+
+  /**
+   * Whether the input has info status
+   */
+  info: bool,
+
+  /**
+   * Defines the label with either `icon` with the name of the icon to display, or
+   * `text` with the text to display
+   */
+  label: shape({
+    icon: string,
+    text: string,
+  }),
+
+  /**
+   * Position of label (`left` or `right`)
+   */
+  labelPosition: oneOf(['left', 'right']),
+
+  /**
+   * Maximum value of the number value
+   */
+  max: number,
+
+  /**
+   * Mimimum value of the number value
+   */
+  min: number,
+
+  /**
+   * Handler when input loses focus
+   */
+  onBlur: func,
+
+  /**
+   * Handler of input value change
+   */
+  onChange: func,
+
+  /**
+   * Handler when input gains focus
+   */
+  onFocus: func,
+
+  /**
+   * What will separate the integer part from the decimals. Default value depends from user browser
+   */
+  separator: string,
+
+  /**
+   * Value of increment or decrement when using arrow keys
+   */
+  step: number,
+
+  /**
+   * Whether the input has success status
+   */
+  success: bool,
+
+  /**
+   * Index of the input in a parent form
+   */
+  tabIndex: string,
+
+  /**
+   * Whether the input has to be checked for validation or not
+   */
+  validate: bool,
+
+  /**
+   * The value of the input
+   */
+  value: number,
+
+  /**
+   * Whether the input has warning status
+   */
+  warning: bool,
+
+  /**
+   * The width of the input
+   */
+  width: string,
+
+  /**
+   * Internal handler when input loses focus
+   */
+  _onBlur: func,
+
+  /**
+   * Internal handler when input gains focus
+   */
+  _onFocus: func,
+};
+
+/** Default props. */
+NumberInput.defaultProps = {
+  decimals: 0,
+  disabled: false,
+  error: false,
+  fluid: false,
+  id: '',
+  info: false,
+  label: null,
+  labelPosition: 'left',
+  max: null,
+  min: null,
+  onBlur: () => {},
+  onChange: () => {},
+  onFocus: () => {},
+  separator: getLocaleSeparator(),
+  step: 1,
+  success: false,
+  tabIndex: '0',
+  validate: false,
+  value: null,
+  warning: false,
+  width: '25rem',
+  _onFocus: () => {},
+  _onBlur: () => {},
+};
 
 export default NumberInput;
