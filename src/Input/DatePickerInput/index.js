@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { DateTime } from 'luxon';
 
-import { DatePicker, EventListener, Popover, TextInput } from '../..';
+import { DatePicker, Popover, TextInput } from '../..';
 import { Container, DatePickerWrapper, PopoverContainer } from './elements';
 
 /**
@@ -156,32 +156,32 @@ class DatePickerInput extends PureComponent {
 const { bool, func, object } = PropTypes;
 /** Prop types validation. */
 DatePickerInput.propTypes = {
-  /*
+  /**
    * Whether the input has a status error
    */
   error: bool,
 
-  /*
+  /**
    * Whether the input takes all available space or not
    */
   fluid: bool,
 
-  /*
+  /**
    * The maximum selectable date
    */
   maxDate: object,
 
-  /*
+  /**
    * The minimum selectable date
    */
   minDate: object,
 
-  /*
+  /**
    * Handler on date changed
    */
   onChange: func,
 
-  /*
+  /**
    * The current value of the selected date (controlled mode)
    */
   value: object,
@@ -189,12 +189,12 @@ DatePickerInput.propTypes = {
 
 /** Default props. */
 DatePickerInput.defaultProps = {
-  fluid: false,
-  value: null,
-  onChange: () => {},
   error: false,
+  fluid: false,
   maxDate: null,
   minDate: null,
+  onChange: () => {},
+  value: null,
 };
 
 export default DatePickerInput;

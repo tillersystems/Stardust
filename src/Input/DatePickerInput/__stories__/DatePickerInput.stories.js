@@ -4,6 +4,7 @@ import { withKnobs, boolean, date } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { DateTime } from 'luxon';
 
+import Wrapper from '../../../Wrapper';
 import DatePickerInput from '..';
 import DatePickerInputReadme from '../README.md';
 
@@ -19,7 +20,11 @@ storiesOf('Input - DatePickerInput', module)
     },
   })
   .add('default', () => {
-    return <DatePickerInput onDateChange={value => onChangeAction(value)} />;
+    return (
+      <Wrapper>
+        <DatePickerInput onDateChange={value => onChangeAction(value)} />
+      </Wrapper>
+    );
   })
   .add('controlled', () => {
     const dateValue = date('Date', value, 'Props');
@@ -30,12 +35,14 @@ storiesOf('Input - DatePickerInput', module)
     const maxDateValue = date('Maximum date', new Date(2019, 11, 1), 'Bounds');
 
     return (
-      <DatePickerInput
-        value={DateTime.fromMillis(dateValue)}
-        onChange={date => onChangeAction(date)}
-        minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
-        maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
-        error={errorValue}
-      />
+      <Wrapper>
+        <DatePickerInput
+          value={DateTime.fromMillis(dateValue)}
+          onChange={date => onChangeAction(date)}
+          minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
+          maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
+          error={errorValue}
+        />
+      </Wrapper>
     );
   });
