@@ -7,42 +7,14 @@ import Theme from '../Theme';
 import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
 
 /**
- * CheckBox
- *
- * This component is in charge of displaying
- * a checkBox
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // Add a text aside in the select next the selected value.
- * @param {boolean} checked // Specifies whether the checkbox is selected.
- * @param {boolean} disabled // Specifies whether the checkbox is disabled.
- * @param {function} onChange // Callback whence clicked.
- * @param {string} value // The value to be used in the checkbox input. This is the value that will be returned on form submission.
+ * A CheckBox depicts a binary state if used alone, just as a ToggleButton, the difference being
+ * that ToggleButton triggers the callback with the new state value, whereas the CheckBox
+ * just triggers the callback without any argument so the parent needs to keep track by itself.
  *
  * @return {jsx}
  */
 
 class CheckBox extends PureComponent {
-  /** Prop types. */
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    checked: PropTypes.bool,
-    disabled: PropTypes.bool,
-    onChange: PropTypes.func,
-    value: PropTypes.string,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    className: '',
-    checked: false,
-    disabled: false,
-    onChange: null,
-    value: '',
-  };
-
   /** Internal state. */
   state = {
     checked: this.props.checked, // eslint-disable-line
@@ -55,7 +27,7 @@ class CheckBox extends PureComponent {
   componentDidUpdate(prevProps) {
     const { checked } = this.props;
 
-    // Update state only if props are changed
+    // Update state only if props have changed
     if (prevProps.checked !== checked) {
       this.setState({
         checked,
@@ -69,15 +41,17 @@ class CheckBox extends PureComponent {
    */
   handleChange = () => {
     const { onChange, disabled } = this.props;
-    const { checked } = this.state;
 
     if (disabled) {
       return;
     }
 
-    this.setState({ checked: !checked }, () => {
-      onChange;
-    });
+    this.setState(
+      prevState => ({ checked: !prevState.checked }),
+      () => {
+        onChange;
+      },
+    );
   };
 
   /**
@@ -109,6 +83,49 @@ class CheckBox extends PureComponent {
     );
   }
 }
+
+/** Prop types. */
+CheckBox.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: PropTypes.node,
+
+  /**
+   * ClassName needed by styled components
+   */
+  className: PropTypes.string,
+
+  /**
+   * Specifies whether the checkbox is checked
+   */
+  checked: PropTypes.bool,
+
+  /**
+   * Specifies whether the checkbox is disabled
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Callback triggered on CheckBox state change
+   */
+  onChange: PropTypes.func,
+
+  /**
+   * The value to be used in the checkbox input. This is the value that will be returned on form submission.
+   */
+  value: PropTypes.string,
+};
+
+/** Default props. */
+CheckBox.defaultProps = {
+  children: null,
+  className: '',
+  checked: false,
+  disabled: false,
+  onChange: null,
+  value: '',
+};
 
 export default styled(CheckBox)`
   width: 100%;

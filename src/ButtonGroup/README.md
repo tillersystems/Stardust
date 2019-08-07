@@ -8,19 +8,21 @@ import { ButtonGroup } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
+<!-- PROPS -->
+
+### Description
+
+A ButtonGroup wraps as much Buttons as it is given as children.  
+Only one Button is active at a time. Each Button is cloned as is, meaning you could provide Buttons with different styles.
+
 ### Properties
 
-- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `className` - Add a text aside in the select next the selected value.
-- `onChange` - Callback function called when a button is clicked.
-- `defaultActiveButton` - Specifies the initial state: witch button is selected.
-
-| propName              | propType | defaultValue | isRequired |
-| --------------------- | :------: | :----------: | :--------: |
-| `children`            |  `node`  |    `null`    |     -      |
-| `className`           | `string` |     `''`     |     -      |
-| `onChange`            |  `func`  |  `() => {}`  |     -      |
-| `defaultActiveButton` | `string` |     `''`     |     -      |
+| Name                      | Required |   Type   | DefaultValue |                                     Description                                     |
+| ------------------------- | :------: | :------: | :----------: | :---------------------------------------------------------------------------------: |
+| `children`                |    -     |  `node`  |    `null`    | Anything that can be rendered: numbers, strings, elements or an array (or fragment) |
+| `className`               |    -     | `string` |     `''`     |                        ClassName needed by styled components                        |
+| `defaultActiveButtonName` |    -     | `string` |     `''`     |                    Specifies which button is initially selected                     |
+| `onChange`                |    -     | `string` |     `''`     |                  Callback function called when a button is clicked                  |
 
 ### Example
 

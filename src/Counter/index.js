@@ -8,54 +8,11 @@ import { FakeInput } from './elements';
 const { func, number, string } = PropTypes;
 
 /**
- * Counter.
- *
- * This component is in charge of displaying
- * an Counter component.
- *
- * @param {string} appearance // Button appareance.
- * @param {string} className // className needed by styled component.
- * @param {number} max // Maximum value allowed.
- * @param {number} min // Minimum value allowed.
- * @param {func} onIncrement // Callback function called on increment.
- * @param {func} onDecrement // Callback function called on decrement.
- * @param {number} step // Step for increment / decrement value.
- * @param {number} value // incremented/decremented value. The value is set to 0 if no value provided.
- * @param {string} width // The width of the input.
+ * A Counter is a number value that can be updated by two Buttons surrounding the displayed value.
  *
  * @return {jsx}
  */
 class Counter extends PureComponent {
-  /**
-   * PropTypes Validation.
-   */
-  static propTypes = {
-    appearance: string,
-    className: string,
-    max: number,
-    min: number,
-    onIncrement: func,
-    onDecrement: func,
-    step: number,
-    value: number,
-    width: string,
-  };
-
-  /**
-   * Default props.
-   */
-  static defaultProps = {
-    className: '',
-    value: 0,
-    step: 1,
-    max: 1000,
-    min: 0,
-    width: '5rem',
-    appearance: 'secondary',
-    onIncrement: () => {},
-    onDecrement: () => {},
-  };
-
   state = {
     count: this.props.value, // eslint-disable-line react/destructuring-assignment,
   };
@@ -137,6 +94,71 @@ class Counter extends PureComponent {
     );
   }
 }
+
+/**
+ * PropTypes Validation.
+ */
+Counter.propTypes = {
+  /**
+   * Buttons appearance prop customizing the style
+   */
+  appearance: string,
+
+  /**
+   * ClassName needed by styled components
+   */
+  className: string,
+
+  /**
+   * Maximum value allowed
+   */
+  max: number,
+
+  /**
+   * Minimum value allowed
+   */
+  min: number,
+
+  /**
+   * Callback function called on increment
+   */
+  onIncrement: func,
+
+  /**
+   * Callback function called on decrement
+   */
+  onDecrement: func,
+
+  /**
+   * Step for incrementing/decrementing value
+   */
+  step: number,
+
+  /**
+   * Value of counter. The value is set to 0 if no value is provided by prop
+   */
+  value: number,
+
+  /**
+   * The width of the input
+   */
+  width: string,
+};
+
+/**
+ * Default props.
+ */
+Counter.defaultProps = {
+  appearance: 'secondary',
+  className: '',
+  max: 1000,
+  min: 0,
+  onIncrement: () => {},
+  onDecrement: () => {},
+  step: 1,
+  value: 0,
+  width: '5rem',
+};
 
 export default styled(Counter)`
   display: flex;

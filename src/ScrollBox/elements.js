@@ -7,6 +7,7 @@ export const Recenter = styled.button`
 `;
 
 export const Root = styled.div`
+  margin: 3rem 0;
   position: relative;
 `;
 

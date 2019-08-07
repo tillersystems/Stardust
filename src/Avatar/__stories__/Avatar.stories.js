@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { number, text, withKnobs } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Avatar } from '../..';
 import AvatarReadme from '../README.md';
 
@@ -9,35 +10,59 @@ storiesOf('Avatar', module)
   .addDecorator(withKnobs)
   .addParameters({
     readme: {
+      includePropTables: [Avatar], // won't work right now because of wrapped styled-comp https://github.com/tuchk4/storybook-readme/issues/177
       // Show readme before story
       content: AvatarReadme,
     },
   })
-  .add('default', () => {
-    const name1 = text('Name 1', 'Thomas Roux', 'name');
-    const name2 = text('Name 2', 'Léopold Houdin', 'name');
-    const name3 = text('Name 3', 'Mickey Mouse', 'name');
+  .add('default with initials', () => {
+    const name1 = text('Name 1', 'Thomas Roux', 'Props');
+    const name2 = text('Name 2', 'Léopold Houdin', 'Props');
+    const name3 = text('Name 3', 'Mickey Mouse', 'Props');
+
+    const size = number(
+      'Size',
+      3,
+      {
+        range: true,
+        min: 1.5,
+        max: 10,
+        step: 0.5,
+      },
+      'Props',
+    );
 
     return (
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 40px)' }}>
-        <Avatar name={name1} />
-        <Avatar name={name2} />
-        <Avatar name={name3} />
-      </div>
+      <Wrapper style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 120px)' }}>
+        <Avatar name={name1} size={size} />
+        <Avatar name={name2} size={size} />
+        <Avatar name={name3} size={size} />
+      </Wrapper>
     );
   })
-  .add('with user image', () => {
-    const name = text('Name', 'Tony Starck', 'name');
+  .add('with an user image', () => {
+    const name = text('Name', 'Tony Starck', 'Props');
     const imageUrl = text(
       'Image',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9urBbQTr7erOXvN978IfXd5TzG5KYU4BRwTfqixgTPodK32ewfg',
-      'image',
+      'Props',
     );
-    const options = {
-      medium: 1.5,
-      big: 3.1,
-      huge: 4.1,
-    };
-    const size = select('Size', options, 3.1, 'size');
-    return <Avatar name={name} src={imageUrl} size={size} />;
+
+    const size = number(
+      'Size',
+      3,
+      {
+        range: true,
+        min: 1.5,
+        max: 10,
+        step: 0.5,
+      },
+      'Props',
+    );
+
+    return (
+      <Wrapper>
+        <Avatar name={name} src={imageUrl} size={size} />
+      </Wrapper>
+    );
   });

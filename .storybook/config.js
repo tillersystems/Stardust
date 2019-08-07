@@ -1,11 +1,10 @@
 import '@babel/polyfill';
 
 import React from 'react';
-import styled from 'styled-components';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import { ThemeProvider } from 'styled-components';
-import { addReadme, configureReadme } from 'storybook-readme';
+import { addReadme } from 'storybook-readme';
 
 import GlobalStyles from './styles';
 import { Theme } from '../src';
@@ -13,15 +12,16 @@ import { Theme } from '../src';
 // Option defaults:
 addParameters({
   options: {
+    isFullScreen: false,
+    panelPosition: 'right',
+    showNav: true,
+    showPanel: true,
+    sidebarAnimations: true,
     theme: create({
       base: 'light',
       brandTitle: 'Stardust',
       brandUrl: 'http://stardust.tillersystems.com',
     }),
-    isFullscreen: false,
-    panelPosition: 'right',
-    showNav: true,
-    showPanel: true,
   },
   readme: {
     /**
