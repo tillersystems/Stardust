@@ -1,3 +1,9 @@
+# [4.5.0](https://github.com/tillersystems/Stardust/compare/v4.4.1...v4.5.0) (2019-08-08)
+
+### Features
+
+- **Icon:** Add icon pie-chart & list ([#682](https://github.com/tillersystems/Stardust/issues/682)) ([424e015](https://github.com/tillersystems/Stardust/commit/424e015))
+
 ## [4.4.1](https://github.com/tillersystems/Stardust/compare/v4.4.0...v4.4.1) (2019-08-05)
 
 ### Bug Fixes
