@@ -1680,17 +1680,10 @@
     recompose "^0.30.0"
     simplebar-react "^1.0.0-alpha.6"
 
-"@storybook/core-events@5.1.10":
+"@storybook/core-events@5.1.10", "@storybook/core-events@^5.0.6":
   version "5.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.10.tgz#5aed88c572036b6bd6dfff28976ee96e6e175d7a"
   integrity sha512-Lvu/rNcgS+XCkQKSGdNpUSWjpFF9AOSHPXsvkwHbRwJYdMDn3FznlXfDUiubOWtsziXHB6vl3wkKDlH+ckb32Q==
-  dependencies:
-    core-js "^3.0.1"
-
-"@storybook/core-events@^5.0.6":
-  version "5.1.8"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.8.tgz#048545d70e03f56eb4d35e3797f6efd9ffe4e541"
-  integrity sha512-fqam2Rm5aV8TxdBgC/eiHriY33O4wTUKw+odiH3sH0l5gZQhcAcFtnV2K2rtxrhgQnsdAzDZ5FNIKvv+xx5ZCg==
   dependencies:
     core-js "^3.0.1"
 
@@ -7695,9 +7688,14 @@ markdown-to-jsx@^6.9.3:
     prop-types "^15.6.2"
     unquote "^1.1.0"
 
-marked@^0.6.0, marked@^0.6.1, marked@^0.6.2:
+marked@^0.6.0, marked@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
+
+marked@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
+  integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
 
 marksy@^7.0.0:
   version "7.0.1"
@@ -10404,20 +10402,21 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.7.1.tgz#22070b7dc04748a792fc6912a58ab99d3a21d788"
   integrity sha512-zzzP5ZY6QWumnAFV6kBRbS44pUMcpZBNER5DWUe1HETlaKXqLcCQxbNu6IHaKr1pUsjuhUGBdOy8sWKmMkL6pQ==
 
-storybook-readme@5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/storybook-readme/-/storybook-readme-5.0.6.tgz#8c108c146e0a12de024bcb8003ae7979d65e3dd3"
-  integrity sha512-zS/ln9gagswvwixXWKQ/D0dwPyw9Bvxs3V9scxwxtYbDM3RXYff/LHXQI7GDfgPpJ5ChYDc0Ktvfmk8GFe0rYg==
+storybook-readme@5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/storybook-readme/-/storybook-readme-5.0.8.tgz#bc5bb9343191bb333cec2633555cec41f3ab6067"
+  integrity sha512-Ej3RotbnfFtk4yAFqJ/39RpaDO/1Yw81TzSHJIQDL7O4E/tKn51247zq3KvAC8b7JM5IY5GlNNjS4q8cBEeBAA==
   dependencies:
     "@storybook/components" "^5.0.6"
     "@storybook/core-events" "^5.0.6"
     html-loader "^0.5.5"
     lodash "^4.17.11"
     markdown-loader "^5.0.0"
-    marked "^0.6.1"
+    marked "^0.7.0"
     node-emoji "1.10.0"
     prism-themes "^1.1.0"
     prismjs "^1.16.0"
+    react-element-to-jsx-string "^14.0.2"
     string-raw "^1.0.1"
     vuex "^3.1.0"
 
