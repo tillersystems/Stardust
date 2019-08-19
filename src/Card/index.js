@@ -27,8 +27,6 @@ const Card = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  overflow: hidden;
 `;
 
 Card.Header = Header;
