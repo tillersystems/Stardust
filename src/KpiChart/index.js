@@ -8,12 +8,9 @@ import Footer from './Footer';
 import { Title } from './elements';
 
 /**
- * Kpi Chart
+ * A Kpi Chart is a bar chart with a title
  *
- * This component is in charge of displaying
- * a Kpi Chart
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+ * @param {node} children
  * @param {string} className // Class needed by styled component.
  *
  * @return {jsx}
@@ -25,26 +22,37 @@ class KpiChart extends PureComponent {
   static Footer = Footer;
   static Title = Title;
 
-  /** Prop types. */
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    // eslint-disable-next-line react/no-unused-prop-types
-    isCompacted: PropTypes.bool,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    className: '',
-    isCompacted: false,
-  };
-
   render() {
     const { children, className } = this.props;
     return <div className={className}>{children}</div>;
   }
 }
+
+/** Prop types. */
+KpiChart.propTypes = {
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment).
+   */
+  children: PropTypes.node,
+
+  /**
+   * ClassName needed by styled components
+   */
+  className: PropTypes.string,
+
+  /**
+   * If true, narrows the padding of the component and the font-size of the title
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  isCompacted: PropTypes.bool,
+};
+
+/** Default props. */
+KpiChart.defaultProps = {
+  children: null,
+  className: '',
+  isCompacted: false,
+};
 
 export default styled(KpiChart)`
   position: relative;
