@@ -11,6 +11,12 @@ describe('<Icon />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  test('should render multipath icon', () => {
+    const { container } = render(<Icon name="check-circle" />);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   test('should display icon with a different name', () => {
     const { container } = render(<Icon name="check" />);
 

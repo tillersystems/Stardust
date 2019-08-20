@@ -26,6 +26,59 @@ exports[`<Icon /> should display icon with a different name 1`] = `
 </svg>
 `;
 
+exports[`<Icon /> should render multipath icon 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+<svg
+  aria-hidden="true"
+  class="c0"
+  focusable="false"
+  height="20"
+  role="img"
+  viewBox="0 0 512 512"
+  width="20"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g>
+    <defs>
+      <path
+        d="M351.5 41.7a21.3 21.3 0 0 1-17.4 39A192 192 0 1 0 448 256v-19.6a21.3 21.3 0 0 1 42.7 0v19.6A234.7 234.7 0 1 1 351.5 41.7zm133 28.7a21.3 21.3 0 0 1 0 30.1L271 314.1a21.3 21.3 0 0 1-30.2 0l-64-64a21.3 21.3 0 1 1 30.2-30.2l48.9 49L454.2 70.3a21.3 21.3 0 0 1 30.2 0z"
+        id="circle"
+      />
+    </defs>
+    <g
+      fill="none"
+      fill-rule="evenodd"
+    >
+      <mask
+        fill="#fff"
+        fill-opacity="0"
+        id="check"
+      >
+        <use
+          xlink:href="#circle"
+        />
+      </mask>
+      <use
+        fill="hsl(0,100%,100%)"
+        fill-rule="nonzero"
+        xlink:href="#circle"
+      />
+      <g
+        fill="hsl(0,100%,100%)"
+        mask="url(#check)"
+      >
+        <path
+          d="M0 0h512v512H0z"
+        />
+      </g>
+    </g>
+  </g>
+</svg>
+`;
+
 exports[`<Icon /> should render without a problem 1`] = `
 .c0 {
   display: inline-block;

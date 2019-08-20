@@ -53,7 +53,12 @@ const Icon = ({ className, color, name, size, title, ...restProps }) => {
    *
    * @return {string}
    */
-  const getIconPath = useMemo(() => Data[name], [name]);
+  const getIconPath = Data[name];
+
+  /**
+   * Icon element
+   */
+  const IconElement = typeof getIconPath === 'function' && getIconPath;
 
   const rootProps = {
     'aria-hidden': title ? undefined : true,
@@ -70,7 +75,11 @@ const Icon = ({ className, color, name, size, title, ...restProps }) => {
     <svg className={className} xmlns="http://www.w3.org/2000/svg" {...rootProps}>
       {title && <title id={titleElementId}>{title}</title>}
       <g>
-        <path data-testid="icon-svg-path" fill={getColor} fillRule="evenodd" d={getIconPath} />
+        {!IconElement ? (
+          <path data-testid="icon-svg-path" fill={getColor} fillRule="evenodd" d={getIconPath} />
+        ) : (
+          <IconElement fill={getColor} />
+        )}
       </g>
     </svg>
   );
