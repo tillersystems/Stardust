@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number, color } from '@storybook/addon-knobs';
 
 import { Loader } from '../..';
+import Wrapper from '../../Wrapper';
 import Theme from '../../Theme';
 import LoaderReadme from '../README.md';
 
@@ -39,5 +40,9 @@ storiesOf('Loader', module)
     );
     const ColorValue = color('Color', Theme.palette.primary.default, 'Color');
 
-    return <Loader color={ColorValue} width={`${widthValue}rem`} height={`${heightValue}rem`} />;
+    return (
+      <Wrapper>
+        <Loader color={ColorValue} width={`${widthValue}rem`} height={`${heightValue}rem`} />
+      </Wrapper>
+    );
   });

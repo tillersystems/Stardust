@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
- * Loader
- *
- * This component is in charge of displaying
- * an Loader to indicate that an action is in progress
- *
- * @param {string} className // Classes needed by styled component.
- * @param {string} color // The color of the Loader.
- * @param {string} width // The width of the Loader.
- * @param {string} height // The height of the Loader.
+ * A Loader indicates that an action is in progress with an ease-in-out animation
  *
  * @return {jsx}
  */
@@ -38,9 +30,24 @@ const Loader = ({ className, color, width, height }) => (
  */
 const { string } = PropTypes;
 Loader.propTypes = {
+  /**
+   * className needed by styled component
+   */
   className: string,
+
+  /**
+   * The color of the Loader
+   */
   color: string,
+
+  /**
+   * The height of the Loader
+   */
   height: string,
+
+  /**
+   * The width of the Loader
+   */
   width: string,
 };
 
