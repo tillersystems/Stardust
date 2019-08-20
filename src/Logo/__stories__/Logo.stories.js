@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, color, number } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Logo } from '../..';
 import LogoReadme from '../README.md';
 
@@ -13,21 +14,8 @@ storiesOf('Logo', module)
       content: LogoReadme,
     },
   })
-  .add('default', () => (
-    <div
-      style={{
-        background: 'hsl(213, 17%, 20%)',
-        height: '10rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <Logo />
-    </div>
-  ))
-  .add('with properties', () => {
-    const colorValue = color('Color', '#12475f', 'Color');
+  .add('with customizable properties', () => {
+    const colorValue = color('Color', '#12475f', 'Props');
 
     const widthValue = number(
       'Width',
@@ -38,7 +26,7 @@ storiesOf('Logo', module)
         max: 600,
         step: 20,
       },
-      'Sizes',
+      'Props',
     );
     const heightValue = number(
       'Height',
@@ -49,10 +37,12 @@ storiesOf('Logo', module)
         max: 600,
         step: 20,
       },
-      'Sizes',
+      'Props',
     );
 
     return (
-      <Logo color={colorValue} width={widthValue.toString()} height={heightValue.toString()} />
+      <Wrapper>
+        <Logo color={colorValue} width={widthValue.toString()} height={heightValue.toString()} />
+      </Wrapper>
     );
   });
