@@ -4,25 +4,11 @@
 
 ## NotificationProvider
 
+<!-- PROPS -->
+
 ### Usage
 
 Wrap your app in the `NotificationProvider`, which provides context for the Notification descendants.
-
-### Properties
-
-- `autoDismiss` - Whether or not to dismiss the notification automatically after a timeout.
-- `autoDismissTimeout` - The time until a notification is automaticaly dismissed, in milliseconds.
-- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `placement` - Placement of the notification on the screen.
-- `pauseOnHover` - Whether or not to pause the timeout when hovered.
-
-| propName             | propType  |  defaultValue  | isRequired |
-| -------------------- | :-------: | :------------: | :--------: |
-| `autoDismiss`        | `boolean` |    `false`     |     -      |
-| `autoDismissTimeout` | `number`  |     `3000`     |     -      |
-| `children`           |  `node`   |     `null`     |     -      |
-| `placement`          | `string`  | `bottom-right` |     -      |
-| `pauseOnHover`       | `boolean` |    `false`     |     -      |
 
 ### Example
 

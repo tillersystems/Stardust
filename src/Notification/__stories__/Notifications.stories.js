@@ -5,6 +5,7 @@ import { withKnobs, boolean, select, number } from '@storybook/addon-knobs';
 import { NotificationProvider, useNotifications } from '../provider';
 import Button from '../../Button';
 import Message from '../../Message';
+import Wrapper from '../../Wrapper';
 import NotificationReadme from '../README.md';
 
 /*eslint react/prop-types:0*/
@@ -48,12 +49,14 @@ storiesOf('Notification', module)
       'Options',
     );
     return (
-      <NotificationProvider placement={placement}>
-        <NotificationComponent
-          autoDismiss={autoDismiss}
-          pauseOnHover={pauseOnHover}
-          autoDismissTimeout={autoDismissTimeout}
-        />
-      </NotificationProvider>
+      <Wrapper>
+        <NotificationProvider placement={placement}>
+          <NotificationComponent
+            autoDismiss={autoDismiss}
+            pauseOnHover={pauseOnHover}
+            autoDismissTimeout={autoDismissTimeout}
+          />
+        </NotificationProvider>
+      </Wrapper>
     );
   });

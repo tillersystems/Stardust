@@ -13,12 +13,6 @@ const NotificationContext = React.createContext();
 /**
  * Notification Provider
  *
- * @param {boolean} autoDismiss - Whether or not to dismiss the notification automatically after a timeout.
- * @param {number} autoDismissTimeout - The time until a notification is automaticaly dismissed, in milliseconds.
- * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} placement - Placement of the notification on the screen.
- * @param {boolean} pauseOnHover - Whether or not to pause the timeout when hovered.
- *
  * @return {jsx}
  */
 export const NotificationProvider = ({
@@ -105,10 +99,29 @@ const NotificationAnimation = posed(Container)({
  */
 const { bool, node, number, string } = PropTypes;
 NotificationProvider.propTypes = {
+  /**
+   * Whether or not to dismiss the notification automatically after a timeout
+   */
   autoDismiss: bool,
+
+  /**
+   * The time until a notification is automatically dismissed, in milliseconds
+   */
   autoDismissTimeout: number,
+
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
   children: node,
+
+  /**
+   * Placement of the notification on the screen
+   */
   placement: string,
+
+  /**
+   * Whether or not to pause the timeout when hovered
+   */
   pauseOnHover: bool,
 };
 

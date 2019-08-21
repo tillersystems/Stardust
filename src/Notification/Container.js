@@ -7,13 +7,6 @@ import { Timer } from './helpers';
 /**
  * Notification Container
  *
- * @param {boolean} autoDismiss - Whether or not to dismiss the notification automatically after a timeout.
- * @param {number} autoDismissTimeout - The time until a notification is automaticaly dismissed, in milliseconds.
- * @param {function} component - Presentational component for displaying message.
- * @param {function} onDismiss - Callback function to call when notification is dismissed.
- * @param {function} pauseOnHover - Whether or not to pause the timeout when hovered.
- * @param {string} placement - Placement of the notification on the screen.
- *
  * @return {jsx}
  */
 const NotificationContainer = forwardRef(
@@ -95,11 +88,31 @@ const NotificationContainer = forwardRef(
  * PropTypes Validation
  */
 const { bool, func, number, oneOf } = PropTypes;
+
 NotificationContainer.propTypes = {
+  /**
+   * Whether or not to dismiss the notification automatically after a timeout
+   */
   autoDismiss: bool.isRequired,
+
+  /**
+   * The time until a notification is automatically dismissed, in milliseconds
+   */
   autoDismissTimeout: number.isRequired,
+
+  /**
+   * Presentational component for displaying message
+   */
   component: func.isRequired,
+
+  /**
+   * Callback function to call when notification is dismissed
+   */
   onDismiss: func.isRequired,
+
+  /**
+   * Placement of the notification on the screen
+   */
   placement: oneOf([
     'top-left',
     'top-center',
@@ -108,6 +121,10 @@ NotificationContainer.propTypes = {
     'bottom-center',
     'bottom-right',
   ]).isRequired,
+
+  /**
+   * Whether or not to pause the timeout when hovered
+   */
   pauseOnHover: bool.isRequired,
 };
 
