@@ -1,3 +1,13 @@
+# [4.6.0](https://github.com/tillersystems/Stardust/compare/v4.5.0...v4.6.0) (2019-08-21)
+
+### Bug Fixes
+
+- **Card:** makes overflowing content visible ([#706](https://github.com/tillersystems/Stardust/issues/706)) ([002cd87](https://github.com/tillersystems/Stardust/commit/002cd87))
+
+### Features
+
+- **Icon:** add check-circle icon ([#711](https://github.com/tillersystems/Stardust/issues/711)) ([dd3d491](https://github.com/tillersystems/Stardust/commit/dd3d491))
+
 # [4.5.0](https://github.com/tillersystems/Stardust/compare/v4.4.1...v4.5.0) (2019-08-08)
 
 ### Features
