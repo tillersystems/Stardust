@@ -297,7 +297,7 @@ class Select extends PureComponent {
 const { array, bool, func, node, object, string } = PropTypes;
 Select.propTypes = {
   /**
-   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   * Must be multiple children each containing a value prop
    */
   children: node,
 
@@ -347,7 +347,7 @@ Select.propTypes = {
   triggerWrapperCss: array,
 
   /**
-   * Display the content on a portal
+   * Displays the content on a portal
    */
   usePortal: bool,
 
