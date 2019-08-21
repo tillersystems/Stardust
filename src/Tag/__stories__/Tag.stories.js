@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Tag, Theme } from '../..';
 import TagReadme from '../README.md';
 
@@ -15,7 +16,7 @@ storiesOf('Tag', module)
   })
   .add('default', () => {
     return (
-      <>
+      <Wrapper>
         <Tag color={Theme.palette.success.default} style={{ marginRight: '1.2rem' }}>
           Success
         </Tag>
@@ -28,6 +29,6 @@ storiesOf('Tag', module)
         <Tag color={Theme.palette.primary.default} style={{ marginRight: '1.2rem' }}>
           info
         </Tag>
-      </>
+      </Wrapper>
     );
   });

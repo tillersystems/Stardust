@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
- * Tag
- *
- * This component is in charge of displaying
- * a popover
- *
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // className needed by styled components.
- * @param {string} color // The background color of the tag box.
+ * A Tag categorizes or marks anything.
  *
  * @return {jsx}
  */
@@ -26,8 +19,13 @@ const Tag = ({ children, className, color, ...rest }) => (
  */
 const { node, string } = PropTypes;
 Tag.propTypes = {
+  /** Anything that can be rendered: numbers, strings, elements or an array (or fragment) */
   children: node,
+
+  /** className needed by styled-components */
   className: string,
+
+  /** The background color of the tag box */
   color: string,
 };
 
