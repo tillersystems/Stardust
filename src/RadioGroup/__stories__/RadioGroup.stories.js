@@ -4,6 +4,7 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
 
+import Wrapper from '../../Wrapper';
 import { RadioGroup, RadioButton } from '../..';
 import RadioGroupReadme from '../README.md';
 
@@ -25,19 +26,21 @@ storiesOf('RadioGroup', module)
     const onChange = action('onChange');
 
     return (
-      <State store={store}>
-        <RadioGroup groupName="vegetable" isRow={enabledRow} onChange={onChange}>
-          <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
-            artichoke
-          </RadioButton>
-          <RadioButton disabled={!enabledValue} value="beetroot" id="beetroot">
-            beetroot
-          </RadioButton>
-          <RadioButton disabled={!enabledValue} value="pumpkin" id="pumpkin">
-            pumpkin
-          </RadioButton>
-        </RadioGroup>
-      </State>
+      <Wrapper>
+        <State store={store}>
+          <RadioGroup groupName="vegetable" isRow={enabledRow} onChange={onChange}>
+            <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
+              artichoke
+            </RadioButton>
+            <RadioButton disabled={!enabledValue} value="beetroot" id="beetroot">
+              beetroot
+            </RadioButton>
+            <RadioButton disabled={!enabledValue} value="pumpkin" id="pumpkin">
+              pumpkin
+            </RadioButton>
+          </RadioGroup>
+        </State>
+      </Wrapper>
     );
   })
   .add('controlled', () => {
@@ -52,23 +55,25 @@ storiesOf('RadioGroup', module)
     const onChange = action('onChange');
 
     return (
-      <State store={store}>
-        <RadioGroup
-          groupName="vegetable"
-          isRow={enabledRow}
-          selectedValue={selectedValue}
-          onChange={onChange}
-        >
-          <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
-            artichoke
-          </RadioButton>
-          <RadioButton disabled={!enabledValue} value="beetroot" id="beetroot">
-            beetroot
-          </RadioButton>
-          <RadioButton disabled={!enabledValue} value="pumpkin" id="pumpkin">
-            pumpkin
-          </RadioButton>
-        </RadioGroup>
-      </State>
+      <Wrapper>
+        <State store={store}>
+          <RadioGroup
+            groupName="vegetable"
+            isRow={enabledRow}
+            selectedValue={selectedValue}
+            onChange={onChange}
+          >
+            <RadioButton disabled={!enabledValue} value="artichoke" id="artichoke">
+              artichoke
+            </RadioButton>
+            <RadioButton disabled={!enabledValue} value="beetroot" id="beetroot">
+              beetroot
+            </RadioButton>
+            <RadioButton disabled={!enabledValue} value="pumpkin" id="pumpkin">
+              pumpkin
+            </RadioButton>
+          </RadioGroup>
+        </State>
+      </Wrapper>
     );
   });
