@@ -26,7 +26,7 @@ exports[`<Message /> should render a error alert 1`] = `
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
   cursor: pointer;
-  background: hsl(34,91%,65%);
+  background: hsl(6,79%,65%);
 }
 
 <div
@@ -206,7 +206,7 @@ exports[`<Message /> should render a warning alert 1`] = `
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
   cursor: pointer;
-  background: hsl(6,79%,65%);
+  background: hsl(34,91%,65%);
 }
 
 <div

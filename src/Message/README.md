@@ -8,19 +8,16 @@ import { Message } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
+<!-- PROPS -->
+
 ### Properties
 
-- `className` - className needed by styled components.
-- `description` - An alert can have a message description.
-- `onClose` -An alert can have a clickable button to close it.
-- `type` - The type of the message box.
-
-| propName    |                       propType                       | defaultValue | isRequired |
-| ----------- | :--------------------------------------------------: | :----------: | :--------: |
-| `className` |                       `string`                       |     `''`     |            |
-| `message`   |                       `string`                       |              |     \*     |
-| `onClose`   |                        `func`                        |  `() => {}`  |            |
-| `type`      | `enum: 'info', 'success', 'warning', 'error' 'info'` |    `info`    |            |
+| Name        | Required |                         Type                         | DefaultValue |                     Description                      |
+| ----------- | :------: | :--------------------------------------------------: | :----------: | :--------------------------------------------------: |
+| `className` |          |                       `string`                       |     `''`     |        className needed by styled components         |
+| `message`   |    \*    |                       `string`                       |              |          Text displayed in the message box           |
+| `onClose`   |          |                        `func`                        |  `() => {}`  |  Callback triggered when the close icon is clicked   |
+| `type`      |          | `enum: 'info', 'success', 'warning', 'error' 'info'` |    `info`    | Type of the message box varying the style of the box |
 
 ### Example
 
