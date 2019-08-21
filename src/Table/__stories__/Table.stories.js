@@ -4,6 +4,7 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Table } from '../..';
+import Wrapper from '../../Wrapper';
 import TableReadme from '../README.md';
 
 storiesOf('Table', module)
@@ -87,11 +88,13 @@ storiesOf('Table', module)
     ];
 
     return (
-      <Table
-        data={data}
-        colsDef={getColsDef(taxCountryCodeValue)}
-        rowsDef={rowsDef}
-        striped={striped}
-      />
+      <Wrapper>
+        <Table
+          data={data}
+          colsDef={getColsDef(taxCountryCodeValue)}
+          rowsDef={rowsDef}
+          striped={striped}
+        />
+      </Wrapper>
     );
   });
