@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Wrapper, Container, Label } from './elements';
 
 /**
- * Defines a radio button component.
+ * A Radio represents a single value from multiple options, so a Radio should be used with at least another one.
  *
  * @return {jsx}
  */
@@ -42,13 +42,28 @@ const { bool, func, node, string } = PropTypes;
 
 /** Prop types. */
 RadioButton.propTypes = {
+  /** Label of the radio */
   children: node,
+
+  /** className needed by styled-components */
   className: string,
+
+  /** Whether the button is enabled or not */
   disabled: bool,
+
+  /** Id allowing to link the label with the radio button */
   id: string,
+
+  /** Name of the radio button group. In most of the case it will be defined by the `RadioGroup` component */
   name: string,
+
+  /** Callback triggered when radio is clicked */
   onChange: func,
+
+  /** Defines which radio is checked */
   selectedValue: string,
+
+  /** Defines the radio element value */
   value: string,
 };
 

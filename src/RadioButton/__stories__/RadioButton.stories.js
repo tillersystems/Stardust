@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { State, Store } from '@sambego/storybook-state';
 
+import Wrapper from '../../Wrapper';
 import { RadioButton } from '../..';
 import RadioButtonReadme from '../README.md';
 
@@ -19,22 +20,24 @@ storiesOf('RadioButton', module)
     },
   })
   .add('default', () => {
-    const enabledValue = boolean('Enabled', true, 'state');
-
+    const enabledValue = boolean('Enabled', true, 'Props');
     let selectedValue = 'apple';
+
     return (
-      <State store={store}>
-        <RadioButton
-          disabled={!enabledValue}
-          selectedValue={selectedValue}
-          key="apple"
-          id="apple"
-          name="fruit"
-          value="apple"
-        >
-          apple
-        </RadioButton>
-      </State>
+      <Wrapper>
+        <State store={store}>
+          <RadioButton
+            disabled={!enabledValue}
+            selectedValue={selectedValue}
+            key="apple"
+            id="apple"
+            name="fruit"
+            value="apple"
+          >
+            apple
+          </RadioButton>
+        </State>
+      </Wrapper>
     );
   })
   .add('controlled', () => {
@@ -43,21 +46,23 @@ storiesOf('RadioButton', module)
       watermelon: 'watermelon',
       apricot: 'apricot',
     };
-    const selectedValue = select('Selected value', options, 'watermelon', 'state');
-    const enabledValue = boolean('Enabled', true, 'state');
+    const selectedValue = select('Selected value', options, 'watermelon', 'Props');
+    const enabledValue = boolean('Enabled', true, 'Props');
 
     return (
-      <State store={store}>
-        <RadioButton
-          disabled={!enabledValue}
-          selectedValue={selectedValue}
-          key="apple"
-          id="apple"
-          name="fruit"
-          value="apple"
-        >
-          apple
-        </RadioButton>
-      </State>
+      <Wrapper>
+        <State store={store}>
+          <RadioButton
+            disabled={!enabledValue}
+            selectedValue={selectedValue}
+            key="apple"
+            id="apple"
+            name="fruit"
+            value="apple"
+          >
+            apple
+          </RadioButton>
+        </State>
+      </Wrapper>
     );
   });
