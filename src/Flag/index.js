@@ -7,37 +7,14 @@ import flags from './data';
 const { bool, string } = PropTypes;
 
 /**
- * Flag
- *
- * This component is in charge of displaying
- * a flag with svg data
- *
- * @param {string} name // Name of the country flag. Available countries are displayed in the data file
- * @param {string} size // Size of the flag
- * @param {bool} rounded // Display the flag with rounded corners or not
+ * A Flag displays a country flag from the list in `data.js`. It is drawed with a svg so added data
+ * should be kept as light as possible.
  *
  * @return {jsx}
  */
 class Flag extends PureComponent {
   /** Reference to the g element grouping flag svg elements. */
   groupRef = createRef();
-
-  /**
-   * PropTypes Validation.
-   */
-  static propTypes = {
-    name: string.isRequired,
-    size: string,
-    rounded: bool,
-  };
-
-  /**
-   * Default props.
-   */
-  static defaultProps = {
-    size: '20',
-    rounded: false,
-  };
 
   /** Internal state. */
   state = {
@@ -90,5 +67,33 @@ class Flag extends PureComponent {
     );
   }
 }
+
+/**
+ * PropTypes Validation.
+ */
+Flag.propTypes = {
+  /**
+   * Name of the country flag. Available countries are listed in the data file
+   */
+  name: string.isRequired,
+
+  /**
+   * Size of the flag
+   */
+  size: string,
+
+  /**
+   * Displays the flag with rounded corners or not
+   */
+  rounded: bool,
+};
+
+/**
+ * Default props.
+ */
+Flag.defaultProps = {
+  size: '20',
+  rounded: false,
+};
 
 export default Flag;

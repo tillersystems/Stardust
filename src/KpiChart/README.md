@@ -10,14 +10,11 @@ import { KpiChart } from '@tillersystems/stardust';
 
 ### Properties
 
-- `className` - Class needed by styled component.
-- `title` - KpiChart title.
-
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `className` | `string` |     `''`     |     -      |
-| `title`     | `string` |              |     \*     |
-| `label`     | `string` |              |     \*     |
+| Name          | Required |   Type   | DefaultValue | Description                                                                          |
+| ------------- | :------: | :------: | :----------: | ------------------------------------------------------------------------------------ |
+| `children`    |    \*    | `string` |              | Anything that can be rendered: numbers, strings, elements or an array (or fragment). |
+| `className`   |    -     | `string` |     `''`     | ClassName needed by styled components                                                |
+| `isCompacted` |    \*    | `string` |              | If true, narrows the padding of the component and the font-size of the title         |
 
 ### Example
 
@@ -25,6 +22,14 @@ import { KpiChart } from '@tillersystems/stardust';
 import { KpiChart } from 'components/KpiChart';
 
 render() {
-  return <KpiChart title="Chiffre d'affaires de la journée" label='Afficher le rapport' />
+  return <KpiChart isCompacted>
+           <KpiChart.Header>
+             <KpiChart.Title isCompacted>Title</KpiChart.Title>
+           </KpiChart.Header>
+           <KpiChart.Body height={`${height}px`}>...</KpiChart.Body>
+           <KpiChart.Footer>
+             ...
+           </KpiChart.Footer>
+         </KpiChart>
 }
 ```

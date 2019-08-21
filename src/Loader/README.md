@@ -10,17 +10,12 @@ import { Loader } from '@tillersystems/stardust';
 
 ### Properties
 
-- `className` - className needed by styled component.
-- `color` - color.
-- `height` - Loader height.
-- `width` - Loader width.
-
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `className` | `string` |     `''`     |     -      |
-| `color`     | `string` |    `blue`    |     -      |
-| `height`    | `string` |    `2rem`    |     -      |
-| `width`     | `string` |    `2rem`    |     -      |
+| Name        |   Type   | DefaultValue | isRequired |             Description              |
+| ----------- | :------: | :----------: | :--------: | :----------------------------------: |
+| `className` | `string` |     `''`     |     -      | className needed by styled component |
+| `color`     | `string` |    `blue`    |     -      |       The color of the Loader        |
+| `height`    | `string` |    `2rem`    |     -      |       The height of the Loader       |
+| `width`     | `string` |    `2rem`    |     -      |       The width of the Loader        |
 
 ### Example
 

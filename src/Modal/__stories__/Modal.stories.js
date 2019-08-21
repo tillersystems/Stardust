@@ -4,6 +4,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { withKnobs, select, number, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
+import Wrapper from '../../Wrapper';
 import { Modal, Button, Icon } from '../..';
 import ModalReadme from '../README.md';
 
@@ -39,7 +40,7 @@ storiesOf('Modal', module)
         max: 100,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const heightValue = number(
       'Height',
@@ -50,7 +51,7 @@ storiesOf('Modal', module)
         max: 80,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const paddingValue = number(
       'Padding',
@@ -61,11 +62,11 @@ storiesOf('Modal', module)
         max: 10,
         step: 1,
       },
-      'Dimensions',
+      'Props',
     );
 
     return (
-      <div>
+      <Wrapper>
         <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
           Open modal
         </Button>
@@ -83,11 +84,11 @@ storiesOf('Modal', module)
             <Modal.Body>Click on overlay to close me :-)</Modal.Body>
           </Modal>
         </State>
-      </div>
+      </Wrapper>
     );
   })
   .add('controlled', () => {
-    const activeValue = boolean('Active', false, 'State');
+    const activeValue = boolean('Active', false, 'Props');
 
     const widthValue = number(
       'Width',
@@ -98,7 +99,7 @@ storiesOf('Modal', module)
         max: 100,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const heightValue = number(
       'Height',
@@ -109,7 +110,7 @@ storiesOf('Modal', module)
         max: 80,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const paddingValue = number(
       'Padding',
@@ -120,11 +121,11 @@ storiesOf('Modal', module)
         max: 10,
         step: 1,
       },
-      'Dimensions',
+      'Props',
     );
 
     return (
-      <div>
+      <Wrapper>
         <span>Control modal from knobs!</span>
         <Modal
           active={activeValue}
@@ -134,7 +135,7 @@ storiesOf('Modal', module)
         >
           <Modal.Body>Click on overlay to close me :-)</Modal.Body>
         </Modal>
-      </div>
+      </Wrapper>
     );
   })
 
@@ -148,7 +149,7 @@ storiesOf('Modal', module)
         max: 100,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const heightValue = number(
       'Height',
@@ -159,7 +160,7 @@ storiesOf('Modal', module)
         max: 80,
         step: 2,
       },
-      'Dimensions',
+      'Props',
     );
     const paddingValue = number(
       'Padding',
@@ -170,7 +171,7 @@ storiesOf('Modal', module)
         max: 10,
         step: 1,
       },
-      'Dimensions',
+      'Props',
     );
 
     const withHeader = boolean('With header', true, 'Header');
@@ -196,7 +197,7 @@ storiesOf('Modal', module)
     );
 
     return (
-      <div>
+      <Wrapper>
         <Button appearance="primary" onClick={() => store.set({ active: !store.get('active') })}>
           Open modal
         </Button>
@@ -239,6 +240,6 @@ storiesOf('Modal', module)
             )}
           </Modal>
         </State>
-      </div>
+      </Wrapper>
     );
   });

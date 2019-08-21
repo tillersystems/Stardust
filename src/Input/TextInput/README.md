@@ -8,52 +8,13 @@ import { TextInput } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
-### Properties
+### Description
 
-- `id` - the ID of the input.
-- `width` - the width of the input.
-- `fluid` - whether the input takes all available space or not.
-- `value` - the value of the input.
-- `tabIndex` - index of the input in a parent form.
-- `placeholder` - placeholder text.
-- `disabled` - whether the input is disabled or not.
-- `password` - whether the input is a password input or not.
-- `onChange` - handler of input value change.
-- `onFocus` - handler of input gains focus.
-- `onBlur` - handler of input looses focus.
-- `label` - object defining the label (with either `icon` with the name of the icon to display, or
-  `text` with the text to display);
-- `labelPosition` - position of label (`left` or `right`).
-- `loading` - whether the input as status loading.
-- `info` - whether the input as status info.
-- `ghost` - Whether to display an input with no border.
-- `success` - whether the input as status success.
-- `warning` - whether the input as status warning.
-- `error` - whether the input as status error.
-- `search` - whether the input as status search.
+Defines a text input. Extra datas can be added, such as an Icon, or plain text, that will both be displayed either on the left or on the right of the actual text input.  
+Custom styles to inform about the status of the input (convenient if used in a form) or its purpose
+can also be added through the props available on the TextInput.
 
-| propName        | propType | defaultValue | isRequired |
-| --------------- | :------: | :----------: | :--------: |
-| `width`         | `string` |   `25rem`    |     -      |
-| `fluid`         |  `bool`  |   `false`    |     -      |
-| `id`            | `string` |     `''`     |     -      |
-| `value`         | `string` |     `''`     |     -      |
-| `tabIndex`      | `string` |     `0`      |     -      |
-| `placeholder`   | `string` |     `''`     |     -      |
-| `disabled`      |  `bool`  |   `false`    |     -      |
-| `password`      |  `bool`  |   `false`    |     -      |
-| `onChange`      |  `func`  |    `null`    |     -      |
-| `onFocus`       |  `func`  |  `() => {}`  |     -      |
-| `onBlur`        |  `func`  |  `() => {}`  |     -      |
-| `label`         | `Object` |    `null`    |     -      |
-| `labelPosition` | `string` |    `left`    |     -      |
-| `loading`       |  `bool`  |   `false`    |     -      |
-| `info`          |  `bool`  |   `false`    |     -      |
-| `ghost`         |  `bool`  |   `false`    |     -      |
-| `success`       |  `bool`  |   `false`    |     -      |
-| `warning`       |  `bool`  |   `false`    |     -      |
-| `error`         |  `bool`  |   `false`    |     -      |
-| `search`        |  `bool`  |   `false`    |     -      |
+<!-- PROPS -->
 
 ### Example
 

@@ -27,111 +27,16 @@ const getStatus = (loading, info, success, warning, error, search) => {
 };
 
 /**
- * Defines a text input. This is basically a convenience component around RawInput.
- *
- * @param {string} width - The width of the input as a string (includes either 'px' or 'rem').
- * @param {boolean} fluid - Whether the component is fluid or not.
- * @param {string} id - The ID of the input in the DOM.
- * @param {string} type - The type of the input (either 'password' or 'text')
- * @param {string} tabIndex - The tabulation index of the input in its parent form.
- * @param {string} placeholder - The string to display as a placeholder.
- * @param {boolean} disabled - Whether the input is disabled or not.
- * @param {string} label - The name of the icon to display as a label (if left undefined, not label
- * will be rendered).
- * @param {string} labelPosition - The position of the label (can be either 'left' or 'right').
- * @param {boolean} loading - Whether to display an input that is loading or not.
- * @param {boolean} success - Whether to display an input that is successful or not.
- * @param {boolean} warning - Whether to display an input that is warning or not.
- * @param {boolean} info - Whether to display an input that is an info or not.
- * @param {boolean} error - Whether to display an input that has failed or not.
- * @param {boolean} ghost - Whether to display an input with no border.
- * @param {boolean} search - Whether to display an input that meant for search or not.
- * @param {string} value - The value of the input. If provided, switches to controlled mode.
- * @param {func} onChange - The callback to call when the value of the input is changed.
- * @param {func} onFocus - The callback to call when the input gains focus.
- * @param {func} onBlur - The callback to call when the input looses focus.
+ * Defines a text input. Extra datas can be added, such as an Icon, or plain text, that will both be displayed
+ * either on the left or on the right of the actual text input.
+ * Custom styles to inform about the status of the input (convenient if used in a form) or its purpose
+ * can also be added through the props available on the TextInput.
  *
  * @returns {jsx}
  */
 class TextInput extends PureComponent {
   /** Reference to the inner input element. */
   inputRef = createRef();
-
-  /** Display name. */
-  static displayName = 'TextInput';
-
-  /** Props types validation. */
-  static propTypes = {
-    // className needed by styled components.
-    className: PropTypes.string,
-
-    // Size related props.
-    width: PropTypes.string,
-    fluid: PropTypes.bool,
-
-    // Element related props.
-    id: PropTypes.string,
-    type: PropTypes.oneOf(['password', 'text']),
-    value: PropTypes.string,
-    tabIndex: PropTypes.string,
-    placeholder: PropTypes.string,
-    disabled: PropTypes.bool,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-
-    // Label related props.
-    label: PropTypes.shape({
-      text: PropTypes.string,
-      icon: PropTypes.string,
-    }),
-    labelPosition: PropTypes.oneOf(['left', 'right']),
-
-    // Status related props.
-    loading: PropTypes.bool,
-    info: PropTypes.bool,
-    success: PropTypes.bool,
-    warning: PropTypes.bool,
-    error: PropTypes.bool,
-    search: PropTypes.bool,
-    ghost: PropTypes.bool,
-
-    // Internal event handlers.
-    _onFocus: PropTypes.func,
-    _onBlur: PropTypes.func,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-
-    width: '25rem',
-    fluid: false,
-
-    id: '',
-    type: 'text',
-    value: null,
-    tabIndex: '0',
-    placeholder: '',
-    disabled: false,
-    onChange: () => {},
-    onFocus: () => {},
-    onBlur: () => {},
-
-    label: null,
-    labelPosition: 'left',
-
-    loading: false,
-    info: false,
-    success: false,
-    warning: false,
-    error: false,
-    search: false,
-    ghost: false,
-
-    _onFocus: () => {},
-    _onBlur: () => {},
-  };
 
   /** Internal state. */
   state = {
@@ -278,5 +183,159 @@ class TextInput extends PureComponent {
     );
   }
 }
+
+const { bool, func, oneOf, shape, string } = PropTypes;
+
+/** Display name. */
+TextInput.displayName = 'TextInput';
+
+/** Props types validation. */
+TextInput.propTypes = {
+  /**
+   * className needed by styled components
+   */
+  className: string,
+
+  /**
+   * Whether the input is disabled or not
+   */
+  disabled: bool,
+
+  /**
+   * Whether the input has error status
+   */
+  error: bool,
+
+  /**
+   * Whether the input takes all available space or not
+   */
+  fluid: bool,
+
+  /**
+   * Whether to display an input without border
+   */
+  ghost: bool,
+
+  /**
+   * ID of the input in the DOM
+   */
+  id: string,
+
+  /**
+   * Whether the input has info status
+   */
+  info: bool,
+
+  /**
+   * Object defining the label with either `icon` with the name of the icon to display, or
+   * `text` with the text to display
+   */
+  label: shape({
+    icon: string,
+    text: string,
+  }),
+
+  /**
+   * Position of label (`left` or `right`)
+   */
+  labelPosition: oneOf(['left', 'right']),
+
+  /**
+   * Whether the input has loading status
+   */
+  loading: bool,
+
+  /**
+   * Handler when input loses focus
+   */
+  onBlur: func,
+
+  /**
+   * Handler on input value change
+   */
+  onChange: func,
+
+  /**
+   * Handler when input gains focus
+   */
+  onFocus: func,
+
+  /**
+   * placeholder text
+   */
+  placeholder: string,
+
+  /**
+   * Whether the input has search status
+   */
+  search: bool,
+
+  /**
+   * Whether the input has success status
+   */
+  success: bool,
+
+  /**
+   * The tabulation index of the input in its parent form.
+   */
+  tabIndex: string,
+
+  /**
+   * Type of the text input
+   */
+  type: oneOf(['password', 'text']),
+
+  /**
+   * Value of the text input
+   */
+  value: string,
+
+  /**
+   * Whether the input has warning status
+   */
+  warning: bool,
+
+  /**
+   * The width of the input as a string (includes either 'px' or 'rem')
+   */
+  width: string,
+
+  /**
+   * Internal handler when input gains focus
+   */
+  _onFocus: func,
+
+  /**
+   * Internal handler when input loses focus
+   */
+  _onBlur: func,
+};
+
+/** Default props. */
+TextInput.defaultProps = {
+  className: '',
+  disabled: false,
+  error: false,
+  fluid: false,
+  ghost: false,
+  id: '',
+  info: false,
+  label: null,
+  labelPosition: 'left',
+  loading: false,
+  onBlur: () => {},
+  onChange: () => {},
+  onFocus: () => {},
+  placeholder: '',
+  search: false,
+  success: false,
+  tabIndex: '0',
+  type: 'text',
+  value: null,
+  width: '25rem',
+  warning: false,
+  _onBlur: () => {},
+  _onFocus: () => {},
+};
 
 export default TextInput;

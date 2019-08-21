@@ -4,6 +4,7 @@ import { State, Store } from '@sambego/storybook-state';
 import { withKnobs, select, boolean, text, button } from '@storybook/addon-knobs';
 import MessageReadme from '../README.md';
 
+import Wrapper from '../../Wrapper';
 import { Message } from '../..';
 
 const store = new Store({
@@ -25,25 +26,27 @@ storiesOf('Message', module)
       Warning: 'warning',
       Error: 'error',
     };
-    const type = select('Type', options, 'info', 'States');
-    const closable = boolean('Closable', false, 'Button');
-    const description = text('Description', 'this a simple message', 'Description');
+    const type = select('Type', options, 'info', 'Props');
+    const closable = boolean('Closable', false, 'Props');
+    const description = text('Description', 'this a simple message', 'Props');
     button('Reset message', () => store.set({ active: true }), 'Button');
 
     return (
-      <State store={store}>
-        {closable ? (
-          ({ active }) =>
-            active && (
-              <Message
-                description={description}
-                type={type}
-                onClose={() => store.set({ active: false })}
-              />
-            )
-        ) : (
-          <Message description={description} type={type} />
-        )}
-      </State>
+      <Wrapper>
+        <State store={store}>
+          {closable ? (
+            ({ active }) =>
+              active && (
+                <Message
+                  description={description}
+                  type={type}
+                  onClose={() => store.set({ active: false })}
+                />
+              )
+          ) : (
+            <Message description={description} type={type} />
+          )}
+        </State>
+      </Wrapper>
     );
   });

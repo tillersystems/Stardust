@@ -2,7 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-// import { State, Store } from '@sambego/storybook-state';
+
+import Wrapper from '../../../Wrapper';
 import { NumberInput } from '../..';
 import { Data as IconNames } from '../../../Icon/data';
 import NumberInputReadme from '../README.md';
@@ -116,23 +117,25 @@ storiesOf('Input - NumberInput', module)
     } = getCommonKnobs();
 
     return (
-      <NumberInput
-        width={`${widthValue}rem`}
-        fluid={fluidValue}
-        info={infoValue}
-        success={successValue}
-        warning={warningValue}
-        error={errorValue}
-        validate={validateValue}
-        min={hasMinValue ? minValue : undefined}
-        max={hasMaxValue ? maxValue : undefined}
-        step={stepValue}
-        decimals={decimalsValue}
-        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
-        onChange={value => onChangeAction(value)}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-      />
+      <Wrapper>
+        <NumberInput
+          width={`${widthValue}rem`}
+          fluid={fluidValue}
+          info={infoValue}
+          success={successValue}
+          warning={warningValue}
+          error={errorValue}
+          validate={validateValue}
+          min={hasMinValue ? minValue : undefined}
+          max={hasMaxValue ? maxValue : undefined}
+          step={stepValue}
+          decimals={decimalsValue}
+          separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+          onChange={value => onChangeAction(value)}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+        />
+      </Wrapper>
     );
   })
 
@@ -168,24 +171,26 @@ storiesOf('Input - NumberInput', module)
     );
 
     return (
-      <NumberInput
-        width={`${widthValue}rem`}
-        fluid={fluidValue}
-        info={infoValue}
-        success={successValue}
-        warning={warningValue}
-        error={errorValue}
-        validate={validateValue}
-        value={valueValue}
-        min={hasMinValue ? minValue : undefined}
-        max={hasMaxValue ? maxValue : undefined}
-        step={stepValue}
-        decimals={decimalsValue}
-        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
-        onChange={value => onChangeAction(value)}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-      />
+      <Wrapper>
+        <NumberInput
+          width={`${widthValue}rem`}
+          fluid={fluidValue}
+          info={infoValue}
+          success={successValue}
+          warning={warningValue}
+          error={errorValue}
+          validate={validateValue}
+          value={valueValue}
+          min={hasMinValue ? minValue : undefined}
+          max={hasMaxValue ? maxValue : undefined}
+          step={stepValue}
+          decimals={decimalsValue}
+          separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+          onChange={value => onChangeAction(value)}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+        />
+      </Wrapper>
     );
   })
 
@@ -212,25 +217,27 @@ storiesOf('Input - NumberInput', module)
     const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
 
     return (
-      <NumberInput
-        width={`${widthValue}rem`}
-        fluid={fluidValue}
-        info={infoValue}
-        success={successValue}
-        warning={warningValue}
-        error={errorValue}
-        validate={validateValue}
-        min={hasMinValue ? minValue : undefined}
-        max={hasMaxValue ? maxValue : undefined}
-        step={stepValue}
-        decimals={decimalsValue}
-        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
-        onChange={value => onChangeAction(value)}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-        label={{ text: labelValue }}
-        labelPosition={labelPositionValue}
-      />
+      <Wrapper>
+        <NumberInput
+          width={`${widthValue}rem`}
+          fluid={fluidValue}
+          info={infoValue}
+          success={successValue}
+          warning={warningValue}
+          error={errorValue}
+          validate={validateValue}
+          min={hasMinValue ? minValue : undefined}
+          max={hasMaxValue ? maxValue : undefined}
+          step={stepValue}
+          decimals={decimalsValue}
+          separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+          onChange={value => onChangeAction(value)}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+          label={{ text: labelValue }}
+          labelPosition={labelPositionValue}
+        />
+      </Wrapper>
     );
   })
 
@@ -257,24 +264,26 @@ storiesOf('Input - NumberInput', module)
     const labelPositionValue = select('Label position', ['left', 'right'], 'right', 'Label');
 
     return (
-      <NumberInput
-        width={`${widthValue}rem`}
-        fluid={fluidValue}
-        info={infoValue}
-        success={successValue}
-        warning={warningValue}
-        error={errorValue}
-        validate={validateValue}
-        min={hasMinValue ? minValue : undefined}
-        max={hasMaxValue ? maxValue : undefined}
-        step={stepValue}
-        decimals={decimalsValue}
-        separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
-        onChange={value => onChangeAction(value)}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-        label={{ icon: labelValue }}
-        labelPosition={labelPositionValue}
-      />
+      <Wrapper>
+        <NumberInput
+          width={`${widthValue}rem`}
+          fluid={fluidValue}
+          info={infoValue}
+          success={successValue}
+          warning={warningValue}
+          error={errorValue}
+          validate={validateValue}
+          min={hasMinValue ? minValue : undefined}
+          max={hasMaxValue ? maxValue : undefined}
+          step={stepValue}
+          decimals={decimalsValue}
+          separator={defaultSeparatorValue ? undefined : separatorValue || '.'}
+          onChange={value => onChangeAction(value)}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+          label={{ icon: labelValue }}
+          labelPosition={labelPositionValue}
+        />
+      </Wrapper>
     );
   });

@@ -4,36 +4,11 @@ import PropTypes from 'prop-types';
 import { Wrapper, Container, Label, ElementContainer, ElementWrapper } from './elements';
 
 /**
- * Defines a Form Field component. This groups a field and a label.
+ * Defines a Form Field component. It displays a field and its label.
  *
  * @return {jsx}
  */
 class Field extends PureComponent {
-  /** Display name. */
-  static displayName = 'Form.Field';
-
-  /** Prop types. */
-  static propTypes = {
-    children: PropTypes.node,
-    isRow: PropTypes.bool,
-    inlineLabel: PropTypes.bool,
-    labelWidth: PropTypes.string,
-    label: PropTypes.string,
-    className: PropTypes.string,
-    size: PropTypes.string,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    children: null,
-    isRow: false,
-    inlineLabel: false,
-    labelWidth: '10rem',
-    label: '',
-    className: '',
-    size: '1',
-  };
-
   /** Internal state. */
   state = {
     // Used to save whether inner component has focus or not.
@@ -93,5 +68,58 @@ class Field extends PureComponent {
     );
   }
 }
+
+/** Display name. */
+Field.displayName = 'Form.Field';
+
+/** Prop types. */
+Field.propTypes = {
+  /**
+   * Should be a Button, CheckBox, Input, Select, etc. Anything part of a form
+   */
+  children: PropTypes.node,
+
+  /**
+   * ClassName needed by styled components
+   */
+  className: PropTypes.string,
+
+  /**
+   * If label of the field is lined up with the input
+   */
+  inlineLabel: PropTypes.bool,
+
+  /**
+   * Makes sense if used with Form and Form.Group. If the Form.Group displays its fields
+   * on the same row
+   */
+  isRow: PropTypes.bool,
+
+  /**
+   * Label of the field, displayed at the top or at the left of the input
+   */
+  label: PropTypes.string,
+
+  /**
+   * Width of the label (any value accepted by the css rule)
+   */
+  labelWidth: PropTypes.string,
+
+  /**
+   * Width of the field (any value accepted by the css rule)
+   */
+  size: PropTypes.string,
+};
+
+/** Default props. */
+Field.defaultProps = {
+  children: null,
+  className: '',
+  inlineLabel: false,
+  isRow: false,
+  label: '',
+  labelWidth: '10rem',
+  size: '1',
+};
 
 export default Field;

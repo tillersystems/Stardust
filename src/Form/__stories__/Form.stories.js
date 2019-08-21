@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Button, Form, TextInput } from '../..';
 import FormReadme from '../README.md';
 
@@ -11,22 +12,12 @@ storiesOf('Form', module)
     readme: {
       // Show readme before story
       content: FormReadme,
+      includePropTables: [Form, Form.Group, Form.Field],
     },
   })
-  .add('default', () => {
-    return (
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group>
-          <Form.Field label="Label">
-            <TextInput placeholder="tape inside me" />
-          </Form.Field>
-        </Form.Group>
-      </Form>
-    );
-  })
-  .add('with different group properties', () => {
-    const rowValue = boolean('Is Row', false, 'Layout');
-    const inlineLabelsValue = boolean('Are labels inline', false, 'Layout');
+  .add('with different group and field properties', () => {
+    const rowValue = boolean('Is Row', false, 'Group Props');
+    const inlineLabelsValue = boolean('Are labels inline', false, 'Group Props');
 
     const labelsWidth = number(
       'Labels width',
@@ -37,10 +28,10 @@ storiesOf('Form', module)
         max: 15,
         step: 0.5,
       },
-      'Sizes',
+      'Group Props',
     );
     const labelWidth = number(
-      'Label width',
+      'Label width (rem)',
       10,
       {
         range: true,
@@ -48,10 +39,10 @@ storiesOf('Form', module)
         max: 15,
         step: 0.5,
       },
-      'Sizes',
+      'Field Props',
     );
     const nameSizeValue = number(
-      'Name size',
+      'Name size (rem)',
       1,
       {
         range: true,
@@ -59,10 +50,10 @@ storiesOf('Form', module)
         max: 5,
         step: 1,
       },
-      'Sizes',
+      'Field Props',
     );
     const surnameSizeValue = number(
-      'Surname size',
+      'Surname size (rem)',
       1,
       {
         range: true,
@@ -70,40 +61,50 @@ storiesOf('Form', module)
         max: 5,
         step: 1,
       },
-      'Sizes',
+      'Field Props',
     );
 
     return (
-      <Form onSubmit={() => {}} name="form">
-        <Form.Group
-          row={rowValue}
-          inlineLabels={inlineLabelsValue}
-          labelsWidth={`${labelsWidth}rem`}
-        >
-          <Form.Field label="Name" size={nameSizeValue.toString()} labelWidth={`${labelWidth}rem`}>
-            <TextInput fluid placeholder="Name" />
-          </Form.Field>
-          <Form.Field label="Surname" size={surnameSizeValue.toString()}>
-            <TextInput fluid placeholder="Surname" />
-          </Form.Field>
-        </Form.Group>
-        <Form.Group
-          row={rowValue}
-          inlineLabels={inlineLabelsValue}
-          labelsWidth={`${labelsWidth}rem`}
-        >
-          <Form.Field label="Name" size={nameSizeValue.toString()} labelWidth={`${labelWidth}rem`}>
-            <TextInput fluid placeholder="Name" />
-          </Form.Field>
-          <Form.Field label="Surname" size={surnameSizeValue.toString()}>
-            <TextInput fluid placeholder="Surname" />
-          </Form.Field>
-          <Form.Field size="20rem">
-            <Button fluid appearance="primary">
-              Validate
-            </Button>
-          </Form.Field>
-        </Form.Group>
-      </Form>
+      <Wrapper>
+        <Form onSubmit={() => {}} name="form">
+          <Form.Group
+            row={rowValue}
+            inlineLabels={inlineLabelsValue}
+            labelsWidth={`${labelsWidth}rem`}
+          >
+            <Form.Field
+              label="Name"
+              size={nameSizeValue.toString()}
+              labelWidth={`${labelWidth}rem`}
+            >
+              <TextInput fluid placeholder="Name" />
+            </Form.Field>
+            <Form.Field label="Surname" size={surnameSizeValue.toString()}>
+              <TextInput fluid placeholder="Surname" />
+            </Form.Field>
+          </Form.Group>
+          <Form.Group
+            row={rowValue}
+            inlineLabels={inlineLabelsValue}
+            labelsWidth={`${labelsWidth}rem`}
+          >
+            <Form.Field
+              label="Name"
+              size={nameSizeValue.toString()}
+              labelWidth={`${labelWidth}rem`}
+            >
+              <TextInput fluid placeholder="Name" />
+            </Form.Field>
+            <Form.Field label="Surname" size={surnameSizeValue.toString()}>
+              <TextInput fluid placeholder="Surname" />
+            </Form.Field>
+            <Form.Field size="20rem">
+              <Button fluid appearance="primary">
+                Validate
+              </Button>
+            </Form.Field>
+          </Form.Group>
+        </Form>
+      </Wrapper>
     );
   });

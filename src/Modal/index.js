@@ -5,18 +5,10 @@ import { Portal } from 'react-portal';
 import Theme from '../Theme';
 
 /**
- * Modal
- *
- * This component is in charge of displaying
- * a modal
- *
- * @param {string} active // Boolean set to display or hide the modal.
- * @param {string} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className // className needed by styled components.
- * @param {string} height // Modal height.
- * @param {string} width // Modal width.
- * @param {string} padding // Modal padding.
- * @param {string} onOverlayClick // A model can have a clickable overlay to close it.
+ * A Modal is displayed through a Portal added at the end of the body element. An overlay hides
+ * everything expect the modal itself. Action when clicking on the overlay can be used to
+ * control modal display.
+ * Modal can be used to display additional informations to the user, or ask for user input.
  *
  * @return {jsx}
  */
@@ -34,30 +26,6 @@ class Modal extends PureComponent {
   static Body = Body;
   static Footer = Footer;
   static Title = Title;
-
-  /**
-   * PropTypes validation
-   */
-  static propTypes = {
-    children: node,
-    active: bool,
-    height: string,
-    width: string,
-    padding: string,
-    onOverlayClick: func,
-  };
-
-  /**
-   * Default propTypes
-   */
-  static defaultProps = {
-    children: null,
-    active: false,
-    width: '48rem',
-    height: '39rem',
-    padding: Theme.dimensions.medium,
-    onOverlayClick: () => {},
-  };
 
   /**
    * Render function
@@ -82,6 +50,53 @@ class Modal extends PureComponent {
 }
 
 /**
+ * PropTypes validation
+ */
+Modal.propTypes = {
+  /**
+   * Displays or hides the modal
+   */
+  active: bool,
+
+  /**
+   * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
+   */
+  children: node,
+
+  /**
+   * Modal height
+   */
+  height: string,
+
+  /**
+   * Callback triggered when overlay is clicked by the user
+   */
+  onOverlayClick: func,
+
+  /**
+   * Modal padding
+   */
+  padding: string,
+
+  /**
+   * Modal width
+   */
+  width: string,
+};
+
+/**
+ * Default propTypes
+ */
+Modal.defaultProps = {
+  active: false,
+  children: null,
+  height: '39rem',
+  onOverlayClick: () => {},
+  padding: Theme.dimensions.medium,
+  width: '48rem',
+};
+
+/**
  * Animation
  */
 const ContainerAnimation = posed(Container)({
@@ -92,6 +107,7 @@ const ContainerAnimation = posed(Container)({
     opacity: 0,
   },
 });
+
 const OverlayAnimation = posed(Overlay)({
   enter: {
     opacity: 1,
@@ -100,6 +116,7 @@ const OverlayAnimation = posed(Overlay)({
     opacity: 0,
   },
 });
+
 const DialogAnimation = posed(Dialog)({
   enter: {
     y: 0,

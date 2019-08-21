@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 import { ResponsiveBar } from '@nivo/bar';
 
+import Wrapper from '../../Wrapper';
 import { Button, KpiChart } from '../..';
 import KpiChartReadme from '../README.md';
 
@@ -89,68 +90,70 @@ storiesOf('KpiChart', module)
     );
     const isCompactedValue = boolean('isCompacted', false, 'ALL');
     return (
-      <KpiChart isCompacted={isCompactedValue}>
-        <KpiChart.Header>
-          <KpiChart.Title isCompacted={isCompactedValue}>{Title}</KpiChart.Title>
-        </KpiChart.Header>
-        <KpiChart.Body height={`${height}px`}>
-          <ResponsiveBar
-            data={data}
-            keys={['25 juil. 2017', '25 juil. 2018']}
-            indexBy="hours"
-            margin={{
-              top: 50,
-              right: 60,
-              bottom: 50,
-              left: 60,
-            }}
-            padding={0.3}
-            groupMode="grouped"
-            colors="nivo"
-            borderColor="inherit:darker(1.6)"
-            axisBottom={{
-              orient: 'bottom',
-              tickSize: 5,
-              tickPadding: 5,
-              tickRotation: 0,
-            }}
-            axisLeft={{
-              orient: 'left',
-              tickSize: 5,
-              tickPadding: 5,
-              tickRotation: 0,
-            }}
-            labelSkipWidth={12}
-            labelSkipHeight={12}
-            labelTextColor="inherit:darker(1.6)"
-            animate
-            motionStiffness={90}
-            motionDamping={15}
-            legends={[
-              {
-                dataFrom: 'keys',
-                anchor: 'bottom-right',
-                direction: 'row',
-                translateX: 70,
-                translateY: 50,
-                itemWidth: 120,
-                itemHeight: 15,
-                itemsSpacing: 2,
-                symbolSize: 20,
-              },
-            ]}
-            theme={{
-              tooltip: {
-                container: {
-                  fontSize: '1.2rem',
+      <Wrapper>
+        <KpiChart isCompacted={isCompactedValue}>
+          <KpiChart.Header>
+            <KpiChart.Title isCompacted={isCompactedValue}>{Title}</KpiChart.Title>
+          </KpiChart.Header>
+          <KpiChart.Body height={`${height}px`}>
+            <ResponsiveBar
+              data={data}
+              keys={['25 juil. 2017', '25 juil. 2018']}
+              indexBy="hours"
+              margin={{
+                top: 50,
+                right: 60,
+                bottom: 50,
+                left: 60,
+              }}
+              padding={0.3}
+              groupMode="grouped"
+              colors="nivo"
+              borderColor="inherit:darker(1.6)"
+              axisBottom={{
+                orient: 'bottom',
+                tickSize: 5,
+                tickPadding: 5,
+                tickRotation: 0,
+              }}
+              axisLeft={{
+                orient: 'left',
+                tickSize: 5,
+                tickPadding: 5,
+                tickRotation: 0,
+              }}
+              labelSkipWidth={12}
+              labelSkipHeight={12}
+              labelTextColor="inherit:darker(1.6)"
+              animate
+              motionStiffness={90}
+              motionDamping={15}
+              legends={[
+                {
+                  dataFrom: 'keys',
+                  anchor: 'bottom-right',
+                  direction: 'row',
+                  translateX: 70,
+                  translateY: 50,
+                  itemWidth: 120,
+                  itemHeight: 15,
+                  itemsSpacing: 2,
+                  symbolSize: 20,
                 },
-              },
-            }}
-          />
-        </KpiChart.Body>
-        <KpiChart.Footer>
-          <Button ghost>{label}</Button>
-        </KpiChart.Footer>
-      </KpiChart>
+              ]}
+              theme={{
+                tooltip: {
+                  container: {
+                    fontSize: '1.2rem',
+                  },
+                },
+              }}
+            />
+          </KpiChart.Body>
+          <KpiChart.Footer>
+            <Button ghost>{label}</Button>
+          </KpiChart.Footer>
+        </KpiChart>
+      </Wrapper>
     );
   });

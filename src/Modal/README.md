@@ -1,5 +1,12 @@
 # Modal
 
+### Description
+
+A Modal is displayed through a Portal added at the end of the body element. An overlay hides
+everything expect the modal itself. Action when clicking on the overlay can be used to control modal display.
+
+Modal can be used to display additional informations to the user, or ask for user input.
+
 ### Usage
 
 ```jsx
@@ -8,25 +15,7 @@ import { Modal } from '@tillersystems/stardust';
 
 <!-- STORY -->
 
-### Properties
-
-- `active` - Boolean set to display or hide the modal.
-- `children` - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `className` - className needed by styled components.
-- `height` - Modal height.
-- `width` - Modal width.
-- `padding` - Modal padding.
-- `onOverlayClick` - A model can have a clickable overlay to close it.
-
-| propName         | propType | defaultValue | isRequired |
-| ---------------- | -------- | ------------ | ---------- |
-| `active`         | `bool`   | `false`      | -          |
-| `children`       | `node`   | `null`       | -          |
-| `className`      | `string` | `''`         | -          |
-| `height`         | `string` | `48rem`      | -          |
-| `width`          | `string` | `39rem`      | -          |
-| `padding`        | `string` | `1.5rem`     | -          |
-| `onOverlayClick` | `func`   | `null`       | -          |
+<!-- PROPS -->
 
 ### Example
 

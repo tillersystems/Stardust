@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number, select, text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { State, Store } from '@sambego/storybook-state';
+
+import Wrapper from '../../../Wrapper';
 import { TextInput } from '../..';
 import { Data as IconNames } from '../../../Icon/data';
 import TextInputReadme from '../README.md';
@@ -48,21 +50,23 @@ storiesOf('Input - TextInput', module)
     const searchValue = boolean('Search', false, 'Status');
 
     return (
-      <TextInput
-        width={`${widthValue}rem`}
-        fluid={fluidValue}
-        placeholder="Write some stuff"
-        disabled={disabledValue}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-        loading={loadingValue}
-        info={infoValue}
-        ghost={ghostValue}
-        success={successValue}
-        warning={warningValue}
-        error={errorValue}
-        search={searchValue}
-      />
+      <Wrapper>
+        <TextInput
+          width={`${widthValue}rem`}
+          fluid={fluidValue}
+          placeholder="Write some stuff"
+          disabled={disabledValue}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+          loading={loadingValue}
+          info={infoValue}
+          ghost={ghostValue}
+          success={successValue}
+          warning={warningValue}
+          error={errorValue}
+          search={searchValue}
+        />
+      </Wrapper>
     );
   })
 
@@ -71,14 +75,16 @@ storiesOf('Input - TextInput', module)
     const valueValue = text('Value', '', 'General');
 
     return (
-      <TextInput
-        value={valueValue}
-        onChange={onChangeAction}
-        placeholder="Write some stuff"
-        disabled={disabledValue}
-        onFocus={onFocusAction}
-        onBlur={onBlurAction}
-      />
+      <Wrapper>
+        <TextInput
+          value={valueValue}
+          onChange={onChangeAction}
+          placeholder="Write some stuff"
+          disabled={disabledValue}
+          onFocus={onFocusAction}
+          onBlur={onBlurAction}
+        />
+      </Wrapper>
     );
   })
 
@@ -86,20 +92,22 @@ storiesOf('Input - TextInput', module)
     const disabledValue = boolean('Disabled', false, 'General');
 
     return (
-      <State store={storeWithState}>
-        <TextInput
-          type="text"
-          value={storeWithState.get('value')}
-          onChange={value => {
-            storeWithState.set({ value });
-            onChangeAction(value);
-          }}
-          placeholder="Write some stuff"
-          disabled={disabledValue}
-          onFocus={onFocusAction}
-          onBlur={onBlurAction}
-        />
-      </State>
+      <Wrapper>
+        <State store={storeWithState}>
+          <TextInput
+            type="text"
+            value={storeWithState.get('value')}
+            onChange={value => {
+              storeWithState.set({ value });
+              onChangeAction(value);
+            }}
+            placeholder="Write some stuff"
+            disabled={disabledValue}
+            onFocus={onFocusAction}
+            onBlur={onBlurAction}
+          />
+        </State>
+      </Wrapper>
     );
   })
 
@@ -110,12 +118,14 @@ storiesOf('Input - TextInput', module)
     const labelPositionValue = select('Label position', ['left', 'right'], 'left', 'Label');
 
     return (
-      <TextInput
-        placeholder="Write some stuff"
-        disabled={disabledValue}
-        label={{ text: labelValue }}
-        labelPosition={labelPositionValue}
-      />
+      <Wrapper>
+        <TextInput
+          placeholder="Write some stuff"
+          disabled={disabledValue}
+          label={{ text: labelValue }}
+          labelPosition={labelPositionValue}
+        />
+      </Wrapper>
     );
   })
 
@@ -126,11 +136,13 @@ storiesOf('Input - TextInput', module)
     const labelPositionValue = select('Label position', ['left', 'right'], 'right', 'Label');
 
     return (
-      <TextInput
-        placeholder="Write some stuff"
-        disabled={disabledValue}
-        label={{ icon: labelValue }}
-        labelPosition={labelPositionValue}
-      />
+      <Wrapper>
+        <TextInput
+          placeholder="Write some stuff"
+          disabled={disabledValue}
+          label={{ icon: labelValue }}
+          labelPosition={labelPositionValue}
+        />
+      </Wrapper>
     );
   });
