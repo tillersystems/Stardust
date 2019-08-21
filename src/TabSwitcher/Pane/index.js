@@ -7,10 +7,6 @@ import { context } from '..';
 /**
  * A pane wraps the content displayable by a tab
  *
- * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className - className needed by styled components
- * @param {string} tabId - Tab id
- *
  * @return {jsx}
  */
 
@@ -38,8 +34,13 @@ const Pane = forwardRef(({ children, className, tabId }, ref) => {
 const { node, string } = PropTypes;
 
 Pane.propTypes = {
+  /** Anything that can be rendered: numbers, strings, elements or an array (or fragment) */
   children: node,
+
+  /** className needed by styled components */
   className: string,
+
+  /** Tab id */
   tabId: string.isRequired,
 };
 

@@ -2,25 +2,15 @@
 
 ### Usage
 
+A TabSwitcher wraps all the logic between tabs (elements allowing to display content) and panes (content displayable when its tab is clicked)
+
 ```jsx
 import { TabSwitcher } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
 
-### Properties
-
-- `children` - Tabs and Panes to be displayed.
-- `defaultTabId` - Starts the tab at a specific id.
-- `tabId` - Like form inputs, a tab's state can be controlled by the owner.
-- `onChange` - Callback with the tab id triggered when the user changes tabs allowing your app to synchronize with it.
-
-| propName       |  propType  | defaultValue | isRequired |
-| -------------- | :--------: | :----------: | :--------: |
-| `children`     |   `node`   |              |     \*     |
-| `defaultTabId` |  `string`  | `undefined`  |     -      |
-| `tabId`        |  `string`  | `undefined`  |     -      |
-| `onChange`     | `function` | `undefined`  |     -      |
+<!-- PROPS -->
 
 ### Example
 

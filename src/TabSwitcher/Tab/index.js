@@ -4,12 +4,7 @@ import { Container } from './elements';
 import { context } from '..';
 
 /**
- * Tab are a link displaying the content of a pane
- *
- * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className - className needed by styled components.
- * @param {string} id - Id of the tab.
- * @param {boolean} isDisabled - if this tab should be interactive or not.
+ * Tab is a link displaying the content of a pane
  *
  * @return {jsx}
  */
@@ -45,19 +40,26 @@ const Tab = ({ children, className, id, isDisabled }) => {
 const { bool, node, string } = PropTypes;
 
 Tab.propTypes = {
-  children: node.isRequired,
-  id: string,
-  isDisabled: bool,
+  /** className needed by styled components */
   className: string,
+
+  /** Anything that can be rendered: numbers, strings, elements or an array (or fragment) */
+  children: node.isRequired,
+
+  /** Id of the tab */
+  id: string,
+
+  /** If this tab should be interactive or not */
+  isDisabled: bool,
 };
 
 /**
  * Default props.
  */
 Tab.defaultProps = {
+  className: undefined,
   id: undefined,
   isDisabled: false,
-  className: undefined,
 };
 
 export default memo(Tab);
