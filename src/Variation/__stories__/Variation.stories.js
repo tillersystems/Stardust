@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import Variation from '..';
+import Wrapper from '../../Wrapper';
 import VariationReadme from '../README.md';
 
 storiesOf('Variation', module)
@@ -15,5 +16,9 @@ storiesOf('Variation', module)
   })
   .add('default', () => {
     const Negative = boolean('Negative', false, 'State');
-    return <Variation negative={Negative} />;
+    return (
+      <Wrapper>
+        <Variation negative={Negative} />
+      </Wrapper>
+    );
   });
