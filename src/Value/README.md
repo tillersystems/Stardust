@@ -2,6 +2,8 @@
 
 ### Usage
 
+A value is a number that can be positive (green), negative (red) or neutral (dark blue).
+
 ```jsx
 import { Value } from '@tillersystems/stardust';
 ```
@@ -10,17 +12,12 @@ import { Value } from '@tillersystems/stardust';
 
 ### Properties
 
-- `children` - anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `className` - Class needed by styled component.
-- `positive` - A value can be positive.
-- `negative` - A value can be negative.
-
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `children`  |  `node`  |    `null`    |     -      |
-| `className` | `string` |     `''`     |     -      |
-| `positive`  | `string` |   `false`    |     -      |
-| `negative`  | `string` |   `false`    |     -      |
+| Name        | Required |   Type   | DefaultValue |                                     Description                                     |
+| ----------- | :------: | :------: | :----------: | :---------------------------------------------------------------------------------: |
+| `children`  |    -     |  `node`  |    `null`    | anything that can be rendered: numbers, strings, elements or an array (or fragment) |
+| `className` |    -     | `string` |     `''`     |                        className needed by styled-components                        |
+| `positive`  |    -     | `string` |   `false`    |                              If the value is positive                               |
+| `negative`  |    -     | `string` |   `false`    |                              If the value is negative                               |
 
 ### Example
 
