@@ -20,7 +20,7 @@ import { Modal } from '@tillersystems/stardust';
 ### Example
 
 ```jsx
-import Modal from 'components/modal';
+import { Modal } from '@tillersystems/stardust';
 
 render() {
   return (

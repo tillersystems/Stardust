@@ -18,7 +18,7 @@ Submit action is provided by onSubmit callback prop.
 ### Example
 
 ```jsx
-import Form from 'components/Form';
+import { Form } from '@tillersystems/stardust';
 
 render() {
   return (

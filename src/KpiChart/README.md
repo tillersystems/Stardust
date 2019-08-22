@@ -19,7 +19,7 @@ import { KpiChart } from '@tillersystems/stardust';
 ### Example
 
 ```jsx
-import { KpiChart } from 'components/KpiChart';
+import { KpiChart } from '@tillersystems/stardust';
 
 render() {
   return <KpiChart isCompacted>
