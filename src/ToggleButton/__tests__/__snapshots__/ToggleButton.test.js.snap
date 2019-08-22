@@ -46,11 +46,11 @@ exports[`<ToggleButton /> should render without a problem 1`] = `
 }
 
 .c0 {
-  display: inline-block;
-  position: relative;
-  height: 2rem;
-  vertical-align: middle;
   cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+  vertical-align: middle;
 }
 
 <div
@@ -114,11 +114,11 @@ exports[`<ToggleButton /> should render without a problem when checked 1`] = `
 }
 
 .c0 {
-  display: inline-block;
-  position: relative;
-  height: 2rem;
-  vertical-align: middle;
   cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+  vertical-align: middle;
 }
 
 <div
