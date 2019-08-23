@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 
+import Wrapper from '../../Wrapper';
 import { Button, Tooltip } from '../..';
 import TooltipReadme from '../README.md';
 
@@ -14,7 +15,7 @@ storiesOf('Tooltip', module)
     },
   })
   .add('default', () => {
-    const arrow = boolean('Arrow', true, 'State');
+    const arrow = boolean('Arrow', true, 'Props');
     const appearance = select(
       'Appearance',
       {
@@ -22,7 +23,7 @@ storiesOf('Tooltip', module)
         light: 'light',
       },
       'dark',
-      'State',
+      'Props',
     );
 
     const boundary = select(
@@ -33,20 +34,9 @@ storiesOf('Tooltip', module)
         viewport: 'viewport',
       },
       'window',
-      'State',
+      'Props',
     );
 
-    const widthValue = number(
-      'Width',
-      28,
-      {
-        range: true,
-        min: 10,
-        max: 60,
-        step: 2,
-      },
-      'Dimensions',
-    );
     const placement = select(
       'Placement',
       {
@@ -64,11 +54,11 @@ storiesOf('Tooltip', module)
         'left-end': 'left-end',
       },
       'top',
-      'State',
+      'Props',
     );
 
     const trigger = select(
-      'trigger',
+      'Trigger',
       {
         mouseenter: 'mouseenter',
         focus: 'focus',
@@ -76,26 +66,40 @@ storiesOf('Tooltip', module)
         manual: 'manual',
       },
       'click',
-      'State',
+      'Props',
+    );
+
+    const widthValue = number(
+      'Width',
+      28,
+      {
+        range: true,
+        min: 10,
+        max: 60,
+        step: 2,
+      },
+      'Props',
     );
 
     return (
-      <Tooltip
-        appearance={appearance}
-        arrow={arrow}
-        boundary={boundary}
-        maxWidth={`${widthValue}rem`}
-        content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+      <Wrapper>
+        <Tooltip
+          appearance={appearance}
+          arrow={arrow}
+          boundary={boundary}
+          maxWidth={`${widthValue}rem`}
+          content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
-        placement={placement}
-        trigger={trigger}
-      >
-        <Button appearance="primary">Show Tooltip</Button>
-      </Tooltip>
+          placement={placement}
+          trigger={trigger}
+        >
+          <Button appearance="primary">Show Tooltip</Button>
+        </Tooltip>
+      </Wrapper>
     );
   })
   .add('controlled', () => {
-    const arrow = boolean('Arrow', true, 'State');
+    const arrow = boolean('Arrow', true, 'Props');
     const appearance = select(
       'Appearance',
       {
@@ -103,7 +107,7 @@ storiesOf('Tooltip', module)
         light: 'light',
       },
       'dark',
-      'State',
+      'Props',
     );
 
     const boundary = select(
@@ -114,20 +118,11 @@ storiesOf('Tooltip', module)
         viewport: 'viewport',
       },
       'window',
-      'State',
+      'Props',
     );
 
-    const widthValue = number(
-      'Width',
-      28,
-      {
-        range: true,
-        min: 10,
-        max: 60,
-        step: 2,
-      },
-      'Dimensions',
-    );
+    const isVisible = boolean('Is visible', true, 'Props');
+
     const placement = select(
       'Placement',
       {
@@ -145,11 +140,11 @@ storiesOf('Tooltip', module)
         'left-end': 'left-end',
       },
       'top',
-      'State',
+      'Props',
     );
 
     const trigger = select(
-      'trigger',
+      'Trigger',
       {
         mouseenter: 'mouseenter',
         focus: 'focus',
@@ -157,24 +152,36 @@ storiesOf('Tooltip', module)
         manual: 'manual',
       },
       'click',
-      'State',
+      'Props',
     );
 
-    const isVisible = boolean('Is visible', true, 'State');
+    const widthValue = number(
+      'Width',
+      28,
+      {
+        range: true,
+        min: 10,
+        max: 60,
+        step: 2,
+      },
+      'Props',
+    );
 
     return (
-      <Tooltip
-        appearance={appearance}
-        arrow={arrow}
-        boundary={boundary}
-        maxWidth={`${widthValue}rem`}
-        content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
+      <Wrapper>
+        <Tooltip
+          appearance={appearance}
+          arrow={arrow}
+          boundary={boundary}
+          maxWidth={`${widthValue}rem`}
+          content="Ventes nettes (ventes brutes moins les réductions et les annulations) plus les taxes
         sur la période séléctionnée."
-        placement={placement}
-        trigger={trigger}
-        isVisible={isVisible}
-      >
-        <Button appearance="primary">Show Tooltip</Button>
-      </Tooltip>
+          placement={placement}
+          trigger={trigger}
+          isVisible={isVisible}
+        >
+          <Button appearance="primary">Show Tooltip</Button>
+        </Tooltip>
+      </Wrapper>
     );
   });

@@ -6,17 +6,16 @@
 import { Variation } from '@tillersystems/stardust';
 ```
 
+A Variation consists of just an arrow icon being down or up.
+
 <!-- STORY -->
 
 ### Properties
 
-- `className` - className needed by styled components.
-- `negative` - By default a variation is positive but it can be negative.
-
-| propName  | propType | defaultValue | isRequired |
-| --------- | -------- | ------------ | ---------- |
-| className | string   | ''           | -          |
-| negative  | bool     | false        | -          |
+| Name      | Required |  Type  | DefaultValue |              Description              |
+| --------- | :------: | :----: | :----------: | :-----------------------------------: |
+| className |    -     | string |      ''      | className needed by styled-components |
+| negative  |    -     |  bool  |    false     |                   -                   |
 
 ### Example
 

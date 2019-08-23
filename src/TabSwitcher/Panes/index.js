@@ -5,9 +5,6 @@ import styled from 'styled-components';
 /**
  * Panes hold the content of interactive tabs
  *
- * @param {node} children - Anything that can be rendered: numbers, strings, elements or an array (or fragment)
- * @param {string} className - className needed by styled components
- *
  * @return {jsx}
  */
 const Panes = ({ children, className }) => <div className={className}>{children}</div>;
@@ -19,7 +16,10 @@ const Panes = ({ children, className }) => <div className={className}>{children}
 const { node, string } = PropTypes;
 
 Panes.propTypes = {
+  /** Anything that can be rendered: numbers, strings, elements or an array (or fragment) */
   children: node.isRequired,
+
+  /** className needed by styled components  */
   className: string,
 };
 

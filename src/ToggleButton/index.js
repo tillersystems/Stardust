@@ -5,15 +5,7 @@ import styled from 'styled-components';
 import { Checkbox, Toggle } from './elements';
 
 /**
- * Toggle Button
- *
- * This component is in charge of displaying
- * a toggle button.
- *
- * @param {string} className // Class needed by styled component.
- * @param {bool} checked // Whether the button is checked or not.
- * @param {bool} disabled // Whether the button is disabled or not.
- * @param {func} onToggle // Callback whence clicked.
+ * A Toggle Button represents the switch between two states, on or off.
  *
  * @return {jsx}
  */
@@ -26,22 +18,6 @@ class ToggleButton extends PureComponent {
   /** Display name. */
   static displayName = 'ToggleButton';
 
-  /** Prop types. */
-  static propTypes = {
-    className: PropTypes.string,
-    checked: PropTypes.bool,
-    disabled: PropTypes.bool,
-    onToggle: PropTypes.func,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-    checked: false,
-    disabled: false,
-    onToggle: null,
-  };
-
   /** Internal state. */
   state = {
     checked: this.props.checked, // eslint-disable-line react/destructuring-assignment
@@ -49,23 +25,23 @@ class ToggleButton extends PureComponent {
 
   componentDidUpdate(prevProps) {
     const { checked } = this.props;
+
     if (checked !== prevProps.checked) {
-      this.setState({ ...this.state, checked });
+      this.setState({ checked });
     }
   }
 
   /**
-   * Handles Toggle
-   *
-   * @param {boolean} checked
+   * Handles Toggle of Button
    */
-  handleToogle = checked => {
+  handleToggle = () => {
     const { disabled, onToggle } = this.props;
+    const { checked } = this.state;
 
     if (!disabled && onToggle) {
       onToggle(!checked);
     } else if (!disabled) {
-      this.setState({ ...this.state, checked: !checked });
+      this.setState(prevState => ({ checked: !prevState.checked }));
     } else {
       return null;
     }
@@ -74,8 +50,9 @@ class ToggleButton extends PureComponent {
   render() {
     const { className, disabled } = this.props;
     const { checked } = this.state;
+
     return (
-      <div className={className} onClick={() => this.handleToogle(checked)}>
+      <div className={className} onClick={this.handleToggle}>
         <Checkbox type="checkbox" checked={checked} readOnly />
         <Toggle checked={checked} readOnly={disabled} data-testid="toggle-button" />
       </div>
@@ -83,14 +60,33 @@ class ToggleButton extends PureComponent {
   }
 }
 
+/** Prop types. */
+ToggleButton.propTypes = {
+  /** Whether the button is checked or not */
+  checked: PropTypes.bool,
+
+  /** className needed by styled-components */
+  className: PropTypes.string,
+
+  /** Whether the button is disabled or not */
+  disabled: PropTypes.bool,
+
+  /** Callback when component is clicked */
+  onToggle: PropTypes.func,
+};
+
+/** Default props. */
+ToggleButton.defaultProps = {
+  checked: false,
+  className: '',
+  disabled: false,
+  onToggle: null,
+};
+
 export default styled(ToggleButton)`
-  display: inline-block;
-
-  position: relative;
-
-  height: 2rem;
-
-  vertical-align: middle;
-
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  display: inline-block;
+  height: 2rem;
+  position: relative;
+  vertical-align: middle;
 `;

@@ -82,11 +82,22 @@ const { bool, func, node, string } = PropTypes;
 
 /** Prop types. */
 RadioGroup.propTypes = {
+  /** Radio buttons elements */
   children: node,
+
+  /** className needed by styled-components */
   className: string,
+
+  /** Name the groupe of radio button */
   groupName: string,
+
+  /** Change the radio buttons direction */
   isRow: bool,
+
+  /** Callback triggered on a radio button click  */
   onChange: func,
+
+  /** Value which pre-select the radio button */
   selectedValue: string,
 };
 

@@ -13,12 +13,6 @@ const { Provider } = context;
  * A TabSwitcher wraps all the logic between tabs (elements allowing to display content)
  * and panes (content displayable when its tab is clicked)
  *
- * @param {node} children - Tabs and Panes to be displayed.
- * @param {number} defaultTabId - Starts the tab at a specific id.
- * @param {number} tabId - Like form inputs, a tab's state can be controlled by the owner.
- * @param {function} onChange - Callback with the tab id triggered when the user changes tabs allowing your app to synchronize with it.
- *
- *
  * @return {jsx}
  */
 const TabSwitcher = ({ children, defaultTabId, tabId, onChange }) => {
@@ -57,9 +51,16 @@ TabSwitcher.Tabs = Tabs;
 const { func, node, string } = PropTypes;
 
 TabSwitcher.propTypes = {
+  /** Tabs and Panes to be displayed. */
   children: node.isRequired,
+
+  /** Starts the tab at a specific id */
   defaultTabId: string,
+
+  /** Callback with the tab id triggered when the user changes tabs allowing your app to synchronize with it */
   onChange: func,
+
+  /** Like form inputs, a tab's state can be controlled by the owner */
   tabId: (props, name, compName, ...rest) => {
     if (props.tabId != null && props.onChange == null) {
       return new Error(

@@ -2,37 +2,28 @@
 
 ### Usage
 
+A Table displays structured data through rows and columns.
+It can sort by column (asc, desc).
+
 ```jsx
 import { Table } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
 
-### Properties
-
-- `colsDef` - columns definition.
-- `rowsDef` - rows definition.
-- `data` - data to display.
-- `width` - width of the table.
-- `striped` - whether rows should alternate color or not.
-
-| propName  | propType | defaultValue | isRequired |
-| --------- | :------: | :----------: | :--------: |
-| `colsDef` | `array`  |      -       |     \*     |
-| `rowsDef` | `object` |     `{}`     |     -      |
-| `data`    | `array`  |      -       |     \*     |
-| `width`   | `string` |    `100%`    |     -      |
-| `striped` |  `bool`  |   `false`    |     -      |
+<!-- PROPS -->
 
 #### Columns definition
 
-- `title` - **required** - title of the column, can be either a `string` or a `Component`.
-- `value` - **required** - function to get the value from a column.
-- `format` - _optional_ - function to format the value for display.
-- `filteredBy` - _optional_ - Filters the object by the value.
-- `width` - _optional_ - width of the column (either a relative weight, or a fixed size in `rem` or `px`).
-- `align` - _optional_ - alignment of the cell's content (`left`, `center`, `right`, by default `center`).
-- `sortable` - _optional_ - whether the column is sortable or not (default `false`).
+| Name         | Required |    Type    |                                     DefaultValue                                      |                         Description                         |
+| ------------ | :------: | :--------: | :-----------------------------------------------------------------------------------: | :---------------------------------------------------------: |
+| `align`      |    -     |  `string`  |                                       `center`                                        | Alignment of the cell's content (`left`, `center`, `right`) |
+| `filteredBy` |    -     | `function` |                                        `null`                                         |               Filters the object by the value               |
+| `format`     |    -     | `function` |                                        `null`                                         |                Format the value for display                 |
+| `sortable`   |    -     | `boolean`  |                                        `false`                                        |            Whether the column is sortable or not            |
+| `title`      |    +     |  `string`  |                                        `null`                                         |                     Title of the colum                      |
+| `value`      |    +     | `function` |                                         `''`                                          | Function to retrieve the value of a data for a given column |
+| `width`      |    -     |  `string`  | `` | Width of the column (either a relative weight, or a fixed size in `rem` or `px`) |
 
 The difference between `value` and `format` mostly resides in the fact that `value` is the actual
 value used by the sorting. `format` is "only" used to display the given value to the user (it
@@ -55,8 +46,10 @@ format(v, i);
 
 #### Rows definition
 
-- `selectable` - _optional_ - whether the rows are selectable or not (default to `false`).
-- `onSelect` - _optional_ - handler on row selection.
+| Name         | Required |   Type    | DefaultValue |                         Description                         |
+| ------------ | :------: | :-------: | :----------: | :---------------------------------------------------------: |
+| `onSelect`   |    -     |  `func`   |  `() => {}`  |                  Handler on row selection                   |
+| `selectable` |    -     | `boolean` |   `false`    | Whether the rows are selectable or not (default to `false`) |
 
 The `onSelect` callback is actually called only if `selectable` is set to `true` explicitely. It is
 given the object of the row and its index in the original array.

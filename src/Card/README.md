@@ -13,7 +13,18 @@ It can have a Header and a Footer. The Header can be smaller through a boolean p
 
 <!-- STORY -->
 
-<!-- PROPS -->
+### Card Properties
+
+| Name     | Required |   Type   | DefaultValue |                                      Description                                      |
+| -------- | :------: | :------: | :----------: | :-----------------------------------------------------------------------------------: |
+| `height` |    -     | `string` |    `auto`    | Defines the card height that can be any size units (ex: "100px", "10rem", "100%" ...) |
+| `width`  |    -     | `string` |    `auto`    | Defines the card width that can be any size units (ex: "100px", "10rem", "100%" ...)  |
+
+### Card.Header Properties
+
+| Name    | Required |   Type    | DefaultValue |                Description                 |
+| ------- | :------: | :-------: | :----------: | :----------------------------------------: |
+| `small` |    -     | `boolean` |   `false`    | If the header should have a smaller height |
 
 ### Example
 

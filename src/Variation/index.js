@@ -10,12 +10,7 @@ const {
 } = Theme;
 
 /**
- * Variation
- *
- * This component is in charge of displaying a variation
- *
- * @param {string} className // Classes needed by styled component.
- * @param {string} negative // By default a variation is positive but it can be negative.
+ * A Variation consists of just an arrow icon being down or up.
  *
  * @return {jsx}
  */
@@ -35,7 +30,10 @@ const Variation = ({ className, negative }) => (
  */
 const { bool, string } = PropTypes;
 Variation.propTypes = {
+  /** className needed by styled-components */
   className: string,
+
+  /** If the variation is negative */
   negative: bool,
 };
 

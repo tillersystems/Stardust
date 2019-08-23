@@ -4,24 +4,14 @@ import styled from 'styled-components';
 import Tippy from '@tippy.js/react';
 
 /**
- * Tooltip
+ * A Tooltip extends the content of another element by providing additional content.
+ * Its position and appearance can be customized.
  *
- * This component is in charge of displaying a tooltip.
  * We use Tippy.js, a highly customizable tooltip and popover library
  * powered by Popper.js
  * https://atomiks.github.io/tippyjs/
  *
  * To see all props you can use: https://atomiks.github.io/tippyjs/all-options/
- *
- * @param {string} appearance // Appearance is used to set the color of the tooltip which can be dark or light.
- * @param {boolean} arrow // Determines if an arrow should be added to the tooltip pointing toward the reference element.
- * @param {string} boundary // The boundary preventOverflow modifier. Possible values:  "scrollParent",  "window", "viewport", or an HTMLElement.
- * @param {node} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment). It is the element where a tooltip is hooked to.
- * @param {string} className // Class needed by styled components.
- * @param {node, string, function} content // The content of the tooltip. Along with a string or element, you can use a function that takes the reference element as an argument and returns content.
- * @param {string, number} maxWidth // Determines the maximum width of the tooltip.
- * @param {string} placement // Positions the tooltip relative to its reference element.
- * @param {string} trigger // The events (each separated by a space) which cause a tooltip to show. Possible values:  "mouseenter", "focus",  "click", "manual". Use  "manual" to only trigger the tippy programmatically.
  *
  * @return {jsx}
  */

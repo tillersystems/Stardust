@@ -17,7 +17,7 @@ A Flag displays a country flag from the list in `data.js`. It is drawed with a s
 ### Example
 
 ```jsx
-import Flag from 'components/Flag';
+import { Flag } from '@tillersystems/stardust';
 
 render() {
   return <Flag name="fr" />;

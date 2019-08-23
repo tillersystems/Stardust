@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 /**
- * Value
- *
- * Defines a value component (a value can be positive, negative or neutre).
- *
- * @param {node} children - anything that can be rendered: numbers, strings, elements or an array (or fragment).
- * @param {string} className - Class needed by styled component.
- * @param {string} positive - A value can be positive.
- * @param {string} negative - A value can be negative.
+ * A value is a number that can be positive, negative or neutral (0).
  *
  * @return {jsx}
  */
@@ -26,9 +19,16 @@ const Value = ({ children, className, positive, negative }) => (
  */
 const { bool, node, string } = PropTypes;
 Value.propTypes = {
+  /** Anything that can be rendered: numbers, strings, elements or an array (or fragment) */
   children: node,
+
+  /** className needed by styled-components */
   className: string,
+
+  /** If the value is positive  */
   positive: bool,
+
+  /** If the value is negative */
   negative: bool,
 };
 

@@ -2,23 +2,23 @@
 
 ### Usage
 
+A Tag categorizes or marks anything.
+
 ```jsx
 import { Tag } from '@tillersystems/stardust';
 ```
 
 <!-- STORY -->
 
+<!-- PROPS -->
+
 ### Properties
 
-- `children` - anything that can be rendered: numbers, strings, elements or an array (or fragment).
-- `className` - className needed by styled components.
-- `color` - the color of tag box.
-
-| propName    | propType | defaultValue | isRequired |
-| ----------- | :------: | :----------: | :--------: |
-| `children`  |  `node`  |    `null`    |     -      |
-| `className` | `string` |     `''`     |     -      |
-| `color`     | `string` |    `` | -    |
+| Name        | Required |   Type   |              DefaultValue               |                                     Description                                     |
+| ----------- | :------: | :------: | :-------------------------------------: | :---------------------------------------------------------------------------------: |
+| `children`  |    -     |  `node`  |                 `null`                  | Anything that can be rendered: numbers, strings, elements or an array (or fragment) |
+| `className` |    -     | `string` |                  `''`                   |                        className needed by styled components                        |
+| `color`     |    -     | `string` | `` |The background color of the tag box |
 
 ### Example
 

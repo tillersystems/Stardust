@@ -28,46 +28,12 @@ const sortingDirectionToIconName = {
   desc: 'caret-down',
 };
 
-const { node, number, func, oneOfType, oneOf, bool, shape, array, string } = PropTypes;
-
 /**
- * Defines a Table component.
+ * A Table displays structured data through rows and columns.
+ * It can sort by column (asc, desc).
  *
- * Displays given data into a table layout and manages the data.
  */
 class Table extends PureComponent {
-  /** Prop types. */
-  static propTypes = {
-    colsDef: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: node.isRequired,
-        value: func.isRequired,
-        format: func,
-        filteredBy: func,
-        width: oneOfType([string, number]),
-        align: oneOf(['left', 'center', 'right']),
-        sortable: bool,
-      }),
-    ).isRequired,
-    rowsDef: shape({
-      selectable: bool,
-      onSelect: func,
-    }),
-    data: array.isRequired,
-    width: string,
-    striped: bool,
-  };
-
-  /** Default props. */
-  static defaultProps = {
-    rowsDef: {
-      selectable: false,
-      onSelect: () => {},
-    },
-    width: '100%',
-    striped: false,
-  };
-
   /** Internal state. */
   state = {
     // Stores which column should be sorted.
@@ -163,13 +129,13 @@ class Table extends PureComponent {
   renderBody() {
     const {
       colsDef,
-      rowsDef: { selectable },
       data,
+      rowsDef: { selectable },
       striped,
     } = this.props;
     const {
-      sort: { index, direction },
       selected,
+      sort: { index, direction },
     } = this.state;
 
     // We actually need to keep track of the original key for sorting purposes
@@ -242,5 +208,48 @@ class Table extends PureComponent {
     );
   }
 }
+
+const { array, arrayOf, bool, func, node, number, oneOf, oneOfType, shape, string } = PropTypes;
+
+/** Prop types. */
+Table.propTypes = {
+  /** Columns definition */
+  colsDef: arrayOf(
+    shape({
+      align: oneOf(['left', 'center', 'right']),
+      filteredBy: func,
+      format: func,
+      sortable: bool,
+      title: node.isRequired,
+      value: func.isRequired,
+      width: oneOfType([string, number]),
+    }),
+  ).isRequired,
+
+  /** Data to display */
+  data: array.isRequired,
+
+  /** Rows definition */
+  rowsDef: shape({
+    onSelect: func,
+    selectable: bool,
+  }),
+
+  /** Whether rows should alternate color or not */
+  striped: bool,
+
+  /** Width of the table */
+  width: string,
+};
+
+/** Default props. */
+Table.defaultProps = {
+  rowsDef: {
+    onSelect: () => {},
+    selectable: false,
+  },
+  striped: false,
+  width: '100%',
+};
 
 export default Table;
