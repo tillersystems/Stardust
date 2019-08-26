@@ -32,4 +32,3 @@ export { default as Theme } from './Theme';
 export { default as ToggleButton } from './ToggleButton';
 export { default as Tooltip } from './Tooltip';
 export { default as Value } from './Value';
-export { default as Variation } from './Variation';
