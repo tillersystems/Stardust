@@ -20,7 +20,6 @@ export { default as Logo } from './Logo';
 export { default as Message } from './Message';
 export { default as Modal } from './Modal';
 export { NotificationProvider, useNotifications } from './Notification';
-export { default as Pin } from './Pin';
 export { default as Popover } from './Popover';
 export { default as RadioButton } from './RadioButton';
 export { default as RadioGroup } from './RadioGroup';
