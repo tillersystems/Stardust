@@ -17,7 +17,7 @@ import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
 class CheckBox extends PureComponent {
   /** Internal state. */
   state = {
-    checked: this.props.checked, // eslint-disable-line
+    isChecked: this.props.isChecked, // eslint-disable-line
   };
 
   /**
@@ -25,12 +25,12 @@ class CheckBox extends PureComponent {
    * Method invoked immediately after updating occur.
    */
   componentDidUpdate(prevProps) {
-    const { checked } = this.props;
+    const { isChecked } = this.props;
 
     // Update state only if props have changed
-    if (prevProps.checked !== checked) {
+    if (prevProps.isChecked !== isChecked) {
       this.setState({
-        checked,
+        isChecked,
       });
     }
   }
@@ -40,14 +40,14 @@ class CheckBox extends PureComponent {
    * fired when checkbox is triggered and state changes.
    */
   handleChange = () => {
-    const { onChange, disabled } = this.props;
+    const { onChange, isDisabled } = this.props;
 
-    if (disabled) {
+    if (isDisabled) {
       return;
     }
 
     this.setState(
-      prevState => ({ checked: !prevState.checked }),
+      prevState => ({ isChecked: !prevState.isChecked }),
       () => {
         onChange;
       },
@@ -60,21 +60,21 @@ class CheckBox extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { checked } = this.state;
-    const { className, children, disabled, value, ...rest } = this.props;
+    const { isChecked } = this.state;
+    const { className, children, isDisabled, value, ...rest } = this.props;
 
     return (
       <div className={className} {...rest} data-testid="checkBox">
-        <Label disabled={disabled} checked={checked} data-testid="checkBox-label">
+        <Label isDisabled={isDisabled} isChecked={isChecked} data-testid="checkBox-label">
           <HiddenCheckbox
             data-testid="hidden-checkBox"
-            checked={checked}
-            disabled={disabled}
+            isChecked={isChecked}
+            isDisabled={isDisabled}
             onChange={this.handleChange}
-            tabIndex={disabled ? -1 : 0}
+            tabIndex={isDisabled ? -1 : 0}
             value={value}
           />
-          <StyledCheckbox checked={checked} data-testid="styled-checkBox">
+          <StyledCheckbox isChecked={isChecked} data-testid="styled-checkBox">
             <Icon name="check-mark" color={Theme.palette.white} width="10px" height="10px" />
           </StyledCheckbox>
           {children}
@@ -99,12 +99,12 @@ CheckBox.propTypes = {
   /**
    * Specifies whether the checkbox is checked
    */
-  checked: PropTypes.bool,
+  isChecked: PropTypes.bool,
 
   /**
    * Specifies whether the checkbox is disabled
    */
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
 
   /**
    * Callback triggered on CheckBox state change
@@ -121,8 +121,8 @@ CheckBox.propTypes = {
 CheckBox.defaultProps = {
   children: null,
   className: '',
-  checked: false,
-  disabled: false,
+  isChecked: false,
+  isDisabled: false,
   onChange: null,
   value: '',
 };

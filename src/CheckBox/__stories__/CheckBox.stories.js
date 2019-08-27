@@ -9,7 +9,7 @@ import { CheckBox } from '../..';
 import CheckBoxReadme from '../README.md';
 
 const store = new Store({
-  checked: true,
+  isChecked: true,
 });
 
 storiesOf('CheckBox', module)
@@ -28,13 +28,18 @@ storiesOf('CheckBox', module)
 
     return (
       <Wrapper>
-        <CheckBox checked disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
+        <CheckBox
+          isChecked
+          isDisabled={disabledValue}
+          onChange={() => onChangeAction()}
+          value={value}
+        >
           A really cool choice
         </CheckBox>
-        <CheckBox disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
+        <CheckBox isDisabled={disabledValue} onChange={() => onChangeAction()} value={value}>
           A really cool choice
         </CheckBox>
-        <CheckBox disabled={disabledValue} onChange={() => onChangeAction()} value={value}>
+        <CheckBox isDisabled={disabledValue} onChange={() => onChangeAction()} value={value}>
           A really cool choice
         </CheckBox>
       </Wrapper>
@@ -48,9 +53,9 @@ storiesOf('CheckBox', module)
         <State store={store}>
           {state => (
             <CheckBox
-              checked={state.checked}
-              disabled={disabledValue}
-              onChange={() => store.set({ checked: !store.get('checked') })}
+              isChecked={state.isChecked}
+              isDisabled={disabledValue}
+              onChange={() => store.set({ isChecked: !store.get('isChecked') })}
             >
               What?
             </CheckBox>

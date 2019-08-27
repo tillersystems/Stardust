@@ -18,8 +18,8 @@ export const StyledCheckbox = styled.div`
 
   margin-right: 0.7rem;
 
-  background: ${({ theme: { palette }, checked }) =>
-    checked
+  background: ${({ theme: { palette }, isChecked }) =>
+    isChecked
       ? `${palette.primary.default}
         linear-gradient(
           0deg,
@@ -28,7 +28,7 @@ export const StyledCheckbox = styled.div`
         )`
       : palette.white};
   border: 1px solid
-    ${({ theme: { palette }, checked }) => (checked ? palette.primary.dark : palette.lightGrey)};
+    ${({ theme: { palette }, isChecked }) => (isChecked ? palette.primary.dark : palette.lightGrey)};
   border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
 
   box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
@@ -41,7 +41,7 @@ export const StyledCheckbox = styled.div`
   }
 
   ${Icon} {
-    visibility: ${({ checked }) => (checked ? 'visible' : 'hidden')};
+    visibility: ${({ isChecked }) => (isChecked ? 'visible' : 'hidden')};
   }
 `;
 
@@ -55,15 +55,15 @@ export const Label = styled.label`
 
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
-  ${({ disabled }) =>
-    disabled &&
+  ${({ isDisabled }) =>
+    isDisabled &&
     css`
       opacity: 0.4;
       cursor: not-allowed;
     `};
 
-  ${({ checked }) =>
-    checked &&
+  ${({ isChecked }) =>
+    isChecked &&
     css`
       color: ${({ theme: { palette } }) => palette.primary.default};
       font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
