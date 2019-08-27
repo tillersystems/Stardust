@@ -16,7 +16,7 @@ export const StyledCheckbox = styled.div`
   min-width: 1.6rem;
   height: 1.6rem;
 
-  margin-right: 0.7rem;
+  margin-right: 1.2rem;
 
   background: ${({ theme: { palette }, isChecked }) =>
     isChecked
