@@ -35,7 +35,7 @@ exports[`<CheckBox /> should render without a problem 1`] = `
   align-items: center;
   min-width: 1.6rem;
   height: 1.6rem;
-  margin-right: 0.7rem;
+  margin-right: 1.2rem;
   background: hsl(0,100%,100%);
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;

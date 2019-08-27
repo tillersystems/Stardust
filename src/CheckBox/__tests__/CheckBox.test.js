@@ -12,7 +12,7 @@ describe('<CheckBox />', () => {
   });
 
   test('should render an initial selected checkbox', () => {
-    const { getByTestId } = render(<CheckBox checked>label</CheckBox>);
+    const { getByTestId } = render(<CheckBox isDefaultChecked>label</CheckBox>);
 
     const labelNode = getByTestId(/checkBox-label/);
     const styledCheckBoxNode = getByTestId(/styled-checkBox/);
@@ -28,7 +28,7 @@ describe('<CheckBox />', () => {
   });
 
   test('should be disabled', () => {
-    const { getByTestId } = render(<CheckBox disabled>label</CheckBox>);
+    const { getByTestId } = render(<CheckBox isDisabled>label</CheckBox>);
     const labelNode = getByTestId(/checkBox-label/);
 
     expect(labelNode).toHaveStyleRule('opacity', '0.4');
@@ -62,7 +62,7 @@ describe('<CheckBox />', () => {
   });
 
   test('should not toggle when disabled', () => {
-    const { getByTestId } = render(<CheckBox disabled>label</CheckBox>);
+    const { getByTestId } = render(<CheckBox isDisabled>label</CheckBox>);
 
     const labelNode = getByTestId(/checkBox-label/);
     const styledCheckBoxNode = getByTestId(/styled-checkBox/);
@@ -106,7 +106,7 @@ describe('<CheckBox />', () => {
   test('should not call onChange callback when CheckBox is disabled', () => {
     const spy = jest.fn();
     const { getByTestId } = render(
-      <CheckBox disabled onChange={spy}>
+      <CheckBox isDisabled onChange={spy}>
         label
       </CheckBox>,
     );
