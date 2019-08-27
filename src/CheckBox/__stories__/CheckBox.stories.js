@@ -29,7 +29,7 @@ storiesOf('CheckBox', module)
     return (
       <Wrapper>
         <CheckBox
-          isChecked
+          isDefaultChecked
           isDisabled={disabledValue}
           onChange={() => onChangeAction()}
           value={value}
@@ -55,7 +55,7 @@ storiesOf('CheckBox', module)
             <CheckBox
               isChecked={state.isChecked}
               isDisabled={disabledValue}
-              onChange={() => store.set({ isChecked: !store.get('isChecked') })}
+              onChange={isChecked => store.set({ isChecked })}
             >
               What?
             </CheckBox>

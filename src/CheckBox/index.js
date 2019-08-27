@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -17,23 +18,35 @@ import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
 class CheckBox extends PureComponent {
   /** Internal state. */
   state = {
-    isChecked: this.props.isChecked, // eslint-disable-line
+    isChecked: this.props.isDefaultChecked, // eslint-disable-line
   };
 
   /**
-   * Component Did Update
-   * Method invoked immediately after updating occur.
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
    */
-  componentDidUpdate(prevProps) {
-    const { isChecked } = this.props;
+  isControlled = prop => {
+    const props = this.props;
 
-    // Update state only if props have changed
-    if (prevProps.isChecked !== isChecked) {
-      this.setState({
-        isChecked,
-      });
-    }
-  }
+    return props.hasOwnProperty(prop);
+  };
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => {
+    const props = this.props;
+    const state = this.state;
+
+    return this.isControlled(key) ? props[key] : state[key];
+  };
 
   /**
    * Handle Change
@@ -46,12 +59,15 @@ class CheckBox extends PureComponent {
       return;
     }
 
-    this.setState(
-      prevState => ({ isChecked: !prevState.isChecked }),
-      () => {
-        onChange;
-      },
-    );
+    const isChecked = this.getControllableValue('isChecked');
+
+    if (this.isControlled('isChecked')) {
+      onChange && onChange(!isChecked);
+    } else {
+      this.setState({ isChecked: !isChecked }, () => {
+        onChange && onChange(!isChecked);
+      });
+    }
   };
 
   /**
@@ -60,11 +76,11 @@ class CheckBox extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { isChecked } = this.state;
-    const { className, children, isDisabled, value, ...rest } = this.props;
+    const { className, children, isDisabled, value } = this.props;
+    const isChecked = this.getControllableValue('isChecked');
 
     return (
-      <div className={className} {...rest} data-testid="checkBox">
+      <div className={className} data-testid="checkBox">
         <Label isDisabled={isDisabled} isChecked={isChecked} data-testid="checkBox-label">
           <HiddenCheckbox
             data-testid="hidden-checkBox"
@@ -97,8 +113,14 @@ CheckBox.propTypes = {
   className: PropTypes.string,
 
   /**
+   * Specifies whether the checkbox is checked by default
+   */
+  isDefaultChecked: PropTypes.bool,
+
+  /**
    * Specifies whether the checkbox is checked
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   isChecked: PropTypes.bool,
 
   /**
@@ -121,7 +143,7 @@ CheckBox.propTypes = {
 CheckBox.defaultProps = {
   children: null,
   className: '',
-  isChecked: false,
+  isDefaultChecked: false,
   isDisabled: false,
   onChange: null,
   value: '',
