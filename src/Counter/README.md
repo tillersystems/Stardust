@@ -12,21 +12,22 @@ import { Counter } from '@tillersystems/stardust';
 
 ### Description
 
-A Counter is a number value that can be updated by two Buttons surrounding the displayed value.
+A Counter is a number value that can be updated by two Buttons surrounding the displayed value. The value won't go beyond the min and max boundaries and will always increase or decrease with the same step.
 
 ### Properties
 
-| Name          | Required |   Type   | DefaultValue |                               Description                               |
-| ------------- | :------: | :------: | :----------: | :---------------------------------------------------------------------: |
-| `appareance`  |    -     | `string` | `secondary`  |              Buttons appearance prop customizing the style              |
-| `className`   |    -     | `string` |     `''`     |                  ClassName needed by styled components                  |
-| `max`         |    -     | `number` |    `100`     |                          Maximum value allowed                          |
-| `min`         |    -     | `number` |     `0`      |                          Minimum value allowed                          |
-| `onIncrement` |    -     |  `func`  |  `() => {}`  |                  Callback function called on increment                  |
-| `onDecrement` |    -     |  `func`  |  `() => {}`  |                  Callback function called on decrement                  |
-| `step`        |    -     | `number` |     `1`      |                Step for incrementing/decrementing value                 |
-| `value`       |    -     | `number` |     `0`      | Value of counter. The value is set to 0 if no value is provided by prop |
-| `width`       |    -     | `string` |    `5rem`    |                         The width of the input                          |
+| Name           | Required |   Type   | DefaultValue |                                     Description                                     |
+| -------------- | :------: | :------: | :----------: | :---------------------------------------------------------------------------------: |
+| `appareance`   |    -     | `string` | `secondary`  |                    Buttons appearance prop customizing the style                    |
+| `className`    |    -     | `string` |     `''`     |                        ClassName needed by styled components                        |
+| `value`        |    -     | `number` |     `''`     | Value of counter. Set this props if you what to use the component controlled state. |
+| `max`          |    -     | `number` |    `100`     |                                Maximum value allowed                                |
+| `min`          |    -     | `number` |     `0`      |                                Minimum value allowed                                |
+| `onIncrement`  |    -     |  `func`  |  `() => {}`  |                        Callback function called on increment                        |
+| `onDecrement`  |    -     |  `func`  |  `() => {}`  |                        Callback function called on decrement                        |
+| `step`         |    -     | `number` |     `1`      |                      Step for incrementing/decrementing value                       |
+| `defaultValue` |    -     | `number` |     `0`      |           Default value of counter. Use this value in uncontrolled state.           |
+| `width`        |    -     | `string` |    `5rem`    |                               The width of the input                                |
 
 ### Example
 
@@ -46,7 +47,7 @@ render() {
         onIncrement={() => {}}
         onDecrement={() => {}}
         appearance={appearance}
-        value={0}
+        defaultValue={0}
         width={`${widthValue}rem`}
       />
   );
