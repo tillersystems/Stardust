@@ -2009,10 +2009,10 @@
   resolved "https://registry.yarnpkg.com/@tillersystems/eslint-config/-/eslint-config-1.1.9.tgz#e87274d108c28c2b6b23c8cf7591ed023813ae91"
   integrity sha512-Qt0UtHemj7FmQ+Qr4reqTFFBfuCtbDixTtVooVNtd6GZZdo4ECt4qVum89bky2DjHoJ2jyGxugc44HKfjCJdPw==
 
-"@tippy.js/react@2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.2.tgz#a0fbc646958cdb002d7d227f7b18dca346c76f2e"
-  integrity sha512-ex6IEy1cFC1a1MqbRaNZqo/MRK/GQOfa/VO5jydYeBrxnxJ3I/3gCX098dUHRLZmB6aFKVY39TwgnQRCbLUG4Q==
+"@tippy.js/react@2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@tippy.js/react/-/react-2.2.3.tgz#2ffb0af6693055be7db4b329b2d3cc7f2356f68e"
+  integrity sha512-5XYvbQujzDj9r00JYEz/cBtm6DutjOdv2azdco53B+eWF7FDBCQfkLVn87wimfEpmGK0vqRQv/cwFxFcoOP98Q==
   dependencies:
     prop-types "^15.6.2"
     tippy.js "^4.3.4"
