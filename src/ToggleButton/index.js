@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unused-prop-types */
+
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -20,41 +22,62 @@ class ToggleButton extends PureComponent {
 
   /** Internal state. */
   state = {
-    checked: this.props.checked, // eslint-disable-line react/destructuring-assignment
+    isChecked: this.props.isDefaultChecked, // eslint-disable-line react/destructuring-assignment
   };
 
-  componentDidUpdate(prevProps) {
-    const { checked } = this.props;
+  /**
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
+   */
+  isControlled = prop => {
+    const props = this.props;
 
-    if (checked !== prevProps.checked) {
-      this.setState({ checked });
-    }
-  }
+    return props.hasOwnProperty(prop);
+  };
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => {
+    const props = this.props;
+    const state = this.state;
+
+    return this.isControlled(key) ? props[key] : state[key];
+  };
 
   /**
    * Handles Toggle of Button
    */
   handleToggle = () => {
-    const { disabled, onToggle } = this.props;
-    const { checked } = this.state;
+    const { isDisabled, onToggle } = this.props;
+    const isChecked = this.getControllableValue('isChecked');
 
-    if (!disabled && onToggle) {
-      onToggle(!checked);
-    } else if (!disabled) {
-      this.setState(prevState => ({ checked: !prevState.checked }));
+    if (isDisabled) return;
+
+    if (this.isControlled('isChecked')) {
+      onToggle && onToggle(!isChecked);
     } else {
-      return null;
+      this.setState({ isChecked: !isChecked }, () => {
+        onToggle && onToggle(!isChecked);
+      });
     }
   };
 
   render() {
-    const { className, disabled } = this.props;
-    const { checked } = this.state;
+    const { className, isDisabled } = this.props;
+    const isChecked = this.getControllableValue('isChecked');
 
     return (
       <div className={className} onClick={this.handleToggle}>
-        <Checkbox type="checkbox" checked={checked} readOnly />
-        <Toggle checked={checked} readOnly={disabled} data-testid="toggle-button" />
+        <Checkbox type="checkbox" isChecked={isChecked} readOnly />
+        <Toggle isChecked={isChecked} readOnly={isDisabled} data-testid="toggle-button" />
       </div>
     );
   }
@@ -62,14 +85,18 @@ class ToggleButton extends PureComponent {
 
 /** Prop types. */
 ToggleButton.propTypes = {
-  /** Whether the button is checked or not */
-  checked: PropTypes.bool,
-
   /** className needed by styled-components */
   className: PropTypes.string,
 
+  /** Whether the button is checked or not in controlled component */
+  // eslint-disable-next-line react/require-default-props
+  isChecked: PropTypes.bool,
+
+  /** Whether the button is checked or not in uncontrolled component */
+  isDefaultChecked: PropTypes.bool,
+
   /** Whether the button is disabled or not */
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
 
   /** Callback when component is clicked */
   onToggle: PropTypes.func,
@@ -77,14 +104,14 @@ ToggleButton.propTypes = {
 
 /** Default props. */
 ToggleButton.defaultProps = {
-  checked: false,
   className: '',
-  disabled: false,
+  isDefaultChecked: false,
+  isDisabled: false,
   onToggle: null,
 };
 
 export default styled(ToggleButton)`
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'pointer')};
   display: inline-block;
   height: 2rem;
   position: relative;

@@ -18,8 +18,8 @@ const Toggle = styled.span`
 
   border-radius: 1rem;
 
-  background: ${({ checked, theme: { palette } }) =>
-    checked
+  background: ${({ isChecked, theme: { palette } }) =>
+    isChecked
       ? `${palette.primary.default} linear-gradient(
           0deg,
           ${palette.whiteOpacity(0)} 0%,
@@ -28,7 +28,8 @@ const Toggle = styled.span`
       : palette.lightGrey};
 
   border: 1px solid
-    ${({ checked, theme: { palette } }) => (checked ? palette.primary.default : palette.lightGrey)};
+    ${({ isChecked, theme: { palette } }) =>
+      isChecked ? palette.primary.default : palette.lightGrey};
 
   cursor: pointer;
   pointer-events: none;
@@ -54,7 +55,7 @@ const Toggle = styled.span`
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
     transition: transform 250ms ease;
-    transform: translateX(${({ checked }) => (checked ? '1.7rem' : 0)});
+    transform: translateX(${({ isChecked }) => (isChecked ? '1.7rem' : 0)});
     will-change: transform;
   }
 
@@ -67,7 +68,7 @@ const Toggle = styled.span`
           &:active {
             &:before {
               width: 3rem;
-              left: ${p => (p.checked ? '0' : '6px')};
+              left: ${p => (p.isChecked ? '0' : '6px')};
             }
           }
         `};

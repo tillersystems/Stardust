@@ -11,7 +11,7 @@ import ToggleButtonReadme from '../README.md';
 const onToggleAction = action('onToggle');
 
 const store = new Store({
-  checked: false,
+  isChecked: false,
 });
 
 storiesOf('ToggleButton', module)
@@ -22,30 +22,34 @@ storiesOf('ToggleButton', module)
       content: ToggleButtonReadme,
     },
   })
-  .add('with properties', () => {
+  .add('controlled', () => {
     const disabledValue = boolean('Disabled', false, 'state');
+
+    const handleToggle = isChecked => {
+      onToggleAction(isChecked);
+      store.set({ isChecked });
+    };
+
     return (
       <Wrapper style={{ background: 'white' }}>
         <State store={store}>
-          <ToggleButton
-            checked={store.get('checked')}
-            disabled={disabledValue}
-            onToggle={checked => {
-              onToggleAction(checked);
-              store.set({ checked });
-            }}
-          />
+          {state => (
+            <ToggleButton
+              isChecked={state.isChecked}
+              isDisabled={disabledValue}
+              onToggle={handleToggle}
+            />
+          )}
         </State>
       </Wrapper>
     );
   })
-  .add('controlled', () => {
-    const checkedValue = boolean('Checked', false, 'state');
-    const disabledValue = boolean('Disabled', true, 'state');
+  .add('uncontrolled', () => {
+    const disabledValue = boolean('Disabled', false, 'state');
 
     return (
-      <Wrapper>
-        <ToggleButton checked={checkedValue} disabled={disabledValue} />
+      <Wrapper style={{ background: 'white' }}>
+        <ToggleButton onToggle={onToggleAction} isDefaultChecked isDisabled={disabledValue} />
       </Wrapper>
     );
   });
