@@ -14,12 +14,13 @@ import { ToggleButton } from '@tillersystems/stardust';
 
 ### Properties
 
-| Name        | Required |   Type   | DefaultValue |              Description              |
-| ----------- | :------: | :------: | :----------: | :-----------------------------------: |
-| `checked`   |    -     |  `bool`  |   `false`    | Whether the button is checked or not  |
-| `className` |    -     | `string` |     `''`     | className needed by styled component  |
-| `disabled`  |    -     |  `bool`  |   `false`    | Whether the button is disabled or not |
-| `onToggle`  |    -     |  `func`  |  `() => {}`  |  Callback when component is clicked   |
+| Name               | Required |   Type   | DefaultValue |                          Description                           |
+| ------------------ | :------: | :------: | :----------: | :------------------------------------------------------------: |
+| `className`        |    -     | `string` |     `''`     |              className needed by styled component              |
+| `isChecked`        |    -     |  `bool`  |     `''`     |  Whether the button is checked or not in controlled component  |
+| `isDefaultChecked` |    -     |  `bool`  |   `false`    | Whether the button is checked or not in uncontrolled component |
+| `isDisabled`       |    -     |  `bool`  |   `false`    |             Whether the button is disabled or not              |
+| `onToggle`         |    -     |  `func`  |  `() => {}`  |               Callback when component is clicked               |
 
 ### Example
 

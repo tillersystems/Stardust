@@ -125,7 +125,6 @@ exports[`<ToggleButton /> should render without a problem when checked 1`] = `
   class="c0"
 >
   <input
-    checked=""
     class="c1"
     readonly=""
     type="checkbox"
