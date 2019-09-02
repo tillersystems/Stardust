@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -14,52 +16,76 @@ const { func, number, string } = PropTypes;
  */
 class Counter extends PureComponent {
   state = {
-    count: this.props.value, // eslint-disable-line react/destructuring-assignment,
+    value: this.props.defaultValue, // eslint-disable-line react/destructuring-assignment,
   };
 
   /**
-   * Component Did Update
-   * Method invoked immediately after updating occur.
+   * Returns true if requested prop exists
+   *
+   * @param {string} prop - requested property name
+   *
+   * @return {boolean}
    */
-  componentDidUpdate(prevProps) {
-    const { value } = this.props;
+  isControlled = prop => {
+    const props = this.props;
 
-    // Update state only if props are changed
-    if (prevProps.value !== value) {
-      this.setState({
-        count: value,
-      });
-    }
-  }
+    return props.hasOwnProperty(prop);
+  };
+
+  /**
+   * Returns the value a property from props if prop exists and from state otherwise
+   *
+   * @param {string} key - requested property name
+   *
+   * @return {*} value of the property
+   */
+  getControllableValue = key => {
+    const props = this.props;
+    const state = this.state;
+
+    return this.isControlled(key) ? props[key] : state[key];
+  };
 
   /**
    * Handle Increment click.
    */
   handleIncrementClick = () => {
-    const { count } = this.state;
+    const value = this.getControllableValue('value');
     const { step, max, onIncrement } = this.props;
 
-    this.setState(
-      prevState => ({
-        count: count === max ? prevState.count : prevState.count + step,
-      }),
-      () => (count === max ? null : onIncrement()),
-    );
+    const nextValue = value + step;
+
+    if (this.isControlled('value')) {
+      nextValue > max ? null : onIncrement(nextValue);
+    } else {
+      this.setState(
+        {
+          value: nextValue > max ? value : nextValue,
+        },
+        () => (nextValue > max ? null : onIncrement(nextValue)),
+      );
+    }
   };
 
   /**
    * Handle Decrement click.
    */
   handleDecrementClick = () => {
-    const { count } = this.state;
+    const value = this.getControllableValue('value');
     const { step, min, onDecrement } = this.props;
 
-    this.setState(
-      prevState => ({
-        count: count === min ? prevState.count : prevState.count - step,
-      }),
-      () => (count === min ? null : onDecrement()),
-    );
+    const nextValue = value - step;
+
+    if (this.isControlled('value')) {
+      nextValue < min ? null : onDecrement(nextValue);
+    } else {
+      this.setState(
+        {
+          value: nextValue < min ? value : nextValue,
+        },
+        () => (nextValue < min ? null : onDecrement(nextValue)),
+      );
+    }
   };
 
   /**
@@ -69,7 +95,7 @@ class Counter extends PureComponent {
    */
   render() {
     const { className, step, max, min, width, appearance } = this.props;
-    const { count } = this.state;
+    const value = this.getControllableValue('value');
 
     return (
       <div
@@ -85,7 +111,7 @@ class Counter extends PureComponent {
           -
         </Button>
         <FakeInput width={width} data-testid="fakeinput">
-          {count}
+          {value}
         </FakeInput>
         <Button appearance={appearance} onClick={this.handleIncrementClick} data-testid="increment">
           +
@@ -108,6 +134,17 @@ Counter.propTypes = {
    * ClassName needed by styled components
    */
   className: string,
+
+  /**
+   * ClassName needed by styled components
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  value: number,
+
+  /**
+   * Default value of counter. The value is set to 0 if no value is provided by prop
+   */
+  defaultValue: number,
 
   /**
    * Maximum value allowed
@@ -135,11 +172,6 @@ Counter.propTypes = {
   step: number,
 
   /**
-   * Value of counter. The value is set to 0 if no value is provided by prop
-   */
-  value: number,
-
-  /**
    * The width of the input
    */
   width: string,
@@ -151,12 +183,12 @@ Counter.propTypes = {
 Counter.defaultProps = {
   appearance: 'secondary',
   className: '',
+  defaultValue: 0,
   max: 1000,
   min: 0,
   onIncrement: () => {},
   onDecrement: () => {},
   step: 1,
-  value: 0,
   width: '5rem',
 };
 

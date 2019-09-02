@@ -12,7 +12,7 @@ describe('<Counter />', () => {
 
   test('should increment counter', () => {
     const { getByTestId } = render(
-      <Counter step={1} max={100} min={0} value={0} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} defaultValue={0} appearance="secondary" width="5rem" />,
     );
     const incrementButton = getByTestId('increment');
     const fakeinputValue = getByTestId('fakeinput');
@@ -24,7 +24,7 @@ describe('<Counter />', () => {
 
   test('should decrement counter', () => {
     const { getByTestId } = render(
-      <Counter step={1} max={100} min={0} value={10} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} defaultValue={10} appearance="secondary" width="5rem" />,
     );
     const decrementButton = getByTestId('decrement');
     const fakeinputValue = getByTestId('fakeinput');
@@ -36,7 +36,7 @@ describe('<Counter />', () => {
 
   test('should decrement counter until the min value', () => {
     const { getByTestId } = render(
-      <Counter step={1} max={100} min={0} value={99} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} defaultValue={99} appearance="secondary" width="5rem" />,
     );
     const incrementButton = getByTestId('increment');
     const fakeinputValue = getByTestId('fakeinput');
@@ -54,7 +54,7 @@ describe('<Counter />', () => {
 
   test('should decrement counter until the min value', () => {
     const { getByTestId } = render(
-      <Counter step={1} max={100} min={0} value={1} appearance="secondary" width="5rem" />,
+      <Counter step={1} max={100} min={0} defaultValue={1} appearance="secondary" width="5rem" />,
     );
     const decrementButton = getByTestId('decrement');
     const fakeinputValue = getByTestId('fakeinput');
@@ -78,7 +78,7 @@ describe('<Counter />', () => {
         max={100}
         min={0}
         onIncrement={spy}
-        value={10}
+        defaultValue={10}
         appearance="secondary"
         width="5rem"
       />,
@@ -98,7 +98,7 @@ describe('<Counter />', () => {
         max={100}
         min={0}
         onDecrement={spy}
-        value={10}
+        defaultValue={10}
         appearance="secondary"
         width="5rem"
       />,
@@ -108,5 +108,43 @@ describe('<Counter />', () => {
     fireEvent.click(decrementButton);
 
     expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  test('should increment counter when component is controlled', () => {
+    let countValue = 0;
+
+    const handleIncrement = count => {
+      countValue = count;
+    };
+
+    const { getByTestId, rerender } = render(
+      <Counter
+        step={1}
+        max={100}
+        min={0}
+        onIncrement={handleIncrement}
+        count={countValue}
+        appearance="secondary"
+        width="5rem"
+      />,
+    );
+    const incrementButton = getByTestId('increment');
+    const fakeinputValue = getByTestId('fakeinput');
+
+    fireEvent.click(incrementButton);
+
+    rerender(
+      <Counter
+        step={1}
+        max={100}
+        min={0}
+        onIncrement={handleIncrement}
+        count={countValue}
+        appearance="secondary"
+        width="5rem"
+      />,
+    );
+
+    expect(fakeinputValue).toHaveTextContent('1');
   });
 });
