@@ -11,7 +11,15 @@ import { Timer } from './helpers';
  */
 const NotificationContainer = forwardRef(
   (
-    { autoDismiss, autoDismissTimeout, component: Component, onDismiss, pauseOnHover, placement },
+    {
+      autoDismiss,
+      autoDismissTimeout,
+      component: Component,
+      onDismiss,
+      padding,
+      pauseOnHover,
+      placement,
+    },
     ref,
   ) => {
     let timeout;
@@ -72,6 +80,7 @@ const NotificationContainer = forwardRef(
 
     return (
       <Container
+        padding={padding}
         position={placement}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -87,7 +96,7 @@ const NotificationContainer = forwardRef(
 /**
  * PropTypes Validation
  */
-const { bool, func, number, oneOf } = PropTypes;
+const { bool, func, number, oneOf, string } = PropTypes;
 
 NotificationContainer.propTypes = {
   /**
@@ -109,6 +118,11 @@ NotificationContainer.propTypes = {
    * Callback function to call when notification is dismissed
    */
   onDismiss: func.isRequired,
+
+  /**
+   * Padding of the container
+   */
+  padding: string.isRequired,
 
   /**
    * Placement of the notification on the screen

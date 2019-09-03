@@ -13,6 +13,7 @@ describe('<Container />', () => {
         autoDismissTimeout={4000}
         pauseOnHover={false}
         onDismiss={spy}
+        padding="1rem"
         placement="top-left"
       />,
     );
@@ -35,6 +36,7 @@ describe('<Container />', () => {
         autoDismissTimeout={1000}
         pauseOnHover={false}
         onDismiss={spy}
+        padding="1rem"
         placement="top-left"
       />,
     );

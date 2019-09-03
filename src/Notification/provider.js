@@ -19,6 +19,7 @@ export const NotificationProvider = ({
   autoDismiss,
   autoDismissTimeout,
   children,
+  padding,
   placement,
   pauseOnHover,
 }) => {
@@ -68,6 +69,7 @@ export const NotificationProvider = ({
               component={component}
               onClose={onClose}
               onDismiss={dismissNotification}
+              padding={padding}
               placement={placement}
               pauseOnHover={options.pauseOnHover}
             />
@@ -115,6 +117,11 @@ NotificationProvider.propTypes = {
   children: node,
 
   /**
+   * Padding of the notification
+   */
+  padding: string,
+
+  /**
    * Placement of the notification on the screen
    */
   placement: string,
@@ -132,6 +139,7 @@ NotificationProvider.defaultProps = {
   autoDismiss: false,
   autoDismissTimeout: 3000,
   children: null,
+  padding: '3rem',
   placement: 'bottom-right',
   pauseOnHover: false,
 };

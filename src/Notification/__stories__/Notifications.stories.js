@@ -38,7 +38,7 @@ storiesOf('Notification', module)
     const pauseOnHover = boolean('pauseOnHover', false, 'Options');
     const placement = select(
       'placement',
-      ['top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-left'],
+      ['top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-right'],
       'bottom-right',
       'Options',
     );
@@ -50,7 +50,7 @@ storiesOf('Notification', module)
     );
     return (
       <Wrapper>
-        <NotificationProvider placement={placement}>
+        <NotificationProvider padding="4rem" placement={placement}>
           <NotificationComponent
             autoDismiss={autoDismiss}
             pauseOnHover={pauseOnHover}

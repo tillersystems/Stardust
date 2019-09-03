@@ -8,31 +8,31 @@ import { css } from 'styled-components';
  * @return {array}
  */
 
-export function getNotificationPosition(placement) {
+export function getNotificationPosition(padding, placement) {
   return {
     'top-left': css`
-      left: 0;
-      top: 4rem;
+      left: ${padding};
+      top: ${padding};
     `,
     'top-center': css`
       left: 50%;
-      top: 0;
+      top: ${padding};
     `,
     'top-right': css`
-      right: 0;
-      top: 4rem;
+      right: ${padding};
+      top: ${padding};
     `,
     'bottom-left': css`
-      left: 0;
-      bottom: 4rem;
+      left: ${padding};
+      bottom: ${padding};
     `,
     'bottom-center': css`
       left: 50%;
-      bottom: 0;
+      bottom: ${padding};
     `,
     'bottom-right': css`
-      right: 0;
-      bottom: 4rem;
+      right: ${padding};
+      bottom: ${padding};
     `,
   }[placement];
 }
