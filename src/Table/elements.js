@@ -226,7 +226,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const RoWHeader = styled.th`
+export const RowHeader = styled.th`
   ${({ isScrollable }) =>
     isScrollable &&
     css`
