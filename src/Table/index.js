@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Icon, Theme } from '..';
 import compare from '../helpers/compare';
 import {
+  Container,
   HeaderSortingContainer,
   HeaderLabel,
   Body,
@@ -12,6 +13,8 @@ import {
   TableElement,
   TableHeader,
   TableHeaderCell,
+  RoWHeader,
+  Footer,
 } from './elements';
 
 /** Lookup object for next sorting direction. */
@@ -89,7 +92,7 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   renderHeader() {
-    const { colsDef } = this.props;
+    const { colsDef, isScrollable } = this.props;
     const {
       sort: { index, direction },
     } = this.state;
@@ -99,6 +102,8 @@ class Table extends PureComponent {
         <Row>
           {colsDef.map(({ title, sortable, align }, columnIndex) => (
             <TableHeaderCell
+              isScrollable={isScrollable}
+              scope="col"
               key={`${title}-${columnIndex}`}
               align={align}
               onClick={() => (sortable ? this.handleSortingClick(columnIndex) : undefined)}
@@ -130,6 +135,7 @@ class Table extends PureComponent {
     const {
       colsDef,
       data,
+      isScrollable,
       rowsDef: { selectable },
       striped,
     } = this.props;
@@ -181,14 +187,51 @@ class Table extends PureComponent {
             striped={striped}
             onClick={() => this.handleRowSelect(item, key)}
           >
-            {colsDef.map(({ value, format, align }, columnIndex) => (
-              <td key={`column-${columnIndex}`} align={align}>
-                {format ? format(value(item, index), index) : value(item, index)}
-              </td>
-            ))}
+            {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+              isRowHeader ? (
+                <RowHeader
+                  align={align}
+                  isScrollable={isScrollable}
+                  key={`column-header-${columnIndex}`}
+                >
+                  {value(item, index)}
+                </RoWHeader>
+              ) : (
+                <td key={`column-${columnIndex}`} align={align}>
+                  {format ? format(value(item, index), index) : value(item, index)}
+                </td>
+              ),
+            )}
           </BodyRow>
         ))}
       </Body>
+    );
+  }
+
+  /**
+   * Renders the footer of the table.
+   *
+   * @return {jsx}
+   */
+  renderFooter() {
+    const { colsDef, dataTotal, isScrollable } = this.props;
+
+    return (
+      <Footer data-testid="footer-row" isScrollable={isScrollable}>
+        <tr>
+          {colsDef.map(({ isRowHeader, total, format, align }, columnIndex) =>
+            isRowHeader ? (
+              <th scope="row" key={`total-header-${columnIndex}`} align={align}>
+                {format ? format(total(dataTotal)) : total(dataTotal)}
+              </th>
+            ) : (
+              <td key={`total-${columnIndex}`} align={align}>
+                {format ? format(total(dataTotal)) : total(dataTotal)}
+              </td>
+            ),
+          )}
+        </tr>
+      </Footer>
     );
   }
 
@@ -198,18 +241,33 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { width } = this.props;
+    const { dataTotal, height, isScrollable, width } = this.props;
 
     return (
-      <TableElement width={width}>
-        {this.renderHeader()}
-        {this.renderBody()}
-      </TableElement>
+      <Container height={height} isScrollable={isScrollable}>
+        <TableElement width={isScrollable ? 'initial' : width}>
+          {this.renderHeader()}
+          {this.renderBody()}
+          {dataTotal && this.renderFooter()}
+        </TableElement>
+      </Container>
     );
   }
 }
 
-const { array, arrayOf, bool, func, node, number, oneOf, oneOfType, shape, string } = PropTypes;
+const {
+  array,
+  arrayOf,
+  bool,
+  func,
+  node,
+  number,
+  object,
+  oneOf,
+  oneOfType,
+  shape,
+  string,
+} = PropTypes;
 
 /** Prop types. */
 Table.propTypes = {
@@ -217,10 +275,12 @@ Table.propTypes = {
   colsDef: arrayOf(
     shape({
       align: oneOf(['left', 'center', 'right']),
+      isRowHeader: bool,
       filteredBy: func,
       format: func,
       sortable: bool,
       title: node.isRequired,
+      total: func,
       value: func.isRequired,
       width: oneOfType([string, number]),
     }),
@@ -228,6 +288,22 @@ Table.propTypes = {
 
   /** Data to display */
   data: array.isRequired,
+
+  /**
+   * This props going to add a fixed row at the bottom of the table.
+   * Usually this props is used to display the total of each column.
+   * */
+  dataTotal: object,
+
+  /** Height of the table use this props only is the table is scrollable */
+  height: string,
+
+  /**
+   * Define if the table is scrollable or not.
+   * When the table is scrollable the column header stick to the top and the row header stick to the left.
+   * The table body going to scroll in both axies x and y depending of the content overflow.
+   **/
+  isScrollable: bool,
 
   /** Rows definition */
   rowsDef: shape({
@@ -238,12 +314,15 @@ Table.propTypes = {
   /** Whether rows should alternate color or not */
   striped: bool,
 
-  /** Width of the table */
+  /** Width of the table use this props only is the table is not scrollable*/
   width: string,
 };
 
 /** Default props. */
 Table.defaultProps = {
+  dataTotal: null,
+  height: 'initial',
+  isScrollable: false,
   rowsDef: {
     onSelect: () => {},
     selectable: false,
