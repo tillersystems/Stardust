@@ -225,3 +225,73 @@ export const Container = styled.div`
     `}
   position: relative;
 `;
+
+export const RoWHeader = styled.th`
+  ${({ isScrollable }) =>
+    isScrollable &&
+    css`
+      position: sticky;
+      left: 0;
+      ${borderRight}
+    `}
+
+  text-align: ${({ align }) => align || 'left'};
+  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+
+  padding: 1.8rem 0.5rem 1.8rem 3rem;
+  min-width: 15rem;
+  background-color: ${({ theme: { palette } }) => palette.white};
+`;
+
+export const Footer = styled.tfoot`
+  th,
+  td {
+    ${({ isScrollable }) =>
+      isScrollable &&
+      css`
+        bottom: 0;
+        position: sticky;
+      `}
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      border-top: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+    }
+
+    padding: 1.8rem 0.5rem;
+    background-color: ${({ theme: { palette } }) => palette.white};
+
+    color: ${({ theme: { palette } }) => palette.primary.default};
+    font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+  }
+
+  th {
+    ${({ isScrollable }) =>
+      isScrollable &&
+      css`
+        left: 0;
+        z-index: 1;
+        ${borderRight}
+      `}
+
+    padding: 1.8rem 0.5rem 1.8rem 3rem;
+  }
+
+  td:last-of-type {
+    padding: 1.8rem 3rem 1.8rem 0.5rem;
+  }
+`;
+
+export const Container = styled.div`
+  height: ${({ height }) => height};
+  ${({ isScrollable }) =>
+    isScrollable &&
+    css`
+      overflow: scroll;
+    `}
+  position: relative;
+`;
