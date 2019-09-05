@@ -296,4 +296,199 @@ storiesOf('Table', module)
         />
       </Wrapper>
     );
+  })
+  .add('Scrollable table', () => {
+    const striped = boolean('Striped', false, 'State');
+    const selectableRow = boolean('Selectable row', false, 'State');
+    const dishRowSortable = boolean('Dish row is sortable', true, 'State');
+    const priceRowSortable = boolean('Price row is sortable', true, 'State');
+    const titleRowSortable = boolean('Title row is sortable', true, 'State');
+
+    const options = {
+      french: 'fr',
+      english: 'en',
+    };
+
+    const taxCountryCodeValue = select('Selectable taxes country', options, 'fr', 'State');
+
+    const getColsDef = (taxCountryCode = 'fr') => [
+      {
+        title: 'DISH',
+        value: d => d.name,
+        sortable: dishRowSortable,
+        align: 'left',
+        isRowHeader: true,
+        total: d => d.name,
+      },
+      {
+        title: 'PRICE',
+        value: d => d.price,
+        format: v => `${v.toFixed(2)} €`,
+        align: 'right',
+        sortable: priceRowSortable,
+        total: d => d.price,
+      },
+      {
+        title: 'TAX',
+        value: d => d.tax,
+        format: v => `${v[taxCountryCode].toFixed(2)} %`,
+        filteredBy: v => v[taxCountryCode],
+        align: 'right',
+        sortable: titleRowSortable,
+        total: d => d.tax,
+      },
+      {
+        title: 'QUANTITY',
+        value: d => d.quantity,
+        format: v => `${v.toFixed(2)} €`,
+        align: 'right',
+        sortable: titleRowSortable,
+        total: d => d.quantity,
+      },
+      {
+        title: 'TVA',
+        value: d => d.tva,
+        format: v => `${v.toFixed(2)} %`,
+        align: 'right',
+        sortable: titleRowSortable,
+        total: d => d.tva,
+      },
+      {
+        title: 'PROFIT',
+        value: d => d.profit,
+        format: v => `${v.toFixed(2)} €`,
+        align: 'right',
+        sortable: titleRowSortable,
+        total: d => d.profit,
+      },
+      {
+        title: 'DISCOUNT',
+        value: d => d.discount,
+        format: v => `${v.toFixed(2)} %`,
+        align: 'right',
+        sortable: titleRowSortable,
+        total: d => d.discount,
+      },
+    ];
+
+    const onClickAction = action('onClick');
+
+    const rowsDef = {
+      selectable: selectableRow,
+      onSelect: (item, key) => onClickAction(JSON.stringify(item), key),
+    };
+
+    const data = [
+      {
+        name: 'Tartare de boeuf',
+        price: 15.0,
+        tax: {
+          fr: 9.0,
+          en: 10.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Oeuf cocotte',
+        price: 13.0,
+        tax: {
+          fr: 7.0,
+          en: 6.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        tax: {
+          fr: 10.0,
+          en: 3.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        tax: {
+          fr: 10.0,
+          en: 3.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        tax: {
+          fr: 10.0,
+          en: 3.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        tax: {
+          fr: 10.0,
+          en: 3.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        tax: {
+          fr: 10.0,
+          en: 3.0,
+        },
+        quantity: 2,
+        tva: 20,
+        profit: 4,
+        discount: 10,
+      },
+    ];
+
+    const dataTotal = {
+      name: 'Total',
+      price: 60.0,
+      tax: {
+        fr: 10.0,
+        en: 3.0,
+      },
+      quantity: 2,
+      tva: 30,
+      profit: 4,
+      discount: 10,
+    };
+
+    return (
+      <Wrapper>
+        <Table
+          isScrollable
+          height="40rem"
+          data={data}
+          dataTotal={dataTotal}
+          colsDef={getColsDef(taxCountryCodeValue)}
+          rowsDef={rowsDef}
+          striped={striped}
+        />
+      </Wrapper>
+    );
   });
