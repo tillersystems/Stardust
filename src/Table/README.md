@@ -21,7 +21,7 @@ import { Table } from '@tillersystems/stardust';
 | `isRowHeader` |    -     | `boolean`  |                                        `false`                                        | Define if the column going to be a row header or not. In scrollable mode that column going to stick to the left side of the table. To avoid weird behaviour this parameter should be set on the first column. |
 | `filteredBy`  |    -     | `function` |                                        `null`                                         |                                                                                        Filters the object by the value                                                                                        |
 | `format`      |    -     | `function` |                                        `null`                                         |                                                                                         Format the value for display                                                                                          |
-| `sortable`    |    -     | `boolean`  |                                        `false`                                        |                                                                                     Whether the column is sortable or not                                                                                     |
+| `isSortable`  |    -     | `boolean`  |                                        `false`                                        |                                                                                     Whether the column is sortable or not                                                                                     |
 | `title`       |    +     |  `string`  |                                        `null`                                         |                                                                                              Title of the colum                                                                                               |
 | `total`       |    +     | `function` |                                         `''`                                          |                                              Function to retrieve the total of a data for a given column. Use this parameter only if the dataTotal props is set.                                              |
 | `value`       |    +     | `function` |                                         `''`                                          |                                                                          Function to retrieve the value of a data for a given column                                                                          |
@@ -97,18 +97,16 @@ const colsDef = [
     title: 'DISH',
     value: d => d.name,
     format: v => <span style={{ color: 'hsl(213, 17%, 20%)', fontWeight: 600 }}>{v}</span>,
-    sortable: dishRowSortable,
+    isSortable: dishRowSortable,
     align: 'left',
-    sortable: true,
   },
   {
     title: 'PRICE',
     value: d => d.price,
     format: v => `${v.toFixed(2)} €`,
     align: 'right',
-    sortable: priceRowSortable,
+    isSortable: priceRowSortable,
     width: '20rem',
-    sortable: true,
   },
   {
     title: 'TAX',
@@ -116,7 +114,7 @@ const colsDef = [
     format: v => `${v.fr.toFixed(2)} %`,
     filteredBy: v => v.fr,
     align: 'right',
-    sortable: titleRowSortable,
+    isSortable: titleRowSortable,
     width: '20rem',
   },
 ];

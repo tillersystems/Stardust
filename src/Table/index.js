@@ -99,14 +99,14 @@ class Table extends PureComponent {
     return (
       <TableHeader>
         <Row>
-          {colsDef.map(({ title, sortable, align }, columnIndex) => (
+          {colsDef.map(({ title, isSortable, align }, columnIndex) => (
             <TableHeaderCell
               isScrollable={isScrollable}
               isSortable={isSortable}
               scope="col"
               key={`${title}-${columnIndex}`}
               align={align}
-              onClick={() => (sortable ? this.handleSortingClick(columnIndex) : undefined)}
+              onClick={() => (isSortable ? this.handleSortingClick(columnIndex) : undefined)}
             >
               <HeaderLabel>{title}</HeaderLabel>
               {isSortable && (
@@ -276,7 +276,7 @@ Table.propTypes = {
       isRowHeader: bool,
       filteredBy: func,
       format: func,
-      sortable: bool,
+      isSortable: bool,
       title: node.isRequired,
       total: func,
       value: func.isRequired,

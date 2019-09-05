@@ -12,7 +12,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
   {
     title: 'DISH',
     value: d => d.code,
-    sortable: true,
+    isSortable: true,
     align: 'left',
   },
   {
@@ -20,7 +20,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     value: d => d.value,
     format: v => `${v.toFixed(2)} €`,
     align: 'right',
-    sortable: false,
+    isSortable: false,
   },
   {
     title: 'TAX',
@@ -28,7 +28,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     format: v => `${v[taxCountryCode].toFixed(2)} %`,
     filteredBy: v => v[taxCountryCode],
     align: 'right',
-    sortable: true,
+    isSortable: true,
   },
 ];
 

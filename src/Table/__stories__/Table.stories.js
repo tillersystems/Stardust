@@ -33,7 +33,7 @@ storiesOf('Table', module)
       {
         title: 'DISH',
         value: d => d.name,
-        sortable: dishRowSortable,
+        isSortable: dishRowSortable,
         align: 'left',
       },
       {
@@ -41,7 +41,7 @@ storiesOf('Table', module)
         value: d => d.price,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        sortable: priceRowSortable,
+        isSortable: priceRowSortable,
       },
       {
         title: 'TAX',
@@ -120,7 +120,7 @@ storiesOf('Table', module)
       {
         title: 'DISH',
         value: d => d.name,
-        sortable: dishRowSortable,
+        isSortable: dishRowSortable,
         align: 'left',
         isRowHeader: true,
         total: d => d.name,
@@ -130,7 +130,7 @@ storiesOf('Table', module)
         value: d => d.price,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        sortable: priceRowSortable,
+        isSortable: priceRowSortable,
         total: d => d.price,
       },
       {
