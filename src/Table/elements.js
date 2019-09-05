@@ -11,15 +11,6 @@ const borderRight = css`
   }
 `;
 
-const getPosition = position => {
-  const flexPosition = {
-    left: 'flex-start',
-    center: 'center',
-    right: 'flex-end',
-  };
-  return flexPosition[position];
-};
-
 // Table
 export const TableElement = styled.table`
   min-width: 100%;
@@ -98,21 +89,15 @@ export const TableHeaderCell = styled.th`
       top: 0;
       z-index: 1;
     `}
-`;
 
-export const HeaderSortingContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  ${({ align }) =>
+  ${({ isSortable }) =>
+    isSortable &&
     css`
-      justify-content: ${getPosition(align)};
-    `};
-
-  cursor: pointer;
+      cursor: pointer;
+    `}
 `;
 
-export const HeaderLabel = styled.div`
+export const HeaderLabel = styled.span`
   margin-right: 0.8rem;
   user-select: none;
 `;
@@ -169,7 +154,7 @@ export const BodyRow = styled(Row)`
     `};
 `;
 
-export const RoWHeader = styled.th`
+export const RowHeader = styled.th`
   ${({ isScrollable }) =>
     isScrollable &&
     css`

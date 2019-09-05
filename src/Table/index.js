@@ -5,7 +5,6 @@ import { Icon, Theme } from '..';
 import compare from '../helpers/compare';
 import {
   Container,
-  HeaderSortingContainer,
   HeaderLabel,
   Body,
   BodyRow,
@@ -13,7 +12,7 @@ import {
   TableElement,
   TableHeader,
   TableHeaderCell,
-  RoWHeader,
+  RowHeader,
   Footer,
 } from './elements';
 
@@ -103,22 +102,21 @@ class Table extends PureComponent {
           {colsDef.map(({ title, sortable, align }, columnIndex) => (
             <TableHeaderCell
               isScrollable={isScrollable}
+              isSortable={isSortable}
               scope="col"
               key={`${title}-${columnIndex}`}
               align={align}
               onClick={() => (sortable ? this.handleSortingClick(columnIndex) : undefined)}
             >
-              <HeaderSortingContainer align={align}>
-                <HeaderLabel>{title}</HeaderLabel>
-                {sortable && (
-                  <Icon
-                    name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
-                    color={Theme.palette.mediumGrey}
-                    width="10px"
-                    height="10px"
-                  />
-                )}
-              </HeaderSortingContainer>
+              <HeaderLabel>{title}</HeaderLabel>
+              {isSortable && (
+                <Icon
+                  name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
+                  color={Theme.palette.mediumGrey}
+                  width="10px"
+                  height="10px"
+                />
+              )}
             </TableHeaderCell>
           ))}
         </Row>
@@ -195,7 +193,7 @@ class Table extends PureComponent {
                   key={`column-header-${columnIndex}`}
                 >
                   {value(item, index)}
-                </RoWHeader>
+                </RowHeader>
               ) : (
                 <td key={`column-${columnIndex}`} align={align}>
                   {format ? format(value(item, index), index) : value(item, index)}
