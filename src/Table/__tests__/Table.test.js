@@ -14,6 +14,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     value: d => d.code,
     isSortable: true,
     align: 'left',
+    total: d => d.code,
   },
   {
     title: 'PRICE',
@@ -21,6 +22,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     format: v => `${v.toFixed(2)} €`,
     align: 'right',
     isSortable: false,
+    total: d => d.value,
   },
   {
     title: 'TAX',
@@ -29,6 +31,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     filteredBy: v => v[taxCountryCode],
     align: 'right',
     isSortable: true,
+    total: d => d.tax,
   },
 ];
 
@@ -58,6 +61,15 @@ const data = [
     },
   },
 ];
+
+const dataTotal = {
+  code: 'Total',
+  value: 58.0,
+  tax: {
+    fr: 30.0,
+    en: 15.0,
+  },
+};
 
 describe('<Table />', () => {
   test('should render without a problem', () => {
@@ -141,6 +153,9 @@ describe('<Table />', () => {
     expect(bodyRows[0]).toHaveStyleRule(
       'box-shadow',
       `inset 3px 0px 0 0px ${Theme.palette.primary.default}`,
+      {
+        modifier: ':nth-child(1n)',
+      },
     );
 
     expect(spy).toHaveBeenCalledTimes(1);
@@ -213,5 +228,25 @@ describe('<Table />', () => {
     const sortedBodyRows = getAllByTestId('body-row');
 
     expect(sortedBodyRows[0]).toHaveTextContent('7.00 %');
+  });
+
+  test("should render correctly total row when it's needed", () => {
+    const { getByTestId } = render(
+      <Table dataTotal={dataTotal} colsDef={getColsDef()} data={data} striped />,
+    );
+
+    const footerRow = getByTestId('footer-row');
+
+    expect(footerRow).toHaveTextContent('Total');
+  });
+
+  test('should table be scrollable', () => {
+    const { getByTestId } = render(
+      <Table isScrollable height="10rem" colsDef={getColsDef()} data={data} striped />,
+    );
+
+    const tableContainer = getByTestId('table-container');
+
+    expect(tableContainer).toHaveStyleRule('overflow', 'scroll');
   });
 });

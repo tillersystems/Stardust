@@ -242,7 +242,7 @@ class Table extends PureComponent {
     const { dataTotal, height, isScrollable, width } = this.props;
 
     return (
-      <Container height={height} isScrollable={isScrollable}>
+      <Container data-testid="table-container" height={height} isScrollable={isScrollable}>
         <TableElement width={isScrollable ? 'initial' : width}>
           {this.renderHeader()}
           {this.renderBody()}
