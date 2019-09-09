@@ -35,6 +35,7 @@ storiesOf('Table', module)
         value: d => d.name,
         isSortable: dishRowSortable,
         align: 'left',
+        isHidden: () => false,
       },
       {
         title: 'PRICE',
@@ -42,6 +43,7 @@ storiesOf('Table', module)
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
         isSortable: priceRowSortable,
+        isHidden: () => false,
       },
       {
         title: 'TAX',
@@ -50,6 +52,7 @@ storiesOf('Table', module)
         filteredBy: v => v[taxCountryCode],
         align: 'right',
         isSortable: taxRowSortable,
+        isHidden: () => false,
       },
     ];
 
@@ -100,14 +103,23 @@ storiesOf('Table', module)
   })
   .add('Scrollable table', () => {
     const striped = boolean('Striped', false, 'State');
+
     const selectableRow = boolean('Selectable row', false, 'State');
-    const dishRowSortable = boolean('Dish row is sortable', true, 'State');
-    const priceRowSortable = boolean('Price row is sortable', true, 'State');
-    const taxRowSortable = boolean('Tax row is sortable', true, 'State');
-    const quantityRowSortable = boolean('Quantity row is sortable', true, 'State');
-    const tvaRowSortable = boolean('TVA row is sortable', true, 'State');
-    const profitRowSortable = boolean('Profit row is sortable', true, 'State');
-    const discountRowSortable = boolean('Discount row is sortable', true, 'State');
+
+    const dishColumnSortable = boolean('Dish column is sortable', true, 'State');
+    const priceColumnSortable = boolean('Price column is sortable', true, 'State');
+    const taxColumnSortable = boolean('Tax column is sortable', true, 'State');
+    const quantityColumnSortable = boolean('Quantity column is sortable', true, 'State');
+    const tvaColumnSortable = boolean('TVA column is sortable', true, 'State');
+    const profitColumnSortable = boolean('Profit column is sortable', true, 'State');
+    const discountColumnSortable = boolean('Discount column is sortable', true, 'State');
+
+    const priceColumnIsHidden = boolean('Price column is hidden', false, 'State');
+    const taxColumnIsHidden = boolean('Tax column is hidden', false, 'State');
+    const quantityColumnIsHidden = boolean('Quantity column is hidden', false, 'State');
+    const tvaColumnIsHidden = boolean('TVA column is hidden', false, 'State');
+    const profitColumnIsHidden = boolean('Profit column is hidden', false, 'State');
+    const discountColumnIsHidden = boolean('Discount column is hidden', false, 'State');
 
     const options = {
       french: 'fr',
@@ -120,18 +132,20 @@ storiesOf('Table', module)
       {
         title: 'DISH',
         value: d => d.name,
-        isSortable: dishRowSortable,
+        isSortable: dishColumnSortable,
         align: 'left',
-        isRowHeader: true,
         total: d => d.name,
+        isRowHeader: true,
+        isHidden: () => false,
       },
       {
         title: 'PRICE',
         value: d => d.price,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        isSortable: priceRowSortable,
+        isSortable: priceColumnSortable,
         total: d => d.price,
+        isHidden: d => d.price,
       },
       {
         title: 'TAX',
@@ -139,40 +153,45 @@ storiesOf('Table', module)
         format: v => `${v[taxCountryCode].toFixed(2)} %`,
         filteredBy: v => v[taxCountryCode],
         align: 'right',
-        isSortable: taxRowSortable,
+        isSortable: taxColumnSortable,
         total: d => d.tax,
+        isHidden: d => d.tax,
       },
       {
         title: 'QUANTITY',
         value: d => d.quantity,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        isSortable: quantityRowSortable,
+        isSortable: quantityColumnSortable,
         total: d => d.quantity,
+        isHidden: d => d.quantity,
       },
       {
         title: 'TVA',
         value: d => d.tva,
         format: v => `${v.toFixed(2)} %`,
         align: 'right',
-        isSortable: tvaRowSortable,
+        isSortable: tvaColumnSortable,
         total: d => d.tva,
+        isHidden: d => d.tva,
       },
       {
         title: 'PROFIT',
         value: d => d.profit,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        isSortable: profitRowSortable,
+        isSortable: profitColumnSortable,
         total: d => d.profit,
+        isHidden: d => d.profit,
       },
       {
         title: 'DISCOUNT',
         value: d => d.discount,
         format: v => `${v.toFixed(2)} %`,
         align: 'right',
-        isSortable: discountRowSortable,
+        isSortable: discountColumnSortable,
         total: d => d.discount,
+        isHidden: d => d.discount,
       },
     ];
 
@@ -283,6 +302,15 @@ storiesOf('Table', module)
       discount: 10,
     };
 
+    const dataIsHidden = {
+      price: priceColumnIsHidden,
+      tax: taxColumnIsHidden,
+      quantity: quantityColumnIsHidden,
+      tva: tvaColumnIsHidden,
+      profit: profitColumnIsHidden,
+      discount: discountColumnIsHidden,
+    };
+
     return (
       <Wrapper>
         <Table
@@ -290,6 +318,7 @@ storiesOf('Table', module)
           height="40rem"
           data={data}
           dataTotal={dataTotal}
+          dataIsHidden={dataIsHidden}
           colsDef={getColsDef(taxCountryCodeValue)}
           rowsDef={rowsDef}
           striped={striped}

@@ -91,7 +91,7 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   renderHeader() {
-    const { colsDef, isScrollable } = this.props;
+    const { colsDef, isScrollable, dataIsHidden } = this.props;
     const {
       sort: { index, direction },
     } = this.state;
@@ -99,26 +99,29 @@ class Table extends PureComponent {
     return (
       <TableHeader>
         <Row>
-          {colsDef.map(({ title, isSortable, align }, columnIndex) => (
-            <TableHeaderCell
-              isScrollable={isScrollable}
-              isSortable={isSortable}
-              scope="col"
-              key={`${title}-${columnIndex}`}
-              align={align}
-              onClick={() => (isSortable ? this.handleSortingClick(columnIndex) : undefined)}
-            >
-              <HeaderLabel>{title}</HeaderLabel>
-              {isSortable && (
-                <Icon
-                  name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
-                  color={Theme.palette.mediumGrey}
-                  width="10px"
-                  height="10px"
-                />
-              )}
-            </TableHeaderCell>
-          ))}
+          {colsDef.map(
+            ({ title, isSortable, isHidden, align }, columnIndex) =>
+              !isHidden(dataIsHidden) && (
+                <TableHeaderCell
+                  isScrollable={isScrollable}
+                  isSortable={isSortable}
+                  scope="col"
+                  key={`${title}-${columnIndex}`}
+                  align={align}
+                  onClick={() => (isSortable ? this.handleSortingClick(columnIndex) : undefined)}
+                >
+                  <HeaderLabel>{title}</HeaderLabel>
+                  {isSortable && (
+                    <Icon
+                      name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
+                      color={Theme.palette.mediumGrey}
+                      width="10px"
+                      height="10px"
+                    />
+                  )}
+                </TableHeaderCell>
+              ),
+          )}
         </Row>
       </TableHeader>
     );
@@ -136,6 +139,7 @@ class Table extends PureComponent {
       isScrollable,
       rowsDef: { selectable },
       striped,
+      dataIsHidden,
     } = this.props;
     const {
       selected,
@@ -185,7 +189,7 @@ class Table extends PureComponent {
             striped={striped}
             onClick={() => this.handleRowSelect(item, key)}
           >
-            {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+            {colsDef.map(({ isRowHeader, isHidden, value, format, align }, columnIndex) =>
               isRowHeader ? (
                 <RowHeader
                   align={align}
@@ -194,11 +198,11 @@ class Table extends PureComponent {
                 >
                   {value(item, index)}
                 </RowHeader>
-              ) : (
+              ) : !isHidden(dataIsHidden) ? (
                 <td key={`column-${columnIndex}`} align={align}>
                   {format ? format(value(item, index), index) : value(item, index)}
                 </td>
-              ),
+              ) : null,
             )}
           </BodyRow>
         ))}
@@ -212,21 +216,21 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   renderFooter() {
-    const { colsDef, dataTotal, isScrollable } = this.props;
+    const { colsDef, dataTotal, isScrollable, dataIsHidden } = this.props;
 
     return (
       <Footer data-testid="footer-row" isScrollable={isScrollable}>
         <tr>
-          {colsDef.map(({ isRowHeader, total, format, align }, columnIndex) =>
+          {colsDef.map(({ isRowHeader, isHidden, total, format, align }, columnIndex) =>
             isRowHeader ? (
               <th scope="row" key={`total-header-${columnIndex}`} align={align}>
                 {format ? format(total(dataTotal)) : total(dataTotal)}
               </th>
-            ) : (
+            ) : !isHidden(dataIsHidden) ? (
               <td key={`total-${columnIndex}`} align={align}>
                 {format ? format(total(dataTotal)) : total(dataTotal)}
               </td>
-            ),
+            ) : null,
           )}
         </tr>
       </Footer>
@@ -280,6 +284,7 @@ Table.propTypes = {
       title: node.isRequired,
       total: func,
       value: func.isRequired,
+      isHidden: func.isRequired,
       width: oneOfType([string, number]),
     }),
   ).isRequired,
@@ -292,6 +297,12 @@ Table.propTypes = {
    * Usually this props is used to display the total of each column.
    * */
   dataTotal: object,
+
+  /**
+   * This props going to add a fixed row at the bottom of the table.
+   * Usually this props is used to display the total of each column.
+   * */
+  dataIsHidden: object.isRequired,
 
   /** Height of the table use this props only is the table is scrollable */
   height: string,
