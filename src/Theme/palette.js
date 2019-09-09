@@ -25,6 +25,8 @@ const darkGrey = 'hsl(206,16%,60%)';
 const spaceGrey = 'hsl(207,13%,45%)';
 const paleGrey = 'hsl(240,33%,99%)';
 const veryLightBlue = 'hsl(220,27%,94%)';
+//Temporary name
+const veryLightGrey = 'hsl(214,64%,98%)';
 
 // Primary colors
 const blue = 'hsl(200,74%,46%)';
@@ -88,4 +90,5 @@ export const palette = {
   darkGrey,
   spaceGrey,
   paleGrey,
+  veryLightGrey,
 };

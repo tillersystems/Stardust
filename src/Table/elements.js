@@ -171,6 +171,7 @@ export const RowHeader = styled.th`
   background-color: ${({ theme: { palette } }) => palette.white};
 `;
 
+// Table Footer
 export const Footer = styled.tfoot`
   th,
   td {
@@ -214,6 +215,7 @@ export const Footer = styled.tfoot`
   }
 `;
 
+// Table Container
 export const Container = styled.div`
   height: ${({ height }) => height};
   ${({ isScrollable }) =>
