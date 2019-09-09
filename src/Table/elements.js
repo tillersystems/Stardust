@@ -241,8 +241,16 @@ export const RowHeader = styled.th`
   padding: 1.8rem 0.5rem 1.8rem 3rem;
   min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};
+
+  ${({ selected }) =>
+    selected &&
+    css`
+      box-shadow: inset 3px 0px 0 0px ${({ theme: { palette } }) => palette.primary.default};
+      background: ${({ theme: { palette } }) => palette.veryLightGrey};
+    `};
 `;
 
+// Table Footer
 export const Footer = styled.tfoot`
   th,
   td {
@@ -286,6 +294,7 @@ export const Footer = styled.tfoot`
   }
 `;
 
+// Table Container
 export const Container = styled.div`
   height: ${({ height }) => height};
   ${({ isScrollable }) =>
