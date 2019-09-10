@@ -104,6 +104,7 @@ storiesOf('Table', module)
     const striped = boolean('Striped', false, 'State');
     const isHoverable = boolean('Hoverable', false, 'State');
     const selectableRow = boolean('Selectable row', false, 'State');
+
     const dishRowSortable = boolean('Dish row is sortable', true, 'State');
     const priceRowSortable = boolean('Price row is sortable', true, 'State');
     const taxRowSortable = boolean('Tax row is sortable', true, 'State');
@@ -210,6 +211,32 @@ storiesOf('Table', module)
         tva: 20,
         profit: 4,
         discount: 15,
+        children: [
+          {
+            name: 'children',
+            price: 9.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            quantity: 2,
+            tva: 20,
+            profit: 4,
+            discount: 10,
+          },
+          {
+            name: 'children',
+            price: 8.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            quantity: 2,
+            tva: 20,
+            profit: 4,
+            discount: 10,
+          },
+        ],
       },
       {
         name: 'Salade caesar',
@@ -258,6 +285,32 @@ storiesOf('Table', module)
         tva: 14,
         profit: 5,
         discount: 3,
+        children: [
+          {
+            name: 'children',
+            price: 9.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            quantity: 2,
+            tva: 20,
+            profit: 4,
+            discount: 10,
+          },
+          {
+            name: 'children',
+            price: 8.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            quantity: 2,
+            tva: 20,
+            profit: 4,
+            discount: 10,
+          },
+        ],
       },
       {
         name: 'Omelette',

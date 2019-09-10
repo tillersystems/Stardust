@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon, Theme } from '..';
@@ -14,6 +14,7 @@ import {
   TableHeaderCell,
   RowHeader,
   Footer,
+  ChildRow,
 } from './elements';
 
 /** Lookup object for next sorting direction. */
@@ -49,6 +50,7 @@ class Table extends PureComponent {
     // Stores selected row.
     // Use `-1` for no row selected.
     selected: -1,
+    selectedRows: [],
   };
 
   /**
@@ -77,11 +79,19 @@ class Table extends PureComponent {
     const {
       rowsDef: { selectable, onSelect },
     } = this.props;
+    const { selectedRows } = this.state;
 
     if (selectable) {
-      this.setState({ ...this.state, selected: key }, () => {
+      this.setState({ selected: key }, () => {
         if (onSelect) onSelect(item, key);
       });
+    }
+
+    if (selectedRows.includes(key)) {
+      const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
+      this.setState({ selectedRows: selectedRowsState });
+    } else {
+      this.setState({ selectedRows: [...selectedRows, key] });
     }
   };
 
@@ -140,69 +150,116 @@ class Table extends PureComponent {
     } = this.props;
     const {
       selected,
+      selectedRows,
       sort: { index, direction },
     } = this.state;
 
     // We actually need to keep track of the original key for sorting purposes
     // and selection purposes (i.e. when the column is sorted, the selected row
     // should still be the same).
-    let sortedData = data.map((item, key) => {
-      return {
-        key,
-        item,
-      };
-    });
-    if (index >= 0) {
-      sortedData = sortedData.sort((a, b) => {
-        const isSortableObject =
-          typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
-
-        /**
-         * Check if the value should be sorted by an object key or directly by the value itself.
-         *
-         * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
-         *
-         * @return {string|number}
-         */
-        const sortBy = comparisonElement =>
-          isSortableObject
-            ? colsDef[index].filteredBy(colsDef[index].value(comparisonElement.item))
-            : colsDef[index].value(comparisonElement.item);
-
-        return (
-          (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) * compare(sortBy(a), sortBy(b))
-        );
+    const sortData = dataToSort => {
+      let sortedData = dataToSort.map((item, key) => {
+        return {
+          key,
+          item,
+        };
       });
-    }
+
+      if (index >= 0) {
+        sortedData = sortedData.sort((a, b) => {
+          const isSortableObject =
+            typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
+
+          /**
+           * Check if the value should be sorted by an object key or directly by the value itself.
+           *
+           * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
+           *
+           * @return {string|number}
+           */
+          const sortBy = comparisonElement =>
+            isSortableObject
+              ? colsDef[index].filteredBy(colsDef[index].value(comparisonElement.item))
+              : colsDef[index].value(comparisonElement.item);
+
+          return (
+            (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) *
+            compare(sortBy(a), sortBy(b))
+          );
+        });
+      }
+
+      return sortedData;
+    };
 
     return (
       <Body>
-        {sortedData.map(({ key, item }, index) => (
-          <BodyRow
-            key={key}
-            data-testid="body-row"
-            selectable={selectable}
-            selected={selected === key}
-            striped={striped}
-            onClick={() => this.handleRowSelect(item, key)}
-            isHoverable={isHoverable}
-          >
-            {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-              isRowHeader ? (
-                <RowHeader
-                  align={align}
-                  isScrollable={isScrollable}
-                  key={`column-header-${columnIndex}`}
-                >
-                  {value(item, index)}
-                </RowHeader>
-              ) : (
-                <td key={`column-${columnIndex}`} align={align}>
-                  {format ? format(value(item, index), index) : value(item, index)}
-                </td>
-              ),
+        {sortData(data).map(({ key, item }, index) => (
+          <Fragment key={key}>
+            <BodyRow
+              key={key}
+              data-testid="body-row"
+              selectable={selectable}
+              selected={selected === key}
+              striped={striped}
+              onClick={() => this.handleRowSelect(item, key)}
+              isHoverable={isHoverable}
+            >
+              {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+                isRowHeader ? (
+                  <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
+                    {item.children && (
+                      <Icon
+                        name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+                        color={Theme.palette.darkBlue}
+                        width="20px"
+                        height="20px"
+                      />
+                    )}
+                    {value(item, index)}
+                  </RowHeader>
+                ) : (
+                  <td key={`row-${index}-column-${columnIndex}`} align={align}>
+                    {format ? format(value(item, index), index) : value(item, index)}
+                  </td>
+                ),
+              )}
+            </BodyRow>
+            {selectedRows.includes(key) && (
+              <>
+                {item.children &&
+                  sortData(item.children).map(({ key: childrenKey, item: childrenItem }, index) => (
+                    <ChildRow
+                      key={`${key}-${childrenKey}`}
+                      data-testid="body-row"
+                      selected={selected === `${key}-${childrenKey}`}
+                      selectable={selectable}
+                      striped={striped}
+                      onClick={() => this.handleRowSelect(item, `${key}-${childrenKey}`)}
+                      isHoverable={isHoverable}
+                    >
+                      {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+                        isRowHeader ? (
+                          <RowHeader
+                            align={align}
+                            isScrollable={isScrollable}
+                            key={`row-header-${key}-${index}`}
+                          >
+                            {value(childrenItem, index)}
+                          </RowHeader>
+                        ) : (
+                          <td key={`row-${index}-column-${key}-${columnIndex}`} align={align}>
+                            {format
+                              ? format(value(childrenItem, index), index)
+                              : value(childrenItem, index)}
+                          </td>
+                        ),
+                      )}
+                    </ChildRow>
+                  ))}
+              </>
             )}
-          </BodyRow>
+          </Fragment>
         ))}
       </Body>
     );
