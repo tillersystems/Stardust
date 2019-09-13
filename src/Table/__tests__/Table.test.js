@@ -15,6 +15,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     isSortable: true,
     align: 'left',
     total: d => d.code,
+    isHidden: () => false,
   },
   {
     title: 'PRICE',
@@ -23,6 +24,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     align: 'right',
     isSortable: false,
     total: d => d.value,
+    isHidden: () => false,
   },
   {
     title: 'TAX',
@@ -32,6 +34,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     align: 'right',
     isSortable: true,
     total: d => d.tax,
+    isHidden: () => false,
   },
 ];
 
@@ -71,9 +74,17 @@ const dataTotal = {
   },
 };
 
+const dataIsHidden = {
+  code: false,
+  value: false,
+  tax: false,
+};
+
 describe('<Table />', () => {
   test('should render without a problem', () => {
-    const { getByText, getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} />);
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} dataIsHidden={dataIsHidden} />,
+    );
 
     const firstRowTitle = getByText(data[0].code);
     const secondRowTitle = getByText(data[1].code);
@@ -105,7 +116,9 @@ describe('<Table />', () => {
   });
 
   test('should alternate rows of content with a darker color to increase contrast.', () => {
-    const { getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} striped />);
+    const { getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} striped dataIsHidden={dataIsHidden} />,
+    );
 
     const bodyRows = getAllByTestId('body-row');
 
@@ -121,7 +134,9 @@ describe('<Table />', () => {
   });
 
   test('should not have selectable row', () => {
-    const { getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} />);
+    const { getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} dataIsHidden={dataIsHidden} />,
+    );
 
     const bodyRows = getAllByTestId('body-row');
 
@@ -140,7 +155,7 @@ describe('<Table />', () => {
       onSelect: spy,
     };
     const { getAllByTestId } = render(
-      <Table colsDef={getColsDef()} rowsDef={rowsDef} data={data} />,
+      <Table colsDef={getColsDef()} rowsDef={rowsDef} data={data} dataIsHidden={dataIsHidden} />,
     );
 
     const bodyRows = getAllByTestId('body-row');
@@ -163,7 +178,7 @@ describe('<Table />', () => {
 
   test('should render differently when clicked on sorting', () => {
     const { getByText, getAllByTestId } = render(
-      <Table colsDef={getColsDef()} data={data} striped />,
+      <Table colsDef={getColsDef()} data={data} striped dataIsHidden={dataIsHidden} />,
     );
 
     const dishNode = getByText(/dish/i);
@@ -182,7 +197,7 @@ describe('<Table />', () => {
 
   test('should not render differently when clicked on sorting', () => {
     const { getByText, getAllByTestId } = render(
-      <Table colsDef={getColsDef()} data={data} striped />,
+      <Table colsDef={getColsDef()} data={data} striped dataIsHidden={dataIsHidden} />,
     );
 
     const priceNode = getByText(/price/i);
@@ -200,7 +215,9 @@ describe('<Table />', () => {
   });
 
   test('should render correctly when taxes are english', () => {
-    const { getByText } = render(<Table colsDef={getColsDef('en')} data={data} striped />);
+    const { getByText } = render(
+      <Table colsDef={getColsDef('en')} data={data} striped dataIsHidden={dataIsHidden} />,
+    );
 
     const firstRowTax = getByText('10.00 %');
     const secondRowTax = getByText('6.00 %');
@@ -213,7 +230,7 @@ describe('<Table />', () => {
 
   test('should sort correctly the column when it is hydrated with object', () => {
     const { getByText, getAllByTestId } = render(
-      <Table colsDef={getColsDef()} data={data} striped />,
+      <Table colsDef={getColsDef()} data={data} striped dataIsHidden={dataIsHidden} />,
     );
 
     const taxNode = getByText(/tax/i);
@@ -232,7 +249,13 @@ describe('<Table />', () => {
 
   test("should render correctly total row when it's needed", () => {
     const { getByTestId } = render(
-      <Table dataTotal={dataTotal} colsDef={getColsDef()} data={data} striped />,
+      <Table
+        dataTotal={dataTotal}
+        colsDef={getColsDef()}
+        data={data}
+        striped
+        dataIsHidden={dataIsHidden}
+      />,
     );
 
     const footerRow = getByTestId('footer-row');
@@ -242,7 +265,14 @@ describe('<Table />', () => {
 
   test('should table be scrollable', () => {
     const { getByTestId } = render(
-      <Table isScrollable height="10rem" colsDef={getColsDef()} data={data} striped />,
+      <Table
+        isScrollable
+        height="10rem"
+        colsDef={getColsDef()}
+        data={data}
+        striped
+        dataIsHidden={dataIsHidden}
+      />,
     );
 
     const tableContainer = getByTestId('table-container');
