@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container } from './elements';
@@ -10,11 +10,8 @@ import { Timer } from './helpers';
  * @return {jsx}
  */
 const NotificationContainer = forwardRef(
-  (
-    { autoDismiss, autoDismissTimeout, component: Component, onDismiss, pauseOnHover, placement },
-    ref,
-  ) => {
-    let timeout;
+  ({ autoDismiss, autoDismissTimeout, component: Component, onDismiss, pauseOnHover }, ref) => {
+    const [timer, setTimer] = useState(null);
 
     /**
      * Start Timer
@@ -22,8 +19,7 @@ const NotificationContainer = forwardRef(
      */
     const startTimer = () => {
       if (!autoDismiss) return;
-
-      timeout = new Timer(onDismiss, autoDismissTimeout);
+      setTimer(new Timer(onDismiss, autoDismissTimeout));
     };
 
     /**
@@ -31,9 +27,7 @@ const NotificationContainer = forwardRef(
      *
      */
     const clearTimer = () => {
-      if (!autoDismiss) return;
-
-      if (timeout) timeout.clear();
+      timer.clear();
     };
 
     /**
@@ -41,7 +35,7 @@ const NotificationContainer = forwardRef(
      *
      */
     const onMouseEnter = () => {
-      if (timeout) timeout.pause();
+      timer.pause();
     };
 
     /**
@@ -49,7 +43,7 @@ const NotificationContainer = forwardRef(
      *
      */
     const onMouseLeave = () => {
-      if (timeout) timeout.resume();
+      timer.resume();
     };
 
     /**
@@ -57,12 +51,12 @@ const NotificationContainer = forwardRef(
      *
      */
     useEffect(() => {
-      startTimer();
-      // Specify how to clean up after this effect:
-      return function cleanup() {
-        clearTimer();
+      if (!timer) startTimer();
+
+      return () => {
+        if (timer) clearTimer();
       };
-    }, []);
+    }, [timer]);
 
     const hasMouseEvents = pauseOnHover && autoDismiss;
 
@@ -72,13 +66,12 @@ const NotificationContainer = forwardRef(
 
     return (
       <Container
-        position={placement}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         data-testid="notification-container"
         ref={ref}
       >
-        <Component />
+        <Component onClose={onDismiss} />
       </Container>
     );
   },
@@ -87,7 +80,7 @@ const NotificationContainer = forwardRef(
 /**
  * PropTypes Validation
  */
-const { bool, func, number, oneOf } = PropTypes;
+const { bool, func, number } = PropTypes;
 
 NotificationContainer.propTypes = {
   /**
@@ -109,18 +102,6 @@ NotificationContainer.propTypes = {
    * Callback function to call when notification is dismissed
    */
   onDismiss: func.isRequired,
-
-  /**
-   * Placement of the notification on the screen
-   */
-  placement: oneOf([
-    'top-left',
-    'top-center',
-    'top-right',
-    'bottom-left',
-    'bottom-center',
-    'bottom-right',
-  ]).isRequired,
 
   /**
    * Whether or not to pause the timeout when hovered

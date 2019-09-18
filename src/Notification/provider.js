@@ -7,6 +7,7 @@ import Container from './Container';
 import notificationReducer from './reducer';
 import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from './constants';
 import { getPositionAnimation } from './helpers';
+import NotificationsList from './NotificationsList';
 
 const NotificationContext = React.createContext();
 
@@ -23,13 +24,13 @@ export const NotificationProvider = ({
   pauseOnHover,
 }) => {
   const initialState = {
-    isActive: false,
-    component: null,
+    notificationsCount: 0,
     options: {
-      autoDismiss: autoDismiss,
+      autoDismiss,
       autoDismissTimeout,
-      pauseOnHover: pauseOnHover,
+      pauseOnHover,
     },
+    notifications: [],
   };
   const [state, dispatch] = useReducer(notificationReducer, initialState);
 
@@ -39,40 +40,38 @@ export const NotificationProvider = ({
    * @param {function} component - Presentational component for displaying message.
    * @param {object} options - Options passed to heance notification.
    */
-  const addNotification = useCallback(
-    (component, options = state.options) => {
-      dispatch({ type: ADD_NOTIFICATION, component, options });
-    },
-    [component, options],
-  );
+  const addNotification = useCallback((component, options = state.options) => {
+    dispatch({ type: ADD_NOTIFICATION, component, options });
+  }, []);
 
   /**
    * Dismiss notification
+   * @param {string} key - unique key to retrieve notification.
    */
-  const dismissNotification = useCallback(() => {
-    dispatch({ type: REMOVE_NOTIFICATION });
+  const dismissNotification = useCallback(key => {
+    dispatch({ type: REMOVE_NOTIFICATION, key });
   }, []);
 
-  const { component, isActive, onClose, options } = state;
-
+  const { notifications } = state;
   return (
     <NotificationContext.Provider value={{ addNotification, dismissNotification }}>
       {children}
       <Portal>
-        <PoseGroup>
-          {isActive && (
-            <NotificationAnimation
-              key="notification"
-              autoDismiss={options.autoDismiss}
-              autoDismissTimeout={options.autoDismissTimeout}
-              component={component}
-              onClose={onClose}
-              onDismiss={dismissNotification}
-              placement={placement}
-              pauseOnHover={options.pauseOnHover}
-            />
-          )}
-        </PoseGroup>
+        <NotificationsList placement={placement}>
+          <PoseGroup>
+            {notifications.map(({ options: notificationOptions, key, component }) => (
+              <NotificationAnimation
+                key={key}
+                component={component}
+                onDismiss={() => dismissNotification(key)}
+                autoDismiss={notificationOptions.autoDismiss}
+                autoDismissTimeout={notificationOptions.autoDismissTimeout}
+                pauseOnHover={notificationOptions.pauseOnHover}
+                placement={placement}
+              />
+            ))}
+          </PoseGroup>
+        </NotificationsList>
       </Portal>
     </NotificationContext.Provider>
   );
@@ -83,7 +82,8 @@ const NotificationAnimation = posed(Container)({
     x: ({ placement }) => getPositionAnimation(placement).enter.x,
     y: ({ placement }) => getPositionAnimation(placement).enter.y,
     transition: {
-      x: { type: 'spring', stiffness: 800, damping: 80 },
+      x: { type: 'spring', stiffness: 800, damping: 50 },
+      y: { type: 'spring', stiffness: 800, damping: 80 },
       default: { duration: 250 },
     },
   },
@@ -132,7 +132,7 @@ NotificationProvider.defaultProps = {
   autoDismiss: false,
   autoDismissTimeout: 3000,
   children: null,
-  placement: 'bottom-right',
+  placement: 'bottom-left',
   pauseOnHover: false,
 };
 

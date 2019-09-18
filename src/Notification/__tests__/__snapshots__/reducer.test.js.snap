@@ -2,20 +2,30 @@
 
 exports[`<NotificationProvider /> should handle ADD_NOTIFICATION 1`] = `
 Object {
-  "component": [MockFunction],
-  "isActive": true,
+  "notifications": Array [
+    Object {
+      "component": [MockFunction],
+      "key": "notif-component-0",
+      "options": Object {
+        "autoDismiss": true,
+        "autoDismissTimeout": 5000,
+        "pauseOnHover": true,
+      },
+    },
+  ],
+  "notificationsCount": 1,
   "options": Object {
-    "autoDismiss": true,
-    "autoDismissTimeout": 5000,
-    "pauseOnHover": true,
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
   },
 }
 `;
 
 exports[`<NotificationProvider /> should handle REMOVE_NOTIFICATION 1`] = `
 Object {
-  "component": null,
-  "isActive": false,
+  "notifications": Array [],
+  "notificationsCount": 0,
   "options": Object {
     "autoDismiss": false,
     "autoDismissTimeout": 1000,

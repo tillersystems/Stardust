@@ -13,26 +13,31 @@ const notificationReducer = (state, action) => {
     case ADD_NOTIFICATION:
       return {
         ...state,
-        isActive: true,
-        component: action.component,
-        options: {
-          autoDismiss: action.options.autoDismiss
-            ? action.options.autoDismiss
-            : state.options.autoDismiss,
-          autoDismissTimeout: action.options.autoDismissTimeout
-            ? action.options.autoDismissTimeout
-            : state.options.autoDismissTimeout,
-          pauseOnHover: action.options.pauseOnHover
-            ? action.options.pauseOnHover
-            : state.options.pauseOnHover,
-        },
+        notificationsCount: state.notificationsCount + 1,
+        notifications: [
+          ...state.notifications,
+          {
+            component: action.component,
+            key: `notif-component-${state.notificationsCount}`,
+            options: {
+              autoDismiss: action.options.autoDismiss
+                ? action.options.autoDismiss
+                : state.options.autoDismiss,
+              autoDismissTimeout: action.options.autoDismissTimeout
+                ? action.options.autoDismissTimeout
+                : state.options.autoDismissTimeout,
+              pauseOnHover: action.options.pauseOnHover
+                ? action.options.pauseOnHover
+                : state.options.pauseOnHover,
+            },
+          },
+        ],
       };
 
     case REMOVE_NOTIFICATION:
       return {
         ...state,
-        isActive: false,
-        component: null,
+        notifications: state.notifications.filter(n => n.key !== action.key),
       };
 
     default: {

@@ -11,27 +11,29 @@ import { css } from 'styled-components';
 export function getNotificationPosition(placement) {
   return {
     'top-left': css`
-      left: 0;
+      left: 1rem;
       top: 4rem;
     `,
     'top-center': css`
       left: 50%;
       top: 0;
+      margin-left: -16rem;
     `,
     'top-right': css`
-      right: 0;
+      right: 1rem;
       top: 4rem;
     `,
     'bottom-left': css`
-      left: 0;
+      left: 1rem;
       bottom: 4rem;
     `,
     'bottom-center': css`
       left: 50%;
       bottom: 0;
+      margin-left: -16rem;
     `,
     'bottom-right': css`
-      right: 0;
+      right: 1rem;
       bottom: 4rem;
     `,
   }[placement];
@@ -58,11 +60,11 @@ export function getPositionAnimation(placement) {
     },
     'top-center': {
       enter: {
-        x: '-50%',
+        x: '0%',
         y: '0%',
       },
       exit: {
-        x: '-50%',
+        x: '0%',
         y: '-100%',
       },
     },
@@ -88,11 +90,11 @@ export function getPositionAnimation(placement) {
     },
     'bottom-center': {
       enter: {
-        x: '-50%',
+        x: '0%',
         y: '0%',
       },
       exit: {
-        x: '-50%',
+        x: '0%',
         y: '100%',
       },
     },
@@ -107,6 +109,14 @@ export function getPositionAnimation(placement) {
       },
     },
   }[placement];
+}
+
+export function getListDirection(placement) {
+  let direction = 'column';
+  if (placement.indexOf('top') === 0) {
+    direction = 'column-reverse';
+  }
+  return { 'flex-direction': direction };
 }
 
 /**

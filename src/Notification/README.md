@@ -46,3 +46,17 @@ The `addNotification` method has 2 arguments:
 ```jsx
 <Button onClick={onClick={() => addNotification(Component, { autoDismiss: true, autoDismissTimeout: 3000, pauseOnHover: true })}} />
 ```
+
+The `dismissNotification` has 1 argument: `key` to remove a specific notification on screen.
+
+```jsx
+dismissNotification(key);
+```
+
+The notifcation can be manually closed by calling the `onClose` method injected by the NotificationContainer in the inner component props.
+
+```jsx
+const Component = ({ onClose }) => (
+  <Message description="I'm a notification component" type="success" onClose={onClose} />
+);
+```

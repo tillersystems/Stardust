@@ -2,18 +2,30 @@
 
 exports[`<Notification /> -- helpers getAlertPosition should return notification Css Position 1`] = `
 Array [
-  "left:0;top:4rem;",
+  "left:1rem;top:4rem;",
 ]
+`;
+
+exports[`<Notification /> -- helpers getListDirection should return valid flex direction for bottom-left placement 1`] = `
+Object {
+  "flex-direction": "column",
+}
+`;
+
+exports[`<Notification /> -- helpers getListDirection should return valid flex direction for top-center placement 1`] = `
+Object {
+  "flex-direction": "column-reverse",
+}
 `;
 
 exports[`<Notification /> -- helpers getPositionAnimation should return Animation position 1`] = `
 Object {
   "enter": Object {
-    "x": "-50%",
+    "x": "0%",
     "y": "0%",
   },
   "exit": Object {
-    "x": "-50%",
+    "x": "0%",
     "y": "-100%",
   },
 }

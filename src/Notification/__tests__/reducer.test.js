@@ -2,8 +2,8 @@ import notificationReducer from '../reducer';
 import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from '../constants';
 
 const previousState = {
-  isActive: false,
-  component: null,
+  notificationsCount: 0,
+  notifications: [],
   options: {
     autoDismiss: false,
     autoDismissTimeout: 1000,
@@ -13,11 +13,10 @@ const previousState = {
 
 describe('<NotificationProvider />', () => {
   test('should throw an error if incorrect type is passed', () => {
-    const type = 'INCORECT_TYPE';
+    const type = 'INCORRECT_TYPE';
     expect(() => {
       notificationReducer(previousState, {
         type,
-        component: jest.fn(),
         options: {
           autoDismiss: true,
           autoDismissTimeout: 5000,
