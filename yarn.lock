@@ -1621,14 +1621,14 @@
     react-lifecycles-compat "^3.0.4"
     react-select "^3.0.0"
 
-"@storybook/addon-links@5.1.11":
-  version "5.1.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.1.11.tgz#3a245f30480d586094bdda8f4658c5d328ac39b9"
-  integrity sha512-NV4gRduMNm0dchKCWAZ4YQSYOdj5acoztGIz3w+xs9e+MAXOHXs7iL8sBbqAFlfz4elPGHWW+8NGn9UYxQFK+Q==
+"@storybook/addon-links@5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.2.1.tgz#ec1fc92ed4d840ba758f40167c752f48562a906f"
+  integrity sha512-N5f+lzai+ctHfzHoYWECYsg3lKGJuqhkVctro46fHSW7s/GB8+l78nDcV7hDjNEXDES8QN5C1fPYihatdgpSJA==
   dependencies:
-    "@storybook/addons" "5.1.11"
-    "@storybook/core-events" "5.1.11"
-    "@storybook/router" "5.1.11"
+    "@storybook/addons" "5.2.1"
+    "@storybook/core-events" "5.2.1"
+    "@storybook/router" "5.2.1"
     common-tags "^1.8.0"
     core-js "^3.0.1"
     global "^4.3.2"
