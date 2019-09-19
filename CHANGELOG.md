@@ -1,3 +1,5 @@
+# [4.7.0](https://github.com/tillersystems/Stardust/compare/v4.6.0...v4.7.0) (2019-09-19)
+
 # [4.6.0](https://github.com/tillersystems/Stardust/compare/v4.5.0...v4.6.0) (2019-08-21)
 
 ### Bug Fixes
