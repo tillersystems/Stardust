@@ -1,15 +1,15 @@
 import React from 'react';
 import { fireEvent, wait } from '@testing-library/react';
-
+import { act } from 'react-dom/test-utils';
 import { NotificationProvider, useNotifications } from '../provider';
 
 /*eslint react/prop-types:0*/
 const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }) => {
-  const { addNotification, dismissNotification } = useNotifications();
-  const Component = () => (
+  const { addNotification } = useNotifications();
+  const Component = ({ onClose }) => (
     <div>
       This is a notification
-      <button type="button" onClick={dismissNotification}>
+      <button type="button" onClick={onClose}>
         close
       </button>
     </div>
@@ -58,7 +58,56 @@ describe('<NotificationProvider />', () => {
     await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
   });
 
+  test('should toggle two notifications', async () => {
+    const { getByText, getAllByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponent autoDismiss={false} autoDismissTimeout={4000} pauseOnHover={false} />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    // click twice to add two notifications
+    fireEvent.click(ButtonNode);
+    fireEvent.click(ButtonNode);
+
+    expect(getAllByText(/This is a notification/i)).toHaveLength(2);
+
+    const CloseNotificationButton = getAllByText(/close/i);
+
+    // click on the first one to close one
+    fireEvent.click(CloseNotificationButton[0]);
+
+    await wait(() => expect(getAllByText(/This is a notification/i)).toHaveLength(1));
+
+    fireEvent.click(CloseNotificationButton[1]);
+    await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+  });
+
+  test('should close notification on close button click', async () => {
+    const { getByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponent autoDismiss={false} autoDismissTimeout={4000} pauseOnHover={false} />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    expect(getByText(/This is a notification/i)).toBeInTheDocument();
+
+    const CloseNotificationButton = getByText(/close/i);
+
+    // click on the close button
+    fireEvent.click(CloseNotificationButton);
+
+    await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+  });
+
   test('should autoDismiss the notification after 2000ms', async () => {
+    jest.useFakeTimers();
+
     const { getByText, queryByText } = render(
       <NotificationProvider>
         <NotificationComponent autoDismiss autoDismissTimeout={2000} pauseOnHover={false} />
@@ -69,9 +118,13 @@ describe('<NotificationProvider />', () => {
 
     fireEvent.click(ButtonNode);
 
-    expect(getByText(/This is a notification/i)).toBeInTheDocument();
+    // act used cause this jest.runOnlyPendingTimers() update Container state
+    act(() => {
+      // Fast forward and exhaust only currently pending timers
+      jest.runOnlyPendingTimers();
+    });
 
-    await wait(() => expect(queryByText(/This is a notification/i)).toBeInTheDocument());
+    wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
   });
 
   test('should pause the notification timeout when hovered', async () => {

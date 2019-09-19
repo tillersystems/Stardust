@@ -10,9 +10,9 @@ import NotificationReadme from '../README.md';
 
 /*eslint react/prop-types:0*/
 const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }) => {
-  const { addNotification, dismissNotification } = useNotifications();
-  const Component = () => (
-    <Message description="this is a message" type="success" onClose={dismissNotification} />
+  const { addNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <Message description="this is a message" type="success" onClose={onClose} />
   );
 
   return (
@@ -38,7 +38,7 @@ storiesOf('Notification', module)
     const pauseOnHover = boolean('pauseOnHover', false, 'Options');
     const placement = select(
       'placement',
-      ['top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-left'],
+      ['top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-right'],
       'bottom-right',
       'Options',
     );
