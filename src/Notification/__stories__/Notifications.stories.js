@@ -7,21 +7,65 @@ import Button from '../../Button';
 import Message from '../../Message';
 import Wrapper from '../../Wrapper';
 import NotificationReadme from '../README.md';
+import styled from 'styled-components';
+
+const StyledButton = styled(Button)`
+  margin-bottom: 1rem;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 /*eslint react/prop-types:0*/
 const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }) => {
-  const { addNotification } = useNotifications();
+  const { addNotification, dismissNotification } = useNotifications();
   const Component = ({ onClose }) => (
     <Message description="this is a message" type="success" onClose={onClose} />
   );
 
+  const ComponentWithKey = ({ onClose }) => (
+    <Message
+      description="I'm an identified notification with key: 'stardust'"
+      type="info"
+      onClose={onClose}
+    />
+  );
+
   return (
-    <Button
-      appearance="primary"
-      onClick={() => addNotification(Component, { autoDismiss, autoDismissTimeout, pauseOnHover })}
-    >
-      Add Notification
-    </Button>
+    <FlexContainer>
+      <StyledButton
+        appearance="primary"
+        size="small"
+        onClick={() =>
+          addNotification(Component, { autoDismiss, autoDismissTimeout, pauseOnHover })
+        }
+      >
+        Add Notification
+      </StyledButton>
+      <StyledButton
+        appearance="primary"
+        size="small"
+        onClick={() =>
+          addNotification(ComponentWithKey, {
+            key: 'stardust',
+            autoDismiss,
+            autoDismissTimeout,
+            pauseOnHover,
+          })
+        }
+      >
+        Add Notification with key "stardust"
+      </StyledButton>
+      <StyledButton
+        appearance="primary"
+        size="small"
+        onClick={() => dismissNotification('stardust')}
+      >
+        Remove Notification with key "stardust"
+      </StyledButton>
+    </FlexContainer>
   );
 };
 

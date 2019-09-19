@@ -34,25 +34,34 @@ export const NotificationProvider = ({
   };
   const [state, dispatch] = useReducer(notificationReducer, initialState);
 
+  const { notifications } = state;
+
   /**
    * Add notification
    *
    * @param {function} component - Presentational component for displaying message.
    * @param {object} options - Options passed to heance notification.
    */
-  const addNotification = useCallback((component, options = state.options) => {
-    dispatch({ type: ADD_NOTIFICATION, component, options });
-  }, []);
+  const addNotification = useCallback(
+    (component, options = state.options) => {
+      const exists = notifications.find(n => n.key === options.key);
+      if (!exists) dispatch({ type: ADD_NOTIFICATION, component, options });
+    },
+    [notifications],
+  );
 
   /**
    * Dismiss notification
    * @param {string} key - unique key to retrieve notification.
    */
-  const dismissNotification = useCallback(key => {
-    dispatch({ type: REMOVE_NOTIFICATION, key });
-  }, []);
+  const dismissNotification = useCallback(
+    key => {
+      const exists = notifications.find(n => n.key === key);
+      if (exists) dispatch({ type: REMOVE_NOTIFICATION, key });
+    },
+    [notifications],
+  );
 
-  const { notifications } = state;
   return (
     <NotificationContext.Provider value={{ addNotification, dismissNotification }}>
       {children}
