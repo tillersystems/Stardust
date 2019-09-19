@@ -24,6 +24,43 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
     </button>
   );
 };
+const NotificationComponentWithKey = ({
+  autoDismiss,
+  autoDismissTimeout,
+  pauseOnHover,
+  notifKey,
+}) => {
+  const { addNotification, dismissNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <div>
+      This is a notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() =>
+          addNotification(Component, {
+            autoDismiss,
+            autoDismissTimeout,
+            pauseOnHover,
+            key: notifKey,
+          })
+        }
+      >
+        Add Notification
+      </button>
+      <button type="button" onClick={() => dismissNotification(notifKey)}>
+        Dismiss Notification
+      </button>
+    </div>
+  );
+};
 
 describe('<NotificationProvider />', () => {
   test('should render without a problem', () => {
@@ -125,6 +162,39 @@ describe('<NotificationProvider />', () => {
     });
 
     wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+  });
+
+  test('should add and remove a notification with specific key', async () => {
+    const { getByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponentWithKey autoDismiss={false} pauseOnHover={false} notifKey="test" />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+    expect(getByText(/This is a notification/i)).toBeInTheDocument();
+
+    const CloseButtonNode = getByText(/Dismiss Notification/i);
+
+    fireEvent.click(CloseButtonNode);
+    await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+  });
+
+  test('should not add two notifications with same key', async () => {
+    const { getByText, getAllByText } = render(
+      <NotificationProvider>
+        <NotificationComponentWithKey autoDismiss={false} pauseOnHover={false} notifKey="test" />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+    fireEvent.click(ButtonNode);
+
+    expect(getAllByText(/This is a notification/i)).toHaveLength(1);
   });
 
   test('should pause the notification timeout when hovered', async () => {
