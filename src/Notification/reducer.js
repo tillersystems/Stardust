@@ -18,7 +18,7 @@ const notificationReducer = (state, action) => {
           ...state.notifications,
           {
             component: action.component,
-            key: `notif-component-${state.notificationsCount}`,
+            key: action.options.key || `notif-component-${state.notificationsCount}`,
             options: {
               autoDismiss: action.options.autoDismiss
                 ? action.options.autoDismiss
