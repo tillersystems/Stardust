@@ -8008,10 +8008,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-luxon@1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.18.0.tgz#45217b9e7471c0eda64cde88759e707407890710"
-  integrity sha512-PDaY57G9k1yN46IRdt7M6I55yGd9NFBQYFvNsxLdOtapMfujJICPNdOIvCtYIq67W8hLdK3Zy8HJps+RRbIoAA==
+luxon@1.19.2:
+  version "1.19.2"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.19.2.tgz#f041a9031e7dff6fdbff46e46c73b3fdf4ab2764"
+  integrity sha512-4Dn6oriheX04QQd7mMhuScnyQPdD7h11aCJgSTq9FqkOWdxX7xRUXoX/OXu4rkw98NmcVz3QSLpLbDnT6lVsMw==
 
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
