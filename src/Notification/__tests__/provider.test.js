@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, wait } from '@testing-library/react';
+import { fireEvent, wait, cleanup } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import { NotificationProvider, useNotifications } from '../provider';
 
@@ -24,6 +24,25 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
     </button>
   );
 };
+
+const NotificationComponentWithoutOptions = () => {
+  const { addNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <div>
+      This is a notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  return (
+    <button type="button" onClick={() => addNotification(Component)}>
+      Add Notification
+    </button>
+  );
+};
+
 const NotificationComponentWithKey = ({
   autoDismiss,
   autoDismissTimeout,
@@ -58,11 +77,170 @@ const NotificationComponentWithKey = ({
       <button type="button" onClick={() => dismissNotification(notifKey)}>
         Dismiss Notification
       </button>
+      <button type="button" onClick={() => dismissNotification('invalid-key')}>
+        Dismiss with invalid key
+      </button>
     </div>
   );
 };
 
+const NotificationComponentUpdate = ({
+  autoDismiss,
+  autoDismissTimeout,
+  pauseOnHover,
+  notifKey,
+}) => {
+  const { addNotification, updateNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <div>
+      This is a notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  const UpdatedComponent = ({ onClose }) => (
+    <div>
+      updated notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() =>
+          addNotification(Component, {
+            autoDismiss,
+            autoDismissTimeout,
+            pauseOnHover,
+            key: notifKey,
+          })
+        }
+      >
+        Add Notification
+      </button>
+      <button type="button" onClick={() => updateNotification(UpdatedComponent, {})}>
+        Update Notification without key
+      </button>
+      <button type="button" onClick={() => updateNotification(UpdatedComponent, { key: notifKey })}>
+        Update Notification with valid key
+      </button>
+      <button
+        type="button"
+        onClick={() => updateNotification(UpdatedComponent, { key: notifKey, autoDismiss })}
+      >
+        Update Notification and add autoDismiss
+      </button>
+      <button
+        type="button"
+        onClick={() => updateNotification(UpdatedComponent, { key: 'invalid-key' })}
+      >
+        Update Notification with invalid key
+      </button>
+    </div>
+  );
+};
+
+const NotificationComponentToTestGetNotification = ({
+  autoDismiss,
+  autoDismissTimeout,
+  pauseOnHover,
+  notifKey,
+}) => {
+  const { addNotification, getNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <div>
+      This is a notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  const notification = getNotification(notifKey);
+
+  return (
+    <div>
+      {notification && <div>notification exists</div>}
+      <button
+        type="button"
+        onClick={() =>
+          addNotification(Component, {
+            autoDismiss,
+            autoDismissTimeout,
+            pauseOnHover,
+            key: notifKey,
+          })
+        }
+      >
+        Add Notification
+      </button>
+    </div>
+  );
+};
+
+const NotificationComponentToTestGetNotificationWithoutKey = ({
+  autoDismiss,
+  autoDismissTimeout,
+  pauseOnHover,
+  notifKey,
+}) => {
+  const { addNotification, getNotification } = useNotifications();
+  const Component = ({ onClose }) => (
+    <div>
+      This is a notification
+      <button type="button" onClick={onClose}>
+        close
+      </button>
+    </div>
+  );
+
+  const notification = getNotification();
+
+  return (
+    <div>
+      {notification && <div>notification exists</div>}
+      <button
+        type="button"
+        onClick={() =>
+          addNotification(Component, {
+            autoDismiss,
+            autoDismissTimeout,
+            pauseOnHover,
+            key: notifKey,
+          })
+        }
+      >
+        Add Notification
+      </button>
+    </div>
+  );
+};
+
+// TESTS
+
 describe('<NotificationProvider />', () => {
+  beforeAll(() => {
+    const { error: originalError } = console;
+    jest.spyOn(console, 'error').mockImplementation((message, ...args) => {
+      originalError(message, ...args);
+      throw new Error(message);
+    });
+  });
+
+  afterAll(() => {
+    console.error.mockRestore();
+  });
+
+  afterEach(() => {
+    console.error.mockClear();
+  });
+
   test('should render without a problem', () => {
     const { getByText } = render(
       <NotificationProvider>
@@ -79,6 +257,26 @@ describe('<NotificationProvider />', () => {
     const { getByText, queryByText } = render(
       <NotificationProvider>
         <NotificationComponent autoDismiss={false} autoDismissTimeout={4000} pauseOnHover={false} />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    expect(getByText(/This is a notification/i)).toBeInTheDocument();
+
+    const CloseNotificationButton = getByText(/close/i);
+
+    fireEvent.click(CloseNotificationButton);
+
+    await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+  });
+
+  test('should toggle the notification with default options', async () => {
+    const { getByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponentWithoutOptions />
       </NotificationProvider>,
     );
 
@@ -176,6 +374,11 @@ describe('<NotificationProvider />', () => {
     fireEvent.click(ButtonNode);
     expect(getByText(/This is a notification/i)).toBeInTheDocument();
 
+    const InvalidCloseButtonNode = getByText(/Dismiss with invalid key/i);
+    fireEvent.click(InvalidCloseButtonNode);
+
+    expect(getByText(/This is a notification/i)).toBeInTheDocument();
+
     const CloseButtonNode = getByText(/Dismiss Notification/i);
 
     fireEvent.click(CloseButtonNode);
@@ -222,8 +425,181 @@ describe('<NotificationProvider />', () => {
   });
 
   test('should throw an error useNotifications is used without a provider', () => {
+    console.error.mockImplementation(() => {});
+    expect(() => render(<NotificationComponent />)).toThrow();
+    expect(console.error).toHaveBeenCalledTimes(2);
+
+    const [[error]] = console.error.mock.calls;
+
+    expect(error).toEqual(
+      expect.stringContaining('useNotifications must be used within a NotificationProvider'),
+    );
+  });
+});
+
+describe('updateNotification', () => {
+  test('should throw an error without key', () => {
+    const { getByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponentUpdate
+          autoDismiss
+          autoDismissTimeout={3000}
+          pauseOnHover={false}
+          notifKey="test"
+        />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    const NotificationNode = getByText(/This is a notification/i);
+
+    expect(NotificationNode).toBeInTheDocument();
+
     expect(() => {
-      render(<NotificationComponent />);
-    }).toThrow('useNotifications must be used within a NotificationProvider');
+      const UpdateWithoutKeyButton = getByText(/Update Notification without key/i);
+      fireEvent.click(UpdateWithoutKeyButton);
+    }).toThrow('[updateNotification] key parameter in options is mandatory.');
+  });
+
+  test('should not update with invalid key', () => {
+    const { getByText, queryByText } = render(
+      <NotificationProvider>
+        <NotificationComponentUpdate
+          autoDismiss={false}
+          autoDismissTimeout={3000}
+          pauseOnHover={false}
+          notifKey="test"
+        />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    const NotificationNode = getByText(/This is a notification/i);
+
+    expect(NotificationNode).toBeInTheDocument();
+
+    // update with invalid key
+    fireEvent.click(getByText(/Update Notification with invalid key/i));
+    const UpdatedNotificationNode = queryByText(/updated notification/i);
+    expect(UpdatedNotificationNode).not.toBeInTheDocument();
+  });
+
+  test('should update with valid key', () => {
+    const { getByText } = render(
+      <NotificationProvider>
+        <NotificationComponentUpdate
+          autoDismiss={false}
+          autoDismissTimeout={3000}
+          pauseOnHover={false}
+          notifKey="test"
+        />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    const NotificationNode = getByText(/This is a notification/i);
+
+    expect(NotificationNode).toBeInTheDocument();
+
+    // update with valid key
+    fireEvent.click(getByText(/Update Notification with valid key/i));
+
+    const UpdatedNotificationNode2 = getByText(/updated notification/i);
+    expect(UpdatedNotificationNode2).toBeInTheDocument();
+  });
+
+  test('should update with valid key and extends timer', () => {
+    const { getByText } = render(
+      <NotificationProvider>
+        <NotificationComponentUpdate
+          autoDismiss
+          autoDismissTimeout={3000}
+          pauseOnHover={false}
+          notifKey="test"
+        />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+
+    fireEvent.click(ButtonNode);
+
+    const NotificationNode = getByText(/This is a notification/i);
+
+    expect(NotificationNode).toBeInTheDocument();
+
+    // update with valid key
+    fireEvent.click(getByText(/Update Notification and add autoDismiss/i));
+
+    const UpdatedNotificationNode2 = getByText(/updated notification/i);
+    expect(UpdatedNotificationNode2).toBeInTheDocument();
+  });
+});
+
+describe('getNotification', () => {
+  beforeAll(() => {
+    const { error: originalError } = console;
+    jest.spyOn(console, 'error').mockImplementation((message, ...args) => {
+      originalError(message, ...args);
+      throw new Error(message);
+    });
+  });
+
+  afterAll(() => {
+    console.error.mockRestore();
+  });
+
+  afterEach(() => {
+    console.error.mockClear();
+  });
+
+  test('should return a notification if exists', () => {
+    const { getByText, container } = render(
+      <NotificationProvider>
+        <NotificationComponentToTestGetNotification
+          autoDismiss={false}
+          autoDismissTimeout={3000}
+          pauseOnHover={false}
+          notifKey="test"
+        />
+      </NotificationProvider>,
+    );
+
+    const ButtonNode = getByText(/Add Notification/i);
+    fireEvent.click(ButtonNode);
+
+    const NotificationNode = getByText(/notification exists/i);
+
+    expect(NotificationNode).toBeInTheDocument();
+  });
+
+  test('should throw an error if there is no key parameter', () => {
+    console.error.mockImplementation(() => {});
+    expect(() =>
+      render(
+        <NotificationProvider>
+          <NotificationComponentToTestGetNotificationWithoutKey
+            autoDismiss={false}
+            autoDismissTimeout={3000}
+            pauseOnHover={false}
+            notifKey="test"
+          />
+        </NotificationProvider>,
+      ),
+    ).toThrow();
+    expect(console.error).toHaveBeenCalledTimes(2);
+
+    const [[error]] = console.error.mock.calls;
+
+    expect(error).toEqual(expect.stringContaining('[getNotification] key parameter is mandatory.'));
   });
 });

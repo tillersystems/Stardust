@@ -1,4 +1,4 @@
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from './constants';
+import { ADD_NOTIFICATION, REMOVE_NOTIFICATION, UPDATE_NOTIFICATION } from './constants';
 /**
  * Notification Reducer
  *
@@ -38,6 +38,31 @@ const notificationReducer = (state, action) => {
       return {
         ...state,
         notifications: state.notifications.filter(n => n.key !== action.key),
+      };
+
+    case UPDATE_NOTIFICATION:
+      return {
+        ...state,
+        notifications: state.notifications.map(n => {
+          if (n.key === action.options.key) {
+            return {
+              ...n,
+              component: action.component,
+              options: {
+                autoDismiss: action.options.autoDismiss
+                  ? action.options.autoDismiss
+                  : state.options.autoDismiss,
+                autoDismissTimeout: action.options.autoDismissTimeout
+                  ? action.options.autoDismissTimeout
+                  : state.options.autoDismissTimeout,
+                pauseOnHover: action.options.pauseOnHover
+                  ? action.options.pauseOnHover
+                  : state.options.pauseOnHover,
+              },
+            };
+          }
+          return n;
+        }),
       };
 
     default: {

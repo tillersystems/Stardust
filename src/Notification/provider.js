@@ -5,7 +5,7 @@ import posed, { PoseGroup } from 'react-pose';
 
 import Container from './Container';
 import notificationReducer from './reducer';
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from './constants';
+import { ADD_NOTIFICATION, REMOVE_NOTIFICATION, UPDATE_NOTIFICATION } from './constants';
 import { getPositionAnimation } from './helpers';
 import NotificationsList from './NotificationsList';
 
@@ -62,8 +62,35 @@ export const NotificationProvider = ({
     [notifications],
   );
 
+  /**
+   * Update notification component and options
+   *
+   * @param {function} component - Presentational component for displaying message.
+   * @param {object} options - Options passed to heance notification.
+   */
+  const updateNotification = useCallback(
+    (component, options) => {
+      if (!options.key)
+        throw new Error('[updateNotification] key parameter in options is mandatory.');
+
+      const exists = notifications.find(n => n.key === options.key);
+      if (exists) dispatch({ type: UPDATE_NOTIFICATION, component, options });
+    },
+    [notifications],
+  );
+
+  const getNotification = useCallback(
+    key => {
+      if (!key) throw new Error('[getNotification] key parameter is mandatory.');
+      return notifications.find(n => n.key === key);
+    },
+    [notifications],
+  );
+
   return (
-    <NotificationContext.Provider value={{ addNotification, dismissNotification }}>
+    <NotificationContext.Provider
+      value={{ addNotification, dismissNotification, getNotification, updateNotification }}
+    >
       {children}
       <Portal>
         <NotificationsList placement={placement}>

@@ -1,11 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<NotificationProvider /> should UPDATE_NOTIFICATION without all options (and take default values) 1`] = `
+Object {
+  "notifications": Array [
+    Object {
+      "component": [MockFunction],
+      "key": "stardust",
+      "options": Object {
+        "autoDismiss": false,
+        "autoDismissTimeout": 1000,
+        "pauseOnHover": false,
+      },
+    },
+  ],
+  "notificationsCount": 0,
+  "options": Object {
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
+  },
+}
+`;
+
 exports[`<NotificationProvider /> should handle ADD_NOTIFICATION 1`] = `
 Object {
   "notifications": Array [
     Object {
       "component": [MockFunction],
-      "key": "notif-component-0",
+      "key": "stardust",
       "options": Object {
         "autoDismiss": true,
         "autoDismissTimeout": 5000,
@@ -22,9 +44,75 @@ Object {
 }
 `;
 
+exports[`<NotificationProvider /> should handle ADD_NOTIFICATION and take default values if not specified 1`] = `
+Object {
+  "notifications": Array [
+    Object {
+      "component": [MockFunction],
+      "key": "notif-component-0",
+      "options": Object {
+        "autoDismiss": false,
+        "autoDismissTimeout": 1000,
+        "pauseOnHover": false,
+      },
+    },
+  ],
+  "notificationsCount": 1,
+  "options": Object {
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
+  },
+}
+`;
+
 exports[`<NotificationProvider /> should handle REMOVE_NOTIFICATION 1`] = `
 Object {
   "notifications": Array [],
+  "notificationsCount": 0,
+  "options": Object {
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
+  },
+}
+`;
+
+exports[`<NotificationProvider /> should not UPDATE_NOTIFICATION with invalid key 1`] = `
+Object {
+  "notifications": Array [
+    Object {
+      "component": [MockFunction],
+      "key": "stardust",
+      "options": Object {
+        "autoDismiss": false,
+        "autoDismissTimeout": 5000,
+        "pauseOnHover": true,
+      },
+    },
+  ],
+  "notificationsCount": 0,
+  "options": Object {
+    "autoDismiss": false,
+    "autoDismissTimeout": 1000,
+    "pauseOnHover": false,
+  },
+}
+`;
+
+exports[`<NotificationProvider /> should update UPDATE_NOTIFICATION 1`] = `
+Object {
+  "notifications": Array [
+    Object {
+      "component": [MockFunction],
+      "key": "stardust",
+      "options": Object {
+        "autoDismiss": true,
+        "autoDismissTimeout": 15000,
+        "pauseOnHover": true,
+      },
+    },
+  ],
   "notificationsCount": 0,
   "options": Object {
     "autoDismiss": false,

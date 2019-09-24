@@ -23,6 +23,13 @@ const NotificationContainer = forwardRef(
     };
 
     /**
+     * Extends current timer with new autoDismissTimeout value
+     */
+    const extendTimer = () => {
+      timer.addTime(autoDismissTimeout);
+    };
+
+    /**
      * Clear Timer
      *
      */
@@ -52,11 +59,19 @@ const NotificationContainer = forwardRef(
      */
     useEffect(() => {
       if (!timer) startTimer();
-
       return () => {
         if (timer) clearTimer();
       };
-    }, [timer]);
+    }, [timer, autoDismiss]);
+
+    /**
+     * useEffect to handle Component update
+     *
+     */
+    useEffect(() => {
+      // try to add time to current timer if exists (on Component change).
+      if (timer) extendTimer();
+    }, [Component]);
 
     const hasMouseEvents = pauseOnHover && autoDismiss;
 
