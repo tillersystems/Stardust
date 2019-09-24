@@ -5,7 +5,7 @@ exports[`Header should render without a problem 1`] = `
   display: inline-block;
 }
 
-.c2 {
+.c1 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -50,7 +50,7 @@ exports[`Header should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c1 {
+.c2 {
   padding: 0;
   padding: 0;
 }
@@ -114,7 +114,7 @@ exports[`Header should render without a problem 1`] = `
     class="c4"
   />
   <button
-    class="c5 c2"
+    class="c1 c5"
     data-testid="next-month-button"
     type="button"
   >

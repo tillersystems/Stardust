@@ -149,7 +149,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   display: inline-block;
 }
 
-.c4 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -194,7 +194,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c3 {
+.c4 {
   padding: 0;
   padding: 0;
 }
@@ -279,7 +279,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c7 c4"
+        class="c3 c7"
         data-testid="next-month-button"
         type="button"
       >
@@ -878,7 +878,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   display: inline-block;
 }
 
-.c4 {
+.c3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -923,7 +923,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   font-size: 1.4rem;
 }
 
-.c3 {
+.c4 {
   padding: 0;
   padding: 0;
 }
@@ -1008,7 +1008,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c7 c4"
+        class="c3 c7"
         data-testid="next-month-button"
         type="button"
       >

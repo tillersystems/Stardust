@@ -998,7 +998,7 @@ exports[`<Form /> should render without a problem 1`] = `
             class="c6"
           >
             <button
-              class="c9"
+              class="c9 "
               type="submit"
             >
               Hello

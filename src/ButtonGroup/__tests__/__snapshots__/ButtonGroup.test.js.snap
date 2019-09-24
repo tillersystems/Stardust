@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ButtonGroup /> should render without a problem 1`] = `
-.c2 {
+.c1 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -42,52 +42,52 @@ exports[`<ButtonGroup /> should render without a problem 1`] = `
   display: flex;
 }
 
-.c0 .c1 {
+.c0 .c2 {
   border-radius: 0;
 }
 
-.c0 .c1:first-of-type {
+.c0 .c2:first-of-type {
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
-.c0 .c1:nth-child(n):not(:first-of-type) {
+.c0 .c2:nth-child(n):not(:first-of-type) {
   border-left: 0;
 }
 
-.c0 .c1:last-of-type {
+.c0 .c2:last-of-type {
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   border-left: 0;
 }
 
-.c0 .c1[data-isactive='true'] {
+.c0 .c2[data-isactive='true'] {
   text-shadow: 0.6px 0 0 currentColor;
 }
 
-.c0 .c1[data-isactive='true'][data-appearance='secondary'] {
+.c0 .c2[data-isactive='true'][data-appearance='secondary'] {
   color: hsl(200,74%,46%);
 }
 
-.c0 .c1[data-isactive='true'][data-appearance='secondary'] svg > path {
+.c0 .c2[data-isactive='true'][data-appearance='secondary'] svg > path {
   fill: rgba(30,146,204,0.7);
 }
 
-.c0 .c1[data-isactive='false'] {
+.c0 .c2[data-isactive='false'] {
   color: rgba(255,255,255,0.7);
 }
 
-.c0 .c1[data-isactive='false'] svg > path {
+.c0 .c2[data-isactive='false'] svg > path {
   fill: rgba(255,255,255,0.7);
 }
 
-.c0 .c1[data-isactive='false'][data-appearance='secondary'],
-.c0 .c1[data-isactive='false'][data-appearance='default'] {
+.c0 .c2[data-isactive='false'][data-appearance='secondary'],
+.c0 .c2[data-isactive='false'][data-appearance='default'] {
   color: rgba(100,116,130,0.9);
 }
 
-.c0 .c1[data-isactive='false'][data-appearance='secondary'] svg > path,
-.c0 .c1[data-isactive='false'][data-appearance='default'] svg > path {
+.c0 .c2[data-isactive='false'][data-appearance='secondary'] svg > path,
+.c0 .c2[data-isactive='false'][data-appearance='default'] svg > path {
   fill: rgba(100,116,130,0.7);
 }
 
@@ -97,7 +97,7 @@ exports[`<ButtonGroup /> should render without a problem 1`] = `
   tabindex="-1"
 >
   <button
-    class="c1 c2"
+    class="c1 c2 "
     data-appearance="secondary"
     data-isactive="false"
     name="ON"
@@ -106,7 +106,7 @@ exports[`<ButtonGroup /> should render without a problem 1`] = `
     ON
   </button>
   <button
-    class="c1 c2"
+    class="c1 c2 "
     data-appearance="secondary"
     data-isactive="false"
     name="OFF"

@@ -51,7 +51,7 @@ exports[`<Button /> should render a left icon 1`] = `
 }
 
 <button
-  class="c0"
+  class="c0 "
   type="button"
 >
   <span
@@ -132,7 +132,7 @@ exports[`<Button /> should render a right icon 1`] = `
 }
 
 <button
-  class="c0"
+  class="c0 "
   type="button"
 >
   <span
