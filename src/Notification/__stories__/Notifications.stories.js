@@ -61,14 +61,14 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
           })
         }
       >
-        Add Notification with key "stardust"
+        Add Notification with key &quot;stardust&quot;
       </StyledButton>
       <StyledButton
         appearance="primary"
         size="small"
         onClick={() => dismissNotification('stardust')}
       >
-        Remove Notification with key "stardust"
+        Remove Notification with key &quot;stardust&quot;
       </StyledButton>
       <StyledButton
         appearance="primary"
@@ -82,7 +82,7 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
           });
         }}
       >
-        Update Notification with key "stardust" and make it auto-dismissable (4000ms)
+        Update Notification with key &quot;stardust&quot; and make it auto-dismissable (4000ms)
       </StyledButton>
     </FlexContainer>
   );

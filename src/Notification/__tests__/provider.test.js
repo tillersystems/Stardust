@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, wait, cleanup } from '@testing-library/react';
+import { fireEvent, wait } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import { NotificationProvider, useNotifications } from '../provider';
 
@@ -439,7 +439,7 @@ describe('<NotificationProvider />', () => {
 
 describe('updateNotification', () => {
   test('should throw an error without key', () => {
-    const { getByText, queryByText } = render(
+    const { getByText } = render(
       <NotificationProvider>
         <NotificationComponentUpdate
           autoDismiss
@@ -563,7 +563,7 @@ describe('getNotification', () => {
   });
 
   test('should return a notification if exists', () => {
-    const { getByText, container } = render(
+    const { getByText } = render(
       <NotificationProvider>
         <NotificationComponentToTestGetNotification
           autoDismiss={false}
