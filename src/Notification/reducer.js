@@ -20,15 +20,10 @@ const notificationReducer = (state, action) => {
             component: action.component,
             key: action.options.key || `notif-component-${state.notificationsCount}`,
             options: {
-              autoDismiss: action.options.autoDismiss
-                ? action.options.autoDismiss
-                : state.options.autoDismiss,
-              autoDismissTimeout: action.options.autoDismissTimeout
-                ? action.options.autoDismissTimeout
-                : state.options.autoDismissTimeout,
-              pauseOnHover: action.options.pauseOnHover
-                ? action.options.pauseOnHover
-                : state.options.pauseOnHover,
+              autoDismiss: action.options.autoDismiss || state.options.autoDismiss,
+              autoDismissTimeout:
+                action.options.autoDismissTimeout || state.options.autoDismissTimeout,
+              pauseOnHover: action.options.pauseOnHover || state.options.pauseOnHover,
             },
           },
         ],
@@ -49,15 +44,10 @@ const notificationReducer = (state, action) => {
               ...n,
               component: action.component,
               options: {
-                autoDismiss: action.options.autoDismiss
-                  ? action.options.autoDismiss
-                  : state.options.autoDismiss,
-                autoDismissTimeout: action.options.autoDismissTimeout
-                  ? action.options.autoDismissTimeout
-                  : state.options.autoDismissTimeout,
-                pauseOnHover: action.options.pauseOnHover
-                  ? action.options.pauseOnHover
-                  : state.options.pauseOnHover,
+                autoDismiss: action.options.autoDismiss || state.options.autoDismiss,
+                autoDismissTimeout:
+                  action.options.autoDismissTimeout || state.options.autoDismissTimeout,
+                pauseOnHover: action.options.pauseOnHover || state.options.pauseOnHover,
               },
             };
           }
