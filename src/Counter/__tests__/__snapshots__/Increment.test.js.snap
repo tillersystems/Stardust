@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Counter /> should render without a problem 1`] = `
-.c2 {
+.c1 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -62,17 +62,17 @@ exports[`<Counter /> should render without a problem 1`] = `
   display: flex;
 }
 
-.c0 .c1 {
+.c0 .c2 {
   border-radius: 0;
   font-size: 2.0rem;
 }
 
-.c0 .c1:first-of-type {
+.c0 .c2:first-of-type {
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
 }
 
-.c0 .c1:last-of-type {
+.c0 .c2:last-of-type {
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
@@ -87,7 +87,7 @@ exports[`<Counter /> should render without a problem 1`] = `
   width="5rem"
 >
   <button
-    class="c1 c2"
+    class="c1 c2 "
     data-testid="decrement"
     type="button"
   >
@@ -101,7 +101,7 @@ exports[`<Counter /> should render without a problem 1`] = `
     0
   </span>
   <button
-    class="c1 c2"
+    class="c1 c2 "
     data-testid="increment"
     type="button"
   >
