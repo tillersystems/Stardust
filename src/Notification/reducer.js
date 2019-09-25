@@ -32,16 +32,16 @@ const notificationReducer = (state, action) => {
     case REMOVE_NOTIFICATION:
       return {
         ...state,
-        notifications: state.notifications.filter(n => n.key !== action.key),
+        notifications: state.notifications.filter(notification => notification.key !== action.key),
       };
 
     case UPDATE_NOTIFICATION:
       return {
         ...state,
-        notifications: state.notifications.map(n => {
-          if (n.key === action.options.key) {
+        notifications: state.notifications.map(notification => {
+          if (notification.key === action.options.key) {
             return {
-              ...n,
+              ...notification,
               component: action.component,
               options: {
                 autoDismiss: action.options.autoDismiss || state.options.autoDismiss,
@@ -51,7 +51,7 @@ const notificationReducer = (state, action) => {
               },
             };
           }
-          return n;
+          return notification;
         }),
       };
 
