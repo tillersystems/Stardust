@@ -132,9 +132,9 @@ export function Timer(callback, delay) {
   let start = delay;
   let remaining = delay;
 
-  this.addTime = time => {
+  this.resetTimer = time => {
     this.pause();
-    remaining += time;
+    remaining = time;
     this.resume();
   };
 
