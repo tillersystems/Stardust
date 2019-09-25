@@ -132,6 +132,12 @@ export function Timer(callback, delay) {
   let start = delay;
   let remaining = delay;
 
+  this.resetTimer = time => {
+    this.pause();
+    remaining = time;
+    this.resume();
+  };
+
   this.clear = () => clearTimeout(timer);
 
   this.pause = () => {

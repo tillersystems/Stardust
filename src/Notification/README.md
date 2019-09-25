@@ -35,8 +35,15 @@ import { useNotifications } from '@tillersystems/stardust';
 The `useNotification` hook has the following signature:
 
 ```jsx
-const { addNotification, dismissNotification } = useNotifications();
+const {
+  addNotification,
+  dismissNotification,
+  updateNotification,
+  getNotification,
+} = useNotifications();
 ```
+
+#### Add a notification
 
 The `addNotification` method has 2 arguments:
 
@@ -46,6 +53,33 @@ The `addNotification` method has 2 arguments:
 ```jsx
 <Button onClick={onClick={() => addNotification(Component, { autoDismiss: true, autoDismissTimeout: 3000, pauseOnHover: true })}} />
 ```
+
+#### Get a notification
+
+The `getNotification` has 1 argument: `key`. It will return an object if the notification exists or `undefined`
+
+```jsx
+getNotification(key);
+```
+
+#### Update a notification and its options
+
+The `updateNotification` method has 2 arguments:
+
+- The first is the content of the notification, which can be any renderable `Node`.
+- The second is the `Options` object. The `key` is mandatory.
+
+```jsx
+<Button onClick={onClick={() => updateNotification(Component, {
+    key: 'my-notification-key',
+    autoDismiss: true,
+    autoDismissTimeout: 3000,
+    pauseOnHover: true
+  })}}
+/>
+```
+
+#### Remove a notification
 
 The `dismissNotification` has 1 argument: `key` to remove a specific notification on screen.
 

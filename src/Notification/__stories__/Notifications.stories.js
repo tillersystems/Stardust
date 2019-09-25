@@ -20,7 +20,8 @@ const FlexContainer = styled.div`
 
 /*eslint react/prop-types:0*/
 const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }) => {
-  const { addNotification, dismissNotification } = useNotifications();
+  const { addNotification, dismissNotification, updateNotification } = useNotifications();
+
   const Component = ({ onClose }) => (
     <Message description="this is a message" type="success" onClose={onClose} />
   );
@@ -33,10 +34,14 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
     />
   );
 
+  const UpdatedComponent = ({ onClose }) => {
+    return <Message description={`I'm an updated component !`} type="warning" onClose={onClose} />;
+  };
+
   return (
     <FlexContainer>
       <StyledButton
-        appearance="primary"
+        appearance="success"
         size="small"
         onClick={() =>
           addNotification(Component, { autoDismiss, autoDismissTimeout, pauseOnHover })
@@ -56,14 +61,28 @@ const NotificationComponent = ({ autoDismiss, autoDismissTimeout, pauseOnHover }
           })
         }
       >
-        Add Notification with key "stardust"
+        Add Notification with key &quot;stardust&quot;
       </StyledButton>
       <StyledButton
         appearance="primary"
         size="small"
         onClick={() => dismissNotification('stardust')}
       >
-        Remove Notification with key "stardust"
+        Remove Notification with key &quot;stardust&quot;
+      </StyledButton>
+      <StyledButton
+        appearance="primary"
+        size="small"
+        onClick={() => {
+          updateNotification(UpdatedComponent, {
+            key: 'stardust',
+            autoDismiss: true,
+            autoDismissTimeout: 4000,
+            pauseOnHover: true,
+          });
+        }}
+      >
+        Update Notification with key &quot;stardust&quot; and make it auto-dismissable (4000ms)
       </StyledButton>
     </FlexContainer>
   );
