@@ -1,3 +1,10 @@
+# [4.8.0](https://github.com/tillersystems/Stardust/compare/v4.7.1...v4.8.0) (2019-09-25)
+
+### Features
+
+- **Notification/get/update:** Retrieve and update a notification ([#766](https://github.com/tillersystems/Stardust/issues/766)) ([50eda2f](https://github.com/tillersystems/Stardust/commit/50eda2f))
+- **Table:** Add scrollable behaviour to the Table component ([#727](https://github.com/tillersystems/Stardust/issues/727)) ([79eae33](https://github.com/tillersystems/Stardust/commit/79eae33))
+
 ## [4.7.1](https://github.com/tillersystems/Stardust/compare/v4.7.0...v4.7.1) (2019-09-20)
 
 # [4.7.0](https://github.com/tillersystems/Stardust/compare/v4.6.0...v4.7.0) (2019-09-19)
