@@ -86,6 +86,7 @@ const NotificationContainer = forwardRef(
         onMouseLeave={handleMouseLeave}
         data-testid="notification-container"
         ref={ref}
+        role="alert"
       >
         <Component onClose={onDismiss} />
       </Container>
