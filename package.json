@@ -115,8 +115,8 @@
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
     "prop-types": "15.7.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
     "react-pose": "4.0.9",
     "storybook-readme": "5.0.8",
     "styled-components": "4.4.0"
