@@ -55,6 +55,8 @@ export const BodyGrid = styled(Grid)`
 `;
 
 export const BodyGridContainer = styled.div`
+  background-color: ${({ theme: { palette } }) => palette.white};
+
   height: ${({ height }) => `${height}px`};
 
   width: ${({ width }) => `${width}px`};
@@ -78,7 +80,6 @@ export const GridColumn = styled.div`
 `;
 
 export const GridRow = styled.div`
-  background-color: ${({ theme: { palette } }) => palette.white};
   display: flex;
   flex-direction: row;
   position: relative;
@@ -144,6 +145,7 @@ export const FooterGrid = styled(LeftFooterGrid)`
 `;
 
 export const HeaderGridContainer = styled.div`
+  background-color: ${({ theme: { palette } }) => palette.white};
   border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
   height: 44px;
   width: ${({ width }) => `${width}px`};

@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef, useEffect } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { AutoSizer, CellMeasurer, CellMeasurerCache, ScrollSync } from 'react-virtualized';
 import scrollbarSize from 'dom-helpers/scrollbarSize';
@@ -43,8 +43,6 @@ const sortingDirectionToIconName = {
  *
  */
 class TableVirtualized extends PureComponent {
-  bodyGridRef = createRef();
-
   /** Internal state. */
   state = {
     // Stores which column should be sorted.
@@ -60,7 +58,7 @@ class TableVirtualized extends PureComponent {
     selected: -1,
     cellCache: new CellMeasurerCache({
       defaultHeight: 50,
-      defaultWidth: this.props.widthFixedColumn || this.props.columnWidth, // eslint-disable-line react/destructuring-assignment
+      defaultWidth: this.props.widthFixedColumn || this.props.minColumnWidth, // eslint-disable-line react/destructuring-assignment
       fixedWidth: true,
     }),
   };
@@ -370,132 +368,139 @@ class TableVirtualized extends PureComponent {
 
     return (
       <ScrollSync>
-        {({ onScroll, scrollLeft, scrollTop }) => {
-          return (
-            <GridRow>
-              <LeftSideGridContainer>
-                <LeftHeaderGrid
-                  cellRenderer={this.renderLeftHeaderCell}
-                  columnCount={1}
-                  columnWidth={firstColumnWidth}
-                  height={44}
-                  rowCount={1}
-                  rowHeight={44}
-                  sort={sort}
-                  width={firstColumnWidth}
-                />
-              </LeftSideGridContainer>
-              <LeftSideGridContainer
-                top={44}
-                height={bodyHeight - scrollbarSize()}
-                width={firstColumnWidth}
-              >
-                <LeftSideGrid
-                  cellRenderer={props => this.renderLeftSideCell({ ...props, sortedData })}
-                  columnCount={1}
-                  columnWidth={firstColumnWidth}
-                  deferredMeasurementCache={cellCache}
-                  height={bodyHeight - scrollbarSize()}
-                  overscanColumnCount={overscanColumnCount}
-                  overscanRowCount={overscanRowCount}
-                  rowCount={rowCount}
-                  rowHeight={cellCache.rowHeight}
-                  scrollTop={scrollTop}
-                  width={firstColumnWidth}
-                />
-              </LeftSideGridContainer>
-              {footerData && (
-                <LeftSideGridContainer top={height - 50 - scrollbarSize()}>
-                  <LeftFooterGrid
-                    cellRenderer={this.renderLeftBottomCell}
-                    columnCount={1}
-                    columnWidth={firstColumnWidth}
-                    height={50}
-                    rowCount={1}
-                    rowHeight={50}
+        {({ onScroll, scrollLeft, scrollTop }) => (
+          <AutoSizer disableHeight>
+            {({ width }) => {
+              const computedWidth =
+                (width - firstColumnWidth - scrollbarSize()) / (columnCount - 1); // remove width of fixed column and divide it by the number of remaining columns
+              const effectiveWidth =
+                computedWidth > minColumnWidth && computedWidth > 0
+                  ? computedWidth
+                  : minColumnWidth;
+              const hasHorizontalScrollbar = computedWidth < minColumnWidth;
+
+              return (
+                <GridRow>
+                  <LeftSideGridContainer>
+                    <LeftHeaderGrid
+                      cellRenderer={this.renderLeftHeaderCell}
+                      columnCount={1}
+                      columnWidth={firstColumnWidth}
+                      height={44}
+                      rowCount={1}
+                      rowHeight={44}
+                      sort={sort}
+                      width={firstColumnWidth}
+                    />
+                  </LeftSideGridContainer>
+                  <LeftSideGridContainer
+                    top={44}
+                    height={bodyHeight - (hasHorizontalScrollbar ? scrollbarSize() : 0)}
                     width={firstColumnWidth}
-                  />
-                </LeftSideGridContainer>
-              )}
-              <GridColumn>
-                <AutoSizer disableHeight>
-                  {({ width }) => {
-                    const computedWidth = (width - firstColumnWidth) / (columnCount - 1); // remove width of fixed column and divide it by the number of remaining columns
-                    const effectiveWidth =
-                      computedWidth > minColumnWidth ? computedWidth : minColumnWidth;
-                    return (
-                      <div>
-                        <HeaderGridContainer width={width}>
-                          <HeaderGrid
+                  >
+                    <LeftSideGrid
+                      cellRenderer={props => this.renderLeftSideCell({ ...props, sortedData })}
+                      columnCount={1}
+                      columnWidth={firstColumnWidth}
+                      deferredMeasurementCache={cellCache}
+                      height={bodyHeight - (hasHorizontalScrollbar ? scrollbarSize() : 0)}
+                      overscanColumnCount={overscanColumnCount}
+                      overscanRowCount={overscanRowCount}
+                      rowCount={rowCount}
+                      rowHeight={cellCache.rowHeight}
+                      scrollTop={scrollTop}
+                      width={firstColumnWidth}
+                    />
+                  </LeftSideGridContainer>
+                  {footerData && (
+                    <LeftSideGridContainer
+                      top={height - 50 - (hasHorizontalScrollbar ? scrollbarSize() : 0)}
+                    >
+                      <LeftFooterGrid
+                        cellRenderer={this.renderLeftBottomCell}
+                        columnCount={1}
+                        columnWidth={firstColumnWidth}
+                        height={50}
+                        rowCount={1}
+                        rowHeight={50}
+                        width={firstColumnWidth}
+                      />
+                    </LeftSideGridContainer>
+                  )}
+                  <GridColumn>
+                    <div>
+                      <HeaderGridContainer width={width}>
+                        <HeaderGrid
+                          cellRenderer={props =>
+                            this.renderHeaderCell({ ...props, effectiveWidth })
+                          }
+                          columnWidth={effectiveWidth}
+                          columnCount={columnCount}
+                          height={44}
+                          overscanColumnCount={overscanColumnCount}
+                          rowCount={1}
+                          rowHeight={44}
+                          scrollbarSize={scrollbarSize()}
+                          scrollLeft={scrollLeft}
+                          sort={sort}
+                          width={width - firstColumnWidth + effectiveWidth}
+                          widthFixedColumn={firstColumnWidth}
+                        />
+                      </HeaderGridContainer>
+                      <BodyGridContainer
+                        height={bodyHeight - 50 - (hasHorizontalScrollbar ? scrollbarSize() : 0)}
+                        width={width}
+                      >
+                        <BodyGrid
+                          cellRenderer={props =>
+                            this.renderBodyCell({ ...props, effectiveWidth, sortedData })
+                          }
+                          columnCount={columnCount}
+                          columnWidth={effectiveWidth}
+                          data={sortedData}
+                          deferredMeasurementCache={cellCache}
+                          height={bodyHeight}
+                          onScroll={onScroll}
+                          overscanColumnCount={overscanColumnCount}
+                          overscanRowCount={overscanRowCount}
+                          rowCount={rowCount}
+                          rowHeight={cellCache.rowHeight}
+                          scrollLeft={scrollLeft}
+                          scrollTop={scrollTop}
+                          width={width - firstColumnWidth + effectiveWidth}
+                          widthFixedColumn={firstColumnWidth}
+                        />
+                      </BodyGridContainer>
+                      {footerData && (
+                        <div
+                          style={{
+                            height: 50 + (hasHorizontalScrollbar ? scrollbarSize() : 0),
+                            width: width - scrollbarSize(),
+                          }}
+                        >
+                          <FooterGrid
                             cellRenderer={props =>
-                              this.renderHeaderCell({ ...props, effectiveWidth })
+                              this.renderBottomCell({ ...props, effectiveWidth })
                             }
-                            columnWidth={effectiveWidth}
                             columnCount={columnCount}
-                            height={44}
-                            overscanColumnCount={overscanColumnCount}
+                            columnWidth={effectiveWidth}
+                            height={50}
                             rowCount={1}
-                            rowHeight={44}
+                            rowHeight={50}
                             scrollbarSize={scrollbarSize()}
                             scrollLeft={scrollLeft}
-                            sort={sort}
-                            width={width - firstColumnWidth + effectiveWidth}
+                            width={width - firstColumnWidth + effectiveWidth - scrollbarSize()}
                             widthFixedColumn={firstColumnWidth}
                           />
-                        </HeaderGridContainer>
-                        <BodyGridContainer height={bodyHeight - 50 - scrollbarSize()} width={width}>
-                          <BodyGrid
-                            cellRenderer={props =>
-                              this.renderBodyCell({ ...props, effectiveWidth, sortedData })
-                            }
-                            columnCount={columnCount}
-                            columnWidth={effectiveWidth}
-                            data={sortedData}
-                            deferredMeasurementCache={cellCache}
-                            height={bodyHeight}
-                            onScroll={onScroll}
-                            overscanColumnCount={overscanColumnCount}
-                            overscanRowCount={overscanRowCount}
-                            ref={this.bodyGridRef}
-                            rowCount={rowCount}
-                            rowHeight={cellCache.rowHeight}
-                            scrollLeft={scrollLeft}
-                            scrollTop={scrollTop}
-                            width={width - firstColumnWidth + effectiveWidth}
-                            widthFixedColumn={firstColumnWidth}
-                          />
-                        </BodyGridContainer>
-                        {footerData && (
-                          <div
-                            style={{
-                              height: 50 + scrollbarSize(),
-                              width: width - scrollbarSize(),
-                            }}
-                          >
-                            <FooterGrid
-                              cellRenderer={props =>
-                                this.renderBottomCell({ ...props, effectiveWidth })
-                              }
-                              columnCount={columnCount}
-                              columnWidth={effectiveWidth}
-                              height={50}
-                              rowCount={1}
-                              rowHeight={50}
-                              scrollbarSize={scrollbarSize()}
-                              scrollLeft={scrollLeft}
-                              width={width - firstColumnWidth + effectiveWidth} //- scrollbarSize()
-                              widthFixedColumn={firstColumnWidth}
-                            />
-                          </div>
-                        )}
-                      </div>
-                    );
-                  }}
-                </AutoSizer>
-              </GridColumn>
-            </GridRow>
-          );
-        }}
+                        </div>
+                      )}
+                    </div>
+                  </GridColumn>
+                </GridRow>
+              );
+            }}
+          </AutoSizer>
+        )}
       </ScrollSync>
     );
   }
