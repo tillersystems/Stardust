@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AutoSizer, CellMeasurer, CellMeasurerCache, ScrollSync } from 'react-virtualized';
 import scrollbarSize from 'dom-helpers/scrollbarSize';
@@ -43,6 +43,8 @@ const sortingDirectionToIconName = {
  *
  */
 class TableVirtualized extends PureComponent {
+  bodyGridRef = createRef();
+
   /** Internal state. */
   state = {
     // Stores which column should be sorted.
@@ -141,13 +143,12 @@ class TableVirtualized extends PureComponent {
     return footerData ? [...sortedData, { key: data.length, item: {} }] : sortedData;
   };
 
-  renderBodyCell = ({ columnIndex, key, parent, rowIndex, sortedData, style }) => {
+  renderBodyCell = ({ columnIndex, effectiveWidth, key, parent, rowIndex, sortedData, style }) => {
     if (columnIndex < 1) {
       return;
     }
     const {
       colsDef,
-      columnWidth,
       rowsDef: { isSelectable },
     } = this.props;
     const { cellCache, selected } = this.state;
@@ -164,10 +165,11 @@ class TableVirtualized extends PureComponent {
         <BodyCell
           style={{
             ...style,
-            left: style.left - columnWidth,
+            left: style.left - effectiveWidth,
           }}
           columnIndex={columnIndex}
           hasPadding={colsDef.length - 1 === columnIndex}
+          isEmpty={!content}
           isSelectable={isSelectable}
           isSelected={selected === sortedData[rowIndex].key}
           justifyContent={colsDef[columnIndex].justifyContent}
@@ -179,11 +181,11 @@ class TableVirtualized extends PureComponent {
     );
   };
 
-  renderHeaderCell = ({ columnIndex, key, style }) => {
+  renderHeaderCell = ({ columnIndex, effectiveWidth, key, style }) => {
     if (columnIndex < 1) {
       return;
     }
-    const { colsDef, columnWidth } = this.props;
+    const { colsDef } = this.props;
     const {
       sort: { index, direction },
     } = this.state;
@@ -198,7 +200,7 @@ class TableVirtualized extends PureComponent {
         {...(isSortable ? { onClick: () => this.handleSortingClick(columnIndex) } : {})}
         style={{
           ...style,
-          left: style.left - columnWidth,
+          left: style.left - effectiveWidth,
         }}
       >
         {title}
@@ -270,8 +272,8 @@ class TableVirtualized extends PureComponent {
     );
   };
 
-  renderBottomCell = ({ columnIndex, key, parent, rowIndex, style }) => {
-    const { colsDef, columnWidth, footerData } = this.props;
+  renderBottomCell = ({ columnIndex, effectiveWidth, key, parent, rowIndex, style }) => {
+    const { colsDef, footerData } = this.props;
     const { cellCache } = this.state;
     const content = this.getContent(columnIndex, { item: footerData });
 
@@ -284,13 +286,13 @@ class TableVirtualized extends PureComponent {
         rowIndex={rowIndex}
       >
         <BodyCell
-          style={{
-            ...style,
-            left: style.left - columnWidth,
-          }}
           columnIndex={columnIndex}
           hasPadding={colsDef.length - 1 === columnIndex}
           justifyContent={colsDef[columnIndex].justifyContent}
+          style={{
+            ...style,
+            left: style.left - effectiveWidth,
+          }}
         >
           {content}
         </BodyCell>
@@ -316,6 +318,7 @@ class TableVirtualized extends PureComponent {
         rowIndex={rowIndex}
       >
         <LeftSideCell
+          isEmpty={!content}
           isSelectable={isSelectable}
           isSelected={selected === sortedData[rowIndex].key}
           justifyContent={colsDef[columnIndex].justifyContent}
@@ -349,8 +352,8 @@ class TableVirtualized extends PureComponent {
    */
   render() {
     const {
-      columnWidth,
       footerData,
+      minColumnWidth,
       overscanColumnCount,
       overscanRowCount,
       height,
@@ -362,7 +365,7 @@ class TableVirtualized extends PureComponent {
     const bodyHeight = height - 44;
     const columnCount = Object.keys(sortedData[0].item).length;
     const rowCount = sortedData.length;
-    const firstColumnWidth = widthFixedColumn || columnWidth;
+    const firstColumnWidth = widthFixedColumn || minColumnWidth;
     cellCache.clearAll();
 
     return (
@@ -416,66 +419,78 @@ class TableVirtualized extends PureComponent {
               )}
               <GridColumn>
                 <AutoSizer disableHeight>
-                  {({ width }) => (
-                    <div>
-                      <HeaderGridContainer width={width}>
-                        <HeaderGrid
-                          cellRenderer={this.renderHeaderCell}
-                          columnWidth={columnWidth}
-                          columnCount={columnCount}
-                          height={44}
-                          overscanColumnCount={overscanColumnCount}
-                          rowCount={1}
-                          rowHeight={44}
-                          scrollbarSize={scrollbarSize()}
-                          scrollLeft={scrollLeft}
-                          sort={sort}
-                          width={width - firstColumnWidth + columnWidth}
-                          widthFixedColumn={firstColumnWidth}
-                        />
-                      </HeaderGridContainer>
-                      <BodyGridContainer height={bodyHeight - 50 - scrollbarSize()} width={width}>
-                        <BodyGrid
-                          cellRenderer={props => this.renderBodyCell({ ...props, sortedData })}
-                          columnCount={columnCount}
-                          columnWidth={columnWidth}
-                          data={sortedData}
-                          deferredMeasurementCache={cellCache}
-                          height={bodyHeight}
-                          onScroll={onScroll}
-                          overscanColumnCount={overscanColumnCount}
-                          overscanRowCount={overscanRowCount}
-                          rowCount={rowCount}
-                          rowHeight={cellCache.rowHeight}
-                          scrollLeft={scrollLeft}
-                          scrollTop={scrollTop}
-                          width={width - firstColumnWidth + columnWidth}
-                          widthFixedColumn={firstColumnWidth}
-                        />
-                      </BodyGridContainer>
-                      {footerData && (
-                        <div
-                          style={{
-                            height: 50 + scrollbarSize(),
-                            width: width - scrollbarSize(),
-                          }}
-                        >
-                          <FooterGrid
-                            cellRenderer={this.renderBottomCell}
+                  {({ width }) => {
+                    const computedWidth = (width - firstColumnWidth) / (columnCount - 1); // remove width of fixed column and divide it by the number of remaining columns
+                    const effectiveWidth =
+                      computedWidth > minColumnWidth ? computedWidth : minColumnWidth;
+                    return (
+                      <div>
+                        <HeaderGridContainer width={width}>
+                          <HeaderGrid
+                            cellRenderer={props =>
+                              this.renderHeaderCell({ ...props, effectiveWidth })
+                            }
+                            columnWidth={effectiveWidth}
                             columnCount={columnCount}
-                            columnWidth={columnWidth}
-                            height={50}
+                            height={44}
+                            overscanColumnCount={overscanColumnCount}
                             rowCount={1}
-                            rowHeight={50}
+                            rowHeight={44}
                             scrollbarSize={scrollbarSize()}
                             scrollLeft={scrollLeft}
-                            width={width - firstColumnWidth + columnWidth - scrollbarSize()}
+                            sort={sort}
+                            width={width - firstColumnWidth + effectiveWidth}
                             widthFixedColumn={firstColumnWidth}
                           />
-                        </div>
-                      )}
-                    </div>
-                  )}
+                        </HeaderGridContainer>
+                        <BodyGridContainer height={bodyHeight - 50 - scrollbarSize()} width={width}>
+                          <BodyGrid
+                            cellRenderer={props =>
+                              this.renderBodyCell({ ...props, effectiveWidth, sortedData })
+                            }
+                            columnCount={columnCount}
+                            columnWidth={effectiveWidth}
+                            data={sortedData}
+                            deferredMeasurementCache={cellCache}
+                            height={bodyHeight}
+                            onScroll={onScroll}
+                            overscanColumnCount={overscanColumnCount}
+                            overscanRowCount={overscanRowCount}
+                            ref={this.bodyGridRef}
+                            rowCount={rowCount}
+                            rowHeight={cellCache.rowHeight}
+                            scrollLeft={scrollLeft}
+                            scrollTop={scrollTop}
+                            width={width - firstColumnWidth + effectiveWidth}
+                            widthFixedColumn={firstColumnWidth}
+                          />
+                        </BodyGridContainer>
+                        {footerData && (
+                          <div
+                            style={{
+                              height: 50 + scrollbarSize(),
+                              width: width - scrollbarSize(),
+                            }}
+                          >
+                            <FooterGrid
+                              cellRenderer={props =>
+                                this.renderBottomCell({ ...props, effectiveWidth })
+                              }
+                              columnCount={columnCount}
+                              columnWidth={effectiveWidth}
+                              height={50}
+                              rowCount={1}
+                              rowHeight={50}
+                              scrollbarSize={scrollbarSize()}
+                              scrollLeft={scrollLeft}
+                              width={width - firstColumnWidth + effectiveWidth} //- scrollbarSize()
+                              widthFixedColumn={firstColumnWidth}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }}
                 </AutoSizer>
               </GridColumn>
             </GridRow>
@@ -505,9 +520,6 @@ TableVirtualized.propTypes = {
     }),
   ).isRequired,
 
-  /** Width of columns */
-  columnWidth: number,
-
   /** Data to display */
   data: array.isRequired,
 
@@ -522,6 +534,12 @@ TableVirtualized.propTypes = {
 
   /** Height of the table use this props only is the table is scrollable */
   height: number,
+
+  /**
+  /** Minimum width of columns. Width of columns is computed from the remaining width after the fixed column.
+   * If the computed width is too small, it will take the minColumnWidth as width
+   **/
+  minColumnWidth: number,
 
   /** Number of additional columns to render besides visible ones */
   overscanColumnCount: number,
@@ -541,10 +559,10 @@ TableVirtualized.propTypes = {
 
 /** Default props. */
 TableVirtualized.defaultProps = {
-  columnWidth: 125,
   dataTotal: null,
   footerData: null,
   height: 400,
+  minColumnWidth: 125,
   overscanColumnCount: 2,
   overscanRowCount: 5,
   rowsDef: {

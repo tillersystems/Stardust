@@ -30,6 +30,16 @@ export const BodyCell = styled.div`
     css`
       background: ${({ theme: { palette } }) => palette.veryLightGrey};
     `}
+
+  ${({ isEmpty }) =>
+    isEmpty &&
+    css`
+      border: none;
+
+      &:after {
+        border: none;
+      }
+    `}
 `;
 
 export const BodyGrid = styled(Grid)`
@@ -168,6 +178,16 @@ export const LeftSideCell = styled.div`
     height: 100%;
     border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
   }
+
+  ${({ isEmpty }) =>
+    isEmpty &&
+    css`
+      border: none;
+
+      &:after {
+        border: none;
+      }
+    `}
 `;
 
 export const LeftSideGrid = styled(Grid)`
