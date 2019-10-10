@@ -137,6 +137,7 @@ class DatePickerInput extends PureComponent {
               </DatePickerWrapper>
             }
             onClickOutside={this.handleOutsideClick}
+            placement="bottom-start"
           >
             <TextInput
               fluid={fluid}

@@ -317,6 +317,13 @@ Select.propTypes = {
   disabled: bool,
 
   /**
+   * CSS height of the component
+   */
+  // https://github.com/yannickcr/eslint-plugin-react/issues/1520
+  // eslint-disable-next-line react/no-unused-prop-types
+  height: string,
+
+  /**
    * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
    */
   modifiers: object,
@@ -371,6 +378,7 @@ Select.defaultProps = {
   children: null,
   className: '',
   disabled: false,
+  height: '3.8rem',
   resetValue: false,
   triggerWrapperCss: null,
   usePortal: false,
@@ -380,8 +388,8 @@ Select.defaultProps = {
 export default styled(Select)`
   position: relative;
   user-select: none;
-  width: ${({ width }) => (/^\d+(rem|px|%)$/.test(width) ? width : 'auto')};
-  height: 4rem;
+  height: ${({ height }) => height || '3.8rem'};
+  width: ${({ width }) => width || '100%'};
 
   /* Disabled */
   ${({ disabled }) =>

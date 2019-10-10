@@ -263,6 +263,12 @@ Dropdown.propTypes = {
   headerStyle: object,
 
   /**
+   * CSS height of the component
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  height: string,
+
+  /**
    * CSS provided to each item of the dropdown. Must use `css` method from styled-components
    */
   itemCss: array,
@@ -309,6 +315,7 @@ Dropdown.propTypes = {
 Dropdown.defaultProps = {
   className: '',
   headerStyle: null,
+  height: '3.8rem',
   itemCss: null,
   modifiers: null,
   noResultLabel: null,
@@ -321,5 +328,5 @@ Dropdown.defaultProps = {
 export default styled(Dropdown)`
   position: relative;
   user-select: none;
-  height: 100%;
+  height: ${({ height }) => height || '3.8rem'};
 `;

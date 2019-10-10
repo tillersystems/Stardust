@@ -8,7 +8,7 @@ export const Header = styled.button`
   width: 100%;
   position: relative;
 
-  padding: 0.8rem 1.6rem;
+  padding: 0 1.6rem;
 
   cursor: pointer;
   text-align: left;
