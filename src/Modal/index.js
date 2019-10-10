@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import posed, { PoseGroup } from 'react-pose';
+import { AnimatePresence } from 'framer-motion';
 import { Portal } from 'react-portal';
+
 import Theme from '../Theme';
+import { containerVariants, overlayVariants, dialogVariants } from './animation';
 
 /**
  * A Modal is displayed through a Portal added at the end of the body element. An overlay hides
@@ -34,16 +36,33 @@ class Modal extends PureComponent {
     const { active, width, height, padding, onOverlayClick, children } = this.props;
     return (
       <Portal>
-        <PoseGroup>
+        <AnimatePresence>
           {active && (
-            <ContainerAnimation key="Container">
-              <OverlayAnimation onClick={onOverlayClick} key="Overlay" data-testid="overlay" />
-              <DialogAnimation width={width} height={height} padding={padding} key="Dialog">
+            <Container
+              key="Container"
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={containerVariants}
+            >
+              <Overlay
+                onClick={onOverlayClick}
+                variants={overlayVariants}
+                key="Overlay"
+                data-testid="overlay"
+              />
+              <Dialog
+                width={width}
+                height={height}
+                padding={padding}
+                key="Dialog"
+                variants={dialogVariants}
+              >
                 {children}
-              </DialogAnimation>
-            </ContainerAnimation>
+              </Dialog>
+            </Container>
           )}
-        </PoseGroup>
+        </AnimatePresence>
       </Portal>
     );
   }
@@ -95,43 +114,5 @@ Modal.defaultProps = {
   padding: Theme.dimensions.medium,
   width: '48rem',
 };
-
-/**
- * Animation
- */
-const ContainerAnimation = posed(Container)({
-  enter: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-});
-
-const OverlayAnimation = posed(Overlay)({
-  enter: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-});
-
-const DialogAnimation = posed(Dialog)({
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: 150,
-    transition: {
-      y: { type: 'spring', stiffness: 900, damping: 28 },
-      default: { duration: 150 },
-    },
-  },
-  exit: {
-    y: 50,
-    opacity: 0,
-    transition: { duration: 150 },
-  },
-});
 
 export default Modal;

@@ -59,6 +59,7 @@
     "cuid": "2.1.6",
     "dom-helpers": "^2.4.0 || ^3.0.0",
     "exenv": "1.2.2",
+    "framer-motion": "^1.6.12",
     "initials": "3.0.1",
     "luxon": "1.19.3",
     "polished": "3.4.1",

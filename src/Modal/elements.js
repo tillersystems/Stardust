@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   position: fixed;
   display: grid;
   justify-content: center;
@@ -20,7 +21,7 @@ export const Container = styled.div`
   `};
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -28,7 +29,7 @@ export const Overlay = styled.div`
   z-index: 99;
 `;
 
-export const Dialog = styled.dialog`
+export const Dialog = styled(motion.dialog)`
   position: relative;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
