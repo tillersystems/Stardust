@@ -5,6 +5,7 @@ export const Container = styled.div`
 `;
 
 export const DatePickerWrapper = styled.div`
+  padding: 1.5rem;
   background: white;
 `;
 

@@ -3,6 +3,7 @@
 exports[`<DatePickerInput /> should render without a problem 1`] = `
 .c2 {
   display: inline-block;
+  height: inherit;
   width: inherit;
 }
 

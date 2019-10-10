@@ -102,5 +102,6 @@ export const PopoverContentWrapper = styled.div`
 
 export const PopoverTriggerWrapper = styled.span`
   display: inline-block;
+  height: inherit;
   width: inherit;
 `;

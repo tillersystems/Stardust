@@ -3,6 +3,7 @@
 exports[`<Select /> should render without a problem 1`] = `
 .c1 {
   display: inline-block;
+  height: inherit;
   width: inherit;
 }
 
@@ -14,7 +15,7 @@ exports[`<Select /> should render without a problem 1`] = `
   height: 100%;
   width: 100%;
   position: relative;
-  padding: 0.8rem 1.6rem;
+  padding: 0 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: 1.4rem;
@@ -69,8 +70,8 @@ exports[`<Select /> should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: auto;
-  height: 4rem;
+  height: 3.8rem;
+  width: 100%;
 }
 
 <div
@@ -97,6 +98,7 @@ exports[`<Select /> should render without a problem 1`] = `
 exports[`<Select /> should render without a problem when disabled 1`] = `
 .c1 {
   display: inline-block;
+  height: inherit;
   width: inherit;
 }
 
@@ -108,7 +110,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   height: 100%;
   width: 100%;
   position: relative;
-  padding: 0.8rem 1.6rem;
+  padding: 0 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: 1.4rem;
@@ -163,8 +165,8 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: auto;
-  height: 4rem;
+  height: 3.8rem;
+  width: 100%;
 }
 
 .c0 .c2 {
