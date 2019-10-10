@@ -6057,7 +6057,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^1.6.12:
+framer-motion@1.6.12:
   version "1.6.12"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.6.12.tgz#e1928044594ca1b2ed7515f99dccf98f66c5ccde"
   integrity sha512-ooF5lnD8rMQxCT7zekzZIOIpAtX439PEYD1hyq8Rc6cx6+a7n9jg47uc54p/oG3w/aV7yANDDoD7uYkMvB9tnA==
