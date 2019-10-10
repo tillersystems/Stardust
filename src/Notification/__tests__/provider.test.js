@@ -359,7 +359,7 @@ describe('<NotificationProvider />', () => {
       jest.runOnlyPendingTimers();
     });
 
-    wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
+    await wait(() => expect(queryByText(/This is a notification/i)).not.toBeInTheDocument());
   });
 
   test('should add and remove a notification with specific key', async () => {

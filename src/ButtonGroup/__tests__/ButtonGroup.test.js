@@ -3,7 +3,14 @@ import { fireEvent } from '@testing-library/react';
 
 import { Button, ButtonGroup } from '../..';
 
+const originalWarn = console.error;
+afterEach(() => (console.error = originalWarn));
+
 describe('<ButtonGroup />', () => {
+  let consoleOutput = [];
+  const mockedWarn = output => consoleOutput.push(output);
+  beforeEach(() => (console.error = mockedWarn));
+
   test('should render without a problem', () => {
     const { container } = render(
       <ButtonGroup>
@@ -121,11 +128,6 @@ describe('<ButtonGroup />', () => {
           <Button appearance="secondary">OFF</Button>
         </ButtonGroup>,
       );
-    expect(renderComponent).toThrow(
-      'Error: Uncaught [Error: "name" prop must be provided to Button]',
-    );
-    expect(renderComponent).toThrow(
-      /Warning: Render methods should be a pure function of props and state;/i,
-    );
+    expect(renderComponent).toThrow('"name" prop must be provided to Button');
   });
 });
