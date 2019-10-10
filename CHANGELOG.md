@@ -1,3 +1,13 @@
+# [4.9.0](https://github.com/tillersystems/Stardust/compare/v4.8.0...v4.9.0) (2019-10-10)
+
+### Bug Fixes
+
+- **Notification:** provide time-sensitive information without affecting keyboard focus using role=alert ([#774](https://github.com/tillersystems/Stardust/issues/774)) ([ff6e915](https://github.com/tillersystems/Stardust/commit/ff6e915db6d79b76b7c90ce4a71a4c4b8182ca55))
+
+### Features
+
+- **TableVirtualized:** use react-virtualized components to create new table ([#783](https://github.com/tillersystems/Stardust/issues/783)) ([5122a3f](https://github.com/tillersystems/Stardust/commit/5122a3f6795d6d14476db251a11d86bab29d7251))
+
 # [4.8.0](https://github.com/tillersystems/Stardust/compare/v4.7.1...v4.8.0) (2019-09-25)
 
 ### Features
