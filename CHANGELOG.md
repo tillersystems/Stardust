@@ -1,3 +1,9 @@
+## [4.9.1](https://github.com/tillersystems/Stardust/compare/v4.9.0...v4.9.1) (2019-10-11)
+
+### Bug Fixes
+
+- change height to 3.8rem to fit design ([#801](https://github.com/tillersystems/Stardust/issues/801)) ([e32e699](https://github.com/tillersystems/Stardust/commit/e32e6997eca5889718c3d86494f41ec8661d4722))
+
 # [4.9.0](https://github.com/tillersystems/Stardust/compare/v4.8.0...v4.9.0) (2019-10-10)
 
 ### Bug Fixes
