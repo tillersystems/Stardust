@@ -1,7 +1,8 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container } from './elements';
+import { containerVariants, layoutTransition } from './animation';
 import { Timer } from './helpers';
 
 /**
@@ -9,95 +10,105 @@ import { Timer } from './helpers';
  *
  * @return {jsx}
  */
-const NotificationContainer = forwardRef(
-  ({ autoDismiss, autoDismissTimeout, component: Component, onDismiss, pauseOnHover }, ref) => {
-    const [timer, setTimer] = useState(null);
+const NotificationContainer = ({
+  autoDismiss,
+  autoDismissTimeout,
+  component: Component,
+  onDismiss,
+  pauseOnHover,
+  placement,
+}) => {
+  const [timer, setTimer] = useState(null);
 
-    /**
-     * Start Timer
-     *
-     */
-    const startTimer = () => {
-      if (!autoDismiss) return;
-      setTimer(new Timer(onDismiss, autoDismissTimeout));
+  /**
+   * Start Timer
+   *
+   */
+  const startTimer = () => {
+    if (!autoDismiss) return;
+    setTimer(new Timer(onDismiss, autoDismissTimeout));
+  };
+
+  /**
+   * Reset current timer with new autoDismissTimeout value
+   *
+   */
+  const resetTimer = () => {
+    timer.resetTimer(autoDismissTimeout);
+  };
+
+  /**
+   * Clear Timer
+   *
+   */
+  const clearTimer = () => {
+    timer.clear();
+  };
+
+  /**
+   * onMouseEnter
+   *
+   */
+  const onMouseEnter = () => {
+    timer.pause();
+  };
+
+  /**
+   * onMouseLeave
+   *
+   */
+  const onMouseLeave = () => {
+    timer.resume();
+  };
+
+  /**
+   * useEffect
+   *
+   */
+  useEffect(() => {
+    if (!timer) startTimer();
+    return () => {
+      if (timer) clearTimer();
     };
+  }, [timer, autoDismiss]);
 
-    /**
-     * Reset current timer with new autoDismissTimeout value
-     *
-     */
-    const resetTimer = () => {
-      timer.resetTimer(autoDismissTimeout);
-    };
+  /**
+   * useEffect to handle Component update
+   *
+   */
+  useEffect(() => {
+    // try to add time to current timer if exists (on Component change).
+    if (timer) resetTimer();
+  }, [Component]);
 
-    /**
-     * Clear Timer
-     *
-     */
-    const clearTimer = () => {
-      timer.clear();
-    };
+  const hasMouseEvents = pauseOnHover && autoDismiss;
 
-    /**
-     * onMouseEnter
-     *
-     */
-    const onMouseEnter = () => {
-      timer.pause();
-    };
+  // NOTE: conditions here so methods can be clean
+  const handleMouseEnter = hasMouseEvents ? onMouseEnter : null;
+  const handleMouseLeave = hasMouseEvents ? onMouseLeave : null;
 
-    /**
-     * onMouseLeave
-     *
-     */
-    const onMouseLeave = () => {
-      timer.resume();
-    };
-
-    /**
-     * useEffect
-     *
-     */
-    useEffect(() => {
-      if (!timer) startTimer();
-      return () => {
-        if (timer) clearTimer();
-      };
-    }, [timer, autoDismiss]);
-
-    /**
-     * useEffect to handle Component update
-     *
-     */
-    useEffect(() => {
-      // try to add time to current timer if exists (on Component change).
-      if (timer) resetTimer();
-    }, [Component]);
-
-    const hasMouseEvents = pauseOnHover && autoDismiss;
-
-    // NOTE: conditions here so methods can be clean
-    const handleMouseEnter = hasMouseEvents ? onMouseEnter : null;
-    const handleMouseLeave = hasMouseEvents ? onMouseLeave : null;
-
-    return (
-      <Container
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        data-testid="notification-container"
-        ref={ref}
-        role="alert"
-      >
-        <Component onClose={onDismiss} />
-      </Container>
-    );
-  },
-);
+  return (
+    <Container
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      variants={containerVariants}
+      custom={placement}
+      layoutTransition={layoutTransition}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      data-testid="notification-container"
+      role="alert"
+    >
+      <Component onClose={onDismiss} />
+    </Container>
+  );
+};
 
 /**
  * PropTypes Validation
  */
-const { bool, func, number } = PropTypes;
+const { bool, func, number, string } = PropTypes;
 
 NotificationContainer.propTypes = {
   /**
@@ -124,6 +135,11 @@ NotificationContainer.propTypes = {
    * Whether or not to pause the timeout when hovered
    */
   pauseOnHover: bool.isRequired,
+
+  /**
+   * Placement of the notification on the screen
+   */
+  placement: string.isRequired,
 };
 
 NotificationContainer.displayName = 'NotificationContainer';
