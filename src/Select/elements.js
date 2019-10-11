@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { transparentize } from 'polished';
 
 export const Header = styled.button`
   display: flex;
@@ -98,7 +97,7 @@ export const MenuItem = styled.li`
         `
       : css`
           :hover {
-            background: ${({ theme: { palette } }) => transparentize(0.5, palette.veryLightBlue)};
+            background: ${({ theme: { palette } }) => palette.veryLightGrey};
           }
         `};
 `;

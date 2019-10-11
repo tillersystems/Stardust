@@ -14,17 +14,21 @@ import DropdownReadme from '../README.md';
 const itemCss = css`
   padding: 0.9rem 1.2rem;
   &:first-child {
-    padding-top: 1.8rem;
+    padding-top: 1.2rem;
   }
   ${({ searchable }) =>
     searchable &&
     css`
       &:nth-child(2) {
-        padding-top: 1.8rem;
+        padding-top: 1.2rem;
       }
     `}
   &:last-child {
-    padding-bottom: 1.8rem;
+    padding-bottom: 1.2rem;
+  }
+
+  :hover {
+    background: ${({ theme: { palette } }) => palette.veryLightGrey};
   }
 `;
 
