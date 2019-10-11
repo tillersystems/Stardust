@@ -202,10 +202,6 @@ class Dropdown extends PureComponent {
             </Menu>
           }
           contentRef={contentRef}
-          contentWrapperStyle={{
-            marginBottom: '0.4rem',
-            marginTop: '0.4rem',
-          }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
