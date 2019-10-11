@@ -57,7 +57,7 @@
   "dependencies": {
     "@tippy.js/react": "2.2.3",
     "cuid": "2.1.6",
-    "dom-helpers": "5.1.0",
+    "dom-helpers": "^2.4.0 || ^3.0.0",
     "exenv": "1.2.2",
     "initials": "3.0.1",
     "luxon": "1.19.3",

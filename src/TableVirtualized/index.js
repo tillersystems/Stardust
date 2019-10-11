@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { AutoSizer, CellMeasurer, CellMeasurerCache, ScrollSync } from 'react-virtualized';
-import scrollbarSize from 'dom-helpers/scrollbarSize';
+import scrollbarSize from 'dom-helpers/util/scrollbarSize';
 
 import { Theme } from '..';
 import compare from '../helpers/compare';
