@@ -52,7 +52,8 @@ class CheckBox extends PureComponent {
    * Handle Change
    * fired when checkbox is triggered and state changes.
    */
-  handleChange = () => {
+  handleChange = event => {
+    event.persist();
     const { onChange, isDisabled } = this.props;
 
     if (isDisabled) {
@@ -65,7 +66,7 @@ class CheckBox extends PureComponent {
       onChange && onChange(!isChecked);
     } else {
       this.setState({ isChecked: !isChecked }, () => {
-        onChange && onChange(!isChecked);
+        onChange && onChange(event);
       });
     }
   };
