@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Popover from '../Popover';
 import SearchBar from './SearchBar';
 import { Header, HeaderContent, Menu, MenuItem, SearchInputContainer } from './elements';
+import { animationVariants } from './animation';
 
 /**
  * A Dropdown displays content through its children prop that must be components wrapping text.
@@ -164,6 +165,7 @@ class Dropdown extends PureComponent {
     return (
       <div className={className} data-testid="dropdown">
         <Popover
+          animationVariants={animationVariants}
           content={
             <Menu>
               {searchable && (
@@ -202,6 +204,7 @@ class Dropdown extends PureComponent {
             </Menu>
           }
           contentRef={contentRef}
+          contentWrapperStyle={{ marginTop: '4rem' }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}

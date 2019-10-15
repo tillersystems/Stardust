@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { transparentize } from 'polished';
+import { motion } from 'framer-motion';
 
 export const ARROW_SIZE = 8;
 export const CONTENT_PADDING = 1.8;
@@ -57,7 +58,7 @@ export const Arrow = styled.span`
     `}
 `;
 
-export const PopoverContentWrapper = styled.div`
+export const PopoverContentWrapper = styled(motion.div)`
   background: ${({ theme: { palette } }) => palette.white};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
 

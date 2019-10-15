@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components';
 import { Popover } from '..';
 import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
+import { animationVariants } from './animation';
 
 /**
  * Select component displays a button as header holding one value at a time amongst
@@ -230,21 +231,7 @@ class Select extends PureComponent {
     return (
       <div className={className}>
         <Popover
-          animationProps={{
-            enter: {
-              opacity: 1,
-              scaleY: 1,
-              transition: {
-                scaleY: { ease: 'anticipate', duration: 150 },
-                default: { duration: 150 },
-              },
-            },
-            exit: {
-              opacity: 0,
-              scaleY: 0,
-              transition: { duration: 150 },
-            },
-          }}
+          animationVariants={animationVariants}
           content={
             <Menu>
               {Children.map(children, child => (
@@ -265,6 +252,7 @@ class Select extends PureComponent {
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
           triggerWrapperCss={triggerWrapperCss}
+          contentWrapperStyle={{ marginTop: '4rem' }}
           usePortal={usePortal}
           width={contentWidth}
         >
