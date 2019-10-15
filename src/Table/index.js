@@ -207,7 +207,12 @@ class Table extends PureComponent {
             >
               {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
                 isRowHeader ? (
-                  <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
+                  <RowHeader
+                    align={align}
+                    isScrollable={isScrollable}
+                    key={`row-header-${index}`}
+                    {...(item.children ? { style: { cursor: 'pointer' } } : {})}
+                  >
                     {item.children && (
                       <Icon
                         name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
@@ -242,6 +247,10 @@ class Table extends PureComponent {
                         isRowHeader ? (
                           <RowHeader
                             align={align}
+                            css={`
+                              padding: 1.8rem 4rem;
+                              font-weight: ${({ theme: { fonts } }) => fonts.weight.normal};
+                            `}
                             isScrollable={isScrollable}
                             key={`row-header-${key}-${index}`}
                           >
