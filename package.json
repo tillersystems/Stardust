@@ -48,6 +48,7 @@
     }
   },
   "peerDependencies": {
+    "framer-motion": "^1.x",
     "prop-types": "^15.x",
     "react": "^16.x",
     "react-dom": "^16.x",
@@ -107,6 +108,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-react": "7.14.3",
+    "framer-motion": "1.6.12",
     "husky": "3.0.9",
     "jest": "24.9.0",
     "jest-dom": "3.5.0",
