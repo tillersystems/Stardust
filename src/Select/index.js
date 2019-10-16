@@ -17,8 +17,6 @@ import Option from './Option';
  * @return {jsx}
  */
 class Select extends PureComponent {
-  static Option = Option;
-
   /**
    * getDerivedStateFromProps
    *
@@ -207,6 +205,8 @@ class Select extends PureComponent {
 
     this.setState({ contentWidth: `${contentWidth}px` });
   };
+
+  static Option = Option;
 
   /**
    * Renders the component.
