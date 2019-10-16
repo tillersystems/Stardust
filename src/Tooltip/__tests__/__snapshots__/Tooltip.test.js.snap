@@ -3,7 +3,6 @@
 exports[`<Tooltip /> should render only the child element 1`] = `
 <div
   style="display: inline-flex;"
-  tabindex="0"
 >
   <button
     type="button"
