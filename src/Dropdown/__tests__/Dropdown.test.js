@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent } from '@testing-library/react';
+import { fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
 import { css } from 'styled-components';
 
 import Dropdown from '..';
@@ -20,7 +20,7 @@ describe('<Dropdown />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toggle the dropdown', done => {
+  test('should toggle the dropdown', async () => {
     const props = { title: 'title' };
     const { container, queryAllByText } = render(
       <Dropdown {...props}>
@@ -40,8 +40,7 @@ describe('<Dropdown />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    let ItemNode;
-    ItemNode = queryAllByText(/Item/);
+    const ItemNode = queryAllByText(/Item/);
 
     expect(ItemNode).toHaveLength(3);
     expect(ItemNode[0]).toBeInTheDocument();
@@ -51,15 +50,13 @@ describe('<Dropdown />', () => {
     // Close Dropdown
     fireEvent.click(button);
 
-    setTimeout(() => {
-      ItemNode = queryAllByText(/Item/);
-      expect(button).toHaveAttribute('aria-expanded', 'false');
-      expect(button).toHaveAttribute('aria-haspopup', 'true');
-      expect(ItemNode[0]).toBeUndefined();
-      expect(ItemNode[1]).toBeUndefined();
-      expect(ItemNode[2]).toBeUndefined();
-      done();
-    }, 500);
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
+    const ItemNodeRemoved = await waitForElementToBeRemoved(() => queryAllByText(/Item/));
+    expect(ItemNodeRemoved[0]).toBeUndefined();
+    expect(ItemNodeRemoved[1]).toBeUndefined();
+    expect(ItemNodeRemoved[2]).toBeUndefined();
   });
 
   test('should filter items', () => {
@@ -146,7 +143,7 @@ describe('<Dropdown />', () => {
         }
       `,
     };
-    const { container, getAllByRole, getByText } = render(
+    const { container, getAllByRole } = render(
       <Dropdown {...props}>
         <div>Item1</div>
         <div>Item2</div>
