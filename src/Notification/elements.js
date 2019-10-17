@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { getNotificationPosition, getListDirection } from './helpers';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   margin-bottom: 1rem;
 `;
 

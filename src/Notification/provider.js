@@ -1,12 +1,11 @@
 import React, { useReducer, useContext, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Portal } from 'react-portal';
-import posed, { PoseGroup } from 'react-pose';
+import { AnimatePresence } from 'framer-motion';
 
 import Container from './Container';
 import notificationReducer from './reducer';
 import { ADD_NOTIFICATION, REMOVE_NOTIFICATION, UPDATE_NOTIFICATION } from './constants';
-import { getPositionAnimation } from './helpers';
 import NotificationsList from './NotificationsList';
 
 const NotificationContext = React.createContext();
@@ -94,9 +93,9 @@ export const NotificationProvider = ({
       {children}
       <Portal>
         <NotificationsList placement={placement}>
-          <PoseGroup>
+          <AnimatePresence>
             {notifications.map(({ options: notificationOptions, key, component }) => (
-              <NotificationAnimation
+              <Container
                 key={key}
                 component={component}
                 onDismiss={() => dismissNotification(key)}
@@ -106,29 +105,12 @@ export const NotificationProvider = ({
                 placement={placement}
               />
             ))}
-          </PoseGroup>
+          </AnimatePresence>
         </NotificationsList>
       </Portal>
     </NotificationContext.Provider>
   );
 };
-
-const NotificationAnimation = posed(Container)({
-  enter: {
-    x: ({ placement }) => getPositionAnimation(placement).enter.x,
-    y: ({ placement }) => getPositionAnimation(placement).enter.y,
-    transition: {
-      x: { type: 'spring', stiffness: 800, damping: 50 },
-      y: { type: 'spring', stiffness: 800, damping: 80 },
-      default: { duration: 250 },
-    },
-  },
-  exit: {
-    x: ({ placement }) => getPositionAnimation(placement).exit.x,
-    y: ({ placement }) => getPositionAnimation(placement).exit.y,
-    transition: { duration: 150 },
-  },
-});
 
 /**
  * PropTypes Validation
