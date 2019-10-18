@@ -4,7 +4,7 @@ exports[`<Tag /> should render without a problem 1`] = `
 .c0 {
   position: relative;
   display: inline-block;
-  padding: 0.2rem 0.8rem 0.4rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
 }

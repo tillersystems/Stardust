@@ -42,7 +42,7 @@ export default styled(Tag)`
   position: relative;
   display: inline-block;
 
-  padding: 0.2rem 0.8rem 0.4rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
 
   color: ${({ theme: { palette } }) => palette.white};
