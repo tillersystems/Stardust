@@ -173,6 +173,9 @@ export const RowHeader = styled.th`
 
 // Table Footer
 export const Footer = styled.tfoot`
+  position: sticky;
+  bottom: 0;
+
   th,
   td {
     ${({ isScrollable }) =>
