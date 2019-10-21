@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Header = styled.button`
   display: flex;
+  align-items: center;
 
   height: 100%;
   width: 100%;
