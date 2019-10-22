@@ -94,6 +94,7 @@ class Popover extends PureComponent {
       isOpen,
       modifiers,
       placement,
+      portalPosition,
       positionFixed,
       usePortal,
       width,
@@ -135,7 +136,21 @@ class Popover extends PureComponent {
     );
 
     if (usePortal) {
-      popoverContent = <Portal>{popper}</Portal>;
+      if (portalPosition) {
+        const { left, top } = portalPosition;
+        popoverContent = (
+          <Portal>
+            <div
+              data-testid="positioned-portal"
+              style={{ position: 'absolute', left: `${left}px`, top: `${top}px` }}
+            >
+              {popper}
+            </div>
+          </Portal>
+        );
+      } else {
+        popoverContent = <Portal>{popper}</Portal>;
+      }
     } else {
       popoverContent = popper;
     }
@@ -244,6 +259,11 @@ Popover.propTypes = {
   placement: string,
 
   /**
+   * Custom portal position
+   */
+  portalPosition: object,
+
+  /**
    * Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
    */
   positionFixed: bool,
@@ -281,6 +301,7 @@ Popover.defaultProps = {
   modifiers: {},
   onClickOutside: null,
   placement: 'bottom',
+  portalPosition: null,
   positionFixed: false,
   triggerRef: null,
   triggerWrapperCss: null,
