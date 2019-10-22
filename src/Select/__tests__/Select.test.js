@@ -20,6 +20,21 @@ describe('<Select />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  test('should render using portal without a problem', () => {
+    const props = { placeholder: 'placeholder' };
+    const { getByTestId } = render(
+      <Select usePortal {...props}>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
+      </Select>,
+    );
+
+    const node = getByTestId('positioned-portal');
+    expect(node).toBeInTheDocument();
+  });
+
   test('should render without a problem when disabled', () => {
     const props = { placeholder: 'placeholder', disabled: true };
     const { container } = render(
