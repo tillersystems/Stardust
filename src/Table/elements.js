@@ -1,12 +1,17 @@
 import styled, { css } from 'styled-components';
 
-const borderRight = css`
+const borderRight = height => css`
   &:after {
     content: '';
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 100%;
+    /*
+    ** If we use a percentage size on the pseudo element and a fixed height on the element,
+    ** it will lead to an etrange behaviour on Safari and shrink the element height.
+    ** To avoid this behaviour here we need to set a height to the border when a height is set to the element.
+    */
+    height: ${height ? height : '100%'};
     border-right: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
   }
 `;
@@ -74,7 +79,7 @@ export const TableHeaderCell = styled.th`
     padding-right: 0.5rem;
     z-index: 2;
     left: 0;
-    ${({ isScrollable }) => isScrollable && borderRight}
+    ${({ isScrollable }) => isScrollable && borderRight('4.4rem')}
   }
 
   &:last-child {
@@ -105,8 +110,11 @@ export const HeaderLabel = styled.span`
 // Table Body
 export const Body = styled.tbody`
   td {
-    padding: 1.6rem 0.5rem;
+    height: 5.2rem;
 
+    padding: 0 0.5rem;
+
+    font-feature-settings: 'tnum';
     font-weight: ${({
       theme: {
         fonts: { weight },
@@ -120,6 +128,9 @@ export const Body = styled.tbody`
     }
     &:last-child {
       padding-right: 3rem;
+    }
+    &:hover {
+      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
     }
   }
 `;
@@ -155,18 +166,25 @@ export const BodyRow = styled(Row)`
 `;
 
 export const RowHeader = styled.th`
+
+  height: 5.2rem;
+
   ${({ isScrollable }) =>
     isScrollable &&
     css`
       position: sticky;
       left: 0;
-      ${borderRight}
+      ${borderRight('5.2rem')}
     `}
 
   text-align: ${({ align }) => align || 'left'};
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
-  padding: 1.8rem 0.5rem 1.8rem 3rem;
+  padding: 0 0.5rem 0 3rem;
+  max-width: 30rem;
   min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};
 `;
@@ -175,6 +193,16 @@ export const RowHeader = styled.th`
 export const Footer = styled.tfoot`
   position: sticky;
   bottom: 0;
+
+  text-transform: uppercase;
+
+  td {
+    font-feature-settings: 'tnum';
+
+    &:hover {
+      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+    }
+  }
 
   th,
   td {
@@ -194,7 +222,9 @@ export const Footer = styled.tfoot`
       border-top: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
     }
 
-    padding: 1.8rem 0.5rem;
+    height: 5.2rem;
+
+    padding: 0 0.5rem;
     background-color: ${({ theme: { palette } }) => palette.white};
 
     color: ${({ theme: { palette } }) => palette.primary.default};
@@ -207,14 +237,14 @@ export const Footer = styled.tfoot`
       css`
         left: 0;
         z-index: 1;
-        ${borderRight}
+        ${borderRight('5.2rem')}
       `}
 
-    padding: 1.8rem 0.5rem 1.8rem 3rem;
+    padding: 0 0.5rem 0 3rem;
   }
 
   td:last-of-type {
-    padding: 1.8rem 3rem 1.8rem 0.5rem;
+    padding: 0 3rem 0 0.5rem;
   }
 `;
 
