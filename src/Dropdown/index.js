@@ -122,6 +122,8 @@ class Dropdown extends PureComponent {
     const displayMenu = this.getControllableValue('displayMenu');
     const { onToggle } = this.props;
 
+    this.updatePosition();
+
     if (this.isControlled('displayMenu')) {
       onToggle && onToggle(event);
     } else {
