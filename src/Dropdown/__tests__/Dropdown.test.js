@@ -19,6 +19,19 @@ describe('<Dropdown />', () => {
 
     expect(container.firstChild).toMatchSnapshot();
   });
+  test('should render without a problem using portal', () => {
+    const props = { title: 'title' };
+    const { getByTestId } = render(
+      <Dropdown usePortal {...props}>
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+      </Dropdown>,
+    );
+
+    const node = getByTestId('positioned-portal');
+    expect(node).toBeInTheDocument();
+  });
 
   test('should toggle the dropdown', async () => {
     const props = { title: 'title' };
