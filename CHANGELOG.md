@@ -1,3 +1,11 @@
+## [4.9.2](https://github.com/tillersystems/Stardust/compare/v4.9.1...v4.9.2) (2019-10-23)
+
+### Bug Fixes
+
+- **Table:** fix sticky for safari/ios ([#826](https://github.com/tillersystems/Stardust/issues/826)) ([45b4c8e](https://github.com/tillersystems/Stardust/commit/45b4c8e1388a699bcf3771ad92124753942e628d))
+- update css of some Dropdown, Select and Tag ([#824](https://github.com/tillersystems/Stardust/issues/824)) ([84df34c](https://github.com/tillersystems/Stardust/commit/84df34c5fda5d58ec4338f425bbfeff99df34063))
+- update style of Checkbox, Dropdown, Select ([#807](https://github.com/tillersystems/Stardust/issues/807)) ([3198734](https://github.com/tillersystems/Stardust/commit/3198734568322efea0ace8989c4517789c5bc983))
+
 ## [4.9.1](https://github.com/tillersystems/Stardust/compare/v4.9.0...v4.9.1) (2019-10-11)
 
 ### Bug Fixes
