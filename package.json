@@ -52,7 +52,6 @@
     "prop-types": "^15.x",
     "react": "^16.x",
     "react-dom": "^16.x",
-    "react-pose": "^4.x",
     "styled-components": "^4.x"
   },
   "dependencies": {
@@ -121,7 +120,6 @@
     "prop-types": "15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "react-pose": "4.0.9",
     "storybook-readme": "5.0.8",
     "styled-components": "4.4.0"
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent } from '@testing-library/react';
+import { cleanup, fireEvent, findByTestId } from '@testing-library/react';
 
 import Popover from '..';
 
@@ -21,6 +21,26 @@ describe('<Popover />', () => {
     const popoverNode = getByTestId('popover');
 
     expect(popoverNode).toBeInTheDocument();
+  });
+
+  test('should render open popover using portal without a problem', () => {
+    const { queryByTestId } = render(
+      <Popover usePortal content="content" isOpen>
+        Trigger
+      </Popover>,
+    );
+
+    expect(queryByTestId('positioned-portal')).toBeNull();
+  });
+
+  test('should render open popover using portal and custom position without a problem', () => {
+    const { queryByTestId } = render(
+      <Popover usePortal portalPosition={{ top: '10px', left: '10px' }} content="content" isOpen>
+        Trigger
+      </Popover>,
+    );
+
+    expect(queryByTestId('positioned-portal')).toBeInTheDocument();
   });
 
   test('should render with a different width', () => {

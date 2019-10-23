@@ -22,6 +22,7 @@ storiesOf('Select', module)
     const onChange = action('onChange');
     const disabled = boolean('Disabled', false, 'State');
     const resetValue = boolean('Reset value', false, 'State');
+    const usePortal = boolean('usePortal', false, 'State');
 
     return (
       <ScrollBox>
@@ -36,6 +37,7 @@ storiesOf('Select', module)
           onChange={onChange}
           onToggle={onToggle}
           resetValue={resetValue}
+          usePortal={usePortal}
         >
           <Select.Option value="home">Home</Select.Option>
           <Select.Option value="calendar">Calendar</Select.Option>

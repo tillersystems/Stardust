@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import Popover from '../Popover';
 import SearchBar from './SearchBar';
 import { Header, HeaderContent, Menu, MenuItem, SearchInputContainer } from './elements';
+import { animationVariants } from './animation';
+import { offset } from './utils';
 
 /**
  * A Dropdown displays content through its children prop that must be components wrapping text.
@@ -22,10 +24,29 @@ class Dropdown extends PureComponent {
   state = {
     displayMenu: false,
     searchKeyword: '',
+    portalPosition: { left: '0px', top: '0px' },
   };
 
   /** preserve the initial state in a new object. */
   baseState = this.state;
+
+  constructor(props) {
+    super(props);
+    this.dropdown = React.createRef();
+  }
+
+  componentDidMount() {
+    // listen for resize and mousewheel to handle portal position
+    setTimeout(this.updatePosition.bind(this), 0);
+    window.addEventListener('resize', this.updatePosition.bind(this));
+    document.body.addEventListener('mousewheel', this.updatePosition.bind(this));
+  }
+
+  componentWillUnmount() {
+    // will remove resize and mousewheel event on dismount
+    window.removeEventListener('resize', this.updatePosition.bind(this));
+    document.body.removeEventListener('mousewheel', this.updatePosition.bind(this));
+  }
 
   /**
    * Handle Search
@@ -88,7 +109,8 @@ class Dropdown extends PureComponent {
    *
    */
   resetSearchInput = () => {
-    this.setState(this.baseState);
+    const { portalPosition } = this.state;
+    this.setState({ ...this.baseState, portalPosition });
   };
 
   /**
@@ -99,6 +121,8 @@ class Dropdown extends PureComponent {
   toggleMenu = () => {
     const displayMenu = this.getControllableValue('displayMenu');
     const { onToggle } = this.props;
+
+    this.updatePosition();
 
     if (this.isControlled('displayMenu')) {
       onToggle && onToggle(event);
@@ -130,6 +154,15 @@ class Dropdown extends PureComponent {
   };
 
   /**
+   * Save current dropdown position in state for portal
+   */
+  updatePosition() {
+    if (this.dropdown.current) {
+      this.setState({ portalPosition: offset(this.dropdown.current) });
+    }
+  }
+
+  /**
    * Renders the component.
    *
    * @return {jsx}
@@ -148,7 +181,12 @@ class Dropdown extends PureComponent {
       title,
       usePortal,
     } = this.props;
-    const { contentWidth, displayMenu: displayMenuState, searchKeyword } = this.state;
+    const {
+      contentWidth,
+      displayMenu: displayMenuState,
+      portalPosition,
+      searchKeyword,
+    } = this.state;
     const { displayMenu: displayMenuProp } = this.props;
     const displayMenu = this.isControlled('displayMenu') ? displayMenuProp : displayMenuState;
 
@@ -162,8 +200,9 @@ class Dropdown extends PureComponent {
       : [];
 
     return (
-      <div className={className} data-testid="dropdown">
+      <div ref={this.dropdown} className={className} data-testid="dropdown">
         <Popover
+          animationVariants={animationVariants}
           content={
             <Menu>
               {searchable && (
@@ -202,9 +241,11 @@ class Dropdown extends PureComponent {
             </Menu>
           }
           contentRef={contentRef}
+          contentWrapperStyle={{ marginTop: '4rem' }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
+          portalPosition={portalPosition}
           triggerRef={this.triggerRef}
           usePortal={usePortal}
           width={contentWidth}

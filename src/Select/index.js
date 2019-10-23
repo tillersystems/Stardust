@@ -7,6 +7,8 @@ import styled, { css } from 'styled-components';
 import { Popover } from '..';
 import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
+import { animationVariants } from './animation';
+import { offset } from './utils';
 
 /**
  * Select component displays a button as header holding one value at a time amongst
@@ -17,6 +19,10 @@ import Option from './Option';
  * @return {jsx}
  */
 class Select extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.select = React.createRef();
+  }
   /**
    * getDerivedStateFromProps
    *
@@ -42,6 +48,7 @@ class Select extends PureComponent {
     placeholder: this.props.placeholder, // eslint-disable-line react/destructuring-assignment
     value: null,
     resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
+    portalPosition: { left: '0px', top: '0px' },
   };
 
   /**
@@ -67,6 +74,11 @@ class Select extends PureComponent {
     } else if (!this.isControlled('placeholder')) {
       this.initializeValue();
     }
+
+    // listen for resize and mousewheel to handle portal position
+    setTimeout(this.updatePosition.bind(this), 0);
+    window.addEventListener('resize', this.updatePosition.bind(this));
+    document.body.addEventListener('mousewheel', this.updatePosition.bind(this));
   }
 
   /**
@@ -79,6 +91,12 @@ class Select extends PureComponent {
     if (value !== prevProps.value) {
       this.setState({ value });
     }
+  }
+
+  componentWillUnmount() {
+    // will remove resize and mousewheel event on dismount
+    window.removeEventListener('resize', this.updatePosition.bind(this));
+    document.body.removeEventListener('mousewheel', this.updatePosition.bind(this));
   }
 
   /**
@@ -190,6 +208,8 @@ class Select extends PureComponent {
     const { displayMenu } = this.state;
     const { onToggle } = this.props;
 
+    this.updatePosition();
+
     this.setState(
       prevState => ({
         displayMenu: !prevState.displayMenu,
@@ -205,6 +225,15 @@ class Select extends PureComponent {
 
     this.setState({ contentWidth: `${contentWidth}px` });
   };
+
+  /**
+   * Save current select position in state for portal
+   */
+  updatePosition() {
+    if (this.select.current) {
+      this.setState({ portalPosition: offset(this.select.current) });
+    }
+  }
 
   static Option = Option;
 
@@ -223,28 +252,14 @@ class Select extends PureComponent {
       triggerWrapperCss,
       usePortal,
     } = this.props;
-    const { contentWidth, displayMenu } = this.state;
+    const { contentWidth, displayMenu, portalPosition } = this.state;
     const hasPlaceholder = this.isControlled('placeholder');
     const value = this.getControllableValue('value');
 
     return (
-      <div className={className}>
+      <div ref={this.select} className={className}>
         <Popover
-          animationProps={{
-            enter: {
-              opacity: 1,
-              scaleY: 1,
-              transition: {
-                scaleY: { ease: 'anticipate', duration: 150 },
-                default: { duration: 150 },
-              },
-            },
-            exit: {
-              opacity: 0,
-              scaleY: 0,
-              transition: { duration: 150 },
-            },
-          }}
+          animationVariants={animationVariants}
           content={
             <Menu>
               {Children.map(children, child => (
@@ -263,8 +278,10 @@ class Select extends PureComponent {
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
+          portalPosition={portalPosition}
           triggerRef={this.triggerRef}
           triggerWrapperCss={triggerWrapperCss}
+          contentWrapperStyle={{ marginTop: '4rem' }}
           usePortal={usePortal}
           width={contentWidth}
         >

@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, wait } from '@testing-library/react';
+import { fireEvent, waitForElement, waitForElementToBeRemoved } from '@testing-library/react';
 
 import Select from '..';
 
@@ -20,6 +20,21 @@ describe('<Select />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  test('should render using portal without a problem', () => {
+    const props = { placeholder: 'placeholder' };
+    const { getByTestId } = render(
+      <Select usePortal {...props}>
+        <Select.Option value="1">Item</Select.Option>
+        <Select.Option value="2">Item</Select.Option>
+        <Select.Option value="3">Item</Select.Option>
+        <Select.Option value="4">Item</Select.Option>
+      </Select>,
+    );
+
+    const node = getByTestId('positioned-portal');
+    expect(node).toBeInTheDocument();
+  });
+
   test('should render without a problem when disabled', () => {
     const props = { placeholder: 'placeholder', disabled: true };
     const { container } = render(
@@ -34,9 +49,9 @@ describe('<Select />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test('should toggle the Select', done => {
+  test('should toggle the Select', async () => {
     const props = { placeholder: 'placeholder' };
-    const { container, queryAllByText } = render(
+    const { container, queryAllByText, getAllByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
         <Select.Option value="2">Item</Select.Option>
@@ -56,8 +71,7 @@ describe('<Select />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    let ItemNode;
-    ItemNode = queryAllByText(/Item/);
+    let ItemNode = queryAllByText(/Item/);
 
     expect(ItemNode).toHaveLength(4);
     expect(ItemNode[0]).toBeInTheDocument();
@@ -67,15 +81,70 @@ describe('<Select />', () => {
     // Close Select
     fireEvent.click(button);
 
-    setTimeout(() => {
-      ItemNode = queryAllByText(/Item/);
-      expect(button).toHaveAttribute('aria-expanded', 'false');
-      expect(button).toHaveAttribute('aria-haspopup', 'true');
-      expect(ItemNode[0]).toBeUndefined();
-      expect(ItemNode[1]).toBeUndefined();
-      expect(ItemNode[2]).toBeUndefined();
-      done();
-    }, 500);
+    await waitForElementToBeRemoved(() => getAllByText(/Item/));
+
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    expect(button).toHaveAttribute('aria-haspopup', 'true');
+
+    ItemNode = queryAllByText(/Item/);
+
+    expect(ItemNode[0]).toBeUndefined();
+    expect(ItemNode[1]).toBeUndefined();
+    expect(ItemNode[2]).toBeUndefined();
+  });
+
+  test('should update its value accordingly', async () => {
+    const { container, queryByText, getByText } = render(
+      <Select>
+        <Select.Option value="1">Item 1</Select.Option>
+        <Select.Option value="2">Item 2</Select.Option>
+        <Select.Option value="3">Item 3</Select.Option>
+        <Select.Option value="4">Item 4</Select.Option>
+      </Select>,
+    );
+
+    const buttonNode = container.querySelector('button');
+    expect(buttonNode).toHaveAttribute('aria-expanded', 'false');
+
+    let Item1 = getByText('Item 1');
+    let Item2 = queryByText('Item 3');
+    expect(Item1).toBeInTheDocument();
+    expect(Item2).not.toBeInTheDocument();
+
+    // open select and pick another option
+    fireEvent.click(buttonNode);
+
+    // Wait for the select to open
+    let Item3 = await waitForElement(() => getByText('Item 3'));
+
+    // Select the third items
+    fireEvent.click(Item3);
+
+    // Wait for the select to close
+    await waitForElementToBeRemoved(() => getByText('Item 1'));
+
+    Item1 = queryByText('Item 1');
+    Item3 = getByText('Item 3');
+
+    expect(Item1).not.toBeInTheDocument();
+    expect(Item3).toBeInTheDocument();
+
+    // open select and pick another option
+    fireEvent.click(buttonNode);
+
+    Item2 = await waitForElement(() => getByText('Item 2'));
+
+    // Select the second items
+    fireEvent.click(Item2);
+
+    // Wait for the select to close
+    await waitForElementToBeRemoved(() => getByText('Item 3'));
+
+    Item3 = queryByText('Item 3');
+    Item2 = getByText('Item 2');
+
+    expect(Item3).not.toBeInTheDocument();
+    expect(Item2).toBeInTheDocument();
   });
 
   test('should call onToggle when Select is toggled', () => {
@@ -197,54 +266,5 @@ describe('<Select />', () => {
 
     const displayedOption = getByText('Item 3');
     expect(displayedOption).toBeInTheDocument();
-  });
-
-  test('should update its value accordingly', async () => {
-    const { container, queryByText, getByText, rerender } = render(
-      <Select>
-        <Select.Option value="1">Item 1</Select.Option>
-        <Select.Option value="2">Item 2</Select.Option>
-        <Select.Option value="3">Item 3</Select.Option>
-        <Select.Option value="4">Item 4</Select.Option>
-      </Select>,
-    );
-
-    const buttonNode = container.querySelector('button');
-    expect(buttonNode).toHaveAttribute('aria-expanded', 'false');
-
-    let firstOption = getByText('Item 1');
-    let thirdOption = queryByText('Item 3');
-    expect(firstOption).toBeInTheDocument();
-    expect(thirdOption).not.toBeInTheDocument();
-
-    // open select and pick another option
-    fireEvent.click(buttonNode);
-    thirdOption = getByText('Item 3');
-    fireEvent.click(thirdOption);
-
-    await wait(() => {
-      firstOption = queryByText('Item 1');
-      expect(firstOption).not.toBeInTheDocument();
-      // get current option displayed in the button
-      thirdOption = getByText('Item 3');
-      expect(thirdOption).toBeInTheDocument();
-
-      const props = { value: '2' };
-      rerender(
-        <Select {...props}>
-          <Select.Option value="1">Item 1</Select.Option>
-          <Select.Option value="2">Item 2</Select.Option>
-          <Select.Option value="3">Item 3</Select.Option>
-          <Select.Option value="4">Item 4</Select.Option>
-        </Select>,
-      );
-
-      const secondOption = getByText('Item 2');
-      expect(secondOption).toBeInTheDocument();
-      firstOption = queryByText('Item 1');
-      expect(firstOption).not.toBeInTheDocument();
-      thirdOption = queryByText('Item 3');
-      expect(thirdOption).not.toBeInTheDocument();
-    });
   });
 });

@@ -1,11 +1,12 @@
 import React, { Children, cloneElement, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import posed, { PoseGroup } from 'react-pose';
+import { AnimatePresence } from 'framer-motion';
 import { Portal } from 'react-portal';
 import { Manager, Popper, Reference } from 'react-popper';
 
 import EventListener from '../EventListener';
 import { Arrow, PopoverContentWrapper, PopoverTriggerWrapper } from './elements';
+import { popoverVariants } from './animation';
 
 /**
  * Popover using popperjs and portal
@@ -86,31 +87,34 @@ class Popover extends PureComponent {
    */
   renderContent = () => {
     const {
-      animationProps,
+      animationVariants,
       content,
       contentWrapperStyle,
       hasArrow,
       isOpen,
       modifiers,
       placement,
+      portalPosition,
       positionFixed,
       usePortal,
       width,
     } = this.props;
 
     let popoverContent;
-
     const popper = (
       <Popper modifiers={modifiers} placement={placement} positionFixed={positionFixed}>
         {({ arrowProps, outOfBoundaries, placement, ref: popperRef, style }) => (
-          <PoseGroup flipMove={false}>
+          <AnimatePresence>
             {isOpen && (
-              <PopoverContentWrapperAnimation
+              <PopoverContentWrapper
                 key="popover"
                 data-testid="popover"
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={animationVariants}
                 data-out-of-boundaries={outOfBoundaries || undefined}
                 data-placement={placement}
-                animationProps={animationProps}
                 ref={node => {
                   this.setContentRef(node);
                   popperRef(node);
@@ -124,15 +128,29 @@ class Popover extends PureComponent {
                     ▲
                   </Arrow>
                 )}
-              </PopoverContentWrapperAnimation>
+              </PopoverContentWrapper>
             )}
-          </PoseGroup>
+          </AnimatePresence>
         )}
       </Popper>
     );
 
     if (usePortal) {
-      popoverContent = <Portal>{popper}</Portal>;
+      if (portalPosition) {
+        const { left, top } = portalPosition;
+        popoverContent = (
+          <Portal>
+            <div
+              data-testid="positioned-portal"
+              style={{ position: 'absolute', left: `${left}px`, top: `${top}px` }}
+            >
+              {popper}
+            </div>
+          </Portal>
+        );
+      } else {
+        popoverContent = <Portal>{popper}</Portal>;
+      }
     } else {
       popoverContent = popper;
     }
@@ -191,9 +209,9 @@ class Popover extends PureComponent {
 const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 Popover.propTypes = {
   /**
-   * Custom animation options to pass to PopoverContentWrapperAnimation
+   * Custom variants animation from framer motion (https://www.framer.com/api/motion/) options to pass to our popover
    */
-  animationProps: object,
+  animationVariants: object,
 
   /**
    * Must be a single element that will be the trigger of the popover
@@ -241,6 +259,11 @@ Popover.propTypes = {
   placement: string,
 
   /**
+   * Custom portal position
+   */
+  portalPosition: object,
+
+  /**
    * Popper option. Put the popper in "fixed" mode. See https://popper.js.org/popper-documentation.html
    */
   positionFixed: bool,
@@ -270,7 +293,7 @@ Popover.propTypes = {
  * Default props
  */
 Popover.defaultProps = {
-  animationProps: null,
+  animationVariants: popoverVariants,
   contentWrapperStyle: null,
   contentRef: null,
   hasArrow: false,
@@ -278,28 +301,12 @@ Popover.defaultProps = {
   modifiers: {},
   onClickOutside: null,
   placement: 'bottom',
+  portalPosition: null,
   positionFixed: false,
   triggerRef: null,
   triggerWrapperCss: null,
   usePortal: false,
   width: 'auto',
 };
-
-/**
- * Animation
- */
-const PopoverContentWrapperAnimation = posed(PopoverContentWrapper)({
-  enter: {
-    opacity: 1,
-    transition: {
-      y: { type: 'spring', stiffness: 900, damping: 30 },
-      default: { duration: 150 },
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: 150 },
-  },
-});
 
 export default Popover;
