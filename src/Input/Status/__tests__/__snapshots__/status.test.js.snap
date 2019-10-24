@@ -84,10 +84,10 @@ exports[`<Status /> should have different width and height on icon 1`] = `
     aria-hidden="true"
     class="c1"
     focusable="false"
-    height="11px"
+    height="10px"
     role="img"
     viewBox="0 0 512 512"
-    width="11px"
+    width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
