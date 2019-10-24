@@ -129,7 +129,10 @@ export const Body = styled.tbody`
     &:last-child {
       padding-right: 3rem;
     }
-    &:hover {
+  }
+  tr:hover {
+    & > th,
+    & > td {
       background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
     }
   }
@@ -198,10 +201,6 @@ export const Footer = styled.tfoot`
 
   td {
     font-feature-settings: 'tnum';
-
-    &:hover {
-      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
   }
 
   th,
@@ -245,6 +244,13 @@ export const Footer = styled.tfoot`
 
   td:last-of-type {
     padding: 0 3rem 0 0.5rem;
+  }
+
+  tr:hover {
+    & > th,
+    & > td {
+      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+    }
   }
 `;
 
