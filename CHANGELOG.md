@@ -1,3 +1,10 @@
+## [4.9.3](https://github.com/tillersystems/Stardust/compare/v4.9.2...v4.9.3) (2019-10-24)
+
+### Bug Fixes
+
+- **Input:** fix input error status alignment ([#839](https://github.com/tillersystems/Stardust/issues/839)) ([ef491f9](https://github.com/tillersystems/Stardust/commit/ef491f90437ee212559603ff4c4609b445b73b2a))
+- **Table:** Fix first header cell height ([#838](https://github.com/tillersystems/Stardust/issues/838)) ([094c99c](https://github.com/tillersystems/Stardust/commit/094c99c3eddf1e5fa2a40d3cac712c9bad83fc62))
+
 ## [4.9.2](https://github.com/tillersystems/Stardust/compare/v4.9.1...v4.9.2) (2019-10-23)
 
 ### Bug Fixes
