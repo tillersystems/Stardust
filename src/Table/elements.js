@@ -130,12 +130,6 @@ export const Body = styled.tbody`
       padding-right: 3rem;
     }
   }
-  tr:hover {
-    & > th,
-    & > td {
-      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
-  }
 `;
 
 export const BodyRow = styled(Row)`
@@ -166,6 +160,17 @@ export const BodyRow = styled(Row)`
         box-shadow: inset 3px 0px 0 0px ${({ theme: { palette } }) => palette.primary.default};
       }
     `};
+
+  ${({ isHoverable }) =>
+    isHoverable &&
+    css`
+      &:hover {
+        & > th,
+        & > td {
+          background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+        }
+      }
+    `}
 `;
 
 export const RowHeader = styled.th`
@@ -246,12 +251,16 @@ export const Footer = styled.tfoot`
     padding: 0 3rem 0 0.5rem;
   }
 
-  tr:hover {
-    & > th,
-    & > td {
-      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
-  }
+  ${({ isHoverable }) =>
+    isHoverable &&
+    css`
+      tr:hover {
+        & > th,
+        & > td {
+          background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+        }
+      }
+    `}
 `;
 
 // Table Container
