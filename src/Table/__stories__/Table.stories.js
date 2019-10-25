@@ -17,6 +17,7 @@ storiesOf('Table', module)
   })
   .add('default', () => {
     const striped = boolean('Striped', false, 'State');
+    const isHoverable = boolean('Hoverable', false, 'State');
     const selectableRow = boolean('Selectable row', false, 'State');
     const dishRowSortable = boolean('Dish row is sortable', true, 'State');
     const priceRowSortable = boolean('Price row is sortable', true, 'State');
@@ -94,12 +95,14 @@ storiesOf('Table', module)
           colsDef={getColsDef(taxCountryCodeValue)}
           rowsDef={rowsDef}
           striped={striped}
+          isHoverable={isHoverable}
         />
       </Wrapper>
     );
   })
   .add('Scrollable table', () => {
     const striped = boolean('Striped', false, 'State');
+    const isHoverable = boolean('Hoverable', false, 'State');
     const selectableRow = boolean('Selectable row', false, 'State');
     const dishRowSortable = boolean('Dish row is sortable', true, 'State');
     const priceRowSortable = boolean('Price row is sortable', true, 'State');
@@ -287,6 +290,7 @@ storiesOf('Table', module)
       <Wrapper>
         <Table
           isScrollable
+          isHoverable={isHoverable}
           height="40rem"
           data={data}
           dataTotal={dataTotal}
