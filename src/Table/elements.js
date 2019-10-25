@@ -224,6 +224,7 @@ export const Footer = styled.tfoot`
       top: 0;
       width: 100%;
       border-top: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+      box-sizing: border-box;
     }
 
     height: 5.2rem;
