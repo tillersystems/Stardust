@@ -45,7 +45,6 @@ class Select extends PureComponent {
   /** Internal state. */
   state = {
     displayMenu: false,
-    placeholder: this.props.placeholder, // eslint-disable-line react/destructuring-assignment
     value: null,
     resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
     portalPosition: { left: '0px', top: '0px' },
@@ -60,7 +59,7 @@ class Select extends PureComponent {
    * the placeholder at the render.
    */
   componentDidMount() {
-    const { children } = this.props;
+    const { children, placeholder } = this.props;
 
     if (this.isControlled('value')) {
       const value = this.getControllableValue('value');
@@ -71,7 +70,7 @@ class Select extends PureComponent {
       } else {
         this.initializeValue();
       }
-    } else if (!this.isControlled('placeholder')) {
+    } else if (placeholder === undefined) {
       this.initializeValue();
     }
 
@@ -249,11 +248,12 @@ class Select extends PureComponent {
       contentRef,
       disabled,
       modifiers,
+      placeholder,
       triggerWrapperCss,
       usePortal,
     } = this.props;
     const { contentWidth, displayMenu, portalPosition } = this.state;
-    const hasPlaceholder = this.isControlled('placeholder');
+    const hasPlaceholder = placeholder !== undefined;
     const value = this.getControllableValue('value');
 
     return (
@@ -294,7 +294,7 @@ class Select extends PureComponent {
             <HeaderContent>
               {/* if placeholder is defined display it, otherwise use the value of the first option */}
               {hasPlaceholder && !value
-                ? this.getControllableValue('placeholder')
+                ? placeholder
                 : Children.map(children, child => (child.props.value === value ? child : null))}
             </HeaderContent>
           </Header>
