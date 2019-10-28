@@ -132,6 +132,7 @@ storiesOf('Select', module)
                 store.set({ value });
               }}
               disabled={disabled}
+              displayedValue={`This is the current value: ${state.value}`}
               resetValue={resetValue}
               value={state.value}
             >

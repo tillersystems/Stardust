@@ -267,4 +267,19 @@ describe('<Select />', () => {
     const displayedOption = getByText('Item 3');
     expect(displayedOption).toBeInTheDocument();
   });
+
+  test('should display displayedValue prop', () => {
+    const props = { value: '3', displayedValue: 'The current value is 3' };
+    const { getByText } = render(
+      <Select {...props}>
+        <Select.Option value="1">Item 1</Select.Option>
+        <Select.Option value="2">Item 2</Select.Option>
+        <Select.Option value="3">Item 3</Select.Option>
+        <Select.Option value="4">Item 4</Select.Option>
+      </Select>,
+    );
+
+    const displayedText = getByText('The current value is 3');
+    expect(displayedText).toBeInTheDocument();
+  });
 });

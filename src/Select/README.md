@@ -2,7 +2,12 @@
 
 ### Usage
 
-Select component displays a button as header holding one value at a time amongst a list of values (children)
+Select component displays a button as header holding one value at a time amongst a list of values (children).
+What is displayed inside the button is, by order of priority:
+- the placeholder prop if provided
+- the displayedValue prop if also provided,
+- the value prop if provided (controlled state)
+- the first value amongst the children
 
 ```jsx
 import { Select } from '@tillersystems/stardust';

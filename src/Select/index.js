@@ -247,6 +247,7 @@ class Select extends PureComponent {
       className,
       contentRef,
       disabled,
+      displayedValue,
       modifiers,
       placeholder,
       triggerWrapperCss,
@@ -295,6 +296,8 @@ class Select extends PureComponent {
               {/* if placeholder is defined display it, otherwise use the value of the first option */}
               {hasPlaceholder && !value
                 ? placeholder
+                : displayedValue
+                ? displayedValue
                 : Children.map(children, child => (child.props.value === value ? child : null))}
             </HeaderContent>
           </Header>
@@ -330,6 +333,11 @@ Select.propTypes = {
   disabled: bool,
 
   /**
+   * What the select should display in its button. Different from placeholder, it will be used if a value has been set
+   */
+  displayedValue: node,
+
+  /**
    * CSS height of the component
    */
   // https://github.com/yannickcr/eslint-plugin-react/issues/1520
@@ -352,7 +360,7 @@ Select.propTypes = {
   onToggle: func,
 
   /**
-   * Placeholder of the <Select /> component in the header
+   * Placeholder of the <Select /> component in the header. Displayed only if no value has been set yet.
    */
   placeholder: string,
 
