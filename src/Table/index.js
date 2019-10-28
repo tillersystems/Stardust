@@ -134,6 +134,7 @@ class Table extends PureComponent {
       colsDef,
       data,
       isScrollable,
+      isHoverable,
       rowsDef: { selectable },
       striped,
     } = this.props;
@@ -184,6 +185,7 @@ class Table extends PureComponent {
             selected={selected === key}
             striped={striped}
             onClick={() => this.handleRowSelect(item, key)}
+            isHoverable={isHoverable}
           >
             {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
               isRowHeader ? (
@@ -212,10 +214,10 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   renderFooter() {
-    const { colsDef, dataTotal, isScrollable } = this.props;
+    const { colsDef, dataTotal, isScrollable, isHoverable } = this.props;
 
     return (
-      <Footer data-testid="footer-row" isScrollable={isScrollable}>
+      <Footer data-testid="footer-row" isScrollable={isScrollable} isHoverable={isHoverable}>
         <tr>
           {colsDef.map(({ isRowHeader, total, format, align }, columnIndex) =>
             isRowHeader ? (
@@ -303,6 +305,12 @@ Table.propTypes = {
    **/
   isScrollable: bool,
 
+  /**
+   * Define if the table is isHoverable or not.
+   * When the table is isHoverable if a user hover a row it background change increasing contrast with others improving readability.
+   **/
+  isHoverable: bool,
+
   /** Rows definition */
   rowsDef: shape({
     onSelect: func,
@@ -321,6 +329,7 @@ Table.defaultProps = {
   dataTotal: null,
   height: 'initial',
   isScrollable: false,
+  isHoverable: false,
   rowsDef: {
     onSelect: () => {},
     selectable: false,

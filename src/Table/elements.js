@@ -129,9 +129,6 @@ export const Body = styled.tbody`
     &:last-child {
       padding-right: 3rem;
     }
-    &:hover {
-      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
   }
 `;
 
@@ -163,6 +160,17 @@ export const BodyRow = styled(Row)`
         box-shadow: inset 3px 0px 0 0px ${({ theme: { palette } }) => palette.primary.default};
       }
     `};
+
+  ${({ isHoverable }) =>
+    isHoverable &&
+    css`
+      &:hover {
+        & > th,
+        & > td {
+          background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+        }
+      }
+    `}
 `;
 
 export const RowHeader = styled.th`
@@ -198,10 +206,6 @@ export const Footer = styled.tfoot`
 
   td {
     font-feature-settings: 'tnum';
-
-    &:hover {
-      background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
   }
 
   th,
@@ -220,6 +224,7 @@ export const Footer = styled.tfoot`
       top: 0;
       width: 100%;
       border-top: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+      box-sizing: border-box;
     }
 
     height: 5.2rem;
@@ -246,6 +251,17 @@ export const Footer = styled.tfoot`
   td:last-of-type {
     padding: 0 3rem 0 0.5rem;
   }
+
+  ${({ isHoverable }) =>
+    isHoverable &&
+    css`
+      tr:hover {
+        & > th,
+        & > td {
+          background-color: ${({ theme: { palette } }) => palette.veryLightGrey};
+        }
+      }
+    `}
 `;
 
 // Table Container

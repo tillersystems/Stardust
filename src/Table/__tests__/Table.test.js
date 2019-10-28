@@ -11,6 +11,7 @@ StubComponent.displayName = 'StubComponent';
 const getColsDef = (taxCountryCode = 'fr') => [
   {
     title: 'DISH',
+    isRowHeader: true,
     value: d => d.code,
     isSortable: true,
     align: 'left',
@@ -248,5 +249,21 @@ describe('<Table />', () => {
     const tableContainer = getByTestId('table-container');
 
     expect(tableContainer).toHaveStyleRule('overflow', 'scroll');
+  });
+
+  test('should table be hoverable', () => {
+    const { getByText, getAllByTestId } = render(
+      <Table isHoverable height="10rem" colsDef={getColsDef()} data={data} />,
+    );
+
+    const sortedBodyRows = getAllByTestId('body-row');
+
+    expect(sortedBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
+
+    fireEvent.mouseOver(sortedBodyRows[0]);
+
+    const tartareRow = getByText(/tartare de boeuf/i);
+
+    expect(tartareRow).toHaveStyleRule(`background-color: ${Theme.palette.veryLightGrey}`);
   });
 });
