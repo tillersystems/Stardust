@@ -23,30 +23,11 @@ class Select extends PureComponent {
     super(props);
     this.select = React.createRef();
   }
-  /**
-   * getDerivedStateFromProps
-   *
-   * @param {object} props
-   * @param {object} state
-   *
-   * @return {object}
-   */
-  static getDerivedStateFromProps(props, state) {
-    if (props.resetValue !== state.resetValue) {
-      return {
-        resetValue: props.resetValue,
-        ...(props.resetValue ? { value: null } : {}),
-      };
-    }
-
-    return null;
-  }
 
   /** Internal state. */
   state = {
     displayMenu: false,
     value: null,
-    resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
     portalPosition: { left: '0px', top: '0px' },
   };
 
@@ -365,11 +346,6 @@ Select.propTypes = {
   placeholder: string,
 
   /**
-   * If select value should be reset to null
-   */
-  resetValue: bool,
-
-  /**
    * css provided to the trigger wrapper. Must use `css` method from styled-components.
    */
   triggerWrapperCss: array,
@@ -400,7 +376,6 @@ Select.defaultProps = {
   className: '',
   disabled: false,
   height: '3.8rem',
-  resetValue: false,
   triggerWrapperCss: null,
   usePortal: false,
   width: '100%',
