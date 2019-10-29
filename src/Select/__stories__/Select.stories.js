@@ -21,7 +21,6 @@ storiesOf('Select', module)
     const onToggle = action('onToggle');
     const onChange = action('onChange');
     const disabled = boolean('Disabled', false, 'State');
-    const resetValue = boolean('Reset value', false, 'State');
     const usePortal = boolean('usePortal', false, 'State');
 
     return (
@@ -36,7 +35,6 @@ storiesOf('Select', module)
           placeholder={placeholder}
           onChange={onChange}
           onToggle={onToggle}
-          resetValue={resetValue}
           usePortal={usePortal}
         >
           <Select.Option value="home">Home</Select.Option>
@@ -51,7 +49,6 @@ storiesOf('Select', module)
     const onToggle = action('onToggle');
     const onChange = action('onChange');
     const disabled = boolean('Disabled', false, 'State');
-    const resetValue = boolean('Reset value', false, 'State');
 
     const StyledIcon = styled(Icon)`
       vertical-align: middle;
@@ -60,7 +57,7 @@ storiesOf('Select', module)
 
     return (
       <ScrollBox>
-        <Select onToggle={onToggle} onChange={onChange} disabled={disabled} resetValue={resetValue}>
+        <Select onToggle={onToggle} onChange={onChange} disabled={disabled}>
           <Select.Option value="home">
             <StyledIcon name="home" width="1.5rem" height="1.5rem" color={Theme.palette.darkBlue} />
             <div>Home</div>
@@ -76,7 +73,6 @@ storiesOf('Select', module)
     const onToggle = action('onToggle');
     const onChange = action('onChange');
     const disabled = boolean('Disabled', false, 'State');
-    const resetValue = boolean('Reset value', false, 'State');
     const widthValue = number(
       'Width',
       200,
@@ -95,7 +91,6 @@ storiesOf('Select', module)
           onToggle={onToggle}
           onChange={onChange}
           disabled={disabled}
-          resetValue={resetValue}
           width={`${widthValue.toString()}px`}
         >
           <Select.Option value="home">Home</Select.Option>
@@ -114,7 +109,6 @@ storiesOf('Select', module)
     const onToggle = action('onToggle');
     const onChangeAction = action('onChange');
     const disabled = boolean('Disabled', false, 'Props');
-    const resetValue = boolean('Reset value', false, 'Props');
 
     const StyledIcon = styled(Icon)`
       vertical-align: middle;
@@ -132,7 +126,50 @@ storiesOf('Select', module)
                 store.set({ value });
               }}
               disabled={disabled}
-              resetValue={resetValue}
+              value={state.value}
+            >
+              <Select.Option value="home">
+                <StyledIcon
+                  name="home"
+                  width="1.5rem"
+                  height="1.5rem"
+                  color={Theme.palette.darkBlue}
+                />
+                <div>Home</div>
+              </Select.Option>
+              <Select.Option value="calendar">Calendar</Select.Option>
+              <Select.Option value="settings">Settings</Select.Option>
+              <Select.Option value="user">User</Select.Option>
+            </Select>
+          )}
+        </State>
+      </ScrollBox>
+    );
+  })
+  .add('with custom displayed value', () => {
+    const store = new Store({
+      value: 'settings',
+    });
+
+    const onToggle = action('onToggle');
+    const onChangeAction = action('onChange');
+
+    const StyledIcon = styled(Icon)`
+      vertical-align: middle;
+      margin: auto 0.5rem auto auto;
+    `;
+
+    return (
+      <ScrollBox>
+        <State store={store}>
+          {state => (
+            <Select
+              onToggle={onToggle}
+              onChange={value => {
+                onChangeAction(value);
+                store.set({ value });
+              }}
+              displayedValue={`This is the current value: ${state.value}`}
               value={state.value}
             >
               <Select.Option value="home">

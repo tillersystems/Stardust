@@ -23,31 +23,11 @@ class Select extends PureComponent {
     super(props);
     this.select = React.createRef();
   }
-  /**
-   * getDerivedStateFromProps
-   *
-   * @param {object} props
-   * @param {object} state
-   *
-   * @return {object}
-   */
-  static getDerivedStateFromProps(props, state) {
-    if (props.resetValue !== state.resetValue) {
-      return {
-        resetValue: props.resetValue,
-        ...(props.resetValue ? { value: null } : {}),
-      };
-    }
-
-    return null;
-  }
 
   /** Internal state. */
   state = {
     displayMenu: false,
-    placeholder: this.props.placeholder, // eslint-disable-line react/destructuring-assignment
     value: null,
-    resetValue: this.props.resetValue, // eslint-disable-line react/destructuring-assignment
     portalPosition: { left: '0px', top: '0px' },
   };
 
@@ -60,7 +40,7 @@ class Select extends PureComponent {
    * the placeholder at the render.
    */
   componentDidMount() {
-    const { children } = this.props;
+    const { children, placeholder } = this.props;
 
     if (this.isControlled('value')) {
       const value = this.getControllableValue('value');
@@ -71,7 +51,7 @@ class Select extends PureComponent {
       } else {
         this.initializeValue();
       }
-    } else if (!this.isControlled('placeholder')) {
+    } else if (placeholder === undefined) {
       this.initializeValue();
     }
 
@@ -248,12 +228,14 @@ class Select extends PureComponent {
       className,
       contentRef,
       disabled,
+      displayedValue,
       modifiers,
+      placeholder,
       triggerWrapperCss,
       usePortal,
     } = this.props;
     const { contentWidth, displayMenu, portalPosition } = this.state;
-    const hasPlaceholder = this.isControlled('placeholder');
+    const hasPlaceholder = placeholder !== undefined;
     const value = this.getControllableValue('value');
 
     return (
@@ -294,7 +276,9 @@ class Select extends PureComponent {
             <HeaderContent>
               {/* if placeholder is defined display it, otherwise use the value of the first option */}
               {hasPlaceholder && !value
-                ? this.getControllableValue('placeholder')
+                ? placeholder
+                : displayedValue
+                ? displayedValue
                 : Children.map(children, child => (child.props.value === value ? child : null))}
             </HeaderContent>
           </Header>
@@ -330,6 +314,11 @@ Select.propTypes = {
   disabled: bool,
 
   /**
+   * What the select should display in its button. Different from placeholder, it will be used if a value has been set
+   */
+  displayedValue: node,
+
+  /**
    * CSS height of the component
    */
   // https://github.com/yannickcr/eslint-plugin-react/issues/1520
@@ -352,14 +341,9 @@ Select.propTypes = {
   onToggle: func,
 
   /**
-   * Placeholder of the <Select /> component in the header
+   * Placeholder of the <Select /> component in the header. Displayed only if no value has been set yet.
    */
   placeholder: string,
-
-  /**
-   * If select value should be reset to null
-   */
-  resetValue: bool,
 
   /**
    * css provided to the trigger wrapper. Must use `css` method from styled-components.
@@ -392,7 +376,6 @@ Select.defaultProps = {
   className: '',
   disabled: false,
   height: '3.8rem',
-  resetValue: false,
   triggerWrapperCss: null,
   usePortal: false,
   width: '100%',
