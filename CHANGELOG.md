@@ -1,3 +1,13 @@
+# [4.10.0](https://github.com/tillersystems/Stardust/compare/v4.9.3...v4.10.0) (2019-10-29)
+
+### Bug Fixes
+
+- **Table:** Change hover cell to hover row ([#840](https://github.com/tillersystems/Stardust/issues/840)) ([752ecf4](https://github.com/tillersystems/Stardust/commit/752ecf46b09e49768d416a50fcf03829eedc6b5d))
+
+### Features
+
+- **Select:** add customizable displayed value ([#845](https://github.com/tillersystems/Stardust/issues/845)) ([dc39c12](https://github.com/tillersystems/Stardust/commit/dc39c12f240e029a9071ff58058a2f0482e3b9e6))
+
 ## [4.9.3](https://github.com/tillersystems/Stardust/compare/v4.9.2...v4.9.3) (2019-10-24)
 
 ### Bug Fixes
