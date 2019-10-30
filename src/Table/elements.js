@@ -12,7 +12,7 @@ const borderRight = height => css`
     ** To avoid this behaviour here we need to set a height to the border when a height is set to the element.
     */
     height: ${height ? height : '100%'};
-    border-right: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+    border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
   }
 `;
 
@@ -75,7 +75,7 @@ export const TableHeaderCell = styled.th`
   }
 
   &:first-child {
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-right: 0.5rem;
     z-index: 2;
     left: 0;
@@ -83,7 +83,7 @@ export const TableHeaderCell = styled.th`
   }
 
   &:last-child {
-    padding-right: 3rem;
+    padding-right: 2.2rem;
     padding-left: 0.5rem;
   }
 
@@ -124,15 +124,15 @@ export const Body = styled.tbody`
     min-width: 10rem;
 
     &:first-child {
-      padding-left: 3rem;
+      padding-left: 2rem;
     }
     &:last-child {
-      padding-right: 3rem;
+      padding-right: 2.2rem;
     }
   }
 `;
 
-export const BodyRow = styled(Row)`
+export const ChildRow = styled(Row)`
   position: relative;
 
   ${({ selectable }) =>
@@ -173,9 +173,14 @@ export const BodyRow = styled(Row)`
     `}
 `;
 
-export const RowHeader = styled.th`
+export const BodyRow = styled(ChildRow)`
+  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+`;
 
+export const RowHeader = styled.th`
   height: 5.2rem;
+  display: flex;
+  align-items: center;
 
   ${({ isScrollable }) =>
     isScrollable &&
@@ -191,7 +196,7 @@ export const RowHeader = styled.th`
   white-space: nowrap;
   overflow: hidden;
 
-  padding: 0 0.5rem 0 3rem;
+  padding: 0 0.5rem 0 2rem;
   max-width: 30rem;
   min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};
@@ -245,7 +250,7 @@ export const Footer = styled.tfoot`
         ${borderRight('5.2rem')}
       `}
 
-    padding: 0 0.5rem 0 3rem;
+    padding: 0 0.5rem 0 2rem;
   }
 
   td:last-of-type {

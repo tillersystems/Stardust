@@ -241,7 +241,7 @@ describe('<Table />', () => {
     expect(footerRow).toHaveTextContent('Total');
   });
 
-  test('should table be scrollable', () => {
+  test('should be scrollable', () => {
     const { getByTestId } = render(
       <Table isScrollable height="10rem" colsDef={getColsDef()} data={data} striped />,
     );
@@ -265,5 +265,60 @@ describe('<Table />', () => {
     const tartareRow = getByText(/tartare de boeuf/i);
 
     expect(tartareRow).toHaveStyleRule(`background-color: ${Theme.palette.veryLightGrey}`);
+  });
+
+  test('should have rows with children clickable and display its children on click', () => {
+    const data = [
+      {
+        code: 'Tartare de boeuf',
+        value: 15.0,
+        tax: {
+          fr: 9.0,
+          en: 10.0,
+        },
+        children: [
+          {
+            code: 'child 1',
+            value: 9.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+          },
+          {
+            code: 'child 2',
+            value: 8.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+          },
+        ],
+      },
+      {
+        code: 'Oeuf cocotte',
+        value: 13.0,
+        tax: {
+          fr: 7.0,
+          en: 6.0,
+        },
+      },
+    ];
+
+    const { getByText, queryAllByText } = render(
+      <Table height="10rem" colsDef={getColsDef()} data={data} />,
+    );
+
+    const row = getByText(/tartare/i);
+
+    fireEvent.click(row);
+
+    const children = queryAllByText(/child/i);
+    expect(children).toHaveLength(2);
+
+    fireEvent.click(row);
+
+    const noChildren = queryAllByText(/child/i);
+    expect(noChildren).toHaveLength(0);
   });
 });

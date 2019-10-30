@@ -3,7 +3,8 @@
 ### Usage
 
 A Table displays structured data through rows and columns.
-It can sort by column (asc, desc).
+It can be sorted by column (asc, desc). An object of data array can contain its own array of data through a `children` prop
+that must follow the same object structure as an object of `data`.
 
 ```jsx
 import { Table } from '@tillersystems/stardust';
@@ -15,17 +16,17 @@ import { Table } from '@tillersystems/stardust';
 
 #### Columns definition
 
-| Name          | Required |    Type    |                                     DefaultValue                                      |                                                                                                  Description                                                                                                  |
-| ------------- | :------: | :--------: | :-----------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| `align`       |    -     |  `string`  |                                       `center`                                        |                                                                          Alignment of the cell's content (`left`, `center`, `right`)                                                                          |
-| `isRowHeader` |    -     | `boolean`  |                                        `false`                                        | Define if the column going to be a row header or not. In scrollable mode that column going to stick to the left side of the table. To avoid weird behaviour this parameter should be set on the first column. |
-| `filteredBy`  |    -     | `function` |                                        `null`                                         |                                                                                        Filters the object by the value                                                                                        |
-| `format`      |    -     | `function` |                                        `null`                                         |                                                                                         Format the value for display                                                                                          |
-| `isSortable`  |    -     | `boolean`  |                                        `false`                                        |                                                                                     Whether the column is sortable or not                                                                                     |
-| `title`       |    +     |  `string`  |                                        `null`                                         |                                                                                              Title of the colum                                                                                               |
-| `total`       |    +     | `function` |                                         `''`                                          |                                              Function to retrieve the total of a data for a given column. Use this parameter only if the dataTotal props is set.                                              |
-| `value`       |    +     | `function` |                                         `''`                                          |                                                                          Function to retrieve the value of a data for a given column                                                                          |
-| `width`       |    -     |  `string`  | `` | Width of the column (either a relative weight, or a fixed size in `rem` or `px`) |
+| Name          | Required |    Type    | DefaultValue |                                                                                                  Description                                                                                                  |
+| ------------- | :------: | :--------: | :----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `align`       |    -     |  `string`  |   `center`   |                                                                          Alignment of the cell's content (`left`, `center`, `right`)                                                                          |
+| `isRowHeader` |    -     | `boolean`  |   `false`    | Define if the column going to be a row header or not. In scrollable mode that column going to stick to the left side of the table. To avoid weird behaviour this parameter should be set on the first column. |
+| `filteredBy`  |    -     | `function` |    `null`    |                                                                                        Filters the object by the value                                                                                        |
+| `format`      |    -     | `function` |    `null`    |                                                                                         Format the value for display                                                                                          |
+| `isSortable`  |    -     | `boolean`  |   `false`    |                                                                                     Whether the column is sortable or not                                                                                     |
+| `title`       |    +     |  `string`  |    `null`    |                                                                                              Title of the colum                                                                                               |
+| `total`       |    +     | `function` |     `''`     |                                              Function to retrieve the total of a data for a given column. Use this parameter only if the dataTotal props is set.                                              |
+| `value`       |    +     | `function` |     `''`     |                                                                          Function to retrieve the value of a data for a given column                                                                          |
+| `width`       |    -     |  `string`  |      ``      |                                                               Width of the column (either a relative weight, or a fixed size in `rem` or `px`)                                                                |
 
 The difference between `value` and `format` mostly resides in the fact that `value` is the actual
 value used by the sorting. `format` is "only" used to display the given value to the user (it
@@ -89,6 +90,16 @@ const data = [
       fr: 10.0,
       en: 3.0,
     },
+    children: [
+      {
+        name: 'Oeufs pochés',
+        price: 11.0,
+        tax: {
+          fr: 9.0,
+          en: 7.0,
+        },
+      }
+    ]
   },
 ];
 
