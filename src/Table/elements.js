@@ -59,10 +59,12 @@ export const TableHeader = styled.thead`
 export const TableHeaderCell = styled.th`
   position: relative;
   height: 4.4rem;
-  padding: 0 0.5rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
 
   background-color: ${({ theme: { palette } }) => palette.white};
 
+  white-space: nowrap;
   text-align: ${({ align }) => align || 'left'};
 
   &:before {
@@ -76,15 +78,15 @@ export const TableHeaderCell = styled.th`
 
   &:first-child {
     padding-left: 2rem;
-    padding-right: 0.5rem;
+    padding-right: 1.2rem;
     z-index: 2;
     left: 0;
     ${({ isScrollable }) => isScrollable && borderRight('4.4rem')}
   }
 
   &:last-child {
-    padding-right: 2.2rem;
-    padding-left: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 1.2rem;
   }
 
   ${({ isScrollable }) =>
@@ -111,12 +113,17 @@ export const HeaderLabel = styled.span`
 export const Body = styled.tbody`
   td {
     height: 5.2rem;
-
-    padding: 0 0.5rem;
+    padding: 0 1.2rem;
+    white-space: nowrap;
 
     font-feature-settings: 'tnum';
 
-    min-width: 10rem;
+    ${({ colsLenght }) =>
+      colsLenght &&
+      css`
+        width: calc(100% / ${colsLenght});
+      `};
+    box-sizing: border-box;
 
     &:first-child {
       padding-left: 2rem;
@@ -134,7 +141,6 @@ export const ChildRow = styled(Row)`
     (hasChildren || selectable) &&
     css`
       cursor: pointer;
-      }
     `};
 
   ${({ striped }) =>
@@ -174,8 +180,13 @@ export const BodyRow = styled(ChildRow)`
 
 export const RowHeader = styled.th`
   height: 5.2rem;
-  display: flex;
-  align-items: center;
+
+  /* Avoid cell to grow when the cell's text overflow */
+  max-width: 1px;
+
+  min-width: 20rem;
+  white-space: nowrap;
+  box-sizing: border-box;
 
   ${({ isScrollable }) =>
     isScrollable &&
@@ -190,7 +201,7 @@ export const RowHeader = styled.th`
   white-space: nowrap;
   overflow: hidden;
 
-  padding: 0 0.5rem 0 2rem;
+  padding: 0 1.2rem 0 2rem;
 
   ${({ isChild }) =>
     isChild &&
@@ -198,9 +209,15 @@ export const RowHeader = styled.th`
       padding-left: 4rem;
     `}
 
-  max-width: 30rem;
-  min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};
+`;
+
+export const TextEllipsis = styled.div`
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 `;
 
 // Table Footer
@@ -212,6 +229,7 @@ export const Footer = styled.tfoot`
 
   td {
     font-feature-settings: 'tnum';
+    box-sizing: border-box;
   }
 
   th,
@@ -235,7 +253,7 @@ export const Footer = styled.tfoot`
 
     height: 5.2rem;
 
-    padding: 0 0.5rem;
+    padding: 0 1.2rem;
     background-color: ${({ theme: { palette } }) => palette.white};
 
     color: ${({ theme: { palette } }) => palette.primary.default};
@@ -251,11 +269,11 @@ export const Footer = styled.tfoot`
         ${borderRight('5.2rem')}
       `}
 
-    padding: 0 0.5rem 0 2rem;
+    padding: 0 1.2rem 0 2rem;
   }
 
   td:last-of-type {
-    padding: 0 3rem 0 0.5rem;
+    padding: 0 2rem 0 1.2rem;
   }
 
   ${({ isHoverable }) =>

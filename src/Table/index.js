@@ -15,6 +15,7 @@ import {
   RowHeader,
   Footer,
   ChildRow,
+  TextEllipsis,
 } from './elements';
 
 /** Lookup object for next sorting direction. */
@@ -193,8 +194,14 @@ class Table extends PureComponent {
       return sortedData;
     };
 
+    // Rule:
+    // first cell count 2 fractions of the table
+    // normal cell count 1 fractions of the table
+    // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
+    const colsLenght = colsDef.length + 1;
+
     return (
-      <Body>
+      <Body colsLenght={colsLenght}>
         {sortData(data).map(({ key, item }, index) => (
           <Fragment key={key}>
             <BodyRow
@@ -218,7 +225,7 @@ class Table extends PureComponent {
                         height="20px"
                       />
                     )}
-                    {value(item, index)}
+                    <TextEllipsis>{value(item, index)}</TextEllipsis>
                   </RowHeader>
                 ) : (
                   <td key={`row-${index}-column-${columnIndex}`} align={align}>
@@ -248,7 +255,7 @@ class Table extends PureComponent {
                             key={`row-header-${key}-${index}`}
                             isChild
                           >
-                            {value(childrenItem, index)}
+                            <TextEllipsis>{value(childrenItem, index)}</TextEllipsis>
                           </RowHeader>
                         ) : (
                           <td key={`row-${index}-column-${key}-${columnIndex}`} align={align}>
