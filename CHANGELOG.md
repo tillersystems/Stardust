@@ -1,3 +1,9 @@
+# [4.11.0](https://github.com/tillersystems/Stardust/compare/v4.10.0...v4.11.0) (2019-10-30)
+
+### Features
+
+- **Table:** Add dropdown row ([#736](https://github.com/tillersystems/Stardust/issues/736)) ([939a46d](https://github.com/tillersystems/Stardust/commit/939a46d7983c31a9780443197e4ee1abb4e070b8))
+
 # [4.10.0](https://github.com/tillersystems/Stardust/compare/v4.9.3...v4.10.0) (2019-10-29)
 
 ### Bug Fixes
