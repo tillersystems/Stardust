@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { transparentize } from 'polished';
 
 const borderRight = height => css`
   &:after {
@@ -18,10 +19,8 @@ const borderRight = height => css`
 
 // Table
 export const TableElement = styled.table`
-  min-width: 100%;
-
-  border-collapse: collapse;
-  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
   position: relative;
 `;
 
@@ -61,20 +60,11 @@ export const TableHeaderCell = styled.th`
   height: 4.4rem;
   padding: 0 1.2rem;
   box-sizing: border-box;
-
+  vertical-align: middle;
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
   background-color: ${({ theme: { palette } }) => palette.white};
-
   white-space: nowrap;
   text-align: ${({ align }) => align || 'left'};
-
-  &:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
-  }
 
   &:first-child {
     padding-left: 2rem;
@@ -111,10 +101,19 @@ export const HeaderLabel = styled.span`
 
 // Table Body
 export const Body = styled.tbody`
+  tr:not(:last-child) {
+    td {
+      border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+    }
+    th {
+      border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+    }
+  }
   td {
     height: 5.2rem;
     padding: 0 1.2rem;
     white-space: nowrap;
+    vertical-align: middle;
 
     font-feature-settings: 'tnum';
 
@@ -296,5 +295,34 @@ export const Container = styled.div`
     css`
       overflow: scroll;
     `}
+  position: relative;
+`;
+
+// Shadow Container
+export const ShadowContainer = styled.div`
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: ${({ firstCellWidth }) => firstCellWidth && `${firstCellWidth}px`};
+  z-index: 10;
+  box-shadow: ${({ side, theme: { palette } }) => {
+    const shadowColor = transparentize(0.9, palette.black);
+    if (side === 'left') {
+      return `inset -8px 0 6px -6px ${shadowColor};`;
+    } else if (side === 'right') {
+      return `inset 8px 0 6px -6px ${shadowColor};`;
+    } else if (side === 'both') {
+      return `inset -8px 0 6px -6px ${shadowColor}, inset 8px 0 6px -6px ${shadowColor};`;
+    }
+    return null;
+  }}
+  background-repeat: no-repeat;
+  background-size: 10px 100%;
+`;
+
+// Shadow Container
+export const ShadowWrapped = styled.div`
   position: relative;
 `;
