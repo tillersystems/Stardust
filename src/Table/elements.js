@@ -115,11 +115,6 @@ export const Body = styled.tbody`
     padding: 0 0.5rem;
 
     font-feature-settings: 'tnum';
-    font-weight: ${({
-      theme: {
-        fonts: { weight },
-      },
-    }) => weight.thick};
 
     min-width: 10rem;
 
@@ -135,8 +130,8 @@ export const Body = styled.tbody`
 export const ChildRow = styled(Row)`
   position: relative;
 
-  ${({ selectable }) =>
-    selectable &&
+  ${({ hasChildren, selectable }) =>
+    (hasChildren || selectable) &&
     css`
       cursor: pointer;
       }
@@ -191,12 +186,18 @@ export const RowHeader = styled.th`
     `}
 
   text-align: ${({ align }) => align || 'left'};
-  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
   padding: 0 0.5rem 0 2rem;
+
+  ${({ isChild }) =>
+    isChild &&
+    css`
+      padding-left: 4rem;
+    `}
+
   max-width: 30rem;
   min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};

@@ -64,7 +64,6 @@ class Table extends PureComponent {
     } = this.state;
 
     this.setState({
-      ...this.state,
       sort: { index: i, direction: i == index ? nextSortingDirection[direction] : 'asc' },
     });
   };
@@ -87,11 +86,13 @@ class Table extends PureComponent {
       });
     }
 
-    if (selectedRows.includes(key)) {
-      const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
-      this.setState({ selectedRows: selectedRowsState });
-    } else {
-      this.setState({ selectedRows: [...selectedRows, key] });
+    if (selectable || item.children) {
+      if (selectedRows.includes(key)) {
+        const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
+        this.setState({ selectedRows: selectedRowsState });
+      } else {
+        this.setState({ selectedRows: [...selectedRows, key] });
+      }
     }
   };
 
@@ -200,19 +201,15 @@ class Table extends PureComponent {
               key={key}
               data-testid="body-row"
               selectable={selectable}
-              selected={selected === key}
+              selected={selectedRows.includes(key)}
               striped={striped}
               onClick={() => this.handleRowSelect(item, key)}
               isHoverable={isHoverable}
+              hasChildren={item.children}
             >
               {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
                 isRowHeader ? (
-                  <RowHeader
-                    align={align}
-                    isScrollable={isScrollable}
-                    key={`row-header-${index}`}
-                    {...(item.children ? { style: { cursor: 'pointer' } } : {})}
-                  >
+                  <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
                     {item.children && (
                       <Icon
                         name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
@@ -247,12 +244,9 @@ class Table extends PureComponent {
                         isRowHeader ? (
                           <RowHeader
                             align={align}
-                            css={`
-                              padding: 1.8rem 4rem;
-                              font-weight: ${({ theme: { fonts } }) => fonts.weight.normal};
-                            `}
                             isScrollable={isScrollable}
                             key={`row-header-${key}-${index}`}
+                            isChild
                           >
                             {value(childrenItem, index)}
                           </RowHeader>
