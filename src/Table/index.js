@@ -204,15 +204,11 @@ class Table extends PureComponent {
               striped={striped}
               onClick={() => this.handleRowSelect(item, key)}
               isHoverable={isHoverable}
+              hasChildren={item.children}
             >
               {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
                 isRowHeader ? (
-                  <RowHeader
-                    align={align}
-                    isScrollable={isScrollable}
-                    key={`row-header-${index}`}
-                    {...(item.children ? { style: { cursor: 'pointer' } } : {})}
-                  >
+                  <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
                     {item.children && (
                       <Icon
                         name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}

@@ -130,8 +130,8 @@ export const Body = styled.tbody`
 export const ChildRow = styled(Row)`
   position: relative;
 
-  ${({ selectable }) =>
-    selectable &&
+  ${({ hasChildren, selectable }) =>
+    (hasChildren || selectable) &&
     css`
       cursor: pointer;
       }
