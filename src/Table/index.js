@@ -246,7 +246,7 @@ class Table extends PureComponent {
                             align={align}
                             isScrollable={isScrollable}
                             key={`row-header-${key}-${index}`}
-                            isChildren
+                            isChild
                           >
                             {value(childrenItem, index)}
                           </RowHeader>

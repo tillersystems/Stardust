@@ -192,8 +192,8 @@ export const RowHeader = styled.th`
 
   padding: 0 0.5rem 0 2rem;
 
-  ${({ isChildren }) =>
-    isChildren &&
+  ${({ isChild }) =>
+    isChild &&
     css`
       padding-left: 4rem;
     `}
