@@ -64,7 +64,6 @@ class Table extends PureComponent {
     } = this.state;
 
     this.setState({
-      ...this.state,
       sort: { index: i, direction: i == index ? nextSortingDirection[direction] : 'asc' },
     });
   };
@@ -87,11 +86,13 @@ class Table extends PureComponent {
       });
     }
 
-    if (selectedRows.includes(key)) {
-      const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
-      this.setState({ selectedRows: selectedRowsState });
-    } else {
-      this.setState({ selectedRows: [...selectedRows, key] });
+    if (selectable || item.children) {
+      if (selectedRows.includes(key)) {
+        const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
+        this.setState({ selectedRows: selectedRowsState });
+      } else {
+        this.setState({ selectedRows: [...selectedRows, key] });
+      }
     }
   };
 
@@ -200,7 +201,7 @@ class Table extends PureComponent {
               key={key}
               data-testid="body-row"
               selectable={selectable}
-              selected={selected === key}
+              selected={selectedRows.includes(key)}
               striped={striped}
               onClick={() => this.handleRowSelect(item, key)}
               isHoverable={isHoverable}
@@ -245,6 +246,7 @@ class Table extends PureComponent {
                             align={align}
                             isScrollable={isScrollable}
                             key={`row-header-${key}-${index}`}
+                            isChildren
                           >
                             {value(childrenItem, index)}
                           </RowHeader>

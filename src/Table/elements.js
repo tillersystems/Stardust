@@ -191,6 +191,13 @@ export const RowHeader = styled.th`
   overflow: hidden;
 
   padding: 0 0.5rem 0 2rem;
+
+  ${({ isChildren }) =>
+    isChildren &&
+    css`
+      padding-left: 4rem;
+    `}
+
   max-width: 30rem;
   min-width: 15rem;
   background-color: ${({ theme: { palette } }) => palette.white};
