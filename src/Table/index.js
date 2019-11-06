@@ -253,10 +253,10 @@ class Table extends PureComponent {
     // first cell count 2 fractions of the table
     // normal cell count 1 fractions of the table
     // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
-    const colsLenght = colsDef.length + 1;
+    const colsLength = colsDef.length + 1;
 
     return (
-      <Body colsLenght={colsLenght} ref={this.bodyRef}>
+      <Body colsLength={colsLength} ref={this.bodyRef}>
         {sortData(data).map(({ key, item }, index) => (
           <Fragment key={key}>
             <BodyRow

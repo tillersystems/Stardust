@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { transparentize } from 'polished';
+import breakpoint from 'styled-components-breakpoint';
 
 const borderRight = height => css`
   &:after {
@@ -117,10 +118,10 @@ export const Body = styled.tbody`
 
     font-feature-settings: 'tnum';
 
-    ${({ colsLenght }) =>
-      colsLenght &&
+    ${({ colsLength }) =>
+      colsLength &&
       css`
-        width: calc(100% / ${colsLenght});
+        width: calc(100% / ${colsLength});
       `};
     box-sizing: border-box;
 
@@ -181,9 +182,12 @@ export const RowHeader = styled.th`
   height: 5.2rem;
 
   /* Avoid cell to grow when the cell's text overflow */
-  max-width: 1px;
-
+  max-width: 30rem;
   min-width: 20rem;
+  ${breakpoint('xs', 'sm')`
+    max-width: 50vw;
+    min-width: 0;
+  `};
   white-space: nowrap;
   box-sizing: border-box;
 
