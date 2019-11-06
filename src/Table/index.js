@@ -247,10 +247,6 @@ class Table extends PureComponent {
                         isRowHeader ? (
                           <RowHeader
                             align={align}
-                            css={`
-                              padding: 1.8rem 4rem;
-                              font-weight: ${({ theme: { fonts } }) => fonts.weight.normal};
-                            `}
                             isScrollable={isScrollable}
                             key={`row-header-${key}-${index}`}
                           >

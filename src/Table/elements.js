@@ -115,11 +115,6 @@ export const Body = styled.tbody`
     padding: 0 0.5rem;
 
     font-feature-settings: 'tnum';
-    font-weight: ${({
-      theme: {
-        fonts: { weight },
-      },
-    }) => weight.thick};
 
     min-width: 10rem;
 
@@ -191,7 +186,6 @@ export const RowHeader = styled.th`
     `}
 
   text-align: ${({ align }) => align || 'left'};
-  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
