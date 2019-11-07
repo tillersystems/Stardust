@@ -1,3 +1,9 @@
+## [4.12.1](https://github.com/tillersystems/Stardust/compare/v4.12.0...v4.12.1) (2019-11-07)
+
+### Bug Fixes
+
+- **Table:** mobile version + scroll issue ([#869](https://github.com/tillersystems/Stardust/issues/869)) ([579860d](https://github.com/tillersystems/Stardust/commit/579860d504d68fde7356e54c790bfca6d5575ad2))
+
 # [4.12.0](https://github.com/tillersystems/Stardust/compare/v4.11.0...v4.12.0) (2019-11-07)
 
 ### Bug Fixes
