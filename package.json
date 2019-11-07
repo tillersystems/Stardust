@@ -72,7 +72,7 @@
     "@babel/cli": "7.6.4",
     "@babel/core": "7.6.4",
     "@babel/plugin-external-helpers": "7.2.0",
-    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.7.0",
     "@babel/plugin-transform-modules-commonjs": "7.6.0",
     "@babel/polyfill": "7.7.0",
     "@babel/preset-env": "7.7.1",
