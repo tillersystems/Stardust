@@ -1,3 +1,13 @@
+# [4.12.0](https://github.com/tillersystems/Stardust/compare/v4.11.0...v4.12.0) (2019-11-07)
+
+### Bug Fixes
+
+- **Table:** update css ([#865](https://github.com/tillersystems/Stardust/issues/865)) ([f1dac68](https://github.com/tillersystems/Stardust/commit/f1dac68d99ddbee8a21a39ed3998954f6e3fcdb5))
+
+### Features
+
+- **Table:** Change column width to match style guidelines ([#850](https://github.com/tillersystems/Stardust/issues/850)) ([048aec1](https://github.com/tillersystems/Stardust/commit/048aec183aafd5a617af4c84377fd70a293e8ff5))
+
 # [4.11.0](https://github.com/tillersystems/Stardust/compare/v4.10.0...v4.11.0) (2019-10-30)
 
 ### Features
