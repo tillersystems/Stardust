@@ -166,10 +166,11 @@ class Table extends PureComponent {
     return (
       <TableHeader>
         <Row>
-          {colsDef.map(({ title, isSortable, align }, columnIndex) => (
+          {colsDef.map(({ title, isSortable, align, isRowHeader }, columnIndex) => (
             <TableHeaderCell
               isScrollable={isScrollable}
               isSortable={isSortable}
+              isRowHeader={isRowHeader}
               scope="col"
               key={`${title}-${columnIndex}`}
               align={align}
@@ -378,18 +379,18 @@ class Table extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { dataTotal, height, isScrollable, width } = this.props;
+    const { dataTotal, height, isScrollable, width, colsDef } = this.props;
 
     return (
-      <ShadowWrapped>
+      <ShadowWrapped containerHeight={height}>
         {this.renderShadow()}
         <Container
           ref={this.containerRef}
           data-testid="table-container"
-          height={height}
+          containerHeight={height}
           isScrollable={isScrollable}
         >
-          <TableElement width={isScrollable ? 'initial' : width}>
+          <TableElement width={isScrollable ? 'initial' : width} colsDef={colsDef}>
             {this.renderHeader()}
             {this.renderBody()}
             {dataTotal && this.renderFooter()}
