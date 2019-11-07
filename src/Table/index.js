@@ -1,4 +1,4 @@
-import React, { Fragment, PureComponent } from 'react';
+import React, { Fragment, PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { Icon, Theme } from '..';
@@ -15,6 +15,9 @@ import {
   RowHeader,
   Footer,
   ChildRow,
+  ShadowContainer,
+  TextEllipsis,
+  ShadowWrapped,
 } from './elements';
 
 /** Lookup object for next sorting direction. */
@@ -51,6 +54,59 @@ class Table extends PureComponent {
     // Use `-1` for no row selected.
     selected: -1,
     selectedRows: [],
+    firstCellWidth: 0,
+    shadowSide: null,
+  };
+
+  rowHeaderRef = createRef();
+  containerRef = createRef();
+  bodyRef = createRef();
+
+  componentDidMount() {
+    const { isScrollable } = this.props;
+    if (isScrollable) {
+      this.setFirstCellWidth();
+      addEventListener('resize', this.onResize);
+      this.containerRef.current.addEventListener('scroll', this.onScroll);
+    }
+  }
+
+  componentWillUnmount() {
+    removeEventListener('resize', this.onResize);
+    this.containerRef.current.removeEventListener('scroll', this.onScroll);
+  }
+
+  onResize = () => {
+    this.setFirstCellWidth();
+    this.setContainerShadow();
+  };
+
+  onScroll = () => {
+    this.setContainerShadow();
+  };
+
+  setFirstCellWidth = () => {
+    const firstCellWidth =
+      this.rowHeaderRef && this.rowHeaderRef.current && this.rowHeaderRef.current.offsetWidth;
+    this.setState({ firstCellWidth });
+  };
+
+  setContainerShadow = () => {
+    const containerRefRect = this.containerRef.current.getBoundingClientRect();
+    const bodyRefRect = this.bodyRef.current.getBoundingClientRect();
+
+    let shadowSide = 'both';
+    if (
+      containerRefRect.left === bodyRefRect.left &&
+      containerRefRect.right === bodyRefRect.right
+    ) {
+      shadowSide = null;
+    } else if (containerRefRect.left === bodyRefRect.left) {
+      shadowSide = 'left';
+    } else if (containerRefRect.right === bodyRefRect.right) {
+      shadowSide = 'right';
+    }
+    this.setState({ shadowSide });
   };
 
   /**
@@ -193,8 +249,14 @@ class Table extends PureComponent {
       return sortedData;
     };
 
+    // Rule:
+    // first cell count 2 fractions of the table
+    // normal cell count 1 fractions of the table
+    // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
+    const colsLength = colsDef.length + 1;
+
     return (
-      <Body>
+      <Body colsLength={colsLength} ref={this.bodyRef}>
         {sortData(data).map(({ key, item }, index) => (
           <Fragment key={key}>
             <BodyRow
@@ -209,7 +271,12 @@ class Table extends PureComponent {
             >
               {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
                 isRowHeader ? (
-                  <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
+                  <RowHeader
+                    ref={this.rowHeaderRef}
+                    align={align}
+                    isScrollable={isScrollable}
+                    key={`row-header-${index}`}
+                  >
                     {item.children && (
                       <Icon
                         name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
@@ -218,7 +285,7 @@ class Table extends PureComponent {
                         height="20px"
                       />
                     )}
-                    {value(item, index)}
+                    <TextEllipsis>{value(item, index)}</TextEllipsis>
                   </RowHeader>
                 ) : (
                   <td key={`row-${index}-column-${columnIndex}`} align={align}>
@@ -248,7 +315,7 @@ class Table extends PureComponent {
                             key={`row-header-${key}-${index}`}
                             isChild
                           >
-                            {value(childrenItem, index)}
+                            <TextEllipsis>{value(childrenItem, index)}</TextEllipsis>
                           </RowHeader>
                         ) : (
                           <td key={`row-${index}-column-${key}-${columnIndex}`} align={align}>
@@ -296,6 +363,16 @@ class Table extends PureComponent {
   }
 
   /**
+   * Renders the shadow of the table.
+   *
+   * @return {jsx}
+   */
+  renderShadow() {
+    const { firstCellWidth, shadowSide } = this.state;
+    return <ShadowContainer side={shadowSide} firstCellWidth={firstCellWidth} />;
+  }
+
+  /**
    * Renders the component.
    *
    * @return {jsx}
@@ -304,13 +381,21 @@ class Table extends PureComponent {
     const { dataTotal, height, isScrollable, width } = this.props;
 
     return (
-      <Container data-testid="table-container" height={height} isScrollable={isScrollable}>
-        <TableElement width={isScrollable ? 'initial' : width}>
-          {this.renderHeader()}
-          {this.renderBody()}
-          {dataTotal && this.renderFooter()}
-        </TableElement>
-      </Container>
+      <ShadowWrapped>
+        {this.renderShadow()}
+        <Container
+          ref={this.containerRef}
+          data-testid="table-container"
+          height={height}
+          isScrollable={isScrollable}
+        >
+          <TableElement width={isScrollable ? 'initial' : width}>
+            {this.renderHeader()}
+            {this.renderBody()}
+            {dataTotal && this.renderFooter()}
+          </TableElement>
+        </Container>
+      </ShadowWrapped>
     );
   }
 }
