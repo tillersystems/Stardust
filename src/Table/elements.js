@@ -20,9 +20,23 @@ const borderRight = height => css`
 
 // Table
 export const TableElement = styled.table`
-  width: 100%;
+  min-width: 100%;
   border-spacing: 0;
   position: relative;
+  ${breakpoint('xs', 'sm')`
+    ${({ colsDef }) =>
+      colsDef &&
+      css`
+        width: ${Math.max(
+          100,
+          colsDef.reduce(
+            (calculatedWidth, col) => calculatedWidth + (col.isRowHeader ? 67 : 33),
+            0,
+          ),
+        )}%;
+        table-layout: fixed;
+      `};
+  `};
 `;
 
 export const Row = styled.tr`
@@ -67,14 +81,6 @@ export const TableHeaderCell = styled.th`
   white-space: nowrap;
   text-align: ${({ align }) => align || 'left'};
 
-  &:first-child {
-    padding-left: 2rem;
-    padding-right: 1.2rem;
-    z-index: 2;
-    left: 0;
-    ${({ isScrollable }) => isScrollable && borderRight('4.4rem')}
-  }
-
   &:last-child {
     padding-right: 2rem;
     padding-left: 1.2rem;
@@ -93,6 +99,29 @@ export const TableHeaderCell = styled.th`
     css`
       cursor: pointer;
     `}
+
+  ${({ isRowHeader }) =>
+    isRowHeader &&
+    css`
+      padding-left: 2rem;
+      padding-right: 1.2rem;
+      z-index: 2;
+      left: 0;
+      ${({ isScrollable }) => isScrollable && borderRight('4.4rem')}
+    `}
+
+
+  ${breakpoint('xs', 'sm')`
+    width: 33%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    
+    ${({ isRowHeader }) =>
+      isRowHeader &&
+      css`
+        width: 67%;
+      `}
+  `};
 `;
 
 export const HeaderLabel = styled.span`
@@ -124,6 +153,12 @@ export const Body = styled.tbody`
         width: calc(100% / ${colsLength});
       `};
     box-sizing: border-box;
+
+    ${breakpoint('xs', 'sm')`
+      width: 33%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    `};
 
     &:first-child {
       padding-left: 2rem;
@@ -185,8 +220,10 @@ export const RowHeader = styled.th`
   max-width: 30rem;
   min-width: 20rem;
   ${breakpoint('xs', 'sm')`
-    max-width: 50vw;
+    width: 67%;
     min-width: 0;
+    max-width: none;
+    overflow:hidden;
   `};
   white-space: nowrap;
   box-sizing: border-box;
@@ -293,12 +330,14 @@ export const Footer = styled.tfoot`
 
 // Table Container
 export const Container = styled.div`
-  height: ${({ height }) => height};
+  height: ${({ containerHeight }) => containerHeight};
   ${({ isScrollable }) =>
     isScrollable &&
     css`
       overflow: scroll;
     `}
+
+  width: 100%;
   position: relative;
 `;
 
@@ -329,4 +368,5 @@ export const ShadowContainer = styled.div`
 // Shadow Container
 export const ShadowWrapped = styled.div`
   position: relative;
+  height: ${({ containerHeight }) => containerHeight};
 `;
