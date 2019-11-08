@@ -33,43 +33,45 @@ storiesOf('List', module)
     },
   })
   .add('default', () => {
-    const isInline = boolean('is inline', false, 'State');
-
-    const datas = [
+    const data = [
       {
-        icon: '#457b9d',
-        mainLabel: 'Tartare de boeuf',
-        secondaryLabel: '3 280 €',
-        annexe: '+ 12%',
+        color: '#457b9d',
+        label: 'Tartare de boeuf',
+        amount: 328050,
+        evolution: 0,
       },
       {
-        icon: '#eda3a3',
-        mainLabel: 'Avocado Toast',
-        secondaryLabel: '2 267 €',
-        annexe: '+ 6%',
+        color: '#eda3a3',
+        label: 'Avocado Toast',
+        amount: 226734,
+        evolution: -0.06,
       },
       {
-        icon: '#a8dadc',
-        mainLabel: 'Pavé de saumon',
-        secondaryLabel: '1 829 €',
-        annexe: '+ 4%',
+        color: '#a8dadc',
+        label: 'Pavé de saumon',
+        amount: 182934,
+        evolution: 0.04,
       },
     ];
 
-    const formatDatas = {
-      icon: value => (
+    const getLabel = ({ label, color }) => (
+      <>
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" role="presentation">
-          <rect x="0" y="1.5" fill={value} width="10" height="10" rx="3" ry="3" />
+          <rect x="0" y="1.5" fill={color} width="10" height="10" rx="3" ry="3" />
         </svg>
-      ),
-      mainLabel: value => <Main>{value}</Main>,
-      secondaryLabel: value => <Secondary>{value}</Secondary>,
-      annexe: value => <Annexe>{value}</Annexe>,
-    };
+        {label}
+      </>
+    );
 
     return (
       <Wrapper>
-        <List datas={datas} formatDatas={formatDatas} isInline={isInline} />
+        <List
+          currency="EUR"
+          data={data.map(row => ({
+            ...row,
+            label: getLabel(row),
+          }))}
+        />
       </Wrapper>
     );
   });

@@ -1,73 +1,61 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-import { Icon, ListContainer, ListItem, MainLabel, SecondaryLabel, Annexe } from './elements';
+import Item from './Item';
+import { Container } from './elements';
 
 /**
- * List component displays a list of item through data passed props.
+ * List component displays a list of items through a `data` prop
  * You can format the data to stylise it or render the item in one line.
  *
  * See README.md and its stories from Storybook for documentation and examples
  *
  * @return {jsx}
  */
-const List = ({ datas, formatDatas, isInline }) => {
-  const {
-    icon: formatIcon,
-    mainLabel: formatMainLabel,
-    secondaryLabel: formatSecondaryLabel,
-    annexe: formatAnnexe,
-  } = formatDatas;
-
+const List = ({ currency, data, locale }) => {
   return (
-    <ListContainer>
-      {datas.map(({ icon, mainLabel, secondaryLabel, annexe }, index) => (
-        <ListItem key={index} isInline={isInline} data-testid="list-item">
-          {icon && <Icon>{formatIcon ? formatIcon(icon) : icon}</Icon>}
-          <MainLabel>{formatMainLabel ? formatMainLabel(mainLabel) : mainLabel}</MainLabel>
-          <SecondaryLabel>
-            {formatSecondaryLabel ? formatSecondaryLabel(secondaryLabel) : secondaryLabel}
-          </SecondaryLabel>
-          <Annexe>{formatAnnexe ? formatAnnexe(annexe) : annexe}</Annexe>
-        </ListItem>
+    <Container>
+      {data.map(({ amount, evolution, label }, index) => (
+        <Item
+          key={index}
+          amount={amount}
+          currency={currency}
+          evolution={evolution}
+          locale={locale}
+          data-testid="list-item"
+        >
+          {label}
+        </Item>
       ))}
-    </ListContainer>
+    </Container>
   );
 };
 
-const { arrayOf, shape, bool, func, string } = Proptypes;
+const { arrayOf, node, number, oneOfType, shape, string } = Proptypes;
 List.propTypes = {
+  /** Currency for amount values */
+  currency: string,
+
   /**
    * Data to display in the List component
    */
-  datas: arrayOf(
+  data: arrayOf(
     shape({
-      icon: string,
-      mainLabel: string,
-      secondaryLabel: string,
-      annexe: string,
+      amount: number,
+      evolution: number,
+      label: oneOfType([node, string]),
     }),
   ).isRequired,
 
   /**
-   * Format the value for display
+   * locale code used to properly format numbers
    */
-  formatDatas: shape({
-    icon: func,
-    mainLabel: func,
-    secondaryLabel: func,
-    annexe: func,
-  }),
-
-  /**
-   * If isInline property is set the list items while be displayed in one line
-   */
-  isInline: bool,
+  locale: string,
 };
 
 List.defaultProps = {
-  formatDatas: { icon: null, mainLabel: null, secondaryLabel: null, annexe: null },
-  isInline: false,
+  currency: null,
+  locale: 'en',
 };
 
 export default List;
