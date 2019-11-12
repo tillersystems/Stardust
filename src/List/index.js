@@ -20,7 +20,7 @@ const List = ({ currency, data, locale }) => {
           key={index}
           amount={amount}
           currency={currency}
-          evolution={evolution}
+          {...(typeof evolution !== 'undefined' ? { evolution } : {})}
           locale={locale}
           data-testid="list-item"
         >

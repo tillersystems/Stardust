@@ -1,4 +1,4 @@
-# Message
+# List
 
 ### Usage
 
@@ -21,38 +21,39 @@ import { List } from '@tillersystems/stardust';
 const datas = [
   {
     icon: '#457b9d',
-    mainLabel: 'Tartare de boeuf',
-    secondaryLabel: '3 280 €',
-    annexe: '+ 12%',
+    label: 'Tartare de boeuf',
+    amount: 3 280,
+    evolution: 0.12,
   },
   {
     icon: '#eda3a3',
-    mainLabel: 'Avocado Toast',
-    secondaryLabel: '2 267 €',
-    annexe: '+ 6%',
+    label: 'Avocado Toast',
+    amount: 2267,
+    evolution: 0.06,
   },
   {
     icon: '#a8dadc',
-    mainLabel: 'Pavé de saumon',
-    secondaryLabel: '1 829 €',
-    annexe: '+ 4%',
+    label: 'Pavé de saumon',
+    amount: 1829,
+    evolution: 0.04,
   },
 ];
 
-const formatDatas = {
-  icon: value => (
+const formatLabel = ({ label }) => (
+  <>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" role="presentation">
       <rect x="0" y="1.5" fill={value} width="10" height="10" rx="3" ry="3" />
     </svg>
-  ),
-  mainLabel: value => <Main>{value}</Main>,
-  secondaryLabel: value => <Secondary>{value}</Secondary>,
-  annexe: value => <Annexe>{value}</Annexe>,
-};
+    {label}
+  </>
+);
 
 render() {
   return (
-    <List datas={datas} formatDatas={formatDatas} />
+    <List data={data.map(row => ({
+      ...row,
+      label: formatLabel(row),
+    }))} currency="EUR" locale="fr" />
   );
 }
 ```

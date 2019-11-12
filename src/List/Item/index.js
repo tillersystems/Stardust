@@ -2,7 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 
 import { formatNumber } from '../../helpers/formatting';
-import { Amount, Container, Evolution, Label } from './elements';
+import { Amount, Container, Evolution, Label, SideWrapper } from './elements';
 
 /**
  *
@@ -12,22 +12,26 @@ const Item = ({ amount, children, className, currency, evolution, locale }) => {
   return (
     <Container className={className}>
       <Label>{children}</Label>
-      <Amount>
-        {formatNumber({
-          locale,
-          currency,
-          number: amount,
-        })}
-      </Amount>
-      <Evolution evolution={evolution}>
-        {evolution === 0 ? '=' : evolution > 0 && '+'}
-        {evolution !== 0 &&
-          formatNumber({
+      <SideWrapper>
+        <Amount>
+          {formatNumber({
             locale,
-            number: evolution,
-            percent: true,
+            currency,
+            number: amount,
           })}
-      </Evolution>
+        </Amount>
+        {evolution !== null && (
+          <Evolution evolution={evolution}>
+            {evolution === 0 ? '=' : evolution > 0 && '+'}
+            {evolution !== 0 &&
+              formatNumber({
+                locale,
+                number: evolution,
+                percent: true,
+              })}
+          </Evolution>
+        )}
+      </SideWrapper>
     </Container>
   );
 };
