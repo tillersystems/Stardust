@@ -59,6 +59,8 @@ export const formatNumber = ({ currency, locale, number, percent, digits = 2 }) 
       ? !Number.isInteger(Math.round(value * 10000) / 100) && {
           minimumFractionDigits: digits,
         }
-      : Number.isInteger(value) && { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+      : Number.isInteger(value)
+      ? { minimumFractionDigits: 0, maximumFractionDigits: 0 }
+      : { minimumFractionDigits: digits, maximumFractionDigits: digits }),
   }).format(value);
 };

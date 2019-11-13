@@ -15,11 +15,11 @@ const data = [
 
 describe('<List />', () => {
   test('should render without a problem', () => {
-    const { getByText } = render(<List currency="EUR" data={data} locale="en" />);
+    const { getByText } = render(<List data={data} locale="en" />);
 
     const labelNode = getByText('Pavé de saumon');
     expect(labelNode).toBeInTheDocument();
-    const amountNode = getByText(/€18.29/);
+    const amountNode = getByText(/1829/);
     expect(amountNode).toBeInTheDocument();
   });
 

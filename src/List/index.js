@@ -41,7 +41,7 @@ List.propTypes = {
    */
   data: arrayOf(
     shape({
-      amount: number,
+      amount: node,
       evolution: number,
       label: oneOfType([node, string]),
     }),

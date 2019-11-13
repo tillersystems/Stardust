@@ -8,18 +8,12 @@ import { Amount, Container, Evolution, Label, SideWrapper } from './elements';
  *
  * @return {jsx}
  */
-const Item = ({ amount, children, className, currency, evolution, locale }) => {
+const Item = ({ amount, children, className, evolution, locale }) => {
   return (
     <Container className={className}>
       <Label>{children}</Label>
       <SideWrapper>
-        <Amount>
-          {formatNumber({
-            locale,
-            currency,
-            number: amount,
-          })}
-        </Amount>
+        <Amount>{amount}</Amount>
         {evolution !== null && (
           <Evolution evolution={evolution}>
             {evolution === 0 ? '=' : evolution > 0 && '+'}
@@ -39,13 +33,10 @@ const Item = ({ amount, children, className, currency, evolution, locale }) => {
 const { node, number, string } = Proptypes;
 Item.propTypes = {
   /** First side value displayed at the right side of the container */
-  amount: number,
+  amount: node,
 
   /** Main value of the item, like a label for example, displayed at the left side of the container */
   children: node.isRequired,
-
-  /** Currency for amount value */
-  currency: string,
 
   /** Second side value displayed below the first side node. Can add extra information  */
   evolution: number,
@@ -56,7 +47,6 @@ Item.propTypes = {
 
 Item.defaultProps = {
   amount: null,
-  currency: null,
   evolution: null,
   locale: 'en',
 };

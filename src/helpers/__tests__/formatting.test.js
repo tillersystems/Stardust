@@ -33,4 +33,15 @@ describe('formatNumber', () => {
 
     expect(formattedNumber).toBe('$21.14');
   });
+
+  test('should return price in dollars as a whole number', () => {
+    const formattedNumber = formatNumber({
+      locale: 'en-US',
+      number: 2114.34,
+      digits: 0,
+      currency: 'USD',
+    });
+
+    expect(formattedNumber).toBe('$21');
+  });
 });

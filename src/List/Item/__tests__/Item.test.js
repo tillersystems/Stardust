@@ -16,22 +16,11 @@ describe('<Item />', () => {
 
     const labelNode = getByText('Pavé de saumon');
     expect(labelNode).toBeInTheDocument();
-    const amountNode = getByText(/1,829/);
+    const amountNode = getByText(/1829/);
     expect(amountNode).toBeInTheDocument();
   });
 
-  test('should render with currency', () => {
-    const { getByText } = render(
-      <Item {...props} currency="EUR">
-        Pavé de saumon
-      </Item>,
-    );
-
-    const amountNode = getByText(/€18.29/);
-    expect(amountNode).toBeInTheDocument();
-  });
-
-  test('should render ', () => {
+  test('should render label with custom style', () => {
     const Main = styled.span`
       font-size: ${({ theme: { fonts } }) => fonts.size.medium};
     `;
