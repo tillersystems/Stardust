@@ -111,7 +111,7 @@
     "husky": "3.0.9",
     "jest": "24.9.0",
     "jest-dom": "3.5.0",
-    "jest-styled-components": "6.3.3",
+    "jest-styled-components": "6.3.4",
     "json": "9.0.6",
     "mockdate": "2.0.5",
     "popmotion": "8.7.0",
