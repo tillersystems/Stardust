@@ -11,6 +11,15 @@ export { default as Dropdown } from './Dropdown';
 export { default as EventListener } from './EventListener';
 export { default as Flag } from './Flag';
 export { default as Form } from './Form';
+export {
+  dark,
+  light,
+  getLightness,
+  setColorDark,
+  whiteOpacity,
+  formatCompactedNumber,
+  formatNumber,
+} from './helpers';
 export { default as Icon } from './Icon';
 export { DatePickerInput, NumberInput, TextInput } from './Input';
 export { default as KpiBlock } from './KpiBlock';
