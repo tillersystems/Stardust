@@ -12,9 +12,9 @@ import { Container } from './elements';
  *
  * @return {jsx}
  */
-const List = ({ currency, data, locale }) => {
+const List = ({ className, currency, data, locale }) => {
   return (
-    <Container>
+    <Container className={className}>
       {data.map(({ amount, evolution, label }, index) => (
         <Item
           key={index}
@@ -33,6 +33,9 @@ const List = ({ currency, data, locale }) => {
 
 const { arrayOf, node, number, oneOfType, shape, string } = Proptypes;
 List.propTypes = {
+  /** Needed by styled-components for custom style */
+  className: string,
+
   /** Currency for amount values */
   currency: string,
 
@@ -54,6 +57,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
+  className: undefined,
   currency: null,
   locale: 'en',
 };
