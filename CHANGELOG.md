@@ -1,3 +1,9 @@
+## [4.12.2](https://github.com/tillersystems/Stardust/compare/v4.12.1...v4.12.2) (2019-11-14)
+
+### Features
+
+- **List:** add List component ([#849](https://github.com/tillersystems/Stardust/issues/849)) ([ddf89fa](https://github.com/tillersystems/Stardust/commit/ddf89fa77fde23cebf20481d1630db94b8ee6553))
+
 ## [4.12.1](https://github.com/tillersystems/Stardust/compare/v4.12.0...v4.12.1) (2019-11-07)
 
 ### Bug Fixes
