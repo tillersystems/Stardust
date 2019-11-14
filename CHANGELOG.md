@@ -1,3 +1,9 @@
+## [4.12.3](https://github.com/tillersystems/Stardust/compare/v4.12.2...v4.12.3) (2019-11-14)
+
+### Bug Fixes
+
+- **List:** add className prop for styled-components ([#884](https://github.com/tillersystems/Stardust/issues/884)) ([c46507b](https://github.com/tillersystems/Stardust/commit/c46507bc2e3786d53ba522f36a91fbb4fd945740))
+
 ## [4.12.2](https://github.com/tillersystems/Stardust/compare/v4.12.1...v4.12.2) (2019-11-14)
 
 ### Features
