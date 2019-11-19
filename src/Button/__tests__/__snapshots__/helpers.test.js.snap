@@ -4,110 +4,174 @@ exports[`<Button /> -- helpers getAppearance should return danger css appearance
 
 exports[`<Button /> -- helpers getAppearance should return default css appearance 1`] = `
 Array [
-  "color:",
+  "
+      color: ",
   "hsl(213,17%,20%)",
-  ";background:none;",
+  ";
+      background: none;
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getAppearance should return google css appearance 1`] = `
 Array [
-  "background:",
+  "
+      background: ",
   "hsl(5,81%,56%)",
-  ";border:0.1rem solid ",
+  ";
+      border: 0.1rem solid ",
   "hsl(5,81%,56%)",
-  ";box-shadow:inset 0 0.2rem 0 0 ",
+  ";
+      box-shadow: inset 0 0.2rem 0 0 ",
   "hsla(0, 100%, 100%, 0.1)",
-  ";&:hover:not([disabled]):not(:active){background:",
+  ";
+
+      /* Hovered  */
+      &:hover:not([disabled]):not(:active) {
+        background: ",
   "#d52616",
-  ";}",
+  ";
+      }
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getAppearance should return primary css appearance 1`] = `
 Array [
-  "background:",
+  "
+      background: ",
   "hsl(200,74%,46%)",
-  " linear-gradient( 0deg,",
+  "
+        linear-gradient(
+          0deg,
+          ",
   [Function],
-  " 0%,",
+  " 0%,
+          ",
   [Function],
-  " 100% );border:1px solid ",
+  " 100%
+        );
+      border: 1px solid ",
   "#1873a0",
-  ";box-shadow:inset 0 0.2rem 0 0 ",
+  ";
+      box-shadow: inset 0 0.2rem 0 0 ",
   "hsla(0, 100%, 100%, 0.1)",
-  ";&:hover:not([disabled]):not(:active){background:",
+  ";
+
+      /* Hovered  */
+      &:hover:not([disabled]):not(:active) {
+        background: ",
   "hsl(200,74%,46%)",
-  ";box-shadow:none;}&:active{background-color:",
+  ";
+        box-shadow: none;
+      }
+
+      /* Activated  */
+      &:active {
+        background-color: ",
   "#1873a0",
-  ";border:1px solid ",
+  ";
+        border: 1px solid ",
   "#14638a",
-  ";box-shadow:inset 0 0 0 0.1rem ",
+  ";
+        box-shadow: inset 0 0 0 0.1rem ",
   "#14638a",
-  ";}",
+  ";
+      }
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getAppearance should return secondary css appearance 1`] = `
 Array [
-  "color:",
+  "
+      color: ",
   "hsl(207,13%,45%)",
-  ";background:linear-gradient(180deg,",
+  ";
+      background: linear-gradient(180deg, ",
   "hsl(0,100%,100%)",
-  " 0%,",
+  " 0%, ",
   "hsl(240,33%,99%)",
-  " 100%);border:1px solid ",
+  " 100%);
+      border: 1px solid ",
   "hsl(207,22%,90%)",
-  ";",
+  ";
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getAppearance should return success css appearance 1`] = `
 Array [
-  "background:",
+  "
+      background: ",
   "hsl(89,53%,52%)",
-  " linear-gradient(0deg,",
+  "
+        linear-gradient(0deg, ",
   "hsla(0, 100%, 100%, 0)",
-  " 0%,",
+  " 0%, ",
   "hsla(0, 100%, 100%, 0.1)",
-  " 100%);border:1px solid ",
+  " 100%);
+      border: 1px solid ",
   "#6da333",
-  ";box-shadow:inset 0 0.2rem 0 0 ",
+  ";
+      box-shadow: inset 0 0.2rem 0 0 ",
   "hsla(0, 100%, 100%, 0.1)",
-  ";&:hover:not([disabled]):not(:active){background:",
+  ";
+
+      /* Hovered  */
+      &:hover:not([disabled]):not(:active) {
+        background: ",
   "hsl(89,53%,52%)",
-  ";box-shadow:none;}&:active{background-color:",
+  ";
+        box-shadow: none;
+      }
+
+      /* Activated  */
+      &:active {
+        background-color: ",
   "#6da333",
-  ";border:1px solid ",
+  ";
+        border: 1px solid ",
   "#60902d",
-  ";box-shadow:inset 0 0 0 0.1rem ",
+  ";
+        box-shadow: inset 0 0 0 0.1rem ",
   "#60902d",
-  ";}",
+  ";
+      }
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getSize should return default css size 1`] = `
 Array [
-  "padding:",
+  "
+      padding: ",
   "0.75rem 1.6rem",
-  ";",
+  ";
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getSize should return large css size 1`] = `
 Array [
-  "padding:",
+  "
+      padding: ",
   "0.7rem 2rem",
-  ";font-size:",
+  ";
+      font-size: ",
   "1.6rem",
-  ";line-height:1.5;",
+  ";
+      line-height: 1.5;
+    ",
 ]
 `;
 
 exports[`<Button /> -- helpers getSize should return small css size 1`] = `
 Array [
-  "padding:",
+  "
+      padding: ",
   "0.35rem 1.4rem",
-  ";",
+  ";
+    ",
 ]
 `;

@@ -2,7 +2,10 @@
 
 exports[`<Notification /> -- helpers getAlertPosition should return notification Css Position 1`] = `
 Array [
-  "left:1rem;top:4rem;",
+  "
+      left: 1rem;
+      top: 4rem;
+    ",
 ]
 `;
 

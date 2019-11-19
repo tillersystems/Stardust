@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "module": "esnext", //commonjs destroys 'dynamic imports' which is used for code splitting
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "target": "esnext",
+    "jsx": "react" // process JSX
+  },
+  "include": ["src"],
+  "compileOnSave": false
+}
