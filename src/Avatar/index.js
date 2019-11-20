@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import initials from 'initials';
 
-import Theme from '../Theme';
+import Theme from '../Theme/index.ts';
 import { Image } from './elements';
 
 // Define some colors

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Icon from '../Icon';
-import Theme from '../Theme';
+import Theme from '../Theme/index.ts';
 import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
 
 /**

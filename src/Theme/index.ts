@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 /**
  * Theme exported to the provider
  * This is globally available in styled-components when interpolating a function like so:
@@ -10,7 +12,7 @@ import { palette } from './palette';
 import { dimensions } from './dimensions';
 import { fonts } from './fonts';
 
-const Theme = {
+const Theme: DefaultTheme = {
   breakpoints,
   palette,
   dimensions,

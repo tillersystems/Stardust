@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import { Icon, Theme } from '..';
+import { Icon, Theme } from '../index.ts';
 import { Description } from './elements';
 import { STATUS_ICON_NAMES } from './constants';
 import { getStatusBackgroundColor } from './helpers';

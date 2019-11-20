@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Dropdown /> should have expected custom style on each item 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+<li
+  class="c0"
+  role="menuitem"
+>
+  <div>
+    Item1
+  </div>
+</li>
+`;
+
 exports[`<Dropdown /> should render without a problem 1`] = `
 .c1 {
   display: inline-block;
@@ -25,7 +48,7 @@ exports[`<Dropdown /> should render without a problem 1`] = `
   font-size: 1.4rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
-  background: linear-gradient( 180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100% );
+  background: linear-gradient( 180deg, hsl(0,100%,100%) 0%, hsl(240,33%,99%) 100% );
   color: hsl(207,13%,45%);
 }
 

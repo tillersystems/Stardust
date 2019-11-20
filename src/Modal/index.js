@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { AnimatePresence } from 'framer-motion';
 import { Portal } from 'react-portal';
 
-import Theme from '../Theme';
+import Theme from '../Theme/index.ts';
 import { containerVariants, overlayVariants, dialogVariants } from './animation';
 
 /**

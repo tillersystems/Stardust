@@ -7,10 +7,13 @@ exports[`<Tag /> should render without a problem 1`] = `
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
 }
 
 <div
   class="c0"
-  data-testid="tag"
-/>
+  color="hsl(200,74%,46%)"
+>
+  Beta
+</div>
 `;

@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Button } from '..';
+import { Button } from '../index.ts';
 import { FakeInput } from './elements';
 
 const { func, number, string } = PropTypes;

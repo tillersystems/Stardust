@@ -12,14 +12,6 @@ const Scrollbox = ({ children, height }) => {
   const scrollAreaRef = useRef(null);
   const scrollTargetRef = useRef(null);
 
-  /**
-   * Hook triggered on first render to scroll to center its content
-   *
-   */
-  useEffect(() => {
-    scrollToCenter();
-  }, []);
-
   const scrollToCenter = () => {
     const scrollArea = scrollAreaRef.current;
     const scrollTarget = scrollTargetRef.current;
@@ -30,6 +22,14 @@ const Scrollbox = ({ children, height }) => {
     scrollArea.scrollLeft =
       scrollTarget.offsetLeft + scrollTarget.clientWidth / 2 - scrollArea.clientWidth / 2;
   };
+
+  /**
+   * Hook triggered on first render to scroll to center its content
+   *
+   */
+  useEffect(() => {
+    scrollToCenter();
+  }, []);
 
   return (
     <Root>

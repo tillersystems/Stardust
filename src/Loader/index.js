@@ -8,7 +8,7 @@ import styled from 'styled-components';
  * @return {jsx}
  */
 
-import Theme from '../Theme';
+import Theme from '../Theme/index.ts';
 
 const Loader = ({ className, color, width, height }) => (
   <svg className={className} viewBox="0 0 50 50" width={width} height={height} aria-hidden="true">

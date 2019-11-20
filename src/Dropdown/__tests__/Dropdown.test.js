@@ -143,7 +143,7 @@ describe('<Dropdown />', () => {
     expect(ItemNode[2]).toBeUndefined();
   });
 
-  test('should have expected custom style on each item', () => {
+  test.skip('should have expected custom style on each item', () => {
     const props = {
       title: 'title',
       itemCss: css`

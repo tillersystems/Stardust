@@ -1,5 +1,6 @@
 {
   "presets": [
+    "@babel/preset-typescript",
     [
       "@babel/preset-env",
       {
@@ -19,7 +20,12 @@
   ],
   "env": {
     "es": {
-      "ignore": ["src/**/*.stories.js", "src/**/*.test.js"],
+      "ignore": [
+        "src/**/*.stories.js",
+        "src/**/*.stories.tsx",
+        "src/**/*.test.js",
+        "src/**/*.test.tsx"
+      ],
       "plugins": [
         [
           "babel-plugin-styled-components",
@@ -30,7 +36,12 @@
       ]
     },
     "commonjs": {
-      "ignore": ["src/**/*.stories.js", "src/**/*.test.js"],
+      "ignore": [
+        "src/**/*.stories.js",
+        "src/**/*.stories.tsx",
+        "src/**/*.test.js",
+        "src/**/*.test.tsx"
+      ],
       "plugins": [
         "@babel/plugin-transform-modules-commonjs",
         [

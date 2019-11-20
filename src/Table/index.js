@@ -1,7 +1,7 @@
 import React, { Fragment, PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 
-import { Icon, Theme } from '..';
+import { Icon, Theme } from '../index.ts';
 import compare from '../helpers/compare';
 import {
   Container,
