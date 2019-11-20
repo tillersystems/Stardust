@@ -26,8 +26,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "yarn clean && yarn test:ci && yarn build:commonjs && yarn build:es",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --extensions '.js,.ts,.tsx'",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --extensions '.js,.ts,.tsx'",
     "prepublishOnly": "yarn build",
     "release": "./internal/tools/release.sh",
     "storybook-build": "build-storybook -c .storybook -o .out"
