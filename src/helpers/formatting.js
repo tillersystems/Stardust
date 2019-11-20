@@ -8,7 +8,7 @@
  * @return {string} formatted number
  */
 export const formatCompactedNumber = (locale, number, currency) => {
-  const value = ['USD', 'EUR'].includes(currency) ? number / 100 : number;
+  const value = currency ? number / 100 : number;
 
   const compactedNumber =
     value >= 1000000
@@ -51,7 +51,7 @@ export const formatCompactedNumber = (locale, number, currency) => {
  * @return {string} number formatted with spaces and currency/percent symbol if required
  */
 export const formatNumber = ({ currency, locale, number, percent, digits = 2 }) => {
-  const value = ['USD', 'EUR'].includes(currency) ? number / 100 : number;
+  const value = currency ? number / 100 : number;
 
   return new Intl.NumberFormat(locale, {
     ...(currency ? { style: 'currency', currency } : percent ? { style: 'percent' } : {}),
