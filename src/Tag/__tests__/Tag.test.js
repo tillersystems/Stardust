@@ -5,14 +5,14 @@ import Tag from '..';
 
 describe('<Tag />', () => {
   test('should render without a problem', () => {
-    const { container } = render(<Tag />);
+    const { container } = render(<Tag>Beta</Tag>);
 
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('should have a color', () => {
-    const { getByTestId } = render(<Tag color="red" />);
+    const { getByText } = render(<Tag color="red">Beta</Tag>);
 
-    expect(getByTestId('tag')).toHaveStyleRule('background', 'red');
+    expect(getByText('Beta')).toHaveStyleRule('background', 'red');
   });
 });

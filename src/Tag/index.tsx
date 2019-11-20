@@ -23,7 +23,6 @@ const Tag = styled.div<TagProps>(({ theme: { palette }, color }) => {
  * Default props.
  */
 Tag.defaultProps = {
-  appearance: Theme.palette.primary.default,
   color: Theme.palette.primary.default,
 } as Partial<TagProps>;
 
