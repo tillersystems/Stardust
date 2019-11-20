@@ -1,3 +1,5 @@
+## [4.12.5](https://github.com/tillersystems/Stardust/compare/v4.12.4...v4.12.5) (2019-11-20)
+
 ## [4.12.4](https://github.com/tillersystems/Stardust/compare/v4.12.3...v4.12.4) (2019-11-20)
 
 ### Bug Fixes
