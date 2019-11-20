@@ -3,13 +3,20 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true,
     "module": "esnext", //commonjs destroys 'dynamic imports' which is used for code splitting
     "moduleResolution": "node",
+    "noEmit": true,
     "outDir": "dist",
     "target": "esnext",
     "jsx": "react" // process JSX
   },
   "include": ["src"],
+  "exclude": ["node_modules", "src/**/*.stories.tsx"],
   "compileOnSave": false
 }
