@@ -46,8 +46,12 @@ storiesOf('Theme', module)
     );
   });
 
+interface PaletteCardProps {
+  name: string;
+  color: string;
+}
 // Component
-const PaletteCard = ({ name, color }) => (
+const PaletteCard: React.FC<PaletteCardProps> = ({ name, color }) => (
   <Container>
     <Body color={color} />
     <Footer>

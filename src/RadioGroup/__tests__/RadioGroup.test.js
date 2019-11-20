@@ -186,7 +186,7 @@ describe('<RadioGroup />', () => {
       </RadioGroup>,
     );
 
-    let pumpkinNode = getByLabelText('pumpkin');
+    const pumpkinNode = getByLabelText('pumpkin');
 
     fireEvent.click(pumpkinNode);
 

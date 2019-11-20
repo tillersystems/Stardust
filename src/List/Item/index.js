@@ -35,6 +35,9 @@ Item.propTypes = {
   /** First side value displayed at the right side of the container */
   amount: node,
 
+  /** Needed by styled-components for custom style */
+  className: string,
+
   /** Main value of the item, like a label for example, displayed at the left side of the container */
   children: node.isRequired,
 
@@ -47,6 +50,7 @@ Item.propTypes = {
 
 Item.defaultProps = {
   amount: null,
+  className: undefined,
   evolution: null,
   locale: 'en',
 };

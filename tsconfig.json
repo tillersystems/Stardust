@@ -1,22 +1,32 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    /* Basic Options */
+    "target": "esnext" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */,
+    "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "allowJs": true /* Allow javascript files to be compiled. */,
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+    "removeComments": true /* Do not emit comments to output. */,
+    "noEmit": true /* Do not emit outputs. */,
+    "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,
+
+    /* Strict Type-Checking Options */
+    "strict": true /* Enable all strict type-checking options. */,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "module": "esnext", //commonjs destroys 'dynamic imports' which is used for code splitting
-    "moduleResolution": "node",
-    "noEmit": true,
-    "outDir": "dist",
-    "target": "esnext",
-    "jsx": "react" // process JSX
+    "checkJs": false,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "src/**/*.stories.tsx", "src/**/__tests__/*", "internal"],
+  "include": [
+    "./src",
+    "./src/**/__tests__/*.test.js",
+    "./src/**/*.stories.tsx",
+    "./src/**/*.stories.js"
+  ],
+  "exclude": ["./node_modules", "./internal"],
   "compileOnSave": false
 }

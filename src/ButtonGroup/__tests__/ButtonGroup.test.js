@@ -7,7 +7,7 @@ const originalWarn = console.error;
 afterEach(() => (console.error = originalWarn));
 
 describe('<ButtonGroup />', () => {
-  let consoleOutput = [];
+  const consoleOutput = [];
   const mockedWarn = output => consoleOutput.push(output);
   beforeEach(() => (console.error = mockedWarn));
 

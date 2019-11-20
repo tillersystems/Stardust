@@ -21,7 +21,7 @@ storiesOf('RadioButton', module)
   })
   .add('default', () => {
     const enabledValue = boolean('Enabled', true, 'Props');
-    let selectedValue = 'apple';
+    const selectedValue = 'apple';
 
     return (
       <Wrapper>
