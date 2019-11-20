@@ -1,3 +1,9 @@
+## [4.12.4](https://github.com/tillersystems/Stardust/compare/v4.12.3...v4.12.4) (2019-11-20)
+
+### Bug Fixes
+
+- **helpers:** divide by 100 all money amounts ([#894](https://github.com/tillersystems/Stardust/issues/894)) ([fd263ae](https://github.com/tillersystems/Stardust/commit/fd263ae99d485f25943ea1a967584702ff8b9d03))
+
 ## [4.12.3](https://github.com/tillersystems/Stardust/compare/v4.12.2...v4.12.3) (2019-11-14)
 
 ### Bug Fixes
