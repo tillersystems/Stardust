@@ -1,9 +1,12 @@
 module.exports = function({ config }) {
   config.module.rules.push({
-    test: /\.stories\.jsx?$/,
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
-    enforce: 'pre',
+    test: /\.ts(x?)$/,
+    loader: require.resolve('babel-loader'),
+    options: {
+      presets: [['react-app', { flow: false, typescript: true }]],
+    },
   });
+  config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
 };
