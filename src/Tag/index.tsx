@@ -1,13 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
 
-import { ITag } from './types';
+import { TagProps } from './types.d';
 import Theme from '../Theme';
 
 /**
  * A Tag categorizes or marks anything.
  */
-const Tag = styled.div<ITag>(({ theme: { palette }, color }) => {
+const Tag = styled.div<TagProps>(({ theme: { palette }, color }) => {
   return `
   position: relative;
   display: inline-block;
@@ -26,6 +25,6 @@ const Tag = styled.div<ITag>(({ theme: { palette }, color }) => {
 Tag.defaultProps = {
   appearance: Theme.palette.primary.default,
   color: Theme.palette.primary.default,
-} as Partial<ITag>;
+} as Partial<TagProps>;
 
 export default Tag;

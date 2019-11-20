@@ -5,6 +5,27 @@ import styled from 'styled-components';
 import { Container, ContainerIcon } from './elements';
 
 /**
+ * displayIcon
+ *
+ * This function is a helper to place
+ * the icon correctly inside a button.
+ * He return an react element with the
+ * good props: left or right.
+ *
+ * @param {string} side // The side where the icon should be positioned [left or right].
+ * @param {jsx} icon // The icon elements.
+ *
+ * @return {jsx}
+ */
+const displayIcon = (side, icon) => {
+  if (!side || !icon) return null;
+  return {
+    left: <ContainerIcon left>{icon}</ContainerIcon>,
+    right: <ContainerIcon right>{icon}</ContainerIcon>,
+  }[side];
+};
+
+/**
  * A Button comes in three possible sizes and six visual sizes.
  * An Icon component can be displayed next to the text label of the button, left or right side.
  * For now, instance of the Icon must be passed to the Button so styling is rather free.
@@ -44,27 +65,6 @@ const Button = ({
       {children}
     </Container>
   );
-};
-
-/**
- * displayIcon
- *
- * This function is a helper to place
- * the icon correctly inside a button.
- * He return an react element with the
- * good props: left or right.
- *
- * @param {string} side // The side where the icon should be positioned [left or right].
- * @param {jsx} icon // The icon elements.
- *
- * @return {jsx}
- */
-const displayIcon = (side, icon) => {
-  if (!side || !icon) return null;
-  return {
-    left: <ContainerIcon left>{icon}</ContainerIcon>,
-    right: <ContainerIcon right>{icon}</ContainerIcon>,
-  }[side];
 };
 
 /**

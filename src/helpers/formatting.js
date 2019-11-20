@@ -1,4 +1,33 @@
 /**
+ * Format number depending on the locale and if it is a currency or not
+ *
+ * @param {string} object.currency - currency to display next to the value
+ * @param {string} object.locale - locale to format the currency in the correct way (symbol position, thousands separators, etc)
+ * @param {number} object.number - number to be formatted
+ * @param {boolean} object.percent - if the number should be percent formatted
+ * @param {number} [object.digits=2]  - _optional_ set the number of digits
+ *
+ * We avoid displaying trailing zeros (by default the percent style do not display decimals)
+ * Otherwise, we display two decimal digits
+ *
+ * @return {string} number formatted with spaces and currency/percent symbol if required
+ */
+export const formatNumber = ({ currency, locale, number, percent, digits = 2 }) => {
+  const value = currency ? number / 100 : number;
+
+  return new Intl.NumberFormat(locale, {
+    ...(currency ? { style: 'currency', currency } : percent ? { style: 'percent' } : {}),
+    ...(percent
+      ? !Number.isInteger(Math.round(value * 10000) / 100) && {
+          minimumFractionDigits: digits,
+        }
+      : Number.isInteger(value)
+      ? { minimumFractionDigits: 0, maximumFractionDigits: 0 }
+      : { minimumFractionDigits: digits, maximumFractionDigits: digits }),
+  }).format(value);
+};
+
+/**
  * Format number according to its currency, locale and number of digits
  *
  * @param {string} locale - locale to format the currency in the correct way (symbol position, thousands separators, etc)
@@ -34,33 +63,4 @@ export const formatCompactedNumber = (locale, number, currency) => {
   } else {
     return compactedNumber.toString();
   }
-};
-
-/**
- * Format number depending on the locale and if it is a currency or not
- *
- * @param {string} object.currency - currency to display next to the value
- * @param {string} object.locale - locale to format the currency in the correct way (symbol position, thousands separators, etc)
- * @param {number} object.number - number to be formatted
- * @param {boolean} object.percent - if the number should be percent formatted
- * @param {number} [object.digits=2]  - _optional_ set the number of digits
- *
- * We avoid displaying trailing zeros (by default the percent style do not display decimals)
- * Otherwise, we display two decimal digits
- *
- * @return {string} number formatted with spaces and currency/percent symbol if required
- */
-export const formatNumber = ({ currency, locale, number, percent, digits = 2 }) => {
-  const value = currency ? number / 100 : number;
-
-  return new Intl.NumberFormat(locale, {
-    ...(currency ? { style: 'currency', currency } : percent ? { style: 'percent' } : {}),
-    ...(percent
-      ? !Number.isInteger(Math.round(value * 10000) / 100) && {
-          minimumFractionDigits: digits,
-        }
-      : Number.isInteger(value)
-      ? { minimumFractionDigits: 0, maximumFractionDigits: 0 }
-      : { minimumFractionDigits: digits, maximumFractionDigits: digits }),
-  }).format(value);
 };
