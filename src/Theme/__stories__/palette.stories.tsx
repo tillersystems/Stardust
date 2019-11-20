@@ -5,6 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 
 import { Theme } from '../..';
+import Wrapper from '../../Wrapper';
 import ThemeReadme from '../README.md';
 
 storiesOf('Theme', module)
@@ -17,29 +18,31 @@ storiesOf('Theme', module)
   })
   .add('Palette', () => {
     return (
-      <Grid>
-        {Object.entries(Theme.palette).map(palette => {
-          const colorName = palette[0];
-          const colorValue = palette[1];
-          if (typeof colorValue == 'function') {
-            return null;
-          }
-          if (typeof colorValue == 'object') {
-            return Object.entries(colorValue).map(subPalette => {
-              const subColorName = subPalette[0];
-              const subColorValue = subPalette[1];
-              return (
-                <PaletteCard
-                  key={subColorName}
-                  name={`${colorName} - ${subColorName}`}
-                  color={subColorValue}
-                />
-              );
-            });
-          }
-          return <PaletteCard key={colorName} name={colorName} color={colorValue} />;
-        })}
-      </Grid>
+      <Wrapper>
+        <Grid>
+          {Object.entries(Theme.palette).map(palette => {
+            const colorName = palette[0];
+            const colorValue = palette[1];
+            if (typeof colorValue == 'function') {
+              return null;
+            }
+            if (typeof colorValue == 'object') {
+              return Object.entries(colorValue).map(subPalette => {
+                const subColorName = subPalette[0];
+                const subColorValue = subPalette[1];
+                return (
+                  <PaletteCard
+                    key={subColorName}
+                    name={`${colorName} - ${subColorName}`}
+                    color={subColorValue}
+                  />
+                );
+              });
+            }
+            return <PaletteCard key={colorName} name={colorName} color={colorValue} />;
+          })}
+        </Grid>
+      </Wrapper>
     );
   });
 
