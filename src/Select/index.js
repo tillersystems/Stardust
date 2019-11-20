@@ -4,7 +4,7 @@ import React, { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import { Popover } from '..';
+import { Popover } from '../index.ts';
 import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
 import { animationVariants } from './animation';

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import cuid from 'cuid';
 
-import Theme from '../Theme';
+import Theme from '../Theme/index.ts';
 import { Data } from './data';
 
 const { palette } = Theme;
