@@ -1,3 +1,15 @@
+## [4.12.6](https://github.com/tillersystems/Stardust/compare/v4.12.5...v4.12.6) (2019-11-21)
+
+### Bug Fixes
+
+- **List/Item:** use color from palette ([6479b51](https://github.com/tillersystems/Stardust/commit/6479b51a025640635b624b98a568954f20fab302))
+- **Table:** handle shadow rendering when adding/removing columns ([f2033fc](https://github.com/tillersystems/Stardust/commit/f2033fca032445aba0e8d95e071ed11cba19b0c9))
+
+### Features
+
+- **helpers:** add formatting numbers for unit from sonar ([bfc4f91](https://github.com/tillersystems/Stardust/commit/bfc4f91fcd207535dc2316d433cd2fd69dfcfaa8))
+- **List:** add ref ([7d673d1](https://github.com/tillersystems/Stardust/commit/7d673d171d447a3d499d2b515ba7a39b9ad3ac6d))
+
 ## [4.12.5](https://github.com/tillersystems/Stardust/compare/v4.12.4...v4.12.5) (2019-11-20)
 
 ## [4.12.4](https://github.com/tillersystems/Stardust/compare/v4.12.3...v4.12.4) (2019-11-20)
