@@ -1,37 +1,17 @@
-import React, { Fragment, PureComponent, createRef } from 'react';
+import React, { PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 
-import { Icon, Theme } from '..';
-import compare from '../helpers/compare';
-import {
-  Container,
-  HeaderLabel,
-  Body,
-  BodyRow,
-  Row,
-  TableElement,
-  TableHeader,
-  TableHeaderCell,
-  RowHeader,
-  Footer,
-  ChildRow,
-  ShadowContainer,
-  TextEllipsis,
-  ShadowWrapped,
-} from './elements';
+import { Container, TableElement, ShadowContainer, ShadowWrapped } from './elements';
+
+import TableBody from './TableBody';
+import TableHeader from './TableHeader';
+import TableFooter from './TableFooter';
 
 /** Lookup object for next sorting direction. */
 const nextSortingDirection = {
   none: 'asc',
   asc: 'desc',
   desc: 'none',
-};
-
-/** Lookup object for icon name from sorting direction. */
-const sortingDirectionToIconName = {
-  none: 'carets-vertical',
-  asc: 'caret-up',
-  desc: 'caret-down',
 };
 
 const initialSort = {
@@ -73,13 +53,12 @@ class Table extends PureComponent {
     }
   }
 
-  componentDidUpdate({ colsDef: previousColsDef }) {
+  componentDidUpdate({ colsDef: prevColsDef }) {
     const { colsDef } = this.props;
-    if (previousColsDef !== colsDef) {
-      this.onResize();
-      // reset sort when changing columns display
+    if (prevColsDef !== colsDef) {
       this.setState({ sort: initialSort });
     }
+    this.onResize();
   }
 
   componentWillUnmount() {
@@ -164,236 +143,64 @@ class Table extends PureComponent {
   };
 
   /**
-   * Renders the header of the table.
-   *
-   * @return {jsx}
-   */
-  renderHeader() {
-    const { colsDef, isScrollable } = this.props;
-    const {
-      sort: { index, direction },
-    } = this.state;
-
-    return (
-      <TableHeader>
-        <Row>
-          {colsDef.map(({ title, isSortable, align, isRowHeader }, columnIndex) => (
-            <TableHeaderCell
-              isScrollable={isScrollable}
-              isSortable={isSortable}
-              isRowHeader={isRowHeader}
-              scope="col"
-              key={`${title}-${columnIndex}`}
-              align={align}
-              onClick={() => (isSortable ? this.handleSortingClick(columnIndex) : undefined)}
-            >
-              <HeaderLabel>{title}</HeaderLabel>
-              {isSortable && (
-                <Icon
-                  name={sortingDirectionToIconName[columnIndex == index ? direction : 'none']}
-                  color={Theme.palette.mediumGrey}
-                  width="10px"
-                  height="10px"
-                />
-              )}
-            </TableHeaderCell>
-          ))}
-        </Row>
-      </TableHeader>
-    );
-  }
-
-  /**
-   * Renders the body of the table.
-   *
-   * @return {jsx}
-   */
-  renderBody() {
-    const {
-      colsDef,
-      data,
-      isScrollable,
-      isHoverable,
-      rowsDef: { selectable },
-      striped,
-    } = this.props;
-    const {
-      selected,
-      selectedRows,
-      sort: { index, direction },
-    } = this.state;
-
-    // We actually need to keep track of the original key for sorting purposes
-    // and selection purposes (i.e. when the column is sorted, the selected row
-    // should still be the same).
-    const sortData = dataToSort => {
-      let sortedData = dataToSort.map((item, key) => {
-        return {
-          key,
-          item,
-        };
-      });
-
-      if (index >= 0 && index < colsDef.length) {
-        sortedData = sortedData.sort((a, b) => {
-          const isSortableObject =
-            typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
-          /**
-           * Check if the value should be sorted by an object key or directly by the value itself.
-           *
-           * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
-           *
-           * @return {string|number}
-           */
-          const sortBy = comparisonElement =>
-            isSortableObject
-              ? colsDef[index].filteredBy(colsDef[index].value(comparisonElement.item))
-              : colsDef[index].value(comparisonElement.item);
-
-          return (
-            (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) *
-            compare(sortBy(a), sortBy(b))
-          );
-        });
-      }
-
-      return sortedData;
-    };
-
-    // Rule:
-    // first cell count 2 fractions of the table
-    // normal cell count 1 fractions of the table
-    // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
-    const colsLength = colsDef.length + 1;
-
-    return (
-      <Body colsLength={colsLength} ref={this.bodyRef}>
-        {sortData(data).map(({ key, item }, index) => (
-          <Fragment key={key}>
-            <BodyRow
-              key={key}
-              data-testid="body-row"
-              selectable={selectable}
-              selected={selectedRows.includes(key)}
-              striped={striped}
-              onClick={() => this.handleRowSelect(item, key)}
-              isHoverable={isHoverable}
-              hasChildren={item.children}
-            >
-              {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-                isRowHeader ? (
-                  <RowHeader
-                    ref={this.rowHeaderRef}
-                    align={align}
-                    isScrollable={isScrollable}
-                    key={`row-header-${index}`}
-                  >
-                    {item.children && (
-                      <Icon
-                        name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
-                        color={Theme.palette.darkBlue}
-                        width="20px"
-                        height="20px"
-                      />
-                    )}
-                    <TextEllipsis>{value(item, index)}</TextEllipsis>
-                  </RowHeader>
-                ) : (
-                  <td key={`row-${index}-column-${columnIndex}`} align={align}>
-                    {format ? format(value(item, index), index) : value(item, index)}
-                  </td>
-                ),
-              )}
-            </BodyRow>
-            {selectedRows.includes(key) && (
-              <>
-                {item.children &&
-                  sortData(item.children).map(({ key: childrenKey, item: childrenItem }, index) => (
-                    <ChildRow
-                      key={`${key}-${childrenKey}`}
-                      data-testid="body-row"
-                      selected={selected === `${key}-${childrenKey}`}
-                      selectable={selectable}
-                      striped={striped}
-                      onClick={() => this.handleRowSelect(item, `${key}-${childrenKey}`)}
-                      isHoverable={isHoverable}
-                    >
-                      {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-                        isRowHeader ? (
-                          <RowHeader
-                            align={align}
-                            isScrollable={isScrollable}
-                            key={`row-header-${key}-${index}`}
-                            isChild
-                          >
-                            <TextEllipsis>{value(childrenItem, index)}</TextEllipsis>
-                          </RowHeader>
-                        ) : (
-                          <td key={`row-${index}-column-${key}-${columnIndex}`} align={align}>
-                            {format
-                              ? format(value(childrenItem, index), index)
-                              : value(childrenItem, index)}
-                          </td>
-                        ),
-                      )}
-                    </ChildRow>
-                  ))}
-              </>
-            )}
-          </Fragment>
-        ))}
-      </Body>
-    );
-  }
-
-  /**
-   * Renders the footer of the table.
-   *
-   * @return {jsx}
-   */
-  renderFooter() {
-    const { colsDef, dataTotal, isScrollable, isHoverable } = this.props;
-
-    return (
-      <Footer data-testid="footer-row" isScrollable={isScrollable} isHoverable={isHoverable}>
-        <tr>
-          {colsDef.map(({ isRowHeader, total, format, align }, columnIndex) =>
-            isRowHeader ? (
-              <th scope="row" key={`total-header-${columnIndex}`} align={align}>
-                {format ? format(total(dataTotal)) : total(dataTotal)}
-              </th>
-            ) : (
-              <td key={`total-${columnIndex}`} align={align}>
-                {format ? format(total(dataTotal)) : total(dataTotal)}
-              </td>
-            ),
-          )}
-        </tr>
-      </Footer>
-    );
-  }
-
-  /**
-   * Renders the shadow of the table.
-   *
-   * @return {jsx}
-   */
-  renderShadow() {
-    const { firstCellWidth, shadowSide } = this.state;
-    return <ShadowContainer side={shadowSide} firstCellWidth={firstCellWidth} />;
-  }
-
-  /**
    * Renders the component.
    *
    * @return {jsx}
    */
   render() {
-    const { dataTotal, height, isScrollable, width, colsDef } = this.props;
+    const {
+      colsDef,
+      data,
+      dataTotal,
+      height,
+      isHoverable,
+      isScrollable,
+      rowsDef: { selectable },
+      striped,
+      width,
+    } = this.props;
+    const {
+      selected,
+      selectedRows,
+      shadowSide,
+      firstCellWidth,
+      sort: { index, direction },
+    } = this.state;
+
+    const tableHeaderProps = {
+      colsDef,
+      isScrollable,
+      index,
+      direction,
+      handleSortingClick: this.handleSortingClick,
+      rowHeaderRef: this.rowHeaderRef,
+    };
+
+    const tableBodyProps = {
+      bodyRef: this.bodyRef,
+      colsDef,
+      data,
+      direction,
+      handleRowSelect: this.handleRowSelect,
+      index,
+      isHoverable,
+      isScrollable,
+      selectable,
+      selected,
+      selectedRows,
+      striped,
+    };
+
+    const tableFooterProps = {
+      colsDef,
+      dataTotal,
+      isScrollable,
+      isHoverable,
+    };
 
     return (
       <ShadowWrapped containerHeight={height}>
-        {this.renderShadow()}
+        <ShadowContainer side={shadowSide} firstCellWidth={firstCellWidth} />
         <Container
           ref={this.containerRef}
           data-testid="table-container"
@@ -401,9 +208,9 @@ class Table extends PureComponent {
           isScrollable={isScrollable}
         >
           <TableElement width={isScrollable ? 'initial' : width} colsDef={colsDef}>
-            {this.renderHeader()}
-            {this.renderBody()}
-            {dataTotal && this.renderFooter()}
+            <TableHeader {...tableHeaderProps} />
+            <TableBody {...tableBodyProps} />
+            <TableFooter {...tableFooterProps} />
           </TableElement>
         </Container>
       </ShadowWrapped>

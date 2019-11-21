@@ -186,8 +186,6 @@ storiesOf('Table', module)
       columns[columnsDefinition[col].title] = columnsDefinition[col].title;
     }
 
-    console.log(columns);
-
     const columnsToDisplay = optionsKnob(
       'Columns to display',
       columns,
@@ -195,8 +193,6 @@ storiesOf('Table', module)
       { display: 'multi-select' },
       'State',
     );
-
-    console.log(columnsToDisplay);
 
     const onClickAction = action('onClick');
 

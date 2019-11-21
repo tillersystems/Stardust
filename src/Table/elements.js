@@ -52,7 +52,7 @@ export const Row = styled.tr`
 `;
 
 // Table Header
-export const TableHeader = styled.thead`
+export const THeader = styled.thead`
   font-size: ${({
     theme: {
       fonts: { size },
