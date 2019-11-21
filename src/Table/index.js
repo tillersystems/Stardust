@@ -71,6 +71,13 @@ class Table extends PureComponent {
     }
   }
 
+  componentDidUpdate({ colsDef: previousColsDef }) {
+    const { colsDef } = this.props;
+    if (previousColsDef !== colsDef) {
+      this.onResize();
+    }
+  }
+
   componentWillUnmount() {
     removeEventListener('resize', this.onResize);
     this.containerRef.current.removeEventListener('scroll', this.onScroll);
