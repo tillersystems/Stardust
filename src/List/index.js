@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import Proptypes from 'prop-types';
 
 import Item from './Item';
@@ -12,9 +12,9 @@ import { Container } from './elements';
  *
  * @return {jsx}
  */
-const List = ({ className, currency, data, locale }) => {
+const List = forwardRef(({ className, currency, data, locale }, ref) => {
   return (
-    <Container className={className}>
+    <Container className={className} ref={ref}>
       {data.map(({ amount, evolution, label }, index) => (
         <Item
           key={index}
@@ -29,7 +29,7 @@ const List = ({ className, currency, data, locale }) => {
       ))}
     </Container>
   );
-};
+});
 
 const { arrayOf, node, number, oneOfType, shape, string } = Proptypes;
 List.propTypes = {
@@ -61,5 +61,7 @@ List.defaultProps = {
   currency: null,
   locale: 'en',
 };
+
+List.displayName = 'List';
 
 export default List;
