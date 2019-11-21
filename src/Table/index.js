@@ -34,6 +34,13 @@ const sortingDirectionToIconName = {
   desc: 'caret-down',
 };
 
+const initialSort = {
+  // `index` is either `-1` if no column is to be sorted, or is the index of the column.
+  index: -1,
+  // `direction` is the direction of sorting and can be one of `none`, `asc` or `desc`.
+  direction: 'none',
+};
+
 /**
  * A Table displays structured data through rows and columns.
  * It can sort by column (asc, desc).
@@ -43,12 +50,7 @@ class Table extends PureComponent {
   /** Internal state. */
   state = {
     // Stores which column should be sorted.
-    sort: {
-      // `index` is either `-1` if no column is to be sorted, or is the index of the column.
-      index: -1,
-      // `direction` is the direction of sorting and can be one of `none`, `asc` or `desc`.
-      direction: 'none',
-    },
+    sort: initialSort,
 
     // Stores selected row.
     // Use `-1` for no row selected.
@@ -75,6 +77,8 @@ class Table extends PureComponent {
     const { colsDef } = this.props;
     if (previousColsDef !== colsDef) {
       this.onResize();
+      // reset sort when changing columns display
+      this.setState({ sort: initialSort });
     }
   }
 
@@ -230,11 +234,10 @@ class Table extends PureComponent {
         };
       });
 
-      if (index >= 0) {
+      if (index >= 0 && index < colsDef.length) {
         sortedData = sortedData.sort((a, b) => {
           const isSortableObject =
             typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
-
           /**
            * Check if the value should be sorted by an object key or directly by the value itself.
            *
