@@ -14,7 +14,7 @@ export const Container = styled.li`
   padding: 0 2rem;
 
   &:not(:first-child) {
-    border-top: 1px solid hsl(210, 11%, 93%);
+    border-top: 1px solid ${({ theme: { palette } }) => palette.mysticGrey};
   }
 `;
 
