@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, boolean, optionsKnob, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Table } from '../..';
@@ -101,25 +101,6 @@ storiesOf('Table', module)
     );
   })
   .add('Scrollable table', () => {
-    const striped = boolean('Striped', false, 'State');
-    const isHoverable = boolean('Hoverable', false, 'State');
-    const selectableRow = boolean('Selectable row', false, 'State');
-
-    const dishRowSortable = boolean('Dish row is sortable', true, 'State');
-    const priceRowSortable = boolean('Price row is sortable', true, 'State');
-    const taxRowSortable = boolean('Tax row is sortable', true, 'State');
-    const quantityRowSortable = boolean('Quantity row is sortable', true, 'State');
-    const tvaRowSortable = boolean('TVA row is sortable', true, 'State');
-    const profitRowSortable = boolean('Profit row is sortable', true, 'State');
-    const discountRowSortable = boolean('Discount row is sortable', true, 'State');
-
-    const options = {
-      french: 'fr',
-      english: 'en',
-    };
-
-    const taxCountryCodeValue = select('Selectable taxes country', options, 'fr', 'State');
-
     const getColsDef = (taxCountryCode = 'fr') => [
       {
         title: 'DISH',
@@ -179,6 +160,39 @@ storiesOf('Table', module)
         total: d => d.discount,
       },
     ];
+
+    const striped = boolean('Striped', false, 'State');
+    const isHoverable = boolean('Hoverable', false, 'State');
+    const selectableRow = boolean('Selectable row', false, 'State');
+
+    const dishRowSortable = boolean('Dish row is sortable', true, 'State');
+    const priceRowSortable = boolean('Price row is sortable', true, 'State');
+    const taxRowSortable = boolean('Tax row is sortable', true, 'State');
+    const quantityRowSortable = boolean('Quantity row is sortable', true, 'State');
+    const tvaRowSortable = boolean('TVA row is sortable', true, 'State');
+    const profitRowSortable = boolean('Profit row is sortable', true, 'State');
+    const discountRowSortable = boolean('Discount row is sortable', true, 'State');
+
+    const options = {
+      french: 'fr',
+      english: 'en',
+    };
+
+    const taxCountryCodeValue = select('Selectable taxes country', options, 'fr', 'State');
+
+    const columnsDefinition = getColsDef();
+    const columns = {};
+    for (const col in columnsDefinition) {
+      columns[columnsDefinition[col].title] = columnsDefinition[col].title;
+    }
+
+    const columnsToDisplay = optionsKnob(
+      'Columns to display',
+      columns,
+      getColsDef().map(c => c.title),
+      { display: 'multi-select' },
+      'State',
+    );
 
     const onClickAction = action('onClick');
 
@@ -347,7 +361,9 @@ storiesOf('Table', module)
           height="40rem"
           data={data}
           dataTotal={dataTotal}
-          colsDef={getColsDef(taxCountryCodeValue)}
+          colsDef={getColsDef(taxCountryCodeValue).filter(col =>
+            columnsToDisplay.includes(col.title),
+          )}
           rowsDef={rowsDef}
           striped={striped}
         />
