@@ -1,4 +1,22 @@
 /**
+ * Defines the symbol for each UNIT we can handle
+ */
+export const UNIT_SYMBOLS = {
+  KILOGRAM: 'kg',
+  GRAM: 'g',
+  MILLIGRAM: 'mg',
+  LITER: 'l',
+  DECILITER: 'dl',
+  CENTILITER: 'cl',
+  MILLILITER: 'ml',
+  METER: 'm',
+  DECIMETER: 'dm',
+  CENTIMETER: 'cm',
+  MILLIMETER: 'mm',
+  UNIT: '',
+};
+
+/**
  * Format number according to its currency, locale and number of digits
  *
  * @param {string} locale - locale to format the currency in the correct way (symbol position, thousands separators, etc)
@@ -34,6 +52,26 @@ export const formatCompactedNumber = (locale, number, currency) => {
   } else {
     return compactedNumber.toString();
   }
+};
+
+/**
+ * Format number according to its unit and locale
+ *
+ * @param {string} locale - locale to format the currency in the correct way (symbol position, thousands separators, etc)
+ * @param {number} number - number to be formatted
+ * @param {string} unit - unit to display next to the value
+ *
+ * @return {string} formatted number
+ */
+export const formatUnitNumber = (locale, number, unit) => {
+  const amount = formatNumber({ locale, number });
+  const symbol = UNIT_SYMBOLS[unit] || '';
+
+  if (!symbol) return amount;
+
+  // TODO: Waiting for Intl.FormatNumber with style=unit to be standardized.
+  // Currently it's experimental and may not act as expected.
+  return `${amount}\xa0${symbol}`;
 };
 
 /**

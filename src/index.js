@@ -19,6 +19,8 @@ export {
   whiteOpacity,
   formatCompactedNumber,
   formatNumber,
+  formatUnitNumber,
+  UNIT_SYMBOLS,
 } from './helpers';
 export { default as Icon } from './Icon';
 export { DatePickerInput, NumberInput, TextInput } from './Input';
