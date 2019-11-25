@@ -73,7 +73,7 @@
     "@babel/plugin-proposal-class-properties": "7.7.0",
     "@babel/plugin-transform-modules-commonjs": "7.7.0",
     "@babel/polyfill": "7.7.0",
-    "@babel/preset-env": "7.7.1",
+    "@babel/preset-env": "7.7.4",
     "@babel/preset-react": "7.7.0",
     "@babel/register": "7.7.0",
     "@nivo/bar": "0.55.0",
