@@ -41,11 +41,11 @@ class ButtonGroup extends PureComponent {
    * @return {jsx}
    */
   render() {
-    const { children, className } = this.props;
+    const { children, className, id } = this.props;
     const { activeButton } = this.state;
 
     return (
-      <div role="group" className={className} tabIndex="-1">
+      <div role="group" className={className} tabIndex="-1" id={id}>
         {Children.map(children, child => {
           if (child.props.disabled) {
             return child;
@@ -90,6 +90,11 @@ ButtonGroup.propTypes = {
   defaultActiveButtonName: string,
 
   /**
+   * Id of whole element
+   */
+  id: string,
+
+  /**
    * Callback function called when a button is clicked
    */
   onChange: func,
@@ -102,6 +107,7 @@ ButtonGroup.defaultProps = {
   children: null,
   className: '',
   defaultActiveButtonName: '',
+  id: null,
   onChange: () => {},
 };
 

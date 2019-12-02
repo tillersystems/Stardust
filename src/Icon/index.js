@@ -24,7 +24,7 @@ const SIZE = {
  *
  * @return {jsx}
  */
-const Icon = ({ className, color, name, size, title, ...restProps }) => {
+const Icon = ({ className, color, id, name, size, title, ...restProps }) => {
   const generatedId = useMemo(() => cuid(), [title]);
   const titleElementId = `icon-title-${generatedId}`;
 
@@ -72,7 +72,7 @@ const Icon = ({ className, color, name, size, title, ...restProps }) => {
   };
 
   return (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" {...rootProps}>
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" {...rootProps} id={id}>
       {title && <title id={titleElementId}>{title}</title>}
       <g>
         {!IconElement ? (
@@ -102,6 +102,11 @@ Icon.propTypes = {
   color: string,
 
   /**
+   * Id of element
+   */
+  id: string,
+
+  /**
    * Icon name
    */
   name: string.isRequired,
@@ -123,6 +128,7 @@ Icon.propTypes = {
 Icon.defaultProps = {
   className: undefined,
   color: 'white',
+  id: null,
   size: SIZE.medium,
   title: null,
 };

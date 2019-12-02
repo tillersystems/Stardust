@@ -173,6 +173,7 @@ class Dropdown extends PureComponent {
       className,
       contentRef,
       headerStyle,
+      id,
       itemCss,
       modifiers,
       noResultLabel,
@@ -200,7 +201,7 @@ class Dropdown extends PureComponent {
       : [];
 
     return (
-      <div ref={this.dropdown} className={className} data-testid="dropdown">
+      <div ref={this.dropdown} className={className} data-testid="dropdown" id={id}>
         <Popover
           animationVariants={animationVariants}
           content={
@@ -306,6 +307,11 @@ Dropdown.propTypes = {
   height: string,
 
   /**
+   * id of element
+   */
+  id: string,
+
+  /**
    * CSS provided to each item of the dropdown. Must use `css` method from styled-components
    */
   itemCss: array,
@@ -353,6 +359,7 @@ Dropdown.defaultProps = {
   className: '',
   headerStyle: null,
   height: '3.8rem',
+  id: null,
   itemCss: null,
   modifiers: null,
   noResultLabel: null,

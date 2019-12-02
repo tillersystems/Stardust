@@ -27,6 +27,7 @@ const Tab = ({ children, className, id, isDisabled }) => {
       aria-controls={`panel:${id}`}
       tabIndex={tabIndex}
       role="tab"
+      id={id}
     >
       {children}
     </Container>

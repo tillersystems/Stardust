@@ -229,6 +229,7 @@ class Select extends PureComponent {
       contentRef,
       disabled,
       displayedValue,
+      id,
       modifiers,
       placeholder,
       triggerWrapperCss,
@@ -239,7 +240,7 @@ class Select extends PureComponent {
     const value = this.getControllableValue('value');
 
     return (
-      <div ref={this.select} className={className}>
+      <div ref={this.select} className={className} id={id}>
         <Popover
           animationVariants={animationVariants}
           content={
@@ -326,6 +327,11 @@ Select.propTypes = {
   height: string,
 
   /**
+   * id of element
+   */
+  id: string,
+
+  /**
    * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
    */
   modifiers: object,
@@ -376,6 +382,7 @@ Select.defaultProps = {
   className: '',
   disabled: false,
   height: '3.8rem',
+  id: null,
   triggerWrapperCss: null,
   usePortal: false,
   width: '100%',
