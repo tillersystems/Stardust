@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import Item from './Item';
 
 /**
- * A BreadCrumb is a component which organise its childrens in row.
- * Each children is separated with _greater than_ symbol.
- * The main use of that component will be to display the client's history path.
+ *A BreadCrumb helps users keep track of their position on the app.
+ * Each child is separated by _"greater than"_ (or left angle bracket) symbol.
+ * The main use of that component is to display the client's history path.
  *
  * @return {jsx}
  */

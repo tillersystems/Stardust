@@ -7,7 +7,7 @@ import { Icon } from '../..';
 
 const Item = ({ children, className }) => (
   <li className={className}>
-    <Icon name="chevron-right" color={Theme.palette.darkBlue} size="medium" title="icon title" />
+    <Icon name="chevron-right" color={Theme.palette.darkBlue} size={15} />
     <span>{children}</span>
   </li>
 );

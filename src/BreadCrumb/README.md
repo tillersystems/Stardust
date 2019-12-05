@@ -10,17 +10,17 @@ import { BreadCrumb } from '@tillersystems/stardust';
 
 ### Description
 
-A BreadCrumb is a component which organise its childrens in row.
-Each children is separated with _"greater than"_ symbol.
-The main use of that component will be to display the client's history path.
+A BreadCrumb helps users keep track of their position on the app.
+Each child is separated by _"greater than"_ (or left angle bracket) symbol.
+The main use of that component is to display the client's history path.
 
 <!-- PROPS -->
 
 ### Properties
 
-| Name       | Required |  Type  | DefaultValue |                                     Description                                     |
-| ---------- | :------: | :----: | :----------: | :---------------------------------------------------------------------------------: |
-| `children` |    +     | `node` |    `null`    | Anything that can be rendered: numbers, strings, elements or an array (or fragment) |
+| Name       | Required |  Type  | DefaultValue |             Description             |
+| ---------- | :------: | :----: | :----------: | :---------------------------------: |
+| `children` |    +     | `node` |    `null`    | Array of Breadcrumb.Item components |
 
 ### Example
 
