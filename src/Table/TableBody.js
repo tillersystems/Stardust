@@ -11,6 +11,8 @@ const TableBody = ({
   data,
   direction,
   handleRowClick,
+  hasClickCallback,
+  hasFoldedRows,
   index,
   isHoverable,
   isScrollable,
@@ -61,7 +63,7 @@ const TableBody = ({
           <BodyRow
             key={key}
             data-testid="body-row"
-            hasChildren={item.children}
+            hasPointerCursor={item.children || (!hasFoldedRows && hasClickCallback)}
             isHoverable={isHoverable}
             isUnfolded={unfoldedRows.includes(key)}
             name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
@@ -95,9 +97,10 @@ const TableBody = ({
                   <ChildRow
                     key={`${key}-${childrenKey}`}
                     data-testid="body-row"
-                    striped={striped}
-                    onClick={() => handleRowClick(childrenItem, `${key}-${childrenKey}`)}
+                    hasPointerCursor={hasClickCallback}
                     isHoverable={isHoverable}
+                    onClick={() => handleRowClick(childrenItem, `${key}-${childrenKey}`)}
+                    striped={striped}
                   >
                     {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
                       isRowHeader ? (
@@ -160,6 +163,8 @@ TableBody.propTypes = {
   data: array.isRequired,
   direction: string,
   handleRowClick: func.isRequired,
+  hasClickCallback: bool.isRequired,
+  hasFoldedRows: bool.isRequired,
   index: number,
   isHoverable: bool,
   isScrollable: bool,

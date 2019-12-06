@@ -173,8 +173,9 @@ class Table extends PureComponent {
       width,
     } = this.props;
     const {
-      shadowSide,
       firstCellWidth,
+      hasFoldedRows,
+      shadowSide,
       sort: { index, direction },
       unfoldedRows,
     } = this.state;
@@ -194,10 +195,11 @@ class Table extends PureComponent {
       data,
       direction,
       handleRowClick: this.handleRowClick,
+      hasClickCallback: !!onClick,
+      hasFoldedRows,
       index,
       isHoverable,
       isScrollable,
-      onClick,
       striped,
       unfoldedRows,
     };

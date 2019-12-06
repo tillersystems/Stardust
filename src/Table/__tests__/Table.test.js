@@ -130,12 +130,11 @@ describe('<Table />', () => {
       <Table colsDef={getColsDef()} rowsDef={rowsDef} data={data} />,
     );
 
-    const bodyRows = getAllByTestId('body-row');
+    const [bodyRow] = getAllByTestId('body-row');
 
-    expect(bodyRows[0]).toHaveStyleRule('cursor', 'pointer');
+    expect(bodyRow).toHaveStyleRule('cursor', 'pointer');
 
-    // Click on the first body row
-    fireEvent.click(bodyRows[0]);
+    fireEvent.click(bodyRow);
 
     expect(spy).toHaveBeenCalledTimes(1);
   });
@@ -283,11 +282,11 @@ describe('<Table />', () => {
       },
     ];
 
-    const { getByText, queryAllByText } = render(
+    const { getAllByTestId, queryAllByText } = render(
       <Table height="10rem" colsDef={getColsDef()} data={data} />,
     );
 
-    const row = getByText(/tartare/i);
+    const [row] = getAllByTestId('body-row');
 
     fireEvent.click(row);
 

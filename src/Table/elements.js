@@ -172,8 +172,8 @@ export const Body = styled.tbody`
 export const ChildRow = styled(Row)`
   position: relative;
 
-  ${({ areRowsClickable, hasChildren }) =>
-    (areRowsClickable || hasChildren) &&
+  ${({ hasPointerCursor }) =>
+    hasPointerCursor &&
     css`
       cursor: pointer;
     `};
