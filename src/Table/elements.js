@@ -115,7 +115,7 @@ export const TableHeaderCell = styled.th`
     width: 33%;
     overflow:hidden;
     text-overflow: ellipsis;
-    
+
     ${({ isRowHeader }) =>
       isRowHeader &&
       css`
@@ -172,8 +172,8 @@ export const Body = styled.tbody`
 export const ChildRow = styled(Row)`
   position: relative;
 
-  ${({ hasChildren, selectable }) =>
-    (hasChildren || selectable) &&
+  ${({ areRowsClickable, hasChildren }) =>
+    (areRowsClickable || hasChildren) &&
     css`
       cursor: pointer;
     `};
@@ -184,16 +184,6 @@ export const ChildRow = styled(Row)`
       &:nth-child(even) > th,
       &:nth-child(even) {
         background: ${({ theme: { palette } }) => palette.paleGrey};
-      }
-    `};
-
-  ${({ selected }) =>
-    selected &&
-    css`
-      &:nth-child(1n) > th,
-      &:nth-child(1n) {
-        background: ${({ theme: { palette } }) => palette.veryLightGrey};
-        box-shadow: inset 3px 0px 0 0px ${({ theme: { palette } }) => palette.primary.default};
       }
     `};
 
@@ -211,6 +201,16 @@ export const ChildRow = styled(Row)`
 
 export const BodyRow = styled(ChildRow)`
   font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+
+  ${({ isUnfolded }) =>
+    isUnfolded &&
+    css`
+      &:nth-child(1n) > th,
+      &:nth-child(1n) {
+        background: ${({ theme: { palette } }) => palette.veryLightGrey};
+        box-shadow: inset 3px 0px 0 0px ${({ theme: { palette } }) => palette.primary.default};
+      }
+    `};
 `;
 
 export const RowHeader = styled.th`

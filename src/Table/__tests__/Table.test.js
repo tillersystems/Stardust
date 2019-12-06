@@ -121,24 +121,10 @@ describe('<Table />', () => {
     expect(bodyRows[2]).not.toHaveStyleRule('background', { modifier: ':nth-child(even)' });
   });
 
-  test('should not have selectable row', () => {
-    const { getAllByTestId } = render(<Table colsDef={getColsDef()} data={data} />);
-
-    const bodyRows = getAllByTestId('body-row');
-
-    expect(bodyRows[0]).not.toHaveStyleRule('cursor');
-
-    // Click on the first body row
-    fireEvent.click(bodyRows[0]);
-
-    expect(bodyRows[0]).not.toHaveStyleRule('box-shadow');
-  });
-
-  test('should have selectable row', () => {
+  test('should have clickable row', () => {
     const spy = jest.fn();
     const rowsDef = {
-      selectable: true,
-      onSelect: spy,
+      onClick: spy,
     };
     const { getAllByTestId } = render(
       <Table colsDef={getColsDef()} rowsDef={rowsDef} data={data} />,
@@ -150,14 +136,6 @@ describe('<Table />', () => {
 
     // Click on the first body row
     fireEvent.click(bodyRows[0]);
-
-    expect(bodyRows[0]).toHaveStyleRule(
-      'box-shadow',
-      `inset 3px 0px 0 0px ${Theme.palette.primary.default}`,
-      {
-        modifier: ':nth-child(1n)',
-      },
-    );
 
     expect(spy).toHaveBeenCalledTimes(1);
   });
@@ -251,7 +229,7 @@ describe('<Table />', () => {
     expect(tableContainer).toHaveStyleRule('overflow', 'scroll');
   });
 
-  test('should table be hoverable', () => {
+  test('should be hoverable', () => {
     const { getByText, getAllByTestId } = render(
       <Table isHoverable height="10rem" colsDef={getColsDef()} data={data} />,
     );
@@ -315,6 +293,14 @@ describe('<Table />', () => {
 
     const children = queryAllByText(/child/i);
     expect(children).toHaveLength(2);
+
+    expect(row).toHaveStyleRule(
+      'box-shadow',
+      `inset 3px 0px 0 0px ${Theme.palette.primary.default}`,
+      {
+        modifier: ':nth-child(1n)',
+      },
+    );
 
     fireEvent.click(row);
 

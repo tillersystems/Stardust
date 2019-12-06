@@ -10,18 +10,13 @@ const TableBody = ({
   colsDef,
   data,
   direction,
-  handleRowSelect,
+  handleRowClick,
   index,
   isHoverable,
   isScrollable,
-  selectable,
-  selected,
-  selectedRows,
   striped,
+  unfoldedRows,
 }) => {
-  // We actually need to keep track of the original key for sorting purposes
-  // and selection purposes (i.e. when the column is sorted, the selected row
-  // should still be the same).
   const sortData = dataToSort => {
     let sortedData = dataToSort.map((item, key) => {
       return {
@@ -66,19 +61,19 @@ const TableBody = ({
           <BodyRow
             key={key}
             data-testid="body-row"
-            selectable={selectable}
-            selected={selectedRows.includes(key)}
-            striped={striped}
-            onClick={() => handleRowSelect(item, key)}
-            isHoverable={isHoverable}
             hasChildren={item.children}
+            isHoverable={isHoverable}
+            isUnfolded={unfoldedRows.includes(key)}
+            name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+            onClick={() => handleRowClick(item, key)}
+            striped={striped}
           >
             {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
               isRowHeader ? (
                 <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
                   {item.children && (
                     <Icon
-                      name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+                      name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
                       color={Theme.palette.darkBlue}
                       width="20px"
                       height="20px"
@@ -93,17 +88,15 @@ const TableBody = ({
               ),
             )}
           </BodyRow>
-          {selectedRows.includes(key) && (
+          {unfoldedRows.includes(key) && (
             <>
               {item.children &&
                 sortData(item.children).map(({ key: childrenKey, item: childrenItem }, index) => (
                   <ChildRow
                     key={`${key}-${childrenKey}`}
                     data-testid="body-row"
-                    selected={selected === `${key}-${childrenKey}`}
-                    selectable={selectable}
                     striped={striped}
-                    onClick={() => handleRowSelect(item, `${key}-${childrenKey}`)}
+                    onClick={() => handleRowClick(childrenItem, `${key}-${childrenKey}`)}
                     isHoverable={isHoverable}
                   >
                     {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
@@ -166,14 +159,12 @@ TableBody.propTypes = {
   ).isRequired,
   data: array.isRequired,
   direction: string,
-  handleRowSelect: func.isRequired,
+  handleRowClick: func.isRequired,
   index: number,
   isHoverable: bool,
   isScrollable: bool,
-  selectable: bool,
-  selected: number.isRequired,
-  selectedRows: array.isRequired,
   striped: bool,
+  unfoldedRows: array.isRequired,
 };
 
 /** Default props. */
@@ -182,7 +173,6 @@ TableBody.defaultProps = {
   index: -1,
   isHoverable: false,
   isScrollable: false,
-  selectable: false,
   striped: false,
 };
 

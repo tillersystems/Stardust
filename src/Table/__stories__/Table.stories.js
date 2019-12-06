@@ -18,7 +18,7 @@ storiesOf('Table', module)
   .add('default', () => {
     const striped = boolean('Striped', false, 'State');
     const isHoverable = boolean('Hoverable', false, 'State');
-    const selectableRow = boolean('Selectable row', false, 'State');
+    const clickableRow = boolean('Clickable row', false, 'State');
     const dishRowSortable = boolean('Dish row is sortable', true, 'State');
     const priceRowSortable = boolean('Price row is sortable', true, 'State');
     const taxRowSortable = boolean('Tax row is sortable', true, 'State');
@@ -57,8 +57,7 @@ storiesOf('Table', module)
     const onClickAction = action('onClick');
 
     const rowsDef = {
-      selectable: selectableRow,
-      onSelect: (item, key) => onClickAction(JSON.stringify(item), key),
+      ...(clickableRow ? { onClick: (item, key) => onClickAction(JSON.stringify(item), key) } : {}),
     };
 
     const data = [
@@ -163,7 +162,7 @@ storiesOf('Table', module)
 
     const striped = boolean('Striped', false, 'State');
     const isHoverable = boolean('Hoverable', false, 'State');
-    const selectableRow = boolean('Selectable row', false, 'State');
+    const clickableRow = boolean('Clickable row', false, 'State');
 
     const dishRowSortable = boolean('Dish row is sortable', true, 'State');
     const priceRowSortable = boolean('Price row is sortable', true, 'State');
@@ -197,8 +196,7 @@ storiesOf('Table', module)
     const onClickAction = action('onClick');
 
     const rowsDef = {
-      selectable: selectableRow,
-      onSelect: (item, key) => onClickAction(JSON.stringify(item), key),
+      ...(clickableRow ? { onClick: (item, key) => onClickAction(JSON.stringify(item), key) } : {}),
     };
 
     const data = [
