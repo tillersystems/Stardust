@@ -31,11 +31,20 @@ exports[`<Weeks /> should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.c2:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c2,
+.c2:hover {
+  background: transparent;
   color: hsl(206,23%,69%);
 }
 
@@ -58,7 +67,7 @@ exports[`<Weeks /> should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -88,11 +97,19 @@ exports[`<Weeks /> should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.c4:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c4,
+.c4:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }

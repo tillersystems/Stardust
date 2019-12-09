@@ -43,6 +43,7 @@ storiesOf('DatePicker', module)
     );
 
     const isRange = boolean('Range date picker', false, 'Props');
+    const displayOnlyInMonth = boolean('Display only days in month', false, 'Props');
 
     return (
       <Wrapper style={{ background: 'white' }}>
@@ -53,6 +54,7 @@ storiesOf('DatePicker', module)
           minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
+          displayOnlyInMonth={displayOnlyInMonth}
         />
       </Wrapper>
     );
@@ -82,6 +84,7 @@ storiesOf('DatePicker', module)
     );
 
     const isRange = boolean('Range date picker', false, 'Props');
+    const displayOnlyInMonth = boolean('Display only days in month', false, 'Props');
 
     return (
       <Wrapper style={{ background: 'white' }}>
@@ -93,6 +96,7 @@ storiesOf('DatePicker', module)
           minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
+          displayOnlyInMonth={displayOnlyInMonth}
         />
       </Wrapper>
     );
@@ -121,10 +125,11 @@ storiesOf('DatePicker', module)
     );
 
     const isRange = boolean('Range date picker', true, 'Type');
+    const displayOnlyInMonth = boolean('Display only days in month', false, 'Props');
 
     const interval = Interval.fromDateTimes(
-      DateTime.fromObject({ year: 1982, month: 5, day: 25 }).startOf('day'),
-      DateTime.fromObject({ year: 1982, month: 5, day: 27 }).endOf('day'),
+      DateTime.fromObject({ year: 2019, month: 5, day: 25 }).startOf('day'),
+      DateTime.fromObject({ year: 2019, month: 8, day: 27 }).endOf('day'),
     );
 
     return (
@@ -137,6 +142,7 @@ storiesOf('DatePicker', module)
           minDate={withMinDate ? DateTime.fromMillis(minDateValue) : null}
           maxDate={withMaxDate ? DateTime.fromMillis(maxDateValue) : null}
           onDateChanged={date => onChangeAction(date)}
+          displayOnlyInMonth={displayOnlyInMonth}
         />
       </Wrapper>
     );

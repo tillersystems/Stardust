@@ -50,13 +50,12 @@ export const isSameMonth = (date, currentDate) => date.hasSame(currentDate, 'mon
  *
  * @param {luxon.DateTime} date - A date value
  * @param {luxon.DateTime} currentDate - A date value
- * @param {number} numberOfMonthsToDisplay - the number og month displayed in the whole calendar.
  *
  * @return {boolean}
  */
-export const isInNextMonth = (date, currentDate, numberOfMonthsToDisplay) => {
+export const isInNextMonth = (date, currentDate) => {
   const monthStart = date.startOf('month');
-  return monthStart.hasSame(currentDate.plus({ month: numberOfMonthsToDisplay }), 'month');
+  return monthStart.hasSame(currentDate.plus({ month: 1 }), 'month');
 };
 
 /**
@@ -68,7 +67,7 @@ export const isInNextMonth = (date, currentDate, numberOfMonthsToDisplay) => {
  *
  * @return {boolean}
  */
-export const isInLastMonth = (date, currentDate) => {
+export const isInPrevMonth = (date, currentDate) => {
   const monthEnd = date.endOf('month');
   return monthEnd.hasSame(currentDate.minus({ month: 1 }), 'month');
 };
@@ -131,4 +130,20 @@ export const getCalendarDates = date => {
 
   // Combines all dates from previous, current and next months
   return [...prevMonthDates, ...thisMonthDates, ...nextMonthDates];
+};
+
+/**
+ * Returns date bounded to optional min or max
+ *
+ * @param {DateTime} date - the date to bound
+ * @param {DateTime} minDate - minimum date
+ * @param {DateTime} maxDate - maximum date
+ *
+ * @returns {DateTime}
+ */
+export const minMaxDate = (date, minDate, maxDate) => {
+  const minBoundedDate = minDate ? DateTime.max(minDate, date) : date;
+  const boundedDate = maxDate ? DateTime.min(maxDate, minBoundedDate) : minBoundedDate;
+
+  return boundedDate;
 };

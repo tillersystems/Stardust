@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DatePicker /> Range should render without a problem 1`] = `
-.c11 {
+.c10 {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
 
-.c11:not(:nth-child(7n)) {
+.c10:not(:nth-child(7n)) {
   padding-right: 0.8rem;
 }
 
@@ -31,11 +31,50 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.c12:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c11:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c11,
+.c11:hover {
+  background: transparent;
   color: hsl(206,23%,69%);
 }
 
@@ -58,7 +97,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -69,35 +108,13 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   background: rgba(30,146,204,0.14);
 }
 
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.c13,
+.c13:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,7 +124,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   flex-wrap: wrap;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,11 +147,11 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c9:not(:nth-child(7n)) {
+.c8:not(:nth-child(7n)) {
   margin-right: 0.8rem;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,12 +212,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 }
 
 .c4 {
-  padding: 0;
-  padding: 0;
-}
-
-.c7 {
-  padding: 0;
   padding: 0;
 }
 
@@ -279,7 +290,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c3 c7"
+        class="c3 c4"
         data-testid="next-month-button"
         type="button"
       >
@@ -305,283 +316,283 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class="c8"
+      class="c7"
     >
       <div
-        class="c9"
+        class="c8"
       >
         Mon
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Tue
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Wed
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Thu
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Fri
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Sat
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Sun
       </div>
     </div>
     <div
-      class="c10"
+      class="c9"
     >
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           25
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           26
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           27
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           28
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           29
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           30
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           1
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           2
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           3
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           4
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           5
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           6
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           7
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           8
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           9
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           10
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           11
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           12
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           13
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           14
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c14"
+          class="c12"
         >
           15
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           16
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           17
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           18
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           19
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           20
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
           class="c13"
@@ -590,136 +601,136 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           22
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           23
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           24
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           25
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           26
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           27
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           28
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           29
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           30
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           31
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           1
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           2
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           3
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           4
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           5
         </div>
@@ -730,14 +741,14 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 `;
 
 exports[`<DatePicker /> Simple should render without a problem 1`] = `
-.c11 {
+.c10 {
   margin-top: 0.8rem;
   font-size: 1.4rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
 
-.c11:not(:nth-child(7n)) {
+.c10:not(:nth-child(7n)) {
   padding-right: 0.8rem;
 }
 
@@ -760,11 +771,50 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.c12:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c11:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c11,
+.c11:hover {
+  background: transparent;
   color: hsl(206,23%,69%);
 }
 
@@ -787,7 +837,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -798,35 +848,13 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   background: rgba(30,146,204,0.14);
 }
 
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.c13,
+.c13:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -836,7 +864,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   flex-wrap: wrap;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,11 +887,11 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   color: hsl(207,13%,45%);
 }
 
-.c9:not(:nth-child(7n)) {
+.c8:not(:nth-child(7n)) {
   margin-right: 0.8rem;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -924,12 +952,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 }
 
 .c4 {
-  padding: 0;
-  padding: 0;
-}
-
-.c7 {
-  padding: 0;
   padding: 0;
 }
 
@@ -1008,7 +1030,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         July 2018
       </div>
       <button
-        class="c3 c7"
+        class="c3 c4"
         data-testid="next-month-button"
         type="button"
       >
@@ -1034,283 +1056,283 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
       </button>
     </div>
     <div
-      class="c8"
+      class="c7"
     >
       <div
-        class="c9"
+        class="c8"
       >
         Mon
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Tue
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Wed
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Thu
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Fri
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Sat
       </div>
       <div
-        class="c9"
+        class="c8"
       >
         Sun
       </div>
     </div>
     <div
-      class="c10"
+      class="c9"
     >
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           25
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           26
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           27
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           28
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           29
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           30
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           1
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           2
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           3
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           4
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           5
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           6
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           7
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           8
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           9
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           10
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           11
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           12
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           13
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           14
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c14"
+          class="c12"
         >
           15
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           16
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           17
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           18
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           19
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           20
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
           class="c13"
@@ -1319,136 +1341,136 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           22
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           23
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           24
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           25
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           26
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           27
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           28
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           29
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           30
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c13"
+          class="c12"
         >
           31
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           1
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           2
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           3
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           4
         </div>
       </div>
       <div
-        class="c11"
+        class="c10"
       >
         <div
-          class="c12"
+          class="c11"
         >
           5
         </div>

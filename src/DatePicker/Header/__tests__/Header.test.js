@@ -21,7 +21,7 @@ describe('Header', () => {
 
   test('should have a previous month button disabled', () => {
     const spy = jest.fn();
-    const { getByTestId } = render(<Header prev={spy} shouldDisablePrev />);
+    const { getByTestId } = render(<Header prev={spy} disablePrev />);
 
     const previousMonthButton = getByTestId('previous-month-button');
 
@@ -36,7 +36,7 @@ describe('Header', () => {
 
   test('should have a next month button disabled', () => {
     const spy = jest.fn();
-    const { getByTestId } = render(<Header prev={spy} shouldDisableNext />);
+    const { getByTestId } = render(<Header prev={spy} disableNext />);
 
     const nextMonthButton = getByTestId('next-month-button');
 

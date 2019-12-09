@@ -15,47 +15,33 @@ import { Title, HeaderButton } from './elements';
  * @param {string} title - The title of the header.
  * @param {func} prev - Prev button handler.
  * @param {func} next - Next button handler.
- * @param {bool} shouldDisablePrev - Indicates if the prev button should be disabled.
- * @param {bool} shouldDisableNext - Indicates if the next button should be disabled.
+ * @param {bool} disablePrev - Indicates if the prev button should be disabled.
+ * @param {bool} disableNext - Indicates if the next button should be disabled.
  * @param {number} monthIndex - Month index ( rely on numberOfMonthsToDisplay).
- * @param {number} numberOfMonthsToDisplay - The number of month to display visualy (1 or 2).
  *
  * @return {jsx}
  */
-const Header = ({
-  className,
-  title,
-  prev,
-  next,
-  shouldDisablePrev,
-  shouldDisableNext,
-  monthIndex,
-  numberOfMonthsToDisplay,
-}) => (
+const Header = ({ className, title, prev, next, disablePrev, disableNext, monthIndex }) => (
   <div className={className}>
-    {monthIndex === 0 && (
-      <HeaderButton
-        data-testid="previous-month-button"
-        size="small"
-        onClick={prev}
-        disabled={shouldDisablePrev}
-        css="padding: 0;"
-      >
-        <Icon color={Theme.palette.spaceGrey} name="chevron-left" />
-      </HeaderButton>
-    )}
+    <HeaderButton
+      data-testid="previous-month-button"
+      size="small"
+      onClick={() => prev(monthIndex)}
+      disabled={disablePrev}
+    >
+      <Icon color={Theme.palette.spaceGrey} name="chevron-left" />
+    </HeaderButton>
+
     <Title>{title}</Title>
-    {((numberOfMonthsToDisplay < 2 && monthIndex === 0) || monthIndex === 1) && (
-      <HeaderButton
-        data-testid="next-month-button"
-        size="small"
-        onClick={next}
-        disabled={shouldDisableNext}
-        css="padding: 0;"
-      >
-        <Icon color={Theme.palette.spaceGrey} name="chevron-right" />
-      </HeaderButton>
-    )}
+
+    <HeaderButton
+      data-testid="next-month-button"
+      size="small"
+      onClick={() => next(monthIndex)}
+      disabled={disableNext}
+    >
+      <Icon color={Theme.palette.spaceGrey} name="chevron-right" />
+    </HeaderButton>
   </div>
 );
 
@@ -69,9 +55,8 @@ Header.propTypes = {
   prev: func,
   monthIndex: number,
   next: func,
-  numberOfMonthsToDisplay: number,
-  shouldDisablePrev: bool,
-  shouldDisableNext: bool,
+  disablePrev: bool,
+  disableNext: bool,
 };
 
 /**
@@ -83,9 +68,8 @@ Header.defaultProps = {
   prev: () => {},
   monthIndex: 0,
   next: () => {},
-  numberOfMonthsToDisplay: 1,
-  shouldDisablePrev: false,
-  shouldDisableNext: false,
+  disablePrev: false,
+  disableNext: false,
 };
 
 const styledHeader = styled(Header)`

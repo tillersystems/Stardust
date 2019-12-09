@@ -1,5 +1,352 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Day should render multiple days without a problem 1`] = `
+.c0 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  cursor: pointer;
+}
+
+.c0:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c3 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c3:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c5 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(30,146,204,0.14);
+  cursor: pointer;
+}
+
+.c5:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c7 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c7:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c7:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c1,
+.c1:hover {
+  background: transparent;
+  color: hsl(206,23%,69%);
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c2,
+.c2:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c4:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c4,
+.c4:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c8:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c8,
+.c8:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c9:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c9,
+.c9:hover {
+  cursor: not-allowed;
+  background: transparent;
+  color: hsl(207,22%,90%);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      10
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c2"
+    >
+      11
+    </div>
+  </div>
+  <div
+    class="c3"
+  >
+    <div
+      class="c4"
+    >
+      12
+    </div>
+  </div>
+  <div
+    class="c5"
+  >
+    <div
+      class="c6"
+    >
+      13
+    </div>
+  </div>
+  <div
+    class="c7"
+  >
+    <div
+      class="c8"
+    >
+      14
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c6"
+    >
+      15
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      16
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c9"
+      disabled=""
+    >
+      17
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Day should render without a problem 1`] = `
 .c0 {
   margin-top: 0.8rem;
@@ -31,7 +378,7 @@ exports[`Day should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

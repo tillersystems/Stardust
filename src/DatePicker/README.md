@@ -28,6 +28,7 @@ The selected value can either be a date or an interval of Luxon.
 | `numberOfMonthsToDisplay` |    -     |     `number`     |     `1`      |      The number of months to display (1 or 2)      |
 | `onDateChanged`           |    -     |    `function`    |  `() => {}`  |               Handler of date change               |
 | `rangePicker`             |    -     |    `boolean`     |   `false`    | Whether it is a date picker or a date range picker |
+| `displayOnlyInMonth`      |    -     |    `boolean`     |   `false`    |    Whether we want to hide adjacent months days    |
 
 ### Examples
 

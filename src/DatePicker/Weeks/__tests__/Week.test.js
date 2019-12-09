@@ -31,7 +31,7 @@ describe('<Weeks />', () => {
   });
 
   test('should render without a problem', () => {
-    const { container } = render(<Week currentDate={dateValue} selected={dateValue} />);
+    const { container } = render(<Week currentMonth={dateValue} selected={dateValue} />);
 
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -54,7 +54,12 @@ describe('<Weeks />', () => {
       second: 0,
     });
     const { getByText } = render(
-      <Week currentDate={dateValue} selected={dateValue} startDate={startDate} endDate={endDate} />,
+      <Week
+        currentMonth={dateValue}
+        selected={dateValue}
+        startDate={startDate}
+        endDate={endDate}
+      />,
     );
 
     const startDayNode = getByText('16');
@@ -92,7 +97,7 @@ describe('<Weeks />', () => {
     });
     const spy = jest.fn();
     const { getByText } = render(
-      <Week currentDate={dateValue} selected={dateValue} onDateClick={spy} />,
+      <Week currentMonth={dateValue} selected={dateValue} onDateClick={spy} />,
     );
 
     const dayNode = getByText('20');
@@ -108,7 +113,7 @@ describe('<Weeks />', () => {
     const spy = jest.fn();
     const { getByText } = render(
       <Week
-        currentDate={dateValue}
+        currentMonth={dateValue}
         selected={dateValue}
         onDateClick={spy}
         selectedDate={dateValue}
@@ -127,7 +132,7 @@ describe('<Weeks />', () => {
   test('should not handle onDateClick if the selected day is after max date', () => {
     const spy = jest.fn();
     const { getByText } = render(
-      <Week currentDate={dateValue} selected={dateValue} onDateClick={spy} maxDate={dateValue} />,
+      <Week currentMonth={dateValue} selected={dateValue} onDateClick={spy} maxDate={dateValue} />,
     );
 
     const dayNode = getByText('20');

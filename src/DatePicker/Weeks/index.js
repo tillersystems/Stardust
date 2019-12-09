@@ -23,7 +23,8 @@ import { getCalendarDates, isSameDay } from '../helpers';
  */
 const Weeks = ({
   className,
-  currentDate,
+  currentMonth,
+  displayOnlyInMonth,
   minDate,
   maxDate,
   onDateClick,
@@ -33,35 +34,30 @@ const Weeks = ({
 }) => {
   return (
     <div className={className}>
-      {getCalendarDates(currentDate).map(date => {
+      {getCalendarDates(currentMonth).map(date => {
         // Normalize date from date object
         // @see: https://moment.github.io/luxon/docs/class/src/datetime.js~DateTime.html#static-method-fromJSDate
         const dateNormalized = DateTime.fromObject(date);
 
         // Check if calendar date is in the same month as the state month and year
         const monthStart = dateNormalized.startOf('month');
-        const isInMonth = monthStart.hasSame(currentDate, 'month');
+        const isInMonth = monthStart.hasSame(currentMonth, 'month');
 
         // Check if selected date is in range
         const isInRange =
           (!minDate || dateNormalized >= minDate.startOf('day')) &&
           (!maxDate || dateNormalized <= maxDate.startOf('day'));
 
-        const isSelected = isInMonth && isInRange && isSameDay(dateNormalized, selected);
+        const isSelected =
+          selected && isInMonth && isInRange && isSameDay(dateNormalized, selected);
 
         const startOfDay = dateNormalized.startOf('day');
 
         const isInPath =
-          isInMonth &&
-          isInRange &&
-          startDate &&
-          endDate &&
-          startOfDay >= startDate &&
-          startOfDay <= endDate;
+          isInRange && startDate && endDate && startOfDay >= startDate && startOfDay <= endDate;
 
-        const isStartEdge =
-          !!startDate && isInMonth && isInRange && isSameDay(dateNormalized, startDate);
-        const isEndEdge = !!endDate && isInMonth && isInRange && isSameDay(dateNormalized, endDate);
+        const isStartEdge = !!startDate && isInRange && isSameDay(dateNormalized, startDate);
+        const isEndEdge = !!endDate && isInRange && isSameDay(dateNormalized, endDate);
 
         const { day } = dateNormalized;
 
@@ -73,6 +69,7 @@ const Weeks = ({
             key={dateNormalized}
             disabled={!isInRange}
             shadowed={!isInMonth}
+            displayOnlyInMonth={displayOnlyInMonth}
             isSelected={isSelected}
             isInPath={isInPath}
             isStartEdge={isStartEdge}
@@ -87,11 +84,12 @@ const Weeks = ({
   );
 };
 
-const { string, object, func } = PropTypes;
+const { bool, string, object, func } = PropTypes;
 Weeks.propTypes = {
   className: string,
-  currentDate: object.isRequired,
-  selected: object.isRequired,
+  currentMonth: object.isRequired,
+  displayOnlyInMonth: bool,
+  selected: object,
   startDate: object,
   endDate: object,
   minDate: object,
@@ -101,9 +99,11 @@ Weeks.propTypes = {
 
 Weeks.defaultProps = {
   className: '',
+  displayOnlyInMonth: false,
   minDate: null,
   maxDate: null,
   onDateClick: () => {},
+  selected: null,
   startDate: null,
   endDate: null,
 };
