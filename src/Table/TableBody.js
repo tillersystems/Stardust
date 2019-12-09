@@ -10,18 +10,15 @@ const TableBody = ({
   colsDef,
   data,
   direction,
-  handleRowSelect,
+  handleRowClick,
+  hasClickCallback,
+  hasFoldedRows,
   index,
   isHoverable,
   isScrollable,
-  selectable,
-  selected,
-  selectedRows,
   striped,
+  unfoldedRows,
 }) => {
-  // We actually need to keep track of the original key for sorting purposes
-  // and selection purposes (i.e. when the column is sorted, the selected row
-  // should still be the same).
   const sortData = dataToSort => {
     let sortedData = dataToSort.map((item, key) => {
       return {
@@ -61,71 +58,80 @@ const TableBody = ({
   // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
   return (
     <Body colsLength={colsDef.length + 1} ref={bodyRef}>
-      {sortData(data).map(({ key, item }, index) => (
-        <Fragment key={key}>
+      {sortData(data).map(({ key, item }, rowIndex) => (
+        <Fragment key={rowIndex}>
           <BodyRow
-            key={key}
+            key={rowIndex}
             data-testid="body-row"
-            selectable={selectable}
-            selected={selectedRows.includes(key)}
-            striped={striped}
-            onClick={() => handleRowSelect(item, key)}
+            hasPointerCursor={item.children || (!hasFoldedRows && hasClickCallback)}
             isHoverable={isHoverable}
-            hasChildren={item.children}
+            isUnfolded={unfoldedRows.includes(key)}
+            name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+            onClick={() => handleRowClick(item, key)}
+            striped={striped}
           >
             {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
               isRowHeader ? (
-                <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${index}`}>
+                <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${rowIndex}`}>
                   {item.children && (
                     <Icon
-                      name={selectedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+                      name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
                       color={Theme.palette.darkBlue}
                       width="20px"
                       height="20px"
                     />
                   )}
-                  <TextEllipsis>{value(item, index)}</TextEllipsis>
+                  <TextEllipsis>{value(item, key)}</TextEllipsis>
                 </RowHeader>
               ) : (
-                <td key={`row-${index}-column-${columnIndex}`} align={align}>
-                  {format ? format(value(item, index), index) : value(item, index)}
+                <td key={`row-${rowIndex}-column-${columnIndex}`} align={align}>
+                  {format ? format(value(item, key), key) : value(item, key)}
                 </td>
               ),
             )}
           </BodyRow>
-          {selectedRows.includes(key) && (
+          {unfoldedRows.includes(key) && (
             <>
               {item.children &&
-                sortData(item.children).map(({ key: childrenKey, item: childrenItem }, index) => (
-                  <ChildRow
-                    key={`${key}-${childrenKey}`}
-                    data-testid="body-row"
-                    selected={selected === `${key}-${childrenKey}`}
-                    selectable={selectable}
-                    striped={striped}
-                    onClick={() => handleRowSelect(item, `${key}-${childrenKey}`)}
-                    isHoverable={isHoverable}
-                  >
-                    {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-                      isRowHeader ? (
-                        <RowHeader
-                          align={align}
-                          isScrollable={isScrollable}
-                          key={`row-header-${key}-${index}`}
-                          isChild
-                        >
-                          <TextEllipsis>{value(childrenItem, index)}</TextEllipsis>
-                        </RowHeader>
-                      ) : (
-                        <td key={`row-${index}-column-${key}-${columnIndex}`} align={align}>
-                          {format
-                            ? format(value(childrenItem, index), index)
-                            : value(childrenItem, index)}
-                        </td>
-                      ),
-                    )}
-                  </ChildRow>
-                ))}
+                sortData(item.children).map(
+                  ({ key: childrenKey, item: childrenItem }, childRowIndex) => (
+                    <ChildRow
+                      key={`${rowIndex}-${childRowIndex}`}
+                      data-testid="body-row"
+                      hasPointerCursor={hasClickCallback}
+                      isHoverable={isHoverable}
+                      onClick={() => handleRowClick(childrenItem, `${key}-${childrenKey}`)}
+                      striped={striped}
+                    >
+                      {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+                        isRowHeader ? (
+                          <RowHeader
+                            align={align}
+                            isScrollable={isScrollable}
+                            key={`row-header-${rowIndex}-${childRowIndex}`}
+                            isChild
+                          >
+                            <TextEllipsis>
+                              {value(childrenItem, `${key}-${childrenKey}`)}
+                            </TextEllipsis>
+                          </RowHeader>
+                        ) : (
+                          <td
+                            key={`row-${rowIndex}-${childRowIndex}-column-${columnIndex}`}
+                            align={align}
+                          >
+                            {format
+                              ? format(
+                                  value(childrenItem, `${key}-${childrenKey}`),
+                                  `${key}-${childrenKey}`,
+                                )
+                              : value(childrenItem, `${key}-${childrenKey}`)}
+                          </td>
+                        ),
+                      )}
+                    </ChildRow>
+                  ),
+                )}
             </>
           )}
         </Fragment>
@@ -166,14 +172,14 @@ TableBody.propTypes = {
   ).isRequired,
   data: array.isRequired,
   direction: string,
-  handleRowSelect: func.isRequired,
+  handleRowClick: func.isRequired,
+  hasClickCallback: bool.isRequired,
+  hasFoldedRows: bool.isRequired,
   index: number,
   isHoverable: bool,
   isScrollable: bool,
-  selectable: bool,
-  selected: number.isRequired,
-  selectedRows: array.isRequired,
   striped: bool,
+  unfoldedRows: array.isRequired,
 };
 
 /** Default props. */
@@ -182,7 +188,6 @@ TableBody.defaultProps = {
   index: -1,
   isHoverable: false,
   isScrollable: false,
-  selectable: false,
   striped: false,
 };
 

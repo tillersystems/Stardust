@@ -29,15 +29,13 @@ const initialSort = {
 class Table extends PureComponent {
   /** Internal state. */
   state = {
+    firstCellWidth: 0,
+    /** Checks if any object from data has a non-empty children value */
+    hasFoldedRows: false,
+    shadowSide: null,
     // Stores which column should be sorted.
     sort: initialSort,
-
-    // Stores selected row.
-    // Use `-1` for no row selected.
-    selected: -1,
-    selectedRows: [],
-    firstCellWidth: 0,
-    shadowSide: null,
+    unfoldedRows: [],
   };
 
   rowHeaderRef = createRef();
@@ -46,6 +44,8 @@ class Table extends PureComponent {
 
   componentDidMount() {
     const { isScrollable } = this.props;
+    this.checkDataDepth();
+
     if (isScrollable) {
       this.setFirstCellWidth();
       addEventListener('resize', this.onResize);
@@ -53,10 +53,14 @@ class Table extends PureComponent {
     }
   }
 
-  componentDidUpdate({ colsDef: prevColsDef }) {
-    const { colsDef } = this.props;
+  componentDidUpdate({ colsDef: prevColsDef, data: prevData }) {
+    const { colsDef, data } = this.props;
+
     if (prevColsDef !== colsDef) {
       this.setState({ sort: initialSort });
+    }
+    if (prevData !== data) {
+      this.checkDataDepth();
     }
     this.onResize();
   }
@@ -115,31 +119,40 @@ class Table extends PureComponent {
   };
 
   /**
-   * Handles click on a row.
+   * Handles click on a row
    *
    * @param {Object} item - The item of the row that was clicked.
    * @param {Number} key - The key of the row that was clicked.
    */
-  handleRowSelect = (item, key) => {
+  handleRowClick = (item, key) => {
+    const { hasFoldedRows, unfoldedRows } = this.state;
     const {
-      rowsDef: { selectable, onSelect },
+      rowsDef: { onClick },
     } = this.props;
-    const { selectedRows } = this.state;
 
-    if (selectable) {
-      this.setState({ selected: key }, () => {
-        if (onSelect) onSelect(item, key);
-      });
-    }
-
-    if (selectable || item.children) {
-      if (selectedRows.includes(key)) {
-        const selectedRowsState = selectedRows.filter(keyItem => keyItem !== key);
-        this.setState({ selectedRows: selectedRowsState });
+    if (hasFoldedRows && item.children) {
+      // row needs to be folded back
+      if (unfoldedRows.includes(key)) {
+        const unfoldedRowsNewState = unfoldedRows.filter(keyItem => keyItem !== key);
+        this.setState({ unfoldedRows: unfoldedRowsNewState });
       } else {
-        this.setState({ selectedRows: [...selectedRows, key] });
+        this.setState({ unfoldedRows: [...unfoldedRows, key] });
       }
+    } else if (onClick && (!hasFoldedRows || typeof key === 'string')) {
+      // row is a "leaf", i.e. at the latest level in the data
+      onClick(item, key);
     }
+  };
+
+  /**
+   * Checks if data has children and needs folding rows.
+   * Helps us getting the proper callback for any row in handleRowClick
+   *
+   */
+  checkDataDepth = () => {
+    const { data } = this.props;
+    const hasFoldedRows = data.find(d => d.children && d.children.length) !== undefined;
+    this.setState({ hasFoldedRows });
   };
 
   /**
@@ -155,16 +168,16 @@ class Table extends PureComponent {
       height,
       isHoverable,
       isScrollable,
-      rowsDef: { selectable },
+      rowsDef: { onClick },
       striped,
       width,
     } = this.props;
     const {
-      selected,
-      selectedRows,
-      shadowSide,
       firstCellWidth,
+      hasFoldedRows,
+      shadowSide,
       sort: { index, direction },
+      unfoldedRows,
     } = this.state;
 
     const tableHeaderProps = {
@@ -181,14 +194,14 @@ class Table extends PureComponent {
       colsDef,
       data,
       direction,
-      handleRowSelect: this.handleRowSelect,
+      handleRowClick: this.handleRowClick,
+      hasClickCallback: !!onClick,
+      hasFoldedRows,
       index,
       isHoverable,
       isScrollable,
-      selectable,
-      selected,
-      selectedRows,
       striped,
+      unfoldedRows,
     };
 
     const tableFooterProps = {
@@ -270,14 +283,13 @@ Table.propTypes = {
 
   /**
    * Define if the table is isHoverable or not.
-   * When the table is isHoverable if a user hover a row it background change increasing contrast with others improving readability.
+   * On hover of a row, its background color changes, increasing contrast with others and improving readability.
    **/
   isHoverable: bool,
 
   /** Rows definition */
   rowsDef: shape({
-    onSelect: func,
-    selectable: bool,
+    onClick: func,
   }),
 
   /** Whether rows should alternate color or not */
@@ -294,8 +306,7 @@ Table.defaultProps = {
   isScrollable: false,
   isHoverable: false,
   rowsDef: {
-    onSelect: () => {},
-    selectable: false,
+    onClick: null,
   },
   striped: false,
   width: '100%',
