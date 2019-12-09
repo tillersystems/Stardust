@@ -1,3 +1,9 @@
+## [4.12.7](https://github.com/tillersystems/Stardust/compare/v4.12.6...v4.12.7) (2019-12-09)
+
+### Features
+
+- **BreadCrumb:** Add compoenent to Stardust ([cc9e78c](https://github.com/tillersystems/Stardust/commit/cc9e78c9701f9ef1ef09f29e688edf6430575789))
+
 ## [4.12.6](https://github.com/tillersystems/Stardust/compare/v4.12.5...v4.12.6) (2019-11-21)
 
 ### Bug Fixes
