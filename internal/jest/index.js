@@ -1,10 +1,13 @@
 import '@babel/polyfill';
 
 import { render } from './utils';
+import { Settings } from 'luxon';
 
 import 'jest-dom/extend-expect';
 import '@testing-library/react/cleanup-after-each';
 import 'jest-styled-components';
+
+Settings.defaultLocale = 'en';
 
 // Mock matchMedia
 window.matchMedia =
