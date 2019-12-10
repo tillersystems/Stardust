@@ -6,6 +6,10 @@ import { fireEvent } from '@testing-library/react';
 import DatePicker from '..';
 import Theme from '../../Theme';
 
+const { CIRCLECI } = process.env;
+
+const ignoreCircleCiTest = CIRCLECI === 'true' ? xit : test;
+
 Settings.defaultZoneName = 'utc';
 
 describe('<DatePicker />', () => {
@@ -30,7 +34,9 @@ describe('<DatePicker />', () => {
   });
 
   describe('Simple', () => {
-    test('should render without a problem', () => {
+    // Does not run correctly on CircleCI
+    // Snapshot classes differs in order, issue: https://github.com/styled-components/jest-styled-components/issues/289
+    ignoreCircleCiTest('should render without a problem', () => {
       const { container } = render(<DatePicker defaultValue={dateValue} />);
 
       expect(container.firstChild).toMatchSnapshot();
@@ -190,7 +196,9 @@ describe('<DatePicker />', () => {
   });
 
   describe('Range', () => {
-    test('should render without a problem', () => {
+    // Does not run correctly on CircleCI
+    // Snapshot classes differs in order, issue: https://github.com/styled-components/jest-styled-components/issues/289
+    ignoreCircleCiTest('should render without a problem', () => {
       const { container } = render(<DatePicker rangePicker defaultValue={dateValue} />);
 
       expect(container.firstChild).toMatchSnapshot();
