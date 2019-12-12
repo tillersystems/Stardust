@@ -19,6 +19,7 @@ import { Container, Content } from './elements';
  */
 const Day = ({
   disabled,
+  displayOnlyInMonth,
   isSelected,
   shadowed,
   onClick,
@@ -27,7 +28,15 @@ const Day = ({
   isStartEdge,
   isEndEdge,
 }) => (
-  <Container onClick={onClick} isInPath={isInPath} isStartEdge={isStartEdge} isEndEdge={isEndEdge}>
+  <Container
+    onClick={onClick}
+    displayOnlyInMonth={displayOnlyInMonth}
+    shadowed={shadowed}
+    isSelected={isSelected}
+    isInPath={isInPath}
+    isStartEdge={isStartEdge}
+    isEndEdge={isEndEdge}
+  >
     <Content
       disabled={disabled}
       isSelected={isSelected}
@@ -51,6 +60,7 @@ Day.displayName = 'Day';
 const { bool, func, node } = PropTypes;
 Day.propTypes = {
   disabled: bool,
+  displayOnlyInMonth: bool,
   isSelected: bool,
   isStartEdge: bool,
   isEndEdge: bool,
@@ -65,6 +75,7 @@ Day.propTypes = {
  */
 Day.defaultProps = {
   disabled: false,
+  displayOnlyInMonth: false,
   isSelected: false,
   isStartEdge: false,
   isEndEdge: false,

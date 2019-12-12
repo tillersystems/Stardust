@@ -17,12 +17,11 @@ references:
   restore_deps_cache: &restore_deps_cache
     restore_cache:
       keys:
-        - dependencies-{{ checksum "package.json" }}
-        - dependencies-
+        - deps-{{ checksum "yarn.lock" }}
 
   save_deps_cache: &save_deps_cache
     save_cache:
-      key: dependencies-{{ checksum "package.json" }}
+      key: deps-{{ checksum "yarn.lock" }}
       paths:
         - node_modules
 
@@ -43,7 +42,7 @@ references:
 defaults: &defaults
   working_directory: *workspace_root
   docker:
-    - image: circleci/node:11.15.0
+    - image: circleci/node:13.3.0
 
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # JOBS

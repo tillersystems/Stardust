@@ -1,5 +1,550 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Day should render multiple days without a problem 1`] = `
+.c0 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  cursor: pointer;
+}
+
+.c0:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c2 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c2:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c2:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.c4 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c4:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c6 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(30,146,204,0.14);
+  cursor: pointer;
+}
+
+.c6:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c8 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c8:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c8:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.c11 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(224,230,235,0.34);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c11:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c11:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.c12 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(224,230,235,0.34);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c12:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c14 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(224,230,235,0.34);
+  cursor: pointer;
+}
+
+.c14:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c15 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  background: rgba(224,230,235,0.34);
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c15:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c15:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c7:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c1,
+.c1:hover {
+  background: transparent;
+  color: hsl(206,23%,69%);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c3,
+.c3:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c5:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c5,
+.c5:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c9:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c9,
+.c9:hover {
+  color: hsl(0,100%,100%);
+  background: hsl(200,74%,46%);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c10:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c10,
+.c10:hover {
+  cursor: not-allowed;
+  background: transparent;
+  color: hsl(207,22%,90%);
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c13:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c13,
+.c13:hover {
+  background: transparent;
+  color: hsl(206,23%,69%);
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c16:hover {
+  background: rgba(30,146,204,0.14);
+}
+
+.c16,
+.c16:hover {
+  background: transparent;
+  color: hsl(206,23%,69%);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      10
+    </div>
+  </div>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+    >
+      11
+    </div>
+  </div>
+  <div
+    class="c4"
+  >
+    <div
+      class="c5"
+    >
+      12
+    </div>
+  </div>
+  <div
+    class="c6"
+  >
+    <div
+      class="c7"
+    >
+      13
+    </div>
+  </div>
+  <div
+    class="c8"
+  >
+    <div
+      class="c9"
+    >
+      14
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c7"
+    >
+      15
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      16
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c10"
+      disabled=""
+    >
+      17
+    </div>
+  </div>
+  <div
+    class="c11"
+  >
+    <div
+      class="c1"
+    >
+      18
+    </div>
+  </div>
+  <div
+    class="c12"
+  >
+    <div
+      class="c13"
+    >
+      19
+    </div>
+  </div>
+  <div
+    class="c14"
+  >
+    <div
+      class="c1"
+    >
+      20
+    </div>
+  </div>
+  <div
+    class="c15"
+  >
+    <div
+      class="c16"
+    >
+      21
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Day should render without a problem 1`] = `
 .c0 {
   margin-top: 0.8rem;
@@ -31,7 +576,7 @@ exports[`Day should render without a problem 1`] = `
   width: 2.8rem;
   height: 2.8rem;
   max-width: 2.8rem;
-  border-radius: 50%;
+  border-radius: 2.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

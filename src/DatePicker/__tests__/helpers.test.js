@@ -7,7 +7,7 @@ import {
   isSameDay,
   isSameMonth,
   isInNextMonth,
-  isInLastMonth,
+  isInPrevMonth,
   isInterval,
   getCalendarDates,
 } from '../helpers';
@@ -66,21 +66,22 @@ describe('Helpers', () => {
     expect(isSameMonth(date, dateInNotSameMonth)).toBeFalsy();
   });
 
-  test('should return true whether the selected date is in the next month (w.r.t. the whole calendar)', () => {
+  test('should return true whether the selected date is in the next month', () => {
     const date = DateTime.fromObject({ year: 1982, month: 5, day: 1 });
     const selectedDate = DateTime.fromObject({ year: 1982, month: 6, day: 1 });
+    const anotherSelectedDate = DateTime.fromObject({ year: 1982, month: 2, day: 1 });
 
-    expect(isInNextMonth(selectedDate, date, 1)).toBeTruthy();
-    expect(isInNextMonth(selectedDate, date, 2)).toBeFalsy();
+    expect(isInNextMonth(selectedDate, date)).toBeTruthy();
+    expect(isInNextMonth(anotherSelectedDate, date)).toBeFalsy();
   });
 
-  test('should return true whether the selected date is in the next month (w.r.t. the whole calendar)', () => {
+  test('should return true whether the selected date is in the next month', () => {
     const date = DateTime.fromObject({ year: 1982, month: 5, day: 1 });
     const selectedDate = DateTime.fromObject({ year: 1982, month: 4, day: 1 });
     const anotherSelectedDate = DateTime.fromObject({ year: 1982, month: 2, day: 1 });
 
-    expect(isInLastMonth(selectedDate, date)).toBeTruthy();
-    expect(isInLastMonth(anotherSelectedDate, date)).toBeFalsy();
+    expect(isInPrevMonth(selectedDate, date)).toBeTruthy();
+    expect(isInPrevMonth(anotherSelectedDate, date)).toBeFalsy();
   });
 
   test('should return an array of the calendar dates', () => {

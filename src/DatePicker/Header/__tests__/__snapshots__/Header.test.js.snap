@@ -52,12 +52,6 @@ exports[`Header should render without a problem 1`] = `
 
 .c2 {
   padding: 0;
-  padding: 0;
-}
-
-.c5 {
-  padding: 0;
-  padding: 0;
 }
 
 .c0 {
@@ -114,7 +108,7 @@ exports[`Header should render without a problem 1`] = `
     class="c4"
   />
   <button
-    class="c1 c5"
+    class="c1 c2"
     data-testid="next-month-button"
     type="button"
   >

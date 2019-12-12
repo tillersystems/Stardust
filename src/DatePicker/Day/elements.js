@@ -11,24 +11,39 @@ export const Container = styled.div`
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   color: ${({ theme: { palette } }) => palette.darkBlue};
 
-  ${({ isInPath }) =>
+  ${({ displayOnlyInMonth, shadowed }) =>
+    displayOnlyInMonth &&
+    shadowed &&
+    css`
+      visibility: hidden;
+    `}
+
+  ${({ shadowed, isInPath }) =>
+    !shadowed &&
     isInPath &&
     css`
       background: ${({ theme: { palette } }) => transparentize(0.86, palette.primary.default)};
     `}
 
-  ${({ isStartEdge }) =>
-    isStartEdge &&
+  ${({ shadowed, isInPath, isSelected, isStartEdge, isEndEdge }) =>
+    shadowed &&
+    (isInPath || isSelected || isStartEdge || isEndEdge) &&
     css`
-      border-top-left-radius: 50%;
-      border-bottom-left-radius: 50%;
+      background: ${({ theme: { palette } }) => transparentize(0.66, palette.lightGrey)};
     `}
 
-  ${({ isEndEdge }) =>
-    isEndEdge &&
+  ${({ isStartEdge, isSelected }) =>
+    (isStartEdge || isSelected) &&
     css`
-      border-top-right-radius: 50%;
-      border-bottom-right-radius: 50%;
+      border-top-left-radius: 2.8rem;
+      border-bottom-left-radius: 2.8rem;
+    `}
+
+  ${({ isEndEdge, isSelected }) =>
+    (isEndEdge || isSelected) &&
+    css`
+      border-top-right-radius: 2.8rem;
+      border-bottom-right-radius: 2.8rem;
 
       &:not(:nth-child(7n)) {
         padding-right: 0;
@@ -49,48 +64,61 @@ export const Content = styled.div`
   height: 2.8rem;
   max-width: 2.8rem;
 
-  border-radius: 50%;
+  border-radius: 2.8rem;
 
   user-select: none;
 
-  ${({ disabled, shadowed, isSelected, isStartEdge, isEndEdge }) =>
-    !disabled &&
-    !shadowed &&
-    !isSelected &&
-    !isStartEdge &&
-    !isEndEdge &&
-    css`
-      &:hover {
+  &:hover {
+    background: ${({ theme: { palette } }) => transparentize(0.86, palette.primary.default)};
+  }
+
+  &,
+  &:hover {
+    ${({ shadowed }) =>
+      shadowed &&
+      css`
+        background: transparent;
+        color: ${({ theme: { palette } }) => palette.mediumGrey};
+      `};
+
+    ${({ disabled }) =>
+      disabled &&
+      css`
+        cursor: not-allowed;
+        background: transparent;
+        color: ${({ theme: { palette } }) => palette.lightGrey};
+      `};
+
+    ${({ isInPath, isStartEdge, isEndEdge }) =>
+      isInPath &&
+      !isStartEdge &&
+      !isEndEdge &&
+      css`
         background: ${({ theme: { palette } }) => transparentize(0.86, palette.primary.default)};
-      }
-    `};
+      `}
 
-  ${({ shadowed }) =>
-    shadowed &&
-    css`
-      color: ${({ theme: { palette } }) => palette.mediumGrey};
-    `};
+    ${({ isSelected, shadowed, isStartEdge, isEndEdge }) =>
+      !shadowed &&
+      (isSelected || isStartEdge || isEndEdge) &&
+      css`
+        color: ${({ theme: { palette } }) => palette.white};
+        background: ${({ theme: { palette } }) => palette.primary.default};
+      `};
+  }
 
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      cursor: not-allowed;
-
-      color: ${({ theme: { palette } }) => palette.lightGrey};
-    `};
-
-  ${({ isInPath, isStartEdge, isEndEdge }) =>
-    isInPath &&
-    !isStartEdge &&
+  ${({ isStartEdge, isEndEdge }) =>
+    isStartEdge &&
     !isEndEdge &&
     css`
-      background: ${({ theme: { palette } }) => transparentize(0.86, palette.primary.default)};
-    `}
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    `};
 
-  ${({ isSelected, isStartEdge, isEndEdge }) =>
-    (isSelected || isStartEdge || isEndEdge) &&
+  ${({ isStartEdge, isEndEdge }) =>
+    isEndEdge &&
+    !isStartEdge &&
     css`
-      color: ${({ theme: { palette } }) => palette.white};
-      background: ${({ theme: { palette } }) => palette.primary.default};
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     `};
 `;

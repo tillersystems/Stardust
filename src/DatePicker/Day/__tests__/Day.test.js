@@ -14,6 +14,35 @@ describe('Day', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  test('should render multiple days without a problem', () => {
+    const { container } = render(
+      <>
+        <Day shadowed>10</Day>
+        <Day isSelected>11</Day>
+        <Day isStartEdge>12</Day>
+        <Day isInPath>13</Day>
+        <Day isEndEdge>14</Day>
+        <Day>15</Day>
+        <Day shadowed>16</Day>
+        <Day disabled>17</Day>
+        <Day shadowed isSelected>
+          18
+        </Day>
+        <Day shadowed isStartEdge>
+          19
+        </Day>
+        <Day shadowed isInPath>
+          20
+        </Day>
+        <Day shadowed isEndEdge>
+          21
+        </Day>
+      </>,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
   test('should render a disabled day', () => {
     const { getByText } = render(<Day disabled>{dayNumber}</Day>);
 
@@ -50,7 +79,7 @@ describe('Day', () => {
   });
 
   test('should render as startEdge', () => {
-    const expectedRadius = '50%';
+    const expectedRadius = '2.8rem';
     const { container, getByText } = render(<Day isStartEdge>{dayNumber}</Day>);
 
     const dayContainerNode = container.firstChild;
@@ -71,7 +100,7 @@ describe('Day', () => {
   });
 
   test('should render as endEdge', () => {
-    const expectedRadius = '50%';
+    const expectedRadius = '2.8rem';
     const { container, getByText } = render(<Day isEndEdge>{dayNumber}</Day>);
 
     const dayContainerNode = container.firstChild;
@@ -91,7 +120,7 @@ describe('Day', () => {
     });
   });
 
-  test('should render with diffrent style if is in path', () => {
+  test('should render with different style if is in path', () => {
     const { container } = render(<Day isInPath>{dayNumber}</Day>);
 
     const dayContainerNode = container.firstChild;
@@ -100,6 +129,35 @@ describe('Day', () => {
       'background',
       transparentize(0.86, Theme.palette.primary.default),
     );
+  });
+
+  test('should render as shadowed in path', () => {
+    const { container, getByText } = render(
+      <Day shadowed isInPath>
+        {dayNumber}
+      </Day>,
+    );
+
+    const dayContainerNode = container.firstChild;
+    const dayContentNode = getByText(dayNumber);
+
+    expect(dayContainerNode).toHaveStyleRule(
+      'background',
+      transparentize(0.66, Theme.palette.lightGrey),
+    );
+    expect(dayContentNode).toHaveStyleRule('color', Theme.palette.mediumGrey);
+  });
+
+  test('should render hidden if is shadowed and displayOnlyInMonth', () => {
+    const { container } = render(
+      <Day displayOnlyInMonth shadowed>
+        {dayNumber}
+      </Day>,
+    );
+
+    const dayContainerNode = container.firstChild;
+
+    expect(dayContainerNode).toHaveStyleRule('visibility', 'hidden');
   });
 
   test('should respond to a click handler', () => {

@@ -10,15 +10,17 @@ import { Container } from './elements';
 import {
   getPreviousMonth,
   getNextMonth,
+  minMaxDate,
   isSameDay,
+  isSameMonth,
   isInNextMonth,
-  isInLastMonth,
+  isInPrevMonth,
   isInterval,
 } from './helpers';
 
 /* eslint-disable react/destructuring-assignment */
 
-const localDateTime = DateTime.local();
+const localDateTime = DateTime.local().startOf('month');
 
 /**
  * A DatePicker can display one or two months. It takes a value (`defaultValue` prop) to set its internal
@@ -35,7 +37,7 @@ class DatePicker extends PureComponent {
      * DatePicker month(s) display is based upon currentDate and will start
      * from this to iterate through the months it has to display
      */
-    currentDate: localDateTime,
+    currentMonths: [localDateTime],
 
     /**
      * Selected Calendar date
@@ -48,8 +50,6 @@ class DatePicker extends PureComponent {
 
     /** End date value */
     endDate: null,
-
-    isInterval: isInterval(this.props.defaultValue),
   };
 
   /**
@@ -61,18 +61,22 @@ class DatePicker extends PureComponent {
    */
   componentDidMount() {
     const { defaultValue } = this.props;
-    const { isInterval } = this.state;
 
-    if (isInterval) {
+    if (isInterval(defaultValue)) {
       // Always set the current date to the start of the interval.
       this.setState({
-        selected: defaultValue,
-        currentDate: defaultValue.start,
+        selected: null,
+        currentMonths: this.getCurrentMonths(defaultValue.start, defaultValue.end),
         startDate: defaultValue.start,
         endDate: defaultValue.end,
       });
     } else {
-      this.setState({ selected: defaultValue, currentDate: defaultValue });
+      this.setState({
+        selected: defaultValue,
+        currentMonths: this.getCurrentMonths(defaultValue, defaultValue),
+        startDate: null,
+        endDate: null,
+      });
     }
   }
 
@@ -80,61 +84,77 @@ class DatePicker extends PureComponent {
    * Component lifecycle method
    *
    */
-  componentDidUpdate(prevProps, prevState) {
-    const { defaultValue: prevDefaultValue } = prevProps;
-    const { defaultValue } = this.props;
+  componentDidUpdate(prevProps) {
+    const {
+      defaultValue: prevDefaultValue,
+      numberOfMonthsToDisplay: prevNumberOfMonthsToDisplay,
+      minDate: prevMinDate,
+      maxDate: prevMaxDate,
+    } = prevProps;
+
+    const { defaultValue, numberOfMonthsToDisplay, minDate, maxDate } = this.props;
 
     if (defaultValue !== prevDefaultValue) {
-      !prevState.isInterval &&
+      if (isInterval(defaultValue)) {
+        this.setState({
+          selected: null,
+          currentMonths: this.getCurrentMonths(defaultValue.start, defaultValue.end),
+          startDate: defaultValue.start,
+          endDate: defaultValue.end,
+        });
+      } else {
         this.setState({
           selected: defaultValue,
-          currentDate: defaultValue,
+          currentMonths: this.getCurrentMonths(defaultValue, defaultValue),
+          startDate: null,
+          endDate: null,
         });
-      prevState.isInterval &&
-        this.setState({ selected: defaultValue, currentDate: defaultValue.start });
+      }
+    } else if (
+      numberOfMonthsToDisplay != prevNumberOfMonthsToDisplay ||
+      minDate !== prevMinDate ||
+      maxDate !== prevMaxDate
+    ) {
+      const { selected, startDate, endDate } = this.state;
+
+      this.setState({
+        currentMonths: this.getCurrentMonths(startDate || selected, endDate || selected),
+      });
     }
   }
 
-  /**
-   * Get selected Range
-   * Take the date range selection
-   * and return as an interval
-   *
-   * @return {luxon.Interval}
-   */
-  getSelectedRange() {
-    const { startDate, endDate } = this.state;
-    const { onDateChanged } = this.props;
-    const isSelectedRange = !!startDate && !!endDate;
+  getCurrentMonths = (startDate, endDate) => {
+    const { numberOfMonthsToDisplay, minDate, maxDate } = this.props;
 
-    if (!isSelectedRange) {
-      return;
+    const start = minMaxDate(startDate || DateTime.local(), minDate, maxDate);
+    const end = minMaxDate(endDate || DateTime.local(), minDate, maxDate);
+
+    if (numberOfMonthsToDisplay === 2) {
+      return [
+        DateTime.min(start.startOf('month'), end.minus({ month: 1 }).startOf('month')),
+        end.startOf('month'),
+      ];
     }
 
-    return onDateChanged(Interval.fromDateTimes(startDate, endDate));
-  }
-
-  /**
-   * Get selected
-   * Take the selected date
-   *
-   * @return {luxon.DateTime}
-   */
-  getSelected() {
-    const { selected } = this.state;
-    const { onDateChanged } = this.props;
-
-    return onDateChanged(selected);
-  }
+    return [end.startOf('month')];
+  };
 
   /**
    * Handles date change.
    *
    * @param {luxon.DateTime} value - The date that was clicked.
    */
-  handleChange = value => {
-    const { rangePicker, numberOfMonthsToDisplay } = this.props;
-    const { selected: previousValue, startDate, endDate, currentDate } = this.state;
+  handleChange = (value, index) => {
+    const { rangePicker } = this.props;
+    const { selected: previousValue, startDate, endDate, currentMonths } = this.state;
+
+    if (currentMonths.length === 1 || !rangePicker) {
+      if (isInNextMonth(value, currentMonths[index])) {
+        this.handleNextMonth(index);
+      } else if (isInPrevMonth(value, currentMonths[index])) {
+        this.handlePrevMonth(index);
+      }
+    }
 
     if (rangePicker) {
       let start = startDate;
@@ -156,100 +176,148 @@ class DatePicker extends PureComponent {
         }
       }
 
-      // We check whether value is in the next month (w.r.t. the whole calendar)
-      // or the previous month
-      if (
-        isInNextMonth(value, currentDate, numberOfMonthsToDisplay) ||
-        isInLastMonth(value, currentDate)
-      ) {
-        this.setState(
-          { selected: value, startDate: start, endDate: end, currentDate: value },
-          () => {
-            this.getSelectedRange();
-          },
-        );
-      } else {
-        this.setState({ selected: value, startDate: start, endDate: end }, () => {
-          this.getSelectedRange();
-        });
-      }
+      this.setState({ selected: null, startDate: start, endDate: end }, () => {
+        this.handleSelectedInterval();
+      });
     } else {
       // First we check if the current value is different from the previsous one,
       // we never call a setState on a already selected value.
       // Then we check whether value is in the next month (w.r.t. the whole calendar)
       // or the previous month
-      if (!isSameDay(value, previousValue)) {
-        if (
-          isInNextMonth(value, currentDate, numberOfMonthsToDisplay) ||
-          isInLastMonth(value, currentDate)
-        ) {
-          this.setState(
-            { selected: value, currentDate: value, startDate: null, endDate: null },
-            () => {
-              this.getSelected();
-            },
-          );
-        } else {
-          this.setState({ selected: value, startDate: null, endDate: null }, () => {
-            this.getSelected();
-          });
-        }
+      if (!previousValue || !isSameDay(value, previousValue)) {
+        this.setState(
+          {
+            selected: value,
+            startDate: null,
+            endDate: null,
+          },
+          () => {
+            this.handleSelectedDate();
+          },
+        );
       }
     }
   };
 
   /**
-   * Handles click on the previous month button.
+   * Handles click on the previous month action.
+   * This method is safe with more than 2 months displayed
+   *
+   * @param index - the month display to minus
    */
-  handlePrevMonthClick = () => {
-    const { currentDate } = this.state;
+  handlePrevMonth = index => {
+    const { currentMonths } = this.state;
 
-    this.setState({ currentDate: getPreviousMonth(currentDate) });
+    this.setState({
+      currentMonths: currentMonths.reduceRight((newCurrentMonth, currentMonthValue, monthIndex) => {
+        if (monthIndex > index) {
+          newCurrentMonth.unshift(currentMonthValue);
+        } else if (monthIndex === index) {
+          newCurrentMonth.unshift(getPreviousMonth(currentMonthValue));
+        } else if (
+          isSameMonth(currentMonthValue, newCurrentMonth[0]) ||
+          currentMonthValue > newCurrentMonth[0]
+        ) {
+          newCurrentMonth.unshift(getPreviousMonth(newCurrentMonth[0]));
+        } else {
+          newCurrentMonth.unshift(currentMonthValue);
+        }
+        return newCurrentMonth;
+      }, []),
+    });
   };
 
   /**
-   * Handles click on the next month button.
+   * Handles click on the next month action.
+   * This method is safe with more than 2 months displayed
+   *
+   * @param index - the month display to plus
    */
-  handleNextMonthClick = () => {
-    const { currentDate } = this.state;
+  handleNextMonth = index => {
+    const { currentMonths } = this.state;
 
-    this.setState({ currentDate: getNextMonth(currentDate) });
+    this.setState({
+      currentMonths: currentMonths.reduce((newCurrentMonth, currentMonthValue, monthIndex) => {
+        if (monthIndex < index) {
+          newCurrentMonth.push(currentMonthValue);
+        } else if (monthIndex === index) {
+          newCurrentMonth.push(getNextMonth(currentMonthValue));
+        } else if (
+          newCurrentMonth.length > 0 &&
+          (isSameMonth(currentMonthValue, newCurrentMonth[newCurrentMonth.length - 1]) ||
+            currentMonthValue < newCurrentMonth[newCurrentMonth.length - 1])
+        ) {
+          newCurrentMonth.push(getNextMonth(newCurrentMonth[newCurrentMonth.length - 1]));
+        } else {
+          newCurrentMonth.push(currentMonthValue);
+        }
+        return newCurrentMonth;
+      }, []),
+    });
   };
 
-  render() {
-    const { className, locale, minDate, maxDate, numberOfMonthsToDisplay } = this.props;
-    const { currentDate, selected, startDate, endDate } = this.state;
+  /**
+   * Get selected Interval
+   * Take the date range selection
+   * and return as an interval
+   *
+   * @return {luxon.Interval}
+   */
+  handleSelectedInterval() {
+    const { startDate, endDate } = this.state;
+    const { onDateChanged } = this.props;
+    const isSelectedInterval = !!startDate && !!endDate;
 
-    const isAfterMinDate = !minDate || currentDate.startOf('month') > minDate.startOf('month');
-    const isBeforeMaxDate = !maxDate || currentDate.endOf('month') < maxDate.endOf('month');
+    if (!isSelectedInterval) {
+      return;
+    }
+
+    return onDateChanged(Interval.fromDateTimes(startDate, endDate));
+  }
+
+  /**
+   * Get selected
+   * Take the selected date
+   *
+   * @return {luxon.DateTime}
+   */
+  handleSelectedDate() {
+    const { selected } = this.state;
+    const { onDateChanged } = this.props;
+
+    return onDateChanged(selected);
+  }
+
+  render() {
+    const { className, locale, minDate, maxDate, displayOnlyInMonth } = this.props;
+    const { currentMonths, selected, startDate, endDate } = this.state;
 
     return (
       <div className={className}>
-        {[...Array(numberOfMonthsToDisplay).keys()].map(monthIndex => {
-          const stringifiedDate = currentDate
-            .plus({ month: monthIndex })
+        {currentMonths.map((currentMonthValue, monthIndex) => {
+          const stringifiedDate = currentMonthValue
             .setLocale(locale)
             .toLocaleString({ month: 'long', year: 'numeric' });
           return (
-            <Container key={monthIndex} numberOfMonthsToDisplay={numberOfMonthsToDisplay}>
+            <Container key={monthIndex} numberOfMonthsToDisplay={currentMonths.length}>
               <Header
                 title={stringifiedDate}
-                numberOfMonthsToDisplay={numberOfMonthsToDisplay}
                 monthIndex={monthIndex}
-                prev={this.handlePrevMonthClick}
-                next={this.handleNextMonthClick}
-                shouldDisablePrev={!isAfterMinDate}
-                shouldDisableNext={!isBeforeMaxDate}
+                prev={this.handlePrevMonth}
+                next={this.handleNextMonth}
+                disablePrev={minDate && currentMonthValue <= minDate.startOf('month')}
+                disableNext={maxDate && currentMonthValue.endOf('month') >= maxDate.endOf('month')}
               />
               <Weekdays locale={locale} />
               <Weeks
-                currentDate={currentDate.plus({ month: monthIndex })}
+                currentMonth={currentMonthValue}
                 selected={selected}
                 minDate={minDate}
                 maxDate={maxDate}
-                onDateClick={this.handleChange}
+                onDateClick={value => this.handleChange(value, monthIndex)}
                 startDate={startDate}
                 endDate={endDate}
+                displayOnlyInMonth={displayOnlyInMonth}
               />
             </Container>
           );
@@ -275,6 +343,11 @@ DatePicker.propTypes = {
    * Controlled selected date value
    */
   defaultValue: object,
+
+  /**
+   * Display only days in current month
+   */
+  displayOnlyInMonth: bool,
 
   /**
    * Locale used to display the weekday names
@@ -311,6 +384,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
   className: '',
   defaultValue: localDateTime,
+  displayOnlyInMonth: false,
   locale: 'en',
   minDate: null,
   maxDate: null,
