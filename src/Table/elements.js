@@ -73,7 +73,7 @@ export const THeader = styled.thead`
 export const TableHeaderCell = styled.th`
   position: relative;
   height: 4.4rem;
-  padding: 0 1.2rem;
+  padding: 0 1.2rem 0 2rem;
   box-sizing: border-box;
   vertical-align: middle;
   border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
@@ -250,6 +250,11 @@ export const RowHeader = styled.th`
     `}
 
   background-color: ${({ theme: { palette } }) => palette.white};
+`;
+
+export const RowHeaderContent = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const TextEllipsis = styled.div`
