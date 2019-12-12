@@ -10,6 +10,7 @@ export const Container = styled.div`
 
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
   color: ${({ theme: { palette } }) => palette.darkBlue};
+
   ${({ displayOnlyInMonth, shadowed }) =>
     displayOnlyInMonth &&
     shadowed &&
@@ -24,22 +25,22 @@ export const Container = styled.div`
       background: ${({ theme: { palette } }) => transparentize(0.86, palette.primary.default)};
     `}
 
-  ${({ shadowed, isInPath }) =>
+  ${({ shadowed, isInPath, isSelected, isStartEdge, isEndEdge }) =>
     shadowed &&
-    isInPath &&
+    (isInPath || isSelected || isStartEdge || isEndEdge) &&
     css`
       background: ${({ theme: { palette } }) => transparentize(0.66, palette.lightGrey)};
     `}
 
-  ${({ isStartEdge }) =>
-    isStartEdge &&
+  ${({ isStartEdge, isSelected }) =>
+    (isStartEdge || isSelected) &&
     css`
       border-top-left-radius: 2.8rem;
       border-bottom-left-radius: 2.8rem;
     `}
 
-  ${({ isEndEdge }) =>
-    isEndEdge &&
+  ${({ isEndEdge, isSelected }) =>
+    (isEndEdge || isSelected) &&
     css`
       border-top-right-radius: 2.8rem;
       border-bottom-right-radius: 2.8rem;

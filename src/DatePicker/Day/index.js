@@ -32,6 +32,7 @@ const Day = ({
     onClick={onClick}
     displayOnlyInMonth={displayOnlyInMonth}
     shadowed={shadowed}
+    isSelected={isSelected}
     isInPath={isInPath}
     isStartEdge={isStartEdge}
     isEndEdge={isEndEdge}

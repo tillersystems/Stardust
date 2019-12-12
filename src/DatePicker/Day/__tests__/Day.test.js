@@ -25,6 +25,18 @@ describe('Day', () => {
         <Day>15</Day>
         <Day shadowed>16</Day>
         <Day disabled>17</Day>
+        <Day shadowed isSelected>
+          18
+        </Day>
+        <Day shadowed isStartEdge>
+          19
+        </Day>
+        <Day shadowed isInPath>
+          20
+        </Day>
+        <Day shadowed isEndEdge>
+          21
+        </Day>
       </>,
     );
 

@@ -193,6 +193,25 @@ describe('<DatePicker />', () => {
 
       expect(expectedMonth).toBeInTheDocument();
     });
+
+    test('should go to the next month if a shadowed day in next month is selected', () => {
+      const { getByText, getAllByText } = render(
+        <DatePicker defaultValue={dateValue} numberOfMonthsToDisplay={1} />,
+      );
+
+      const monthNodes = [getByText(/July/)];
+
+      expect(monthNodes[0]).toBeInTheDocument();
+
+      const daySelected = getAllByText('1')[1]; // The third first of the day is the 1st August in second Month display
+
+      // Click on day
+      fireEvent.click(daySelected);
+
+      const NextMonthNodes = [getByText(/August/)];
+
+      expect(NextMonthNodes[0]).toBeInTheDocument();
+    });
   });
 
   describe('Range', () => {
@@ -378,7 +397,7 @@ describe('<DatePicker />', () => {
         expect(previouslySelectedDayNode).toHaveStyleRule('background', undefined);
       });
 
-      test('should go to the next month if a shadowed day is selected in the second calendar', () => {
+      test('should NOT go to the next month if a shadowed day is selected in the second calendar', () => {
         const { getByText, getAllByText } = render(
           <DatePicker defaultValue={dateValue} rangePicker numberOfMonthsToDisplay={2} />,
         );
@@ -393,7 +412,7 @@ describe('<DatePicker />', () => {
         // Click on day
         fireEvent.click(daySelected);
 
-        const NextMonthNodes = [getByText(/June/), getByText(/August/)];
+        const NextMonthNodes = [getByText(/June/), getByText(/July/)];
 
         expect(NextMonthNodes[0]).toBeInTheDocument();
         expect(NextMonthNodes[1]).toBeInTheDocument();

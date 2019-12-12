@@ -12,6 +12,26 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   padding-right: 0.8rem;
 }
 
+.c13 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c13:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c13:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,7 +98,7 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   color: hsl(206,23%,69%);
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,12 +124,12 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   user-select: none;
 }
 
-.c13:hover {
+.c14:hover {
   background: rgba(30,146,204,0.14);
 }
 
-.c13,
-.c13:hover {
+.c14,
+.c14:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -592,10 +612,10 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
         </div>
       </div>
       <div
-        class="c10"
+        class="c13"
       >
         <div
-          class="c13"
+          class="c14"
         >
           21
         </div>
@@ -752,6 +772,26 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   padding-right: 0.8rem;
 }
 
+.c13 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c13:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c13:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -818,7 +858,7 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   color: hsl(206,23%,69%);
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -844,12 +884,12 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   user-select: none;
 }
 
-.c13:hover {
+.c14:hover {
   background: rgba(30,146,204,0.14);
 }
 
-.c13,
-.c13:hover {
+.c14,
+.c14:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -1332,10 +1372,10 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
         </div>
       </div>
       <div
-        class="c10"
+        class="c13"
       >
         <div
-          class="c13"
+          class="c14"
         >
           21
         </div>

@@ -37,7 +37,7 @@ class DatePicker extends PureComponent {
      * DatePicker month(s) display is based upon currentDate and will start
      * from this to iterate through the months it has to display
      */
-    currentMonth: [localDateTime],
+    currentMonths: [localDateTime],
 
     /**
      * Selected Calendar date
@@ -66,14 +66,14 @@ class DatePicker extends PureComponent {
       // Always set the current date to the start of the interval.
       this.setState({
         selected: null,
-        currentMonth: this.getCurrentMonth(defaultValue.start, defaultValue.end),
+        currentMonths: this.getCurrentMonths(defaultValue.start, defaultValue.end),
         startDate: defaultValue.start,
         endDate: defaultValue.end,
       });
     } else {
       this.setState({
         selected: defaultValue,
-        currentMonth: this.getCurrentMonth(defaultValue, defaultValue),
+        currentMonths: this.getCurrentMonths(defaultValue, defaultValue),
         startDate: null,
         endDate: null,
       });
@@ -98,14 +98,14 @@ class DatePicker extends PureComponent {
       if (isInterval(defaultValue)) {
         this.setState({
           selected: null,
-          currentMonth: this.getCurrentMonth(defaultValue.start, defaultValue.end),
+          currentMonths: this.getCurrentMonths(defaultValue.start, defaultValue.end),
           startDate: defaultValue.start,
           endDate: defaultValue.end,
         });
       } else {
         this.setState({
           selected: defaultValue,
-          currentMonth: this.getCurrentMonth(defaultValue, defaultValue),
+          currentMonths: this.getCurrentMonths(defaultValue, defaultValue),
           startDate: null,
           endDate: null,
         });
@@ -118,12 +118,12 @@ class DatePicker extends PureComponent {
       const { selected, startDate, endDate } = this.state;
 
       this.setState({
-        currentMonth: this.getCurrentMonth(startDate || selected, endDate || selected),
+        currentMonths: this.getCurrentMonths(startDate || selected, endDate || selected),
       });
     }
   }
 
-  getCurrentMonth = (startDate, endDate) => {
+  getCurrentMonths = (startDate, endDate) => {
     const { numberOfMonthsToDisplay, minDate, maxDate } = this.props;
 
     const start = minMaxDate(startDate || DateTime.local(), minDate, maxDate);
@@ -146,15 +146,14 @@ class DatePicker extends PureComponent {
    */
   handleChange = (value, index) => {
     const { rangePicker } = this.props;
-    const { selected: previousValue, startDate, endDate, currentMonth } = this.state;
+    const { selected: previousValue, startDate, endDate, currentMonths } = this.state;
 
-    // We check whether value is in the next month (w.r.t. the whole calendar)
-    // or the previous month
-
-    if (isInNextMonth(value, currentMonth[index])) {
-      this.handleNextMonth(index);
-    } else if (isInPrevMonth(value, currentMonth[index])) {
-      this.handlePrevMonth(index);
+    if (currentMonths.length === 1 || !rangePicker) {
+      if (isInNextMonth(value, currentMonths[index])) {
+        this.handleNextMonth(index);
+      } else if (isInPrevMonth(value, currentMonths[index])) {
+        this.handlePrevMonth(index);
+      }
     }
 
     if (rangePicker) {
@@ -207,10 +206,10 @@ class DatePicker extends PureComponent {
    * @param index - the month display to minus
    */
   handlePrevMonth = index => {
-    const { currentMonth } = this.state;
+    const { currentMonths } = this.state;
 
     this.setState({
-      currentMonth: currentMonth.reduceRight((newCurrentMonth, currentMonthValue, monthIndex) => {
+      currentMonths: currentMonths.reduceRight((newCurrentMonth, currentMonthValue, monthIndex) => {
         if (monthIndex > index) {
           newCurrentMonth.unshift(currentMonthValue);
         } else if (monthIndex === index) {
@@ -235,10 +234,10 @@ class DatePicker extends PureComponent {
    * @param index - the month display to plus
    */
   handleNextMonth = index => {
-    const { currentMonth } = this.state;
+    const { currentMonths } = this.state;
 
     this.setState({
-      currentMonth: currentMonth.reduce((newCurrentMonth, currentMonthValue, monthIndex) => {
+      currentMonths: currentMonths.reduce((newCurrentMonth, currentMonthValue, monthIndex) => {
         if (monthIndex < index) {
           newCurrentMonth.push(currentMonthValue);
         } else if (monthIndex === index) {
@@ -291,16 +290,16 @@ class DatePicker extends PureComponent {
 
   render() {
     const { className, locale, minDate, maxDate, displayOnlyInMonth } = this.props;
-    const { currentMonth, selected, startDate, endDate } = this.state;
+    const { currentMonths, selected, startDate, endDate } = this.state;
 
     return (
       <div className={className}>
-        {currentMonth.map((currentMonthValue, monthIndex) => {
+        {currentMonths.map((currentMonthValue, monthIndex) => {
           const stringifiedDate = currentMonthValue
             .setLocale(locale)
             .toLocaleString({ month: 'long', year: 'numeric' });
           return (
-            <Container key={monthIndex} numberOfMonthsToDisplay={currentMonth.length}>
+            <Container key={monthIndex} numberOfMonthsToDisplay={currentMonths.length}>
               <Header
                 title={stringifiedDate}
                 monthIndex={monthIndex}

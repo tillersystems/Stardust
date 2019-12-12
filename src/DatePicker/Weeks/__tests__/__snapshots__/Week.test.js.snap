@@ -12,6 +12,26 @@ exports[`<Weeks /> should render without a problem 1`] = `
   padding-right: 0.8rem;
 }
 
+.c4 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  color: hsl(213,17%,20%);
+  border-top-left-radius: 2.8rem;
+  border-bottom-left-radius: 2.8rem;
+  border-top-right-radius: 2.8rem;
+  border-bottom-right-radius: 2.8rem;
+  cursor: pointer;
+}
+
+.c4:not(:nth-child(7n)) {
+  padding-right: 0.8rem;
+}
+
+.c4:not(:nth-child(7n)) {
+  padding-right: 0;
+  margin-right: 0.8rem;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,7 +98,7 @@ exports[`<Weeks /> should render without a problem 1`] = `
   background: rgba(30,146,204,0.14);
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,12 +124,12 @@ exports[`<Weeks /> should render without a problem 1`] = `
   user-select: none;
 }
 
-.c4:hover {
+.c5:hover {
   background: rgba(30,146,204,0.14);
 }
 
-.c4,
-.c4:hover {
+.c5,
+.c5:hover {
   color: hsl(0,100%,100%);
   background: hsl(200,74%,46%);
 }
@@ -308,10 +328,10 @@ exports[`<Weeks /> should render without a problem 1`] = `
     </div>
   </div>
   <div
-    class="c1"
+    class="c4"
   >
     <div
-      class="c4"
+      class="c5"
     >
       15
     </div>

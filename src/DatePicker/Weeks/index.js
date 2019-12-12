@@ -48,8 +48,7 @@ const Weeks = ({
           (!minDate || dateNormalized >= minDate.startOf('day')) &&
           (!maxDate || dateNormalized <= maxDate.startOf('day'));
 
-        const isSelected =
-          selected && isInMonth && isInRange && isSameDay(dateNormalized, selected);
+        const isSelected = selected && isInRange && isSameDay(dateNormalized, selected);
 
         const startOfDay = dateNormalized.startOf('day');
 
