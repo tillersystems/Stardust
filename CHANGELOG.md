@@ -1,3 +1,13 @@
+## [4.12.8](https://github.com/tillersystems/Stardust/compare/v4.12.7...v4.12.8) (2019-12-13)
+
+### Bug Fixes
+
+- **Table:** fix text/icon aligment ([#929](https://github.com/tillersystems/Stardust/issues/929)) ([88b173d](https://github.com/tillersystems/Stardust/commit/88b173d29bee4d08dabb1458f667327383d90d4b))
+
+### Features
+
+- **DatePicker:** independant months display + style lifting ([#928](https://github.com/tillersystems/Stardust/issues/928)) ([b3499ae](https://github.com/tillersystems/Stardust/commit/b3499ae9ee7245e23a95a3c0d27e2f99348d1db0))
+
 ## [4.12.7](https://github.com/tillersystems/Stardust/compare/v4.12.6...v4.12.7) (2019-12-09)
 
 ### Features
