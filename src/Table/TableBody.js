@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import compare from '../helpers/compare';
 import { Icon, Theme } from '..';
-import { Body, BodyRow, RowHeader, ChildRow, TextEllipsis } from './elements';
+import { Body, BodyRow, RowHeader, RowHeaderContent, ChildRow, TextEllipsis } from './elements';
 
 const TableBody = ({
   bodyRef,
@@ -73,15 +73,17 @@ const TableBody = ({
             {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
               isRowHeader ? (
                 <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${rowIndex}`}>
-                  {item.children && (
-                    <Icon
-                      name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
-                      color={Theme.palette.darkBlue}
-                      width="20px"
-                      height="20px"
-                    />
-                  )}
-                  <TextEllipsis>{value(item, key)}</TextEllipsis>
+                  <RowHeaderContent>
+                    {item.children && (
+                      <Icon
+                        name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+                        color={Theme.palette.darkBlue}
+                        width="20px"
+                        height="20px"
+                      />
+                    )}
+                    <TextEllipsis>{value(item, key)}</TextEllipsis>
+                  </RowHeaderContent>
                 </RowHeader>
               ) : (
                 <td key={`row-${rowIndex}-column-${columnIndex}`} align={align}>
@@ -111,9 +113,11 @@ const TableBody = ({
                             key={`row-header-${rowIndex}-${childRowIndex}`}
                             isChild
                           >
-                            <TextEllipsis>
-                              {value(childrenItem, `${key}-${childrenKey}`)}
-                            </TextEllipsis>
+                            <RowHeaderContent>
+                              <TextEllipsis>
+                                {value(childrenItem, `${key}-${childrenKey}`)}
+                              </TextEllipsis>
+                            </RowHeaderContent>
                           </RowHeader>
                         ) : (
                           <td
