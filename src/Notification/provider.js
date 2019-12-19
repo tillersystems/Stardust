@@ -46,7 +46,7 @@ export const NotificationProvider = ({
       const exists = notifications.find(n => n.key === options.key);
       if (!exists) dispatch({ type: ADD_NOTIFICATION, component, options });
     },
-    [notifications],
+    [notifications, state.options],
   );
 
   /**
