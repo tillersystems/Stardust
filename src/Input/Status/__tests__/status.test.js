@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Status from '..';
-import Theme from '../../../Theme';
 
 describe('<Status />', () => {
   test('should render without a problem', () => {
@@ -20,11 +19,5 @@ describe('<Status />', () => {
     const { container } = render(<Status status="loading" />);
 
     expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('should have different background when focused & have a search status', () => {
-    const { container } = render(<Status status="search" hasFocus />);
-
-    expect(container.firstChild).toHaveStyleRule('background', Theme.palette.primary.default);
   });
 });
