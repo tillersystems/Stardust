@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import Popover from '../Popover';
 import SearchBar from './SearchBar';
 import { Header, HeaderContent, Menu, MenuItem, SearchInputContainer } from './elements';
-import { animationVariants } from './animation';
 import { offset } from './utils';
 
 /**
@@ -202,7 +201,6 @@ class Dropdown extends PureComponent {
     return (
       <div ref={this.dropdown} className={className} data-testid="dropdown">
         <Popover
-          animationVariants={animationVariants}
           content={
             <Menu>
               {searchable && (
