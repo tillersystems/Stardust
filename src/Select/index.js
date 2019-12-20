@@ -7,7 +7,6 @@ import styled, { css } from 'styled-components';
 import { Popover } from '..';
 import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
-import { animationVariants } from './animation';
 import { offset } from './utils';
 
 /**
@@ -241,7 +240,6 @@ class Select extends PureComponent {
     return (
       <div ref={this.select} className={className}>
         <Popover
-          animationVariants={animationVariants}
           content={
             <Menu>
               {Children.map(children, child => (
