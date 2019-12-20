@@ -12,9 +12,9 @@ import DropdownReadme from '../README.md';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 const itemCss = css`
-  padding: 0.9rem 1.2rem;
+  padding: 0.9rem 1.6rem;
   &:first-child {
-    padding-top: 1.2rem;
+    padding-top: 1.6rem;
   }
   ${({ searchable }) =>
     searchable &&

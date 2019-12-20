@@ -82,8 +82,6 @@ export const MenuItem = styled.li`
 `;
 
 export const SearchInputContainer = styled(MenuItem)`
-  padding: 0;
-  &:first-of-type {
-    padding: 0;
-  }
+  padding: 1.6rem;
+  padding-bottom: 0.8rem;
 `;

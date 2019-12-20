@@ -1,10 +1,8 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import TextInput from '../Input/TextInput';
-
-const { func, string } = PropTypes;
 
 /**
  * SearchBar
@@ -12,7 +10,6 @@ const { func, string } = PropTypes;
  * This component is in charge of displaying
  * a search bar
  *
- * @param {string} children // Anything that can be rendered: numbers, strings, elements or an array (or fragment).
  * @param {string} className // Add a text aside in the select next the selected value.
  * @param {function} onChange // Callback function called when text input change.
  * @param {string} placeholder // Input placeholder.
@@ -21,56 +18,47 @@ const { func, string } = PropTypes;
  * @return {jsx}
  */
 
-class SearchBar extends PureComponent {
-  /** Prop types. */
-  static propTypes = {
-    className: string,
-    onChange: func.isRequired,
-    placeholder: string,
-    value: string,
-  };
+const SearchBar = ({ className, placeholder, value, onChange }) => (
+  <div className={className}>
+    <TextInput
+      ghost
+      data-test="search-input"
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      fluid
+      search
+    />
+  </div>
+);
 
-  /** Default props. */
-  static defaultProps = {
-    className: '',
-    placeholder: '',
-    value: '',
-  };
+const { func, string } = PropTypes;
+/** Prop types. */
+SearchBar.propTypes = {
+  className: string,
+  onChange: func.isRequired,
+  placeholder: string,
+  value: string,
+};
 
-  /**
-   * handleChange
-   */
-  handleChange = searchTerm => {
-    const { onChange } = this.props;
-
-    onChange && onChange(searchTerm);
-  };
-
-  /**
-   * Renders the component.
-   *
-   * @return {jsx}
-   */
-  render() {
-    const { className, placeholder, value } = this.props;
-
-    return (
-      <div className={className}>
-        <TextInput
-          ghost
-          data-test="search-input"
-          value={value}
-          onChange={this.handleChange}
-          placeholder={placeholder}
-          fluid
-          search
-        />
-      </div>
-    );
-  }
-}
+/** Default props. */
+SearchBar.defaultProps = {
+  className: '',
+  placeholder: '',
+  value: '',
+};
 
 export default styled(SearchBar)`
   width: 100%;
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
+  border-radius: 0.4rem;
+  & > div {
+    height: 3.2rem;
+  }
+  & input {
+    font-size: 1.2rem;
+    &::placeholder {
+      font-size: 1.2rem;
+    }
+  }
 `;
