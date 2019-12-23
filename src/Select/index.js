@@ -7,7 +7,6 @@ import styled, { css } from 'styled-components';
 import { Popover } from '..';
 import { Header, HeaderContent, Menu, MenuItem } from './elements';
 import Option from './Option';
-import { offset } from './utils';
 
 /**
  * Select component displays a button as header holding one value at a time amongst
@@ -27,7 +26,6 @@ class Select extends PureComponent {
   state = {
     displayMenu: false,
     value: null,
-    portalPosition: { left: '0px', top: '0px' },
   };
 
   /**
@@ -53,11 +51,6 @@ class Select extends PureComponent {
     } else if (placeholder === undefined) {
       this.initializeValue();
     }
-
-    // listen for resize and mousewheel to handle portal position
-    setTimeout(this.updatePosition.bind(this), 0);
-    window.addEventListener('resize', this.updatePosition.bind(this));
-    document.body.addEventListener('mousewheel', this.updatePosition.bind(this));
   }
 
   /**
@@ -70,12 +63,6 @@ class Select extends PureComponent {
     if (value !== prevProps.value) {
       this.setState({ value });
     }
-  }
-
-  componentWillUnmount() {
-    // will remove resize and mousewheel event on dismount
-    window.removeEventListener('resize', this.updatePosition.bind(this));
-    document.body.removeEventListener('mousewheel', this.updatePosition.bind(this));
   }
 
   /**
@@ -187,8 +174,6 @@ class Select extends PureComponent {
     const { displayMenu } = this.state;
     const { onToggle } = this.props;
 
-    this.updatePosition();
-
     this.setState(
       prevState => ({
         displayMenu: !prevState.displayMenu,
@@ -204,15 +189,6 @@ class Select extends PureComponent {
 
     this.setState({ contentWidth: `${contentWidth}px` });
   };
-
-  /**
-   * Save current select position in state for portal
-   */
-  updatePosition() {
-    if (this.select.current) {
-      this.setState({ portalPosition: offset(this.select.current) });
-    }
-  }
 
   static Option = Option;
 
@@ -233,7 +209,7 @@ class Select extends PureComponent {
       triggerWrapperCss,
       usePortal,
     } = this.props;
-    const { contentWidth, displayMenu, portalPosition } = this.state;
+    const { contentWidth, displayMenu } = this.state;
     const hasPlaceholder = placeholder !== undefined;
     const value = this.getControllableValue('value');
 
@@ -258,7 +234,6 @@ class Select extends PureComponent {
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
-          portalPosition={portalPosition}
           triggerRef={this.triggerRef}
           triggerWrapperCss={triggerWrapperCss}
           contentWrapperStyle={{ marginTop: '4rem' }}
