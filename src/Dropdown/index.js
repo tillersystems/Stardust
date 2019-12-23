@@ -6,8 +6,6 @@ import styled from 'styled-components';
 
 import Popover from '../Popover';
 import { Header, HeaderContent } from './elements';
-import { animationVariants } from './animation';
-import { offset } from './utils';
 import OptionsList from '../OptionsList';
 
 /**
@@ -33,19 +31,6 @@ class Dropdown extends PureComponent {
   constructor(props) {
     super(props);
     this.dropdown = React.createRef();
-  }
-
-  componentDidMount() {
-    // listen for resize and mousewheel to handle portal position
-    setTimeout(this.updatePosition.bind(this), 0);
-    window.addEventListener('resize', this.updatePosition.bind(this));
-    document.body.addEventListener('mousewheel', this.updatePosition.bind(this));
-  }
-
-  componentWillUnmount() {
-    // will remove resize and mousewheel event on dismount
-    window.removeEventListener('resize', this.updatePosition.bind(this));
-    document.body.removeEventListener('mousewheel', this.updatePosition.bind(this));
   }
 
   /**
@@ -122,8 +107,6 @@ class Dropdown extends PureComponent {
     const displayMenu = this.getControllableValue('displayMenu');
     const { onToggle } = this.props;
 
-    this.updatePosition();
-
     if (this.isControlled('displayMenu')) {
       onToggle && onToggle(event);
     } else {
@@ -154,15 +137,6 @@ class Dropdown extends PureComponent {
   };
 
   /**
-   * Save current dropdown position in state for portal
-   */
-  updatePosition() {
-    if (this.dropdown.current) {
-      this.setState({ portalPosition: offset(this.dropdown.current) });
-    }
-  }
-
-  /**
    * Renders the component.
    *
    * @return {jsx}
@@ -178,61 +152,19 @@ class Dropdown extends PureComponent {
       usePortal,
       ...listProps
     } = this.props;
-    const { contentWidth, displayMenu: displayMenuState, portalPosition } = this.state;
+    const { contentWidth, displayMenu: displayMenuState } = this.state;
     const { displayMenu: displayMenuProp } = this.props;
     const displayMenu = this.isControlled('displayMenu') ? displayMenuProp : displayMenuState;
 
     return (
       <div ref={this.dropdown} className={className} data-testid="dropdown">
         <Popover
-<<<<<<< HEAD
-          content={
-            <Menu>
-              {searchable && (
-                <SearchInputContainer>
-                  <SearchBar
-                    placeholder={searchBarPlaceholder}
-                    onChange={this.handleSearch}
-                    value={searchKeyword}
-                  />
-                </SearchInputContainer>
-              )}
-
-              {searchable &&
-                (FilteredItems.length !== 0
-                  ? FilteredItems.map(child => (
-                      <MenuItem
-                        key={child.key}
-                        role="menuitem"
-                        css={itemCss}
-                        searchable={searchable}
-                      >
-                        {child}
-                      </MenuItem>
-                    ))
-                  : noResultLabel && (
-                      <MenuItem role="menuitem" css={itemCss}>
-                        {noResultLabel}
-                      </MenuItem>
-                    ))}
-              {!searchable &&
-                Children.map(children, child => (
-                  <MenuItem key={child} role="menuitem" css={itemCss}>
-                    {child}
-                  </MenuItem>
-                ))}
-            </Menu>
-          }
-=======
-          animationVariants={animationVariants}
           content={children || <OptionsList {...listProps} />}
->>>>>>> f4bae39... feat(Dropdown): can render an OptionsList instead of children
           contentRef={contentRef}
-          contentWrapperStyle={{ marginTop: '4rem' }}
+          contentWrapperStyle={{ originX: '50%', originY: '0%', marginTop: '4rem' }}
           isOpen={displayMenu}
           modifiers={modifiers}
           onClickOutside={this.onClickOutside}
-          portalPosition={portalPosition}
           triggerRef={this.triggerRef}
           usePortal={usePortal}
           width={contentWidth}
