@@ -1,13 +1,14 @@
 /* eslint-disable react/require-default-props */
 
-import React, { Children, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Popover from '../Popover';
-import SearchBar from './SearchBar';
-import { Header, HeaderContent, Menu, MenuItem, SearchInputContainer } from './elements';
+import { Header, HeaderContent } from './elements';
+import { animationVariants } from './animation';
 import { offset } from './utils';
+import OptionsList from '../OptionsList';
 
 /**
  * A Dropdown displays content through its children prop that must be components wrapping text.
@@ -172,35 +173,19 @@ class Dropdown extends PureComponent {
       className,
       contentRef,
       headerStyle,
-      itemCss,
       modifiers,
-      noResultLabel,
-      searchable,
-      searchBarPlaceholder,
       title,
       usePortal,
+      ...listProps
     } = this.props;
-    const {
-      contentWidth,
-      displayMenu: displayMenuState,
-      portalPosition,
-      searchKeyword,
-    } = this.state;
+    const { contentWidth, displayMenu: displayMenuState, portalPosition } = this.state;
     const { displayMenu: displayMenuProp } = this.props;
     const displayMenu = this.isControlled('displayMenu') ? displayMenuProp : displayMenuState;
-
-    // Filter items based on search key word
-    // TODO: when need to refactor this later, children may have some children
-    // we need to filter recursively. - @Thomas -
-    const FilteredItems = searchable
-      ? Children.toArray(children).filter(({ props: { children } }) =>
-          children.toLowerCase().includes(searchKeyword.toLowerCase()),
-        )
-      : [];
 
     return (
       <div ref={this.dropdown} className={className} data-testid="dropdown">
         <Popover
+<<<<<<< HEAD
           content={
             <Menu>
               {searchable && (
@@ -238,6 +223,10 @@ class Dropdown extends PureComponent {
                 ))}
             </Menu>
           }
+=======
+          animationVariants={animationVariants}
+          content={children || <OptionsList {...listProps} />}
+>>>>>>> f4bae39... feat(Dropdown): can render an OptionsList instead of children
           contentRef={contentRef}
           contentWrapperStyle={{ marginTop: '4rem' }}
           isOpen={displayMenu}
@@ -263,7 +252,7 @@ class Dropdown extends PureComponent {
   }
 }
 
-const { array, bool, func, object, node, string } = PropTypes;
+const { bool, func, object, node, string } = PropTypes;
 
 /**
  *
@@ -273,7 +262,7 @@ Dropdown.propTypes = {
   /**
    * Anything that can be rendered: numbers, strings, elements or an array (or fragment)
    */
-  children: node.isRequired,
+  children: node,
 
   /**
    * ClassName needed by styled components
@@ -304,9 +293,9 @@ Dropdown.propTypes = {
   height: string,
 
   /**
-   * CSS provided to each item of the dropdown. Must use `css` method from styled-components
+   * OptionsList props, if innerComponent is null, we will render the children
    */
-  itemCss: array,
+  innerComponent: object,
 
   /**
    * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
@@ -314,24 +303,9 @@ Dropdown.propTypes = {
   modifiers: object,
 
   /**
-   * Label to display when no result is found
-   */
-  noResultLabel: string,
-
-  /**
    * Callback called when Dropdown is toggled
    */
   onToggle: func,
-
-  /**
-   * Whether the dropdown is searchable
-   */
-  searchable: bool,
-
-  /**
-   * SearchBar input placeholder
-   */
-  searchBarPlaceholder: string,
 
   /**
    * Dropdown title
@@ -348,15 +322,13 @@ Dropdown.propTypes = {
  * Default props
  */
 Dropdown.defaultProps = {
+  children: null,
   className: '',
   headerStyle: null,
   height: '3.8rem',
-  itemCss: null,
+  innerComponent: null,
   modifiers: null,
-  noResultLabel: null,
   onToggle: () => {},
-  searchable: false,
-  searchBarPlaceholder: '',
   usePortal: false,
 };
 

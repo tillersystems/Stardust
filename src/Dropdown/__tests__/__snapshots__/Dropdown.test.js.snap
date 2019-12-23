@@ -19,7 +19,7 @@ exports[`<Dropdown /> should render without a problem 1`] = `
   height: 100%;
   width: 100%;
   position: relative;
-  padding: 0 1.2rem;
+  padding: 0 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: 1.4rem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
-import { css } from 'styled-components';
+import { act } from 'react-dom/test-utils';
 
 import Dropdown from '..';
 
@@ -47,8 +47,10 @@ describe('<Dropdown />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    // Open Dropdown
-    fireEvent.click(button);
+    act(() => {
+      // Open Dropdown
+      fireEvent.click(button);
+    });
 
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -60,8 +62,10 @@ describe('<Dropdown />', () => {
     expect(ItemNode[1]).toBeInTheDocument();
     expect(ItemNode[2]).toBeInTheDocument();
 
-    // Close Dropdown
-    fireEvent.click(button);
+    act(() => {
+      // Close Dropdown
+      fireEvent.click(button);
+    });
 
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -72,102 +76,39 @@ describe('<Dropdown />', () => {
     expect(ItemNodeRemoved[2]).toBeUndefined();
   });
 
-  test('should filter items', () => {
-    const props = { title: 'title', searchable: true, searchBarPlaceholder: 'search' };
-    const { container, queryAllByText, getByText, getByPlaceholderText } = render(
-      <Dropdown {...props}>
-        <div>Item1</div>
-        <div>Item2</div>
-        <div>Item3</div>
+  test('should render children', () => {
+    const { container, getByText } = render(
+      <Dropdown title="Title">
+        <div>Hello !</div>
       </Dropdown>,
     );
 
-    const button = container.querySelector('button');
+    act(() => {
+      const button = container.querySelector('button');
+      fireEvent.click(button);
+    });
 
-    expect(button).toHaveAttribute('aria-expanded', 'false');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    // Open Dropdown
-    fireEvent.click(button);
-
-    expect(button).toHaveAttribute('aria-expanded', 'true');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    // Type Item2 in search input
-    fireEvent.change(getByPlaceholderText('search'), { target: { value: 'Item2' } });
-
-    const ItemNode = queryAllByText(/Item/);
-    const Item2Node = getByText('Item2');
-
-    expect(ItemNode).toHaveLength(1);
-    expect(Item2Node).toBeInTheDocument();
+    const oberkampf = getByText(/hello !/i);
+    expect(oberkampf).toBeInTheDocument();
   });
 
-  test('should return Not Found if not item found', () => {
-    const props = {
-      title: 'title',
-      searchable: true,
-      searchBarPlaceholder: 'search',
-      noResultLabel: 'Not Found',
-    };
-    const { container, queryAllByText, getByText, getByPlaceholderText } = render(
-      <Dropdown {...props}>
-        <div>Item1</div>
-        <div>Item2</div>
-        <div>Item3</div>
-      </Dropdown>,
+  test('should render an OptionsList if no children', () => {
+    const options = [
+      { value: 'street-bangkok-st-louis', label: 'Street Bangkok St louis', disabled: false },
+      { value: 'street-bangkok-st-michel', label: 'Street Bangkok St Michel', disabled: false },
+      { value: 'street-bangkok-oberkampf', label: 'Street Bangkok Oberkampf', disabled: false },
+    ];
+
+    const { container, getByText } = render(
+      <Dropdown allowMultiple options={options} title="Title" values={[]} />,
     );
 
-    const button = container.querySelector('button');
+    act(() => {
+      const button = container.querySelector('button');
+      fireEvent.click(button);
+    });
 
-    expect(button).toHaveAttribute('aria-expanded', 'false');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    // Open Dropdown
-    fireEvent.click(button);
-
-    expect(button).toHaveAttribute('aria-expanded', 'true');
-    expect(button).toHaveAttribute('aria-haspopup', 'true');
-
-    const SearchInput = getByPlaceholderText(props.searchBarPlaceholder);
-
-    // Type Item2 in search input
-    fireEvent.change(SearchInput, { target: { value: 'qwerty' } });
-
-    const NotFoundNode = getByText(props.noResultLabel);
-    const ItemNode = queryAllByText(/Item/);
-
-    expect(NotFoundNode).toBeInTheDocument();
-    expect(ItemNode[0]).toBeUndefined();
-    expect(ItemNode[1]).toBeUndefined();
-    expect(ItemNode[2]).toBeUndefined();
-  });
-
-  test('should have expected custom style on each item', () => {
-    const props = {
-      title: 'title',
-      itemCss: css`
-        padding: 0.9rem 1.2rem;
-        &:first-child {
-          padding-top: 1.8rem;
-        }
-        &:last-child {
-          padding-bottom: 1.8rem;
-        }
-      `,
-    };
-    const { container, getAllByRole } = render(
-      <Dropdown {...props}>
-        <div>Item1</div>
-        <div>Item2</div>
-        <div>Item3</div>
-      </Dropdown>,
-    );
-    const button = container.querySelector('button');
-    fireEvent.click(button);
-
-    const [itemNode] = getAllByRole('menuitem');
-
-    expect(itemNode).toHaveStyleRule('padding', '0.9rem 1.2rem');
+    const oberkampf = getByText(/oberkampf/i);
+    expect(oberkampf).toBeInTheDocument();
   });
 });

@@ -30,6 +30,7 @@ The trigger is a button displaying text provided by the prop `title`.
 | `searchBarPlaceholder` |    -     |  `string`  |     `''`     |                                                     SearchBar input placeholder                                                      |
 | `title`                |    \*    |   `node`   |              |                                                            Dropdown title                                                            |
 | `usePortal`            |    -     |   `bool`   |   `false`    |                                                   Display the content on a portal                                                    |
+| `...listProps`         |    -     |  `object`  |   `false`    |                               Dropdown accept `OptionsList` props to render a list instead of children                               |
 
 ### Example
 
@@ -37,30 +38,28 @@ The trigger is a button displaying text provided by the prop `title`.
 import { Dropdown } from '@tillersystems/stardust';
 
 render() {
+  // using children
   return (
-    <Dropdown title="Filter by" itemCss={css`padding: 0.9rem 1.2rem;`}>
-      <CheckBox
-        checked={state.color}
-        id="color"
-        onChange={this.onChange}
-      >
-        Color
-      </CheckBox>
-      <CheckBox
-        checked={state.name}
-        id="mame"
-        onChange={this.onChange}
-      >
-        Name
-      </CheckBox>
-      <CheckBox
-        checked={state.size}
-        id="size"
-        onChange={this.onChange}
-      >
-        Size
-      </CheckBox>
+    <Dropdown title="Filter by">
+      <div>
+        children
+      </div>
     </Dropdown>
+  );
+
+  // passing OptionsList props without children
+  return (
+    <Dropdown
+      title="Filter by"
+      // OptionsList props below...
+      allowMultiple
+      searchMethod={searchMethod}
+      onChange={onChange}
+      options={options}
+      searchBarPlaceholder={SearchBarPlaceholder}
+      noResultLabel={NoResultLabel}
+      values={state.selectedStores}
+      />
   );
 }
 ```
