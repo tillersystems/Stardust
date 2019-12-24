@@ -2,27 +2,16 @@ import styled, { css } from 'styled-components';
 import { transparentize } from 'polished';
 import breakpoint from 'styled-components-breakpoint';
 
-const borderRight = height => css`
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    /*
-    ** If we use a percentage size on the pseudo element and a fixed height on the element,
-    ** it will lead to an etrange behaviour on Safari and shrink the element height.
-    ** To avoid this behaviour here we need to set a height to the border when a height is set to the element.
-    */
-    height: ${height ? height : '100%'};
-    border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
-  }
-`;
+const ROW_PADDING_H = 2; // in rem
+const TABLE_CELL_PADDING_H = 1.2; // in rem
+const TABLE_CELL_INDENT = 2; // in rem
 
 // Table
 export const TableElement = styled.table`
   min-width: 100%;
   border-spacing: 0;
   position: relative;
+
   ${breakpoint('xs', 'sm')`
     ${({ colsDef }) =>
       colsDef &&
@@ -40,140 +29,19 @@ export const TableElement = styled.table`
 `;
 
 export const Row = styled.tr`
-  border-top: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+  position: relative;
   background: ${({ theme: { palette } }) => palette.white};
-  &:last-child {
-    border-bottom: 0;
-  }
-  &:first-child {
-    border-top: 0;
-  }
-`;
 
-// Table Header
-export const THeader = styled.thead`
-  font-size: ${({
-    theme: {
-      fonts: { size },
-    },
-  }) => size.default};
-  font-weight: ${({
-    theme: {
-      fonts: { weight },
-    },
-  }) => weight.thick};
-  line-height: 1.8rem;
-
-  text-transform: uppercase;
-
-  color: ${({ theme: { palette } }) => palette.darkGrey};
-`;
-
-export const TableHeaderCell = styled.th`
-  position: relative;
-  height: 4.4rem;
-  padding: 0 1.2rem 0 2rem;
-  box-sizing: border-box;
-  vertical-align: middle;
-  border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
-  background-color: ${({ theme: { palette } }) => palette.white};
-  white-space: nowrap;
-  text-align: ${({ align }) => align || 'left'};
-
-  &:last-child {
-    padding-right: 2rem;
-    padding-left: 1.2rem;
+  & > *:first-child {
+    padding-left: ${({ depth }) => `${ROW_PADDING_H + depth * TABLE_CELL_INDENT}rem`};
   }
 
-  ${({ isScrollable }) =>
-    isScrollable &&
-    css`
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    `}
-
-  ${({ isSortable }) =>
-    isSortable &&
-    css`
-      cursor: pointer;
-    `}
-
-  ${({ isRowHeader }) =>
-    isRowHeader &&
-    css`
-      padding-left: 2rem;
-      padding-right: 1.2rem;
-      z-index: 2;
-      left: 0;
-      ${({ isScrollable }) => isScrollable && borderRight('4.4rem')}
-    `}
-
-
-  ${breakpoint('xs', 'sm')`
-    width: 33%;
-    overflow:hidden;
-    text-overflow: ellipsis;
-
-    ${({ isRowHeader }) =>
-      isRowHeader &&
-      css`
-        width: 67%;
-      `}
-  `};
-`;
-
-export const HeaderLabel = styled.span`
-  margin-right: 0.8rem;
-  user-select: none;
-`;
-
-// Table Body
-export const Body = styled.tbody`
-  tr:not(:last-child) {
-    td {
-      border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
-    }
-    th {
-      border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
-    }
+  & > *:last-child {
+    padding-right: ${ROW_PADDING_H}rem;
   }
-  td {
-    height: 5.2rem;
-    padding: 0 1.2rem;
-    white-space: nowrap;
-    vertical-align: middle;
 
-    font-feature-settings: 'tnum';
-
-    ${({ colsLength }) =>
-      colsLength &&
-      css`
-        width: calc(100% / ${colsLength});
-      `};
-    box-sizing: border-box;
-
-    ${breakpoint('xs', 'sm')`
-      width: 33%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    `};
-
-    &:first-child {
-      padding-left: 2rem;
-    }
-    &:last-child {
-      padding-right: 2.2rem;
-    }
-  }
-`;
-
-export const ChildRow = styled(Row)`
-  position: relative;
-
-  ${({ hasPointerCursor }) =>
-    hasPointerCursor &&
+  ${({ isClickable }) =>
+    isClickable &&
     css`
       cursor: pointer;
     `};
@@ -197,10 +65,6 @@ export const ChildRow = styled(Row)`
         }
       }
     `}
-`;
-
-export const BodyRow = styled(ChildRow)`
-  font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
 
   ${({ isUnfolded }) =>
     isUnfolded &&
@@ -213,43 +77,153 @@ export const BodyRow = styled(ChildRow)`
     `};
 `;
 
-export const RowHeader = styled.th`
-  height: 5.2rem;
+// Table Header
+export const THeader = styled.thead`
+  font-size: ${({
+    theme: {
+      fonts: { size },
+    },
+  }) => size.default};
+  font-weight: ${({
+    theme: {
+      fonts: { weight },
+    },
+  }) => weight.thick};
 
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  color: ${({ theme: { palette } }) => palette.darkGrey};
+`;
+
+export const TableHeaderCell = styled.th`
+  position: relative;
+  height: 4.4rem;
+  padding: 0 ${TABLE_CELL_PADDING_H}rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+  background-color: ${({ theme: { palette } }) => palette.white};
+  white-space: nowrap;
+  text-align: ${({ align }) => align || 'left'};
+
+  ${({ isScrollable }) =>
+    isScrollable &&
+    css`
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    `}
+
+  ${({ isSortable }) =>
+    isSortable &&
+    css`
+      cursor: pointer;
+    `}
+
+  ${({ isRowHeader }) =>
+    isRowHeader &&
+    css`
+      z-index: 2;
+      left: 0;
+      border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
+    `}
+
+
+  ${breakpoint('xs', 'sm')`
+    width: 33%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+
+    ${({ isRowHeader }) =>
+      isRowHeader &&
+      css`
+        width: 67%;
+      `}
+  `};
+`;
+
+export const HeaderLabel = styled.span`
+  margin-right: 0.8rem;
+  user-select: none;
+`;
+
+// Table Body
+export const Body = styled.tbody`
+  td,
+  th {
+    border-bottom: 1px solid ${({ theme: { palette } }) => palette.veryLightBlue};
+  }
+
+  tr:last-child td,
+  tr:last-child th {
+    border-bottom: 0;
+  }
+
+  td,
+  th {
+    height: 5.2rem;
+    padding: 0 1.2rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-feature-settings: 'tnum';
+
+    ${({ colsLength }) =>
+      colsLength &&
+      css`
+        width: calc(100% / ${colsLength});
+      `};
+
+    ${breakpoint('xs', 'sm')`
+      width: 33%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    `};
+  }
+`;
+
+export const RowHeader = styled.th`
+ 
   /* Avoid cell to grow when the cell's text overflow */
   max-width: 30rem;
   min-width: 20rem;
-  ${breakpoint('xs', 'sm')`
-    width: 67%;
-    min-width: 0;
-    max-width: none;
-    overflow:hidden;
-  `};
+
   white-space: nowrap;
   box-sizing: border-box;
+
+
+  text-align: ${({ align }) => align || 'left'};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 1.2rem 0 2rem;
+  background-color: ${({ theme: { palette } }) => palette.white};
+  border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
+
+  ${({
+    theme: {
+      fonts: { weight },
+    },
+    hasChildren,
+  }) =>
+    hasChildren &&
+    css`
+      font-weight: ${weight.thick};
+    `}
 
   ${({ isScrollable }) =>
     isScrollable &&
     css`
       position: sticky;
       left: 0;
-      ${borderRight('5.2rem')}
     `}
 
-  text-align: ${({ align }) => align || 'left'};
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-
-  padding: 0 1.2rem 0 2rem;
-
-  ${({ isChild }) =>
-    isChild &&
-    css`
-      padding-left: 4rem;
-    `}
-
-  background-color: ${({ theme: { palette } }) => palette.white};
+  ${breakpoint('xs', 'sm')`
+    width: 67%;
+    min-width: 0;
+    max-width: none;
+    overflow:hidden;
+  `};
 `;
 
 export const RowHeaderContent = styled.div`
@@ -272,19 +246,16 @@ export const Footer = styled.tfoot`
 
   text-transform: uppercase;
 
+  th,
   td {
     font-feature-settings: 'tnum';
     box-sizing: border-box;
-  }
-
-  th,
-  td {
-    ${({ isScrollable }) =>
-      isScrollable &&
-      css`
-        bottom: 0;
-        position: sticky;
-      `}
+    height: 5.2rem;
+    white-space: nowrap;
+    padding: 0 1.2rem;
+    background-color: ${({ theme: { palette } }) => palette.white};
+    color: ${({ theme: { palette } }) => palette.primary.default};
+    font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
 
     &:after {
       content: '';
@@ -296,29 +267,28 @@ export const Footer = styled.tfoot`
       box-sizing: border-box;
     }
 
-    height: 5.2rem;
+    ${({ isScrollable }) =>
+      isScrollable &&
+      css`
+        bottom: 0;
+        position: sticky;
+      `}
+  }
 
-    padding: 0 1.2rem;
-    background-color: ${({ theme: { palette } }) => palette.white};
-
-    color: ${({ theme: { palette } }) => palette.primary.default};
-    font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
+  td:last-of-type {
+    padding: 0 2rem 0 1.2rem;
   }
 
   th {
+    padding: 0 1.2rem 0 2rem;
+
     ${({ isScrollable }) =>
       isScrollable &&
       css`
         left: 0;
         z-index: 1;
-        ${borderRight('5.2rem')}
+        border-right: 1px dotted ${({ theme: { palette } }) => palette.veryLightBlue};
       `}
-
-    padding: 0 1.2rem 0 2rem;
-  }
-
-  td:last-of-type {
-    padding: 0 2rem 0 1.2rem;
   }
 
   ${({ isHoverable }) =>
@@ -335,6 +305,7 @@ export const Footer = styled.tfoot`
 
 // Table Container
 export const Container = styled.div`
+  background: ${({ theme: { palette } }) => palette.white};
   height: ${({ containerHeight }) => containerHeight};
   ${({ isScrollable }) =>
     isScrollable &&

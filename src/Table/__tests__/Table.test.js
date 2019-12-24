@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent } from '@testing-library/react';
+import { act, fireEvent } from '@testing-library/react';
 
 import Table from '..';
 import Theme from '../../Theme';
@@ -150,8 +150,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
 
-    // Click on the the dish node
-    fireEvent.click(dishNode);
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(dishNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -169,8 +171,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent('15.00 €');
 
-    // Click on the the dish node
-    fireEvent.click(priceNode);
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(priceNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -200,8 +204,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent('9.00 %');
 
-    // Click on the the tax node
-    fireEvent.click(taxNode);
+    act(() => {
+      // Click on the the tax node
+      fireEvent.click(taxNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -237,7 +243,9 @@ describe('<Table />', () => {
 
     expect(sortedBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
 
-    fireEvent.mouseOver(sortedBodyRows[0]);
+    act(() => {
+      fireEvent.mouseOver(sortedBodyRows[0]);
+    });
 
     const tartareRow = getByText(/tartare de boeuf/i);
 
@@ -288,7 +296,9 @@ describe('<Table />', () => {
 
     const [row] = getAllByTestId('body-row');
 
-    fireEvent.click(row);
+    act(() => {
+      fireEvent.click(row);
+    });
 
     const children = queryAllByText(/child/i);
     expect(children).toHaveLength(2);
@@ -301,7 +311,72 @@ describe('<Table />', () => {
       },
     );
 
-    fireEvent.click(row);
+    act(() => {
+      fireEvent.click(row);
+    });
+
+    const noChildren = queryAllByText(/child/i);
+    expect(noChildren).toHaveLength(0);
+  });
+
+  test('should handle multiple nested rows', () => {
+    const data = [
+      {
+        code: 'Root',
+        value: 15.0,
+        tax: {
+          fr: 9.0,
+          en: 10.0,
+        },
+        children: [
+          {
+            code: 'child 1',
+            value: 9.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            children: [
+              {
+                code: 'child 2',
+                value: 9.0,
+                tax: {
+                  fr: 9.0,
+                  en: 10.0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ];
+
+    const { getAllByTestId, queryAllByText } = render(
+      <Table height="10rem" colsDef={getColsDef()} data={data} />,
+    );
+
+    const [row] = getAllByTestId('body-row');
+
+    // Uncollapse root row
+    act(() => {
+      fireEvent.click(row);
+    });
+
+    const children = queryAllByText(/child 1/i);
+    expect(children).toHaveLength(1);
+
+    // Uncollapse first child
+    act(() => {
+      fireEvent.click(children[0]);
+    });
+
+    const nestedChildren = queryAllByText(/child 2/i);
+    expect(nestedChildren).toHaveLength(1);
+
+    // Collapse Root row
+    act(() => {
+      fireEvent.click(row);
+    });
 
     const noChildren = queryAllByText(/child/i);
     expect(noChildren).toHaveLength(0);

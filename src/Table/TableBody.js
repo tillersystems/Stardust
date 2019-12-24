@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import compare from '../helpers/compare';
 import { Icon, Theme } from '..';
-import { Body, BodyRow, RowHeader, RowHeaderContent, ChildRow, TextEllipsis } from './elements';
+
+import { flattenDataWith, sortDataBy, isRoot } from './helpers';
+import { Body, RowHeader, RowHeaderContent, Row, TextEllipsis } from './elements';
 
 const TableBody = ({
   bodyRef,
@@ -12,134 +13,61 @@ const TableBody = ({
   direction,
   handleRowClick,
   hasClickCallback,
-  hasFoldedRows,
   index,
   isHoverable,
   isScrollable,
   striped,
   unfoldedRows,
 }) => {
-  const sortData = dataToSort => {
-    let sortedData = dataToSort.map((item, key) => {
-      return {
-        key,
-        item,
-      };
-    });
+  const sort = useCallback(sortDataBy(colsDef, index, direction), [colsDef, index, direction]);
+  const flatten = useCallback(flattenDataWith(sort), [sort]);
 
-    if (index >= 0 && index < colsDef.length) {
-      sortedData = sortedData.sort((a, b) => {
-        const isSortableObject =
-          typeof colsDef[index].value(a.item) === 'object' && !!colsDef[index].filteredBy;
-        /**
-         * Check if the value should be sorted by an object key or directly by the value itself.
-         *
-         * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
-         *
-         * @return {string|number}
-         */
-        const sortBy = comparisonElement =>
-          isSortableObject
-            ? colsDef[index].filteredBy(colsDef[index].value(comparisonElement.item))
-            : colsDef[index].value(comparisonElement.item);
+  const flatData = useMemo(() => flatten(data), [flatten, data]);
 
-        return (
-          (direction === 'asc' ? -1 : direction === 'desc' ? 1 : 0) * compare(sortBy(a), sortBy(b))
-        );
-      });
-    }
-
-    return sortedData;
-  };
-
-  // Rule:
-  // first cell count 2 fractions of the table
-  // normal cell count 1 fractions of the table
-  // To calculate the cell width we need to know the column's number and add it one to take care of the first cell which take 2 fractions.
   return (
     <Body colsLength={colsDef.length + 1} ref={bodyRef}>
-      {sortData(data).map(({ key, item }, rowIndex) => (
-        <Fragment key={rowIndex}>
-          <BodyRow
-            key={rowIndex}
-            data-testid="body-row"
-            hasPointerCursor={item.children || (!hasFoldedRows && hasClickCallback)}
-            isHoverable={isHoverable}
-            isUnfolded={unfoldedRows.includes(key)}
-            name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
-            onClick={() => handleRowClick(item, key)}
-            striped={striped}
-          >
-            {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-              isRowHeader ? (
-                <RowHeader align={align} isScrollable={isScrollable} key={`row-header-${rowIndex}`}>
-                  <RowHeaderContent>
-                    {item.children && (
-                      <Icon
-                        name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
-                        color={Theme.palette.darkBlue}
-                        width="20px"
-                        height="20px"
-                      />
-                    )}
-                    <TextEllipsis>{value(item, key)}</TextEllipsis>
-                  </RowHeaderContent>
-                </RowHeader>
-              ) : (
-                <td key={`row-${rowIndex}-column-${columnIndex}`} align={align}>
-                  {format ? format(value(item, key), key) : value(item, key)}
-                </td>
-              ),
-            )}
-          </BodyRow>
-          {unfoldedRows.includes(key) && (
-            <>
-              {item.children &&
-                sortData(item.children).map(
-                  ({ key: childrenKey, item: childrenItem }, childRowIndex) => (
-                    <ChildRow
-                      key={`${rowIndex}-${childRowIndex}`}
-                      data-testid="body-row"
-                      hasPointerCursor={hasClickCallback}
-                      isHoverable={isHoverable}
-                      onClick={() => handleRowClick(childrenItem, `${key}-${childrenKey}`)}
-                      striped={striped}
-                    >
-                      {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
-                        isRowHeader ? (
-                          <RowHeader
-                            align={align}
-                            isScrollable={isScrollable}
-                            key={`row-header-${rowIndex}-${childRowIndex}`}
-                            isChild
-                          >
-                            <RowHeaderContent>
-                              <TextEllipsis>
-                                {value(childrenItem, `${key}-${childrenKey}`)}
-                              </TextEllipsis>
-                            </RowHeaderContent>
-                          </RowHeader>
-                        ) : (
-                          <td
-                            key={`row-${rowIndex}-${childRowIndex}-column-${columnIndex}`}
-                            align={align}
-                          >
-                            {format
-                              ? format(
-                                  value(childrenItem, `${key}-${childrenKey}`),
-                                  `${key}-${childrenKey}`,
-                                )
-                              : value(childrenItem, `${key}-${childrenKey}`)}
-                          </td>
-                        ),
+      {flatData.map(
+        ({ depth, key, item, parent }) =>
+          (isRoot(parent) || unfoldedRows.includes(parent)) && (
+            <Row
+              key={key}
+              data-testid="body-row"
+              isClickable={item.children || hasClickCallback}
+              isHoverable={isHoverable}
+              isUnfolded={unfoldedRows.includes(key)}
+              onClick={() => handleRowClick(item, key)}
+              striped={striped}
+              depth={depth}
+            >
+              {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+                isRowHeader ? (
+                  <RowHeader
+                    align={align}
+                    isScrollable={isScrollable}
+                    key={`${key}-${columnIndex}`}
+                    hasChildren={!!item.children}
+                  >
+                    <RowHeaderContent>
+                      {item.children && (
+                        <Icon
+                          name={unfoldedRows.includes(key) ? 'chevron-down' : 'chevron-right'}
+                          color={Theme.palette.darkBlue}
+                        />
                       )}
-                    </ChildRow>
-                  ),
-                )}
-            </>
-          )}
-        </Fragment>
-      ))}
+                      <TextEllipsis>
+                        {format ? format(value(item, key), key) : value(item, key)}
+                      </TextEllipsis>
+                    </RowHeaderContent>
+                  </RowHeader>
+                ) : (
+                  <td key={`${key}-${columnIndex}`} align={align}>
+                    {format ? format(value(item, key), key) : value(item, key)}
+                  </td>
+                ),
+              )}
+            </Row>
+          ),
+      )}
     </Body>
   );
 };
@@ -178,7 +106,6 @@ TableBody.propTypes = {
   direction: string,
   handleRowClick: func.isRequired,
   hasClickCallback: bool.isRequired,
-  hasFoldedRows: bool.isRequired,
   index: number,
   isHoverable: bool,
   isScrollable: bool,

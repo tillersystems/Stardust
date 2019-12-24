@@ -35,6 +35,7 @@ storiesOf('Table', module)
         title: 'DISH',
         value: d => d.name,
         isSortable: dishRowSortable,
+        isRowHeader: true,
         align: 'left',
       },
       {
@@ -100,13 +101,15 @@ storiesOf('Table', module)
     );
   })
   .add('Scrollable table', () => {
+    const stickyRowHeader = boolean('stickyRowHeader', true, 'State');
+
     const getColsDef = (taxCountryCode = 'fr') => [
       {
         title: 'DISH',
         value: d => d.name,
         isSortable: dishRowSortable,
         align: 'left',
-        isRowHeader: true,
+        isRowHeader: stickyRowHeader,
         total: d => d.name,
       },
       {
@@ -225,7 +228,7 @@ storiesOf('Table', module)
         discount: 15,
         children: [
           {
-            name: 'children',
+            name: 'Option 1',
             price: 9.0,
             tax: {
               fr: 9.0,
@@ -237,7 +240,7 @@ storiesOf('Table', module)
             discount: 10,
           },
           {
-            name: 'children',
+            name: 'Option 2',
             price: 8.0,
             tax: {
               fr: 9.0,
@@ -297,35 +300,9 @@ storiesOf('Table', module)
         tva: 14,
         profit: 5,
         discount: 3,
-        children: [
-          {
-            name: 'children',
-            price: 9.0,
-            tax: {
-              fr: 9.0,
-              en: 10.0,
-            },
-            quantity: 2,
-            tva: 20,
-            profit: 4,
-            discount: 10,
-          },
-          {
-            name: 'children',
-            price: 8.0,
-            tax: {
-              fr: 9.0,
-              en: 10.0,
-            },
-            quantity: 2,
-            tva: 20,
-            profit: 4,
-            discount: 10,
-          },
-        ],
       },
       {
-        name: 'Omelette',
+        name: 'Nested1',
         price: 8.0,
         tax: {
           fr: 9.0,
@@ -335,6 +312,102 @@ storiesOf('Table', module)
         tva: 12,
         profit: 9,
         discount: 1,
+        children: [
+          {
+            name: 'Nested 2',
+            price: 8.0,
+            tax: {
+              fr: 9.0,
+              en: 12.0,
+            },
+            quantity: 12,
+            tva: 12,
+            profit: 9,
+            discount: 1,
+            children: [
+              {
+                name: 'Nested 3',
+                price: 8.0,
+                tax: {
+                  fr: 9.0,
+                  en: 12.0,
+                },
+                quantity: 12,
+                tva: 12,
+                profit: 9,
+                discount: 1,
+                children: [
+                  {
+                    name: 'Nested 4',
+                    price: 8.0,
+                    tax: {
+                      fr: 9.0,
+                      en: 12.0,
+                    },
+                    quantity: 12,
+                    tva: 12,
+                    profit: 9,
+                    discount: 1,
+                    children: [
+                      {
+                        name: 'Nested 5',
+                        price: 8.0,
+                        tax: {
+                          fr: 9.0,
+                          en: 12.0,
+                        },
+                        quantity: 12,
+                        tva: 12,
+                        profit: 9,
+                        discount: 1,
+                        children: [
+                          {
+                            name: 'Nested 6',
+                            price: 8.0,
+                            tax: {
+                              fr: 9.0,
+                              en: 12.0,
+                            },
+                            quantity: 12,
+                            tva: 12,
+                            profit: 9,
+                            discount: 1,
+                            children: [
+                              {
+                                name: 'Nested 7A',
+                                price: 8.0,
+                                tax: {
+                                  fr: 9.0,
+                                  en: 12.0,
+                                },
+                                quantity: 12,
+                                tva: 12,
+                                profit: 9,
+                                discount: 1,
+                              },
+                              {
+                                name: 'Nested 7B',
+                                price: 8.0,
+                                tax: {
+                                  fr: 9.0,
+                                  en: 12.0,
+                                },
+                                quantity: 12,
+                                tva: 12,
+                                profit: 9,
+                                discount: 1,
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
     ];
 

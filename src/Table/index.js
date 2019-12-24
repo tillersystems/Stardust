@@ -30,8 +30,6 @@ class Table extends PureComponent {
   /** Internal state. */
   state = {
     firstCellWidth: 0,
-    /** Checks if any object from data has a non-empty children value */
-    hasFoldedRows: false,
     shadowSide: null,
     // Stores which column should be sorted.
     sort: initialSort,
@@ -44,7 +42,6 @@ class Table extends PureComponent {
 
   componentDidMount() {
     const { isScrollable } = this.props;
-    this.checkDataDepth();
 
     if (isScrollable) {
       this.setFirstCellWidth();
@@ -53,15 +50,13 @@ class Table extends PureComponent {
     }
   }
 
-  componentDidUpdate({ colsDef: prevColsDef, data: prevData }) {
-    const { colsDef, data } = this.props;
+  componentDidUpdate({ colsDef: prevColsDef }) {
+    const { colsDef } = this.props;
 
     if (prevColsDef !== colsDef) {
       this.setState({ sort: initialSort });
     }
-    if (prevData !== data) {
-      this.checkDataDepth();
-    }
+
     this.onResize();
   }
 
@@ -125,34 +120,23 @@ class Table extends PureComponent {
    * @param {Number} key - The key of the row that was clicked.
    */
   handleRowClick = (item, key) => {
-    const { hasFoldedRows, unfoldedRows } = this.state;
+    const { unfoldedRows } = this.state;
     const {
       rowsDef: { onClick },
     } = this.props;
 
-    if (hasFoldedRows && item.children) {
+    if (item.children) {
       // row needs to be folded back
       if (unfoldedRows.includes(key)) {
-        const unfoldedRowsNewState = unfoldedRows.filter(keyItem => keyItem !== key);
+        const unfoldedRowsNewState = unfoldedRows.filter(keyItem => !keyItem.startsWith(key));
         this.setState({ unfoldedRows: unfoldedRowsNewState });
       } else {
         this.setState({ unfoldedRows: [...unfoldedRows, key] });
       }
-    } else if (onClick && (!hasFoldedRows || typeof key === 'string')) {
+    } else if (onClick) {
       // row is a "leaf", i.e. at the latest level in the data
       onClick(item, key);
     }
-  };
-
-  /**
-   * Checks if data has children and needs folding rows.
-   * Helps us getting the proper callback for any row in handleRowClick
-   *
-   */
-  checkDataDepth = () => {
-    const { data } = this.props;
-    const hasFoldedRows = data.find(d => d.children && d.children.length) !== undefined;
-    this.setState({ hasFoldedRows });
   };
 
   /**
@@ -172,9 +156,10 @@ class Table extends PureComponent {
       striped,
       width,
     } = this.props;
+
     const {
       firstCellWidth,
-      hasFoldedRows,
+
       shadowSide,
       sort: { index, direction },
       unfoldedRows,
@@ -196,7 +181,6 @@ class Table extends PureComponent {
       direction,
       handleRowClick: this.handleRowClick,
       hasClickCallback: !!onClick,
-      hasFoldedRows,
       index,
       isHoverable,
       isScrollable,
