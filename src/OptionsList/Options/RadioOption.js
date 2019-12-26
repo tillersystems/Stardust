@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { Option, Radio } from '../elements';
+import { RadioOption as OptionElement, Radio } from '../elements';
 
 const RadioOption = ({ className, disabled, label, onChange, value, values }) => (
-  <Option role="menuitem" className={className} onClick={() => onChange(value)}>
+  <OptionElement role="menuitem" className={className} onClick={() => onChange(value)}>
     <Radio disabled={disabled} value={value} selectedValue={values[0]}>
       {label}
     </Radio>
-  </Option>
+  </OptionElement>
 );
 
 const { array, bool, func, string } = PropTypes;
@@ -35,16 +34,4 @@ RadioOption.defaultProps = {
   disabled: false,
 };
 
-export default styled(RadioOption)`
-  padding: 0.8rem 1.6rem;
-
-  &:first-child {
-    padding-top: 1.2rem;
-  }
-  &:last-child {
-    padding-bottom: 1.2rem;
-  }
-  :hover {
-    background: ${({ theme: { palette } }) => palette.veryLightGrey};
-  }
-`;
+export default RadioOption;

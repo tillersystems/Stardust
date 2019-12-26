@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import TextInput from '../Input/TextInput';
+
+import { SearchInputContainer, SearchInput } from './elements';
 
 /**
  * SearchBar
@@ -19,17 +20,19 @@ import TextInput from '../Input/TextInput';
  */
 
 const SearchBar = ({ className, placeholder, value, onChange }) => (
-  <div className={className}>
-    <TextInput
-      ghost
-      data-test="search-input"
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      fluid
-      search
-    />
-  </div>
+  <SearchInputContainer>
+    <SearchInput className={className}>
+      <TextInput
+        ghost
+        data-test="search-input"
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        fluid
+        search
+      />
+    </SearchInput>
+  </SearchInputContainer>
 );
 
 const { func, string } = PropTypes;
@@ -48,17 +51,4 @@ SearchBar.defaultProps = {
   value: '',
 };
 
-export default styled(SearchBar)`
-  width: 100%;
-  border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
-  border-radius: 0.4rem;
-  & > div {
-    height: 3.2rem;
-  }
-  & input {
-    font-size: 1.2rem;
-    &::placeholder {
-      font-size: 1.2rem;
-    }
-  }
-`;
+export default SearchBar;

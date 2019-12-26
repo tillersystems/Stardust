@@ -2,9 +2,8 @@
 
 import React, { useMemo, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { Options, NoResultDefaultComponent, SearchInputContainer } from './elements';
+import { Container, List, Option, NoResultDefaultComponent } from './elements';
 import SearchBar from './SearchBar';
 
 import { CheckboxOption, RadioOption, SimpleOption } from './Options';
@@ -16,12 +15,15 @@ const OptionsList = ({
   onChange,
   OptionComponent,
   options,
-  searchBarPlaceholder,
+  searchPlaceholder,
   searchMethod,
   toggleAllLabel,
   values,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
+
+  // The option component to display
+  const ListItem = OptionComponent || (allowMultiple ? CheckboxOption : RadioOption);
 
   /**
    * Handle option change
@@ -54,90 +56,61 @@ const OptionsList = ({
     }
   }, [onChange, options, values.length]);
 
-  /**
-   * Return the list of options
-   */
-  const elements = useMemo(() => {
-    const items = searchMethod ? searchMethod({ options, term: searchTerm }) : options;
-    return items.map(({ value, label, disabled, value: key }) => {
-      const props = {
-        disabled,
-        label,
-        onChange: () => handleChange(value),
-        value,
-        values,
-      };
-      if (allowMultiple) {
-        return OptionComponent !== null ? (
-          <OptionComponent key={key} {...props} />
-        ) : (
-          <CheckboxOption key={key} {...props} />
-        );
-      } else {
-        return OptionComponent !== null ? (
-          <OptionComponent key={key} {...props} />
-        ) : (
-          <RadioOption key={key} {...props} />
-        );
-      }
-    });
-  }, [searchMethod, options, searchTerm, values, allowMultiple, handleChange, OptionComponent]);
+  const items = useMemo(
+    () => (searchMethod ? searchMethod({ options, term: searchTerm }) : options),
+    [options, searchMethod, searchTerm],
+  );
 
-  // change to NoResult
-  // if function => result // sinon juste afficher le string
+  /**
+   * Display a message if no items
+   */
   const noResultMessage = useMemo(() => {
-    if (elements.length > 0) {
+    if (items.length > 0) {
       return null;
     } else if (typeof NoResult === 'function') {
-      return <NoResult term={searchTerm} />;
+      // Allow passing a component as NoResult
+      return <NoResult term={searchTerm} setTerm={setSearchTerm} options={options} />;
     } else {
       return <NoResultDefaultComponent>{NoResult}</NoResultDefaultComponent>;
     }
-  }, [NoResult, elements.length, searchTerm]);
+  }, [searchTerm, items.length, NoResult, options]);
 
   const shouldDisplayToggleAll =
     searchTerm.length === 0 && allowMultiple && toggleAllLabel && toggleAllLabel.length > 0;
 
   return (
-    <div className={className}>
-      <Options>
-        {searchMethod && (
-          <SearchInputContainer>
-            <SearchBar
-              placeholder={searchBarPlaceholder}
-              onChange={setSearchTerm}
-              value={searchTerm}
-            />
-          </SearchInputContainer>
+    <Container className={className}>
+      {searchMethod && (
+        <SearchBar placeholder={searchPlaceholder} onChange={setSearchTerm} value={searchTerm} />
+      )}
+      <List>
+        {shouldDisplayToggleAll && (
+          <ListItem
+            key="toggle-all"
+            label={toggleAllLabel}
+            onChange={toggleAll}
+            value=""
+            values={values}
+            isChecked={values.length === options.length}
+          />
         )}
-        {shouldDisplayToggleAll &&
-          (OptionComponent !== null ? (
-            <OptionComponent
-              key="toggle-all"
-              label={toggleAllLabel}
-              onChange={toggleAll}
-              value=""
-              values={values}
-              isChecked={values.length === options.length}
-            />
-          ) : (
-            <CheckboxOption
-              key="toggle-all"
-              label={toggleAllLabel}
-              onChange={toggleAll}
-              value=""
-              values={values}
-              isChecked={values.length === options.length}
-            />
-          ))}
-        {noResultMessage}
-        {elements}
-      </Options>
-    </div>
+        {items.map(({ value, label, disabled, value: key }) => (
+          <ListItem
+            key={key}
+            disabled={disabled}
+            label={label}
+            onChange={handleChange}
+            value={value}
+            values={values}
+          />
+        ))}
+      </List>
+      {noResultMessage}
+    </Container>
   );
 };
 
-const { array, bool, func, object, oneOfType, string } = PropTypes;
+const { array, bool, func, node, oneOfType, string } = PropTypes;
 
 /**
  *
@@ -157,7 +130,7 @@ OptionsList.propTypes = {
   /**
    * Component to display when no result is found
    */
-  NoResult: oneOfType([func, string]),
+  NoResult: oneOfType([func, node, string]),
 
   /**
    * Array of options with value and label
@@ -172,12 +145,12 @@ OptionsList.propTypes = {
   /**
    *
    */
-  OptionComponent: object,
+  OptionComponent: oneOfType([func, node]),
 
   /**
    * SearchBar input placeholder
    */
-  searchBarPlaceholder: string,
+  searchPlaceholder: string,
 
   /**
    * Method used to search in the options
@@ -188,6 +161,7 @@ OptionsList.propTypes = {
    * Select all string
    */
   toggleAllLabel: string,
+
   /**
    * Selected values
    */
@@ -202,16 +176,15 @@ OptionsList.defaultProps = {
   NoResult: null,
   onChange: () => {},
   allowMultiple: false,
-  searchBarPlaceholder: '',
+  searchPlaceholder: '',
   searchMethod: null,
-  toggleAllLabel: 'Select all',
+  toggleAllLabel: null,
   OptionComponent: null,
 };
 
+OptionsList.Option = Option;
 OptionsList.CheckboxOption = CheckboxOption;
 OptionsList.RadioOption = RadioOption;
 OptionsList.SimpleOption = SimpleOption;
 
-export default styled(OptionsList)`
-  background-color: #fff;
-`;
+export default OptionsList;

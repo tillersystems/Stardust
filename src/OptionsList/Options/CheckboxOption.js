@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { Option } from '../elements';
 import { CheckBox } from '../..';
+import { CheckboxOption as OptionElement } from '../elements';
 
 const CheckboxOption = ({ className, disabled, isChecked, label, onChange, value, values }) => {
   return (
-    <Option role="menuitem" className={className}>
+    <OptionElement role="menuitem" className={className}>
       <CheckBox
         disabled={disabled}
         value={value}
@@ -16,7 +15,7 @@ const CheckboxOption = ({ className, disabled, isChecked, label, onChange, value
       >
         {label}
       </CheckBox>
-    </Option>
+    </OptionElement>
   );
 };
 
@@ -46,11 +45,4 @@ CheckboxOption.defaultProps = {
   isChecked: null,
 };
 
-export default styled(CheckboxOption)`
-  label {
-    padding: 0.8rem 1.6rem;
-    :hover {
-      background: ${({ theme: { palette } }) => palette.veryLightGrey};
-    }
-  }
-`;
+export default CheckboxOption;
