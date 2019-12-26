@@ -8,7 +8,6 @@ export { default as CheckBox } from './CheckBox';
 export { default as Card } from './Card';
 export { default as Counter } from './Counter';
 export { default as DatePicker } from './DatePicker';
-export { default as Dropdown } from './Dropdown';
 export { default as EventListener } from './EventListener';
 export { default as Flag } from './Flag';
 export { default as Form } from './Form';
