@@ -54,17 +54,19 @@ describe('sortDataBy', () => {
 
   const colsDef = [
     {
+      name: 'label',
       title: 'LABEL',
       value: item => item.label,
     },
     {
+      name: 'value',
       title: 'VALUE',
       value: item => item.value,
     },
     {
+      name: 'custom',
       title: 'CUSTOM',
-      value: item => item,
-      filteredBy: itemValue => customSortValues[itemValue.value] || 0, // use custom sort values
+      sortBy: item => customSortValues[item.value] || 0, // use custom sort values
     },
   ];
 
@@ -75,7 +77,7 @@ describe('sortDataBy', () => {
   });
 
   it('should sort data by label ASC', () => {
-    const sort = sortDataBy(colsDef, 0, 'asc');
+    const sort = sortDataBy(colsDef, { column: 'label', order: 'asc' });
 
     expect(sort(data)).toEqual([
       { key: 1, item: { label: 'X', value: 'A' } },
@@ -86,7 +88,7 @@ describe('sortDataBy', () => {
     ]);
   });
   it('should sort data by label DESC', () => {
-    const sort = sortDataBy(colsDef, 0, 'desc');
+    const sort = sortDataBy(colsDef, { column: 'label', order: 'desc' });
 
     expect(sort(data)).toEqual([
       { key: 0, item: { label: 'Z', value: 'A' } },
@@ -98,7 +100,7 @@ describe('sortDataBy', () => {
   });
 
   it('should sort data by value ASC', () => {
-    const sort = sortDataBy(colsDef, 1, 'asc');
+    const sort = sortDataBy(colsDef, { column: 'value', order: 'asc' });
 
     expect(sort(data)).toEqual([
       { key: 0, item: { label: 'Z', value: 'A' } },
@@ -110,7 +112,7 @@ describe('sortDataBy', () => {
   });
 
   it('should sort data by value DESC', () => {
-    const sort = sortDataBy(colsDef, 1, 'desc');
+    const sort = sortDataBy(colsDef, { column: 'value', order: 'desc' });
 
     expect(sort(data)).toEqual([
       { key: 2, item: { label: 'X', value: 'C' } },
@@ -122,7 +124,7 @@ describe('sortDataBy', () => {
   });
 
   it('should sort data by custom ASC', () => {
-    const sort = sortDataBy(colsDef, 2, 'asc');
+    const sort = sortDataBy(colsDef, { column: 'custom', order: 'asc' });
 
     expect(sort(data)).toEqual([
       { key: 4, item: { nothing: null } },
@@ -134,7 +136,7 @@ describe('sortDataBy', () => {
   });
 
   it('should sort data by custom DESC', () => {
-    const sort = sortDataBy(colsDef, 2, 'desc');
+    const sort = sortDataBy(colsDef, { column: 'custom', order: 'desc' });
 
     expect(sort(data)).toEqual([
       { key: 0, item: { label: 'Z', value: 'A' } },

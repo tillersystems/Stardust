@@ -38,7 +38,7 @@ export const defaultTransform = data =>
  * @param {*} sortColumnIndex - index of column to sort with
  * @param {*} sortOrder - direction of sort
  */
-export const sortDataBy = (colsDef, sortColumnIndex = -1, sortOrder = 'asc') => {
+export const sortDataBy = (colsDef, sort) => {
   /**
    * Returns a sorted array of items, nested in an object { key, item }
    * to preserve original index of rows
@@ -50,29 +50,19 @@ export const sortDataBy = (colsDef, sortColumnIndex = -1, sortOrder = 'asc') => 
   return data => {
     let sortedData = defaultTransform(data); // reuse logic of default transform
 
-    if (sortColumnIndex >= 0 && sortColumnIndex < colsDef.length) {
-      sortedData = sortedData.sort((a, b) => {
-        const isSortableObject =
-          typeof colsDef[sortColumnIndex].value(a.item) === 'object' &&
-          !!colsDef[sortColumnIndex].filteredBy;
-        /**
-         * Check if the value should be sorted by an object key or directly by the value itself.
-         *
-         * @param {object} comparisonElement - element returned by the .sort() methode used to compare and sort data.
-         *
-         * @return {string|number}
-         */
-        const sortBy = comparisonElement =>
-          isSortableObject
-            ? colsDef[sortColumnIndex].filteredBy(
-                colsDef[sortColumnIndex].value(comparisonElement.item),
-              )
-            : colsDef[sortColumnIndex].value(comparisonElement.item);
+    if (sort && sort.column) {
+      const sortColumnDef = colsDef.find(column => column.name === sort.column);
 
-        return (
-          (sortOrder === 'asc' ? -1 : sortOrder === 'desc' ? 1 : 0) * compare(sortBy(a), sortBy(b))
-        );
-      });
+      if (sortColumnDef) {
+        sortedData = sortedData.sort((a, b) => {
+          const sortBy = sortColumnDef.sortBy || sortColumnDef.value;
+
+          return (
+            (sort.order === 'asc' ? -1 : sort.order === 'desc' ? 1 : 0) *
+            compare(sortBy(a.item), sortBy(b.item))
+          );
+        });
+      }
     }
 
     return sortedData;

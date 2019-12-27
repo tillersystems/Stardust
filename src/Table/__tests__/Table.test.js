@@ -10,6 +10,7 @@ StubComponent.displayName = 'StubComponent';
 
 const getColsDef = (taxCountryCode = 'fr') => [
   {
+    name: 'dish',
     title: 'DISH',
     isRowHeader: true,
     value: d => d.code,
@@ -18,6 +19,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     total: d => d.code,
   },
   {
+    name: 'price',
     title: 'PRICE',
     value: d => d.value,
     format: v => `${v.toFixed(2)} €`,
@@ -26,10 +28,11 @@ const getColsDef = (taxCountryCode = 'fr') => [
     total: d => d.value,
   },
   {
+    name: 'tax',
     title: 'TAX',
     value: d => d.tax,
     format: v => `${v[taxCountryCode].toFixed(2)} %`,
-    filteredBy: v => v[taxCountryCode],
+    sortBy: d => d.tax[taxCountryCode],
     align: 'right',
     isSortable: true,
     total: d => d.tax,
@@ -380,5 +383,45 @@ describe('<Table />', () => {
 
     const noChildren = queryAllByText(/child/i);
     expect(noChildren).toHaveLength(0);
+  });
+
+  test('should handle sort and trigger onSortChange', () => {
+    const sort = { column: 'dish', order: 'asc' };
+    const onSortChangeSpy = jest.fn();
+
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} sort={sort} onSortChange={onSortChangeSpy} />,
+    );
+
+    const initialBodyRows = getAllByTestId('body-row');
+
+    expect(initialBodyRows[0]).toHaveTextContent('Oeuf cocotte');
+    expect(initialBodyRows[1]).toHaveTextContent('Salade caesar');
+    expect(initialBodyRows[2]).toHaveTextContent('Tartare de boeuf');
+
+    const dishNode = getByText(/dish/i);
+    const priceNode = getByText(/price/i); // Not sortable
+    const taxNode = getByText(/tax/i);
+
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(dishNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenLastCalledWith({ column: 'dish', order: 'desc' });
+
+    act(() => {
+      // Click on the the tax node
+      fireEvent.click(taxNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenLastCalledWith({ column: 'tax', order: 'asc' });
+
+    act(() => {
+      // Click on the the price node
+      fireEvent.click(priceNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenCalledTimes(2); // Must not be called anymore since price is not sortable.
   });
 });

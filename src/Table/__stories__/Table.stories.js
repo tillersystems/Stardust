@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, optionsKnob, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { State, Store } from '@sambego/storybook-state';
 
 import { Table } from '../..';
 import Wrapper from '../../Wrapper';
@@ -32,6 +33,7 @@ storiesOf('Table', module)
 
     const getColsDef = (taxCountryCode = 'fr') => [
       {
+        name: 'dish',
         title: 'DISH',
         value: d => d.name,
         isSortable: dishRowSortable,
@@ -39,6 +41,7 @@ storiesOf('Table', module)
         align: 'left',
       },
       {
+        name: 'price',
         title: 'PRICE',
         value: d => d.price,
         format: v => `${v.toFixed(2)} €`,
@@ -46,10 +49,11 @@ storiesOf('Table', module)
         isSortable: priceRowSortable,
       },
       {
+        name: 'tax',
         title: 'TAX',
         value: d => d.tax,
         format: v => `${v[taxCountryCode].toFixed(2)} %`,
-        filteredBy: v => v[taxCountryCode],
+        sortBy: d => d.tax[taxCountryCode],
         align: 'right',
         isSortable: taxRowSortable,
       },
@@ -100,11 +104,82 @@ storiesOf('Table', module)
       </Wrapper>
     );
   })
+  .add('Controlled sort', () => {
+    const store = new Store({
+      selectedSort: { column: 'dish', order: 'desc' },
+    });
+
+    const colsDef = [
+      {
+        name: 'dish',
+        title: 'DISH',
+        value: d => d.name,
+        isSortable: true,
+        isRowHeader: true,
+        align: 'left',
+      },
+      {
+        name: 'price',
+        title: 'PRICE',
+        value: d => d.price,
+        format: v => `${v.toFixed(2)} €`,
+        align: 'right',
+        isSortable: true,
+        defaultSortOrder: 'desc',
+      },
+      {
+        name: 'quantity',
+        title: 'QUANTITY',
+        value: d => d.quantity,
+        align: 'right',
+        isSortable: false,
+      },
+    ];
+
+    const onSortChangeAction = action('onSortChange');
+
+    const data = [
+      {
+        name: 'Tartare de boeuf',
+        price: 15.0,
+        quantity: 20,
+      },
+      {
+        name: 'Oeuf cocotte',
+        price: 13.0,
+        quantity: 7,
+      },
+      {
+        name: 'Salade caesar',
+        price: 16.0,
+        quantity: 12,
+      },
+    ];
+
+    return (
+      <Wrapper>
+        <State store={store}>
+          {state => (
+            <Table
+              data={data}
+              sort={state.selectedSort}
+              onSortChange={sort => {
+                onSortChangeAction(sort);
+                store.set({ selectedSort: sort });
+              }}
+              colsDef={colsDef}
+            />
+          )}
+        </State>
+      </Wrapper>
+    );
+  })
   .add('Scrollable table', () => {
     const stickyRowHeader = boolean('stickyRowHeader', true, 'State');
 
     const getColsDef = (taxCountryCode = 'fr') => [
       {
+        name: 'dish',
         title: 'DISH',
         value: d => d.name,
         isSortable: dishRowSortable,
@@ -113,53 +188,65 @@ storiesOf('Table', module)
         total: d => d.name,
       },
       {
+        name: 'price',
         title: 'PRICE',
         value: d => d.price,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
         isSortable: priceRowSortable,
         total: d => d.price,
+        defaultSortOrder: 'desc',
       },
       {
+        name: 'tax',
         title: 'TAX',
         value: d => d.tax,
         format: v => `${v[taxCountryCode].toFixed(2)} %`,
-        filteredBy: v => v[taxCountryCode],
         align: 'right',
-        isSortable: taxRowSortable,
         total: d => d.tax,
+        sortBy: d => d.tax[taxCountryCode],
+        isSortable: taxRowSortable,
+        defaultSortOrder: 'desc',
       },
       {
+        name: 'quantity',
         title: 'QUANTITY',
         value: d => d.quantity,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
-        isSortable: quantityRowSortable,
         total: d => d.quantity,
+        isSortable: quantityRowSortable,
+        defaultSortOrder: 'desc',
       },
       {
+        name: 'tva',
         title: 'TVA',
         value: d => d.tva,
         format: v => `${v.toFixed(2)} %`,
         align: 'right',
         isSortable: tvaRowSortable,
         total: d => d.tva,
+        defaultSortOrder: 'desc',
       },
       {
+        name: 'profit',
         title: 'PROFIT',
         value: d => d.profit,
         format: v => `${v.toFixed(2)} €`,
         align: 'right',
         isSortable: profitRowSortable,
         total: d => d.profit,
+        defaultSortOrder: 'desc',
       },
       {
+        name: 'discount',
         title: 'DISCOUNT',
         value: d => d.discount,
         format: v => `${v.toFixed(2)} %`,
         align: 'right',
         isSortable: discountRowSortable,
         total: d => d.discount,
+        defaultSortOrder: 'desc',
       },
     ];
 

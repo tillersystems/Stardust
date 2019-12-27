@@ -10,17 +10,16 @@ const TableBody = ({
   bodyRef,
   colsDef,
   data,
-  direction,
   handleRowClick,
   hasClickCallback,
-  index,
   isHoverable,
   isScrollable,
+  sort,
   striped,
   unfoldedRows,
 }) => {
-  const sort = useCallback(sortDataBy(colsDef, index, direction), [colsDef, index, direction]);
-  const flatten = useCallback(flattenDataWith(sort), [sort]);
+  const sortBy = useCallback(sortDataBy(colsDef, sort), [colsDef, sort]);
+  const flatten = useCallback(flattenDataWith(sortBy), [sortBy]);
 
   const flatData = useMemo(() => flatten(data), [flatten, data]);
 
@@ -39,12 +38,12 @@ const TableBody = ({
               striped={striped}
               depth={depth}
             >
-              {colsDef.map(({ isRowHeader, value, format, align }, columnIndex) =>
+              {colsDef.map(({ name, isRowHeader, value, format, align }) =>
                 isRowHeader ? (
                   <RowHeader
                     align={align}
                     isScrollable={isScrollable}
-                    key={`${key}-${columnIndex}`}
+                    key={`${key}-${name}`}
                     hasChildren={!!item.children}
                   >
                     <RowHeaderContent>
@@ -60,7 +59,7 @@ const TableBody = ({
                     </RowHeaderContent>
                   </RowHeader>
                 ) : (
-                  <td key={`${key}-${columnIndex}`} align={align}>
+                  <td key={`${key}-${name}`} align={align}>
                     {format ? format(value(item, key), key) : value(item, key)}
                   </td>
                 ),
@@ -103,22 +102,20 @@ TableBody.propTypes = {
     }),
   ).isRequired,
   data: array.isRequired,
-  direction: string,
   handleRowClick: func.isRequired,
   hasClickCallback: bool.isRequired,
-  index: number,
   isHoverable: bool,
   isScrollable: bool,
+  sort: shape({ column: string, order: oneOf(['asc', 'desc']) }),
   striped: bool,
   unfoldedRows: array.isRequired,
 };
 
 /** Default props. */
 TableBody.defaultProps = {
-  direction: 'none',
-  index: -1,
   isHoverable: false,
   isScrollable: false,
+  sort: null,
   striped: false,
 };
 
