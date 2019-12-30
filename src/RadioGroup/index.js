@@ -98,7 +98,7 @@ RadioGroup.propTypes = {
   onChange: func,
 
   /** Value which pre-select the radio button */
-  selectedValue: string,
+  selectedValue: node,
 };
 
 /** Default props. */

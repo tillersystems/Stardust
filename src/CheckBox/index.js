@@ -137,7 +137,7 @@ CheckBox.propTypes = {
   /**
    * The value to be used in the checkbox input. This is the value that will be returned on form submission.
    */
-  value: PropTypes.string,
+  value: PropTypes.node,
 };
 
 /** Default props. */

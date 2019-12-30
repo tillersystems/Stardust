@@ -16,14 +16,15 @@ const store = new Store({
 });
 
 const options = [
-  { value: 'street-bangkok-bastille', label: 'Street Bangkok Bastille', disabled: false },
-  { value: 'street-bangkok-marais', label: 'Street Bangkok Marais', disabled: false },
-  { value: 'street-bangkok-canal', label: 'Street Bangkok Canal', disabled: false },
-  { value: 'street-bangkok-montorgeuil', label: 'Street Bangkok Montorgeuil', disabled: false },
-  { value: 'street-bangkok-sentier', label: 'Street Bangkok Sentier', disabled: false },
-  { value: 'street-bangkok-st-louis', label: 'Street Bangkok St louis', disabled: false },
-  { value: 'street-bangkok-st-michel', label: 'Street Bangkok St Michel', disabled: false },
-  { value: 'street-bangkok-oberkampf', label: 'Street Bangkok Oberkampf', disabled: false },
+  { value: 0, label: 'Street Bangkok Bastille', disabled: false },
+  { value: 1, label: 'Street Bangkok Bastille', disabled: false },
+  { value: 2, label: 'Street Bangkok Marais', disabled: false },
+  { value: 3, label: 'Street Bangkok Canal', disabled: false },
+  { value: 4, label: 'Street Bangkok Montorgeuil', disabled: false },
+  { value: 5, label: 'Street Bangkok Sentier', disabled: false },
+  { value: 6, label: 'Street Bangkok St louis', disabled: false },
+  { value: 7, label: 'Street Bangkok St Michel', disabled: false },
+  { value: 8, label: 'Street Bangkok Oberkampf', disabled: false },
 ];
 
 storiesOf('OptionsList', module)

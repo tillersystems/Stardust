@@ -11,7 +11,7 @@ const RadioOption = ({ className, disabled, label, onChange, value, values }) =>
   </OptionElement>
 );
 
-const { array, bool, func, string } = PropTypes;
+const { array, bool, func, node, string } = PropTypes;
 
 /**
  *
@@ -20,9 +20,9 @@ const { array, bool, func, string } = PropTypes;
 RadioOption.propTypes = {
   className: string,
   disabled: bool,
-  label: string.isRequired,
+  label: node.isRequired,
   onChange: func.isRequired,
-  value: string.isRequired,
+  value: node.isRequired,
   values: array.isRequired,
 };
 

@@ -19,18 +19,18 @@ const CheckboxOption = ({ className, disabled, isChecked, label, onChange, value
   );
 };
 
-const { array, bool, func, string } = PropTypes;
+const { array, bool, func, node, string } = PropTypes;
 
 /**
  *
  * PropTypes validation
  */
 CheckboxOption.propTypes = {
-  value: string.isRequired,
+  value: node.isRequired,
   className: string,
   disabled: bool,
   isChecked: bool,
-  label: string.isRequired,
+  label: node.isRequired,
   onChange: func.isRequired,
   values: array,
 };
