@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent } from '@testing-library/react';
+import { act, fireEvent } from '@testing-library/react';
 
 import Table from '..';
 import Theme from '../../Theme';
@@ -10,6 +10,7 @@ StubComponent.displayName = 'StubComponent';
 
 const getColsDef = (taxCountryCode = 'fr') => [
   {
+    name: 'dish',
     title: 'DISH',
     isRowHeader: true,
     value: d => d.code,
@@ -18,6 +19,7 @@ const getColsDef = (taxCountryCode = 'fr') => [
     total: d => d.code,
   },
   {
+    name: 'price',
     title: 'PRICE',
     value: d => d.value,
     format: v => `${v.toFixed(2)} €`,
@@ -26,10 +28,11 @@ const getColsDef = (taxCountryCode = 'fr') => [
     total: d => d.value,
   },
   {
+    name: 'tax',
     title: 'TAX',
     value: d => d.tax,
     format: v => `${v[taxCountryCode].toFixed(2)} %`,
-    filteredBy: v => v[taxCountryCode],
+    sortBy: d => d.tax[taxCountryCode],
     align: 'right',
     isSortable: true,
     total: d => d.tax,
@@ -150,8 +153,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
 
-    // Click on the the dish node
-    fireEvent.click(dishNode);
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(dishNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -169,8 +174,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent('15.00 €');
 
-    // Click on the the dish node
-    fireEvent.click(priceNode);
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(priceNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -200,8 +207,10 @@ describe('<Table />', () => {
 
     expect(initialBodyRows[0]).toHaveTextContent('9.00 %');
 
-    // Click on the the tax node
-    fireEvent.click(taxNode);
+    act(() => {
+      // Click on the the tax node
+      fireEvent.click(taxNode);
+    });
 
     const sortedBodyRows = getAllByTestId('body-row');
 
@@ -237,7 +246,9 @@ describe('<Table />', () => {
 
     expect(sortedBodyRows[0]).toHaveTextContent(/tartare de boeuf/i);
 
-    fireEvent.mouseOver(sortedBodyRows[0]);
+    act(() => {
+      fireEvent.mouseOver(sortedBodyRows[0]);
+    });
 
     const tartareRow = getByText(/tartare de boeuf/i);
 
@@ -288,7 +299,9 @@ describe('<Table />', () => {
 
     const [row] = getAllByTestId('body-row');
 
-    fireEvent.click(row);
+    act(() => {
+      fireEvent.click(row);
+    });
 
     const children = queryAllByText(/child/i);
     expect(children).toHaveLength(2);
@@ -301,9 +314,114 @@ describe('<Table />', () => {
       },
     );
 
-    fireEvent.click(row);
+    act(() => {
+      fireEvent.click(row);
+    });
 
     const noChildren = queryAllByText(/child/i);
     expect(noChildren).toHaveLength(0);
+  });
+
+  test('should handle multiple nested rows', () => {
+    const data = [
+      {
+        code: 'Root',
+        value: 15.0,
+        tax: {
+          fr: 9.0,
+          en: 10.0,
+        },
+        children: [
+          {
+            code: 'child 1',
+            value: 9.0,
+            tax: {
+              fr: 9.0,
+              en: 10.0,
+            },
+            children: [
+              {
+                code: 'child 2',
+                value: 9.0,
+                tax: {
+                  fr: 9.0,
+                  en: 10.0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ];
+
+    const { getAllByTestId, queryAllByText } = render(
+      <Table height="10rem" colsDef={getColsDef()} data={data} />,
+    );
+
+    const [row] = getAllByTestId('body-row');
+
+    // Uncollapse root row
+    act(() => {
+      fireEvent.click(row);
+    });
+
+    const children = queryAllByText(/child 1/i);
+    expect(children).toHaveLength(1);
+
+    // Uncollapse first child
+    act(() => {
+      fireEvent.click(children[0]);
+    });
+
+    const nestedChildren = queryAllByText(/child 2/i);
+    expect(nestedChildren).toHaveLength(1);
+
+    // Collapse Root row
+    act(() => {
+      fireEvent.click(row);
+    });
+
+    const noChildren = queryAllByText(/child/i);
+    expect(noChildren).toHaveLength(0);
+  });
+
+  test('should handle sort and trigger onSortChange', () => {
+    const sort = { column: 'dish', order: 'asc' };
+    const onSortChangeSpy = jest.fn();
+
+    const { getByText, getAllByTestId } = render(
+      <Table colsDef={getColsDef()} data={data} sort={sort} onSortChange={onSortChangeSpy} />,
+    );
+
+    const initialBodyRows = getAllByTestId('body-row');
+
+    expect(initialBodyRows[0]).toHaveTextContent('Oeuf cocotte');
+    expect(initialBodyRows[1]).toHaveTextContent('Salade caesar');
+    expect(initialBodyRows[2]).toHaveTextContent('Tartare de boeuf');
+
+    const dishNode = getByText(/dish/i);
+    const priceNode = getByText(/price/i); // Not sortable
+    const taxNode = getByText(/tax/i);
+
+    act(() => {
+      // Click on the the dish node
+      fireEvent.click(dishNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenLastCalledWith({ column: 'dish', order: 'desc' });
+
+    act(() => {
+      // Click on the the tax node
+      fireEvent.click(taxNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenLastCalledWith({ column: 'tax', order: 'asc' });
+
+    act(() => {
+      // Click on the the price node
+      fireEvent.click(priceNode);
+    });
+
+    expect(onSortChangeSpy).toHaveBeenCalledTimes(2); // Must not be called anymore since price is not sortable.
   });
 });

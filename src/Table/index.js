@@ -6,21 +6,6 @@ import { Container, TableElement, ShadowContainer, ShadowWrapped } from './eleme
 import TableBody from './TableBody';
 import TableHeader from './TableHeader';
 import TableFooter from './TableFooter';
-
-/** Lookup object for next sorting direction. */
-const nextSortingDirection = {
-  none: 'asc',
-  asc: 'desc',
-  desc: 'none',
-};
-
-const initialSort = {
-  // `index` is either `-1` if no column is to be sorted, or is the index of the column.
-  index: -1,
-  // `direction` is the direction of sorting and can be one of `none`, `asc` or `desc`.
-  direction: 'none',
-};
-
 /**
  * A Table displays structured data through rows and columns.
  * It can sort by column (asc, desc).
@@ -30,11 +15,9 @@ class Table extends PureComponent {
   /** Internal state. */
   state = {
     firstCellWidth: 0,
-    /** Checks if any object from data has a non-empty children value */
-    hasFoldedRows: false,
     shadowSide: null,
     // Stores which column should be sorted.
-    sort: initialSort,
+    sort: null,
     unfoldedRows: [],
   };
 
@@ -44,7 +27,6 @@ class Table extends PureComponent {
 
   componentDidMount() {
     const { isScrollable } = this.props;
-    this.checkDataDepth();
 
     if (isScrollable) {
       this.setFirstCellWidth();
@@ -53,15 +35,7 @@ class Table extends PureComponent {
     }
   }
 
-  componentDidUpdate({ colsDef: prevColsDef, data: prevData }) {
-    const { colsDef, data } = this.props;
-
-    if (prevColsDef !== colsDef) {
-      this.setState({ sort: initialSort });
-    }
-    if (prevData !== data) {
-      this.checkDataDepth();
-    }
+  componentDidUpdate() {
     this.onResize();
   }
 
@@ -108,14 +82,16 @@ class Table extends PureComponent {
    *
    * @param {Number} i - The column on which the user clicked.
    */
-  handleSortingClick = i => {
-    const {
-      sort: { index, direction },
-    } = this.state;
+  handleSortChange = sort => {
+    const { onSortChange } = this.props;
 
-    this.setState({
-      sort: { index: i, direction: i == index ? nextSortingDirection[direction] : 'asc' },
-    });
+    if (onSortChange) {
+      onSortChange(sort);
+    } else {
+      this.setState({
+        sort,
+      });
+    }
   };
 
   /**
@@ -125,34 +101,23 @@ class Table extends PureComponent {
    * @param {Number} key - The key of the row that was clicked.
    */
   handleRowClick = (item, key) => {
-    const { hasFoldedRows, unfoldedRows } = this.state;
+    const { unfoldedRows } = this.state;
     const {
       rowsDef: { onClick },
     } = this.props;
 
-    if (hasFoldedRows && item.children) {
+    if (item.children) {
       // row needs to be folded back
       if (unfoldedRows.includes(key)) {
-        const unfoldedRowsNewState = unfoldedRows.filter(keyItem => keyItem !== key);
+        const unfoldedRowsNewState = unfoldedRows.filter(keyItem => !keyItem.startsWith(key));
         this.setState({ unfoldedRows: unfoldedRowsNewState });
       } else {
         this.setState({ unfoldedRows: [...unfoldedRows, key] });
       }
-    } else if (onClick && (!hasFoldedRows || typeof key === 'string')) {
+    } else if (onClick) {
       // row is a "leaf", i.e. at the latest level in the data
       onClick(item, key);
     }
-  };
-
-  /**
-   * Checks if data has children and needs folding rows.
-   * Helps us getting the proper callback for any row in handleRowClick
-   *
-   */
-  checkDataDepth = () => {
-    const { data } = this.props;
-    const hasFoldedRows = data.find(d => d.children && d.children.length) !== undefined;
-    this.setState({ hasFoldedRows });
   };
 
   /**
@@ -169,37 +134,32 @@ class Table extends PureComponent {
       isHoverable,
       isScrollable,
       rowsDef: { onClick },
+      sort: sortProps,
       striped,
       width,
     } = this.props;
-    const {
-      firstCellWidth,
-      hasFoldedRows,
-      shadowSide,
-      sort: { index, direction },
-      unfoldedRows,
-    } = this.state;
+
+    const { firstCellWidth, shadowSide, sort: sortState, unfoldedRows } = this.state;
+
+    const sort = sortProps || sortState;
 
     const tableHeaderProps = {
       colsDef,
       isScrollable,
-      index,
-      direction,
-      handleSortingClick: this.handleSortingClick,
+      onSortChange: this.handleSortChange,
       rowHeaderRef: this.rowHeaderRef,
+      sort,
     };
 
     const tableBodyProps = {
       bodyRef: this.bodyRef,
       colsDef,
       data,
-      direction,
       handleRowClick: this.handleRowClick,
       hasClickCallback: !!onClick,
-      hasFoldedRows,
-      index,
       isHoverable,
       isScrollable,
+      sort,
       striped,
       unfoldedRows,
     };
@@ -251,10 +211,12 @@ Table.propTypes = {
   colsDef: arrayOf(
     shape({
       align: oneOf(['left', 'center', 'right']),
+      defaultSortOrder: oneOf(['asc', 'desc']),
       isRowHeader: bool,
-      filteredBy: func,
+      sortBy: func,
       format: func,
       isSortable: bool,
+      name: string.isRequired,
       title: node.isRequired,
       total: func,
       value: func.isRequired,
@@ -287,10 +249,17 @@ Table.propTypes = {
    **/
   isHoverable: bool,
 
+  /**
+   * Enable controller sort of table
+   */
+  onSortChange: func,
+
   /** Rows definition */
   rowsDef: shape({
     onClick: func,
   }),
+
+  sort: shape({ column: string, order: oneOf(['asc', 'desc']) }),
 
   /** Whether rows should alternate color or not */
   striped: bool,
@@ -305,9 +274,11 @@ Table.defaultProps = {
   height: 'initial',
   isScrollable: false,
   isHoverable: false,
+  onSortChange: null,
   rowsDef: {
     onClick: null,
   },
+  sort: null,
   striped: false,
   width: '100%',
 };

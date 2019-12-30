@@ -14,19 +14,48 @@ import { Table } from '@tillersystems/stardust';
 
 <!-- PROPS -->
 
+#### Table props
+
+| Name           | Required |   Type   |    DefaultValue     |                                  Description                                  |
+| -------------- | :------: | :------: | :-----------------: | :---------------------------------------------------------------------------: |
+| `sort`         |    -     | `object` |       `null`        |     The sort to use. Must include `column` and `order` (`asc` or `desc`)      |
+| `data`         |    +     | `array`  |          -          |                               The data of table                               |
+| `colsDef`      |    +     | `array`  |          -          |   List of columns to display. Must respect Columns definition given below.    |
+| `dataTotal`    |    -     | `object` |       `null`        | Optional object of the same shape as data, to use as the total row in footer. |
+| `height`       |    -     | `string` |       `null`        |                        The table height in CSS value.                         |
+| `isScrollable` |    -     |  `bool`  |       `false`       |           If table can scroll horizontally, of be fluid if `false`.           |
+| `isHoverable`  |    -     |  `bool`  |       `false`       |                          If rows can be highlighted.                          |
+| `onSortChange` |    -     |  `func`  |       `null`        |                  Callback when sort column or order changes.                  |
+| `rowsDef`      |    -     | `object` | `{ onClick: null }` |      An object defining rows. Must respect Rows definition given below.       |
+| `striped`      |    -     |  `bool`  |       `false`       |                         If the table must be striped.                         |
+| `width`        |    -     | `string` |       `null`        |                  The table width. Ignored if `isScrollable`.                  |
+
+```js
+onSortChange(sort);
+```
+
+`onSortChange` receives a `sort` object in the form of `{ column: 'column-name', order: 'desc' }` when user changes the sort of table.
+If function is defined, sort must be controlled and passed from parent.
+If not, table control sort internally with its state.
+
 #### Columns definition
 
-| Name          | Required |    Type    | DefaultValue |                                                                                                  Description                                                                                                  |
-| ------------- | :------: | :--------: | :----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| `align`       |    -     |  `string`  |   `center`   |                                                                          Alignment of the cell's content (`left`, `center`, `right`)                                                                          |
-| `isRowHeader` |    -     | `boolean`  |   `false`    | Define if the column going to be a row header or not. In scrollable mode that column going to stick to the left side of the table. To avoid weird behaviour this parameter should be set on the first column. |
-| `filteredBy`  |    -     | `function` |    `null`    |                                                                                        Filters the object by the value                                                                                        |
-| `format`      |    -     | `function` |    `null`    |                                                                                         Format the value for display                                                                                          |
-| `isSortable`  |    -     | `boolean`  |   `false`    |                                                                                     Whether the column is sortable or not                                                                                     |
-| `title`       |    +     |  `string`  |    `null`    |                                                                                              Title of the colum                                                                                               |
-| `total`       |    +     | `function` |     `''`     |                                              Function to retrieve the total of a data for a given column. Use this parameter only if the dataTotal props is set.                                              |
-| `value`       |    +     | `function` |     `''`     |                                                                          Function to retrieve the value of a data for a given column                                                                          |
-| `width`       |    -     |  `string`  |      ``      |                                                               Width of the column (either a relative weight, or a fixed size in `rem` or `px`)                                                                |
+| Name               | Required |    Type    | DefaultValue |                                                                                                  Description                                                                                                  |
+| ------------------ | :------: | :--------: | :----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `align`            |    -     |  `string`  |   `center`   |                                                                          Alignment of the cell's content (`left`, `center`, `right`)                                                                          |
+| `isRowHeader`      |    -     | `boolean`  |   `false`    | Define if the column going to be a row header or not. In scrollable mode that column going to stick to the left side of the table. To avoid weird behaviour this parameter should be set on the first column. |
+| `format`           |    -     | `function` |    `null`    |                                                                                         Format the value for display                                                                                          |
+| `isSortable`       |    -     | `boolean`  |   `false`    |                                                                                     Whether the column is sortable or not                                                                                     |
+| `sort`             |    -     |  `object`  |    `null`    |                                                                     The sort to use. Must include `column` and `order` (`asc` or `desc`)                                                                      |
+| `sortBy`           |    -     | `function` |    `null`    |                                                                          The value to use as sorting. Defaults use `value` function                                                                           |
+| `defaultSortOrder` |    -     | `function` |    `asc`     |                                       The default sort order. If asc, first sort will be `asc` -> `desc` -> reset. If `desc`, sorting will be `desc` -> `asc` -> reset.                                       |
+| `name`             |    +     |  `string`  |              |                                                                                               Column identifier                                                                                               |
+| `title`            |    +     |  `string`  |    `null`    |                                                                                              Title of the colum                                                                                               |
+| `total`            |    +     | `function` |     `''`     |                                              Function to retrieve the total of a data for a given column. Use this parameter only if the dataTotal props is set.                                              |
+| `value`            |    +     | `function` |     `''`     |                                                                          Function to retrieve the value of a data for a given column                                                                          |
+| `width`            |    -     |  `string`  |    `null`    |                                                               Width of the column (either a relative weight, or a fixed size in `rem` or `px`)                                                                |
+
+Each column must be identified by an unique `name`.
 
 The difference between `value` and `format` mostly resides in the fact that `value` is the actual
 value used by the sorting. `format` is "only" used to display the given value to the user (it
@@ -117,13 +146,14 @@ const colsDef = [
     format: v => `${v.toFixed(2)} €`,
     align: 'right',
     isSortable: priceRowSortable,
+    defaultSortOrder: 'desc',
     width: '20rem',
   },
   {
     title: 'TAX',
     value: d => d.tax,
     format: v => `${v.fr.toFixed(2)} %`,
-    filteredBy: v => v.fr,
+    sortBy: d => d.tax.fr,
     align: 'right',
     isSortable: titleRowSortable,
     width: '20rem',
