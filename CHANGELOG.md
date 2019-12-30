@@ -1,3 +1,16 @@
+## [4.13.1](https://github.com/tillersystems/Stardust/compare/v4.12.8...v4.13.1) (2019-12-30)
+
+### Bug Fixes
+
+- **Checkbox|Radio|OptionsList:** allow value as proptype node ([1ed37bd](https://github.com/tillersystems/Stardust/commit/1ed37bdfb5c5852f6cb34388fe235d31649d2c61))
+
+### Features
+
+- **Navigation:** Add component Navigation to project ([35518d8](https://github.com/tillersystems/Stardust/commit/35518d807c049fdfda78583f39c86a8a227ba0a2))
+- **Navigation:** fix style + removed state ([d396d74](https://github.com/tillersystems/Stardust/commit/d396d748665fb5231b7c33e6d224fb7947a36665))
+- **Table:** allow deep nested collapsible data ([6292f4f](https://github.com/tillersystems/Stardust/commit/6292f4fe4132c9079b1c92678644eb319bdffdb1))
+- **Table:** controllable sort with onSortChange ([207811f](https://github.com/tillersystems/Stardust/commit/207811f5ae23682c3b4d8b414e72d1a7590a539d))
+
 ## [4.12.8](https://github.com/tillersystems/Stardust/compare/v4.12.7...v4.12.8) (2019-12-13)
 
 ### Bug Fixes
