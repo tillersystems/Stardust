@@ -16,18 +16,18 @@ const SimpleOption = ({ className, disabled, isChecked, label, onChange, value, 
   );
 };
 
-const { array, bool, func, node, oneOfType, string } = PropTypes;
+const { array, bool, func, node, string } = PropTypes;
 
 /**
  *
  * PropTypes validation
  */
 SimpleOption.propTypes = {
-  value: string.isRequired,
+  value: node.isRequired,
   className: string,
   disabled: bool,
   isChecked: bool,
-  label: oneOfType([node, string]).isRequired,
+  label: node.isRequired,
   onChange: func.isRequired,
   values: array,
 };
