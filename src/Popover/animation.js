@@ -8,18 +8,12 @@ export const transition = {
 
 export const popoverVariants = {
   visible: {
-    marginTop: 12,
+    top: 0,
     opacity: 1,
-    transition: {
-      ...transition,
-      default: {
-        ...transition.default,
-        delay: 0.15,
-      },
-    },
+    transition,
   },
   hidden: {
-    marginTop: 8,
+    top: '-12px',
     opacity: 0,
     transition,
   },

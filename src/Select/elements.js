@@ -1,22 +1,17 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const Header = styled.button`
+export const HeaderButton = styled.button`
   display: flex;
   align-items: center;
-
   height: 100%;
   width: 100%;
   position: relative;
-
-  padding: 0 1.6rem;
-
+  padding: 0 3rem 0 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
-
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: ${({ theme: { dimensions } }) => dimensions.radius};
-
   background: linear-gradient(
     180deg,
     ${({ theme: { palette } }) => palette.white} 0%,
@@ -39,6 +34,7 @@ export const Header = styled.button`
     border-left-width: 3px;
     border-bottom: 3px solid ${({ theme: { palette } }) => palette.spaceGrey};
   }
+
   &::before {
     content: '';
 
@@ -54,51 +50,24 @@ export const Header = styled.button`
     border-right-width: 3px;
     border-top: 3px solid ${({ theme: { palette } }) => palette.spaceGrey};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
 `;
 
 export const HeaderContent = styled.div`
-  align-items: center;
-  display: flex;
-  height: 2.2rem;
-  padding-right: 2rem;
+  vertical-align: middle;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 `;
 
-export const Menu = styled.ul`
-  width: 100%;
-  max-height: 28rem;
-
-  list-style: none;
-  overflow-y: auto;
-
-  color: ${({ theme: { palette } }) => palette.spaceGrey};
-
-  transform-origin: 50% 0%;
-`;
-
-export const MenuItem = styled.li`
-  display: flex;
-  align-items: center;
-
-  padding: 0.9rem 1.2rem;
-
-  &:first-child {
-    padding-top: 1.1rem;
-  }
-
-  &:last-child {
-    padding-bottom: 1.1rem;
-  }
-
-  cursor: pointer;
-
-  ${({ isSelected }) =>
-    isSelected
-      ? css`
-          background: ${({ theme: { palette } }) => palette.veryLightBlue};
-        `
-      : css`
-          :hover {
-            background: ${({ theme: { palette } }) => palette.veryLightGrey};
-          }
-        `};
+export const Container = styled.div`
+  position: relative;
+  user-select: none;
+  height: 3.8rem;
 `;

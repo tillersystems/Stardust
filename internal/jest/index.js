@@ -20,9 +20,11 @@ window.matchMedia =
     };
   };
 
-// Fail tests on any warning
 console.error = message => {
-  throw new Error(message);
+  if (!message.match(/warning/i)) {
+    throw new Error(message);
+  }
+  console.warn(message);
 };
 
 // Sets the globals for easier access.

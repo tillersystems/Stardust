@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, waitForElement, waitForElementToBeRemoved } from '@testing-library/react';
+import { act, fireEvent, waitForElement, waitForElementToBeRemoved } from '@testing-library/react';
 
 import Select from '..';
 
@@ -18,21 +18,6 @@ describe('<Select />', () => {
     );
 
     expect(container.firstChild).toMatchSnapshot();
-  });
-
-  test('should render using portal without a problem', () => {
-    const props = { placeholder: 'placeholder' };
-    const { getByTestId } = render(
-      <Select usePortal {...props}>
-        <Select.Option value="1">Item</Select.Option>
-        <Select.Option value="2">Item</Select.Option>
-        <Select.Option value="3">Item</Select.Option>
-        <Select.Option value="4">Item</Select.Option>
-      </Select>,
-    );
-
-    const node = getByTestId('positioned-portal');
-    expect(node).toBeInTheDocument();
   });
 
   test('should render without a problem when disabled', () => {
@@ -65,8 +50,10 @@ describe('<Select />', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
 
-    // Open Select
-    fireEvent.click(button);
+    act(() => {
+      // Open Select
+      fireEvent.click(button);
+    });
 
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAttribute('aria-haspopup', 'true');
@@ -78,8 +65,10 @@ describe('<Select />', () => {
     expect(ItemNode[1]).toBeInTheDocument();
     expect(ItemNode[2]).toBeInTheDocument();
 
-    // Close Select
-    fireEvent.click(button);
+    act(() => {
+      // Close Select
+      fireEvent.click(button);
+    });
 
     await waitForElementToBeRemoved(() => getAllByText(/Item/));
 
@@ -102,23 +91,23 @@ describe('<Select />', () => {
         <Select.Option value="4">Item 4</Select.Option>
       </Select>,
     );
+    let Item1, Item2, Item3;
 
     const buttonNode = container.querySelector('button');
     expect(buttonNode).toHaveAttribute('aria-expanded', 'false');
 
-    let Item1 = getByText('Item 1');
-    let Item2 = queryByText('Item 3');
-    expect(Item1).toBeInTheDocument();
-    expect(Item2).not.toBeInTheDocument();
-
-    // open select and pick another option
-    fireEvent.click(buttonNode);
+    act(() => {
+      // open select and pick another option
+      fireEvent.click(buttonNode);
+    });
 
     // Wait for the select to open
-    let Item3 = await waitForElement(() => getByText('Item 3'));
+    Item3 = await waitForElement(() => getByText('Item 3'));
 
-    // Select the third items
-    fireEvent.click(Item3);
+    act(() => {
+      // Select the third items
+      fireEvent.click(Item3);
+    });
 
     // Wait for the select to close
     await waitForElementToBeRemoved(() => getByText('Item 1'));
@@ -129,13 +118,17 @@ describe('<Select />', () => {
     expect(Item1).not.toBeInTheDocument();
     expect(Item3).toBeInTheDocument();
 
-    // open select and pick another option
-    fireEvent.click(buttonNode);
+    act(() => {
+      // open select and pick another option
+      fireEvent.click(buttonNode);
+    });
 
     Item2 = await waitForElement(() => getByText('Item 2'));
 
-    // Select the second items
-    fireEvent.click(Item2);
+    act(() => {
+      // Select the second items
+      fireEvent.click(Item2);
+    });
 
     // Wait for the select to close
     await waitForElementToBeRemoved(() => getByText('Item 3'));
@@ -161,14 +154,18 @@ describe('<Select />', () => {
 
     const button = getByText(props.placeholder);
 
-    // Open Select
-    fireEvent.click(button);
+    act(() => {
+      // Open Select
+      fireEvent.click(button);
+    });
 
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith(true);
 
-    // Close Select
-    fireEvent.click(button);
+    act(() => {
+      // Close Select
+      fireEvent.click(button);
+    });
 
     expect(spy).toHaveBeenCalledTimes(2);
     expect(spy).toHaveBeenCalledWith(false);
@@ -176,7 +173,7 @@ describe('<Select />', () => {
 
   test('should call onChange when an item option is selected', () => {
     const spy = jest.fn();
-    const props = { placeholder: 'placeholder', onChange: spy };
+    const props = { placeholder: 'placeholder', onChange: spy, values: [] };
     const { queryAllByText, getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item</Select.Option>
@@ -188,16 +185,20 @@ describe('<Select />', () => {
 
     const button = getByText(props.placeholder);
 
-    // Open Select
-    fireEvent.click(button);
+    act(() => {
+      // Open Select
+      fireEvent.click(button);
+    });
 
     const ItemNode = queryAllByText(/Item/);
 
-    // Click on first item node
-    fireEvent.click(ItemNode[0]);
+    act(() => {
+      // Click on first item node
+      fireEvent.click(ItemNode[0]);
+    });
 
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy).toHaveBeenCalledWith('1');
+    expect(spy).toHaveBeenCalledWith(['1']);
   });
 
   test('should call getDerivedStateFromProps', () => {
@@ -225,36 +226,8 @@ describe('<Select />', () => {
     expect(container.firstChild).toBeInTheDocument();
   });
 
-  test('should have a custom width', () => {
-    const props = { width: '200px' };
-    const { container } = render(
-      <Select {...props}>
-        <Select.Option value="1">Item</Select.Option>
-        <Select.Option value="2">Item</Select.Option>
-        <Select.Option value="3">Item</Select.Option>
-        <Select.Option value="4">Item</Select.Option>
-      </Select>,
-    );
-
-    expect(container.firstChild).toHaveStyleRule('width', props.width);
-  });
-
-  test('should display the first option when no placeholder nor value is provided', () => {
-    const { getByText } = render(
-      <Select>
-        <Select.Option value="1">Item 1</Select.Option>
-        <Select.Option value="2">Item 2</Select.Option>
-        <Select.Option value="3">Item 3</Select.Option>
-        <Select.Option value="4">Item 4</Select.Option>
-      </Select>,
-    );
-
-    const displayedOption = getByText('Item 1');
-    expect(displayedOption).toBeInTheDocument();
-  });
-
   test('should have a value set by parent', () => {
-    const props = { value: '3' };
+    const props = { values: ['3'] };
     const { getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item 1</Select.Option>
@@ -269,7 +242,15 @@ describe('<Select />', () => {
   });
 
   test('should display displayedValue prop', () => {
-    const props = { value: '3', displayedValue: 'The current value is 3' };
+    const HeaderComponent = props => (
+      <Select.Header displayValue="The current value is 3" {...props} />
+    );
+
+    const props = {
+      values: ['3'],
+      HeaderComponent,
+    };
+
     const { getByText } = render(
       <Select {...props}>
         <Select.Option value="1">Item 1</Select.Option>

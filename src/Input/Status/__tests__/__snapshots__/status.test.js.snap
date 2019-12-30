@@ -33,10 +33,10 @@ exports[`<Status /> should have different color on icon 1`] = `
     aria-hidden="true"
     class="c1"
     focusable="false"
-    height="20px"
+    height="2rem"
     role="img"
     viewBox="0 0 512 512"
-    width="20px"
+    width="2rem"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
@@ -73,7 +73,6 @@ exports[`<Status /> should have different width and height on icon 1`] = `
   height: 1.8rem;
   margin-right: 0.7rem;
   border-radius: 50%;
-  background: hsl(207,22%,90%);
 }
 
 <div
@@ -84,17 +83,17 @@ exports[`<Status /> should have different width and height on icon 1`] = `
     aria-hidden="true"
     class="c1"
     focusable="false"
-    height="10px"
+    height="1.33rem"
     role="img"
     viewBox="0 0 512 512"
-    width="10px"
+    width="1.33rem"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
       <path
         d="M384.68 354.51l78.405 78.405c8.331 8.331 8.331 21.839 0 30.17-8.331 8.331-21.839 8.331-30.17 0l-78.404-78.404c-32.847 26.274-74.51 41.986-119.844 41.986-106.039 0-192-85.962-192-192 0-106.039 85.961-192 192-192 106.038 0 192 85.961 192 192 0 45.333-15.712 86.997-41.986 119.844zm-42.464-16.24C368.09 311.417 384 274.9 384 234.667c0-82.475-66.859-149.334-149.333-149.334-82.475 0-149.334 66.86-149.334 149.334S152.193 384 234.667 384c40.233 0 76.75-15.91 103.603-41.784a21.534 21.534 0 0 1 3.946-3.946z"
         data-testid="icon-svg-path"
-        fill="hsl(0,100%,100%)"
+        fill="hsl(206,16%,60%)"
         fill-rule="evenodd"
       />
     </g>
@@ -135,10 +134,10 @@ exports[`<Status /> should render without a problem 1`] = `
     aria-hidden="true"
     class="c1"
     focusable="false"
-    height="20px"
+    height="2rem"
     role="img"
     viewBox="0 0 512 512"
-    width="20px"
+    width="2rem"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container } from './elements';
@@ -24,26 +24,26 @@ const NotificationContainer = ({
    * Start Timer
    *
    */
-  const startTimer = () => {
+  const startTimer = useCallback(() => {
     if (!autoDismiss) return;
     setTimer(new Timer(onDismiss, autoDismissTimeout));
-  };
+  }, [autoDismiss, autoDismissTimeout, onDismiss]);
 
   /**
    * Reset current timer with new autoDismissTimeout value
    *
    */
-  const resetTimer = () => {
+  const resetTimer = useCallback(() => {
     timer.resetTimer(autoDismissTimeout);
-  };
+  }, [autoDismissTimeout, timer]);
 
   /**
    * Clear Timer
    *
    */
-  const clearTimer = () => {
+  const clearTimer = useCallback(() => {
     timer.clear();
-  };
+  }, [timer]);
 
   /**
    * onMouseEnter
@@ -70,7 +70,7 @@ const NotificationContainer = ({
     return () => {
       if (timer) clearTimer();
     };
-  }, [timer, autoDismiss]);
+  }, [timer, autoDismiss, startTimer, clearTimer]);
 
   /**
    * useEffect to handle Component update
@@ -79,7 +79,7 @@ const NotificationContainer = ({
   useEffect(() => {
     // try to add time to current timer if exists (on Component change).
     if (timer) resetTimer();
-  }, [Component]);
+  }, [Component, resetTimer, timer]);
 
   const hasMouseEvents = pauseOnHover && autoDismiss;
 

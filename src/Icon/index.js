@@ -25,7 +25,7 @@ const SIZE = {
  * @return {jsx}
  */
 const Icon = ({ className, color, name, size, title, ...restProps }) => {
-  const generatedId = useMemo(() => cuid(), [title]);
+  const generatedId = cuid();
   const titleElementId = `icon-title-${generatedId}`;
 
   /**

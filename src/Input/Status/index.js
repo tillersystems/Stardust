@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
@@ -22,15 +22,33 @@ const statusToIconName = {
  *
  * @return {jsx}
  */
-const Status = ({ className, status }) => (
-  <div className={className} data-testid="status">
-    <Icon
-      color={status === 'loading' ? Theme.palette.primary.default : Theme.palette.white}
-      name={statusToIconName[status]}
-      size={['loading', 'info', 'warning'].includes(status) ? '20px' : '10px'}
-    />
-  </div>
-);
+const Status = ({ className, status }) => {
+  const color = useMemo(() => {
+    if (['loading'].includes(status)) {
+      return Theme.palette.primary.default;
+    }
+    if (['search'].includes(status)) {
+      return Theme.palette.darkGrey;
+    }
+    return Theme.palette.white;
+  }, [status]);
+
+  const size = useMemo(() => {
+    if (['loading', 'info', 'warning'].includes(status)) {
+      return '2rem';
+    }
+    if (['search'].includes(status)) {
+      return '1.33rem';
+    }
+    return '1rem';
+  }, [status]);
+
+  return (
+    <div className={className} data-testid="status">
+      <Icon color={color} name={statusToIconName[status]} size={size} />
+    </div>
+  );
+};
 
 /** Display name. */
 Status.displayName = 'Input.Status';
@@ -89,16 +107,7 @@ export default styled(Status)`
       background: ${({ theme: { palette } }) => palette.failure.default};
     `};
 
-  ${({ status }) =>
-    status === 'search' &&
-    css`
-      background: ${({ theme: { palette } }) => palette.lightGrey};
-    `};
+  ${({ status }) => status === 'search' && css``};
 
-  ${({ status, hasFocus }) =>
-    status === 'search' &&
-    hasFocus &&
-    css`
-      background: ${({ theme: { palette } }) => palette.primary.default};
-    `};
+  ${({ status, hasFocus }) => status === 'search' && hasFocus && css``};
 `;
