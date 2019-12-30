@@ -14,9 +14,9 @@ import { Navigation } from '@tillersystems/stardust';
 
 #### Items props
 
-| Name       | Required |  Type  | DefaultValue |                                        Description                                        |
-| ---------- | :------: | :----: | :----------: | :---------------------------------------------------------------------------------------: |
-| `isActive` |    -     | `bool` |    false     | Define which item going to be the activated one. By default the first item is activated.s |
+| Name       | Required |  Type  | DefaultValue |                   Description                    |
+| ---------- | :------: | :----: | :----------: | :----------------------------------------------: |
+| `isActive` |    -     | `bool` |    false     | Define which item going to be the activated one. |
 
 ### Example
 

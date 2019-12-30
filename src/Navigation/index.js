@@ -1,9 +1,7 @@
-import React, { createContext, Children, useState, useEffect } from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
-import { Nav, NavItem } from './elements';
-
-export const context = createContext({});
+import { Nav, Item } from './elements';
 
 /**
  * A Navigation wraps all the logic between navigation items,
@@ -12,26 +10,19 @@ export const context = createContext({});
  * @return {jsx}
  */
 const Navigation = ({ children, isFluid, isVertical }) => {
-  // eslint-disable-next-line react/prop-types
-  const activeItem = children.findIndex(({ props }) => props.isActive);
-  const [activeNavItem, setActiveNavItem] = useState(activeItem || 0);
-
-  useEffect(() => setActiveNavItem(activeItem), [activeItem]);
-
   return (
     <Nav isVertical={isVertical} data-testid="navigation">
-      {Children.map(children, ({ props, type }, index) => (
-        <NavItem
-          isActived={activeNavItem === index}
+      {Children.map(children, ({ props: { isActive, ...props }, type }, index) => (
+        <Item
           isFluid={isFluid}
           isVertical={isVertical}
-          onClick={() => setActiveNavItem(index)}
           key={index}
-          forwardedAs={type}
+          as={type}
+          isActive={isActive}
           {...props}
         >
           {props.children}
-        </NavItem>
+        </Item>
       ))}
     </Nav>
   );

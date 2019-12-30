@@ -1,7 +1,8 @@
-/* eslint-disable react/display-name */
+/* eslint-disable react/display-name, jsx-a11y/anchor-is-valid, react/prop-types, jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, radios } from '@storybook/addon-knobs';
+import styled, { css } from 'styled-components';
 
 import Navigation from '..';
 import Wrapper from '../../Wrapper';
@@ -19,22 +20,35 @@ storiesOf('Navigation', module)
     const fluid = boolean('Fluid', false, 'Props');
     const vertical = boolean('Vertical', false, 'Props');
 
-    /* eslint-disable jsx-a11y/anchor-is-valid */
-    // eslint-disable-next-line react/prop-types
-    const CustomLink = ({ children }) => <a href="">{children}</a>;
-    /* eslint-enable jsx-a11y/anchor-is-valid */
+    const CustomLink = styled(({ className, onClick, children }) => (
+      <a className={className} onClick={onClick}>
+        {children}
+      </a>
+    ))`
+      color: red;
+      ${({ isActive }) => isActive && 'background: lightblue;'}
+      ${({ color }) =>
+        css`
+          color: ${color};
+        `}
+    `;
 
     return (
       <Wrapper>
-        <Navigation isFluid={fluid} isVertical={vertical}>
-          <div>link</div>
-          <span>link2</span>
-          <div thePropsYou="wantToPass">link3</div>
-          <div>link4</div>
-          <div isActive>link5</div>
-          <CustomLink>custom link</CustomLink>
-          <div>link7</div>
-        </Navigation>
+        <div css="background: white; padding: 0 2rem;">
+          <Navigation isFluid={fluid} isVertical={vertical}>
+            <div>link</div>
+            <span isActive>link2</span>
+            <div>link3</div>
+            <button type="button" disabled>
+              link4
+            </button>
+            <div>link5</div>
+            <CustomLink isActive>custom link</CustomLink>
+            <CustomLink color="green">custom link green</CustomLink>
+            <div>link7</div>
+          </Navigation>
+        </div>
       </Wrapper>
     );
   })
@@ -47,15 +61,20 @@ storiesOf('Navigation', module)
       link2: 'link2',
       link3: 'link3',
     };
-    const activedItem = radios('actived item', options, 'link', 'Props');
+
+    const activeItem = radios('actived item', options, 'link', 'Props');
 
     return (
       <Wrapper>
-        <Navigation isFluid={fluid} isVertical={vertical}>
-          <div isActive={activedItem === 'link'}>link</div>
-          <span isActive={activedItem === 'link2'}>link2</span>
-          <div isActive={activedItem === 'link3'}>link3</div>
-        </Navigation>
+        <div css="background: white; padding: 0 2rem;">
+          <Navigation isFluid={fluid} isVertical={vertical}>
+            <div isActive={activeItem === 'link'}>link</div>
+            <span isActive={activeItem === 'link2'}>link2</span>
+            <button type="button" isActive={activeItem === 'link3'} disabled>
+              link3
+            </button>
+          </Navigation>
+        </div>
       </Wrapper>
     );
   });
