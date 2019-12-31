@@ -1,5 +1,4 @@
 /* eslint-disable react/require-default-props */
-
 import React, { PureComponent, Children, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -183,15 +182,21 @@ class Select extends PureComponent {
       options,
       children,
       className,
-      contentWrapperStyle,
-      contentRef,
       HeaderComponent,
       placeholder,
-      modifiers,
-      usePortal,
       onChange /* unused in render */,
       disabled,
       displayValue,
+      /* POPOVER PROPS */
+      animationVariants,
+      contentRef,
+      contentWrapperStyle,
+      modifiers,
+      placement,
+      portalPosition,
+      positionFixed,
+      triggerWrapperCss,
+      usePortal,
       ...optionsListProps
     } = this.props;
 
@@ -219,7 +224,6 @@ class Select extends PureComponent {
               {...optionsListProps}
             />
           }
-          contentRef={contentRef}
           contentWrapperStyle={{
             display: 'flex',
             overflow: 'hidden',
@@ -228,11 +232,17 @@ class Select extends PureComponent {
             ...contentWrapperStyle,
           }}
           isOpen={isOpen}
-          modifiers={modifiers}
           onClickOutside={this.onClickOutside}
           triggerRef={this.triggerRef}
-          usePortal={usePortal}
           width={contentWidth}
+          contentRef={contentRef}
+          animationVariants={animationVariants}
+          modifiers={modifiers}
+          placement={placement}
+          portalPosition={portalPosition}
+          positionFixed={positionFixed}
+          triggerWrapperCss={triggerWrapperCss}
+          usePortal={usePortal}
         >
           <Header
             options={selectOptions}
@@ -272,16 +282,6 @@ Select.propTypes = {
   className: string,
 
   /**
-   * Callback ref of content element
-   */
-  contentRef: func,
-
-  /**
-   * CSS for popover content, useful for sizing
-   */
-  contentWrapperStyle: object,
-
-  /**
    * If the select should be disabled or not
    */
   disabled: bool,
@@ -304,11 +304,6 @@ Select.propTypes = {
   isOpen: bool,
 
   /**
-   * Customize popper behaviour. Plugins to alter the behaviour of the popper. See https://popper.js.org/popper-documentation.html
-   */
-  modifiers: object,
-
-  /**
    * List of options of select.
    */
   options: array,
@@ -329,14 +324,22 @@ Select.propTypes = {
   placeholder: string,
 
   /**
-   * Displays the content on a portal
-   */
-  usePortal: bool,
-
-  /**
    * Selected values identifier
    */
   values: array,
+
+  /**
+   * POPOVER PROPS
+   */
+  animationVariants: object,
+  contentRef: func,
+  contentWrapperStyle: object,
+  modifiers: object,
+  placement: string,
+  portalPosition: object,
+  positionFixed: bool,
+  triggerWrapperCss: array,
+  usePortal: bool,
 };
 
 /**
