@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
 import { HeaderButton, HeaderContent } from './elements';
@@ -9,17 +9,17 @@ import { HeaderButton, HeaderContent } from './elements';
  * This component is in charge of displaying
  * a search bar
  *
- * @param {array} values // The currently selected values
- * @param {function} onClick // Callback function called when button is clicked
- * @param {bool} isOpen // When popover is open
- * @param {string} placeholder // Placeholder of button when no value is selected
+ * @param {bool} disabled - If button is disabled
+ * @param {function} onClick - Callback function called when button is clicked
+ * @param {bool} isOpen - When popover is open
+ * @param {string} placeholder - Placeholder of button when no value is selected
+ * @param {node} children - The content of Header
  *
  * @return {jsx}
  */
-const Header = ({ disabled, options, displayValue, values, onClick, isOpen, placeholder }) => {
-  const selectedOptions = values
-    .map(value => options.find(option => option.value === value))
-    .filter(Boolean);
+const Header = ({ disabled, onClick, isOpen, placeholder, children }) => {
+  // Remove empty children to ensure placeholder is display if empty
+  const filteredChildren = Children.toArray(children).filter(Boolean);
 
   return (
     <HeaderButton
@@ -29,42 +29,27 @@ const Header = ({ disabled, options, displayValue, values, onClick, isOpen, plac
       aria-expanded={isOpen}
       data-testid="select-button"
     >
-      <HeaderContent>
-        {displayValue}
-        {!displayValue &&
-          (values.length
-            ? selectedOptions.map(({ value, label }, index) => (
-                <Fragment key={value}>
-                  {index > 0 && ', '}
-                  {label}
-                </Fragment>
-              ))
-            : placeholder)}
-      </HeaderContent>
+      <HeaderContent>{filteredChildren.length ? filteredChildren : placeholder}</HeaderContent>
     </HeaderButton>
   );
 };
 
-const { array, bool, func, node, oneOfType, string } = PropTypes;
+const { bool, func, node, string } = PropTypes;
 
 /** Prop types. */
 Header.propTypes = {
+  children: node,
   disabled: bool,
-  options: array,
   isOpen: bool,
-  values: array,
-  displayValue: oneOfType([node, string]),
   onClick: func.isRequired,
   placeholder: string,
 };
 
 /** Default props. */
 Header.defaultProps = {
+  children: null,
   disabled: false,
   isOpen: false,
-  options: [],
-  values: [],
-  displayValue: null,
   placeholder: '',
 };
 

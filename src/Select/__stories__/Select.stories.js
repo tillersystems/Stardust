@@ -141,13 +141,20 @@ storiesOf('Select', module)
     const onToggle = action('onToggle');
     const onChangeAction = action('onChange');
 
-    const HeaderComponent = ({ values, ...rest }) => (
-      <Select.Header
-        displayValue={values.length > 1 ? `${values.length} selected` : null}
-        values={values}
-        {...rest}
-      />
-    );
+    const displayValue = (selected, values, options) =>
+      values.length === options.length ? (
+        <span
+          css={`
+            color: blue;
+          `}
+        >
+          All selected
+        </span>
+      ) : values.length > 1 ? (
+        `${values.length} selected`
+      ) : values.length === 1 ? (
+        selected[0].label
+      ) : null;
 
     const searchMethod = ({ options, term }) => {
       return options.filter(option => option.label.toLowerCase().includes(term.toLowerCase()));
@@ -169,7 +176,7 @@ storiesOf('Select', module)
                 onChangeAction(values);
                 store.set({ values });
               }}
-              HeaderComponent={HeaderComponent}
+              displayValue={displayValue}
               values={state.values}
               placeholder="Select some values"
             >

@@ -242,13 +242,12 @@ describe('<Select />', () => {
   });
 
   test('should display displayedValue prop', () => {
-    const HeaderComponent = props => (
-      <Select.Header displayValue="The current value is 3" {...props} />
-    );
+    const displayValue = selected =>
+      selected.length ? `The current value is ${selected[0].value}` : 'No value';
 
     const props = {
       values: ['3'],
-      HeaderComponent,
+      displayValue,
     };
 
     const { getByText } = render(
