@@ -1,3 +1,13 @@
+## [4.13.2](https://github.com/tillersystems/Stardust/compare/v4.13.1...v4.13.2) (2019-12-31)
+
+### Bug Fixes
+
+- **Select:** pass all Popover props ([9ab1096](https://github.com/tillersystems/Stardust/commit/9ab10962bbee24c09fc8632dcd9edf38b242d926))
+
+### Features
+
+- **Select:** reintroduce displayValue props to customize Header ([342f31e](https://github.com/tillersystems/Stardust/commit/342f31e2ac3115869583591d72d04d68f1667532))
+
 ## [4.13.1](https://github.com/tillersystems/Stardust/compare/v4.12.8...v4.13.1) (2019-12-30)
 
 ### Bug Fixes
