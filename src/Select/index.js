@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props */
 
-import React, { PureComponent, Children } from 'react';
+import React, { PureComponent, Children, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import Popover from '../Popover';
@@ -10,8 +10,17 @@ import { Container } from './elements';
 
 import DefaultHeader from './Header';
 
+/**
+ * A fake component to pass options as JSX instead of props.
+ */
 const Option = () => null;
 
+/**
+ * Tansform the Option component above into array of object to pass as options props to OptionsList.
+ *
+ * @param {*} options
+ * @param {*} values
+ */
 const transformChildrenToOptions = children => {
   return Children.toArray(children)
     .map(({ props, type }) =>
@@ -23,6 +32,23 @@ const transformChildrenToOptions = children => {
         : null,
     )
     .filter(Boolean);
+};
+
+/**
+ * Default function to use to display selected values.
+ *
+ * @param {array} selected - the selected options
+ * @param {array} values - the selected values
+ * @param {array} options - the options available
+ */
+// eslint-disable-next-line no-unused-vars
+const defaultDisplayValue = (selected, _values, _options) => {
+  return selected.map(({ value, label }, index) => (
+    <Fragment key={value}>
+      {index > 0 && ', '}
+      {label}
+    </Fragment>
+  ));
 };
 
 /**
@@ -165,6 +191,7 @@ class Select extends PureComponent {
       usePortal,
       onChange /* unused in render */,
       disabled,
+      displayValue,
       ...optionsListProps
     } = this.props;
 
@@ -175,6 +202,10 @@ class Select extends PureComponent {
 
     const Header = HeaderComponent || DefaultHeader;
     const selectOptions = options || transformChildrenToOptions(children);
+    const selected = values
+      .map(value => selectOptions.find(option => option.value === value))
+      .filter(Boolean);
+    const value = displayValue || defaultDisplayValue;
 
     return (
       <Container className={className} disabled={disabled} data-testid="select">
@@ -210,7 +241,9 @@ class Select extends PureComponent {
             isOpen={isOpen}
             placeholder={placeholder}
             disabled={disabled}
-          />
+          >
+            {value && typeof value === 'function' ? value(selected, values, selectOptions) : value}
+          </Header>
         </Popover>
       </Container>
     );
@@ -220,7 +253,7 @@ class Select extends PureComponent {
 /**
  * PropTypes Validation
  */
-const { array, bool, func, node, object, string } = PropTypes;
+const { array, bool, func, node, object, oneOfType, string } = PropTypes;
 
 Select.propTypes = {
   /**
@@ -252,6 +285,13 @@ Select.propTypes = {
    * If the select should be disabled or not
    */
   disabled: bool,
+
+  /**
+   * A value or function to display the selected values.
+   * It receives selected, values and options as arguments.
+   * Falsy returned value will display the placeholder.
+   */
+  displayValue: oneOfType([node, func]),
 
   /**
    * Overrides header component for custom render
