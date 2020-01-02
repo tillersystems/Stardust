@@ -31,6 +31,7 @@ export { default as Loader } from './Loader';
 export { default as Logo } from './Logo';
 export { default as Message } from './Message';
 export { default as Modal } from './Modal';
+export { default as Navigation } from './Navigation';
 export { NotificationProvider, useNotifications } from './Notification';
 export { default as OptionsList } from './OptionsList';
 export { default as Popover } from './Popover';
