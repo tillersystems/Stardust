@@ -6,7 +6,7 @@ export const HeaderButton = styled.button`
   height: 100%;
   width: 100%;
   position: relative;
-  padding: 0 3rem 0 1.6rem;
+  padding: 0 2rem 0 1.6rem;
   cursor: pointer;
   text-align: left;
   font-size: ${({ theme: { fonts } }) => fonts.size.medium};
