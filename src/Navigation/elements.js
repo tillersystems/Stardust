@@ -16,6 +16,35 @@ export const Nav = styled.nav`
     `}
 `;
 
+const ActiveItem = ({ isVertical }) =>
+  isVertical
+    ? css`
+        color: ${({ theme: { palette } }) => palette.white};
+
+        &,
+        &:hover {
+          background-color: ${({ theme: { palette } }) => palette.primary.default};
+        }
+
+        :disabled,
+        :disabled:hover {
+          background-color: ${({ theme: { palette } }) => palette.lightGrey};
+        }
+      `
+    : css`
+        color: ${({ theme: { palette } }) => palette.darkBlue};
+
+        &,
+        &:hover {
+          border-bottom-color: ${({ theme: { palette } }) => palette.primary.default};
+        }
+
+        :disabled {
+          color: ${({ theme: { palette } }) => palette.spaceGrey};
+          border-bottom-color: ${({ theme: { palette } }) => palette.spaceGrey};
+        }
+      `;
+
 export const Item = styled.span`
   text-align: center;
   cursor: pointer;
@@ -31,6 +60,12 @@ export const Item = styled.span`
     },
   }) => weight.normal};
   color: ${({ theme: { palette } }) => palette.spaceGrey};
+
+  ${({ isActive, ...props }) => isActive && ActiveItem(props)}
+  
+  &.active {
+    ${ActiveItem}
+  }
 
   /* HORIZONTAL NAVIGATION */
 
@@ -56,28 +91,7 @@ export const Item = styled.span`
       }
     `}
 
-  ${({ isActive, isVertical }) =>
-    !isVertical &&
-    isActive &&
-    css`
-      font-weight: ${({
-        theme: {
-          fonts: { weight },
-        },
-      }) => weight.thick};
-      color: ${({ theme: { palette } }) => palette.darkBlue};
-      &,
-      &:hover {
-        border-bottom-color: ${({ theme: { palette } }) => palette.primary.default};
-      }
-
-      :disabled {
-        color: ${({ theme: { palette } }) => palette.spaceGrey};
-        border-bottom-color: ${({ theme: { palette } }) => palette.spaceGrey};
-      }
-    `}
-
-    /* VERTICAL NAVIGATION */
+  /* VERTICAL NAVIGATION */
 
   ${({ isVertical }) =>
     isVertical &&
@@ -98,28 +112,6 @@ export const Item = styled.span`
 
       :disabled:hover {
         background-color: transparent;
-      }
-    `}
-
-  ${({ isActive, isVertical }) =>
-    isActive &&
-    isVertical &&
-    css`
-      font-weight: ${({
-        theme: {
-          fonts: { weight },
-        },
-      }) => weight.thick};
-      color: ${({ theme: { palette } }) => palette.white};
-
-      &,
-      &:hover {
-        background-color: ${({ theme: { palette } }) => palette.primary.default};
-      }
-
-      :disabled,
-      :disabled:hover {
-        background-color: ${({ theme: { palette } }) => palette.lightGrey};
       }
     `}
 
