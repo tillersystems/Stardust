@@ -1,3 +1,11 @@
+## [4.13.3](https://github.com/tillersystems/Stardust/compare/v4.13.2...v4.13.3) (2020-01-02)
+
+### Bug Fixes
+
+- **Navigation:** add .active class for styling NavLink ([2c82071](https://github.com/tillersystems/Stardust/commit/2c820712e3015186464131dfd1b98e27d73f5ad5))
+- **Navigation:** export component ([9c516ab](https://github.com/tillersystems/Stardust/commit/9c516abdeb206e616ef8988990962efa8fee9182))
+- **Select:** reduce padding ([59acdb4](https://github.com/tillersystems/Stardust/commit/59acdb4c4a64092cc8d560a0172a1ee3cd44fb40))
+
 ## [4.13.2](https://github.com/tillersystems/Stardust/compare/v4.13.1...v4.13.2) (2019-12-31)
 
 ### Bug Fixes
