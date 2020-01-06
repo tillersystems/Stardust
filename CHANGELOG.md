@@ -1,3 +1,10 @@
+## [4.13.4](https://github.com/tillersystems/Stardust/compare/v4.13.3...v4.13.4) (2020-01-06)
+
+### Bug Fixes
+
+- **Navigation:** add possibility to custom style ([c00c68f](https://github.com/tillersystems/Stardust/commit/c00c68f59a8459b0d4fd5933161063704a45e8b6))
+- **Select:** multiple fixes ([#950](https://github.com/tillersystems/Stardust/issues/950)) ([8afaa19](https://github.com/tillersystems/Stardust/commit/8afaa19d8ea1e36bc028ad1437726462dc1cbaed))
+
 ## [4.13.3](https://github.com/tillersystems/Stardust/compare/v4.13.2...v4.13.3) (2020-01-02)
 
 ### Bug Fixes
