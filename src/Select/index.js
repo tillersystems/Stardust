@@ -203,7 +203,7 @@ class Select extends PureComponent {
     const { contentWidth } = this.state;
 
     const isOpen = this.getControllableValue('isOpen');
-    const values = this.getControllableValue('values');
+    const values = this.getControllableValue('values') || [];
 
     const Header = HeaderComponent || DefaultHeader;
     const selectOptions = options || transformChildrenToOptions(children);
