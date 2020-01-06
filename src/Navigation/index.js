@@ -9,9 +9,9 @@ import { Nav, Item } from './elements';
  *
  * @return {jsx}
  */
-const Navigation = ({ children, isFluid, isVertical }) => {
+const Navigation = ({ children, className, isFluid, isVertical }) => {
   return (
-    <Nav isVertical={isVertical} data-testid="navigation">
+    <Nav className={className} isVertical={isVertical} data-testid="navigation">
       {Children.map(children, ({ props: { isActive, ...props }, type }, index) => (
         <Item
           isFluid={isFluid}
@@ -31,10 +31,12 @@ const Navigation = ({ children, isFluid, isVertical }) => {
 /**
  * PropTypes Validation
  */
-const { node, bool } = PropTypes;
+const { node, bool, string } = PropTypes;
 Navigation.propTypes = {
   /** Usually you should pass link as child but Navigation accept all tag's type. */
   children: node,
+  /** ClassName needed by styled components */
+  className: string,
   /** Does items take all remaining space or not. */
   isFluid: bool,
   /** Does items are rendered in vertical or horizontal display. */
@@ -46,6 +48,7 @@ Navigation.propTypes = {
  */
 Navigation.defaultProps = {
   children: null,
+  className: '',
   isFluid: false,
   isVertical: false,
 };
