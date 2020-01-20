@@ -1,3 +1,16 @@
+## [4.13.5](https://github.com/tillersystems/Stardust/compare/v4.13.4...v4.13.5) (2020-01-20)
+
+### Bug Fixes
+
+- **Button:** Reword danger to failure ([713af96](https://github.com/tillersystems/Stardust/commit/713af96aa6385c17454c9d243b184c1db951a0d6))
+- **Input/Number:** pass all props to inner TextInput ([90b01da](https://github.com/tillersystems/Stardust/commit/90b01da3970b4324990a4cd2fea3e032514638d8))
+- **NumberInput:** Allow controlled value ([fe8f802](https://github.com/tillersystems/Stardust/commit/fe8f8026fe5e240acc1f31d31036d5c655259a21))
+- **Select:** Add button type ([81ecc8d](https://github.com/tillersystems/Stardust/commit/81ecc8d8bf1489ec827f459801b27e0e27f720fd))
+
+### Features
+
+- **Icon:** add refresh icon ([611f3f3](https://github.com/tillersystems/Stardust/commit/611f3f3faec7703035becb07c2dc1a8a4544aad3))
+
 ## [4.13.4](https://github.com/tillersystems/Stardust/compare/v4.13.3...v4.13.4) (2020-01-06)
 
 ### Bug Fixes
