@@ -90,6 +90,7 @@ exports[`<Select /> should render without a problem 1`] = `
       aria-haspopup="true"
       class="c2"
       data-testid="select-button"
+      type="button"
     >
       <div
         class="c3"
@@ -193,6 +194,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
       class="c2"
       data-testid="select-button"
       disabled=""
+      type="button"
     >
       <div
         class="c3"

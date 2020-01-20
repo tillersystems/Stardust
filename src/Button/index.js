@@ -75,7 +75,7 @@ Button.propTypes = {
   /**
    * The base styling to apply to the button
    */
-  appearance: oneOf(['default', 'primary', 'secondary', 'success', 'danger', 'google']),
+  appearance: oneOf(['default', 'primary', 'secondary', 'success', 'failure', 'google']),
 
   /**
    * Anything that can be rendered: numbers, strings, elements or an array (or fragment)

@@ -229,6 +229,7 @@ class Select extends PureComponent {
             overflow: 'hidden',
             originX: '50%',
             originY: '0%',
+            zIndex: 1000,
             ...contentWrapperStyle,
           }}
           isOpen={isOpen}

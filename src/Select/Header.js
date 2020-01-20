@@ -23,6 +23,7 @@ const Header = ({ disabled, onClick, isOpen, placeholder, children }) => {
 
   return (
     <HeaderButton
+      type="button"
       disabled={disabled}
       onClick={onClick}
       aria-haspopup="true"

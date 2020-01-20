@@ -34,6 +34,12 @@ class NumberInput extends PureComponent {
    * Handles mounting step in component's lifecycle.
    */
   componentDidMount() {
+    const { value } = this.props;
+    if (value) {
+      this.setState({ rawValue: `${value}` }, () => {
+        this.updateValue(value);
+      });
+    }
     document.addEventListener('keydown', this.handleKeyDown);
   }
 
@@ -66,7 +72,7 @@ class NumberInput extends PureComponent {
    */
   isNumber = rawValue => {
     const { separator } = this.props;
-    return new RegExp(`^\\d+(${escapeSeparator(separator)}\\d+)?$`).test(rawValue);
+    return new RegExp(`^-?\\d+(${escapeSeparator(separator)}\\d+)?$`).test(rawValue);
   };
 
   /**
@@ -103,7 +109,7 @@ class NumberInput extends PureComponent {
     const { decimals, separator } = this.props;
 
     return rawValue
-      ? (parsedValue ? parsedValue.toFixed(decimals) : rawValue).replace('.', separator)
+      ? (parsedValue !== null ? parsedValue.toFixed(decimals) : rawValue).replace('.', separator)
       : rawValue;
   };
 
@@ -113,19 +119,15 @@ class NumberInput extends PureComponent {
    * @param {string} rawValue - The new value of the inner TextInput.
    */
   handleChange = rawValue => {
-    const { value, separator, onChange } = this.props;
+    const { separator } = this.props;
 
     const parsedValue = this.isNumber(rawValue)
       ? parseFloat(rawValue.replace(separator, '.'))
       : null;
 
-    if (value && this.isNumber(rawValue)) {
-      onChange(parsedValue);
-    } else {
-      this.setState({ rawValue }, () => {
-        this.updateValue(parsedValue);
-      });
-    }
+    this.setState({ rawValue }, () => {
+      this.updateValue(parsedValue);
+    });
   };
 
   /**
@@ -157,10 +159,10 @@ class NumberInput extends PureComponent {
    */
   handleKeyDown = event => {
     const { hasFocus, parsedValue } = this.state;
-    const { value, step } = this.props;
+    const { step } = this.props;
 
     // Checks if the input has focus since we connect the event listener to the window.
-    if (!value && hasFocus) {
+    if (hasFocus) {
       if (event.code === 'ArrowUp') {
         this.updateValue(parsedValue + step);
       }
@@ -191,13 +193,16 @@ class NumberInput extends PureComponent {
       success,
       warning,
       error,
+      placeholder,
+      ...rest
     } = this.props;
 
     const hasValidValue = this.isNumber(rawValue);
 
     return (
       <TextInput
-        {...this.props}
+        {...rest}
+        placeholder={placeholder}
         width={width}
         fluid={fluid}
         id={id}
@@ -295,6 +300,11 @@ NumberInput.propTypes = {
   onFocus: func,
 
   /**
+   * Placeholder text
+   */
+  placeholder: string,
+
+  /**
    * What will separate the integer part from the decimals. Default value depends from user browser
    */
   separator: string,
@@ -360,6 +370,7 @@ NumberInput.defaultProps = {
   onBlur: () => {},
   onChange: () => {},
   onFocus: () => {},
+  placeholder: '0',
   separator: getLocaleSeparator(),
   step: 1,
   success: false,
