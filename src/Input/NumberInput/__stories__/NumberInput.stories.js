@@ -119,6 +119,7 @@ storiesOf('Input - NumberInput', module)
     return (
       <Wrapper>
         <NumberInput
+          placeholder="0"
           width={`${widthValue}rem`}
           fluid={fluidValue}
           info={infoValue}
@@ -163,7 +164,7 @@ storiesOf('Input - NumberInput', module)
       10,
       {
         range: true,
-        min: 0,
+        min: -10,
         max: 100,
         step: 0.5,
       },
@@ -173,6 +174,7 @@ storiesOf('Input - NumberInput', module)
     return (
       <Wrapper>
         <NumberInput
+          placeholder="type a number"
           width={`${widthValue}rem`}
           fluid={fluidValue}
           info={infoValue}
@@ -219,6 +221,7 @@ storiesOf('Input - NumberInput', module)
     return (
       <Wrapper>
         <NumberInput
+          placeholder="0"
           width={`${widthValue}rem`}
           fluid={fluidValue}
           info={infoValue}
@@ -266,6 +269,7 @@ storiesOf('Input - NumberInput', module)
     return (
       <Wrapper>
         <NumberInput
+          placeholder="0"
           width={`${widthValue}rem`}
           fluid={fluidValue}
           info={infoValue}
