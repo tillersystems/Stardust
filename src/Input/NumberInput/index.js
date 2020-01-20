@@ -197,6 +197,7 @@ class NumberInput extends PureComponent {
 
     return (
       <TextInput
+        {...this.props}
         width={width}
         fluid={fluid}
         id={id}
