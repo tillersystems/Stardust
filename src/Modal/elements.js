@@ -11,7 +11,7 @@ export const Container = styled(motion.div)`
   bottom: 0;
   left: 0;
   right: 0;
-
+  z-index: 100;
   width: 100%;
 
   /* For small mobile devices */

@@ -33,12 +33,13 @@ class Modal extends PureComponent {
    * Render function
    */
   render() {
-    const { active, width, height, padding, onOverlayClick, children } = this.props;
+    const { className, active, width, height, padding, onOverlayClick, children } = this.props;
     return (
       <Portal>
         <AnimatePresence>
           {active && (
             <Container
+              className={className}
               key="Container"
               initial="hidden"
               animate="visible"
@@ -83,6 +84,11 @@ Modal.propTypes = {
   children: node,
 
   /**
+   * Classname of Modal container
+   */
+  className: string,
+
+  /**
    * Modal height
    */
   height: string,
@@ -109,6 +115,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   active: false,
   children: null,
+  className: null,
   height: '39rem',
   onOverlayClick: () => {},
   padding: Theme.dimensions.medium,
