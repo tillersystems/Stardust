@@ -1,3 +1,9 @@
+## [4.13.6](https://github.com/tillersystems/Stardust/compare/v4.13.5...v4.13.6) (2020-01-21)
+
+### Bug Fixes
+
+- **Modal:** added className and zIndex to container ([#953](https://github.com/tillersystems/Stardust/issues/953)) ([6764ffd](https://github.com/tillersystems/Stardust/commit/6764ffdcc5a6c8a12fbf66b8c5a9fa0bbf385832))
+
 ## [4.13.5](https://github.com/tillersystems/Stardust/compare/v4.13.4...v4.13.5) (2020-01-20)
 
 ### Bug Fixes
