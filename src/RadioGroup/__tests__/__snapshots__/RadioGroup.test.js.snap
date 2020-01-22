@@ -32,7 +32,22 @@ exports[`<RadioGroup /> should render as row 1`] = `
   padding: 0.6rem;
 }
 
-.c2 {
+.c1 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,6 +62,7 @@ exports[`<RadioGroup /> should render as row 1`] = `
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -55,11 +71,40 @@ exports[`<RadioGroup /> should render as row 1`] = `
   transition: background-color ease 0.25s;
 }
 
-.c3 {
-  display: block;
+.c3.checked {
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c3.checked:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
 }
 
@@ -69,7 +114,7 @@ exports[`<RadioGroup /> should render as row 1`] = `
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -78,18 +123,17 @@ exports[`<RadioGroup /> should render as row 1`] = `
         type="radio"
         value="artichoke"
       />
-    </div>
-    <label
-      class="c3"
-      for="artichoke"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       artichoke
     </label>
   </div>
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -98,18 +142,17 @@ exports[`<RadioGroup /> should render as row 1`] = `
         type="radio"
         value="beetroot"
       />
-    </div>
-    <label
-      class="c3"
-      for="beetroot"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       beetroot
     </label>
   </div>
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -118,11 +161,10 @@ exports[`<RadioGroup /> should render as row 1`] = `
         type="radio"
         value="pumpkin"
       />
-    </div>
-    <label
-      class="c3"
-      for="pumpkin"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       pumpkin
     </label>
   </div>
@@ -158,7 +200,22 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
   padding: 0.6rem;
 }
 
-.c2 {
+.c1 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -173,6 +230,7 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -181,11 +239,40 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
   transition: background-color ease 0.25s;
 }
 
-.c3 {
-  display: block;
+.c3.checked {
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c3.checked:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
 }
 
@@ -195,7 +282,7 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -204,18 +291,17 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
         type="radio"
         value="artichoke"
       />
-    </div>
-    <label
-      class="c3"
-      for="artichoke"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       artichoke
     </label>
   </div>
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -224,18 +310,17 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
         type="radio"
         value="beetroot"
       />
-    </div>
-    <label
-      class="c3"
-      for="beetroot"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       beetroot
     </label>
   </div>
   <div
     class="c1"
   >
-    <div
+    <label
       class="c2"
     >
       <input
@@ -244,11 +329,10 @@ exports[`<RadioGroup /> should render without a problem 1`] = `
         type="radio"
         value="pumpkin"
       />
-    </div>
-    <label
-      class="c3"
-      for="pumpkin"
-    >
+      <div
+        class="c3"
+        data-testid="styled-radio"
+      />
       pumpkin
     </label>
   </div>

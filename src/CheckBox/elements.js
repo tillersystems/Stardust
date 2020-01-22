@@ -2,10 +2,12 @@ import styled, { css } from 'styled-components';
 import { hideVisually, transparentize } from 'polished';
 import Icon from '../Icon';
 
-// Hide checkbox visually but remain accessible to screen readers.
-// See: https://polished.js.org/docs/#hidevisually
-export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  ${hideVisually()}
+export const Wrapper = styled.div`
+  width: 100%;
+
+  input {
+    ${hideVisually()}
+  }
 `;
 
 export const StyledCheckbox = styled.div`
@@ -18,15 +20,8 @@ export const StyledCheckbox = styled.div`
 
   margin-right: 1.2rem;
 
-  background: ${({ theme: { palette }, isChecked }) =>
-    isChecked
-      ? `${palette.primary.default}
-        linear-gradient(
-          0deg,
-          ${palette.whiteOpacity(0)} 0%,
-          ${palette.whiteOpacity(0.1)} 100%
-        )`
-      : palette.white};
+  color: ${({ theme: { palette } }) => palette.white};
+  background: ${({ theme: { palette } }) => palette.white};
   border: 1px solid
     ${({ theme: { palette }, isChecked }) => (isChecked ? palette.primary.dark : palette.lightGrey)};
   border-radius: ${({ theme: { dimensions } }) => `${dimensions.radiusInt}rem`};
@@ -35,13 +30,24 @@ export const StyledCheckbox = styled.div`
 
   transition: all 150ms;
 
-  ${HiddenCheckbox}:focus + & {
+  &.checked {
+    background: ${({ theme: { palette } }) =>
+      `${palette.primary.default} linear-gradient(0deg, ${palette.whiteOpacity(
+        0,
+      )} 0%, ${palette.whiteOpacity(0.1)} 100%)`};
+
+    ${Icon} {
+      visibility: visible;
+    }
+  }
+
+  input:focus + & {
     box-shadow: 0 0 0 2px
       ${({ theme: { palette } }) => transparentize(0.6, palette.primary.default)};
   }
 
   ${Icon} {
-    visibility: ${({ isChecked }) => (isChecked ? 'visible' : 'hidden')};
+    visibility: hidden;
   }
 `;
 

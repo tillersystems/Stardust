@@ -14,7 +14,22 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   padding: 0.6rem;
 }
 
-.c1 {
+.c0 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,6 +44,7 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -37,11 +53,40 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   transition: background-color ease 0.25s;
 }
 
-.c2 {
-  display: block;
+.c2.checked {
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c2.checked:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
 }
 
@@ -49,7 +94,7 @@ exports[`<RadioButton /> should render without a problem 1`] = `
   <div
     class="c0"
   >
-    <div
+    <label
       class="c1"
     >
       <input
@@ -57,11 +102,10 @@ exports[`<RadioButton /> should render without a problem 1`] = `
         type="radio"
         value=""
       />
-    </div>
-    <label
-      class="c2"
-      for="test"
-    >
+      <div
+        class="c2"
+        data-testid="styled-radio"
+      />
       test
     </label>
   </div>
@@ -83,7 +127,22 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   cursor: not-allowed;
 }
 
-.c1 {
+.c0 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,6 +157,7 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -107,11 +167,40 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   opacity: 0.4;
 }
 
-.c2 {
-  display: block;
+.c2.checked {
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c2.checked:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
   opacity: 0.4;
   cursor: not-allowed;
@@ -121,7 +210,7 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   class="c0"
   disabled=""
 >
-  <div
+  <label
     class="c1"
     disabled=""
   >
@@ -131,12 +220,11 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
       type="radio"
       value="apple"
     />
-  </div>
-  <label
-    class="c2"
-    disabled=""
-    for="test"
-  >
+    <div
+      class="c2"
+      data-testid="styled-radio"
+      disabled=""
+    />
     test
   </label>
 </div>
@@ -156,7 +244,22 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   padding: 0.6rem;
 }
 
-.c1 {
+.c0 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,6 +274,7 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -179,18 +283,47 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
   transition: background-color ease 0.25s;
 }
 
-.c2 {
-  display: block;
+.c2.checked {
+  border: 1px solid #1873a0;
+  background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
+  box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
+  -webkit-transition: border ease 0.25s;
+  transition: border ease 0.25s;
+  position: relative;
+}
+
+.c2.checked:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  background-color: hsl(0,100%,100%);
+  border-radius: 50%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
 }
 
 <div
   class="c0"
 >
-  <div
+  <label
     class="c1"
   >
     <input
@@ -198,11 +331,10 @@ exports[`<RadioButton /> should render without a problem when radio is not selec
       type="radio"
       value="apple"
     />
-  </div>
-  <label
-    class="c2"
-    for="test"
-  >
+    <div
+      class="c2"
+      data-testid="styled-radio"
+    />
     test
   </label>
 </div>
@@ -223,7 +355,22 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   cursor: not-allowed;
 }
 
-.c1 {
+.c0 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,6 +385,7 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
@@ -245,6 +393,9 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
   opacity: 0.4;
+}
+
+.c2.checked {
   border: 1px solid #1873a0;
   background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
@@ -253,7 +404,7 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   position: relative;
 }
 
-.c1:after {
+.c2.checked:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -267,22 +418,29 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   border-radius: 50%;
 }
 
-.c2 {
-  display: block;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
   opacity: 0.4;
   cursor: not-allowed;
-  color: hsl(213,17%,20%);
+  color: hsl(200,74%,46%);
+  font-weight: 500;
 }
 
 <div
   class="c0"
   disabled=""
 >
-  <div
+  <label
     class="c1"
     disabled=""
   >
@@ -293,12 +451,11 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
       type="radio"
       value="apple"
     />
-  </div>
-  <label
-    class="c2"
-    disabled=""
-    for="test"
-  >
+    <div
+      class="c2 checked"
+      data-testid="styled-radio"
+      disabled=""
+    />
     test
   </label>
 </div>
@@ -318,7 +475,22 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   padding: 0.6rem;
 }
 
-.c1 {
+.c0 > input {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -333,12 +505,16 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   align-items: center;
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 50%;
   background: linear-gradient( 0deg,hsl(240,33%,99%) 0%,hsl(0,100%,100%) 100% );
   box-shadow: inset 0 2px 0 0 hsla(0,100%,100%,0.05),0 1px 1px 0 hsl(240,33%,99%);
   -webkit-transition: background-color ease 0.25s;
   transition: background-color ease 0.25s;
+}
+
+.c2.checked {
   border: 1px solid #1873a0;
   background: hsl(200,74%,46%) linear-gradient( 0deg,hsla(0,100%,100%,0) 0%,hsla(0,100%,100%,0.1) 100% );
   box-shadow: inset 0 0.2rem 0 0 hsla(0,100%,100%,0.1);
@@ -347,7 +523,7 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   position: relative;
 }
 
-.c1:after {
+.c2.checked:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -361,19 +537,26 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
   border-radius: 50%;
 }
 
-.c2 {
-  display: block;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   position: relative;
-  margin-left: 0.7rem;
   color: hsl(207,13%,45%);
-  color: hsl(213,17%,20%);
+  color: hsl(200,74%,46%);
+  font-weight: 500;
 }
 
 <div
   class="c0"
 >
-  <div
+  <label
     class="c1"
   >
     <input
@@ -382,11 +565,10 @@ exports[`<RadioButton /> should render without a problem when radio is selected 
       type="radio"
       value="apple"
     />
-  </div>
-  <label
-    class="c2"
-    for="test"
-  >
+    <div
+      class="c2 checked"
+      data-testid="styled-radio"
+    />
     test
   </label>
 </div>

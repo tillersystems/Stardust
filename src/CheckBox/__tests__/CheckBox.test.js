@@ -20,11 +20,7 @@ describe('<CheckBox />', () => {
     expect(labelNode).toHaveStyleRule('color', Theme.palette.primary.default);
     expect(labelNode).toHaveStyleRule('font-weight', JSON.stringify(Theme.fonts.weight.thick));
 
-    expect(styledCheckBoxNode).toHaveStyleRule('border', `1px solid ${Theme.palette.primary.dark}`);
-    expect(styledCheckBoxNode).toHaveStyleRule(
-      'background',
-      'hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% )',
-    );
+    expect(styledCheckBoxNode).toHaveClass('checked');
   });
 
   test('should be disabled', () => {
@@ -46,11 +42,7 @@ describe('<CheckBox />', () => {
     expect(labelNode).toHaveStyleRule('color', Theme.palette.primary.default);
     expect(labelNode).toHaveStyleRule('font-weight', JSON.stringify(Theme.fonts.weight.thick));
 
-    expect(styledCheckBoxNode).toHaveStyleRule('border', `1px solid ${Theme.palette.primary.dark}`);
-    expect(styledCheckBoxNode).toHaveStyleRule(
-      'background',
-      'hsl(200,74%,46%) linear-gradient( 0deg, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,0.1) 100% )',
-    );
+    expect(styledCheckBoxNode).toHaveClass('checked');
 
     fireEvent.click(labelNode);
 
@@ -71,15 +63,13 @@ describe('<CheckBox />', () => {
 
     expect(labelNode).toHaveStyleRule('color', Theme.palette.spaceGrey);
 
-    expect(styledCheckBoxNode).toHaveStyleRule('border', `1px solid ${Theme.palette.lightGrey}`);
-    expect(styledCheckBoxNode).toHaveStyleRule('background', Theme.palette.white);
+    expect(styledCheckBoxNode).not.toHaveClass('checked');
 
     fireEvent.click(labelNode);
 
     expect(labelNode).toHaveStyleRule('color', Theme.palette.spaceGrey);
 
-    expect(styledCheckBoxNode).toHaveStyleRule('border', `1px solid ${Theme.palette.lightGrey}`);
-    expect(styledCheckBoxNode).toHaveStyleRule('background', Theme.palette.white);
+    expect(styledCheckBoxNode).not.toHaveClass('checked');
   });
 
   test('should call componentDidUpdate', () => {

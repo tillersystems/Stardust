@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
+import { memoItem } from '../helpers';
 import { SimpleOption as OptionElement } from '../elements';
 
-const SimpleOption = ({ className, disabled, isChecked, label, onChange, value, values }) => {
+const SimpleOption = ({ className, disabled, label, onChange, value, isSelected }) => {
+  const handleClick = useCallback(() => !disabled && onChange(value), [disabled, onChange, value]);
+
   return (
     <OptionElement
+      role="menuitem"
       className={className}
       disabled={disabled}
-      isChecked={isChecked !== null ? isChecked : values.includes(value)}
-      onClick={() => !disabled && onChange(value)}
+      isChecked={isSelected}
+      onClick={handleClick}
     >
       {label}
     </OptionElement>
   );
 };
 
-const { array, bool, func, node, string } = PropTypes;
+const { bool, func, node, string } = PropTypes;
 
 /**
  *
@@ -26,10 +30,9 @@ SimpleOption.propTypes = {
   value: node.isRequired,
   className: string,
   disabled: bool,
-  isChecked: bool,
+  isSelected: bool,
   label: node.isRequired,
   onChange: func.isRequired,
-  values: array,
 };
 
 /**
@@ -38,8 +41,7 @@ SimpleOption.propTypes = {
 SimpleOption.defaultProps = {
   className: '',
   disabled: false,
-  values: [],
-  isChecked: null,
+  isSelected: null,
 };
 
-export default SimpleOption;
+export default memoItem(SimpleOption);

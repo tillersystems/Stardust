@@ -43,27 +43,35 @@ describe('<OptionsList />', () => {
         values={[]}
       />,
     );
-    const searchBar = getByTestId('input-container');
-    const triceratops = queryByText(/triceratops/i);
+    const searchBarInput = getByTestId('input');
 
-    expect(searchBar).toBeInTheDocument();
+    act(() => {
+      fireEvent.change(searchBarInput, { target: { value: 'Diplo' } });
+    });
+
+    const triceratops = queryByText(/triceratops/i);
+    const diplodocus = queryByText(/diplodocus/i);
+    expect(searchBarInput).toBeInTheDocument();
     expect(triceratops).not.toBeInTheDocument();
+    expect(diplodocus).toBeInTheDocument();
   });
 
   test('should display radio buttons if allowMultiple is false', () => {
-    const { container } = render(<OptionsList options={options} values={[]} />);
-    const radio = container.querySelector('input[type="radio"]');
-    const checkbox = container.querySelector('input[type="checkbox"]');
-    expect(radio).toBeInTheDocument();
-    expect(checkbox).not.toBeInTheDocument();
+    const { queryAllByTestId } = render(<OptionsList options={options} values={[]} />);
+    const radio = queryAllByTestId('styled-radio');
+    const checkbox = queryAllByTestId('styled-checkBox');
+    expect(radio).toHaveLength(options.length);
+    expect(checkbox).toHaveLength(0);
   });
 
   test('should display checkboxes if allowMultiple is true', () => {
-    const { container } = render(<OptionsList allowMultiple options={options} values={[]} />);
-    const radio = container.querySelector('input[type="radio"]');
-    const checkbox = container.querySelector('input[type="checkbox"]');
-    expect(radio).not.toBeInTheDocument();
-    expect(checkbox).toBeInTheDocument();
+    const { queryAllByTestId } = render(
+      <OptionsList allowMultiple options={options} values={[]} />,
+    );
+    const radio = queryAllByTestId('styled-radio');
+    const checkbox = queryAllByTestId('styled-checkBox');
+    expect(radio).toHaveLength(0);
+    expect(checkbox).toHaveLength(options.length);
   });
 
   test('should call onChange method on checkbox click', () => {
@@ -105,7 +113,7 @@ describe('<OptionsList />', () => {
     // eslint-disable-next-line react/prop-types
     const NoResult = () => <div>You bred raptors ?</div>;
 
-    const { queryByText } = render(
+    const { getByTestId, queryByText } = render(
       <OptionsList
         onChange={onChange}
         options={options}
@@ -114,6 +122,12 @@ describe('<OptionsList />', () => {
         searchMethod={() => []}
       />,
     );
+
+    const searchBarInput = getByTestId('input');
+
+    act(() => {
+      fireEvent.change(searchBarInput, { target: { value: 'Diplo' } });
+    });
 
     const noResultMessage = queryByText(/bred raptors/i);
     expect(noResultMessage).toBeInTheDocument();

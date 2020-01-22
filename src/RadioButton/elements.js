@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { hideVisually } from 'polished';
 
 /**
  * Wrapper for the actual check box and its label.
@@ -8,9 +9,7 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-
   cursor: pointer;
-
   padding: 0.6rem;
 
   ${({ disabled }) =>
@@ -18,20 +17,25 @@ export const Wrapper = styled.div`
     css`
       cursor: not-allowed;
     `};
+
+  > input {
+    ${hideVisually()}
+  }
 `;
 
 /**
- * Container of the actual check box.
+ * StyledRadio of the actual check box.
  *
  * @return {jsx}
  */
-export const Container = styled.div`
+export const StyledRadio = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 1.6rem;
   height: 1.6rem;
+  margin-right: 1.2rem;
 
   border: 1px solid ${({ theme: { palette } }) => palette.lightGrey};
   border-radius: 50%;
@@ -52,35 +56,29 @@ export const Container = styled.div`
       opacity: 0.4;
     `};
 
-  ${({ checked }) =>
-    checked &&
-    css`
-      border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
-      background: ${({ theme: { palette } }) => palette.primary.default}
-        linear-gradient(
-          0deg,
-          ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
-          ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
-        );
-      box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
-      transition: border ease 0.25s;
-      position: relative;
-    `};
+  &.checked {
+    border: 1px solid ${({ theme: { palette } }) => palette.primary.dark};
+    background: ${({ theme: { palette } }) => palette.primary.default}
+      linear-gradient(
+        0deg,
+        ${({ theme: { palette } }) => palette.whiteOpacity(0)} 0%,
+        ${({ theme: { palette } }) => palette.whiteOpacity(0.1)} 100%
+      );
+    box-shadow: inset 0 0.2rem 0 0 ${({ theme: { palette } }) => palette.whiteOpacity(0.1)};
+    transition: border ease 0.25s;
+    position: relative;
 
-  &:after {
-    ${({ checked }) =>
-      checked &&
-      css`
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 0.6rem;
-        height: 0.6rem;
-        transform: translate3d(-50%, -50%, 0);
-        background-color: ${({ theme: { palette } }) => palette.white};
-        border-radius: 50%;
-      `};
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0.6rem;
+      height: 0.6rem;
+      transform: translate3d(-50%, -50%, 0);
+      background-color: ${({ theme: { palette } }) => palette.white};
+      border-radius: 50%;
+    }
   }
 `;
 
@@ -90,13 +88,13 @@ export const Container = styled.div`
  * @return {jsx}
  */
 export const Label = styled.label`
-  display: block;
+  display: flex;
+  align-items: center;
 
   cursor: pointer;
 
   position: relative;
 
-  margin-left: ${({ theme: { dimensions } }) => dimensions.small};
   color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   ${({ disabled }) =>
@@ -109,6 +107,7 @@ export const Label = styled.label`
   ${({ checked }) =>
     checked &&
     css`
-      color: ${({ theme: { palette } }) => palette.darkBlue};
+      color: ${({ theme: { palette } }) => palette.primary.default};
+      font-weight: ${({ theme: { fonts } }) => fonts.weight.thick};
     `};
 `;
