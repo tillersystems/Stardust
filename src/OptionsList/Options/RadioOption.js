@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import { RadioOption as OptionElement, Radio } from '../elements';
+import RadioButton from '../../RadioButton';
 
-const RadioOption = ({ className, disabled, label, onChange, value, values }) => (
-  <OptionElement role="menuitem" className={className} onClick={() => onChange(value)}>
-    <Radio disabled={disabled} value={value} selectedValue={values[0]}>
+import { memoItem } from '../helpers';
+import { RadioOption as OptionElement } from '../elements';
+
+const RadioOption = ({ className, disabled, label, onChange, value, isSelected }) => {
+  const handleClick = useCallback(() => !disabled && onChange(value), [disabled, onChange, value]);
+
+  return (
+    <OptionElement disabled={disabled} className={className} onClick={handleClick}>
+      <RadioButton.Bullet isChecked={isSelected} />
       {label}
-    </Radio>
-  </OptionElement>
-);
+    </OptionElement>
+  );
+};
 
-const { array, bool, func, node, string } = PropTypes;
+const { bool, func, node, string } = PropTypes;
 
 /**
  *
@@ -23,7 +29,7 @@ RadioOption.propTypes = {
   label: node.isRequired,
   onChange: func.isRequired,
   value: node.isRequired,
-  values: array.isRequired,
+  isSelected: bool,
 };
 
 /**
@@ -32,6 +38,7 @@ RadioOption.propTypes = {
 RadioOption.defaultProps = {
   className: '',
   disabled: false,
+  isSelected: false,
 };
 
-export default RadioOption;
+export default memoItem(RadioOption);

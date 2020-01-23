@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Container, Label } from './elements';
+import Bullet from './Bullet';
+import { Wrapper, Label } from './elements';
 
 /**
  * A Radio represents a single value from multiple options, so a Radio should be used with at least another one.
@@ -18,25 +19,29 @@ const RadioButton = ({
   selectedValue,
   value,
 }) => {
-  const checked = selectedValue === value;
+  const isChecked = selectedValue === value;
+  const handleChange = event => onChange(event.target.value);
   return (
-    <Wrapper disabled={disabled} onClick={() => onChange(value)} className={className}>
-      <Container checked={checked} disabled={disabled}>
+    <Wrapper disabled={disabled} className={className}>
+      <Label checked={isChecked} disabled={disabled}>
         <input
-          defaultChecked={checked}
           type="radio"
+          defaultChecked={isChecked}
           name={name}
           value={value}
+          onChange={handleChange}
           id={id}
           disabled={disabled}
         />
-      </Container>
-      <Label htmlFor={id} checked={checked} disabled={disabled}>
+
+        <Bullet disabled={disabled} isChecked={isChecked} name={name} value={value} />
         {children}
       </Label>
     </Wrapper>
   );
 };
+
+RadioButton.Bullet = Bullet;
 
 const { bool, func, node, string } = PropTypes;
 

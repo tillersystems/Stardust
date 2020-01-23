@@ -22,15 +22,7 @@ import { SearchInputContainer, SearchInput } from './elements';
 const SearchBar = ({ className, placeholder, value, onChange }) => (
   <SearchInputContainer>
     <SearchInput className={className}>
-      <TextInput
-        ghost
-        data-test="search-input"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        fluid
-        search
-      />
+      <TextInput ghost value={value} onChange={onChange} placeholder={placeholder} fluid search />
     </SearchInput>
   </SearchInputContainer>
 );

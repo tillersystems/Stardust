@@ -36,6 +36,16 @@ storiesOf('RadioButton', module)
           >
             apple
           </RadioButton>
+          <RadioButton
+            disabled={!enabledValue}
+            selectedValue={selectedValue}
+            key="banana"
+            id="banana"
+            name="fruit"
+            value="banana"
+          >
+            banana
+          </RadioButton>
         </State>
       </Wrapper>
     );
@@ -43,10 +53,10 @@ storiesOf('RadioButton', module)
   .add('controlled', () => {
     const options = {
       apple: 'apple',
-      watermelon: 'watermelon',
+      banana: 'banana',
       apricot: 'apricot',
     };
-    const selectedValue = select('Selected value', options, 'watermelon', 'Props');
+    const selectedValue = select('Selected value', options, 'banana', 'Props');
     const enabledValue = boolean('Enabled', true, 'Props');
 
     return (
@@ -61,6 +71,16 @@ storiesOf('RadioButton', module)
             value="apple"
           >
             apple
+          </RadioButton>
+          <RadioButton
+            disabled={!enabledValue}
+            selectedValue={selectedValue}
+            key="banana"
+            id="banana"
+            name="fruit"
+            value="banana"
+          >
+            banana
           </RadioButton>
         </State>
       </Wrapper>

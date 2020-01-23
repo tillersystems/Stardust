@@ -15,17 +15,9 @@ const store = new Store({
   selectedStores: [],
 });
 
-const options = [
-  { value: 0, label: 'Street Bangkok Bastille', disabled: false },
-  { value: 1, label: 'Street Bangkok Bastille', disabled: false },
-  { value: 2, label: 'Street Bangkok Marais', disabled: false },
-  { value: 3, label: 'Street Bangkok Canal', disabled: false },
-  { value: 4, label: 'Street Bangkok Montorgeuil', disabled: false },
-  { value: 5, label: 'Street Bangkok Sentier', disabled: false },
-  { value: 6, label: 'Street Bangkok St louis', disabled: false },
-  { value: 7, label: 'Street Bangkok St Michel', disabled: false },
-  { value: 8, label: 'Street Bangkok Oberkampf', disabled: false },
-];
+const options = Array(200)
+  .fill()
+  .map((_, index) => ({ value: index, label: `Label ${index}`, disabled: false }));
 
 storiesOf('OptionsList', module)
   .addDecorator(withKnobs)

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { transparentize } from 'polished';
-import RadioButton from '../RadioButton';
 
 export const Container = styled.div`
   position: relative;
@@ -24,9 +23,7 @@ export const Option = styled.li`
   background-color: ${({ isChecked, theme: { palette } }) =>
     isChecked ? palette.veryLightGrey : 'transparent'};
 
-  label {
-    color: ${({ theme: { palette } }) => palette.spaceGrey};
-  }
+  color: ${({ theme: { palette } }) => palette.spaceGrey};
 
   :hover {
     background: ${({ theme: { palette } }) => palette.veryLightGrey};
@@ -34,39 +31,21 @@ export const Option = styled.li`
 `;
 
 export const CheckboxOption = styled(Option)`
-  label {
-    padding: 0.8rem 1.6rem;
-    font-weight: normal;
-  }
+  padding: 0.8rem 1.6rem;
 `;
 
 export const RadioOption = styled(Option)`
   padding: 0.8rem 1.6rem;
-
-  label {
-    margin-left: 1.2rem;
-  }
-
-  &:first-child {
-    padding-top: 1.2rem;
-  }
-
-  &:last-child {
-    padding-bottom: 1.2rem;
-  }
-`;
-
-export const Radio = styled(RadioButton)`
-  padding: 0;
 `;
 
 export const SimpleOption = styled(Option)`
   padding: 0.8rem 1.6rem;
 
   color: ${({ isChecked, theme: { palette } }) =>
-    isChecked ? palette.primary.default : palette.darkGrey};
+    isChecked ? palette.primary.default : palette.spaceGrey};
 
-  background-color: transparent;
+  background-color: ${({ isChecked, theme: { palette } }) =>
+    isChecked ? palette.veryLightGrey : 'transparent'};
 `;
 
 export const NoResultDefaultComponent = styled.div`

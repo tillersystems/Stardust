@@ -1,11 +1,10 @@
 /* eslint-disable react/require-default-props */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import Icon from '../Icon';
-import Theme from '../Theme';
-import { Label, HiddenCheckbox, StyledCheckbox } from './elements';
+import { Wrapper, Label } from './elements';
+
+import Bullet from './Bullet';
 
 /**
  * A CheckBox depicts a binary state if used alone, just as a ToggleButton, the difference being
@@ -53,7 +52,6 @@ class CheckBox extends PureComponent {
    * fired when checkbox is triggered and state changes.
    */
   handleChange = event => {
-    event.persist();
     const { onChange, isDisabled } = this.props;
 
     if (isDisabled) {
@@ -65,6 +63,7 @@ class CheckBox extends PureComponent {
     if (this.isControlled('isChecked')) {
       onChange && onChange(!isChecked);
     } else {
+      event.persist();
       this.setState({ isChecked: !isChecked }, () => {
         onChange && onChange(event);
       });
@@ -81,25 +80,26 @@ class CheckBox extends PureComponent {
     const isChecked = this.getControllableValue('isChecked');
 
     return (
-      <div className={className} data-testid="checkBox">
+      <Wrapper className={className} data-testid="checkBox">
         <Label isDisabled={isDisabled} isChecked={isChecked} data-testid="checkBox-label">
-          <HiddenCheckbox
+          <input
+            type="checkbox"
             data-testid="hidden-checkBox"
-            isChecked={isChecked}
-            isDisabled={isDisabled}
+            defaultChecked={isChecked}
+            disabled={isDisabled}
             onChange={this.handleChange}
             tabIndex={isDisabled ? -1 : 0}
             value={value}
           />
-          <StyledCheckbox isChecked={isChecked} data-testid="styled-checkBox">
-            <Icon name="check-mark" color={Theme.palette.white} width="10px" height="10px" />
-          </StyledCheckbox>
+          <Bullet isChecked={isChecked} />
           {children}
         </Label>
-      </div>
+      </Wrapper>
     );
   }
 }
+
+CheckBox.Bullet = Bullet;
 
 /** Prop types. */
 CheckBox.propTypes = {
@@ -150,6 +150,4 @@ CheckBox.defaultProps = {
   value: '',
 };
 
-export default styled(CheckBox)`
-  width: 100%;
-`;
+export default CheckBox;
