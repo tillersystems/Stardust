@@ -1,3 +1,9 @@
+## [4.13.7](https://github.com/tillersystems/Stardust/compare/v4.13.6...v4.13.7) (2020-01-23)
+
+### Bug Fixes
+
+- **OptionsList:** rewrite Radio, CheckBox + memo + PureComponent ([#954](https://github.com/tillersystems/Stardust/issues/954)) ([e668541](https://github.com/tillersystems/Stardust/commit/e668541a65ae0b9ccc6f619174a2edb55d539878))
+
 ## [4.13.6](https://github.com/tillersystems/Stardust/compare/v4.13.5...v4.13.6) (2020-01-21)
 
 ### Bug Fixes
