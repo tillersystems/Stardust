@@ -32,6 +32,36 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
   margin-right: 0.8rem;
 }
 
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12:hover {
+  background: rgba(30,146,204,0.14);
+}
+
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -66,36 +96,6 @@ exports[`<DatePicker /> Range should render without a problem 1`] = `
 .c11:hover {
   background: transparent;
   color: hsl(206,23%,69%);
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 2.8rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c12:hover {
-  background: rgba(30,146,204,0.14);
 }
 
 .c14 {
@@ -792,6 +792,36 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
   margin-right: 0.8rem;
 }
 
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-basis: 2.8rem;
+  -ms-flex-preferred-size: 2.8rem;
+  flex-basis: 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  max-width: 2.8rem;
+  border-radius: 2.8rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12:hover {
+  background: rgba(30,146,204,0.14);
+}
+
 .c11 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -826,36 +856,6 @@ exports[`<DatePicker /> Simple should render without a problem 1`] = `
 .c11:hover {
   background: transparent;
   color: hsl(206,23%,69%);
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-basis: 2.8rem;
-  -ms-flex-preferred-size: 2.8rem;
-  flex-basis: 2.8rem;
-  width: 2.8rem;
-  height: 2.8rem;
-  max-width: 2.8rem;
-  border-radius: 2.8rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c12:hover {
-  background: rgba(30,146,204,0.14);
 }
 
 .c14 {
