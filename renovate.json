@@ -3,6 +3,6 @@
   "automerge": false,
   "automergeType": "pr",
   "labels": ["need review", "Dependencies Update", "renovate"],
-  "assignees": ["spartDev", "sun-tea"],
-  "reviewers": ["spartDev", "sun-tea"]
+  "assignees": ["elfahme"],
+  "reviewers": ["elfahme"]
 }
