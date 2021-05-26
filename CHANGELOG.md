@@ -1,3 +1,13 @@
+## [4.13.9](https://github.com/tillersystems/Stardust/compare/v4.13.8...v4.13.9) (2021-05-26)
+
+### Bug Fixes
+
+- **pip-install:** Adding apt update to avoid apk break ([#1170](https://github.com/tillersystems/Stardust/issues/1170)) ([7ac1d24](https://github.com/tillersystems/Stardust/commit/7ac1d245650d3ee685c89e3f78b59980dd831379))
+
+### Features
+
+- **icon:** add clipboard icon ([#1169](https://github.com/tillersystems/Stardust/issues/1169)) ([64a7129](https://github.com/tillersystems/Stardust/commit/64a7129aed7c5561c8d71e5e1d126f5fc9100f86))
+
 ## [4.13.8](https://github.com/tillersystems/Stardust/compare/v4.13.7...v4.13.8) (2021-02-25)
 
 ## [4.13.7](https://github.com/tillersystems/Stardust/compare/v4.13.6...v4.13.7) (2020-01-23)
