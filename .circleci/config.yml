@@ -28,7 +28,7 @@ references:
   install_pip: &install_pip
     run:
       name: Installing pip
-      command: sudo apt-get install python-pip
+      command: sudo apt-get update && sudo apt-get install python-pip
 
   install_awscli: &install_awscli
     run:
