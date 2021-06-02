@@ -1,3 +1,9 @@
+## [4.13.10](https://github.com/tillersystems/Stardust/compare/v4.13.9...v4.13.10) (2021-06-02)
+
+### Bug Fixes
+
+- **icon:** update clipboard icon ([#1180](https://github.com/tillersystems/Stardust/issues/1180)) ([8161e21](https://github.com/tillersystems/Stardust/commit/8161e214d47973b934135e5f4be4462bf22eaa2b))
+
 ## [4.13.9](https://github.com/tillersystems/Stardust/compare/v4.13.8...v4.13.9) (2021-05-26)
 
 ### Bug Fixes
