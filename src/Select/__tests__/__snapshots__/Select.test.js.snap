@@ -22,7 +22,7 @@ exports[`<Select /> should render without a problem 1`] = `
   padding: 0 2.4rem 0 1.6rem;
   cursor: pointer;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
   background: linear-gradient( 180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100% );
@@ -124,7 +124,7 @@ exports[`<Select /> should render without a problem when disabled 1`] = `
   padding: 0 2.4rem 0 1.6rem;
   cursor: pointer;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   border: 1px solid hsl(207,22%,90%);
   border-radius: 0.4rem;
   background: linear-gradient( 180deg,hsl(0,100%,100%) 0%,hsl(240,33%,99%) 100% );

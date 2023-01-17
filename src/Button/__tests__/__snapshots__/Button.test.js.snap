@@ -22,7 +22,7 @@ exports[`<Button /> should render a left icon 1`] = `
   width: auto;
   padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
@@ -103,7 +103,7 @@ exports[`<Button /> should render a right icon 1`] = `
   width: auto;
   padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;

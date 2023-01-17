@@ -3,7 +3,7 @@
 exports[`Day should render multiple days without a problem 1`] = `
 .c0 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
@@ -14,7 +14,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c2 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   border-top-left-radius: 2.8rem;
   border-bottom-left-radius: 2.8rem;
@@ -34,7 +34,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c4 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   border-top-left-radius: 2.8rem;
   border-bottom-left-radius: 2.8rem;
@@ -47,7 +47,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c6 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   background: rgba(30,146,204,0.14);
   cursor: pointer;
@@ -59,7 +59,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c8 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   border-top-right-radius: 2.8rem;
   border-bottom-right-radius: 2.8rem;
@@ -77,7 +77,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c11 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   background: rgba(224,230,235,0.34);
   border-top-left-radius: 2.8rem;
@@ -98,7 +98,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c12 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   background: rgba(224,230,235,0.34);
   border-top-left-radius: 2.8rem;
@@ -112,7 +112,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c14 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   background: rgba(224,230,235,0.34);
   cursor: pointer;
@@ -124,7 +124,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 
 .c15 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   background: rgba(224,230,235,0.34);
   border-top-right-radius: 2.8rem;
@@ -548,7 +548,7 @@ exports[`Day should render multiple days without a problem 1`] = `
 exports[`Day should render without a problem 1`] = `
 .c0 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }

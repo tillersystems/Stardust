@@ -30,25 +30,25 @@ exports[`<DatePickerInput /> should render without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c4::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c4::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c4:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c4::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c4:focus,

@@ -3,7 +3,7 @@
 exports[`<Weeks /> should render without a problem 1`] = `
 .c1 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   cursor: pointer;
 }
@@ -14,7 +14,7 @@ exports[`<Weeks /> should render without a problem 1`] = `
 
 .c4 {
   margin-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: hsl(213,17%,20%);
   border-top-left-radius: 2.8rem;
   border-bottom-left-radius: 2.8rem;

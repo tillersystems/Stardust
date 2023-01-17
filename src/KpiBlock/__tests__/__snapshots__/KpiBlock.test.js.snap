@@ -8,14 +8,14 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
 .c4 {
   grid-area: title;
   color: hsl(207,13%,45%);
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-top: 0.3rem;
 }
 
 .c3 {
   grid-area: value;
   color: hsl(213,17%,20%);
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: 500;
 }
 
@@ -29,7 +29,7 @@ exports[`<KpiBlock /> should render with a negative variation value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   right: 1rem;
   top: 1rem;
   justify-self: end;
@@ -100,14 +100,14 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
 .c4 {
   grid-area: title;
   color: hsl(207,13%,45%);
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-top: 0.3rem;
 }
 
 .c3 {
   grid-area: value;
   color: hsl(213,17%,20%);
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: 500;
 }
 
@@ -121,7 +121,7 @@ exports[`<KpiBlock /> should render with a positive variation value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   right: 1rem;
   top: 1rem;
   justify-self: end;
@@ -189,14 +189,14 @@ exports[`<KpiBlock /> should render without a problem 1`] = `
 .c2 {
   grid-area: title;
   color: hsl(207,13%,45%);
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-top: 0.3rem;
 }
 
 .c1 {
   grid-area: value;
   color: hsl(213,17%,20%);
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: 500;
 }
 

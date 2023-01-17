@@ -22,7 +22,7 @@ exports[`<Counter /> should render without a problem 1`] = `
   width: auto;
   padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
@@ -64,7 +64,7 @@ exports[`<Counter /> should render without a problem 1`] = `
 
 .c0 .c2 {
   border-radius: 0;
-  font-size: 2.0rem;
+  font-size: 1.25rem;
 }
 
 .c0 .c2:first-of-type {

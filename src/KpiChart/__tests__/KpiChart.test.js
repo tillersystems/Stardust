@@ -50,7 +50,7 @@ describe('<KpiChart />', () => {
       </KpiChart>,
     );
     const TitleNode = getByText(Title);
-    expect(TitleNode).toHaveStyleRule('font-size', '1.4rem');
+    expect(TitleNode).toHaveStyleRule('font-size', '0.875rem');
     expect(TitleNode).toHaveStyleRule('padding-bottom', '1.2rem');
     expect(container.firstChild).toHaveStyleRule('padding', '1.2rem 1.6rem');
   });

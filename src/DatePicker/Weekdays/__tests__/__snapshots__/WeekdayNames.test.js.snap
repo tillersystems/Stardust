@@ -99,7 +99,7 @@ exports[`<Weekdays /> should render without a problem 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: calc(1.2rem - 0.2rem);
+  font-size: calc(0.75rem - 0.2rem);
   text-transform: uppercase;
   color: hsl(207,13%,45%);
 }

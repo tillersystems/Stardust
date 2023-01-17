@@ -59,13 +59,13 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
 
 .c4 {
   width: 10rem;
-  min-height: 1.4rem;
+  min-height: 0.875rem;
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -141,25 +141,25 @@ exports[`<Form /> should render form with highlighted label when has focus 1`] =
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:focus,
@@ -236,7 +236,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
         class="elements__Container-cp6xjm-1 bmrPGn"
       >
         <label
-          class="elements__Label-cp6xjm-2 cvJBua"
+          class="elements__Label-cp6xjm-2 kpJcFz"
           width="10rem"
         >
           my label 1
@@ -253,7 +253,7 @@ exports[`<Form /> should render form with highlighted label when has focus 2`] =
               width="25rem"
             >
               <input
-                class="elements__InputElement-x1mgn-1 kDpBgJ"
+                class="elements__InputElement-x1mgn-1 SuCpp"
                 data-testid="input"
                 id=""
                 placeholder="tape inside me"
@@ -385,25 +385,25 @@ exports[`<Form /> should render form without label without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c7::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c7::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c7:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c7::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c7:focus,
@@ -548,13 +548,13 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
 
 .c4 {
   width: 10rem;
-  min-height: 1.4rem;
+  min-height: 0.875rem;
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -632,25 +632,25 @@ exports[`<Form /> should render row form with inline labels without a problem 1`
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:focus,
@@ -798,13 +798,13 @@ exports[`<Form /> should render without a problem 1`] = `
 
 .c4 {
   width: 10rem;
-  min-height: 1.4rem;
+  min-height: 0.875rem;
   color: hsl(213,17%,20%);
   text-align: left;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
   margin-left: 0.3rem;
@@ -869,7 +869,7 @@ exports[`<Form /> should render without a problem 1`] = `
   width: auto;
   padding: 0.75rem 1.6rem;
   border-radius: 0.4rem;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.57;
   color: hsl(0,100%,100%);
   cursor: pointer;
@@ -910,25 +910,25 @@ exports[`<Form /> should render without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c8::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c8:focus,

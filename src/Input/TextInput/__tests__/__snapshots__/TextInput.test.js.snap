@@ -51,25 +51,25 @@ exports[`<TextInput /> should have a text label 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c2::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c2::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c2:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c2::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c2:focus,
@@ -154,25 +154,25 @@ exports[`<TextInput /> should have an icon icon label and label position 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:focus,
@@ -273,25 +273,25 @@ exports[`<TextInput /> should have an icon label 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c3::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c3::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c3:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c3::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c3:focus,
@@ -392,25 +392,25 @@ exports[`<TextInput /> should render search status input without problem when fo
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:focus,
@@ -489,25 +489,25 @@ exports[`<TextInput /> should render without a problem 1`] = `
   background-color: hsl(0,100%,100%);
   padding: 0 0.7rem;
   border-radius: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border: none;
   text-align: left;
 }
 
 .c1::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::-moz-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1::placeholder {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .c1:focus,

@@ -36,8 +36,8 @@ describe('<KpiBlock />', () => {
     const titleNode = getByText('title');
     const valueNode = getByText('value');
 
-    expect(titleNode).toHaveStyleRule('font-size', '1.2rem');
-    expect(valueNode).toHaveStyleRule('font-size', '2.6rem');
+    expect(titleNode).toHaveStyleRule('font-size', '0.75rem');
+    expect(valueNode).toHaveStyleRule('font-size', '1.625rem');
     expect(container.firstChild).toHaveStyleRule(
       'grid-template-areas',
       "'title' 'value' 'variation'",
