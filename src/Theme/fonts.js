@@ -5,23 +5,23 @@
 export const fonts = {
   size: {
     // -start- Old font size
-    tiny: '0.3rem',
-    small: '0.7rem',
-    // medium: '1.2rem',
-    // big: '3.2rem',
-    huge: '6.4rem',
+    tiny: '0.18rem',
+    small: '0.43rem',
+    // medium: '0.75rem',
+    // big: '2rem',
+    huge: '4rem',
     // -end- Old font size
 
     // -start- New font size
-    default: '1.2rem',
-    medium: '1.4rem',
-    big: '1.6rem',
-    h6: '1.8rem',
-    h5: '2.0rem',
-    h4: '2.2rem',
-    h3: '2.6rem',
-    h2: '3rem',
-    h1: '3.6rem',
+    default: '0.75rem',
+    medium: '0.875rem',
+    big: '1rem',
+    h6: '1.125rem',
+    h5: '1.25rem',
+    h4: '1.375rem',
+    h3: '1.625rem',
+    h2: '1.875rem',
+    h1: '2rem',
     // -end- New font size
 
     // -start- Old font int

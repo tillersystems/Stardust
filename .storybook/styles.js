@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import Theme from '../src/Theme';
 
 const GlobalStyles = createGlobalStyle`
@@ -23,8 +23,6 @@ const GlobalStyles = createGlobalStyle`
     max-height: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    font-size: 62.5%;
-    font-size: calc(1em * .625);
     line-height: 1.5;
     background: ${Theme.palette.bodyBackground};
     color: #16171a;
